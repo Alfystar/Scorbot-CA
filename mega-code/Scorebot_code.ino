@@ -9,7 +9,17 @@ void setup()
 }
 
 // The loop function is called in an endless loop
-void loop()
-{
+void loop() {
+
 //Add your repeated code here
+	if (spiAvailable()) {
+		spiRecive* r;
+		r = getLastRecive();
+		Serial.println(r->pack.pwm.text);
+	}
+	delay(100);
+}
+
+ISR(SPI_STC_vect) {
+	isrFunxISP();
 }
