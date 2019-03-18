@@ -1,5 +1,6 @@
 #include "Arduino.h"
-#include "libraries/SPI_scorebot/spiScorebot.h"
+
+#include "Project-lib/spiScorebot/spiScorebot.h"
 //The setup function is called once at startup of the sketch
 void setup()
 {

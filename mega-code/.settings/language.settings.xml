@@ -9,7 +9,7 @@
             			
             <provider-reference id="org.eclipse.cdt.core.ReferencedProjectsLanguageSettingsProvider" ref="shared-provider"/>
             			
-            <provider class="io.sloeber.core.toolchain.ArduinoLanguageProvider" console="false" env-hash="1008202560295786489" id="io.sloeber.languageSettingsProvider" keep-relative-paths="false" name="Impostazioni compilatore Arduino" parameter="${COMMAND} -E -P -v -dD -D__IN_ECLIPSE__ &quot;${INPUTS}&quot;" prefer-non-shared="true">
+            <provider class="io.sloeber.core.toolchain.ArduinoLanguageProvider" console="false" env-hash="-204544419842058354" id="io.sloeber.languageSettingsProvider" keep-relative-paths="false" name="Impostazioni compilatore Arduino" parameter="${COMMAND} -E -P -v -dD -D__IN_ECLIPSE__ &quot;${INPUTS}&quot;" prefer-non-shared="true">
                 				
                 <language-scope id="org.eclipse.cdt.core.gcc"/>
                 				

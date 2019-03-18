@@ -43,6 +43,8 @@
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/core/variant}&quot;"/>
                                     									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/spiScorebot}&quot;"/>
+                                    									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/libraries/SPI/src}&quot;"/>
                                     								
                                 </option>
@@ -59,6 +61,8 @@
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/core/variant}&quot;"/>
                                     									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/spiScorebot}&quot;"/>
+                                    									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/libraries/SPI/src}&quot;"/>
                                     								
                                 </option>
@@ -74,6 +78,8 @@
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/core/core}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/core/variant}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/spiScorebot}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/libraries/SPI/src}&quot;"/>
                                     								
@@ -97,7 +103,7 @@
                     					
                     <sourceEntries>
                         						
-                        <entry excluding="libraries/?*/**/?xamples/**|libraries/?*/**/?xtras/**|libraries/?*/**/test*/**|libraries/?*/**/third-party/**|libraries/**/._*|libraries/?*/utility/*/*" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
+                        <entry excluding="libraries/?*/**/test*/**|libraries/?*/**/third-party/**|libraries/?*/utility/*/*|libraries/?*/**/?xamples/**|libraries/?*/**/?xtras/**|libraries/**/._*" flags="VALUE_WORKSPACE_PATH" kind="sourcePath" name=""/>
                         					
                     </sourceEntries>
                     				
@@ -126,5 +132,7 @@
     <storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
     	
     <storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
+    	
+    <storageModule moduleId="refreshScope"/>
     
 </cproject>
