@@ -42,10 +42,6 @@
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/core/core}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/core/variant}&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/spiScorebot}&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/libraries/SPI/src}&quot;"/>
                                     								
                                 </option>
                                 								
@@ -60,10 +56,6 @@
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/core/core}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/core/variant}&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/spiScorebot}&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/libraries/SPI/src}&quot;"/>
                                     								
                                 </option>
                                 								
@@ -78,10 +70,6 @@
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/core/core}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/core/variant}&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/spiScorebot}&quot;"/>
-                                    									
-                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/libraries/SPI/src}&quot;"/>
                                     								
                                 </option>
                                 								
@@ -133,6 +121,14 @@
     	
     <storageModule moduleId="org.eclipse.cdt.make.core.buildtargets"/>
     	
-    <storageModule moduleId="refreshScope"/>
+    <storageModule moduleId="refreshScope" versionNumber="2">
+        		
+        <configuration configurationName="Release">
+            			
+            <resource resourceType="PROJECT" workspacePath="/Scorebot_code"/>
+            		
+        </configuration>
+        	
+    </storageModule>
     
 </cproject>

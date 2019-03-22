@@ -1,0 +1,39 @@
+/*
+ * adcReader.h
+ *
+ * Questo script permette di avviare la lettura dei sensori di corrente dei motori.
+ * La lettura prosegue in interrupt, e aggiorna in automatico l'array.
+ * Sul pin A1 si immette la tensione da sottrarre, e leggendo i valori nell'array
+ * si ottiene il risultato del comparatore con tutti i bit di precisioni scelti.
+ * E necessario quindi tarare il voltaggio in ingresso sul pin A1, affinchè renda il
+ * più vicini possibili tutti i sensori a 0 senza diventare negativi però, in tal caso
+ * la sottrazione fa si che il risultato riparta da 1023 rendendo vana la lettura.
+ *
+ *  Created on: 22 mar 2019
+ *      Author: alfy
+ */
+
+#ifndef PROJECT_LIB_ADCREADER_ADCREADER_H_
+#define PROJECT_LIB_ADCREADER_ADCREADER_H_
+
+#include "Arduino.h"
+#include "stdlib.h"
+#include <avr/io.h>
+#include <avr/interrupt.h>
+
+enum currentPin {cMot1=0, cMot2, cMot3, cMot4, cMot5, cMot6};
+
+void setUpADC();
+int getAmpMot(int m);
+int *getAmpMots();
+int difPinSelect(int p);
+void debugPrintAdc();
+void debugPrintAdcOff();
+
+void isrFunxAdc();
+
+#ifndef __IN_ECLIPSE__
+#include "adcReader.cpp"
+#endif
+
+#endif /* PROJECT_LIB_ADCREADER_ADCREADER_H_ */

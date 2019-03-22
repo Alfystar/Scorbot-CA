@@ -2,12 +2,12 @@
 #define SPISCOREBOT_H
 #include "Arduino.h"
 #include <stdlib.h>
-#include "../../Project-lib/spiScorebot/SPI_Scorebot_PackDefine.h"
+#include "SPI_Scorebot_PackDefine.h"
 
-#define MISO 53
-#define MOSI 52
-#define SS 51
-#define SCK 50
+#define MISO 50
+#define MOSI 51
+#define SS 53
+#define SCK 52
 
 
 void spiSetup();
@@ -23,10 +23,7 @@ volatile void * volatile_memcpy(volatile void *d, volatile void *s, size_t n);
 volatile void * volatile_memset(volatile void *s, int c, size_t n);
 
 #ifndef __IN_ECLIPSE__
-
 #include "spiScorebot.cpp"
-
-
 #endif
 
 #endif

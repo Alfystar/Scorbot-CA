@@ -1,15 +1,15 @@
 #include "spiScorebot.h"
 
 /* Internal Varable*/
+spiRecive reciveSpi[2];
+spiSend _sendSpi;
 volatile byte idTransf = 0; //Index of current Transfert
-volatile spiRecive reciveSpi[2];
 volatile byte dRecive = 0; //indica su quale buffer si sta scrivendo in questo momento
-volatile spiSend _sendSpi;
 volatile byte newRecive=0;
 
 void spiSetup() {
 	pinMode(MISO, OUTPUT);
-	volatile_memset(&reciveSpi, 0, sizeof(spiRecive) * 2);
+	memset((void *)&reciveSpi, 0, sizeof(spiRecive) * 2);
 	idTransf = 0;
 	SPCR = (1 << SPIE) | (1 << SPE); 	//attiva spi e abilita interrupt
 	SPDR = 0;	 						//predispomgo che al primo invio invio 0
@@ -31,6 +31,7 @@ void isrFunxISP() {
 	if (idTransf == 0) {
 		reciveSpi[dRecive].type = SPDR;
 		preparaDati(reciveSpi[dRecive].type);
+		//Serial.println(_sendSpi.pack.feedBack.encoder);	//print di test
 		SPDR = *((char *) &_sendSpi + idTransf);
 		idTransf++;
 	} else if (idTransf < limitiDati(reciveSpi[dRecive].type)) {
@@ -51,10 +52,10 @@ void isrFunxISP() {
 }
 
 void preparaDati(char type) {
-	unsigned char hello[] = "Hello guy\n";
+	char hello[32] = "Hello guy\n";
 	switch (type) {
 	case setPWM:
-		volatile_memcpy(&_sendSpi.pack.feedBack.encoder, hello, 32);
+		memcpy((void *)&_sendSpi.pack.feedBack.encoder, (void *) hello, 32);
 		break;
 	case getSetting:
 		break;
