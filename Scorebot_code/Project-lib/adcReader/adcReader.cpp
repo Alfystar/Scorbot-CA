@@ -16,7 +16,7 @@ void setUpADC() {
 	memset((void *) ampMot, 0, sizeof(int) * 6); //pulisco la memoria
 	//ADMUX – ADC Multiplexer Selection Register
 	//Vref=5V of board, Lettura in uscita standard
-	ADMUX = 0; // impostato Aref esterno, per avere 5V scheda arduino (1 << REFS0);
+	ADMUX = (1 << REFS0); // impostato Aref esterno, per avere 5V scheda arduino (1 << REFS0);
 	DIDR0 = 0x7F; //imposto tutti i pin da A0:A6 come pin di input analiogico
 
 	/* ADCSRB – ADC Control and Status Register B */
@@ -34,8 +34,6 @@ void setUpADC() {
 	//prima lettura è sporca
 	while (ADCSRA & (1 << ADIF))
 		; //wait first reading
-	//ADCSRA = ADCSRA;
-
 	/* Calcolo dell'offset */
 	/*
 	 int sum = 0;
