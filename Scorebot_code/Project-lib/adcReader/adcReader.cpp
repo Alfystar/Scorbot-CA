@@ -5,11 +5,10 @@
  *      Author: alfy
  */
 #include "adcReader.h"
-
+#define history 8 //data la frequenza ~1ms
 /* LOCAL VAR */
-int ampMot[nMot][2];
-int ampMotTemp[nMot];
-volatile byte dirtyADC = 0; //todo, variabile che viene messa a 1 quando si termina un ciclo di scansione
+int ampMot[nMot][history];
+volatile byte indexADC = 0; //todo, variabile che viene messa a 1 quando si termina un ciclo di scansione
 //start value
 volatile byte newRead = cMot1;
 volatile byte oldRead = cMot1;
@@ -63,11 +62,11 @@ void setUpADC() {
 /*** ELABORATION ***/
 void isrFunxAdc() {
 	// Must read low first
-	ampMot[oldRead][dirtyADC] = ((int) ADCL | ((int) ADCH << 8));
+	ampMot[oldRead][indexADC] = ((int) ADCL | ((int) ADCH << 8));
 	oldRead = newRead;
 	newRead = (newRead + 1) % nMot;
 	if (oldRead == 0)
-		dirtyADC = !dirtyADC;
+		indexADC = (indexADC + 1) % history;
 	difPinSelect(newRead);
 }
 /* Tabella Codice/significato dei mux
@@ -111,14 +110,21 @@ int difPinSelect(int p) {
 }
 
 /*** GET VALUE ***/
-int getAmpMot(int m) {
-	int g = ampMot[m][!dirtyADC];
+int getAmpMot(byte m) {
+	int g = ampMot[m][((indexADC - 1) + history) % history];
 	return g;
 }
 
+//puntatore di ritorno FERMO per circa 1ms
 int *getAmpMots() {
-	memcpy(ampMotTemp, &ampMot[0][!dirtyADC], nMot);
-	return ampMotTemp;
+	return &ampMot[0][((indexADC - 1) + history) % history];
+}
+
+int sumCurr = 0;
+int getSumMot(byte i) {
+	for (byte j = 0; j < history; j++)
+		sumCurr += ampMot[i][j];
+	return sumCurr;
 }
 
 /*** DEBUG & PRINT ***/

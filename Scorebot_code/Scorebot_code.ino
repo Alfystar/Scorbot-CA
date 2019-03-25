@@ -5,6 +5,7 @@
 #include "Project-lib/msEnlib/msEnlib.h"
 
 #define SERIAL_PRINT	//attiva/disattiva compilazione del codice per printare in seriale
+#define sanityDelay 250	//tempo ms di attesa prima di ri-scansionare se il robot è ok
 
 settings sets;
 
@@ -34,28 +35,14 @@ void setup() {
 
 // The loop function is called in an endless loop
 long timePrint = 0;
+spiRecive* r;
 void loop() {
+	sanityChek(sanityDelay);
 	if (spiAvailable()) {
-		spiRecive* r;
-		r = getLastRecive();
+		r = (spiRecive *) getLastRecive();
 		Serial.println(r->pack.pwm.text);
 	}
 	updateStepEn();
-	if (msRead())	//se !=0 uno degli switch è premuto
-	{
-		//todo: emergenci stop, sono a fine corsa
-	}
-	for (byte i = 0; i < nMot; i++) {
-		if (sets.maxEn[i]>getEn(i))	//se vero, sono oltre limite (i negativi non posono esserci essendo lo 0 a msRead[al massimo -1/-2 ma è rumore])
-		{
-			//todo: emergenci stop, sono a fine corsa
-		}
-	}
-
-	if (msRead())	//se !=0 uno degli switch è premuto
-	{
-		//todo: emergenci stop, sono a fine corsa
-	}
 
 #ifdef SERIAL_PRINT
 	/*Funzione di Print Seriale NON BLOCCANTE*/
@@ -67,8 +54,29 @@ void loop() {
 	}
 #endif
 }
+long sanityTime = 0;
+void sanityChek(int wait) {
+	if (millis() > sanityTime + wait) {
+		if (msRead())	//se !=0 uno degli switch è premuto
+		{
+			//todo: emergenci stop, sono a fine corsa
+		}
+		for (byte i = 0; i < nMot; i++) {
+			if (sets.maxEn[i] > getEn(i))//se vero, sono oltre limite (i negativi non posono esserci essendo lo 0 a msRead[al massimo -1/-2 ma è rumore])
+					{
+				//todo: emergenci stop, sono a fine corsa
+			}
+		}
 
-
+		for (byte i = 0; i < nMot; i++) {
+			if (sets.maxCurrMed[i] > getSumMot(i)) //se vero, sono oltre limite
+					{
+				//todo: emergenci stop, CI SONO PROBLEMI CON LE CORRENTI
+			}
+		}
+		sanityTime = millis();
+	}
+}
 
 /** SPI INTERRUPT SERVICE **/
 //Si attiva alla fine dell'invio di 1 byte
