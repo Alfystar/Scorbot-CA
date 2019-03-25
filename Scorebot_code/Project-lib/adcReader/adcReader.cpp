@@ -6,27 +6,29 @@
  */
 #include "adcReader.h"
 
-int ampMot[6][2];
+/* LOCAL VAR */
+int ampMot[nMot][2];
+int ampMotTemp[nMot];
 volatile byte dirtyADC = 0; //todo, variabile che viene messa a 1 quando si termina un ciclo di scansione
 //start value
 volatile byte newRead = cMot1;
 volatile byte oldRead = cMot1;
 
+/*** HARDWARE ***/
 void setUpADC() {
-	memset((void *) ampMot, 0, sizeof(int) * 6); //pulisco la memoria
+	memset((void *) ampMot, 0, sizeof(int) * nMot); //pulisco la memoria
 	//ADMUX – ADC Multiplexer Selection Register
-	//Vref=5V of board, Lettura in uscita standard
-	ADMUX = (1 << REFS0); // impostato Aref esterno, per avere 5V scheda arduino (1 << REFS0);
+	//todo: provare a simpostare valore di comparazione con i 2.56V interni
+	ADMUX = (1 << REFS0); // impostato Aref esterno, per avere 5V scheda arduino (1 << REFS0); 	//Vref=5V of board, Lettura in uscita standard
 	DIDR0 = 0x7F; //imposto tutti i pin da A0:A6 come pin di input analiogico
 
 	/* ADCSRB – ADC Control and Status Register B */
-	// Imposto la modalità di free running, e lascio inalterato il resto
-	ADCSRB &= 0xF8;
-
+	ADCSRB &= 0xF8;	// Imposto la modalità di free running, e lascio inalterato il resto
 	difPinSelect(cMot1); //imposto il primo pin da leggere per la lettura sporca
 
+	//todo: modificare che l'attivazione del free running avviene dopo aver calcolato gli offset
 	/* ADCSRA – ADC Control and Status Register A
-	 accende l'ADC, Avvia la conversione,abilita l'impostazione del trigger scelto in ADCSRB(free running),
+	 Accende l'ADC, Avvia la conversione, abilita l'impostazione del trigger scelto in ADCSRB(free running),
 	 e in fine imposta il prescaler a 1/128
 	 A queste condizioni ho 125Khz di clock all'adc e una conversione
 	 ogni 14*1/125KHz= 112us ~ 8,9Khz  (14 perchè letto in differential mode) */
@@ -58,34 +60,17 @@ void setUpADC() {
 
 }
 
-/*
- void debugPrintAdcOff() {
- Serial.print("Mot 1 off=");
- Serial.print(ampMotOff[cMot1]);
- Serial.print("  Mot 2 off=");
- Serial.print(ampMotOff[cMot2]);
- Serial.print("  Mot 3 off=");
- Serial.print(ampMotOff[cMot3]);
- Serial.print("  Mot 4 off=");
- Serial.print(ampMotOff[cMot4]);
- Serial.print("  Mot 5 off=");
- Serial.print(ampMotOff[cMot5]);
- Serial.print("  Mot 6 off=");
- Serial.println(ampMotOff[cMot6]);
- }
- */
-
-int getAmpMot(int m) {
-	//enum currentPin {cMot1=0, cMot2, cMot3, cMot4, cMot5, cMot6};
-	int g = ampMot[m][!dirtyADC];
-	return g;
+/*** ELABORATION ***/
+void isrFunxAdc() {
+	// Must read low first
+	ampMot[oldRead][dirtyADC] = ((int) ADCL | ((int) ADCH << 8));
+	oldRead = newRead;
+	newRead = (newRead + 1) % nMot;
+	if (oldRead == 0)
+		dirtyADC = !dirtyADC;
+	difPinSelect(newRead);
 }
-
-int *getAmpMots() {
-	return (int *)(&ampMot + sizeof(int) * 6 * (!dirtyADC));
-}
-
-/*
+/* Tabella Codice/significato dei mux
  MUX5:0  +    -   G
  010000 ADC0 ADC1 1×   Corrente mot 1
  010001 ADC1 ADC1 1×   XXXXXX----NON IN USO
@@ -125,18 +110,18 @@ int difPinSelect(int p) {
 	return 0;
 }
 
-void isrFunxAdc() {
-	// Must read low first
-	ampMot[oldRead][dirtyADC] = ((int) ADCL | ((int) ADCH << 8));
-	oldRead = newRead;
-	newRead = (newRead + 1) % 6;
-	if (oldRead == 0)
-		dirtyADC = !dirtyADC;
-
-	difPinSelect(newRead);
-
+/*** GET VALUE ***/
+int getAmpMot(int m) {
+	int g = ampMot[m][!dirtyADC];
+	return g;
 }
 
+int *getAmpMots() {
+	memcpy(ampMotTemp, &ampMot[0][!dirtyADC], nMot);
+	return ampMotTemp;
+}
+
+/*** DEBUG & PRINT ***/
 void debugPrintAdc() {
 	Serial.print("Mot 1 diff=");
 	Serial.print(getAmpMot(cMot1));
@@ -152,3 +137,19 @@ void debugPrintAdc() {
 	Serial.println(getAmpMot(cMot6));
 }
 
+/*
+ void debugPrintAdcOff() {
+ Serial.print("Mot 1 off=");
+ Serial.print(ampMotOff[cMot1]);
+ Serial.print("  Mot 2 off=");
+ Serial.print(ampMotOff[cMot2]);
+ Serial.print("  Mot 3 off=");
+ Serial.print(ampMotOff[cMot3]);
+ Serial.print("  Mot 4 off=");
+ Serial.print(ampMotOff[cMot4]);
+ Serial.print("  Mot 5 off=");
+ Serial.print(ampMotOff[cMot5]);
+ Serial.print("  Mot 6 off=");
+ Serial.println(ampMotOff[cMot6]);
+ }
+ */

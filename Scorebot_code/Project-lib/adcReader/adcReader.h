@@ -20,17 +20,23 @@
 #include "stdlib.h"
 #include <avr/io.h>
 #include <avr/interrupt.h>
+#include "../globalDef.h"
 
-enum currentPin {cMot1=0, cMot2, cMot3, cMot4, cMot5, cMot6};
-
+/*** HARDWARE ***/
 void setUpADC();
+
+/*** ELABORATION ***/
+//Seleziona combinazione in ingresso per leggere motore e togliere Offset
+void isrFunxAdc();
+int difPinSelect(int p);
+
+/*** GET VALUE ***/
 int getAmpMot(int m);
 int *getAmpMots();
-int difPinSelect(int p);
+
+/*** DEBUG & PRINT ***/
 void debugPrintAdc();
 void debugPrintAdcOff();
-
-void isrFunxAdc();
 
 #ifndef __IN_ECLIPSE__
 #include "adcReader.cpp"

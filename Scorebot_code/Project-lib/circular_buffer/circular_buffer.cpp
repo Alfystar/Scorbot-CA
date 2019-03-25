@@ -5,7 +5,6 @@
  *      Author: alfy
  */
 
-
 #include "circular_buffer.h"
 
 #pragma mark - Private Functions -
@@ -112,6 +111,21 @@ int circular_buf_get(cbuf_handle_t cbuf, uint16_t * data) {
 
 	if (!circular_buf_empty(cbuf)) {
 		*data = cbuf->buffer[cbuf->tail];
+		retreat_pointer(cbuf);
+
+		r = 0;
+	}
+
+	return r;
+}
+
+int circular_buf_getLastOne(cbuf_handle_t cbuf, uint16_t * data) {
+	assert(cbuf && data && cbuf->buffer);
+
+	int r = -1;
+
+	if (circular_buf_size(cbuf) > 1) {
+		*data = cbuf->buffer[((cbuf->tail - 1) + cbuf->max) % cbuf->max];
 		retreat_pointer(cbuf);
 
 		r = 0;

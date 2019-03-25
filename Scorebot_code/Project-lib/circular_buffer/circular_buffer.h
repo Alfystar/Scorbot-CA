@@ -58,6 +58,11 @@ int circular_buf_put2(cbuf_handle_t cbuf, uint16_t data);
 /// Returns 0 on success, -1 if the buffer is empty
 int circular_buf_get(cbuf_handle_t cbuf, uint16_t * data);
 
+/// Retrieve a value from the buffer before the last, and not forward the head
+/// Requires: cbuf is valid and created by circular_buf_init
+/// Returns 0 on success, -1 if the buffer is empty
+int circular_buf_getLastOne(cbuf_handle_t cbuf, uint16_t * data);
+
 /// CHecks if the buffer is empty
 /// Requires: cbuf is valid and created by circular_buf_init
 /// Returns true if the buffer is empty

@@ -42,6 +42,8 @@
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/core/core}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/core/variant}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/libraries/EEPROM/src}&quot;"/>
                                     								
                                 </option>
                                 								
@@ -56,6 +58,8 @@
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/core/core}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/core/variant}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/libraries/EEPROM/src}&quot;"/>
                                     								
                                 </option>
                                 								
@@ -70,6 +74,8 @@
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/core/core}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/core/variant}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/Scorebot_code/libraries/EEPROM/src}&quot;"/>
                                     								
                                 </option>
                                 								
@@ -130,5 +136,7 @@
         </configuration>
         	
     </storageModule>
+    	
+    <storageModule moduleId="org.eclipse.cdt.internal.ui.text.commentOwnerProjectMappings"/>
     
 </cproject>

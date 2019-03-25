@@ -1,12 +1,13 @@
 #include "spiScorebot.h"
 
-/* Internal Varable*/
+/* Local Var*/
 spiRecive reciveSpi[2];
 spiSend _sendSpi;
 volatile byte idTransf = 0; //Index of current Transfert
 volatile byte dRecive = 0; //indica su quale buffer si sta scrivendo in questo momento
 volatile byte newRecive=0;
 
+/*** HARDWARE ***/
 void spiSetup() {
 	pinMode(MISO, OUTPUT);
 	memset((void *)&reciveSpi, 0, sizeof(spiRecive) * 2);
@@ -15,18 +16,7 @@ void spiSetup() {
 	SPDR = 0;	 						//predispomgo che al primo invio invio 0
 }
 
-volatile spiRecive * getLastRecive() {
-	return &reciveSpi[dRecive];
-}
-
-byte spiAvailable() {
-	if (newRecive != 0) {
-		newRecive = 0;
-		return 1;
-	} else
-		return 0;
-}
-
+/*** ELABORATION ***/
 void isrFunxISP() {
 	if (idTransf == 0) {
 		reciveSpi[dRecive].type = SPDR;
@@ -93,21 +83,15 @@ int limitiDati(char type) {
 	}
 }
 
-volatile void * volatile_memcpy(volatile void *d, volatile void *s, size_t n) {
-	volatile char *mem = NULL;
-	for (size_t i = 0; i < n; i++) {
-		mem = d + i;
-		*mem = *((volatile char *) (s + i));
-	}
-	return d;
+/*** GET VALUE ***/
+volatile spiRecive * getLastRecive() {
+	return &reciveSpi[dRecive];
 }
 
-//void *memset(void *s, int c, size_t n);
-volatile void * volatile_memset(volatile void *s, int c, size_t n) {
-	volatile char *mem = NULL;
-	for (size_t i = 0; i < n; i++) {
-		mem = s + i;
-		*mem = c;
-	}
-	return s;
+byte spiAvailable() {
+	if (newRecive != 0) {
+		newRecive = 0;
+		return 1;
+	} else
+		return 0;
 }

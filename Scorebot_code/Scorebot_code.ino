@@ -1,8 +1,13 @@
 #include "Arduino.h"
-#include "Project-lib/pinDef.h"
+#include "Project-lib/globalDef.h"
 #include "Project-lib/spiScorebot/spiScorebot.h"
 #include "Project-lib/adcReader/adcReader.h"
 #include "Project-lib/msEnlib/msEnlib.h"
+
+#define SERIAL_PRINT	//attiva/disattiva compilazione del codice per printare in seriale
+
+settings sets;
+
 //The setup function is called once at startup of the sketch
 void setup() {
 	// Add your initialization code here
@@ -20,37 +25,67 @@ void setup() {
 	 pinMode(motEn, OUTPUT);
 	 digitalWrite(motEn, 1);
 	 */
+	Serial.println("\tMemory Load of Settings");
+	memoryLoad();
+	Serial.println("\tGlobal Interrupt Enable");
 	sei();
-
 	Serial.println("End Setup");
 }
 
 // The loop function is called in an endless loop
-
+long timePrint = 0;
 void loop() {
-
-//Add your repeated code here
 	if (spiAvailable()) {
 		spiRecive* r;
 		r = getLastRecive();
 		Serial.println(r->pack.pwm.text);
 	}
+	updateStepEn();
+	if (msRead())	//se !=0 uno degli switch è premuto
+	{
+		//todo: emergenci stop, sono a fine corsa
+	}
+	for (byte i = 0; i < nMot; i++) {
+		if (sets.maxEn[i]>getEn(i))	//se vero, sono oltre limite (i negativi non posono esserci essendo lo 0 a msRead[al massimo -1/-2 ma è rumore])
+		{
+			//todo: emergenci stop, sono a fine corsa
+		}
+	}
 
-	//debugPrintAdc();
-	//delay(1000);
+	if (msRead())	//se !=0 uno degli switch è premuto
+	{
+		//todo: emergenci stop, sono a fine corsa
+	}
 
-	delay(1000);
-
+#ifdef SERIAL_PRINT
+	/*Funzione di Print Seriale NON BLOCCANTE*/
+	if (millis() > timePrint + 1000) {
+		debugPrintAdc();
+		enDebug();
+		printEnAll();
+		timePrint = millis();
+	}
+#endif
 }
 
+
+
+/** SPI INTERRUPT SERVICE **/
+//Si attiva alla fine dell'invio di 1 byte
 ISR(SPI_STC_vect) {
 	isrFunxISP();
 }
 
+/** ADC INTERRUPT SERVICE **/
+//Si attiva ogni completamento di lettura, la salva e progamma la successiva
+//procede automaticamente
 ISR(ADC_vect) {
 	isrFunxAdc();
 }
 
+/** PCINT INTERRUPT SERVICE **/
+//Al Cambio di uno dei pin degli Encoder, li salva tutti in memoria su un buffer circolare
+//per elaborare lo stato in un momento successivo durante il programma
 ISR(PCINT0_vect) {
 	isrFunxEN();
 }
