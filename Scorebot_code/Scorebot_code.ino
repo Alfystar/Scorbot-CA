@@ -9,6 +9,8 @@
 
 settingsBoard sets;
 
+L298N *mot[nMot];
+
 //The setup function is called once at startup of the sketch
 void setup() {
 	// Add your initialization code here
@@ -20,6 +22,8 @@ void setup() {
 	setUpADC();
 	Serial.println("\tSetUp Scorbot Sensors");
 	dsubFeedSetup();
+	Serial.println("\tMotor Enable");
+	motSetup();
 
 	/* PER ORA UN CORTO CIRCUITO
 	 Serial.println("\Relè Mot Enable");
@@ -31,6 +35,17 @@ void setup() {
 	Serial.println("\tGlobal Interrupt Enable");
 	sei();
 	Serial.println("End Setup");
+
+	//mot[0]->drive_motor(-130, 5000);
+	//mot[1]->drive_motor(255, 1000);
+
+	//mot[2]->drive_motor(180, 1000);
+
+	mot[3]->drive_motor(180, 2000);
+	mot[4]->drive_motor(180, 2000);
+
+	//mot[5]->drive_motor(50, 2000);
+
 }
 
 // The loop function is called in an endless loop
@@ -43,10 +58,11 @@ void loop() {
 		Serial.println(r->pack.pwm.text);
 	}
 	updateStepEn();
+	motorStateMachine();
 
 #ifdef SERIAL_PRINT
 	/*Funzione di Print Seriale NON BLOCCANTE*/
-	if (millis() > timePrint + 1000) {
+	if (millis() > timePrint + 250) {
 		//debugPrintAdc();
 		//enDebug();
 		printSteps();
@@ -54,6 +70,7 @@ void loop() {
 	}
 #endif
 }
+
 long sanityTime = 0;
 void sanityChek(int wait) {
 	if (millis() > sanityTime + wait) {

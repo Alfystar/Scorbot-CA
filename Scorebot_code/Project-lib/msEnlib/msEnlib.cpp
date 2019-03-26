@@ -18,10 +18,11 @@ void dsubFeedSetup() {
 	memset(passi, 0, nMot * sizeof(int));
 
 	circularBuf = circular_buf_init((uint16_t *) bufMem, sizeMem);
-
+	int ap;
 	//ne metto 2 uguali per Predisporre la lettura
 	circular_buf_put(circularBuf, enRead());
-	circular_buf_put(circularBuf, enRead());
+	circular_buf_get(circularBuf, (uint16_t *) &ap);
+	circular_buf_put(circularBuf, ap);
 	//make input pin
 	DDRC &= 0b11000000;
 	DDRK = 0;
@@ -43,7 +44,7 @@ byte msRead() {
 }
 
 int enRead() {	// Byte: [0]EnChA : [1]EnChB
-	return (((PINK & 0b11000000) >> 6) | ((PINB & 0xF0) >> 2) << 8)
+	return ((((PINK & 0b11000000) >> 6) | ((PINB & 0xF0) >> 2)) << 8)
 			| (PINK & 0b00111111);
 }
 
@@ -54,12 +55,23 @@ void updateStepEn() {
 		if (circular_buf_getLastOne(circularBuf, (uint16_t *) &oldEn))
 			break;	//at start , there are only one value, no reading
 		circular_buf_get(circularBuf, (uint16_t *) &newEn);
+		/*
+		 Serial.print("old=");
+		 Serial.print(oldEn,BIN);
+		 Serial.print(" new=");
+		 Serial.println(newEn,BIN);
+		 */
 		calcStep(oldEn, newEn);
 	}
 }
 
 //VARIABILI PRIVATE DI calcStep
-int8_t enc_states[] = { 0, -1, 1, 0, 1, 0, 0, -1, -1, 0, 0, 1, 0, 1, -1, 0 };
+#define imp 0
+//int8_t enc_states[] = { 0, -1, 1, 0, 1, 0, 0, -1, -1, 0, 0, 1, 0, 1, -1, 0 };
+//						0   1  2   3   4  5   6    7   8   9  10 11  12  13  14 15
+int8_t enc_states[] = { 0, -1, 1, imp, 1, 0, imp, -1, -1, imp, 0, 1, imp, 1, -1,
+		0 }; /*[old]BA-BA[new]*/
+
 byte chAold, chBold, chAnew, chBnew, code;
 void calcStep(int oldEn, int newEn) {
 	/* Monto i bit BA (A LSB)*/
@@ -67,12 +79,18 @@ void calcStep(int oldEn, int newEn) {
 	chBold = (oldEn & 0xFF00) >> 7;	//disallineo di 1 per semplificare l'or binario
 	chAnew = newEn & 0x00FF;
 	chBnew = (newEn & 0xFF00) >> 7;
-	for (byte i = 0; i < nMot; i++) {
-		chAold >>= i;
-		chBold >>= i;
+
+	//Calcolo primo encoder
+	code = ((chAold & 1) | (chBold & 0b10)) << 2;
+	code |= ((chAnew & 1) | (chBnew & 0b10));
+	passi[0] += (enc_states[code]);
+	//Calcolo Restanti 6
+	for (byte i = 1; i < nMot; i++) {
+		chAold >>= 1;
+		chBold >>= 1;
 		code = ((chAold & 1) | (chBold & 0b10)) << 2;
-		chAnew >>= i;
-		chBnew >>= i;
+		chAnew >>= 1;
+		chBnew >>= 1;
 		code |= ((chAnew & 1) | (chBnew & 0b10));
 		passi[i] += (enc_states[code]);
 	}
@@ -110,12 +128,12 @@ void enDebug() {
 }
 
 void printSteps() {
-	int * passi = captureEn();
+	int * passiT = captureEn();
 	for (byte i = 0; i < nMot; i++) {
 		Serial.print("\tEn ");
-		Serial.print(i);
+		Serial.print(i + 1);
 		Serial.print("= ");
-		Serial.print(passi[i]);
+		Serial.print(passiT[i]);
 	}
 	Serial.println();
 }

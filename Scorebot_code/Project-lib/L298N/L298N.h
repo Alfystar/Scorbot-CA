@@ -39,4 +39,7 @@ private:
 
 };
 
+#ifndef __IN_ECLIPSE__
+#include "L298N.cpp"
+#endif
 #endif

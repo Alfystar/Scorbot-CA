@@ -13,7 +13,7 @@
 #include "../circular_buffer/circular_buffer.h"
 #include "../globalDef.h"
 
-#define sizeMem 32 	//numero di celle (di int [2 byte])nel buffer circolare
+#define sizeMem 128 	//numero di celle (di int [2 byte])nel buffer circolare
 
 /*** HARDWARE ***/
 // Imposta i pin di uscita e registri
