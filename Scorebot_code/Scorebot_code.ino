@@ -7,7 +7,7 @@
 #define SERIAL_PRINT	//attiva/disattiva compilazione del codice per printare in seriale
 #define sanityDelay 250	//tempo ms di attesa prima di ri-scansionare se il robot è ok
 
-settings sets;
+settingsBoard sets;
 
 //The setup function is called once at startup of the sketch
 void setup() {

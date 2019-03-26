@@ -12,11 +12,16 @@ cbuf_handle_t circularBuf;
 int passi[nMot];
 int passiTemp[nMot];
 
+/*** HARDWARE ***/
 void dsubFeedSetup() {
 	memset(bufMem, 0, sizeMem * sizeof(int));
 	memset(passi, 0, nMot * sizeof(int));
 
 	circularBuf = circular_buf_init((uint16_t *) bufMem, sizeMem);
+
+	//ne metto 2 uguali per Predisporre la lettura
+	circular_buf_put(circularBuf, enRead());
+	circular_buf_put(circularBuf, enRead());
 	//make input pin
 	DDRC &= 0b11000000;
 	DDRK = 0;
@@ -41,14 +46,13 @@ int enRead() {	// Byte: [0]EnChA : [1]EnChB
 	return (((PINK & 0b11000000) >> 6) | ((PINB & 0xF0) >> 2) << 8)
 			| (PINK & 0b00111111);
 }
-byte enChA, enChB, ms;
 
 /*** ELABORATION ***/
 void updateStepEn() {
 	int oldEn, newEn;
 	while (!circular_buf_empty(circularBuf)) {
 		if (circular_buf_getLastOne(circularBuf, (uint16_t *) &oldEn))
-			break;	//at start, there are only one value, no reading
+			break;	//at start , there are only one value, no reading
 		circular_buf_get(circularBuf, (uint16_t *) &newEn);
 		calcStep(oldEn, newEn);
 	}
@@ -76,21 +80,22 @@ void calcStep(int oldEn, int newEn) {
 
 void isrFunxEN() {
 	circular_buf_put(circularBuf, enRead());
-	Serial.println(enRead(), BIN);
+	//Serial.println(enRead(), BIN);
 }
 
 /*** GET VALUE ***/
 int getEn(byte i) {
 	return passi[i];
 }
-//Fotografa un istante e rimane quello fino alla successiva chiamata della funzione
 
+//Fotografa un istante e rimane quello fino alla successiva chiamata della funzione
 int *captureEn() {
 	memcpy(passiTemp, passi, sizeof(int) * nMot);
 	return passiTemp;
 }
 
 /*** DEBUG & PRINT ***/
+byte enChA, enChB, ms;
 void enDebug() {
 	ms = msRead();
 	enChA = PINK & 0b00111111;

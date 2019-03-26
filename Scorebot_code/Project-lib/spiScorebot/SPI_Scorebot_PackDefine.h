@@ -1,6 +1,8 @@
 #ifndef SPISCOREBOT_PACKDEF_H
 #define SPISCOREBOT_PACKDEF_H
 
+#include "../globalDef.h"
+
 enum modi {
 	setPWM, getSetting, setSetting, setHome, goHome
 };
@@ -13,9 +15,10 @@ typedef struct setPWMRecive_ {
 //getSetting richiesta senza parametri
 
 typedef struct setSettingRecive_ {
-	char text[16];
+	settingsBoard sets;
 } setSettingRecive;
 
+/*-----------------------------------------------------------------*/
 /*Struttura usata dall'interrupt per salvare le cose a occhi chiusi*/
 typedef struct spiRecive_ {
 	char type;
@@ -25,16 +28,31 @@ typedef struct spiRecive_ {
 	} pack;
 } spiRecive;
 
-/* Tipi di pacchetti da inviare, uno sovrapposto all'altro*/
-typedef struct feedRet_ {
-	char encoder[32];
-} feedRet;
+/*#################################################################*/
 
+/* Tipi di pacchetti da inviare, uno sovrapposto all'altro*/
+typedef struct setPWMSend_ {
+	char encoder[32];
+} setPWMSend;
+
+typedef struct getSettingSend_ {
+	settingsBoard sets;
+} getSettingSend;
+
+/*-----------------------------------------------------------------*/
 /*Struttura usata dall'interrupt per Inviare le cose a occhi chiusi*/
 typedef struct spiSend_ {
 	union {
-		feedRet feedBack;
+		setPWMSend feedBack;
+		getSettingSend prop;
 	} pack;
 } spiSend;
 
+
+
+typedef struct SPIPACK_
+{
+	spiRecive in;
+	spiSend out;
+};
 #endif

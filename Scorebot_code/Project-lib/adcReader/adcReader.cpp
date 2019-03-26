@@ -6,12 +6,13 @@
  */
 #include "adcReader.h"
 #define history 8 //data la frequenza ~1ms
+
 /* LOCAL VAR */
 int ampMot[nMot][history];
 volatile byte indexADC = 0; //todo, variabile che viene messa a 1 quando si termina un ciclo di scansione
 //start value
-volatile byte newRead = cMot1;
-volatile byte oldRead = cMot1;
+volatile byte newReadId = cMot1;
+volatile byte oldReadId = cMot1;
 
 /*** HARDWARE ***/
 void setUpADC() {
@@ -62,12 +63,12 @@ void setUpADC() {
 /*** ELABORATION ***/
 void isrFunxAdc() {
 	// Must read low first
-	ampMot[oldRead][indexADC] = ((int) ADCL | ((int) ADCH << 8));
-	oldRead = newRead;
-	newRead = (newRead + 1) % nMot;
-	if (oldRead == 0)
+	ampMot[oldReadId][indexADC] = ((int) ADCL | ((int) ADCH << 8));
+	oldReadId = newReadId;
+	newReadId = (newReadId + 1) % nMot;
+	if (oldReadId == 0)
 		indexADC = (indexADC + 1) % history;
-	difPinSelect(newRead);
+	difPinSelect(newReadId);
 }
 /* Tabella Codice/significato dei mux
  MUX5:0  +    -   G

@@ -20,9 +20,9 @@ enum motCode {cMot1=0, cMot2, cMot3, cMot4, cMot5, cMot6};
 
 
 
-typedef struct settings_ {
+typedef struct settingsBoard_ {
 	int maxEn[nMot]; 		//valore massimo di passi prima di considerarsi fuori range di sicurezza
 	int maxCurrMed[nMot];	//valore massimo di corrente Efficace (con una media di 1 ms ~ ultime 8 letture), numero * 8 per semplificare i conti)
-} settings;
+} settingsBoard;
 
 #endif /* PROJECT_LIB_GLOBALDEF_H_ */
