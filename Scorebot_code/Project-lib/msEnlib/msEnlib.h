@@ -35,7 +35,7 @@ int *captureEn();
 
 /*** DEBUG & PRINT ***/
 void enDebug();
-void printEnAll();
+void printSteps();
 
 #ifndef __IN_ECLIPSE__
 #include "msEnlib.cpp"

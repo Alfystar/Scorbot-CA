@@ -39,7 +39,7 @@ void dsubFeedSetup() {
 }
 
 byte msRead() {
-	return ~PINC & 0b00111111;
+	return (~PINC) & 0b00111111;
 }
 
 int enRead() {	// Byte: [0]EnChA : [1]EnChB
@@ -109,12 +109,12 @@ void enDebug() {
 	Serial.println(enChB, BIN);
 }
 
-void printEnAll() {
+void printSteps() {
 	int * passi = captureEn();
-	for (byte i = 0; i++; i < nMot) {
+	for (byte i = 0; i < nMot; i++) {
 		Serial.print("\tEn ");
 		Serial.print(i);
-		Serial.print("=");
+		Serial.print("= ");
 		Serial.print(passi[i]);
 	}
 	Serial.println();

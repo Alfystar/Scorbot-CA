@@ -47,9 +47,9 @@ void loop() {
 #ifdef SERIAL_PRINT
 	/*Funzione di Print Seriale NON BLOCCANTE*/
 	if (millis() > timePrint + 1000) {
-		debugPrintAdc();
-		enDebug();
-		printEnAll();
+		//debugPrintAdc();
+		//enDebug();
+		printSteps();
 		timePrint = millis();
 	}
 #endif
