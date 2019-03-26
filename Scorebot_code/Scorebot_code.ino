@@ -36,15 +36,15 @@ void setup() {
 	sei();
 	Serial.println("End Setup");
 
-	//mot[0]->drive_motor(-130, 5000);
-	//mot[1]->drive_motor(255, 1000);
+	mot[0]->drive_motor(130, 5000);
+	mot[1]->drive_motor(255, 5000);
 
-	//mot[2]->drive_motor(180, 1000);
+	mot[2]->drive_motor(180, 5000);
 
-	mot[3]->drive_motor(180, 2000);
-	mot[4]->drive_motor(180, 2000);
+	mot[3]->drive_motor(180, 5000);
+	mot[4]->drive_motor(180, 5000);
 
-	//mot[5]->drive_motor(50, 2000);
+	mot[5]->drive_motor(50, 5000);
 
 }
 
@@ -62,10 +62,10 @@ void loop() {
 
 #ifdef SERIAL_PRINT
 	/*Funzione di Print Seriale NON BLOCCANTE*/
-	if (millis() > timePrint + 250) {
-		//debugPrintAdc();
+	if (millis() > timePrint + 100) {
+		debugPrintAdc();
 		//enDebug();
-		printSteps();
+		//printSteps();
 		timePrint = millis();
 	}
 #endif
