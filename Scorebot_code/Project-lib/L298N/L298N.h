@@ -14,13 +14,15 @@
 enum {
 	moving, movingTiming, H_brake, S_brake, alwaisBrake, free_Mot
 };
+//typedef bool (funcBool_t)(); // pointer to function with no args and bool return
 
 class L298N {
 public:
 	L298N(byte ena, byte in1, byte in2);
 	void updateMot();							//no stopping Call, to update status
+	//bool goHome(funcBool_t f )					//Funzione che gestrisce la home
 
-	/*State change mot*/
+	/*State change motor*/
 	void drive_motor(int speed);
 	void drive_motor(int speed, unsigned int delay_time);
 	void soft_stop();
@@ -29,6 +31,7 @@ public:
 	void freeRun();
 private:
 	byte in1, in2, pwm, state;
+	bool knowHome;
 	int speed;
 	int delay_time;
 	unsigned long time;

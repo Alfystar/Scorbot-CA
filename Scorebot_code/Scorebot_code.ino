@@ -36,15 +36,16 @@ void setup() {
 	sei();
 	Serial.println("End Setup");
 
-	mot[0]->drive_motor(130, 5000);
-	mot[1]->drive_motor(255, 5000);
+	home();
+	//mot[0]->drive_motor(150, 2000);
+	// mot[1]->drive_motor(255, 5000);
 
-	mot[2]->drive_motor(180, 5000);
+	//mot[2]->drive_motor(180, 5000);
 
-	mot[3]->drive_motor(180, 5000);
-	mot[4]->drive_motor(180, 5000);
-
-	mot[5]->drive_motor(50, 5000);
+	//mot[3]->drive_motor(255);
+	//mot[4]->drive_motor(180, 5000);
+	//mot[5]->drive_motor(50, 5000);
+	//mot[cMot1]->drive_motor(-255);
 
 }
 
@@ -63,9 +64,12 @@ void loop() {
 #ifdef SERIAL_PRINT
 	/*Funzione di Print Seriale NON BLOCCANTE*/
 	if (millis() > timePrint + 100) {
-		debugPrintAdc();
+
+		//Serial.println(getAmpMot(cMot1));
+
+		//debugPrintAdc();
 		//enDebug();
-		//printSteps();
+		printSteps();
 		timePrint = millis();
 	}
 #endif
@@ -79,7 +83,7 @@ void sanityChek(int wait) {
 			//todo: emergenci stop, sono a fine corsa
 		}
 		for (byte i = 0; i < nMot; i++) {
-			if (sets.maxEn[i] > getEn(i))//se vero, sono oltre limite (i negativi non posono esserci essendo lo 0 a msRead[al massimo -1/-2 ma è rumore])
+			if (sets.maxEn[i] > getEn(i) || sets.minEn[i] < getEn(i))//se vero, sono oltre limite (i negativi non posono esserci essendo lo 0 a msRead[al massimo -1/-2 ma è rumore])
 					{
 				//todo: emergenci stop, sono a fine corsa
 			}

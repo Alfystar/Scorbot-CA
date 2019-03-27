@@ -13,6 +13,8 @@ L298N::L298N(byte ena, byte in1, byte in2) {
 	pinMode(in1, OUTPUT);
 	pinMode(in2, OUTPUT);
 
+	this->knowHome=false;
+
 	this->in1 = in1;
 	this->in2 = in2;
 	this->pwm = ena;
@@ -47,15 +49,21 @@ void L298N::updateMot() {
 	default:
 		break;
 	}
+}
+/*
+bool L298N::goHome(funcBool_t f )
+{
 
 }
+*/
+
 
 void L298N::drive_motor(int speed) {
 	this->speed = speed;
 	this->state = moving;
 	if (speed < 0) {
 		this->anticlockwise();
-		analogWrite(this->pwm, this->speed);
+		analogWrite(this->pwm, -this->speed);
 	} else {
 		this->clockWise();
 		analogWrite(this->pwm, this->speed);

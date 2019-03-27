@@ -66,11 +66,10 @@ void updateStepEn() {
 }
 
 //VARIABILI PRIVATE DI calcStep
-#define imp 0
-//int8_t enc_states[] = { 0, -1, 1, 0, 1, 0, 0, -1, -1, 0, 0, 1, 0, 1, -1, 0 };
+#define im 0
 //						0   1  2   3   4  5   6    7   8   9  10 11  12  13  14 15
-int8_t enc_states[] = { 0, -1, 1, imp, 1, 0, imp, -1, -1, imp, 0, 1, imp, 1, -1,
-		0 }; /*[old]BA-BA[new]*/
+int8_t enc_states[] = { 0, -1, 1, im, 1, 0, im, -1, -1, im, 0, 1, im, 1, -1, 0 }; /*[old]BA-BA[new]*/
+
 
 byte chAold, chBold, chAnew, chBnew, code;
 void calcStep(int oldEn, int newEn) {
@@ -99,6 +98,12 @@ void calcStep(int oldEn, int newEn) {
 void isrFunxEN() {
 	circular_buf_put(circularBuf, enRead());
 	//Serial.println(enRead(), BIN);
+}
+
+/*** SET VALUE ***/
+void setEn(byte m, int p)
+{
+	passi[m]=p;
 }
 
 /*** GET VALUE ***/

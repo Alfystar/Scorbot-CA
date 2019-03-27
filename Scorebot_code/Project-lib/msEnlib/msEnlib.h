@@ -28,6 +28,9 @@ void updateStepEn();
 void calcStep(int oldEn, int newEn);
 void isrFunxEN();
 
+/*** SET VALUE ***/
+void setEn(byte m, int p);
+
 /*** GET VALUE ***/
 int getEn(byte i);
 //Fotografa un istante e rimane quello fino alla successiva chiamata della funzione
