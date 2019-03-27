@@ -9,6 +9,13 @@
  * più vicini possibili tutti i sensori a 0 senza diventare negativi però, in tal caso
  * la sottrazione fa si che il risultato riparta da 1023 rendendo vana la lettura.
  *
+ * Sensitività in uscita: 0.185 V/A, l'offset a 0 lo mettiamo con il trimmer
+ * Vref attuale 1.1V Interni dell'atmega
+ * ______________________________________________________________________
+ * |			 Vref * ADC	 	|  |			Iread * 1024 * 0.185	|
+ * |	Iread = --------------	|&&|	ADC = -----------------------	|
+ * |			1024 * 0.185   	|  |				Vref				|
+ * |____________________________|__|____________________________________|
  *  Created on: 22 mar 2019
  *      Author: alfy
  */

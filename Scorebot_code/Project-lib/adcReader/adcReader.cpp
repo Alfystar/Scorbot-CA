@@ -50,7 +50,10 @@ void setUpADC() {
 /*** ELABORATION ***/
 void isrFunxAdc() {
 	// Must read low first
-	ampMot[oldReadId][indexADC] = ((int) ADCL | ((int) ADCH << 8));
+	int g = ((int) ADCL | ((int) ADCH << 8));
+	if (g > 980)
+		g = 0;
+	ampMot[oldReadId][indexADC] = g;
 	oldReadId = newReadId;
 	if (oldReadId == 0)
 		indexADC = (indexADC + 1) % history;
@@ -72,36 +75,34 @@ int difPinSelect(int p) {
 	byte val = ADMUX & 0xE0; //Cancello il precedente vale selezionato, mantenendo le impostazioni
 	switch (p) {
 	case cMot1:
-		ADMUX |= 0x10;
+		val |= 0x10;
 		break;
 	case cMot2:
-		ADMUX |= 0x12;
+		val |= 0x12;
 		break;
 	case cMot3:
-		ADMUX |= 0x13;
+		val |= 0x13;
 		break;
 	case cMot4:
-		ADMUX |= 0x14;
+		val |= 0x14;
 		break;
 	case cMot5:
-		ADMUX |= 0x15;
+		val |= 0x15;
 		break;
 	case cMot6:
-		ADMUX |= 0x16;
+		val |= 0x16;
 		break;
 	default:
 		return -1;
 		break;
 	}
+	ADMUX = val;
 	return 0;
 }
 
 /*** GET VALUE ***/
 int getAmpMot(byte m) {
-	int g = ampMot[m][indexADC];
-	if (g > 900)
-		g = -1;
-	return g;
+	return ampMot[m][indexADC];
 }
 
 //puntatore di ritorno FERMO per circa 1ms
@@ -109,8 +110,9 @@ int *getAmpMots() {
 	return &ampMot[0][((indexADC - 1) + history) % history];
 }
 
-int sumCurr = 0;
+int sumCurr;
 int getSumMot(byte i) {
+	sumCurr = 0;
 	for (byte j = 0; j < history; j++)
 		sumCurr += ampMot[i][j];
 	return sumCurr;
