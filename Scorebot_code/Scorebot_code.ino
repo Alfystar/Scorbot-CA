@@ -24,7 +24,6 @@ void setup() {
 	dsubFeedSetup();
 	Serial.println("\tMotor Enable");
 	motSetup();
-
 	/* PER ORA UN CORTO CIRCUITO
 	 Serial.println("\Relè Mot Enable");
 	 pinMode(motEn, OUTPUT);
@@ -37,16 +36,6 @@ void setup() {
 	Serial.println("End Setup");
 
 	home();
-	//mot[0]->drive_motor(150, 2000);
-	// mot[1]->drive_motor(255, 5000);
-
-	//mot[2]->drive_motor(180, 5000);
-
-	//mot[3]->drive_motor(255);
-	//mot[4]->drive_motor(180, 5000);
-	//mot[5]->drive_motor(50, 5000);
-	//mot[cMot1]->drive_motor(-255);
-
 }
 
 // The loop function is called in an endless loop
@@ -69,7 +58,7 @@ void loop() {
 
 		//debugPrintAdc();
 		//enDebug();
-		printSteps();
+		//printSteps();
 		timePrint = millis();
 	}
 #endif

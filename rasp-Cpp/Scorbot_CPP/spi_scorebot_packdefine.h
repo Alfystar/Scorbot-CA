@@ -1,26 +1,33 @@
 #ifndef SPI_SCOREBOT_PACKDEFINE
 #define SPI_SCOREBOT_PACKDEFINE
 
-enum modi {setPWM, getSetting, setSetting, setSWHome,goHWHome};
+#define nMot 6
 
+typedef struct settingsBoard_ {
+	short maxEn[nMot]; 		//valore massimo di passi prima di considerarsi fuori range di sicurezza (numeri pos)
+    short minEn[nMot]; 		//valore minimo di passi prima di considerarsi fuori range di sicurezza (numeri neg)
+    short maxCurrMed[nMot];	//valore massimo di corrente Efficace (con una media di 1 ms ~ ultime 8 letture), numero * 8 per semplificare i conti)
+} settingsBoard;
+
+enum modi {setPWM, getCurrent, getSetting, setSetting, setHome, goHome};
 
 /*Tipi di pacchetti che si possono inviare, uno sovrapposto all'altro*/
 typedef struct setPWMSend_
 {
-    char text[32];
+    char pwm[nMot];
 }setPWMSend;
 
 // getSetting domanda senza parametri
 
+//getSetting domanda senza parametri
+
+
 typedef struct setSettingSend_
 {
-    char newSet[32];
+    settingsBoard sets;
 }setSettingSend;
 
-//setSWHome affermazione senza parametri
-
-//goHWHome affermazione senza parametri
-
+//goHome richiesta senza parametri
 
 
 /*Struttura di Invio, usata dalla classe SPISEND*/
@@ -33,36 +40,44 @@ typedef struct spiSend_
     }pack;
 }spiSend;
 
-
+/*#################################################################*/
 
 /*Tipi di pacchetti che si possono ricevere, uno sovrapposto all'altro*/
-typedef struct feedRet_     //risposta a setPWM
+typedef struct setPWMRet_     //risposta a setPWM
 {
-    char text[32];
-}feedRet;
+    short passi[nMot];
+}setPWMRet;
 
+typedef struct getCurrentRet_{
+    short current[nMot];
+}getCurrentRet;
 
 typedef struct getSettingRet_     //risposta a getSetting
 {
-    char text[32];
+    settingsBoard sets;
 }getSettingRet;
 
 //setSetting risposta non prevista
 
-//setSWHome risposta non prevista
 
-//goHWHome risposta non prevista
+//goHWHome risposta Senza parametri extra
 
-
-
+/*-----------------------------------------------------------------*/
 /*Struttura di Ricezione, usata dalla classe SPISEND*/
 typedef struct spiRet_
 {
     char type;
     union {
-        feedRet_ sensor;
-        getSettingRet_ prop;
+        setPWMRet en;
+        getCurrentRet cur;
+        getSettingRet prop;
     }pack;
 }spiRet;
+
+/** ## -------------------------------------------------------- ## **/
+typedef struct SPIPACK_ {
+    spiSend out;
+    spiRet in;
+};
 
 #endif // SPI_SCOREBOT_PACKDEFINE

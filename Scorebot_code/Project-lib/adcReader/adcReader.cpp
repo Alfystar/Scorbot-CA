@@ -25,7 +25,7 @@ volatile byte oldReadId = cMot1;
 
 /*** HARDWARE ***/
 void setUpADC() {
-	memset((void *) ampMot, 0, sizeof(int) * nMot); //pulisco la memoria
+	memset((void *) ampMot, 0, sizeof(int) * nMot * history); //pulisco la memoria
 	//ADMUX – ADC Multiplexer Selection Register
 	ADMUX = (0 << REFS0) | (1 << REFS1); // 1.1V Interni Arduino
 
