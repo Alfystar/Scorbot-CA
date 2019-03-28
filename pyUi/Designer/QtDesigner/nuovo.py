@@ -692,10 +692,8 @@ class Ui_MainWindow(object):
         self.menuMenu.setTitle(_translate("MainWindow", "Menu"))
         self.actionTor_vergata_SX.setText(_translate("MainWindow", "Tor vergata SX"))
         self.actionwork_Team.setText(_translate("MainWindow", "Work Team"))
-
-
+        
 import Immagini_rc
-
 
 if __name__ == "__main__":
     import sys

@@ -1,10 +1,9 @@
-<RCC>
-  <qresource prefix="Immagini">
-    <file>Scorbot2.png</file>
-    <file>Logo-Uni-Tor-Vergata copia.jpn.jpg</file>
-  </qresource>
-  <qresource prefix="newPrefix">
-    <file>Logo-Uni-Tor-Vergata.jpg</file>
-    <file>Scorbot 1.jpg</file>
-  </qresource>
-</RCC>
+
+<qresource prefix="Immagini">
+  <file>Scorbot2.png</file>
+  <file>Logo-Uni-Tor-Vergata copia.jpn.jpg</file>
+</qresource>
+<qresource prefix="newPrefix">
+<file>Logo-Uni-Tor-Vergata.jpg</file>
+<file>Scorbot 1.jpg</file>
+</qresource>
