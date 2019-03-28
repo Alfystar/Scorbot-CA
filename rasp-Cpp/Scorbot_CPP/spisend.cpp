@@ -36,6 +36,9 @@ feedRet * SpiSend::sendPWM(setPWMSend *s)
 
     memset (&spi, 0, sizeof (spi));
 
+    memset(this->txbuf,0,this->size);
+    memset(this->rxbuf,0,this->size);
+
     memcpy(this->txbuf,s,sizeof(setPWMSend));                                     //imposto i bit utili da inviare
     //memset (this->txbuf+sizeof(pwmSend), 0, this->size-sizeof(pwmSend));      //riempo a 0 i bit rimasti
 
@@ -44,7 +47,7 @@ feedRet * SpiSend::sendPWM(setPWMSend *s)
     spi.len           = size;
     spi.speed_hz      = 250000;
 
-    usleep(16);
+    usleep(50); //16
 
     ioctl (this->fdSpi, SPI_IOC_MESSAGE(1), &spi);      //1 è la dimensione del buffer SPI (nel nostro caso inviamo 1 pacchetto alla volta)
 

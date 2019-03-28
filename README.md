@@ -23,7 +23,7 @@ Progetto di Controlli Automatici, 3° Ing. Informatica, Prof: Daniele Carnevale
 #### Python User Interface Developed by:
 - Ilaria Angeloni
 - Alberto Menichelli
-
+- Emanuele Alfano
 #### Matlab Math Controll
 - Alessandro Cosentini
 - Fabio Di Vincenzo
