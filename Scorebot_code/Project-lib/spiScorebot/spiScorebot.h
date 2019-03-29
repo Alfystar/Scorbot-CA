@@ -4,14 +4,17 @@
 #include <stdlib.h>
 #include "SPI_Scorebot_PackDefine.h"
 #include "../globalDef.h"
+#include "../msEnlib/msEnlib.h"
+#include "../adcReader/adcReader.h"
 
 /*** HARDWARE ***/
 void spiSetup();
 
 /*** ELABORATION ***/
 void isrFunxISP();
-void preparaDati(char type);
-int limitiDati(char type);
+void preparaDati(SPIPACK *p);
+//int limitiDati(char type);
+int sizeTypePack(SPIPACK *s);
 
 /*** GET VALUE ***/
 byte spiAvailable();
