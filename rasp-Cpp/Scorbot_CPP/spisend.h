@@ -19,7 +19,6 @@ class SpiSend
 public:
     SpiSend();
     virtual ~SpiSend();
-    void hello();
     void sendPack (SPIPACK *s);
 protected:
 private:

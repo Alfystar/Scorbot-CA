@@ -9,29 +9,31 @@ int main()
     send = new SpiSend();
 
     SPIPACK s;
-    s.out.type=setPWM;
-    s.out.pack.speed.pwm[cMot1]=255;
-    s.out.pack.speed.pwm[cMot2]=-255;
-    s.out.pack.speed.pwm[cMot3]=55;
-    s.out.pack.speed.pwm[cMot4]=155;
-    s.out.pack.speed.pwm[cMot5]=255;
-    s.out.pack.speed.pwm[cMot6]=65;
-    printf("Vel Send: 1)%d 2)%d 3)%d 4%d 5)%d 6)%d\n",s.out.pack.speed.pwm[cMot1],
-           s.out.pack.speed.pwm[cMot2],
-           s.out.pack.speed.pwm[cMot3],
-           s.out.pack.speed.pwm[cMot4],
-           s.out.pack.speed.pwm[cMot5],
-           s.out.pack.speed.pwm[cMot6]);
+    memset(&s,0,sizeof(SPIPACK));
     while(1)
     {
+        s.out.type=setPWM;
+        s.out.pack.speed.vel[cMot1]=255;
+        s.out.pack.speed.vel[cMot2]=-255;
+        s.out.pack.speed.vel[cMot3]=55;
+        s.out.pack.speed.vel[cMot4]=155;
+        s.out.pack.speed.vel[cMot5]=255;
+        s.out.pack.speed.vel[cMot6]=65;
+        printf("Vel Send:\n1)%d\t2)%d\t3)%d\t4)%d\t5)%d\t6)%d\n",s.out.pack.speed.vel[cMot1],
+               s.out.pack.speed.vel[cMot2],
+               s.out.pack.speed.vel[cMot3],
+               s.out.pack.speed.vel[cMot4],
+               s.out.pack.speed.vel[cMot5],
+               s.out.pack.speed.vel[cMot6]);
+
         send->sendPack(&s);
-        printf("Encoder read: 1)%d 2)%d 3)%d 4%d 5)%d 6)%d\n",s.in.pack.en.passi[cMot1],
+        printf("Encoder read:\n1)%d\t2)%d\t3)%d\t4)%d\t5)%d\t6)%d\n",s.in.pack.en.passi[cMot1],
                s.in.pack.en.passi[cMot2],
                s.in.pack.en.passi[cMot3],
                s.in.pack.en.passi[cMot4],
                s.in.pack.en.passi[cMot5],
                s.in.pack.en.passi[cMot6]);
-        usleep(100000);
+        sleep(1);
     }
     return 0;
 }

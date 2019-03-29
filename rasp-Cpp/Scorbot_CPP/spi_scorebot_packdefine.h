@@ -15,7 +15,7 @@ enum motCode {cMot1=0, cMot2, cMot3, cMot4, cMot5, cMot6};
 /*Tipi di pacchetti che si possono inviare, uno sovrapposto all'altro*/
 typedef struct setPWMSend_
 {
-    char pwm[nMot];
+    short vel[nMot];
 }setPWMSend;
 
 //getCurrent domanda senza parametri

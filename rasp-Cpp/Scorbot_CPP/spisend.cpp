@@ -21,11 +21,6 @@ SpiSend::~SpiSend()
     free(this->rxbuf);
 }
 
-void SpiSend::hello()
-{
-    printf("hello word");
-}
-
 /* struct spi_ioc_transfer - describes a single SPI transfer
  * @tx_buf: Holds pointer to userspace buffer with transmit data, or null.
  *          If no data is provided, zeroes are shifted out.
@@ -47,7 +42,13 @@ void SpiSend::sendPack(SPIPACK *s)
     memset(this->txbuf,0,this->size);
     memset(this->rxbuf,0,this->size);
 
-    memcpy(this->txbuf,&s->out.pack,sizeof(spiSend));                                     //imposto i bit utili da inviare
+    memcpy(this->txbuf,&s->out.pack,sizeof(spiSend));  //imposto i bit utili da inviare
+
+    printf("Byte send");
+    for (int i = 0; i < this->size; ++i) {
+        printf(" %d",txbuf[i]);
+    }
+    printf("\n");
 
     struct spi_ioc_transfer spi;
     memset (&spi, 0, sizeof (spi));
@@ -56,7 +57,7 @@ void SpiSend::sendPack(SPIPACK *s)
     spi.len           = this->sizeTypePack(s);
     spi.speed_hz      = 250000;
 
-    usleep(16); //16
+    usleep(100); //16
 
     ioctl (this->fdSpi, SPI_IOC_MESSAGE(1), &spi);      //1 è la dimensione del buffer SPI (nel nostro caso inviamo 1 pacchetto alla volta)
 
