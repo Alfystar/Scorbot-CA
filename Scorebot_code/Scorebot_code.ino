@@ -7,7 +7,7 @@
 #define SERIAL_PRINT	//attiva/disattiva compilazione del codice per printare in seriale
 #define sanityDelay 250	//tempo ms di attesa prima di ri-scansionare se il robot è ok
 
-
+settingsBoard sets;
 
 L298N *mot[nMot];
 
@@ -44,7 +44,13 @@ SPIPACK * r;
 void loop() {
 	sanityChek(sanityDelay);
 	if (spiAvailable()) {
-		//r = (spiRecive *) getLastRecive();
+		r = getLastRecive();
+		for (byte i = 0; i < sizeof(spiRecive); ++i) {
+			Serial.print((byte) (*(((char *) &r->in) + i)));
+			Serial.print(" ");
+		}
+		Serial.println();
+		//printSpiPack(r);
 	}
 	updateStepEn();
 	motorStateMachine();

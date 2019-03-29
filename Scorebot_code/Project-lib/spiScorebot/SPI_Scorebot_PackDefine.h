@@ -9,7 +9,7 @@ enum modi {
 
 /* Tipi di pacchetti da ricevere, uno sovrapposto all'altro*/
 typedef struct setPWMRecive_ {
-	char pwm[nMot];
+	signed int vel[nMot];
 } setPWMRecive;
 
 //getCurrent richiesta senza parametri
@@ -27,7 +27,7 @@ typedef struct setSettingRecive_ {
 typedef struct spiRecive_ {
 	char type;
 	union {
-		setPWMRecive pwm;
+		setPWMRecive speed;
 		setSettingRecive prop;
 	} pack;
 } spiRecive;

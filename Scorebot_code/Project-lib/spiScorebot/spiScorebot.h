@@ -17,10 +17,11 @@ void preparaDati(SPIPACK *p);
 int sizeTypePack(SPIPACK *s);
 
 /*** GET VALUE ***/
+SPIPACK* getLastRecive();
 byte spiAvailable();
-volatile spiRecive* getLastRecive();
 
-/*** PRINT & DEBUG ***/
+/*** DEBUG & PRINT ***/
+void printSpiPack(SPIPACK *p);
 
 #ifndef __IN_ECLIPSE__
 #include "spiScorebot.cpp"
