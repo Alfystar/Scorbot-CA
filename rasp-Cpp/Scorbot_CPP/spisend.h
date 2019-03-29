@@ -16,16 +16,17 @@
 
 class SpiSend
 {
-    public:
-        SpiSend();
-        virtual ~SpiSend();
-        void hello();
-        feedRet *sendPWM (setPWMSend *s);
-    protected:
-    private:
-        char *txbuf,*rxbuf;
-        int size,fdSpi;
-        void setMode(char mode);
+public:
+    SpiSend();
+    virtual ~SpiSend();
+    void hello();
+    void sendPack (SPIPACK *s);
+protected:
+private:
+    char *txbuf,*rxbuf;
+    int size,fdSpi;
+    void setMode(char mode);
+    int sizeTypePack(SPIPACK *s);
 
 };
 

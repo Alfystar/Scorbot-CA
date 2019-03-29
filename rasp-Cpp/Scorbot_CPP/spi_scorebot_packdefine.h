@@ -4,12 +4,13 @@
 #define nMot 6
 
 typedef struct settingsBoard_ {
-	short maxEn[nMot]; 		//valore massimo di passi prima di considerarsi fuori range di sicurezza (numeri pos)
+    short maxEn[nMot]; 		//valore massimo di passi prima di considerarsi fuori range di sicurezza (numeri pos)
     short minEn[nMot]; 		//valore minimo di passi prima di considerarsi fuori range di sicurezza (numeri neg)
     short maxCurrMed[nMot];	//valore massimo di corrente Efficace (con una media di 1 ms ~ ultime 8 letture), numero * 8 per semplificare i conti)
 } settingsBoard;
 
-enum modi {setPWM, getCurrent, getSetting, setSetting, setHome, goHome};
+enum modi {setPWM=0, getCurrent, getSetting, setSetting, goHome};
+enum motCode {cMot1=0, cMot2, cMot3, cMot4, cMot5, cMot6};
 
 /*Tipi di pacchetti che si possono inviare, uno sovrapposto all'altro*/
 typedef struct setPWMSend_
@@ -17,10 +18,9 @@ typedef struct setPWMSend_
     char pwm[nMot];
 }setPWMSend;
 
-// getSetting domanda senza parametri
+//getCurrent domanda senza parametri
 
 //getSetting domanda senza parametri
-
 
 typedef struct setSettingSend_
 {
@@ -35,7 +35,7 @@ typedef struct spiSend_
 {
     char type;
     union {
-        setPWMSend pwm;
+        setPWMSend speed;
         setSettingSend prop;
     }pack;
 }spiSend;
@@ -66,7 +66,6 @@ typedef struct getSettingRet_     //risposta a getSetting
 /*Struttura di Ricezione, usata dalla classe SPISEND*/
 typedef struct spiRet_
 {
-    char type;
     union {
         setPWMRet en;
         getCurrentRet cur;
@@ -78,6 +77,6 @@ typedef struct spiRet_
 typedef struct SPIPACK_ {
     spiSend out;
     spiRet in;
-};
+}SPIPACK;
 
 #endif // SPI_SCOREBOT_PACKDEFINE
