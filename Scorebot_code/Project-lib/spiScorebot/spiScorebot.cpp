@@ -1,8 +1,6 @@
 #include "spiScorebot.h"
 /* Local Var*/
 SPIPACK spiPack[2];
-spiRecive reciveSpi[2];
-spiSend _sendSpi;
 volatile byte idTransf = 0; //Index of current Transfert
 volatile byte dRecive = 0; //indica su quale buffer si sta scrivendo in questo momento
 volatile byte newRecive = 0;
@@ -10,69 +8,23 @@ volatile byte newRecive = 0;
 /*** HARDWARE ***/
 void spiSetup() {
 	pinMode(MISO, OUTPUT);
-	memset((void *) &reciveSpi, 0, sizeof(spiRecive) * 2);
+	memset((void *) spiPack, 0, sizeof(SPIPACK) * 2);
 	idTransf = 0;
 	SPCR = (1 << SPIE) | (1 << SPE); 	//attiva spi e abilita interrupt
 	SPDR = 0;	 						//predispomgo che al primo invio invio 0
 }
 
 /*** ELABORATION ***/
-/*
- void isrFunxISP() {
- if (idTransf == 0) {
- reciveSpi[dRecive].type = SPDR;
- preparaDati(reciveSpi[dRecive].type);
- //Serial.println(_sendSpi.pack.feedBack.encoder);	//print di test
- SPDR = *((char *) &_sendSpi + idTransf);
- idTransf++;
- } else if (idTransf < limitiDati(reciveSpi[dRecive].type)) {
- //salva nuovo dato
- volatile char *mem = ((volatile char *) &reciveSpi[dRecive] + idTransf);
- *mem = SPDR;
- SPDR = *((char *) &_sendSpi + idTransf);
- idTransf++;
- } else {
- //comunicazione all'ultimo byte
- volatile char *mem = ((volatile char *) &reciveSpi[dRecive] + idTransf);
- *mem = SPDR;
- SPDR = *((char *) &_sendSpi + idTransf);
- idTransf = 0;
- dRecive = !dRecive;
- newRecive = 1;
- }
- }*/
-
-
-void preparaDati(SPIPACK *p) {
-	switch (p->in.type) {
-	case setPWM:
-		memcpy(p->out.pack.en.passi, captureEn(), sizeof(setPWMSend));
-		break;
-	case getCurrent:
-		memcpy(p->out.pack.curr.current, getAmpMots(), sizeof(getCurrentSend));
-		break;
-	case getSetting:
-		memcpy(p->out.pack.prop.sets, (void *)&sets, sizeof(getSettingSend));
-		break;
-	case setSetting:
-		break;
-	case goHome:
-		break;
-	default:
-		break;
-	}
-}
-
+char *mem;
 void isrFunxISP() {
 	if (idTransf == 0) {
 		spiPack[dRecive].in.type = SPDR;
 		preparaDati(&spiPack[dRecive]);
-		//Serial.println(_sendSpi.pack.feedBack.encoder);	//print di test
 		SPDR = *((char *) &spiPack[dRecive].out.pack + idTransf);
 		idTransf++;
 	} else if (idTransf < sizeTypePack(&spiPack[dRecive])) {
 		//salva nuovo dato
-		char *mem = ((char *) &spiPack[dRecive].in.pack + idTransf);
+		mem = ((char *) &spiPack[dRecive].in.pack + idTransf);
 		*mem = SPDR;
 		SPDR = *((char *) &spiPack[dRecive].out.pack + idTransf);
 		idTransf++;
@@ -84,6 +36,27 @@ void isrFunxISP() {
 		idTransf = 0;
 		dRecive = !dRecive;
 		newRecive = 1;
+	}
+
+}
+
+void preparaDati(SPIPACK *p) {
+	switch (p->in.type) {
+	case setPWM:
+		memcpy(p->out.pack.en.passi, captureEn(), sizeof(setPWMSend));
+		break;
+	case getCurrent:
+		memcpy(p->out.pack.curr.current, getAmpMots(), sizeof(getCurrentSend));
+		break;
+	case getSetting:
+		memcpy(&p->out.pack.prop.sets, &sets, sizeof(getSettingSend));
+		break;
+	case setSetting:
+		break;
+	case goHome:
+		break;
+	default:
+		break;
 	}
 }
 
@@ -108,33 +81,10 @@ int sizeTypePack(SPIPACK *s) {
 	}
 	return 0;
 }
-/*
- int limitiDati(char type) {
- switch (type) {
- case setPWM:
- return 32;
- break;
- case getSetting:
- return 32;
- break;
- case setSetting:
- return 32;
- break;
- case setHome:
- return 32;
- break;
- case goHome:
- return 32;
- break;
- default:
- return 32;
- break;
- }
- }
- */
+
 /*** GET VALUE ***/
-volatile spiRecive * getLastRecive() {
-	return &reciveSpi[dRecive];
+SPIPACK * getLastRecive() {
+	return &spiPack[dRecive];
 }
 
 byte spiAvailable() {
@@ -144,3 +94,48 @@ byte spiAvailable() {
 	} else
 		return 0;
 }
+
+/*** DEBUG & PRINT ***/
+void printSpiPack(SPIPACK *p) {
+	switch (p->in.type) {
+	case setPWM:
+		/*Recive*/
+		Serial.println("Master Ask 'setPWM', Parameter:");
+		Serial.print("\tspeed[1]:");
+		Serial.println(p->in.pack.speed.vel[cMot1]);
+		Serial.print("\tspeed[2]:");
+		Serial.println(p->in.pack.speed.vel[cMot2]);
+		Serial.print("\tspeed[3]:");
+		Serial.println(p->in.pack.speed.vel[cMot3]);
+		Serial.print("\tspeed[4]:");
+		Serial.println(p->in.pack.speed.vel[cMot4]);
+		Serial.print("\tspeed[5]:");
+		Serial.println(p->in.pack.speed.vel[cMot5]);
+		Serial.print("\tspeed[6]:");
+		Serial.println(p->in.pack.speed.vel[cMot6]);
+		/*Send*/
+		Serial.println("Sended Encoder Step:");
+		Serial.print("\tencoder[1]:");
+		Serial.println(p->out.pack.en.passi[cMot1]);
+		Serial.print("\tencoder[2]:");
+		Serial.println(p->out.pack.en.passi[cMot2]);
+		Serial.print("\tencoder[3]:");
+		Serial.println(p->out.pack.en.passi[cMot3]);
+		Serial.print("\tencoder[4]:");
+		Serial.println(p->out.pack.en.passi[cMot4]);
+		Serial.print("\tencoder[5]:");
+		Serial.println(p->out.pack.en.passi[cMot5]);
+		Serial.print("\tencoder[6]:");
+		Serial.println(p->out.pack.en.passi[cMot6]);
+		break;
+	case getCurrent:
+		break;
+	case getSetting:
+		break;
+	case setSetting:
+		break;
+	case goHome:
+		break;
+	}
+}
+
