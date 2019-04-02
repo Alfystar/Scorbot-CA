@@ -63,7 +63,13 @@ typedef struct spiSend_ {
 
 /** ## -------------------------------------------------------- ## **/
 typedef struct SPIPACK_ {
-	spiRecive in;
-	spiSend out;
+	union {
+		spiRecive in;
+		char buffIn[sizeof(spiRecive)];
+	}inPack;
+	union {
+		spiSend out;
+		char buffOut[sizeof(spiSend)];
+	}outPack;
 }SPIPACK;
 #endif

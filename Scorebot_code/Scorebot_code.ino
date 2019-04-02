@@ -45,11 +45,23 @@ void loop() {
 	sanityChek(sanityDelay);
 	if (spiAvailable()) {
 		r = getLastRecive();
-		for (byte i = 0; i < sizeof(spiRecive); ++i) {
+/*
+		for (byte i = 0; i < sizeTypePack(r); ++i) {
 			Serial.print((byte) (*(((char *) &r->in) + i)));
+			Serial.print(":");
+			Serial.print(i);
 			Serial.print(" ");
 		}
 		Serial.println();
+
+		for (byte i = 0; i < sizeTypePack(r); ++i) {
+			Serial.print((byte) (*(((char *) &r->out) + i)));
+			Serial.print(":");
+			Serial.print(i);
+			Serial.print(" ");
+		}
+		Serial.println();
+*/
 		//printSpiPack(r);
 	}
 	updateStepEn();
@@ -63,7 +75,7 @@ void loop() {
 
 		//debugPrintAdc();
 		//enDebug();
-		//printSteps();
+		printSteps();
 		timePrint = millis();
 	}
 #endif
