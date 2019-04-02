@@ -24,6 +24,8 @@ protected:
 private:
     char *txbuf,*rxbuf;
     int size,fdSpi;
+    const int hzSpeed=50000; //50Khz dovrebbe anche a 100Khz
+    const char bitWord=8;
     void setMode(char mode);
     int sizeTypePack(SPIPACK *s);
 

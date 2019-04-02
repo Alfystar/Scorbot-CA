@@ -13,8 +13,12 @@ SpiSend::SpiSend()
     this->rxbuf=(char *)malloc(sizeof(spiRet));
     memset(this->txbuf,0,this->size);
     memset(this->rxbuf,0,this->size);
-}
 
+    ioctl(this->fdSpi, SPI_MODE_0); //polarità e fase di default
+    ioctl(this->fdSpi, SPI_IOC_WR_MAX_SPEED_HZ, &this->hzSpeed);
+    ioctl(this->fdSpi, SPI_IOC_WR_BITS_PER_WORD, &this->bitWord);
+    ioctl(this->fdSpi, SPI_IOC_RD_BITS_PER_WORD, &this->bitWord);
+}
 SpiSend::~SpiSend()
 {
     free(this->txbuf);
@@ -44,37 +48,46 @@ void SpiSend::sendPack(SPIPACK *s)
 
     memcpy(this->txbuf,&s->out.pack,sizeof(spiSend));  //imposto i bit utili da inviare
 
+
     printf("Byte send");
-    for (int i = 0; i < this->size; ++i) {
+    for (int i = 0; i < this->sizeTypePack(s); ++i) {
         printf(" %d",txbuf[i]);
     }
     printf("\n");
 
     struct spi_ioc_transfer spi;
+
     memset (&spi, 0, sizeof (spi));
     spi.tx_buf        = (unsigned long)this->txbuf;
     spi.rx_buf        = (unsigned long)this->rxbuf;
     spi.len           = this->sizeTypePack(s);
-    spi.speed_hz      = 250000;
 
-    usleep(100); //16
+    usleep(200); //16
 
     ioctl (this->fdSpi, SPI_IOC_MESSAGE(1), &spi);      //1 è la dimensione del buffer SPI (nel nostro caso inviamo 1 pacchetto alla volta)
 
     memcpy(&s->in,this->rxbuf,sizeof(spiRet));
 
+    printf("Byte recive");
+    for (int i = 0; i < this->sizeTypePack(s); ++i) {
+        printf(" %d",this->rxbuf[i]);
+    }
+    printf("\n");
+
+
 }
 
 void SpiSend::setMode(char mode)
 {
-
+    char m=mode;
     struct spi_ioc_transfer spi;
 
     memset (&spi, 0, sizeof (spi));
 
-    spi.tx_buf        = (unsigned long)&mode;
+    spi.tx_buf        = (unsigned long)&m;
     spi.rx_buf        = (unsigned long)NULL;
     spi.len           = 1;
+    spi.bits_per_word =8;
 
     ioctl (this->fdSpi, SPI_IOC_MESSAGE(1), &spi);
 }
