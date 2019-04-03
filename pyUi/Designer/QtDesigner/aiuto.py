@@ -689,7 +689,7 @@ class Ui_MainWindow(object):
         self.actionwork_Team.setText(_translate("MainWindow", "Work Team"))
 
 
-import Immagini_rc
+import Immagini
 
 
 if __name__ == "__main__":
