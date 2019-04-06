@@ -5,6 +5,7 @@
 #include <string.h>
 #include <semaphore.h>
 #include <fcntl.h>
+#include "progetto.h"
 //pipefd[0] refers to the read end of the  pipe.
 //pipefd[1] refers to the write end of the pipe
 #define writeEnd 1
@@ -14,36 +15,8 @@
 //semaforo per l' invio? se nessuno invia io posso inviare. (inutile penso)
 
 
-struct impostazioni{
-  int n;  //numero impostazioni
-  char *imp1;  
-  char *imp2;
-}impostazioni;
- 
-struct messaggio{
-  int enc[6];
-  int cor[6];
-  struct impostazioni *imp;
-}messaggio;
-
-struct uten{  //nodo della lista collegata
-  struct messaggio *data; 
-  struct uten *p;
-};
-
-struct uten* inserisci_u(struct uten *testa,struct uten *mes){
-  //testa e' l' ultimo nodo della lista, mes il nodo da inserire
-  //la funzione aggiorna il puntatore all' ultimo nodo con quello appena inserito
-  if(testa==NULL){
-    testa=mes;
-  }else{
-    testa->p=mes;
-    testa=mes;
-  }
-  return testa;
-}
-
 void libera_u(struct uten *testa){
+
   //testa e' il puntatore alla radice della lista collegata
   //libera la lista dalla memoria
   struct uten* aus;
@@ -55,15 +28,6 @@ void libera_u(struct uten *testa){
   }
 }
 
-struct uten* libera_m(struct uten *nodo){//controllare se e' giusto
-  //nodo e' il puntatore al nodo da liberare
-  //restituisce il puntatore al nuovo nodo della lista (e quindi alla nuova testa)
-   struct uten* new;
-   new=nodo->p;
-   free(nodo->data);
-   free(nodo);
-   return new;
-}
 
 struct uten *testa;  //testa della lista collegata
 struct impostazioni *imp_ut;  //struttura che tiene traccia di tutte le impostazioni
@@ -190,12 +154,8 @@ void *readerPipe ()
     }
 }
 
-int main(int argc, char *argv[]) {
-  if (argc < 2)
-    {
-        printf("Need Program to execute!!\n <Path_Program>\n");
-        exit(0);
-    }
+int main_com(char *file_p[]) {
+  
 
     pipe(stdInFake);
     pipe(stdOutFake);
@@ -220,9 +180,10 @@ int main(int argc, char *argv[]) {
         dup2(stdOutFake[writeEnd], 1);
         printf("Figlio, dup eseguite");
         //exec python programs
-        if(execvp("python3", argv))
+        //if(execvp("python3", argv))
+        if(execvp("python3", file_p))
         {
-            perror("execvp fail :");
+            perror("execlp fail :");
             exit(0);
         }
     }

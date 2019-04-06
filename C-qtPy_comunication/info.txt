@@ -1,0 +1,2 @@
+Protocollo di comunicazione C<->Py
+Esempi in m.c e in progetto.c
