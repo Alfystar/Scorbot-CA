@@ -18,28 +18,9 @@ struct uten{  //nodo della lista collegata
   struct uten *p;
 };
 
-struct uten* inserisci_u(struct uten *testa,struct uten *mes){
-  //testa e' l' ultimo nodo della lista, mes il nodo da inserire
-  //la funzione aggiorna il puntatore all' ultimo nodo con quello appena inserito
-  if(testa==NULL){
-    testa=mes;
-  }else{
-    testa->p=mes;
-    testa=mes;
-  }
-  return testa;
-}
+struct uten* inserisci_u(struct uten *testa,struct uten *mes);
 
-
-struct uten* libera_m(struct uten *nodo){
-  //nodo e' il puntatore al nodo da liberare
-  //restituisce il puntatore al nuovo nodo della lista (e quindi alla nuova testa)
-   struct uten* new;
-   new=nodo->p;
-   free(nodo->data);
-   free(nodo);
-   return new;
-}
+struct uten* libera_m(struct uten *nodo);
 
 void libera_u(struct uten *testa);
 

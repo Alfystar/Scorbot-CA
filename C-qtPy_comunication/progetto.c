@@ -28,6 +28,29 @@ void libera_u(struct uten *testa){
   }
 }
 
+struct uten* inserisci_u(struct uten *testa,struct uten *mes){
+  //testa e' l' ultimo nodo della lista, mes il nodo da inserire
+  //la funzione aggiorna il puntatore all' ultimo nodo con quello appena inserito
+  if(testa==NULL){
+    testa=mes;
+  }else{
+    testa->p=mes;
+    testa=mes;
+  }
+  return testa;
+}
+
+
+struct uten* libera_m(struct uten *nodo){
+  //nodo e' il puntatore al nodo da liberare
+  //restituisce il puntatore al nuovo nodo della lista (e quindi alla nuova testa)
+   struct uten* new;
+   new=nodo->p;
+   free(nodo->data);
+   free(nodo);
+   return new;
+}
+
 
 struct uten *testa;  //testa della lista collegata
 struct impostazioni *imp_ut;  //struttura che tiene traccia di tutte le impostazioni
@@ -50,7 +73,7 @@ void componi_mes(struct messaggio *mes,char* buffer){
 int invia(char *mes){
   //mes e' la stringa da inviare
   //ritorna -1 se fallisce l' invio,1 altrimenti
-  //se fallisce dire a python che l' invio e' fallito
+  //se fallisce dire a python che l' invio e' fallito(o con un timer o inviando un carattere speciale tipo / o \ (se ho fallito l' invio pero' probabilmente non potro' inviarlo))
  int cor,pas; //byte correnti inviati, e byte inviati nel passato
  int size=strlen(mes);
  cor=dprintf(stdInFake[writeEnd],"%s\n",mes);
@@ -105,7 +128,7 @@ void *readerPipe ()
     int ver;
   
     while (1)
-    {//non va bene perche' non so la size a prescindere del messaggio
+    {
       pas=0;
       ver=1; //variabile di controllo
       while(ver){
@@ -140,7 +163,7 @@ void *readerPipe ()
         }
         coda=inserisci_u(coda,nodo); 
       //stampa per la prova
-        struct uten* aus;
+        /*struct uten* aus;
         struct uten* aus2;
         aus2=testa;
         int i=0;
@@ -151,6 +174,7 @@ void *readerPipe ()
           testa=aus;
         }
         testa=aus2;
+        */
     }
 }
 
@@ -189,7 +213,7 @@ int main_com(char *file_p[]) {
     }
     
     //esempio
-    
+    /*
     struct messaggio nodo;
     nodo.enc[0]=10;
     nodo.enc[1]=5;
@@ -233,10 +257,11 @@ int main_com(char *file_p[]) {
     componi_mes(&nodo,buffer);
     invia(buffer);
     sleep(10);
-    libera_u(coda);
+    libera_u(testa);
     while(1){}
     return 0;
-}
+    */
+  }
 
 
 sem_t *sem;  //semaforo per il main e per il controllo
