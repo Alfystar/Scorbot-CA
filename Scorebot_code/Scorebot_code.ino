@@ -62,7 +62,7 @@ void loop() {
 		}
 		Serial.println();
 */
-		//printSpiPack(r);
+		printSpiPack(r);
 	}
 	updateStepEn();
 	motorStateMachine();
@@ -75,7 +75,7 @@ void loop() {
 
 		//debugPrintAdc();
 		//enDebug();
-		printSteps();
+		//printSteps();
 		timePrint = millis();
 	}
 #endif

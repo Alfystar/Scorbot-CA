@@ -4,7 +4,7 @@
 #include "../globalDef.h"
 
 enum modi {
-	setPWM = 0, getCurrent, getSetting, setSetting, goHome
+	setPWM = 1, getCurrent, getSetting, setSetting, goHome
 };
 
 /* Tipi di pacchetti da ricevere, uno sovrapposto all'altro*/
@@ -25,7 +25,6 @@ typedef struct setSettingRecive_ {
 /*-----------------------------------------------------------------*/
 /*Struttura usata dall'interrupt per salvare le cose a occhi chiusi*/
 typedef struct spiRecive_ {
-	char type;
 	union {
 		setPWMRecive speed;
 		setSettingRecive prop;
@@ -36,7 +35,7 @@ typedef struct spiRecive_ {
 
 /* Tipi di pacchetti da inviare, uno sovrapposto all'altro*/
 typedef struct setPWMSend_ {
-	int passi[nMot];
+	signed int passi[nMot];
 } setPWMSend;
 
 typedef struct getCurrentSend_ {
@@ -63,6 +62,7 @@ typedef struct spiSend_ {
 
 /** ## -------------------------------------------------------- ## **/
 typedef struct SPIPACK_ {
+	char type;
 	union {
 		spiRecive in;
 		char buffIn[sizeof(spiRecive)];
