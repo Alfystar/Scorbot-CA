@@ -9,8 +9,8 @@ SpiSend::SpiSend()
     this->size=std::max(sizeof(spiSend),sizeof(spiRet));
     printf("Size send is :%d\tSize recive is :%d\n",sizeof(spiSend),sizeof(spiRet));
 
-    this->txbuf=(char *)malloc(sizeof(spiSend));
-    this->rxbuf=(char *)malloc(sizeof(spiRet));
+    this->txbuf=(char *)malloc(this->size);
+    this->rxbuf=(char *)malloc(this->size);
     memset(this->txbuf,0,this->size);
     memset(this->rxbuf,0,this->size);
 
@@ -40,8 +40,13 @@ SpiSend::~SpiSend()
 void SpiSend::sendPack(SPIPACK *s)
 {
 
-    this->setMode(s->out.type);
+    this->setMode(s->type);
     if(this->sizeTypePack(s)==0) return;
+    if(this->sizeTypePack(s)==-1)
+    {
+        fprintf(stderr,"Pack type not recognize!!\n");
+        return;
+    }
 
     memset(this->txbuf,0,this->size);
     memset(this->rxbuf,0,this->size);
@@ -55,6 +60,9 @@ void SpiSend::sendPack(SPIPACK *s)
     }
     printf("\n");
 
+    //flush_tlb_all();
+    __builtin___clear_cache(this->txbuf,this->txbuf+this->size);
+
     struct spi_ioc_transfer spi;
 
     memset (&spi, 0, sizeof (spi));
@@ -65,6 +73,8 @@ void SpiSend::sendPack(SPIPACK *s)
     usleep(200); //16
 
     ioctl (this->fdSpi, SPI_IOC_MESSAGE(1), &spi);      //1 è la dimensione del buffer SPI (nel nostro caso inviamo 1 pacchetto alla volta)
+
+    __builtin___clear_cache(this->rxbuf,this->rxbuf+this->size);
 
     memcpy(&s->in,this->rxbuf,sizeof(spiRet));
 
@@ -87,14 +97,14 @@ void SpiSend::setMode(char mode)
     spi.tx_buf        = (unsigned long)&m;
     spi.rx_buf        = (unsigned long)NULL;
     spi.len           = 1;
-    spi.bits_per_word =8;
+    spi.bits_per_word = 8;
 
     ioctl (this->fdSpi, SPI_IOC_MESSAGE(1), &spi);
 }
 //enum modi {setPWM=0, getCurrent, getSetting, setSetting, goHome};
 int SpiSend::sizeTypePack(SPIPACK *s)
 {
-    switch (s->out.type) {
+    switch (s->type) {
     case setPWM:
         return std::max(sizeof(setPWMSend),sizeof(setPWMRet));
         break;
@@ -111,7 +121,7 @@ int SpiSend::sizeTypePack(SPIPACK *s)
         return 0;
         break;
     }
-    return 0;
+    return -1;
 }
 
 
