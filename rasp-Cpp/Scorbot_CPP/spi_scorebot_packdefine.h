@@ -9,7 +9,7 @@ typedef struct settingsBoard_ {
     short maxCurrMed[nMot];	//valore massimo di corrente Efficace (con una media di 1 ms ~ ultime 8 letture), numero * 8 per semplificare i conti)
 } settingsBoard;
 
-enum modi {setPWM=0, getCurrent, getSetting, setSetting, goHome};
+enum modi {setPWM=1, getCurrent, getSetting, setSetting, goHome};
 enum motCode {cMot1=0, cMot2, cMot3, cMot4, cMot5, cMot6};
 
 /*Tipi di pacchetti che si possono inviare, uno sovrapposto all'altro*/
@@ -33,7 +33,6 @@ typedef struct setSettingSend_
 /*Struttura di Invio, usata dalla classe SPISEND*/
 typedef struct spiSend_
 {
-    char type;
     union {
         setPWMSend speed;
         setSettingSend prop;
@@ -75,6 +74,7 @@ typedef struct spiRet_
 
 /** ## -------------------------------------------------------- ## **/
 typedef struct SPIPACK_ {
+    char type;
     spiSend out;
     spiRet in;
 }SPIPACK;
