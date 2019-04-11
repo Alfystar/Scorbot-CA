@@ -29,7 +29,7 @@ class MyUiQt (UiClass):
         l.append(self.riferimento1_6_direct.value())
 
         for i in range(1, 7):
-            print("Increase Encoder", i, "of:", l[i-1])# stampa a schermo la listal
+            print("Increase Encoder", i, "of:", l[i-1]) # stampa a schermo la lista l
 
 
 
