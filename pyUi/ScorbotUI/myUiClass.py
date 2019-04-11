@@ -1,6 +1,6 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-from pyUi.ScorbotUI.pyqtLib.UiClass import UiClass
+from pyqtLib.UiClass import UiClass
 
 class MyUiQt (UiClass):
     def __init__(self, Windows):

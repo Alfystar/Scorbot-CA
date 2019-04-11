@@ -13,13 +13,19 @@
 #include <cstring>
 #include <iostream>
 
+//enum modi {setPWM=1, getCurrent, getSetting, setSetting, goHome};
 
 class SpiSend
 {
 public:
     SpiSend();
     virtual ~SpiSend();
-    void sendPack (SPIPACK *s);
+    void printSPIPACK(SPIPACK *s);
+    SPIPACK *pSetPWM(setPWMSend *pwm);
+    SPIPACK *pGetCurrent();
+    SPIPACK *pGetSetting();
+    SPIPACK *pSetSetting(setSettingSend *sets);
+    SPIPACK *pGoHome();
 protected:
 private:
     char *txbuf,*rxbuf;
@@ -27,6 +33,7 @@ private:
     const int hzSpeed=50000; //50Khz dovrebbe anche a 100Khz
     const char bitWord=8;
     void setMode(char mode);
+    void sendPack (SPIPACK *s);
     int sizeTypePack(SPIPACK *s);
 
 };
