@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'UiClass.ui'
+# Form implementation generated from reading ui file 'uUiClass.ui'
 #
 # Created by: PyQt5 UI code generator 5.12
 #
@@ -8,8 +8,10 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
+import pyUi.ScorbotUI.pyqtLib.logo
 
-class Ui_MainWindow(object):
+
+class UiClass(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
         MainWindow.resize(1153, 663)
@@ -700,8 +702,6 @@ class Ui_MainWindow(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.Setup), _translate("MainWindow", "Setup"))
 
 
-import new
-import pd
 
 
 if __name__ == "__main__":
