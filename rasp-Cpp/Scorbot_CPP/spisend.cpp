@@ -125,4 +125,133 @@ int SpiSend::sizeTypePack(SPIPACK *s)
 }
 
 
+void SpiSend::printSPIPACK(SPIPACK *s){
+    switch(s ->type){
+    case setPWM:
+        printf("Command 'setPWM'\n");
+        printf("Sending actual speed:\n");
+        printf("Vel:\t");
 
+        for (int i = 0; i < nMot; i++){
+            printf("%d)%hd\t",i+1,s->out.pack.speed.vel[cMot1 + i]);
+        }
+
+        printf("\nReciving actual encoder:\n");
+        printf("En:\t");
+        for (int i = 0; i < nMot; i++){
+            printf("%d)%hd\t",i+1,s->in.pack.en.passi[cMot1 + i]);
+        }
+        break;
+
+    case getCurrent:
+        printf("Command 'getCurrent'\n");
+
+        printf("Sending: no parameters\n");
+        printf("Reciving actual currents:\n");
+        printf("Curr:\t");
+        for (int i = 0; i < nMot; i++){
+            printf("%d)%hd\t",i+1,s->in.pack.cur.current[cMot1 + i]);
+        }
+        break;
+
+    case getSetting:
+        printf("Command 'getSetting'\n");
+        printf("Sending: no parameters\n");
+        printf("Reciving actual settings:\n");
+        printf("maxEn:\t");
+
+        for (int i = 0; i < nMot; i++){
+            printf("%d)%hd\t",i+1,s->in.pack.prop.sets.maxEn[cMot1 + i]);
+        }
+
+        printf("\nminEn:\t");
+        for (int i = 0; i < nMot; i++){
+            printf("%d)%hd\t",i+1,s->in.pack.prop.sets.minEn[cMot1 + i]);
+        }
+
+        printf("\nmaxCurrMed:\t");
+        for (int i = 0; i < nMot; i++){
+            printf("%d)%hd\t",i+1,s->in.pack.prop.sets.maxCurrMed[cMot1 + i]);
+        }
+        break;
+
+    case setSetting:
+        printf("Command 'setSetting'\n");
+        printf("Sending actual settings:\n");
+
+        printf("maxEn:\t");
+        for (int i = 0; i < nMot; i++){
+            printf("%d)%hd\t",i+1,s->out.pack.prop.sets.maxEn[cMot1 + i]);
+        }
+
+        printf("\nminEn:\t");
+        for (int i = 0; i < nMot; i++){
+            printf("%d)%hd\t",i+1,s->out.pack.prop.sets.minEn[cMot1 + i]);
+        }
+
+        printf("\nmaxCurrMed:\t");
+        for (int i = 0; i < nMot; i++){
+            printf("%d)%hd\t",i+1,s->out.pack.prop.sets.maxCurrMed[cMot1 + i]);
+        }
+
+        printf("\nReciving: no parameters\n");
+        break;
+
+    case goHome:
+        printf("Command 'goHome'\n");
+        printf("Sending: no parameters\n");
+        printf("Reciving: no parameters\n");
+        break;
+    }
+    printf("\n-------------------------------------------------------\n");
+}
+
+SPIPACK *SpiSend::pSetPWM(setPWMSend *pwm)
+{
+    SPIPACK *p = (SPIPACK *)malloc(sizeof(SPIPACK));
+    memset(&p,0,sizeof(SPIPACK));
+    p->type=setPWM;
+    memcpy(&p->out.pack.speed,pwm,sizeof(setPWMSend));
+
+    this->sendPack(p);
+    return p;
+}
+
+SPIPACK *SpiSend::pGetCurrent()
+{
+    SPIPACK *p = (SPIPACK *) malloc(sizeof(SPIPACK));
+    memset(&p,0,sizeof(SPIPACK));
+    p->type=getCurrent;
+
+    this->sendPack(p);
+    return p;
+}
+SPIPACK *SpiSend::pGetSetting()
+{
+    SPIPACK *p = (SPIPACK *) malloc(sizeof(SPIPACK));
+    memset(&p,0,sizeof(SPIPACK));
+    p->type=getSetting;
+
+    this->sendPack(p);
+    return p;
+}
+SPIPACK *SpiSend::pSetSetting(setSettingSend *sets)
+{
+    SPIPACK *p = (SPIPACK *) malloc(sizeof(SPIPACK));
+    memset(&p,0,sizeof(SPIPACK));
+    p->type=setSetting;
+    memcpy(&p->out.pack.prop,sets,sizeof(setSettingSend));
+
+    this->sendPack(p);
+    return p;
+}
+
+SPIPACK *SpiSend::pGoHome()
+{
+    SPIPACK *p = (SPIPACK *) malloc(sizeof(SPIPACK));
+    memset(&p,0,sizeof(SPIPACK));
+    p->type=goHome;
+
+    this->sendPack(p);
+    return p;
+}

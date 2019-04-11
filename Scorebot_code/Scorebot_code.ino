@@ -63,6 +63,7 @@ void loop() {
 		Serial.println();
 */
 		printSpiPack(r);
+
 	}
 	updateStepEn();
 	motorStateMachine();

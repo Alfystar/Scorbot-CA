@@ -1,7 +1,7 @@
 import sys
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-from pyUi.ScorbotUI.myUiClass import MyUiQt
+from myUiClass import MyUiQt
 
 
 if __name__ == '__main__':
