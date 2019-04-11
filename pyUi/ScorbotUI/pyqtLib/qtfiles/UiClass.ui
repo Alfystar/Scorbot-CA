@@ -1134,8 +1134,6 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources>
-  <include location="pd.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>
