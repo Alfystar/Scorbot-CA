@@ -146,16 +146,16 @@ void printSpiPack(SPIPACK *p) {
 		Serial.println("Master Ask 'setPWM', Parameter:");
 		/*Recive*/
 		for (byte i = 0; i < nMot; i++) {
-			Serial.print("\tspeed[");
-			Serial.print(i);
+			Serial.print("\tspeed[cMot");
+			Serial.print(i+1);
 			Serial.print("]:");
 			Serial.println(p->inPack.in.pack.speed.vel[cMot1 + i]);
 		}
 		/*Send*/
 		Serial.println("Sended Encoder Step:");
 		for (byte i = 0; i < nMot; i++) {
-			Serial.print("\tencoder[");
-			Serial.print(i);
+			Serial.print("\tencoder[cMot");
+			Serial.print(i+1);
 			Serial.print("]:");
 			Serial.println(p->outPack.out.pack.en.passi[cMot1 + i]);
 		}
@@ -167,8 +167,8 @@ void printSpiPack(SPIPACK *p) {
 		/*Send*/
 		Serial.println("Sended Current Value:");
 		for (byte i = 0; i < nMot; i++) {
-			Serial.print("\tcurrent[");
-			Serial.print(i);
+			Serial.print("\tcurrent[cMot");
+			Serial.print(i + 1);
 			Serial.print("]:");
 			Serial.println(p->outPack.out.pack.curr.current[cMot1 + i]);
 		}
@@ -178,27 +178,26 @@ void printSpiPack(SPIPACK *p) {
 		/*Recive*/
 		Serial.print("\tNotting");
 		/*Send*/
-		/*
-		 int maxEn[nMot]; 		//valore massimo di passi prima di considerarsi fuori range di sicurezza (numeri pos)
-		 int minEn[nMot]; 		//valore minimo di passi prima di considerarsi fuori range di sicurezza (numeri neg)
-		 int maxCurrMed[nMot];	//valore massimo di corrente Efficace (con una media di 1 ms ~ ultime 8 letture), numero * 8 per semplificare i conti)
-		 *
-		 */
+
+		int maxEn[nMot]; //valore massimo di passi prima di considerarsi fuori range di sicurezza (numeri pos)
+		int minEn[nMot]; //valore minimo di passi prima di considerarsi fuori range di sicurezza (numeri neg)
+		int maxCurrMed[nMot];//valore massimo di corrente Efficace (con una media di 1 ms ~ ultime 8 letture), numero * 8 per semplificare i conti)
+
 		Serial.println("Sended actual Settings:");
 
-		Serial.print("#maxEn:");
+		Serial.print("#maxEn:\t\t");
 		for (byte i = 0; i < nMot; i++) {
 
 			Serial.print("\t");
-			Serial.println(p->outPack.out.pack.prop.sets.maxEn[cMot1 + i]);
+			Serial.print(p->outPack.out.pack.prop.sets.maxEn[cMot1 + i]);
 		}
 		Serial.println();
 
-		Serial.print("#minEn:");
+		Serial.print("#minEn:\t\t");
 		for (byte i = 0; i < nMot; i++) {
 
 			Serial.print("\t");
-			Serial.println(p->outPack.out.pack.prop.sets.minEn[cMot1 + i]);
+			Serial.print(p->outPack.out.pack.prop.sets.minEn[cMot1 + i]);
 		}
 		Serial.println();
 
@@ -206,7 +205,7 @@ void printSpiPack(SPIPACK *p) {
 		for (byte i = 0; i < nMot; i++) {
 
 			Serial.print("\t");
-			Serial.println(p->outPack.out.pack.prop.sets.maxCurrMed[cMot1 + i]);
+			Serial.print(p->outPack.out.pack.prop.sets.maxCurrMed[cMot1 + i]);
 		}
 		Serial.println();
 		break;
@@ -217,7 +216,7 @@ void printSpiPack(SPIPACK *p) {
 		for (byte i = 0; i < nMot; i++) {
 
 			Serial.print("\t");
-			Serial.println(p->inPack.in.pack.prop.sets.maxEn[cMot1 + i]);
+			Serial.print(p->inPack.in.pack.prop.sets.maxEn[cMot1 + i]);
 		}
 		Serial.println();
 
@@ -225,7 +224,7 @@ void printSpiPack(SPIPACK *p) {
 		for (byte i = 0; i < nMot; i++) {
 
 			Serial.print("\t");
-			Serial.println(p->inPack.in.pack.prop.sets.minEn[cMot1 + i]);
+			Serial.print(p->inPack.in.pack.prop.sets.minEn[cMot1 + i]);
 		}
 		Serial.println();
 
@@ -233,18 +232,18 @@ void printSpiPack(SPIPACK *p) {
 		for (byte i = 0; i < nMot; i++) {
 
 			Serial.print("\t");
-			Serial.println(p->inPack.in.pack.prop.sets.maxCurrMed[cMot1 + i]);
+			Serial.print(p->inPack.in.pack.prop.sets.maxCurrMed[cMot1 + i]);
 		}
 		Serial.println();
 		/*Send*/
-		Serial.print("\tNotting");
+		Serial.print("\tNotting\n");
 		break;
 	case goHome:
-		Serial.println("Master Ask 'goHome', Parameter:");
+		Serial.println("Master Ask 'goHome', Parameter:\n");
 		/*Recive*/
-		Serial.print("\tNotting");
+		Serial.print("\tNotting\n");
 		/*Send*/
-		Serial.print("\tNotting");
+		Serial.print("\tNotting\n");
 		break;
 	}
 }
