@@ -5,7 +5,6 @@ from pyUi.ScorbotUI.myUiClass import MyUiQt
 
 
 if __name__ == '__main__':
-    print("hello")
 
 
     app = QtWidgets.QApplication(sys.argv)

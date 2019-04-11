@@ -10,8 +10,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d63bfc8-c3db-4d44-bd04-cb7890be4532" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyUi/ScorbotUI/mainUi.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyUi/ScorbotUI/mainUi.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pyUi/ScorbotUI/myUiClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyUi/ScorbotUI/myUiClass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/qtfiles/UiClass.ui" beforeDir="false" afterPath="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/qtfiles/UiClass.ui" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -24,15 +25,18 @@
     <SUITE FILE_PATH="coverage/Scorbot_CA$help2.coverage" NAME="help2 Coverage Results" MODIFIED="1554763780015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/Designer/QtDesigner/modify" />
     <SUITE FILE_PATH="coverage/Scorbot_CA$interf.coverage" NAME="interf Coverage Results" MODIFIED="1554764692809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/Designer/QtDesigner/modify" />
     <SUITE FILE_PATH="coverage/Scorbot_CA$aiuto.coverage" NAME="aiuto Coverage Results" MODIFIED="1554757969827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/Designer/QtDesigner" />
-    <SUITE FILE_PATH="coverage/Scorbot_CA$mainUi.coverage" NAME="mainUi Coverage Results" MODIFIED="1554991182479" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/ScorbotUI" />
+    <SUITE FILE_PATH="coverage/Scorbot_CA$mainUi.coverage" NAME="mainUi Coverage Results" MODIFIED="1555020594835" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/ScorbotUI" />
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/UiClass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="87">
-              <caret line="8" column="27" selection-start-line="8" selection-end-line="9" />
+            <state relative-caret-position="218">
+              <caret line="18" column="63" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
+              <folding>
+                <element signature="e#195#237#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -45,8 +49,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/mainUi.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+            <state relative-caret-position="190">
+              <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
@@ -57,8 +61,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/myUiClass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="17" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="17" />
+            <state relative-caret-position="442">
+              <caret line="31" column="84" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="84" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -120,7 +124,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
@@ -163,6 +166,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -191,7 +195,7 @@
     </option>
   </component>
   <component name="RunManager">
-    <configuration name="mainUi" type="PythonConfigurationType" factoryName="Python" temporary="true">
+    <configuration name="mainUi" type="PythonConfigurationType" factoryName="Python">
       <module name="Scorbot-CA" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -213,11 +217,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Python.mainUi" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -250,6 +249,9 @@
       <workItem from="1554764895502" duration="224000" />
       <workItem from="1554765184563" duration="358000" />
       <workItem from="1554985718936" duration="5233000" />
+      <workItem from="1554991239174" duration="36000" />
+      <workItem from="1555015835077" duration="316000" />
+      <workItem from="1555017585947" duration="2996000" />
     </task>
     <task id="LOCAL-00001" summary="Home Scorebot&#10;Pack Transfert standardize">
       <created>1553794397754</created>
@@ -307,22 +309,29 @@
       <option name="project" value="LOCAL" />
       <updated>1554990157636</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="python project start up">
+      <created>1554991250580</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1554991250580</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10871000" />
+    <option name="totallyTimeSpent" value="14219000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="934" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1910867" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.1984127" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32897863" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32897863" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32897863" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39904988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -385,9 +394,7 @@
     <entry file="file://$PROJECT_DIR$/../rasp-Cpp/Scorbot_CPP/spi_scorebot_packdefine.h" />
     <entry file="file://$PROJECT_DIR$/../README.md" />
     <entry file="file://$PROJECT_DIR$/pyUi/Designer/QtDesigner/modify/pd.qrc" />
-    <entry file="file://$PROJECT_DIR$/pyUi/Designer/QtDesigner/modify/new.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pyUi/Designer/QtDesigner/modify/new.py" />
     <entry file="file://$PROJECT_DIR$/pyUi/Designer/QtDesigner/nuovo.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -425,15 +432,8 @@
     <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyUi/Scorbot UI/pyqt/image_ui.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyUi/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/logo.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/pyUi/Scorbot UI/pyqt/image_ui.py" />
+    <entry file="file://$PROJECT_DIR$/pyUi/__init__.py" />
     <entry file="file://$PROJECT_DIR$/pyUi/Designer/QtDesigner/modify/Last_Version.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -448,13 +448,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/UiClass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="87">
-          <caret line="8" column="27" selection-start-line="8" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/qtfiles/UiClass.ui">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -462,10 +455,23 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/logo.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/UiClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="18" column="63" selection-start-line="18" selection-start-column="63" selection-end-line="18" selection-end-column="63" />
+          <folding>
+            <element signature="e#195#237#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/mainUi.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="40" lean-forward="true" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="40" />
+        <state relative-caret-position="190">
+          <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -474,13 +480,28 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/myUiClass.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="17" selection-start-line="15" selection-start-column="8" selection-end-line="15" selection-end-column="17" />
+        <state relative-caret-position="442">
+          <caret line="31" column="84" selection-start-line="31" selection-start-column="84" selection-end-line="31" selection-end-column="84" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+  </component>
+  <component name="masterDetails">
+    <states>
+      <state key="ScopeChooserConfigurable.UI">
+        <settings>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+    </states>
   </component>
 </project>
