@@ -13,3 +13,5 @@ class MyUiQt (UiClass):
     def printCiao(self):
         print("ciao da evento")
 
+
+
