@@ -24,7 +24,6 @@ void setup() {
 	dsubFeedSetup();
 	Serial.println("\tMotor Enable");
 	motSetup();
-
 	/* PER ORA UN CORTO CIRCUITO
 	 Serial.println("\Relè Mot Enable");
 	 pinMode(motEn, OUTPUT);
@@ -36,27 +35,35 @@ void setup() {
 	sei();
 	Serial.println("End Setup");
 
-	home();
-	//mot[0]->drive_motor(150, 2000);
-	// mot[1]->drive_motor(255, 5000);
-
-	//mot[2]->drive_motor(180, 5000);
-
-	//mot[3]->drive_motor(255);
-	//mot[4]->drive_motor(180, 5000);
-	//mot[5]->drive_motor(50, 5000);
-	//mot[cMot1]->drive_motor(-255);
-
+	//home();
 }
 
 // The loop function is called in an endless loop
 long timePrint = 0;
-spiRecive* r;
+SPIPACK * r;
 void loop() {
 	sanityChek(sanityDelay);
 	if (spiAvailable()) {
-		r = (spiRecive *) getLastRecive();
-		Serial.println(r->pack.pwm.text);
+		r = getLastRecive();
+/*
+		for (byte i = 0; i < sizeTypePack(r); ++i) {
+			Serial.print((byte) (*(((char *) &r->in) + i)));
+			Serial.print(":");
+			Serial.print(i);
+			Serial.print(" ");
+		}
+		Serial.println();
+
+		for (byte i = 0; i < sizeTypePack(r); ++i) {
+			Serial.print((byte) (*(((char *) &r->out) + i)));
+			Serial.print(":");
+			Serial.print(i);
+			Serial.print(" ");
+		}
+		Serial.println();
+*/
+		printSpiPack(r);
+
 	}
 	updateStepEn();
 	motorStateMachine();
@@ -69,7 +76,7 @@ void loop() {
 
 		//debugPrintAdc();
 		//enDebug();
-		printSteps();
+		//printSteps();
 		timePrint = millis();
 	}
 #endif

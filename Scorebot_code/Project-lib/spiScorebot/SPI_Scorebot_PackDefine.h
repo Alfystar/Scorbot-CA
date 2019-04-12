@@ -4,13 +4,15 @@
 #include "../globalDef.h"
 
 enum modi {
-	setPWM, getSetting, setSetting, setHome, goHome
+	setPWM = 1, getCurrent, getSetting, setSetting, goHome
 };
 
 /* Tipi di pacchetti da ricevere, uno sovrapposto all'altro*/
 typedef struct setPWMRecive_ {
-	char text[32];
+	signed int vel[nMot];
 } setPWMRecive;
+
+//getCurrent richiesta senza parametri
 
 //getSetting richiesta senza parametri
 
@@ -18,12 +20,13 @@ typedef struct setSettingRecive_ {
 	settingsBoard sets;
 } setSettingRecive;
 
+//goHome richiesta senza parametri
+
 /*-----------------------------------------------------------------*/
 /*Struttura usata dall'interrupt per salvare le cose a occhi chiusi*/
 typedef struct spiRecive_ {
-	char type;
 	union {
-		setPWMRecive pwm;
+		setPWMRecive speed;
 		setSettingRecive prop;
 	} pack;
 } spiRecive;
@@ -32,27 +35,41 @@ typedef struct spiRecive_ {
 
 /* Tipi di pacchetti da inviare, uno sovrapposto all'altro*/
 typedef struct setPWMSend_ {
-	char encoder[32];
+	signed int passi[nMot];
 } setPWMSend;
+
+typedef struct getCurrentSend_ {
+	int current[nMot];
+} getCurrentSend;
 
 typedef struct getSettingSend_ {
 	settingsBoard sets;
 } getSettingSend;
 
+//setSetting non invia parametri
+
+//goHome non invia parametri extra
+
 /*-----------------------------------------------------------------*/
 /*Struttura usata dall'interrupt per Inviare le cose a occhi chiusi*/
 typedef struct spiSend_ {
 	union {
-		setPWMSend feedBack;
+		setPWMSend en;
+		getCurrentSend curr;
 		getSettingSend prop;
 	} pack;
 } spiSend;
 
-
-
-typedef struct SPIPACK_
-{
-	spiRecive in;
-	spiSend out;
-};
+/** ## -------------------------------------------------------- ## **/
+typedef struct SPIPACK_ {
+	char type;
+	union {
+		spiRecive in;
+		char buffIn[sizeof(spiRecive)];
+	}inPack;
+	union {
+		spiSend out;
+		char buffOut[sizeof(spiSend)];
+	}outPack;
+}SPIPACK;
 #endif

@@ -51,4 +51,6 @@ typedef struct settingsBoard_ {
 	int maxCurrMed[nMot];	//valore massimo di corrente Efficace (con una media di 1 ms ~ ultime 8 letture), numero * 8 per semplificare i conti)
 } settingsBoard;
 
+extern settingsBoard sets;
+
 #endif /* PROJECT_LIB_GLOBALDEF_H_ */
