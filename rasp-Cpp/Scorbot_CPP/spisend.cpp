@@ -208,8 +208,8 @@ void SpiSend::printSPIPACK(SPIPACK *s){
 
 SPIPACK *SpiSend::pSetPWM(setPWMSend *pwm)
 {
-    SPIPACK *p = (SPIPACK *)malloc(sizeof(SPIPACK));
-    memset(&p,0,sizeof(SPIPACK));
+    SPIPACK *p = this->makeSPIPACK();
+
     p->type=setPWM;
     memcpy(&p->out.pack.speed,pwm,sizeof(setPWMSend));
 
@@ -219,8 +219,8 @@ SPIPACK *SpiSend::pSetPWM(setPWMSend *pwm)
 
 SPIPACK *SpiSend::pGetCurrent()
 {
-    SPIPACK *p = (SPIPACK *) malloc(sizeof(SPIPACK));
-    memset(&p,0,sizeof(SPIPACK));
+    SPIPACK *p = this->makeSPIPACK();
+
     p->type=getCurrent;
 
     this->sendPack(p);
@@ -228,8 +228,8 @@ SPIPACK *SpiSend::pGetCurrent()
 }
 SPIPACK *SpiSend::pGetSetting()
 {
-    SPIPACK *p = (SPIPACK *) malloc(sizeof(SPIPACK));
-    memset(&p,0,sizeof(SPIPACK));
+    SPIPACK *p = this->makeSPIPACK();
+
     p->type=getSetting;
 
     this->sendPack(p);
@@ -237,8 +237,8 @@ SPIPACK *SpiSend::pGetSetting()
 }
 SPIPACK *SpiSend::pSetSetting(setSettingSend *sets)
 {
-    SPIPACK *p = (SPIPACK *) malloc(sizeof(SPIPACK));
-    memset(&p,0,sizeof(SPIPACK));
+    SPIPACK *p = this->makeSPIPACK();
+
     p->type=setSetting;
     memcpy(&p->out.pack.prop,sets,sizeof(setSettingSend));
 
@@ -248,10 +248,17 @@ SPIPACK *SpiSend::pSetSetting(setSettingSend *sets)
 
 SPIPACK *SpiSend::pGoHome()
 {
-    SPIPACK *p = (SPIPACK *) malloc(sizeof(SPIPACK));
-    memset(&p,0,sizeof(SPIPACK));
+    SPIPACK *p = this->makeSPIPACK();
     p->type=goHome;
 
     this->sendPack(p);
     return p;
 }
+
+SPIPACK *SpiSend::makeSPIPACK()
+{
+    SPIPACK *p = (SPIPACK *) malloc(sizeof(SPIPACK));
+    memset(p,0,sizeof(SPIPACK));
+    return p;
+}
+

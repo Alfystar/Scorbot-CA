@@ -48,11 +48,16 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/mainUi.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="51">
+              <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+=======
             <state relative-caret-position="133">
               <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
               <folding>
                 <element signature="e#0#10#0" expanded="true" />
               </folding>
+>>>>>>> 4bda71a0120975249ef761a6926badc83143ee7e
             </state>
           </provider>
         </entry>
@@ -60,8 +65,13 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/myUiClass.py">
           <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+            <state relative-caret-position="34">
+              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+=======
             <state relative-caret-position="135">
               <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
+>>>>>>> 4bda71a0120975249ef761a6926badc83143ee7e
               <folding>
                 <element signature="e#0#23#0" expanded="true" />
               </folding>
@@ -112,10 +122,16 @@
       </list>
     </option>
   </component>
+<<<<<<< HEAD
+  <component name="ProjectFrameBounds">
+    <option name="width" value="964" />
+    <option name="height" value="1024" />
+=======
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1462" />
     <option name="height" value="934" />
+>>>>>>> 4bda71a0120975249ef761a6926badc83143ee7e
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -255,7 +271,12 @@
       <workItem from="1555020728494" duration="117000" />
       <workItem from="1555020897801" duration="188000" />
       <workItem from="1555021107344" duration="30000" />
+<<<<<<< HEAD
+      <workItem from="1555055290147" duration="415000" />
+      <workItem from="1555055717110" duration="10000" />
+=======
       <workItem from="1555104619822" duration="2191000" />
+>>>>>>> 4bda71a0120975249ef761a6926badc83143ee7e
     </task>
     <task id="LOCAL-00001" summary="Home Scorebot&#10;Pack Transfert standardize">
       <created>1553794397754</created>
@@ -348,6 +369,25 @@
       <option name="project" value="LOCAL" />
       <updated>1555020911436</updated>
     </task>
+<<<<<<< HEAD
+    <task id="LOCAL-00014" summary="pycharm setup">
+      <created>1555055624994</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1555055624994</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="15086000" />
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="0" y="0" width="964" height="1024" extended-state="0" />
+    <layout>
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3857143" />
+=======
     <task id="LOCAL-00014" summary="Codice Primi passi py">
       <created>1555070648746</created>
       <option name="number" value="00014" />
@@ -373,11 +413,16 @@
     <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18803419" />
+>>>>>>> 4bda71a0120975249ef761a6926badc83143ee7e
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32897863" />
+<<<<<<< HEAD
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4964789" weight="0.32700893" />
+=======
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4964789" weight="0.32897863" />
+>>>>>>> 4bda71a0120975249ef761a6926badc83143ee7e
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39904988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -430,7 +475,8 @@
     <MESSAGE value="Last Version" />
     <MESSAGE value="python project start up" />
     <MESSAGE value="Codice Primi passi py" />
-    <option name="LAST_COMMIT_MESSAGE" value="Codice Primi passi py" />
+    <MESSAGE value="pycharm setup" />
+    <option name="LAST_COMMIT_MESSAGE" value="pycharm setup" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../Scorebot_code/.gitignore" />
@@ -517,8 +563,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/mainUi.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="34">
+          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
+=======
         <state relative-caret-position="133">
           <caret line="10" column="4" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+>>>>>>> 4bda71a0120975249ef761a6926badc83143ee7e
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
@@ -527,11 +578,16 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/myUiClass.py">
       <provider selected="true" editor-type-id="text-editor">
+<<<<<<< HEAD
+        <state relative-caret-position="51">
+          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
+=======
         <state relative-caret-position="135">
           <caret line="11" column="47" selection-start-line="11" selection-start-column="47" selection-end-line="11" selection-end-column="47" />
           <folding>
             <element signature="e#0#23#0" expanded="true" />
           </folding>
+>>>>>>> 4bda71a0120975249ef761a6926badc83143ee7e
         </state>
       </provider>
     </entry>
