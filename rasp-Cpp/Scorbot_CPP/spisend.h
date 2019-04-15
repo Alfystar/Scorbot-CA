@@ -30,11 +30,12 @@ protected:
 private:
     char *txbuf,*rxbuf;
     int size,fdSpi;
-    const int hzSpeed=50000; //50Khz dovrebbe anche a 100Khz
+    const int hzSpeed=50000; //50Khz dovrebbe anche a 100Khz se l'arduino non printa i pack
     const char bitWord=8;
     void setMode(char mode);
     void sendPack (SPIPACK *s);
     int sizeTypePack(SPIPACK *s);
+    SPIPACK *makeSPIPACK();
 
 };
 
