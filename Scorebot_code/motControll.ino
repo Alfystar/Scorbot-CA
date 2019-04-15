@@ -12,12 +12,12 @@ extern L298N *mot[nMot];
 
 void motSetup() {
 	/*Ordine INA e INB, per avere una rotazione oraria quando il braccio è in piano con la pinza a SINISTRA*/
-	mot[0] = new L298N(EN1, IN1A, IN1B);
-	mot[1] = new L298N(EN2, IN2A, IN2B);
-	mot[2] = new L298N(EN3, IN3B, IN3A);
-	mot[3] = new L298N(EN4, IN4B, IN4A);
-	mot[4] = new L298N(EN5, IN5A, IN5B);
-	mot[5] = new L298N(EN6, IN6A, IN6B);
+	mot[cMot1] = new L298N(EN1, IN1A, IN1B);
+	mot[cMot2] = new L298N(EN2, IN2A, IN2B);
+	mot[cMot3] = new L298N(EN3, IN3B, IN3A);
+	mot[cMot4] = new L298N(EN4, IN4B, IN4A);
+	mot[cMot5] = new L298N(EN5, IN5A, IN5B);
+	mot[cMot6] = new L298N(EN6, IN6A, IN6B);
 }
 
 void motorStateMachine() {

@@ -45,23 +45,7 @@ void loop() {
 	sanityChek(sanityDelay);
 	if (spiAvailable()) {
 		r = getLastRecive();
-/*
-		for (byte i = 0; i < sizeTypePack(r); ++i) {
-			Serial.print((byte) (*(((char *) &r->in) + i)));
-			Serial.print(":");
-			Serial.print(i);
-			Serial.print(" ");
-		}
-		Serial.println();
-
-		for (byte i = 0; i < sizeTypePack(r); ++i) {
-			Serial.print((byte) (*(((char *) &r->out) + i)));
-			Serial.print(":");
-			Serial.print(i);
-			Serial.print(" ");
-		}
-		Serial.println();
-*/
+		excutePack(r);
 		printSpiPack(r);
 
 	}
