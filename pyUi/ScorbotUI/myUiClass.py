@@ -26,6 +26,14 @@ class MyUiQt (UiClass):
         self.riferimento1_5_direct.setMaximum(20000)
         self.riferimento1_6_direct.setMaximum(20000)
 
+
+        self.riferimento1_direct.setMinimum(-20000) # questo, e le seccessive 5 righe, fissano i valori minimi
+        self.riferimento1_2_direct.setMinimum(-20000) # che posso inserire all'interno degli ecoder
+        self.riferimento1_3_direct.setMinimum(-20000)
+        self.riferimento1_4_direct.setMinimum(-20000)
+        self.riferimento1_5_direct.setMinimum(-20000)
+        self.riferimento1_6_direct.setMinimum(-20000)
+
         """LISTA Eventi"""
 
         self.Pulsante_invio_pagina_Basics.clicked.connect(self.encoderValue) #premendo invio, metto nella lista i passi encoder da aggiungere  quelli qttuali
@@ -40,12 +48,21 @@ class MyUiQt (UiClass):
         self.encoder1[4] = self.riferimento1_5_direct.value()
         self.encoder1[5] = self.riferimento1_6_direct.value()
 
-        self.passi1_direct.setText(str(int(self.passi1_direct.text()) + self.encoder1[0]))
-        self.passi1_2_direct.setText(str(int(self.passi1_2_direct.text()) + self.encoder1[1]))
-        self.passi1_3_direct.setText(str(int(self.passi1_3_direct.text()) + self.encoder1[2]))
-        self.passi1_4_direct.setText(str(int(self.passi1_4_direct.text()) + self.encoder1[3]))
-        self.passi1_5_direct.setText(str(int(self.passi1_5_direct.text()) + self.encoder1[4]))
-        self.passi1_6_direct.setText(str(int(self.passi1_6_direct.text()) + self.encoder1[5]))
+        self.passi1_direct.setText(str(self.encoder1[0]))
+        self.passi1_2_direct.setText(str(self.encoder1[1]))
+        self.passi1_3_direct.setText(str(self.encoder1[2]))
+        self.passi1_4_direct.setText(str(self.encoder1[3]))
+        self.passi1_5_direct.setText(str(self.encoder1[4]))
+        self.passi1_6_direct.setText(str(self.encoder1[5]))
+
+        encrease = []  #la variabile encrease mi permette di stampare l'incremento effettivo di ogni encoder
+
+        encrease.append(self.encoder1[0] - self.setup[0])
+        encrease.append(self.encoder1[1] - self.setup[1])
+        encrease.append(self.encoder1[2] - self.setup[2])
+        encrease.append(self.encoder1[3] - self.setup[3])
+        encrease.append(self.encoder1[4] - self.setup[4])
+        encrease.append(self.encoder1[5] - self.setup[5])
 
         self.setup[0] = int(self.passi1_direct.text())
         self.setup[1] = int(self.passi1_2_direct.text())
@@ -55,8 +72,15 @@ class MyUiQt (UiClass):
         self.setup[5] = int(self.passi1_6_direct.text())
 
 
-        for i in range(1, 7):
-            print("Increase Encoder", i, "of:", self.encoder1[i-1],"Actual position: ", self.setup[i-1]) # stampa a schermo la lista l
+
+        for i in range(1, 7):           #nel seguente for, c'è un if per determinare e è stato fatto un decremento o un incremento del valore dell'encoder
+            if encrease[i-1] >= 0 :
+                print("set Encoder ", i, "on:", self.encoder1[i-1],"current encrease:", encrease[i-1]) # stampa a schermo la lista l
+
+            else:
+
+                print("set Encoder ", i, "on:", self.encoder1[i - 1], "current decrease:", encrease[i - 1])
+
 
 
 
