@@ -56,7 +56,7 @@ class MyUiQt (UiClass):
 
 
         for i in range(1, 7):
-            print("Increase Encoder", i, "of:", self.encoder1[i-1],"Actual position: ", self.setup[i-1]) # stampa a schermo la lista l
+            print("Increase Encoder", i, "of:", self.encoder1[i-1],"Actual position:", self.setup[i-1]) # stampa a schermo la lista l
 
 
 
