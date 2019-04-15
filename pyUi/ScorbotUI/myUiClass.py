@@ -34,7 +34,7 @@ class MyUiQt (UiClass):
         self.riferimento1_5_direct.setMinimum(-20000)
         self.riferimento1_6_direct.setMinimum(-20000)
 
-        """LISTA Eventi"""
+        """ LISTA Eventi """
 
         self.Pulsante_invio_pagina_Basics.clicked.connect(self.encoderValue) #premendo invio, metto nella lista i passi encoder da aggiungere  quelli qttuali
 
