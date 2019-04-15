@@ -5,7 +5,6 @@ extern L298N *mot[nMot];
 #define hs 350      //hard stop
 #define ss 400      //soft stop
 
-
 void excutePack(SPIPACK *p) {
 	switch (p->type) {
 	case setPWM:
@@ -27,6 +26,20 @@ void excutePack(SPIPACK *p) {
 				break;
 
 			}
+			for (byte i = 0; i < nMot; i++) {
+				p->outPack.out.pack.en.passi[cMot1 + i];
+			}
+
+		}
+
+	case setSetting:
+		for (byte i = 0; i < nMot; i++) {
+
+			p->outPack.out.pack.prop.sets.maxCurrMed[cMot1 + i];
+			p->outPack.out.pack.prop.sets.maxEn[cMot1 + i];
+			p->outPack.out.pack.prop.sets.minEn[cMot1 + i];
+
+
 		}
 
 	}
