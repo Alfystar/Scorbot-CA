@@ -38,17 +38,20 @@ void setup() {
 	//home();
 }
 
-// The loop function is called in an endless loop
-long timePrint = 0;
+unsigned long timePrint = 0;
 SPIPACK * r;
+
 void loop() {
 	sanityChek(sanityDelay);
 	if (spiAvailable()) {
 		r = getLastRecive();
 		excutePack(r);
-		printSpiPack(r);
 
+#ifdef SERIAL_PRINT
+		printSpiPack(r);
+#endif
 	}
+
 	updateStepEn();
 	motorStateMachine();
 
@@ -66,7 +69,7 @@ void loop() {
 #endif
 }
 
-long sanityTime = 0;
+unsigned long sanityTime = 0;
 void sanityChek(int wait) {
 	if (millis() > sanityTime + wait) {
 		if (msRead())	//se !=0 uno degli switch è premuto

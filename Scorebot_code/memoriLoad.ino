@@ -6,6 +6,6 @@ void memoryLoad() {
 }
 
 void memorySave(settingsBoard *set) {
-	EEPROM.put(0, set);
+	EEPROM.put(0, *set);
 	memcpy(&sets,set,sizeof(settingsBoard));
 }

@@ -79,14 +79,6 @@ void preparaDati(SPIPACK *p) {
 	switch (p->type) {
 	case setPWM:
 		memcpy(p->outPack.out.pack.en.passi, captureEn(), sizeof(setPWMSend));
-		/*
-		 p->outPack.out.pack.en.passi[cMot1] = 1;
-		 p->outPack.out.pack.en.passi[cMot2] = 2;
-		 p->outPack.out.pack.en.passi[cMot3] = 3;
-		 p->outPack.out.pack.en.passi[cMot4] = 4;
-		 p->outPack.out.pack.en.passi[cMot5] = 5;
-		 p->outPack.out.pack.en.passi[cMot6] = 6;
-		 */
 		break;
 	case getCurrent:
 		memcpy(p->outPack.out.pack.curr.current, getAmpMots(),
@@ -179,10 +171,6 @@ void printSpiPack(SPIPACK *p) {
 		Serial.print("\tNotting");
 		/*Send*/
 
-		int maxEn[nMot]; //valore massimo di passi prima di considerarsi fuori range di sicurezza (numeri pos)
-		int minEn[nMot]; //valore minimo di passi prima di considerarsi fuori range di sicurezza (numeri neg)
-		int maxCurrMed[nMot];//valore massimo di corrente Efficace (con una media di 1 ms ~ ultime 8 letture), numero * 8 per semplificare i conti)
-
 		Serial.println("Sended actual Settings:");
 
 		Serial.print("#maxEn:\t\t");
@@ -210,7 +198,7 @@ void printSpiPack(SPIPACK *p) {
 		Serial.println();
 		break;
 	case setSetting:
-		Serial.println("Master Ask 'goHome', Parameter:");
+		Serial.println("Master Ask 'setSetting', Parameter:");
 		/*Recive*/
 		Serial.print("#maxEn:");
 		for (byte i = 0; i < nMot; i++) {

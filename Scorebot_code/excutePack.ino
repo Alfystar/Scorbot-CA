@@ -24,23 +24,15 @@ void excutePack(SPIPACK *p) {
 			default:
 				mot[cMot1 + i]->drive_motor(read, timeOut);
 				break;
-
-			}
-			for (byte i = 0; i < nMot; i++) {
-				p->outPack.out.pack.en.passi[cMot1 + i];
 			}
 
 		}
-
+		break;
 	case setSetting:
-		for (byte i = 0; i < nMot; i++) {
-
-			p->outPack.out.pack.prop.sets.maxCurrMed[cMot1 + i];
-			p->outPack.out.pack.prop.sets.maxEn[cMot1 + i];
-			p->outPack.out.pack.prop.sets.minEn[cMot1 + i];
-
-
-		}
-
+		memorySave(&p->inPack.in.pack.prop.sets);
+		break;
+	case goHome:
+		home();
+		break;
 	}
 }
