@@ -35,9 +35,11 @@ void motorStateMachine() {
 int overCurrent[nMot] = { 250, 350, 350, 250, 300, 250 };
 #define antiRebound(x) delayMicroseconds(x)	//tempo anti rimbalzo
 
-long time = 0;
+unsigned long time = 0;
 
 void home() {
+	for (byte i = 0; i < nMot; i++)
+		mot[cMot1 + i]->freeRun();
 
 	/*Home del braccio*/
 	homeMot(cMot2, -1, 40);

@@ -17,14 +17,14 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>20</y>
+      <x>60</x>
+      <y>40</y>
       <width>841</width>
       <height>351</height>
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <property name="tabBarAutoHide">
      <bool>false</bool>
@@ -36,8 +36,8 @@
      <widget class="QPushButton" name="pushButton_2">
       <property name="geometry">
        <rect>
-        <x>440</x>
-        <y>150</y>
+        <x>540</x>
+        <y>140</y>
         <width>121</width>
         <height>41</height>
        </rect>
@@ -399,22 +399,6 @@
         </layout>
        </item>
       </layout>
-     </widget>
-     <widget class="QLabel" name="Scorbot_pic">
-      <property name="geometry">
-       <rect>
-        <x>560</x>
-        <y>130</y>
-        <width>91</width>
-        <height>71</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">image: url(:/Immagini/Scorbot2.png);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="tab_2">
@@ -1072,7 +1056,7 @@
   </widget>
   <action name="actionTor_vergata_SX">
    <property name="icon">
-    <iconset resource="../Immagini/Immagini.qrc">
+    <iconset>
      <normaloff>:/Immagini/Logo-Uni-Tor-Vergata copia.jpn.jpg</normaloff>:/Immagini/Logo-Uni-Tor-Vergata copia.jpn.jpg</iconset>
    </property>
    <property name="text">
@@ -1092,7 +1076,7 @@
   </action>
  </widget>
  <resources>
-  <include location="../Immagini/Immagini.qrc"/>
+  <include location="Immagini.qrc"/>
  </resources>
  <connections/>
 </ui>
