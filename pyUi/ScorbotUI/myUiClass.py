@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import QLabel
 
 from pyqtLib.UiClass import UiClass
 
-
+#from p.py import * # risolvere il problema di import 
 
 class MyUiQt (UiClass):
 
@@ -47,6 +47,14 @@ class MyUiQt (UiClass):
         self.encoder1[3] = self.riferimento1_4_direct.value()
         self.encoder1[4] = self.riferimento1_5_direct.value()
         self.encoder1[5] = self.riferimento1_6_direct.value()
+
+
+       #funzione compini messaggio che manda la lista dei valori degli encoder a Francesco
+
+        #invia_e(self.encoder)  # funzione da passare a Francesco
+        #invia_imp(lista) # lista impostazioni della pagina di setup
+
+
 
         self.passi1_direct.setText(str(self.encoder1[0]))
         self.passi1_2_direct.setText(str(self.encoder1[1]))
