@@ -51,8 +51,8 @@ class MyUiQt (UiClass):
 
        #funzione compini messaggio che manda la lista dei valori degli encoder a Francesco
 
-        #invia_e(self.encoder)  # funzione da passare a Francesco
-        #invia_imp(lista)  # lista impostazioni della pagina di setup
+        #invia_e(self.encoder)    # funzione da passare a Francesco
+        #invia_imp(lista)        # lista impostazioni della pagina di setup
 
 
 
