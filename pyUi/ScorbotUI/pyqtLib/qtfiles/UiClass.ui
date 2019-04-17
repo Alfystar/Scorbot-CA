@@ -2,6 +2,9 @@
 <ui version="4.0">
  <class>MainWindow</class>
  <widget class="QMainWindow" name="MainWindow">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -61,7 +64,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="usesScrollButtons">
      <bool>false</bool>
@@ -85,7 +88,7 @@
      <widget class="QPushButton" name="Pulsante_invio_pagina_Basics">
       <property name="geometry">
        <rect>
-        <x>590</x>
+        <x>620</x>
         <y>130</y>
         <width>131</width>
         <height>41</height>
@@ -125,7 +128,7 @@
         <height>241</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="Vertical_layout_Direct">
+      <layout class="QVBoxLayout" name="_2">
        <item>
         <layout class="QHBoxLayout" name="Motore1" stretch="0,0,0,0,0,0">
          <item>
@@ -160,6 +163,9 @@
          </item>
          <item>
           <widget class="QLabel" name="ma1_direct">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
              <horstretch>0</horstretch>
@@ -214,6 +220,9 @@
          </item>
          <item>
           <widget class="QLabel" name="ma2_direct">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
              <horstretch>0</horstretch>
@@ -451,6 +460,171 @@
         </layout>
        </item>
       </layout>
+     </widget>
+     <widget class="QLabel" name="encrease1">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>65</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>encrease of :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="encrease5">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>233</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>encrease of : </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="encrease2">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>108</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>encrease of :</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="encrease4">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>191</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>encrease of :</string>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="margin">
+       <number>0</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="encrease3">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>149</y>
+        <width>81</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>encrease of :</string>
+      </property>
+      <property name="indent">
+       <number>-1</number>
+      </property>
+     </widget>
+     <widget class="QLabel" name="encrease6">
+      <property name="geometry">
+       <rect>
+        <x>400</x>
+        <y>278</y>
+        <width>81</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>encrease of : </string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="encrease_value2">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>105</y>
+        <width>57</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="encrease_value3">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>146</y>
+        <width>57</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="encrease_value6">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>272</y>
+        <width>57</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="encrease_value4">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>188</y>
+        <width>57</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="encrease_value5">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>230</y>
+        <width>57</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="encrease_value1">
+      <property name="geometry">
+       <rect>
+        <x>500</x>
+        <y>62</y>
+        <width>81</width>
+        <height>29</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="Direct_Angular">
@@ -850,7 +1024,7 @@
      <widget class="QPushButton" name="PulsanteInvioPAginaAdvance">
       <property name="geometry">
        <rect>
-        <x>590</x>
+        <x>620</x>
         <y>130</y>
         <width>131</width>
         <height>41</height>
@@ -863,7 +1037,7 @@
        <string>ENTER</string>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>410</x>
@@ -1153,7 +1327,7 @@
      <widget class="QPushButton" name="PulsanteInvioPAgina_Inverse">
       <property name="geometry">
        <rect>
-        <x>590</x>
+        <x>620</x>
         <y>130</y>
         <width>131</width>
         <height>41</height>
