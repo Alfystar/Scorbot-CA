@@ -8,7 +8,6 @@
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 
-import pyqtLib.logo
 
 
 class UiClass(object):

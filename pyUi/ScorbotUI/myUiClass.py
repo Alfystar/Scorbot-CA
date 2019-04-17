@@ -5,7 +5,7 @@ from PyQt5.QtWidgets import QLabel
 
 from pyqtLib.UiClass import UiClass
 
-#from p.py import * # risolvere il problema di import 
+from pyqtLib.pyC_com.p import *
 
 class MyUiQt (UiClass):
 
