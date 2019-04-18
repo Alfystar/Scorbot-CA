@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>MainWindow</class>
- <widget class="QMainWindow" name="MainWindow">
+ <class>UiClass</class>
+ <widget class="QMainWindow" name="UiClass">
   <property name="enabled">
    <bool>true</bool>
   </property>
@@ -23,8 +23,8 @@
    <widget class="QLabel" name="Immagine_tor_Vergata_Grande">
     <property name="geometry">
      <rect>
-      <x>850</x>
-      <y>60</y>
+      <x>1010</x>
+      <y>50</y>
       <width>111</width>
       <height>131</height>
      </rect>
@@ -42,11 +42,16 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>170</x>
-      <y>60</y>
-      <width>851</width>
-      <height>361</height>
+      <x>10</x>
+      <y>10</y>
+      <width>951</width>
+      <height>381</height>
      </rect>
+    </property>
+    <property name="font">
+     <font>
+      <pointsize>16</pointsize>
+     </font>
     </property>
     <property name="toolTip">
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Direct&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -88,8 +93,8 @@
      <widget class="QPushButton" name="Pulsante_invio_pagina_Basics">
       <property name="geometry">
        <rect>
-        <x>620</x>
-        <y>130</y>
+        <x>760</x>
+        <y>140</y>
         <width>131</width>
         <height>41</height>
        </rect>
@@ -105,7 +110,7 @@
       <property name="geometry">
        <rect>
         <x>130</x>
-        <y>30</y>
+        <y>20</y>
         <width>171</width>
         <height>20</height>
        </rect>
@@ -122,17 +127,25 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>30</x>
-        <y>60</y>
-        <width>351</width>
-        <height>241</height>
+        <x>10</x>
+        <y>40</y>
+        <width>181</width>
+        <height>301</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="_2">
+      <layout class="QVBoxLayout" name="VEn_Dir">
+       <property name="spacing">
+        <number>11</number>
+       </property>
        <item>
-        <layout class="QHBoxLayout" name="Motore1" stretch="0,0,0,0,0,0">
+        <layout class="QHBoxLayout" name="Motore1" stretch="0,0">
          <item>
           <widget class="QLabel" name="Encoder1_direct">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>encoder n°1</string>
            </property>
@@ -141,55 +154,17 @@
          <item>
           <widget class="QSpinBox" name="riferimento1_direct"/>
          </item>
-         <item>
-          <widget class="QLabel" name="Step1_direct">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>Step:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="passi1_direct">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="ma1_direct">
-           <property name="enabled">
-            <bool>true</bool>
-           </property>
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>mA:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="ma1_value1_direct">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="Motore2" stretch="0,0,0,0,0,0">
+        <layout class="QHBoxLayout" name="Motore2" stretch="0,0">
          <item>
           <widget class="QLabel" name="Encoder_direct">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>encoder n°2</string>
            </property>
@@ -198,6 +173,337 @@
          <item>
           <widget class="QSpinBox" name="riferimento1_2_direct"/>
          </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="Motore3" stretch="0,0">
+         <item>
+          <widget class="QLabel" name="Encoder3_direct">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encoder n°3</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="riferimento1_3_direct"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="Motore4" stretch="0,0">
+         <item>
+          <widget class="QLabel" name="Ecoder4_direct">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encoder n°4</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="riferimento1_4_direct"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="Motore5" stretch="0,0">
+         <item>
+          <widget class="QLabel" name="Encoder5_direct">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encoder n°5</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="riferimento1_5_direct"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="Motore6" stretch="0,0">
+         <item>
+          <widget class="QLabel" name="Encoder6_direct">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encoder n°6</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="riferimento1_6_direct"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>50</y>
+        <width>181</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <layout class="QVBoxLayout" name="VEncDir">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_9">
+         <item>
+          <widget class="QLabel" name="encrease1">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encrease of :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="encrease_value1">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_14">
+         <item>
+          <widget class="QLabel" name="encrease2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encrease of :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="encrease_value2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_15">
+         <item>
+          <widget class="QLabel" name="encrease3">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encrease of :</string>
+           </property>
+           <property name="indent">
+            <number>-1</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="encrease_value3">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_16">
+         <item>
+          <widget class="QLabel" name="encrease4">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encrease of :</string>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="encrease_value4">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_17">
+         <item>
+          <widget class="QLabel" name="encrease5">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encrease of : </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="encrease_value5">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_18">
+         <item>
+          <widget class="QLabel" name="encrease6">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encrease of : </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="encrease_value6">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>50</y>
+        <width>131</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <layout class="QVBoxLayout" name="VStepDir">
+       <property name="spacing">
+        <number>12</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_25">
+         <item>
+          <widget class="QLabel" name="Step1_direct">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Step</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="passi1_direct">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_26">
          <item>
           <widget class="QLabel" name="Step2_direct">
            <property name="sizePolicy">
@@ -206,20 +512,190 @@
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>Step:</string>
+            <string>Step</string>
            </property>
           </widget>
          </item>
          <item>
           <widget class="QLabel" name="passi1_2_direct">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>0</string>
            </property>
           </widget>
          </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_27">
          <item>
-          <widget class="QLabel" name="ma2_direct">
+          <widget class="QLabel" name="Step3_direct">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Step</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="passi1_3_direct">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_28">
+         <item>
+          <widget class="QLabel" name="Step4_direct">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Step</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="passi1_4_direct">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_29">
+         <item>
+          <widget class="QLabel" name="Step5_direct">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Step</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="passi1_5_direct">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_30">
+         <item>
+          <widget class="QLabel" name="Step6_direct">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Step</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="passi1_6_direct">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_5">
+      <property name="geometry">
+       <rect>
+        <x>550</x>
+        <y>50</y>
+        <width>151</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <layout class="QVBoxLayout" name="VmADir_2">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_37">
+         <item>
+          <widget class="QLabel" name="ma1">
            <property name="enabled">
             <bool>true</bool>
            </property>
@@ -229,13 +705,23 @@
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>mA:</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="ma2_value2_direct">
+          <widget class="QLabel" name="ma1_value">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>0</string>
            </property>
@@ -244,44 +730,22 @@
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="Motore3" stretch="0,0,0,0,0,0">
+        <layout class="QHBoxLayout" name="horizontalLayout_38">
          <item>
-          <widget class="QLabel" name="Encoder3_direct">
-           <property name="text">
-            <string>encoder n°3</string>
+          <widget class="QLabel" name="ma2">
+           <property name="enabled">
+            <bool>true</bool>
            </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QSpinBox" name="riferimento1_3_direct"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="Step3_direct">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
-           <property name="text">
-            <string>Step:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="passi1_3_direct">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="ma3_direct">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
            </property>
            <property name="text">
             <string>mA:</string>
@@ -289,7 +753,12 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="ma3_value3_direct">
+          <widget class="QLabel" name="ma2_value">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>0</string>
            </property>
@@ -298,44 +767,19 @@
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="Motore4" stretch="0,0,0,0,0,0">
+        <layout class="QHBoxLayout" name="horizontalLayout_39">
          <item>
-          <widget class="QLabel" name="Ecoder4_direct">
-           <property name="text">
-            <string>encoder n°4</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QSpinBox" name="riferimento1_4_direct"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="Step4_direct">
+          <widget class="QLabel" name="ma3">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
-           <property name="text">
-            <string>Step:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="passi1_4_direct">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="ma4_direct">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
            </property>
            <property name="text">
             <string>mA:</string>
@@ -343,7 +787,12 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="ma4_value4_direct">
+          <widget class="QLabel" name="ma3_value">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>0</string>
            </property>
@@ -352,44 +801,19 @@
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="Motore5" stretch="0,0,0,0,0,0">
+        <layout class="QHBoxLayout" name="horizontalLayout_40">
          <item>
-          <widget class="QLabel" name="Encoder5_direct">
-           <property name="text">
-            <string>encoder n°5</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QSpinBox" name="riferimento1_5_direct"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="Step5_direct">
+          <widget class="QLabel" name="ma4">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
-           <property name="text">
-            <string>Step:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="passi1_5_direct">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="ma5_direct">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
            </property>
            <property name="text">
             <string>mA:</string>
@@ -397,7 +821,12 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="ma5_value5_direct">
+          <widget class="QLabel" name="ma4_value">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>0</string>
            </property>
@@ -406,44 +835,19 @@
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="Motore6" stretch="0,0,0,0,0,0">
+        <layout class="QHBoxLayout" name="horizontalLayout_41">
          <item>
-          <widget class="QLabel" name="Encoder6_direct">
-           <property name="text">
-            <string>encoder n°6</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QSpinBox" name="riferimento1_6_direct"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="Step6_direct">
+          <widget class="QLabel" name="ma5">
            <property name="sizePolicy">
             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
             </sizepolicy>
            </property>
-           <property name="text">
-            <string>Step:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="passi1_6_direct">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="ma6_direct">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
            </property>
            <property name="text">
             <string>mA:</string>
@@ -451,7 +855,46 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="ma6_value6_direct">
+          <widget class="QLabel" name="ma5_value">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_42">
+         <item>
+          <widget class="QLabel" name="ma6">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>mA:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="ma6_value">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
            <property name="text">
             <string>0</string>
            </property>
@@ -460,554 +903,17 @@
         </layout>
        </item>
       </layout>
-     </widget>
-     <widget class="QLabel" name="encrease1">
-      <property name="geometry">
-       <rect>
-        <x>400</x>
-        <y>65</y>
-        <width>81</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>encrease of :</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="encrease5">
-      <property name="geometry">
-       <rect>
-        <x>400</x>
-        <y>233</y>
-        <width>81</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>encrease of : </string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="encrease2">
-      <property name="geometry">
-       <rect>
-        <x>400</x>
-        <y>108</y>
-        <width>81</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>encrease of :</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="encrease4">
-      <property name="geometry">
-       <rect>
-        <x>400</x>
-        <y>191</y>
-        <width>81</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>encrease of :</string>
-      </property>
-      <property name="scaledContents">
-       <bool>false</bool>
-      </property>
-      <property name="margin">
-       <number>0</number>
-      </property>
-     </widget>
-     <widget class="QLabel" name="encrease3">
-      <property name="geometry">
-       <rect>
-        <x>400</x>
-        <y>149</y>
-        <width>81</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>encrease of :</string>
-      </property>
-      <property name="indent">
-       <number>-1</number>
-      </property>
-     </widget>
-     <widget class="QLabel" name="encrease6">
-      <property name="geometry">
-       <rect>
-        <x>400</x>
-        <y>278</y>
-        <width>81</width>
-        <height>16</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>encrease of : </string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="encrease_value2">
-      <property name="geometry">
-       <rect>
-        <x>500</x>
-        <y>105</y>
-        <width>57</width>
-        <height>29</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>0</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="encrease_value3">
-      <property name="geometry">
-       <rect>
-        <x>500</x>
-        <y>146</y>
-        <width>57</width>
-        <height>29</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>0</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="encrease_value6">
-      <property name="geometry">
-       <rect>
-        <x>500</x>
-        <y>272</y>
-        <width>57</width>
-        <height>29</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>0</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="encrease_value4">
-      <property name="geometry">
-       <rect>
-        <x>500</x>
-        <y>188</y>
-        <width>57</width>
-        <height>29</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>0</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="encrease_value5">
-      <property name="geometry">
-       <rect>
-        <x>500</x>
-        <y>230</y>
-        <width>57</width>
-        <height>29</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>0</string>
-      </property>
-     </widget>
-     <widget class="QLabel" name="encrease_value1">
-      <property name="geometry">
-       <rect>
-        <x>500</x>
-        <y>62</y>
-        <width>81</width>
-        <height>29</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>0</string>
-      </property>
      </widget>
     </widget>
     <widget class="QWidget" name="Direct_Angular">
      <attribute name="title">
       <string>Direct  AngularPosition</string>
      </attribute>
-     <widget class="QWidget" name="layoutWidget_6">
-      <property name="geometry">
-       <rect>
-        <x>30</x>
-        <y>60</y>
-        <width>351</width>
-        <height>241</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_Angular">
-       <item>
-        <layout class="QHBoxLayout" name="Motore1_2" stretch="0,0,0,0,0,0">
-         <item>
-          <widget class="QLabel" name="Teta1_Angular">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>θ1:  </string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QSpinBox" name="riferimento1_Angular"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="Step_Teta1_Angular">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>Step:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="step1_Value_Angular">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="ma_Teta1_Angular">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>mA:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="ma1_value_Angular">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="Motore2_2" stretch="0,0,0,0,0,0">
-         <item>
-          <widget class="QLabel" name="Teta2_Angular">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>θ2:  </string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QSpinBox" name="riferimento2_Angular"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="Step_Teta2_Angular">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>Step:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="Step2_Value_Angular">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="ma_Teta2_Angular">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>mA:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="ma2_value_Angular">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="Motore3_2" stretch="0,0,0,0,0,0">
-         <item>
-          <widget class="QLabel" name="Teta3_Angular">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>θ3:  </string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QSpinBox" name="riferimento3_Angular"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="Step_Teta3_Angular">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>Step:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="Step3_Value_Angular">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="ma_teta3_Angular">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>mA:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="ma3_value_Angular">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="Motore4_2" stretch="0,0,0,0,0,0">
-         <item>
-          <widget class="QLabel" name="Teta4_Angular">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>θ4:  </string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QSpinBox" name="riferimento4_angular"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="Step_Teta4_Angular">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>Step:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="Step4_Value_Angular">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="ma_teta4_Angular">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>mA:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="ma4_Value_Angular">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="Motore5_2" stretch="0,0,0,0,0,0">
-         <item>
-          <widget class="QLabel" name="Teta5_Angular">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>θ5:  </string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QSpinBox" name="riferimento5_angular"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="Step_Teta5_Angular">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>Step:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="Step5_value_Angular">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="ma_teta5_Angular">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>mA:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="ma5_value_Angular">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="Motore6_2" stretch="0,0,0,0,0,0">
-         <item>
-          <widget class="QLabel" name="Teta6_Angular">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>θ6:  </string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QSpinBox" name="riferimento6_angular"/>
-         </item>
-         <item>
-          <widget class="QLabel" name="Step_Teta5_2_Angular">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>Step:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="Step6_value_Angular">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="ma_teta_6_Angular">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>mA:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="ma6_value_Angular">
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </widget>
      <widget class="QLabel" name="Angle">
       <property name="geometry">
        <rect>
         <x>160</x>
-        <y>30</y>
+        <y>20</y>
         <width>111</width>
         <height>21</height>
        </rect>
@@ -1024,8 +930,8 @@
      <widget class="QPushButton" name="PulsanteInvioPAginaAdvance">
       <property name="geometry">
        <rect>
-        <x>620</x>
-        <y>130</y>
+        <x>760</x>
+        <y>140</y>
         <width>131</width>
         <height>41</height>
        </rect>
@@ -1037,85 +943,944 @@
        <string>ENTER</string>
       </property>
      </widget>
+     <widget class="QWidget" name="layoutWidget_8">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>50</y>
+        <width>181</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="VEncDir_2">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_49">
+         <item>
+          <widget class="QLabel" name="encrease1_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encrease of :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="encrease_value1_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_50">
+         <item>
+          <widget class="QLabel" name="encrease2_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encrease of :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="encrease_value2_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_51">
+         <item>
+          <widget class="QLabel" name="encrease3_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encrease of :</string>
+           </property>
+           <property name="indent">
+            <number>-1</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="encrease_value3_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_52">
+         <item>
+          <widget class="QLabel" name="encrease4_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encrease of :</string>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="encrease_value4_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_53">
+         <item>
+          <widget class="QLabel" name="encrease5_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encrease of : </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="encrease_value5_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_54">
+         <item>
+          <widget class="QLabel" name="encrease6_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encrease of : </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="encrease_value6_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_22">
+      <property name="geometry">
+       <rect>
+        <x>821</x>
+        <y>10</y>
+        <width>41</width>
+        <height>31</height>
+       </rect>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_100">
+       <item>
+        <widget class="QLabel" name="beta_4">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>β:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="betaVal_4">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_23">
+      <property name="geometry">
+       <rect>
+        <x>750</x>
+        <y>10</y>
+        <width>41</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_103">
+       <property name="leftMargin">
+        <number>1</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QLabel" name="alpha_6">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>α:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="alphaVal_6">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_21">
+      <property name="geometry">
+       <rect>
+        <x>820</x>
+        <y>50</y>
+        <width>41</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_99">
+       <item>
+        <widget class="QLabel" name="gamma_3">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>γ:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="gammaVal_3">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_24">
+      <property name="geometry">
+       <rect>
+        <x>751</x>
+        <y>50</y>
+        <width>41</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout_104">
+       <item>
+        <widget class="QLabel" name="delta_3">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>δ:</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="deltaVal_3">
+         <property name="font">
+          <font>
+           <pointsize>16</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>1</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>410</x>
-        <y>70</y>
-        <width>30</width>
-        <height>104</height>
+        <x>550</x>
+        <y>50</y>
+        <width>151</width>
+        <height>281</height>
        </rect>
       </property>
-      <layout class="QVBoxLayout" name="verticalLayout">
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <layout class="QVBoxLayout" name="VmADir">
+       <property name="spacing">
+        <number>10</number>
+       </property>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_10">
+        <layout class="QHBoxLayout" name="horizontalLayout_19">
          <item>
-          <widget class="QLabel" name="alpha">
+          <widget class="QLabel" name="ma1_direct">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>α:</string>
+            <string>mA:</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="alphaVal">
+          <widget class="QLabel" name="ma1_value1_direct">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>1</string>
+            <string>0</string>
            </property>
           </widget>
          </item>
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_11">
+        <layout class="QHBoxLayout" name="horizontalLayout_20">
          <item>
-          <widget class="QLabel" name="beta">
+          <widget class="QLabel" name="ma2_direct">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>β:</string>
+            <string>mA:</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="betaVal">
+          <widget class="QLabel" name="ma2_value2_direct">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>1</string>
+            <string>0</string>
            </property>
           </widget>
          </item>
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_12">
+        <layout class="QHBoxLayout" name="horizontalLayout_21">
          <item>
-          <widget class="QLabel" name="gamma">
+          <widget class="QLabel" name="ma3_direct">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>γ:</string>
+            <string>mA:</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="gammaVal">
+          <widget class="QLabel" name="ma3_value3_direct">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>1</string>
+            <string>0</string>
            </property>
           </widget>
          </item>
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_13">
+        <layout class="QHBoxLayout" name="horizontalLayout_22">
          <item>
-          <widget class="QLabel" name="delta">
+          <widget class="QLabel" name="ma4_direct">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>δ:</string>
+            <string>mA:</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="deltaVal">
+          <widget class="QLabel" name="ma4_value4_direct">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
            <property name="text">
-            <string>1</string>
+            <string>0</string>
            </property>
           </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_23">
+         <item>
+          <widget class="QLabel" name="ma5_direct">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>mA:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="ma5_value5_direct">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_24">
+         <item>
+          <widget class="QLabel" name="ma6_direct">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>mA:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="ma6_value6_direct">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_7">
+      <property name="geometry">
+       <rect>
+        <x>220</x>
+        <y>50</y>
+        <width>131</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <layout class="QVBoxLayout" name="VStepDir_2">
+       <property name="spacing">
+        <number>12</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_31">
+         <item>
+          <widget class="QLabel" name="teta1_dir">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>θ1:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="tetaDir_1value">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_32">
+         <item>
+          <widget class="QLabel" name="teta2_dir">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>θ2:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="tetaDir_2value">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_33">
+         <item>
+          <widget class="QLabel" name="teta3_dit">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>θ3:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="tetaDir_3value">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_34">
+         <item>
+          <widget class="QLabel" name="teta4_dit">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>θ4:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="tetaDir_4value">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_35">
+         <item>
+          <widget class="QLabel" name="teta5_dir">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>θ5:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="tetaDir_5value">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_36">
+         <item>
+          <widget class="QLabel" name="teta6_dir">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>θ6:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="tetaDir_6value">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_9">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>40</y>
+        <width>171</width>
+        <height>301</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="VEn_Dir_3">
+       <property name="spacing">
+        <number>12</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="Motore1_3" stretch="0,0">
+         <item>
+          <widget class="QLabel" name="Angle1_dir">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Angle  θ1:  </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="AngleDir_1"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="Motore2_3" stretch="0,0">
+         <item>
+          <widget class="QLabel" name="Angle2_dir">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Angle θ2:  </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="AngleDir_2"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="Motore3_3" stretch="0,0">
+         <item>
+          <widget class="QLabel" name="Angle3_dir">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Angle θ3:  </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="AngleDir_3"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="Motore4_3" stretch="0,0">
+         <item>
+          <widget class="QLabel" name="Angle4_dir">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Angle θ4:  </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="AngleDir_4"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="Motore5_3" stretch="0,0">
+         <item>
+          <widget class="QLabel" name="Angle5_dir">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Angle θ5:  </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="AngleDir_5"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="Motore6_3" stretch="0,0">
+         <item>
+          <widget class="QLabel" name="Angle6_dir">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Angle θ6:  </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="AngleDir_6"/>
          </item>
         </layout>
        </item>
