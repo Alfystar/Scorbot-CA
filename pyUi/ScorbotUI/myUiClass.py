@@ -40,7 +40,7 @@ class MyUiQt (Ui_UiClass):
 
         """LISTA Eventi"""
 
-        self.Pulsante_invio_pagina_Basics.clicked.connect(self.encoderValue)  #premendo invio, metto nella lista i passi encoder da aggiungere  quelli qttuali
+        self.Pulsante_invio_pagina_Basics.clicked.connect(self.encoderValue) #premendo invio, metto nella lista i passi encoder da aggiungere  quelli qttuali
 
 
 
