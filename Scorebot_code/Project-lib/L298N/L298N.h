@@ -25,6 +25,7 @@ public:
 	/*State change motor*/
 	void drive_motor(int speed);
 	void drive_motor(int speed, unsigned int delay_time);
+	void reversDir();
 	void soft_stop();
 	void hard_stop(unsigned int delay_time);	//MAKE HARD STOP FOR DELAYED TIME
 	void soft_stop(unsigned int delay_time);

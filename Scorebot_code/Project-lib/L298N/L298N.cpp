@@ -77,6 +77,11 @@ void L298N::drive_motor(int speed, unsigned int delay_time) {
 	this->time = millis();
 	this->state = movingTiming;
 }
+void L298N::reversDir()
+{
+	drive_motor(-this->speed,500);
+}
+
 
 void L298N::hard_stop(unsigned int delay_time) {
 	this->delay_time = delay_time;

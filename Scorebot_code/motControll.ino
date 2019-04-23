@@ -30,9 +30,9 @@ void motorStateMachine() {
 
 #define searchVel 255
 #define slowVel 150
-//#define overCurrent 250
+#define waitTime 40
 
-int overCurrent[nMot] = { 250, 350, 350, 250, 300, 250 };
+//int overCurrent[nMot] = { 250, 350, 350, 250, 300, 250 }; //correnti sperimentali quando è bloccato
 #define antiRebound(x) delayMicroseconds(x)	//tempo anti rimbalzo
 
 unsigned long time = 0;
@@ -42,22 +42,26 @@ void home() {
 		mot[cMot1 + i]->freeRun();
 
 	/*Home del braccio*/
-	homeMot(cMot2, -1, 40);
-	homeMot(cMot3, 1, 80);
+	homeMot(cMot2, -1);
+	homeMot(cMot3, -1);
 	pinzaHome();
 
 	/*Home del braccio agane*/
-	homeMot(cMot2, -1, 40);
-	homeMot(cMot3, -1, 80);
+	homeMot(cMot2, -1);
+	homeMot(cMot3, -1);
 	pinzaHome();
 
 	/*Home Base*/
-	homeMot(cMot1, 1, 40);
+	homeMot(cMot1, -1);
 
 	/*Pinza test*/
+	closeClaw();
+	delay(2000);
 	openClaw();
 	delay(2000);
-	closeClaw();
+	stopClaw();
+	delay(10);
+
 
 	updateStepEn();
 	for (byte i = 0; i < nMot; i++) //reset degli encoder
@@ -66,7 +70,11 @@ void home() {
 
 //1= anti orario
 //-1= orario
-void homeMot(byte motN, signed char stDir, int sleepCurrent) {
+void homeMot(byte motN, signed char stDir) {
+	signed char stDirStart=stDir;
+	updateStepEn();
+	setEn(motN, 0);
+
 	/** Home Mot **/
 
 	Serial.print("Searching Mot");
@@ -78,24 +86,33 @@ void homeMot(byte motN, signed char stDir, int sleepCurrent) {
 
 	//Cerca Home
 	time = millis();
+	long oldEn = 0;
+	long antiReboundTimer = 0;
 	while (!(msRead() & (1 << motN))) {
+		updateStepEn();
 		//Sbattuto a bordo pista, devo andare nel senso opposto per trovare la Home
-		if ((getSumMot(motN) > overCurrent[motN])
-				&& (millis() > time + sleepCurrent)) {
-			stDir *= -1;
-			mot[motN]->drive_motor(stDir * searchVel);
-			Serial.print("\t-- OVER CURRENT, Change Direction ");
-			Serial.println(getSumMot(motN));
+		if ((millis() > time + waitTime)) {
+			Serial.print("\t-- DELTA: ");
+			Serial.println(abs(getEn(motN) - oldEn));
+			if (abs((getEn(motN) - oldEn)) < 3) {
+				stDir *= -1;
+				mot[motN]->drive_motor(stDir * searchVel);
+				Serial.println("\t-- Encoder LOCK, Change Direction ");
+			}
+			oldEn = getEn(motN);
 			time = millis();
-			delay(100);
+			//delay(100);
 		}
 		mot[motN]->drive_motor(stDir * searchVel);
-		antiRebound(100);
+		while (micros() < antiReboundTimer + waitTime)
+			updateStepEn();
+		antiReboundTimer = micros();
+		//antiRebound(100);
 	}
 
 	//Posiziona a destra del riferimento
 	Serial.println("\t--First Click");
-	if (stDir == 1) {	//ero a sx dello switch
+	if (stDir == stDirStart) {	//ero a sx dello switch
 		while (msRead() & (1 << motN)) {	//proseguo durante al click
 			mot[motN]->drive_motor(slowVel);
 			delayMicroseconds(100);	//tempo anti rimbalzo
@@ -171,7 +188,7 @@ void pinzaHome() {
 	/*#########################################################################à*/
 
 	/** Pitch Home **/
-	signed char stDir = 1;
+	signed char stDir = -1;
 
 	Serial.println("Searching Claw Pitch HW Home:");
 	mot[cMot4]->drive_motor(stDir * searchVel);
@@ -180,24 +197,34 @@ void pinzaHome() {
 
 	//Cerca Home
 	time = millis();
+	long oldEn4 = 0;
+	long oldEn5 = 0;
+	long antiReboundTimer = 0;
+
 	while (!(msRead() & (1 << cMot4))) {
+		updateStepEn();
 		//Sbattuto a bordo pista, devo andare nel senso opposto per trovare la Home
-		if ((getSumMot(cMot5) > overCurrent[cMot5]
-				|| getSumMot(cMot6) > overCurrent[cMot6])
-				&& (millis() > time + 30)) {
-			stDir *= -1;
-			mot[cMot4]->drive_motor(stDir * searchVel);
-			mot[cMot5]->drive_motor(stDir * searchVel);
-			Serial.print("\t-- OVER CURRENT, Change Direction ");
-			Serial.print(getSumMot(cMot5));
-			Serial.print(" && ");
-			Serial.println(getSumMot(cMot6));
-			time = millis();
-			delay(100);
+		if ((millis() > time + waitTime)) {
+			if ((abs((getEn(cMot4) - oldEn4)) < 3)
+					&& (abs((getEn(cMot5) - oldEn5)) < 3)) {
+				stDir *= -1;
+				mot[cMot4]->drive_motor(stDir * searchVel);
+				mot[cMot5]->drive_motor(stDir * searchVel);
+				Serial.print("\t-- Encoder LOCK, Change Direction ");
+				Serial.print(abs((getEn(cMot4) - oldEn4)));
+				Serial.print(" && ");
+				Serial.println(abs((getEn(cMot5) - oldEn5)));
+				time = millis();
+			}
+			oldEn4 = getEn(cMot4);
+			oldEn5 = getEn(cMot5);
+			time=millis();
 		}
 		mot[cMot4]->drive_motor(stDir * searchVel);
 		mot[cMot5]->drive_motor(stDir * searchVel);
-		antiRebound(100);
+		while (micros() < antiReboundTimer + 100)
+			updateStepEn();
+		antiReboundTimer = micros();
 	}
 
 	//Posiziona a destra del riferimento
@@ -242,9 +269,13 @@ void pinzaHome() {
 }
 
 void openClaw() {
-	mot[cMot6]->drive_motor(140, 2000);
+	mot[cMot6]->drive_motor(-140, 2000);
 }
 
 void closeClaw() {
-	mot[cMot6]->drive_motor(-140, 2000);
+	mot[cMot6]->drive_motor(140, 2000);
+}
+
+void stopClaw() {
+	mot[cMot6]->soft_stop(2000);
 }
