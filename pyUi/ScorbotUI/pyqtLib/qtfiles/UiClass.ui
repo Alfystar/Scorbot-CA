@@ -42,10 +42,10 @@
    <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>10</y>
+      <x>20</x>
+      <y>20</y>
       <width>951</width>
-      <height>381</height>
+      <height>491</height>
      </rect>
     </property>
     <property name="font">
@@ -69,7 +69,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>2</number>
     </property>
     <property name="usesScrollButtons">
      <bool>false</bool>
@@ -94,7 +94,7 @@
       <property name="geometry">
        <rect>
         <x>760</x>
-        <y>140</y>
+        <y>170</y>
         <width>131</width>
         <height>41</height>
        </rect>
@@ -109,8 +109,8 @@
      <widget class="QLabel" name="Passi_encoder_scritta">
       <property name="geometry">
        <rect>
-        <x>130</x>
-        <y>20</y>
+        <x>10</x>
+        <y>10</y>
         <width>171</width>
         <height>20</height>
        </rect>
@@ -912,8 +912,8 @@
      <widget class="QLabel" name="Angle">
       <property name="geometry">
        <rect>
-        <x>160</x>
-        <y>20</y>
+        <x>10</x>
+        <y>10</y>
         <width>111</width>
         <height>21</height>
        </rect>
@@ -931,7 +931,7 @@
       <property name="geometry">
        <rect>
         <x>760</x>
-        <y>140</y>
+        <y>170</y>
         <width>131</width>
         <height>41</height>
        </rect>
@@ -943,372 +943,12 @@
        <string>ENTER</string>
       </property>
      </widget>
-     <widget class="QWidget" name="layoutWidget_8">
-      <property name="geometry">
-       <rect>
-        <x>360</x>
-        <y>50</y>
-        <width>181</width>
-        <height>281</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="VEncDir_2">
-       <property name="spacing">
-        <number>10</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_49">
-         <item>
-          <widget class="QLabel" name="encrease1_2">
-           <property name="font">
-            <font>
-             <pointsize>15</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>encrease of :</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="encrease_value1_2">
-           <property name="font">
-            <font>
-             <pointsize>15</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_50">
-         <item>
-          <widget class="QLabel" name="encrease2_2">
-           <property name="font">
-            <font>
-             <pointsize>15</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>encrease of :</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="encrease_value2_2">
-           <property name="font">
-            <font>
-             <pointsize>15</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_51">
-         <item>
-          <widget class="QLabel" name="encrease3_2">
-           <property name="font">
-            <font>
-             <pointsize>15</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>encrease of :</string>
-           </property>
-           <property name="indent">
-            <number>-1</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="encrease_value3_2">
-           <property name="font">
-            <font>
-             <pointsize>15</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_52">
-         <item>
-          <widget class="QLabel" name="encrease4_2">
-           <property name="font">
-            <font>
-             <pointsize>15</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>encrease of :</string>
-           </property>
-           <property name="scaledContents">
-            <bool>false</bool>
-           </property>
-           <property name="margin">
-            <number>0</number>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="encrease_value4_2">
-           <property name="font">
-            <font>
-             <pointsize>15</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_53">
-         <item>
-          <widget class="QLabel" name="encrease5_2">
-           <property name="font">
-            <font>
-             <pointsize>15</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>encrease of : </string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="encrease_value5_2">
-           <property name="font">
-            <font>
-             <pointsize>15</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_54">
-         <item>
-          <widget class="QLabel" name="encrease6_2">
-           <property name="font">
-            <font>
-             <pointsize>15</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>encrease of : </string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="encrease_value6_2">
-           <property name="font">
-            <font>
-             <pointsize>15</pointsize>
-            </font>
-           </property>
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget_22">
-      <property name="geometry">
-       <rect>
-        <x>821</x>
-        <y>10</y>
-        <width>41</width>
-        <height>31</height>
-       </rect>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_100">
-       <item>
-        <widget class="QLabel" name="beta_4">
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>β:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="betaVal_4">
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>1</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget_23">
-      <property name="geometry">
-       <rect>
-        <x>750</x>
-        <y>10</y>
-        <width>41</width>
-        <height>30</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_103">
-       <property name="leftMargin">
-        <number>1</number>
-       </property>
-       <property name="topMargin">
-        <number>0</number>
-       </property>
-       <item>
-        <widget class="QLabel" name="alpha_6">
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>α:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="alphaVal_6">
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>1</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget_21">
-      <property name="geometry">
-       <rect>
-        <x>820</x>
-        <y>50</y>
-        <width>41</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_99">
-       <item>
-        <widget class="QLabel" name="gamma_3">
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>γ:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="gammaVal_3">
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>1</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget_24">
-      <property name="geometry">
-       <rect>
-        <x>751</x>
-        <y>50</y>
-        <width>41</width>
-        <height>21</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>16</pointsize>
-       </font>
-      </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_104">
-       <item>
-        <widget class="QLabel" name="delta_3">
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>δ:</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QLabel" name="deltaVal_3">
-         <property name="font">
-          <font>
-           <pointsize>16</pointsize>
-          </font>
-         </property>
-         <property name="text">
-          <string>1</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>550</x>
+        <x>480</x>
         <y>50</y>
-        <width>151</width>
+        <width>121</width>
         <height>281</height>
        </rect>
       </property>
@@ -1536,9 +1176,9 @@
      <widget class="QWidget" name="layoutWidget_7">
       <property name="geometry">
        <rect>
-        <x>220</x>
+        <x>190</x>
         <y>50</y>
-        <width>131</width>
+        <width>111</width>
         <height>281</height>
        </rect>
       </property>
@@ -1762,7 +1402,7 @@
        <rect>
         <x>10</x>
         <y>40</y>
-        <width>171</width>
+        <width>161</width>
         <height>301</height>
        </rect>
       </property>
@@ -1886,97 +1526,306 @@
        </item>
       </layout>
      </widget>
+     <widget class="QWidget" name="layoutWidget_8">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>50</y>
+        <width>161</width>
+        <height>281</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="VEncDir_2">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_49">
+         <item>
+          <widget class="QLabel" name="encrease1_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encrease of :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="encrease_value1_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_50">
+         <item>
+          <widget class="QLabel" name="encrease2_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encrease of :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="encrease_value2_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_51">
+         <item>
+          <widget class="QLabel" name="encrease3_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encrease of :</string>
+           </property>
+           <property name="indent">
+            <number>-1</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="encrease_value3_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_52">
+         <item>
+          <widget class="QLabel" name="encrease4_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encrease of :</string>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
+           </property>
+           <property name="margin">
+            <number>0</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="encrease_value4_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_53">
+         <item>
+          <widget class="QLabel" name="encrease5_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encrease of : </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="encrease_value5_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_54">
+         <item>
+          <widget class="QLabel" name="encrease6_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encrease of : </string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="encrease_value6_2">
+           <property name="font">
+            <font>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>620</x>
+        <y>50</y>
+        <width>71</width>
+        <height>136</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_103">
+         <property name="leftMargin">
+          <number>1</number>
+         </property>
+         <property name="topMargin">
+          <number>0</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="alpha_6">
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>α:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="alphaValue"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_100">
+         <item>
+          <widget class="QLabel" name="beta_4">
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>β:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="betaValue"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_99">
+         <item>
+          <widget class="QLabel" name="gamma_3">
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>γ:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="gammaValue"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_104">
+         <item>
+          <widget class="QLabel" name="delta_3">
+           <property name="font">
+            <font>
+             <pointsize>16</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>δ:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="deltaValue"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
     </widget>
     <widget class="QWidget" name="Inverse">
      <attribute name="title">
       <string>Inverse  Kinematics</string>
      </attribute>
-     <widget class="QWidget" name="layoutWidget_2">
-      <property name="geometry">
-       <rect>
-        <x>280</x>
-        <y>60</y>
-        <width>110</width>
-        <height>39</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_Gomito_inverse">
-       <item>
-        <widget class="QRadioButton" name="Gomitoalto">
-         <property name="text">
-          <string>Gomito alto</string>
-         </property>
-        </widget>
-       </item>
-       <item>
-        <widget class="QRadioButton" name="Gomitobasso">
-         <property name="text">
-          <string>Gomito basso</string>
-         </property>
-        </widget>
-       </item>
-      </layout>
-     </widget>
-     <widget class="QWidget" name="layoutWidget_3">
-      <property name="geometry">
-       <rect>
-        <x>10</x>
-        <y>20</y>
-        <width>115</width>
-        <height>231</height>
-       </rect>
-      </property>
-      <layout class="QVBoxLayout" name="verticalLayout_X_Y_Z_Positizio_Inverse">
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout">
-         <item>
-          <widget class="QLabel" name="Xdes">
-           <property name="text">
-            <string>Xdes:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QDoubleSpinBox" name="Xdes_spin_Box"/>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_2">
-         <item>
-          <widget class="QLabel" name="Ydes">
-           <property name="text">
-            <string>Ydes:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QDoubleSpinBox" name="Ydes_spin_box"/>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_3">
-         <item>
-          <widget class="QLabel" name="Zdes">
-           <property name="text">
-            <string>Zdes:</string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QDoubleSpinBox" name="Zdes_spin_Box"/>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </widget>
      <widget class="QWidget" name="layoutWidget_4">
       <property name="geometry">
        <rect>
-        <x>470</x>
-        <y>30</y>
-        <width>51</width>
+        <x>560</x>
+        <y>40</y>
+        <width>121</width>
         <height>251</height>
        </rect>
       </property>
@@ -1985,6 +1834,10 @@
         <layout class="QHBoxLayout" name="horizontalLayout_4">
          <item>
           <widget class="QLabel" name="Teta1_inverse">
+           <property name="styleSheet">
+            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;
+</string>
+           </property>
            <property name="text">
             <string>θ1:  </string>
            </property>
@@ -1992,6 +1845,9 @@
          </item>
          <item>
           <widget class="QLabel" name="teta1_inverse_value">
+           <property name="styleSheet">
+            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+           </property>
            <property name="text">
             <string>0</string>
            </property>
@@ -2003,6 +1859,9 @@
         <layout class="QHBoxLayout" name="horizontalLayout_6">
          <item>
           <widget class="QLabel" name="teta2_inverse">
+           <property name="styleSheet">
+            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+           </property>
            <property name="text">
             <string>θ2:  </string>
            </property>
@@ -2010,6 +1869,9 @@
          </item>
          <item>
           <widget class="QLabel" name="teta2_inverse_value">
+           <property name="styleSheet">
+            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+           </property>
            <property name="text">
             <string>0</string>
            </property>
@@ -2021,6 +1883,9 @@
         <layout class="QHBoxLayout" name="horizontalLayout_5">
          <item>
           <widget class="QLabel" name="teta3_inverse">
+           <property name="styleSheet">
+            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+           </property>
            <property name="text">
             <string>θ3:  </string>
            </property>
@@ -2028,6 +1893,9 @@
          </item>
          <item>
           <widget class="QLabel" name="teta3_inverse_value">
+           <property name="styleSheet">
+            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+           </property>
            <property name="text">
             <string>0</string>
            </property>
@@ -2039,6 +1907,10 @@
         <layout class="QHBoxLayout" name="horizontalLayout_8">
          <item>
           <widget class="QLabel" name="teta4_inverse">
+           <property name="styleSheet">
+            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;
+</string>
+           </property>
            <property name="text">
             <string>θ4:  </string>
            </property>
@@ -2046,6 +1918,9 @@
          </item>
          <item>
           <widget class="QLabel" name="teta4_inverse_value">
+           <property name="styleSheet">
+            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+           </property>
            <property name="text">
             <string>0</string>
            </property>
@@ -2057,6 +1932,9 @@
         <layout class="QHBoxLayout" name="horizontalLayout_7">
          <item>
           <widget class="QLabel" name="teta5_inverse">
+           <property name="styleSheet">
+            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+           </property>
            <property name="text">
             <string>θ5:  </string>
            </property>
@@ -2064,6 +1942,9 @@
          </item>
          <item>
           <widget class="QLabel" name="teta5_invers_value">
+           <property name="styleSheet">
+            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+           </property>
            <property name="text">
             <string>0</string>
            </property>
@@ -2073,27 +1954,11 @@
        </item>
       </layout>
      </widget>
-     <widget class="QLabel" name="label">
-      <property name="geometry">
-       <rect>
-        <x>200</x>
-        <y>310</y>
-        <width>291</width>
-        <height>151</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">url:(/image/Logo-Uni-Tor-Vergata.png_96x96.png)</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
      <widget class="QPushButton" name="PulsanteInvioPAgina_Inverse">
       <property name="geometry">
        <rect>
-        <x>620</x>
-        <y>130</y>
+        <x>760</x>
+        <y>170</y>
         <width>131</width>
         <height>41</height>
        </rect>
@@ -2105,6 +1970,113 @@
        <string>ENTER</string>
       </property>
      </widget>
+     <widget class="QRadioButton" name="Gomitoalto">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>140</y>
+        <width>144</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Gomito alto</string>
+      </property>
+     </widget>
+     <widget class="QRadioButton" name="Gomitobasso">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>170</y>
+        <width>121</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+      </property>
+      <property name="text">
+       <string>Gomito basso</string>
+      </property>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>30</y>
+        <width>121</width>
+        <height>261</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <item>
+          <widget class="QLabel" name="Xdes">
+           <property name="styleSheet">
+            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Xdes:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="Xdes_spin_Box">
+           <property name="styleSheet">
+            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <widget class="QLabel" name="Ydes">
+           <property name="styleSheet">
+            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Ydes:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="Ydes_spin_box">
+           <property name="styleSheet">
+            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <widget class="QLabel" name="Zdes">
+           <property name="styleSheet">
+            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+           </property>
+           <property name="text">
+            <string>Zdes:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="Zdes_spin_Box">
+           <property name="styleSheet">
+            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
     </widget>
     <widget class="QWidget" name="Setup">
      <attribute name="title">
@@ -2115,30 +2087,14 @@
    <widget class="QLabel" name="image">
     <property name="geometry">
      <rect>
-      <x>940</x>
-      <y>50</y>
-      <width>121</width>
+      <x>980</x>
+      <y>20</y>
+      <width>141</width>
       <height>141</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">url:(/newPrefix/Logo-Uni-Tor-Vergata.png_48x48.png)</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label_39">
-    <property name="geometry">
-     <rect>
-      <x>1000</x>
-      <y>40</y>
-      <width>121</width>
-      <height>151</height>
-     </rect>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">image: url(:/image/Logo-Uni-Tor-Vergata.png_96x96.png);</string>
+     <string notr="true">image: url(:/image/Logo-Uni-Tor-Vergata.png_256x256.png);</string>
     </property>
     <property name="text">
      <string/>
@@ -2157,6 +2113,8 @@
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
- <resources/>
+ <resources>
+  <include location="logo.qrc"/>
+ </resources>
  <connections/>
 </ui>
