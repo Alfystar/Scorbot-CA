@@ -185,7 +185,7 @@ class MyUiQt (Ui_UiClass):
         #self.inVal[1] = self.Ydes_spin_Box.value()
         self.inVal[1] = self.Zdes_spin_Box.value()
 
-        # operazioni matematiche per ricavare i theta
+        # operazioni matematiche per ricavare i theta.
         l1=3
         l2= 22
         l3=22
