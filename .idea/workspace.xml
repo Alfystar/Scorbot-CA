@@ -9,10 +9,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d63bfc8-c3db-4d44-bd04-cb7890be4532" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/pyUi/ScorbotUI/myUiClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyUi/ScorbotUI/myUiClass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/qtfiles/UiClass.ui" beforeDir="false" afterPath="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/qtfiles/UiClass.ui" afterDir="false" />
-    </list>
+    <list default="true" id="9d63bfc8-c3db-4d44-bd04-cb7890be4532" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,8 +28,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/myUiClass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="728">
-              <caret line="201" column="8" selection-start-line="201" selection-start-column="8" selection-end-line="201" selection-end-column="8" />
+            <state relative-caret-position="2895">
+              <caret line="201" selection-start-line="201" selection-end-line="201" />
             </state>
           </provider>
         </entry>
@@ -345,7 +342,7 @@
       <workItem from="1556100085968" duration="610000" />
       <workItem from="1556101546510" duration="6541000" />
       <workItem from="1556187997325" duration="278000" />
-      <workItem from="1556203818568" duration="2335000" />
+      <workItem from="1556203818568" duration="2430000" />
     </task>
     <task id="LOCAL-00001" summary="Home Scorebot&#10;Pack Transfert standardize">
       <created>1553794397754</created>
@@ -473,11 +470,25 @@
       <option name="project" value="LOCAL" />
       <updated>1556205214444</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Problema logo risolto&#10;Problema Ydes risolto&#10;Problema import vari risolto&#10;inizio scrittura formule martinelli">
+      <created>1556207119769</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1556207119769</updated>
+    </task>
+    <task id="LOCAL-00020" summary="Problema logo risolto&#10;Problema Ydes risolto&#10;Problema import vari risolto&#10;inizio scrittura formule martinelli">
+      <created>1556207156177</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1556207156177</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39372000" />
+    <option name="totallyTimeSpent" value="39467000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -490,14 +501,13 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1280" height="714" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22859451" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22859451" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32897863" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4964789" visible="true" weight="0.27974278" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4964789" weight="0.27974278" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39904988" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -594,13 +604,14 @@
     <MESSAGE value="Modifica:&#10;- file.ui &#10;- UiClass.py&#10;-myUiClass.py" />
     <MESSAGE value="Problema logo risolta&#10;Problema Ydes risolto&#10;Problema import vari risolto" />
     <MESSAGE value="Problema logo risolto&#10;Problema Ydes risolto&#10;Problema import vari risolto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Problema logo risolto&#10;Problema Ydes risolto&#10;Problema import vari risolto" />
+    <MESSAGE value="Problema logo risolto&#10;Problema Ydes risolto&#10;Problema import vari risolto&#10;inizio scrittura formule martinelli" />
+    <option name="LAST_COMMIT_MESSAGE" value="Problema logo risolto&#10;Problema Ydes risolto&#10;Problema import vari risolto&#10;inizio scrittura formule martinelli" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Scorbot_CA$mainUi.coverage" NAME="mainUi Coverage Results" MODIFIED="1556207076573" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/ScorbotUI" />
+    <SUITE FILE_PATH="coverage/Scorbot_CA$mainUi.coverage" NAME="mainUi Coverage Results" MODIFIED="1556209981637" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/ScorbotUI" />
     <SUITE FILE_PATH="coverage/Scorbot_CA$uiClass.coverage" NAME="uiClass Coverage Results" MODIFIED="1556013857770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/qtfiles" />
     <SUITE FILE_PATH="coverage/Scorbot_CA$UiClass.coverage" NAME="UiClass Coverage Results" MODIFIED="1556204810380" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib" />
-    <SUITE FILE_PATH="coverage/Scorbot_CA$myUiClass.coverage" NAME="myUiClass Coverage Results" MODIFIED="1556207072108" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/ScorbotUI" />
+    <SUITE FILE_PATH="coverage/Scorbot_CA$myUiClass.coverage" NAME="myUiClass Coverage Results" MODIFIED="1556209975451" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/ScorbotUI" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../Scorebot_code/.gitignore" />
@@ -699,8 +710,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/myUiClass.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="728">
-          <caret line="201" column="8" selection-start-line="201" selection-start-column="8" selection-end-line="201" selection-end-column="8" />
+        <state relative-caret-position="2895">
+          <caret line="201" selection-start-line="201" selection-end-line="201" />
         </state>
       </provider>
     </entry>
