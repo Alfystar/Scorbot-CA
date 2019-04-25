@@ -1,4 +1,6 @@
 import math
+
+
 from typing import List
 
 from PyQt5 import QtCore, QtGui, QtWidgets
@@ -110,7 +112,7 @@ class MyUiQt (Ui_UiClass):
         self.encoder1[5] = self.riferimento1_6_direct.value()
 
 
-       #funzione compini messaggio che manda la lista dei valori degli encoder a Francesco
+       #funzione compoini messaggio che manda la lista dei valori degli encoder a Francesco
 
         #invia_e(self.encoder)    # funzione da passare a Francesco
         #invia_imp(lista)         # lista impostazioni della pagina di setup
@@ -234,7 +236,3 @@ class MyUiQt (Ui_UiClass):
         self.teta3_inverse_value.setText(str(theta3))
         self.teta4_inverse_value.setText(str(theta4))
         self.teta5_invers_value.setText(str(theta5)) # dà lo stesso errore di Ydes quindi  per far si che il programma giri impostarlo come commento
-
-
-
-
