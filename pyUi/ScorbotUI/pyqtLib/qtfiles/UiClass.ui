@@ -69,7 +69,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <property name="usesScrollButtons">
      <bool>false</bool>
@@ -972,7 +972,7 @@
        <rect>
         <x>530</x>
         <y>50</y>
-        <width>141</width>
+        <width>111</width>
         <height>281</height>
        </rect>
       </property>
@@ -1801,12 +1801,12 @@
       <property name="geometry">
        <rect>
         <x>650</x>
-        <y>20</y>
-        <width>300</width>
-        <height>30</height>
+        <y>50</y>
+        <width>71</width>
+        <height>136</height>
        </rect>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout_43">
+      <layout class="QVBoxLayout" name="verticalLayout">
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout_10">
          <item>
@@ -1824,43 +1824,24 @@
          <item>
           <widget class="QSpinBox" name="alphaValue"/>
          </item>
-         <item>
-          <layout class="QHBoxLayout" name="horizontalLayout_11">
-           <item>
-            <widget class="QLabel" name="beta_4">
-             <property name="font">
-              <font>
-               <pointsize>14</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>β:</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-            <widget class="QSpinBox" name="betaValue"/>
-           </item>
-          </layout>
-         </item>
         </layout>
        </item>
        <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_13">
+        <layout class="QHBoxLayout" name="horizontalLayout_11">
          <item>
-          <widget class="QLabel" name="delta_3">
+          <widget class="QLabel" name="beta_4">
            <property name="font">
             <font>
              <pointsize>14</pointsize>
             </font>
            </property>
            <property name="text">
-            <string>δ:</string>
+            <string>β:</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="deltaValue"/>
+          <widget class="QSpinBox" name="betaValue"/>
          </item>
         </layout>
        </item>
@@ -1880,6 +1861,25 @@
          </item>
          <item>
           <widget class="QSpinBox" name="gammaValue"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_13">
+         <item>
+          <widget class="QLabel" name="delta_3">
+           <property name="font">
+            <font>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>δ:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QSpinBox" name="deltaValue"/>
          </item>
         </layout>
        </item>

@@ -21,6 +21,7 @@ class MyUiQt (Ui_UiClass):
         self.encoder1 = [self.riferimento1_direct.value(), self.riferimento1_2_direct.value(), self.riferimento1_3_direct.value(),self.riferimento1_4_direct.value(), self.riferimento1_5_direct.value(), self.riferimento1_6_direct.value()]
         self.setup = [int(self.passi1_direct.text()),int(self.passi1_2_direct.text()), int(self.passi1_3_direct.text()), int(self.passi1_4_direct.text()), int(self.passi1_5_direct.text()), int(self.passi1_6_direct.text())]
         self.encr = [int(self.encrease_value1.text()),int(self.encrease_value2.text()), int(self.encrease_value3.text()), int(self.encrease_value4.text()), int(self.encrease_value5.text()), int(self.encrease_value6.text()) ]
+        self.param= [self.alphaValue.value(),self.betaValue.value(),self.gammaValue.value(),self.deltaValue.value()]
 
         """Seconda pagina"""
         #lista che contiene i pulsanti della seconda pagina
@@ -68,6 +69,17 @@ class MyUiQt (Ui_UiClass):
         self.AngleDir_5.setMinimum(-20000)
         self.AngleDir_6.setMinimum(-20000)
 
+        self.alphaValue.setMaximum(10) #valori massimi e minimi dei parametri impostati a caso, impostarli in modo corretto
+        self.betaValue.setMaximum(10)
+        self.gammaValue.setMaximum(10)
+        self.deltaValue.setMaximum(10)
+
+        self.alphaValue.setMinimum(0)
+        self.betaValue.setMinimum(0)
+        self.gammaValue.setMinimum(0)
+        self.deltaValue.setMinimum(0)
+
+
         """Terza pagina"""
         #definizione valori massimi e minimi
         self.Xdes_spin_Box.setMaximum(2000)
@@ -83,6 +95,7 @@ class MyUiQt (Ui_UiClass):
         # premendo invio, metto nella lista i passi encoder da aggiungere  quelli attuali
         self.Pulsante_invio_pagina_Basics.clicked.connect(self.encoderValue)  #prima pagina
         self.PulsanteInvioPAginaAdvance.clicked.connect((self.angleValue))
+        self.PulsanteInvioPAginaAdvance.clicked.connect((self.parametersValue))
         self.PulsanteInvioPAgina_Inverse.clicked.connect((self.inverseValue))
 
 
@@ -179,10 +192,19 @@ class MyUiQt (Ui_UiClass):
         self.theta[5] = int(self.tetaDir_6value.text())
 
 
+    def parametersValue(self):
+
+        self.param[0]= self.alphaValue.value()
+        self.param[1] = self.betaValue.value()
+        self.param[2] = self.gammaValue.value()
+        self.param[3] = self.deltaValue.value()
+
+
+
     def inverseValue(self):
 
         self.inVal[0]=self.Xdes_spin_Box.value()
-        self.inVal[1] = self.Ydes_spin_Box.value()
+        self.inVal[1] = self.Ydes_spin_box.value()
         self.inVal[1] = self.Zdes_spin_Box.value()
 
         # operazioni matematiche per ricavare i theta.
@@ -192,9 +214,10 @@ class MyUiQt (Ui_UiClass):
         l3=22
         d1=11
         betad=1
+        omegad=10
         theta1 = math.atan2(self.inVal[1], self.inVal[0])
-        A1 = self.inVal[0] * math.cos(theta1) + self.inVal[1] * math.sin(theta1) - l1;
-        A2 = d1 - self.inVal[2];  #  per far si che il programma giri mettere inVal[1]
+        A1 = self.inVal[0] * math.cos(theta1) + self.inVal[1] * math.sin(theta1) - l1
+        A2 = d1 - self.inVal[2]  #  per far si che il programma giri mettere inVal[1]
         A3 = (A1 * A1) + (A2 * A2) - (l2 * l2) - (l3 * l3)
         A4 = 2 * l2 * l3
         A5 = A3 / A4
@@ -203,7 +226,7 @@ class MyUiQt (Ui_UiClass):
         A7 = (l2 + l3 * math.cos(theta3)) * A1 + l3 * math.sin(theta3) * A2
         theta2 = math.atan2(A6, A7)
         theta4 = betad - theta2 - theta3 - 90
-        theta5=betad
+        theta5=omegad
 
 
         self.teta1_inverse_value.setText(str(theta1))
