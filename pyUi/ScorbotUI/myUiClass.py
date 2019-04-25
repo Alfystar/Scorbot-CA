@@ -30,7 +30,7 @@ class MyUiQt (Ui_UiClass):
 
         """Terza pagina"""
         # manca Ydes nella lista perché dà errore
-        self.inVal=[self.Xdes_spin_Box.value(),self.Zdes_spin_Box.value()] #self.Ydes_spin_Box.value()
+        self.inVal=[self.Xdes_spin_Box.value(),self.Ydes_spin_box.value(),self.Zdes_spin_Box.value()] #
 
         """LISTA Setup"""
 
@@ -75,7 +75,7 @@ class MyUiQt (Ui_UiClass):
         self.Zdes_spin_Box.setMaximum(2000)
 
         self.Xdes_spin_Box.setMinimum(-2000)
-#        self.Ydes_spin_Box.setMinimum(-2000)  # dà errore quindi per far si che il programma giri impostarlo come commento
+        self.Ydes_spin_box.setMinimum(-2000)  # dà errore quindi per far si che il programma giri impostarlo come commento
         self.Zdes_spin_Box.setMinimum(-2000)
 
 
@@ -182,10 +182,11 @@ class MyUiQt (Ui_UiClass):
     def inverseValue(self):
 
         self.inVal[0]=self.Xdes_spin_Box.value()
-        #self.inVal[1] = self.Ydes_spin_Box.value()
+        self.inVal[1] = self.Ydes_spin_Box.value()
         self.inVal[1] = self.Zdes_spin_Box.value()
 
         # operazioni matematiche per ricavare i theta.
+        # l1, l2, l3, d1 e betad vanno misurati ed impostati
         l1=3
         l2= 22
         l3=22
@@ -209,7 +210,7 @@ class MyUiQt (Ui_UiClass):
         self.teta2_inverse_value.setText(str(theta2))
         self.teta3_inverse_value.setText(str(theta3))
         self.teta4_inverse_value.setText(str(theta4))
-        self.teta5_inverse_value.setText(str(theta5)) # dà lo stesso errore di Ydes quindi  per far si che il programma giri impostarlo come commento
+        self.teta5_invers_value.setText(str(theta5)) # dà lo stesso errore di Ydes quindi  per far si che il programma giri impostarlo come commento
 
 
 

@@ -7,7 +7,7 @@
 # WARNING! All changes made in this file will be lost!
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+import logo
 
 class Ui_UiClass(object):
     def setupUi(self, UiClass):
@@ -517,7 +517,7 @@ class Ui_UiClass(object):
         self.PulsanteInvioPAginaAdvance.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.0246305, y1:0.602273, x2:1, y2:0, stop:0 rgba(0, 139, 0, 255), stop:0.655172 rgba(255, 255, 255, 255));")
         self.PulsanteInvioPAginaAdvance.setObjectName("PulsanteInvioPAginaAdvance")
         self.layoutWidget3 = QtWidgets.QWidget(self.Direct_Angular)
-        self.layoutWidget3.setGeometry(QtCore.QRect(530, 50, 141, 281))
+        self.layoutWidget3.setGeometry(QtCore.QRect(530, 50, 111, 281))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.layoutWidget3.setFont(font)
@@ -980,11 +980,11 @@ class Ui_UiClass(object):
         self.image_2.setText("")
         self.image_2.setObjectName("image_2")
         self.widget = QtWidgets.QWidget(self.Direct_Angular)
-        self.widget.setGeometry(QtCore.QRect(650, 20, 300, 30))
+        self.widget.setGeometry(QtCore.QRect(650, 50, 71, 136))
         self.widget.setObjectName("widget")
-        self.horizontalLayout_43 = QtWidgets.QHBoxLayout(self.widget)
-        self.horizontalLayout_43.setContentsMargins(0, 0, 0, 0)
-        self.horizontalLayout_43.setObjectName("horizontalLayout_43")
+        self.verticalLayout = QtWidgets.QVBoxLayout(self.widget)
+        self.verticalLayout.setContentsMargins(0, 0, 0, 0)
+        self.verticalLayout.setObjectName("verticalLayout")
         self.horizontalLayout_10 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_10.setObjectName("horizontalLayout_10")
         self.alpha_6 = QtWidgets.QLabel(self.widget)
@@ -996,6 +996,7 @@ class Ui_UiClass(object):
         self.alphaValue = QtWidgets.QSpinBox(self.widget)
         self.alphaValue.setObjectName("alphaValue")
         self.horizontalLayout_10.addWidget(self.alphaValue)
+        self.verticalLayout.addLayout(self.horizontalLayout_10)
         self.horizontalLayout_11 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_11.setObjectName("horizontalLayout_11")
         self.beta_4 = QtWidgets.QLabel(self.widget)
@@ -1007,20 +1008,7 @@ class Ui_UiClass(object):
         self.betaValue = QtWidgets.QSpinBox(self.widget)
         self.betaValue.setObjectName("betaValue")
         self.horizontalLayout_11.addWidget(self.betaValue)
-        self.horizontalLayout_10.addLayout(self.horizontalLayout_11)
-        self.horizontalLayout_43.addLayout(self.horizontalLayout_10)
-        self.horizontalLayout_13 = QtWidgets.QHBoxLayout()
-        self.horizontalLayout_13.setObjectName("horizontalLayout_13")
-        self.delta_3 = QtWidgets.QLabel(self.widget)
-        font = QtGui.QFont()
-        font.setPointSize(14)
-        self.delta_3.setFont(font)
-        self.delta_3.setObjectName("delta_3")
-        self.horizontalLayout_13.addWidget(self.delta_3)
-        self.deltaValue = QtWidgets.QSpinBox(self.widget)
-        self.deltaValue.setObjectName("deltaValue")
-        self.horizontalLayout_13.addWidget(self.deltaValue)
-        self.horizontalLayout_43.addLayout(self.horizontalLayout_13)
+        self.verticalLayout.addLayout(self.horizontalLayout_11)
         self.horizontalLayout_12 = QtWidgets.QHBoxLayout()
         self.horizontalLayout_12.setObjectName("horizontalLayout_12")
         self.gamma_3 = QtWidgets.QLabel(self.widget)
@@ -1032,7 +1020,19 @@ class Ui_UiClass(object):
         self.gammaValue = QtWidgets.QSpinBox(self.widget)
         self.gammaValue.setObjectName("gammaValue")
         self.horizontalLayout_12.addWidget(self.gammaValue)
-        self.horizontalLayout_43.addLayout(self.horizontalLayout_12)
+        self.verticalLayout.addLayout(self.horizontalLayout_12)
+        self.horizontalLayout_13 = QtWidgets.QHBoxLayout()
+        self.horizontalLayout_13.setObjectName("horizontalLayout_13")
+        self.delta_3 = QtWidgets.QLabel(self.widget)
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.delta_3.setFont(font)
+        self.delta_3.setObjectName("delta_3")
+        self.horizontalLayout_13.addWidget(self.delta_3)
+        self.deltaValue = QtWidgets.QSpinBox(self.widget)
+        self.deltaValue.setObjectName("deltaValue")
+        self.horizontalLayout_13.addWidget(self.deltaValue)
+        self.verticalLayout.addLayout(self.horizontalLayout_13)
         self.tabWidget.addTab(self.Direct_Angular, "")
         self.Inverse = QtWidgets.QWidget()
         self.Inverse.setObjectName("Inverse")
@@ -1298,7 +1298,7 @@ class Ui_UiClass(object):
         UiClass.setStatusBar(self.statusbar)
 
         self.retranslateUi(UiClass)
-        self.tabWidget.setCurrentIndex(0)
+        self.tabWidget.setCurrentIndex(1)
         QtCore.QMetaObject.connectSlotsByName(UiClass)
 
     def retranslateUi(self, UiClass):
@@ -1398,8 +1398,8 @@ class Ui_UiClass(object):
         self.encrease_value6_2.setText(_translate("UiClass", "0"))
         self.alpha_6.setText(_translate("UiClass", "α:"))
         self.beta_4.setText(_translate("UiClass", "β:"))
-        self.delta_3.setText(_translate("UiClass", "δ:"))
         self.gamma_3.setText(_translate("UiClass", "γ:"))
+        self.delta_3.setText(_translate("UiClass", "δ:"))
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.Direct_Angular), _translate("UiClass", "Direct  AngularPosition"))
         self.Teta1_inverse.setText(_translate("UiClass", "θ1:  "))
         self.teta1_inverse_value.setText(_translate("UiClass", "0"))
@@ -1421,4 +1421,14 @@ class Ui_UiClass(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.Setup), _translate("UiClass", "Setup"))
 
 
-# import logo_rc
+#import logo
+
+
+if __name__ == "__main__":
+    import sys
+    app = QtWidgets.QApplication(sys.argv)
+    UiClass = QtWidgets.QMainWindow()
+    ui = Ui_UiClass()
+    ui.setupUi(UiClass)
+    UiClass.show()
+    sys.exit(app.exec_())
