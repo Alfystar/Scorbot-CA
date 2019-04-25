@@ -128,7 +128,7 @@ class MyUiQt (Ui_UiClass):
 
 
 
-        encrease = []  #la variabile encrease mi permette di stampare l'incremento effettivo di ogni encoder
+        encrease = []  # la variabile encrease mi permette di stampare l'incremento effettivo di ogni encoder
 
         encrease.append(self.encoder1[0] - self.setup[0])
         encrease.append(self.encoder1[1] - self.setup[1])
