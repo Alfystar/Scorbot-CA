@@ -1474,7 +1474,7 @@ class Ui_UiClass(object):
         UiClass.setStatusBar(self.statusbar)
 
         self.retranslateUi(UiClass)
-        self.o.setCurrentIndex(1)
+        self.o.setCurrentIndex(0)
         QtCore.QMetaObject.connectSlotsByName(UiClass)
 
     def retranslateUi(self, UiClass):
@@ -1617,4 +1617,5 @@ class Ui_UiClass(object):
         self.o.setTabText(self.o.indexOf(self.Setup), _translate("UiClass", "Setup"))
 
 
-#import logo_rc
+import logo
+
