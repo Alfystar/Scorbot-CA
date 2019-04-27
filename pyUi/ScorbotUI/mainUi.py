@@ -1,11 +1,11 @@
 import sys
+import logo
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 from myUiClass import MyUiQt
 
 
 if __name__ == '__main__':
-
 
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()

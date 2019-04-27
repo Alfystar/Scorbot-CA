@@ -4,6 +4,7 @@ extern L298N *mot[nMot];
 #define fr 300      //free running
 #define hs 350      //hard stop
 #define ss 400      //soft stop
+#define ig 450      //ignore
 
 void excutePack(SPIPACK *p) {
 	switch (p->type) {
@@ -20,6 +21,8 @@ void excutePack(SPIPACK *p) {
 				break;
 			case ss:
 				mot[cMot1 + i]->soft_stop(timeOut);
+				break;
+			case ig:
 				break;
 			default:
 				mot[cMot1 + i]->drive_motor(read, timeOut);

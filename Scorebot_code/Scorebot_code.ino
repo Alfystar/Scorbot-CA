@@ -72,21 +72,23 @@ void loop() {
 unsigned long sanityTime = 0;
 void sanityChek(int wait) {
 	if (millis() > sanityTime + wait) {
-		if (msRead())	//se !=0 uno degli switch è premuto
-		{
-			//todo: emergenci stop, sono a fine corsa
-		}
+		// Scopo della parte è limitare il verso degli encoder per evitare di sbattere, ma serve sapere
+		// Con quale segno di speed crescono gli encoder, bisogna modificare la classe L298N, e far bloccare lì
+		// i pwm che non vanno. Da fare in seguito
+		/*
 		for (byte i = 0; i < nMot; i++) {
-			if (sets.maxEn[i] > getEn(i) || sets.minEn[i] < getEn(i))//se vero, sono oltre limite (i negativi non posono esserci essendo lo 0 a msRead[al massimo -1/-2 ma è rumore])
+			if (getEn(i) >= sets.maxEn[i] || getEn(i) <= sets.minEn[i])	//se vero, sono oltre limite (i negativi non posono esserci essendo lo 0 a msRead[al massimo -1/-2 ma è rumore])
 					{
-				//todo: emergenci stop, sono a fine corsa
+				Serial.print("Mot");
+				Serial.print(i + 1);
+				Serial.println(" Oltre Limite Encoder");
+				mot[i]->reversDir();
 			}
-		}
-
+		}*/
 		for (byte i = 0; i < nMot; i++) {
 			if (sets.maxCurrMed[i] > getSumMot(i)) //se vero, sono oltre limite
 					{
-				//todo: emergenci stop, CI SONO PROBLEMI CON LE CORRENTI
+				mot[i]->freeRun();
 			}
 		}
 		sanityTime = millis();

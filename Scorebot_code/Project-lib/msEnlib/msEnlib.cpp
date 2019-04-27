@@ -55,14 +55,15 @@ void updateStepEn() {
 		if (circular_buf_getLastOne(circularBuf, (uint16_t *) &oldEn))
 			break;	//at start , there are only one value, no reading
 		circular_buf_get(circularBuf, (uint16_t *) &newEn);
-		/*
+/*
 		 Serial.print("old=");
 		 Serial.print(oldEn,BIN);
 		 Serial.print(" new=");
 		 Serial.println(newEn,BIN);
-		 */
+*/
 		calcStep(oldEn, newEn);
 	}
+	//Serial.println("END");
 }
 
 //VARIABILI PRIVATE DI calcStep

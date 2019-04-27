@@ -216,6 +216,24 @@ SPIPACK *SpiSend::pSetPWM(setPWMSend *pwm)
     this->sendPack(p);
     return p;
 }
+void fillmot(setPWMSend * pack,int mVal,int mNum)
+{
+    if(mVal==fr || mVal==hs || mVal==ss || mVal==ig || abs(mVal)<255)
+         pack->vel[mNum]=mVal;
+     else
+         pack->vel[mNum]=ig;
+}
+
+setPWMSend *SpiSend::fillPWMPACK(setPWMSend * pack,int m1,int m2,int m3,int m4,int m5,int m6){
+   fillmot(pack,m1,cMot1);
+   fillmot(pack,m2,cMot2);
+   fillmot(pack,m3,cMot3);
+   fillmot(pack,m4,cMot4);
+   fillmot(pack,m5,cMot5);
+   fillmot(pack,m6,cMot6);
+   return pack;
+}
+
 
 SPIPACK *SpiSend::pGetCurrent()
 {

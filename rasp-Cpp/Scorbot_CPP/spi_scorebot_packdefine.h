@@ -1,6 +1,12 @@
 #ifndef SPI_SCOREBOT_PACKDEFINE
 #define SPI_SCOREBOT_PACKDEFINE
 
+#define fr 300 //free running
+#define hs 350 //hard stop
+#define ss 400 //soft stop
+#define ig 450 //ignore
+
+
 #define nMot 6
 
 typedef struct settingsBoard_ {
