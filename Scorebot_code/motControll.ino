@@ -92,8 +92,8 @@ void homeMot(byte motN, signed char stDir) {
 		updateStepEn();
 		//Sbattuto a bordo pista, devo andare nel senso opposto per trovare la Home
 		if ((millis() > time + waitTime)) {
-			Serial.print("\t-- DELTA: ");
-			Serial.println(abs(getEn(motN) - oldEn));
+			//Serial.print("\t-- DELTA: ");
+			//Serial.println(abs(getEn(motN) - oldEn));
 			if (abs((getEn(motN) - oldEn)) < 3) {
 				stDir *= -1;
 				mot[motN]->drive_motor(stDir * searchVel);
