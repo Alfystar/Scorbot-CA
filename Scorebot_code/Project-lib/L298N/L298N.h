@@ -32,7 +32,7 @@ public:
 	void freeRun();
 private:
 	byte in1, in2, pwm, state;
-	bool knowHome;
+	//bool knowHome;
 	int speed;
 	int delay_time;
 	unsigned long time;
