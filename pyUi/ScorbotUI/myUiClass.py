@@ -32,8 +32,7 @@ class MyUiQt (Ui_UiClass):
         self.encr1=[int(self.encrease_value1_2.text()),int(self.encrease_value2_2.text()),int(self.encrease_value3_2.text()),int(self.encrease_value4_2.text()),int(self.encrease_value5_2.text()),int(self.encrease_value6_2.text())]
 
         """Terza pagina"""
-        # manca Ydes nella lista perché dà errore
-        self.inVal=[self.Xdes_spin_Box.value(),self.Ydes_spin_box.value(),self.Zdes_spin_Box.value()] #
+        self.inVal=[self.Xdes_spin_Box.value(),self.Ydes_spin_box.value(),self.Zdes_spin_Box.value()]
 
         """LISTA Setup"""
 
@@ -89,7 +88,7 @@ class MyUiQt (Ui_UiClass):
         self.Zdes_spin_Box.setMaximum(2000)
 
         self.Xdes_spin_Box.setMinimum(-2000)
-        self.Ydes_spin_box.setMinimum(-2000)  # dà errore quindi per far si che il programma giri impostarlo come commento
+        self.Ydes_spin_box.setMinimum(-2000)
         self.Zdes_spin_Box.setMinimum(-2000)
 
 
@@ -156,6 +155,7 @@ class MyUiQt (Ui_UiClass):
 
 
     def angleValue(self):
+
         self.angle[0] = self.AngleDir_1.value()
         self.angle[1] = self.AngleDir_2.value()
         self.angle[2] = self.AngleDir_3.value()
@@ -194,6 +194,8 @@ class MyUiQt (Ui_UiClass):
         self.theta[5] = int(self.tetaDir_6value.text())
 
 
+
+
     def parametersValue(self):
 
         self.param[0]= self.alphaValue.value()
@@ -201,38 +203,62 @@ class MyUiQt (Ui_UiClass):
         self.param[2] = self.gammaValue.value()
         self.param[3] = self.deltaValue.value()
 
+        self.passi1_direct.setText(str(-self.angle[0]/self.param[0]))
+        self.passi1_2_direct.setText(str(-self.angle[1]/self.param[1]))
+        self.passi1_3_direct.setText(str((self.angle[1]+ self.angle[2])/self.param[1]))
+        self.passi1_4_direct.setText(str(0.5*(self.angle[1]+ self.angle[2]+ self.angle[3])/self.param[2] + self.angle[4]/self.param[3]))
+        self.passi1_5_direct.setText(str(0.5*(self.angle[4]/self.param[3]-(self.angle[1]+self.angle[2]+self.angle[3])/self.param[2])))
 
 
     def inverseValue(self):
 
         self.inVal[0]=self.Xdes_spin_Box.value()
         self.inVal[1] = self.Ydes_spin_box.value()
-        self.inVal[1] = self.Zdes_spin_Box.value()
+        self.inVal[2] = self.Zdes_spin_Box.value()
 
         # operazioni matematiche per ricavare i theta.
         # l1, l2, l3, d1 e betad vanno misurati ed impostati
-        l1=3
-        l2= 22
-        l3=22
-        d1=11
-        betad=1
-        omegad=10
-        theta1 = math.atan2(self.inVal[1], self.inVal[0])
-        A1 = self.inVal[0] * math.cos(theta1) + self.inVal[1] * math.sin(theta1) - l1
-        A2 = d1 - self.inVal[2]  #  per far si che il programma giri mettere inVal[1]
-        A3 = (A1 * A1) + (A2 * A2) - (l2 * l2) - (l3 * l3)
+        l1=16
+        l2= 220
+        l3=220
+        d1=340
+        d5=151
+        betad=45
+        omegad=0
+
+
+        theta1 = math.degrees(math.atan2(self.inVal[1], self.inVal[0]))
+        A1 = self.inVal[0] * math.degrees(math.cos(theta1)) + self.inVal[1] * math.degrees(math.sin(theta1)) -d5 * math.degrees(math.cos(betad)) - l1
+        A2 = d1 - self.inVal[2] -d5*math.degrees(math.sin(betad))
+        A3 = (A1**2) + (A2**2) - (l2**2) - (l3**2)
         A4 = 2 * l2 * l3
         A5 = A3 / A4
-        theta3 = math.acos(A5)
+        if abs(A5)>1:
+            print("Ilaria lo deve ancora scrivere!")
+
+        theta3 = math.degrees(math.acos(A5))
         A6 = l2 + l3 * math.cos(theta3) * A2 - l3 * math.sin(theta3) * A1
         A7 = (l2 + l3 * math.cos(theta3)) * A1 + l3 * math.sin(theta3) * A2
-        theta2 = math.atan2(A6, A7)
-        theta4 = betad - theta2 - theta3 - 90
+        theta2 = math.degrees(math.atan2(A6, A7))
+        theta4 = math.degrees(betad - theta2 - theta3 - 90)
         theta5=omegad
 
+        if self.Gomitobasso.isChecked() == True:
+            theta3=math.degrees( -1* abs(theta3))
+            A7 = (l2 + l3 * math.cos(theta3)) * A1 + l3 * math.sin(theta3) * A2
+            A6 = l2 + l3 * math.cos(theta3) * A2 - l3 * math.sin(theta3) * A1
+            theta2 = math.degrees(math.atan2(A6, A7))
+            theta4 = math.degrees(betad - theta2 - theta3 - 90)
+        else:
+            theta3 = abs(math.degrees(math.acos(A5)))
+            A6 = l2 + l3 * math.cos(theta3) * A2 - l3 * math.sin(theta3) * A1
+            A7 = (l2 + l3 * math.cos(theta3)) * A1 + l3 * math.sin(theta3) * A2
+            theta2 = math.degrees(math.atan2(A6, A7))
+            theta4 = betad - theta2 - theta3 - 90
+            theta5 = omegad
 
         self.teta1_inverse_value.setText(str(theta1))
         self.teta2_inverse_value.setText(str(theta2))
         self.teta3_inverse_value.setText(str(theta3))
         self.teta4_inverse_value.setText(str(theta4))
-        self.teta5_invers_value.setText(str(theta5)) # dà lo stesso errore di Ydes quindi  per far si che il programma giri impostarlo come commento
+        self.teta5_invers_value.setText(str(theta5))
