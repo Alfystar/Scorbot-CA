@@ -1,6 +1,5 @@
 import math
 
-
 from typing import List
 
 from PyQt5 import QtCore, QtGui, QtWidgets
@@ -20,76 +19,54 @@ class MyUiQt (Ui_UiClass):
 
         """Prima pagina"""
         # la seguente lista contiene tutti i pulsanti Encoder della prima pagina
-        self.encoder1 = [self.riferimento1_direct.value(), self.riferimento1_2_direct.value(), self.riferimento1_3_direct.value(),self.riferimento1_4_direct.value(), self.riferimento1_5_direct.value(), self.riferimento1_6_direct.value()]
-        self.setup = [int(self.passi1_direct.text()),int(self.passi1_2_direct.text()), int(self.passi1_3_direct.text()), int(self.passi1_4_direct.text()), int(self.passi1_5_direct.text()), int(self.passi1_6_direct.text())]
-        self.encr = [int(self.encrease_value1.text()),int(self.encrease_value2.text()), int(self.encrease_value3.text()), int(self.encrease_value4.text()), int(self.encrease_value5.text()), int(self.encrease_value6.text()) ]
-        self.param= [self.alphaValue.value(),self.betaValue.value(),self.gammaValue.value(),self.deltaValue.value()]
+        self.encoder1 = [self.riferimento1_direct, self.riferimento1_2_direct, self.riferimento1_3_direct,self.riferimento1_4_direct, self.riferimento1_5_direct, self.riferimento1_6_direct]
+        self.setup = [self.passi1_direct,self.passi1_2_direct, self.passi1_3_direct, self.passi1_4_direct, self.passi1_5_direct,self.passi1_6_direct]
+        self.encr = [self.encrease_value1,self.encrease_value2, self.encrease_value3, self.encrease_value4,self.encrease_value5,self.encrease_value6]
+        self.param= [self.alphaValue,self.betaValue,self.gammaValue,self.deltaValue]
 
         """Seconda pagina"""
         #lista che contiene i pulsanti della seconda pagina
-        self.angle=[self.AngleDir_1.value(),self.AngleDir_2.value(),self.AngleDir_3.value(),self.AngleDir_4.value(),self.AngleDir_5.value(),self.AngleDir_6.value()]
-        self.theta=[int(self.tetaDir_1value.text()),int(self.tetaDir_2value.text()),int(self.tetaDir_3value.text()),int(self.tetaDir_4value.text()),int(self.tetaDir_5value.text()),int(self.tetaDir_6value.text())]
-        self.encr1=[int(self.encrease_value1_2.text()),int(self.encrease_value2_2.text()),int(self.encrease_value3_2.text()),int(self.encrease_value4_2.text()),int(self.encrease_value5_2.text()),int(self.encrease_value6_2.text())]
+        self.angle=[self.AngleDir_1,self.AngleDir_2,self.AngleDir_3,self.AngleDir_4,self.AngleDir_5,self.AngleDir_6]
+        self.theta=[self.tetaDir_1value,self.tetaDir_2value,self.tetaDir_3value,self.tetaDir_4value,self.tetaDir_5value,self.tetaDir_6value]
+        self.encr1=[self.encrease_value1_2,self.encrease_value2_2,self.encrease_value3_2,self.encrease_value4_2,self.encrease_value5_2,self.encrease_value6_2]
 
         """Terza pagina"""
-        self.inVal=[self.Xdes_spin_Box.value(),self.Ydes_spin_box.value(),self.Zdes_spin_Box.value()]
+        # manca Ydes nella lista perché dà errore
+        self.inVal=[self.Xdes_spin_Box,self.Ydes_spin_box,self.Zdes_spin_Box] #
 
         """LISTA Setup"""
 
         """Prima pagina"""
-
-        self.riferimento1_direct.setMaximum(20000) # questo, e le seccessive 5 righe, fissano i valori massimi
-        self.riferimento1_2_direct.setMaximum(20000) # che posso inserire all'interno degli encoder
-        self.riferimento1_3_direct.setMaximum(20000)
-        self.riferimento1_4_direct.setMaximum(20000)
-        self.riferimento1_5_direct.setMaximum(20000)
-        self.riferimento1_6_direct.setMaximum(20000)
-
-
-
-        self.riferimento1_direct.setMinimum(-20000) # questo, e le seccessive 5 righe, fissano i valori minimi
-        self.riferimento1_2_direct.setMinimum(-20000) # che posso inserire all'interno degli encoder
-        self.riferimento1_3_direct.setMinimum(-20000)
-        self.riferimento1_4_direct.setMinimum(-20000)
-        self.riferimento1_5_direct.setMinimum(-20000)
-        self.riferimento1_6_direct.setMinimum(-20000)
-
+        for i in self.encoder1:
+            i.setMaximum(20000) #il 20000 e' da prendere dalle impostazioni
+        
+        for i in self.encoder1:
+          i.setMinimum(20000) #il 20000 e' da prendere dalle impostazioni
+        
         """Seconda pagina"""
         #definizione valori massimi e minimi
-        self.AngleDir_1.setMaximum(20000)
-        self.AngleDir_2.setMaximum(20000)
-        self.AngleDir_3.setMaximum(20000)
-        self.AngleDir_4.setMaximum(20000)
-        self.AngleDir_5.setMaximum(20000)
-        self.AngleDir_6.setMaximum(20000)
-
-        self.AngleDir_1.setMinimum(-20000)
-        self.AngleDir_2.setMinimum(-20000)
-        self.AngleDir_3.setMinimum(-20000)
-        self.AngleDir_4.setMinimum(-20000)
-        self.AngleDir_5.setMinimum(-20000)
-        self.AngleDir_6.setMinimum(-20000)
-
-        self.alphaValue.setMaximum(10) #valori massimi e minimi dei parametri impostati a caso, impostarli in modo corretto
-        self.betaValue.setMaximum(10)
-        self.gammaValue.setMaximum(10)
-        self.deltaValue.setMaximum(10)
-
-        self.alphaValue.setMinimum(0)
-        self.betaValue.setMinimum(0)
-        self.gammaValue.setMinimum(0)
-        self.deltaValue.setMinimum(0) #setValue(1)
+        for i in self.angle:
+          i.setMaximum(20000) #il 20000 e' da prendere dalle impostazioni
+        
+        for i in self.angle:
+          i.setMinimum(20000) #il 20000 e' da prendere dalle impostazioni
+        
+        for i in self.param:
+          i.setMaximum(20000) #il 20000 e' da prendere dalle impostazioni
+        
+        for i in self.param:
+          i.setMinimum(20000) #il 20000 e' da prendere dalle impostazioni
+        
 
 
         """Terza pagina"""
         #definizione valori massimi e minimi
-        self.Xdes_spin_Box.setMaximum(2000)
-        self.Ydes_spin_box.setMaximum(2000)
-        self.Zdes_spin_Box.setMaximum(2000)
-
-        self.Xdes_spin_Box.setMinimum(-2000)
-        self.Ydes_spin_box.setMinimum(-2000)
-        self.Zdes_spin_Box.setMinimum(-2000)
+        for i in self.inVal:
+          i.setMaximum(20000) #il 20000 e' da prendere dalle impostazioni
+        
+        for i in self.inVal:
+          i.setMinimum(20000) #il 20000 e' da prendere dalle impostazioni
+        
 
 
         """LISTA Eventi"""
@@ -99,63 +76,26 @@ class MyUiQt (Ui_UiClass):
         self.PulsanteInvioPAginaAdvance.clicked.connect((self.parametersValue))
         self.PulsanteInvioPAgina_Inverse.clicked.connect((self.inverseValue))
 
-
-    def encoderValue(self):
-
-
-        self.encoder1[0] = self.riferimento1_direct.value()
-        self.encoder1[1] = self.riferimento1_2_direct.value()
-        self.encoder1[2] = self.riferimento1_3_direct.value()
-        self.encoder1[3] = self.riferimento1_4_direct.value()
-        self.encoder1[4] = self.riferimento1_5_direct.value()
-        self.encoder1[5] = self.riferimento1_6_direct.value()
-
-
-       #funzione compoini messaggio che manda la lista dei valori degli encoder a Francesco
-
-        #invia_e(self.encoder)    # funzione da passare a Francesco
-        #invia_imp(lista)         # lista impostazioni della pagina di setup
-
-
-
-        self.passi1_direct.setText(str(self.encoder1[0]))
-        self.passi1_2_direct.setText(str(self.encoder1[1]))
-        self.passi1_3_direct.setText(str(self.encoder1[2]))
-        self.passi1_4_direct.setText(str(self.encoder1[3]))
-        self.passi1_5_direct.setText(str(self.encoder1[4]))
-        self.passi1_6_direct.setText(str(self.encoder1[5]))
+    def inserisci(self,lista,tipo):
+     if tipo==0:
+       for i in range(0,len(self.setup)):
+          self.setup[i].setText(str(lista[i]))
+    
+     """ aggiungere per le impostazioni
+     else:
+       for i in range(0,len(self.setup)):
+          self.setup[i].setText(str(lista[i]))
+     """
+ 
+    def encoderValue(self): 
+      lista=[]
+      for i in range(0,len(self.encoder1)):
+        lista.append(self.encoder1[i].value())
+      invia(lista,"e")
 
 
-
-        encrease = []  # la variabile encrease mi permette di stampare l'incremento effettivo di ogni encoder
-
-        encrease.append(self.encoder1[0] - self.setup[0])
-        encrease.append(self.encoder1[1] - self.setup[1])
-        encrease.append(self.encoder1[2] - self.setup[2])
-        encrease.append(self.encoder1[3] - self.setup[3])
-        encrease.append(self.encoder1[4] - self.setup[4])
-        encrease.append(self.encoder1[5] - self.setup[5])
-
-
-        self.encrease_value1.setText(str(encrease[0]))
-        self.encrease_value2.setText(str(encrease[1]))
-        self.encrease_value3.setText(str(encrease[2]))
-        self.encrease_value4.setText(str(encrease[3]))
-        self.encrease_value5.setText(str(encrease[4]))
-        self.encrease_value6.setText(str(encrease[5]))
-
-
-
-        self.setup[0] = int(self.passi1_direct.text())
-        self.setup[1] = int(self.passi1_2_direct.text())
-        self.setup[2] = int(self.passi1_3_direct.text())
-        self.setup[3] = int(self.passi1_4_direct.text())
-        self.setup[4] = int(self.passi1_5_direct.text())
-        self.setup[5] = int(self.passi1_6_direct.text())
-
-
+      
     def angleValue(self):
-
         self.angle[0] = self.AngleDir_1.value()
         self.angle[1] = self.AngleDir_2.value()
         self.angle[2] = self.AngleDir_3.value()
@@ -194,8 +134,6 @@ class MyUiQt (Ui_UiClass):
         self.theta[5] = int(self.tetaDir_6value.text())
 
 
-
-
     def parametersValue(self):
 
         self.param[0]= self.alphaValue.value()
@@ -203,61 +141,38 @@ class MyUiQt (Ui_UiClass):
         self.param[2] = self.gammaValue.value()
         self.param[3] = self.deltaValue.value()
 
-        self.passi1_direct.setText(str(-self.angle[0]/self.param[0]))
-        self.passi1_2_direct.setText(str(-self.angle[1]/self.param[1]))
-        self.passi1_3_direct.setText(str((self.angle[1]+ self.angle[2])/self.param[1]))
-        self.passi1_4_direct.setText(str(0.5*(self.angle[1]+ self.angle[2]+ self.angle[3])/self.param[2] + self.angle[4]/self.param[3]))
-        self.passi1_5_direct.setText(str(0.5*(self.angle[4]/self.param[3]-(self.angle[1]+self.angle[2]+self.angle[3])/self.param[2])))
 
 
     def inverseValue(self):
 
         self.inVal[0]=self.Xdes_spin_Box.value()
         self.inVal[1] = self.Ydes_spin_box.value()
-        self.inVal[2] = self.Zdes_spin_Box.value()
+        self.inVal[1] = self.Zdes_spin_Box.value()
 
         # operazioni matematiche per ricavare i theta.
         # l1, l2, l3, d1 e betad vanno misurati ed impostati
-
-        l1 = 3
-        l2 = 22
-        l3 = 22
-        d1 = 35
-        d5 = 14
-        betad=45
-        omegad=0
-
-        bdr= math.radians(betad)
-        theta1 = math.degrees(math.atan2(self.inVal[1], self.inVal[0]))
-        theta1r= math.radians(theta1)
-        A1= self.inVal[0]* (math.cos(theta1r)) +self.inVal[1]*(math.sin(theta1r)) -d5*(math.cos(bdr)) -l1
-        A2 = d1 - self.inVal[2] -d5*(math.sin(bdr))
-        A3 = (A1*A1) + (A2*A2) - (l2*l2) - (l3*l3)
+        l1=3
+        l2= 22
+        l3=22
+        d1=11
+        betad=1
+        omegad=10
+        theta1 = math.atan2(self.inVal[1], self.inVal[0])
+        A1 = self.inVal[0] * math.cos(theta1) + self.inVal[1] * math.sin(theta1) - l1
+        A2 = d1 - self.inVal[2]  #  per far si che il programma giri mettere inVal[1]
+        A3 = (A1 * A1) + (A2 * A2) - (l2 * l2) - (l3 * l3)
         A4 = 2 * l2 * l3
         A5 = A3 / A4
         theta3 = math.acos(A5)
-
-
-        if self.Gomitobasso.isChecked() == True:
-            theta3=math.degrees( -1* abs(theta3))
-            theta3r1 = math.radians(theta3)
-            A7 = (l2 + l3 * math.cos(theta3r1)) * A1 + l3 * math.sin(theta3r1) * A2
-            A6 = (l2 + l3 * math.cos(theta3r1)) * A2 - l3 * math.sin(theta3r1) * A1
-            theta2 = math.degrees(math.atan2(A6, A7))
-            theta4 = betad - theta2 - theta3 - 90
-            theta5 = omegad
-        else:
-            theta3 = abs(math.degrees(math.acos(A5)))
-            theta3r = math.radians(theta3)
-            A6 = (l2 + l3 * math.cos(theta3r))* A2 - l3 * math.sin(theta3r) * A1
-            A7 = (l2 + l3 * math.cos(theta3r)) * A1 + l3 * math.sin(theta3r) * A2
-            theta2 = math.degrees(math.atan2(A6, A7))
-            theta4 = betad - theta2 - theta3 - 90
-            theta5 = omegad
+        A6 = l2 + l3 * math.cos(theta3) * A2 - l3 * math.sin(theta3) * A1
+        A7 = (l2 + l3 * math.cos(theta3)) * A1 + l3 * math.sin(theta3) * A2
+        theta2 = math.atan2(A6, A7)
+        theta4 = betad - theta2 - theta3 - 90
+        theta5=omegad
 
 
         self.teta1_inverse_value.setText(str(theta1))
         self.teta2_inverse_value.setText(str(theta2))
         self.teta3_inverse_value.setText(str(theta3))
         self.teta4_inverse_value.setText(str(theta4))
-        self.teta5_invers_value.setText(str(theta5))
+        self.teta5_invers_value.setText(str(theta5)) # dà lo stesso errore di Ydes quindi  per far si che il programma giri impostarlo come commento

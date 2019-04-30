@@ -27,6 +27,7 @@ class InputThread (Thread):
 
             #i=invia(imp,"i")
 
+
     def leggi(self): #legge il messaggio e fa il parsing
   #restituisce la lista dei dati
      pas=0
@@ -44,9 +45,9 @@ class InputThread (Thread):
            testo=testo + messaggio[i] 
 
      if (lista[0]=='e'):
-      self.ui.inserisci(lista[1:],0)
+      self.ui.inserisci(lista[1:], 0)
      else:
-      self.ui.inserisci(lista[1:],1)         
+      self.ui.inserisci(lista[1:], 1)
      return 
 
  
@@ -66,4 +67,3 @@ if __name__ == '__main__':
     app.exec_()
 
 
-    
