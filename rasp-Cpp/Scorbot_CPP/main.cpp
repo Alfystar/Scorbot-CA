@@ -82,15 +82,15 @@ int main()
                 prop.sets.minEn[cMot1+i]+=i*3;
             }*/
             /*Assegnazione limiti scoperti sperimentalmente*/
-            prop.sets.maxCurrMed[cMot1]=270; //250
+            prop.sets.maxCurrMed[cMot1]=2160; //250*8
             prop.sets.maxEn[cMot1]=24300; //24379
             prop.sets.minEn[cMot1]=-19450; //-19509
 
-            prop.sets.maxCurrMed[cMot2]=370; //350
+            prop.sets.maxCurrMed[cMot2]=2960; //350*8
             prop.sets.maxEn[cMot2]=16200; //16229
             prop.sets.minEn[cMot2]=-1000; //-1110
 
-            prop.sets.maxCurrMed[cMot3]=370; //350
+            prop.sets.maxCurrMed[cMot3]=2960; //350*8
             prop.sets.maxEn[cMot3]=21900; //21960
             prop.sets.minEn[cMot3]=-7300; //-7344
 
@@ -98,17 +98,17 @@ int main()
              * Dipende da rotazione il numero di encoder, lo lasciamo
              * apposta molto grande per non far interferire
              */
-            prop.sets.maxCurrMed[cMot4]=270; //250
+            prop.sets.maxCurrMed[cMot4]=2160; //250*8
             prop.sets.maxEn[cMot4]=10000; //NA
             prop.sets.minEn[cMot4]=-10000; //NA
 
-            prop.sets.maxCurrMed[cMot5]=300; //250
+            prop.sets.maxCurrMed[cMot5]=2400; //250*8
             prop.sets.maxEn[cMot5]=10000; //NA
             prop.sets.minEn[cMot5]=-10000; //NA
             /********************************************/
 
             /*La pinza al contrario vogliamo che si possa aprire tuttu*/
-            prop.sets.maxCurrMed[cMot6]=270; //250
+            prop.sets.maxCurrMed[cMot6]=2160; //250*8
             prop.sets.maxEn[cMot6]=5770; //5749
             prop.sets.minEn[cMot6]=-10; //0
 

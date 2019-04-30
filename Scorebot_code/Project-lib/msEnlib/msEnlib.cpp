@@ -67,11 +67,9 @@ void updateStepEn() {
 }
 
 //VARIABILI PRIVATE DI calcStep
-#define im 0
+#define im 0 //impossibile
 //						0   1  2   3   4  5   6    7   8   9  10 11  12  13  14 15
 int8_t enc_states[] = { 0, -1, 1, im, 1, 0, im, -1, -1, im, 0, 1, im, 1, -1, 0 }; /*[old]BA-BA[new]*/
-
-
 byte chAold, chBold, chAnew, chBnew, code;
 void calcStep(int oldEn, int newEn) {
 	/* Monto i bit BA (A LSB)*/
