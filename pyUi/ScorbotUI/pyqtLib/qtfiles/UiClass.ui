@@ -41,7 +41,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;B&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(200, 200, 200);</string>
+     <string notr="true">background-color: rgb(240, 240, 240);</string>
     </property>
     <property name="tabPosition">
      <enum>QTabWidget::North</enum>
@@ -2039,8 +2039,7 @@
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">
-</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>θ1:  </string>
@@ -2166,8 +2165,7 @@
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">
-</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>θ4:  </string>

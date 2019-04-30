@@ -22,7 +22,7 @@ class Ui_UiClass(object):
         font = QtGui.QFont()
         font.setPointSize(14)
         self.o.setFont(font)
-        self.o.setStyleSheet("background-color: rgb(200, 200, 200);")
+        self.o.setStyleSheet("background-color: rgb(240, 240, 240);")
         self.o.setTabPosition(QtWidgets.QTabWidget.North)
         self.o.setTabShape(QtWidgets.QTabWidget.Rounded)
         self.o.setUsesScrollButtons(False)
@@ -1101,8 +1101,7 @@ class Ui_UiClass(object):
         font.setItalic(False)
         font.setWeight(50)
         self.Teta1_inverse.setFont(font)
-        self.Teta1_inverse.setStyleSheet("\n"
-"")
+        self.Teta1_inverse.setStyleSheet("")
         self.Teta1_inverse.setObjectName("Teta1_inverse")
         self.horizontalLayout_4.addWidget(self.Teta1_inverse)
         self.teta1_inverse_value = QtWidgets.QLabel(self.layoutWidget_4)
@@ -1177,8 +1176,7 @@ class Ui_UiClass(object):
         font.setItalic(False)
         font.setWeight(50)
         self.teta4_inverse.setFont(font)
-        self.teta4_inverse.setStyleSheet("\n"
-"")
+        self.teta4_inverse.setStyleSheet("")
         self.teta4_inverse.setObjectName("teta4_inverse")
         self.horizontalLayout_8.addWidget(self.teta4_inverse)
         self.teta4_inverse_value = QtWidgets.QLabel(self.layoutWidget_4)
