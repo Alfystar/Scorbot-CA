@@ -13,7 +13,7 @@ L298N::L298N(byte ena, byte in1, byte in2) {
 	pinMode(in1, OUTPUT);
 	pinMode(in2, OUTPUT);
 
-	this->knowHome=false;
+	//this->knowHome=false;
 
 	this->in1 = in1;
 	this->in2 = in2;

@@ -11,7 +11,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9d63bfc8-c3db-4d44-bd04-cb7890be4532" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/UiClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/UiClass.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -28,11 +27,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="435">
+              <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/myUiClass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="8" selection-start-line="8" selection-end-line="8" />
+            <state relative-caret-position="353">
+              <caret line="246" column="21" selection-start-line="246" selection-start-column="21" selection-end-line="246" selection-end-column="21" />
               <folding>
                 <element signature="e#0#11#0" expanded="true" />
               </folding>
@@ -40,11 +48,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/UiClass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="296">
-              <caret line="1618" selection-start-line="1618" selection-end-line="1618" />
+            <state relative-caret-position="400">
+              <caret line="1655" column="11" lean-forward="true" selection-start-line="1655" selection-start-column="11" selection-end-line="1655" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -74,6 +82,7 @@
       <find>PulsanteInvioPAginaAdvance</find>
       <find>Pulsante_invio_pagina_Basics</find>
       <find>self.riferimento1_direct</find>
+      <find>inVal[0</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/pyUi/Scorbot UI/pyqtLib</dir>
@@ -102,15 +111,23 @@
         <option value="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/qtfiles/uiClass.py" />
         <option value="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/qtfiles/UiClass.py" />
         <option value="$PROJECT_DIR$/pyUi/ScorbotUI/mainUi.py" />
-        <option value="$PROJECT_DIR$/pyUi/ScorbotUI/myUiClass.py" />
         <option value="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/Uiclass.py" />
+        <option value="$PROJECT_DIR$/pyUi/ScorbotUI/myUiClass.py" />
         <option value="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/UiClass.py" />
+        <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="642" />
-    <option name="width" value="638" />
+  <component name="ProjectConfigurationFiles">
+    <option name="files">
+      <list>
+        <option value="$PROJECT_DIR$/.idea/misc.xml" />
+        <option value="$PROJECT_DIR$/.idea/modules.xml" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" fullScreen="true">
+    <option name="width" value="724" />
     <option name="height" value="800" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -161,6 +178,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="com.intellij.ide.scratch.LRUPopupBuilder$1/New Scratch File" value="Python" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -187,7 +205,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.mainUi">
+  <component name="RunManager" selected="Python.scratch">
     <configuration name="UiClass" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -254,6 +272,28 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="scratch" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="Scorbot-CA" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$APPLICATION_CONFIG_DIR$/scratches" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="SCRIPT_NAME" value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="uiClass" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -278,8 +318,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.UiClass" />
+        <item itemvalue="Python.scratch" />
         <item itemvalue="Python.myUiClass" />
+        <item itemvalue="Python.UiClass" />
         <item itemvalue="Python.uiClass" />
       </list>
     </recent_temporary>
@@ -347,7 +388,16 @@
       <workItem from="1556187997325" duration="278000" />
       <workItem from="1556203818568" duration="2430000" />
       <workItem from="1556209959302" duration="770000" />
-      <workItem from="1556271239003" duration="228000" />
+      <workItem from="1556271239003" duration="369000" />
+      <workItem from="1556290816941" duration="54000" />
+      <workItem from="1556529272708" duration="5174000" />
+      <workItem from="1556542624229" duration="3138000" />
+      <workItem from="1556548984674" duration="1267000" />
+      <workItem from="1556552063014" duration="822000" />
+      <workItem from="1556552953127" duration="1525000" />
+      <workItem from="1556615953401" duration="659000" />
+      <workItem from="1556621020056" duration="106000" />
+      <workItem from="1556627229418" duration="5030000" />
     </task>
     <task id="LOCAL-00001" summary="Home Scorebot&#10;Pack Transfert standardize">
       <created>1553794397754</created>
@@ -503,11 +553,88 @@
       <option name="project" value="LOCAL" />
       <updated>1556210811886</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Problema impaginazione risolto">
+      <created>1556271639497</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1556271639497</updated>
+    </task>
+    <task id="LOCAL-00024" summary="- Inserita la lista da passare a Francesco&#10;- Inserito il calcolo della cinematica inversa&#10;- Manca da implementare quello che succede quando argomento dell'arcos è &gt;1">
+      <created>1556545736687</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1556545736687</updated>
+    </task>
+    <task id="LOCAL-00025" summary="Risolto problema angoli. Cinematica inversa completamente implementata">
+      <created>1556630962545</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1556630962545</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Prova sistemazione grafica">
+      <created>1556631765807</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1556631765807</updated>
+    </task>
+    <task id="LOCAL-00027" summary="Prova sistemazione grafica">
+      <created>1556631971567</created>
+      <option name="number" value="00027" />
+      <option name="presentableId" value="LOCAL-00027" />
+      <option name="project" value="LOCAL" />
+      <updated>1556631971567</updated>
+    </task>
+    <task id="LOCAL-00028" summary="Prova sistemazione grafica">
+      <created>1556632545137</created>
+      <option name="number" value="00028" />
+      <option name="presentableId" value="LOCAL-00028" />
+      <option name="project" value="LOCAL" />
+      <updated>1556632545137</updated>
+    </task>
+    <task id="LOCAL-00029" summary="Prova sistemazione grafica">
+      <created>1556633174103</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1556633174103</updated>
+    </task>
+    <task id="LOCAL-00030" summary="Prova sistemazione grafica">
+      <created>1556633252680</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1556633252680</updated>
+    </task>
+    <task id="LOCAL-00031" summary="Prova sistemazione grafica">
+      <created>1556633470223</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1556633470223</updated>
+    </task>
+    <task id="LOCAL-00032" summary="Prova sistemazione grafica">
+      <created>1556633509402</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1556633509402</updated>
+    </task>
+    <task id="LOCAL-00033" summary="Prova sistemazione grafica">
+      <created>1556634270441</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1556634270441</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="40465000" />
+    <option name="totallyTimeSpent" value="58381000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -519,16 +646,16 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1280" height="714" extended-state="6" />
+    <frame x="0" y="0" width="1280" height="800" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23505655" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12520194" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32897863" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4964789" visible="true" weight="0.27974278" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39904988" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4964789" visible="true" weight="0.20273973" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39863014" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32852563" />
@@ -545,22 +672,22 @@
       <window_info anchor="right" id="SciView" order="4" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25767368" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.12520194" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32897863" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4964789" weight="0.32636657" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39904988" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4964789" visible="true" weight="0.20273973" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.39863014" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" weight="0.3296" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.32852563" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info active="true" anchor="bottom" id="Version Control" order="8" visible="true" weight="0.3248" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.3296" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.3221154" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32852563" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50352114" side_tool="true" weight="0.32897863" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.3296" />
+      <window_info anchor="bottom" id="Python Console" order="12" weight="0.32852563" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -626,13 +753,17 @@
     <MESSAGE value="Problema logo risolto&#10;Problema Ydes risolto&#10;Problema import vari risolto" />
     <MESSAGE value="Problema logo risolto&#10;Problema Ydes risolto&#10;Problema import vari risolto&#10;inizio scrittura formule martinelli" />
     <MESSAGE value="Problema impaginazione risolto" />
-    <option name="LAST_COMMIT_MESSAGE" value="Problema impaginazione risolto" />
+    <MESSAGE value="- Inserita la lista da passare a Francesco&#10;- Inserito il calcolo della cinematica inversa&#10;- Manca da implementare quello che succede quando argomento dell'arcos è &gt;1" />
+    <MESSAGE value="Risolto problema angoli. Cinematica inversa completamente implementata" />
+    <MESSAGE value="Prova sistemazione grafica" />
+    <option name="LAST_COMMIT_MESSAGE" value="Prova sistemazione grafica" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/Scorbot_CA$mainUi.coverage" NAME="mainUi Coverage Results" MODIFIED="1556271610012" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/ScorbotUI" />
+    <SUITE FILE_PATH="coverage/Scorbot_CA$mainUi.coverage" NAME="mainUi Coverage Results" MODIFIED="1556633475993" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/ScorbotUI" />
+    <SUITE FILE_PATH="coverage/Scorbot_CA$scratch.coverage" NAME="scratch Coverage Results" MODIFIED="1556634483778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$APPLICATION_CONFIG_DIR$/scratches" />
     <SUITE FILE_PATH="coverage/Scorbot_CA$uiClass.coverage" NAME="uiClass Coverage Results" MODIFIED="1556013857770" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/qtfiles" />
     <SUITE FILE_PATH="coverage/Scorbot_CA$UiClass.coverage" NAME="UiClass Coverage Results" MODIFIED="1556210762684" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib" />
-    <SUITE FILE_PATH="coverage/Scorbot_CA$myUiClass.coverage" NAME="myUiClass Coverage Results" MODIFIED="1556210439379" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/ScorbotUI" />
+    <SUITE FILE_PATH="coverage/Scorbot_CA$myUiClass.coverage" NAME="myUiClass Coverage Results" MODIFIED="1556552463452" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/ScorbotUI" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/../Scorebot_code/.gitignore" />
@@ -697,7 +828,7 @@
     <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/qtfiles/Uiclass.py" />
+    <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/qtfiles/UiClass.py" />
     <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/logo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7695">
@@ -712,16 +843,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/myUiClass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-          <folding>
-            <element signature="e#0#11#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/mainUi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -729,10 +850,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/myUiClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="353">
+          <caret line="246" column="21" selection-start-line="246" selection-start-column="21" selection-end-line="246" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/UiClass.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="1618" selection-start-line="1618" selection-end-line="1618" />
+        <state relative-caret-position="400">
+          <caret line="1655" column="11" lean-forward="true" selection-start-line="1655" selection-start-column="11" selection-end-line="1655" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
         </state>
       </provider>
     </entry>

@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1153</width>
-    <height>663</height>
+    <width>992</width>
+    <height>439</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,32 +20,13 @@
    <string notr="true">url:(/newPrefix/Logo-Uni-Tor-Vergata.png_48x48.png)</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="Immagine_tor_Vergata_Grande">
-    <property name="geometry">
-     <rect>
-      <x>1010</x>
-      <y>50</y>
-      <width>111</width>
-      <height>131</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/Immagini/Logo-Uni-Tor-Vergata.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">image: url(:/newPrefix/Logo-Uni-Tor-Vergata.jpg);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QTabWidget" name="o">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>20</y>
-      <width>961</width>
-      <height>391</height>
+      <x>30</x>
+      <y>10</y>
+      <width>931</width>
+      <height>381</height>
      </rect>
     </property>
     <property name="font">
@@ -60,7 +41,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;B&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(244, 242, 246);</string>
+     <string notr="true">background-color: rgb(240, 240, 240);</string>
     </property>
     <property name="tabPosition">
      <enum>QTabWidget::North</enum>
@@ -69,7 +50,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <property name="usesScrollButtons">
      <bool>false</bool>
@@ -93,8 +74,8 @@
      <widget class="QPushButton" name="Pulsante_invio_pagina_Basics">
       <property name="geometry">
        <rect>
-        <x>760</x>
-        <y>170</y>
+        <x>730</x>
+        <y>220</y>
         <width>131</width>
         <height>41</height>
        </rect>
@@ -134,8 +115,8 @@
        <rect>
         <x>10</x>
         <y>40</y>
-        <width>181</width>
-        <height>301</height>
+        <width>171</width>
+        <height>281</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="VEn_Dir">
@@ -143,16 +124,25 @@
         <number>11</number>
        </property>
        <item>
-        <layout class="QHBoxLayout" name="Motore1" stretch="0,0">
+        <layout class="QHBoxLayout" name="Motore1">
+         <property name="spacing">
+          <number>0</number>
+         </property>
+         <property name="sizeConstraint">
+          <enum>QLayout::SetDefaultConstraint</enum>
+         </property>
          <item>
           <widget class="QLabel" name="Encoder1_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
-            <string>encoder n°1</string>
+            <string>Encoder n°1</string>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -160,7 +150,7 @@
           <widget class="QSpinBox" name="riferimento1_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
           </widget>
@@ -169,15 +159,18 @@
        </item>
        <item>
         <layout class="QHBoxLayout" name="Motore2" stretch="0,0">
+         <property name="spacing">
+          <number>0</number>
+         </property>
          <item>
           <widget class="QLabel" name="Encoder_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
-            <string>encoder n°2</string>
+            <string>Encoder n°2</string>
            </property>
           </widget>
          </item>
@@ -185,7 +178,7 @@
           <widget class="QSpinBox" name="riferimento1_2_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
           </widget>
@@ -194,34 +187,46 @@
        </item>
        <item>
         <layout class="QHBoxLayout" name="Motore3" stretch="0,0">
+         <property name="spacing">
+          <number>0</number>
+         </property>
          <item>
           <widget class="QLabel" name="Encoder3_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
-            <string>encoder n°3</string>
+            <string>Encoder n°3</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="riferimento1_3_direct"/>
+          <widget class="QSpinBox" name="riferimento1_3_direct">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
        <item>
         <layout class="QHBoxLayout" name="Motore4" stretch="0,0">
+         <property name="spacing">
+          <number>0</number>
+         </property>
          <item>
           <widget class="QLabel" name="Ecoder4_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
-            <string>encoder n°4</string>
+            <string>Encoder n°4</string>
            </property>
           </widget>
          </item>
@@ -229,7 +234,7 @@
           <widget class="QSpinBox" name="riferimento1_4_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
           </widget>
@@ -238,15 +243,18 @@
        </item>
        <item>
         <layout class="QHBoxLayout" name="Motore5" stretch="0,0">
+         <property name="spacing">
+          <number>0</number>
+         </property>
          <item>
           <widget class="QLabel" name="Encoder5_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
-            <string>encoder n°5</string>
+            <string>Encoder n°5</string>
            </property>
           </widget>
          </item>
@@ -254,7 +262,7 @@
           <widget class="QSpinBox" name="riferimento1_5_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
           </widget>
@@ -263,20 +271,29 @@
        </item>
        <item>
         <layout class="QHBoxLayout" name="Motore6" stretch="0,0">
+         <property name="spacing">
+          <number>0</number>
+         </property>
          <item>
           <widget class="QLabel" name="Encoder6_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
-            <string>encoder n°6</string>
+            <string>Encoder n°6</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="riferimento1_6_direct"/>
+          <widget class="QSpinBox" name="riferimento1_6_direct">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -285,10 +302,10 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>310</x>
         <y>50</y>
-        <width>181</width>
-        <height>281</height>
+        <width>161</width>
+        <height>271</height>
        </rect>
       </property>
       <property name="font">
@@ -306,7 +323,7 @@
           <widget class="QLabel" name="encrease1">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -318,7 +335,7 @@
           <widget class="QLabel" name="encrease_value1">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -334,7 +351,7 @@
           <widget class="QLabel" name="encrease2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -346,7 +363,7 @@
           <widget class="QLabel" name="encrease_value2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -362,7 +379,7 @@
           <widget class="QLabel" name="encrease3">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -377,7 +394,7 @@
           <widget class="QLabel" name="encrease_value3">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -393,7 +410,7 @@
           <widget class="QLabel" name="encrease4">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -411,7 +428,7 @@
           <widget class="QLabel" name="encrease_value4">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -427,7 +444,7 @@
           <widget class="QLabel" name="encrease5">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -439,7 +456,7 @@
           <widget class="QLabel" name="encrease_value5">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -455,7 +472,7 @@
           <widget class="QLabel" name="encrease6">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -467,7 +484,7 @@
           <widget class="QLabel" name="encrease_value6">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -482,10 +499,10 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>210</x>
+        <x>190</x>
         <y>50</y>
-        <width>121</width>
-        <height>281</height>
+        <width>111</width>
+        <height>261</height>
        </rect>
       </property>
       <property name="font">
@@ -509,7 +526,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -521,7 +538,7 @@
           <widget class="QLabel" name="passi1_direct">
            <property name="font">
             <font>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -543,7 +560,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -555,7 +572,7 @@
           <widget class="QLabel" name="passi1_2_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -577,7 +594,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -589,7 +606,7 @@
           <widget class="QLabel" name="passi1_3_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -611,7 +628,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -623,7 +640,7 @@
           <widget class="QLabel" name="passi1_4_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -645,7 +662,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -657,7 +674,7 @@
           <widget class="QLabel" name="passi1_5_direct">
            <property name="font">
             <font>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -679,7 +696,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -691,7 +708,7 @@
           <widget class="QLabel" name="passi1_6_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -706,10 +723,10 @@
      <widget class="QWidget" name="layoutWidget_5">
       <property name="geometry">
        <rect>
-        <x>530</x>
+        <x>490</x>
         <y>50</y>
-        <width>141</width>
-        <height>281</height>
+        <width>131</width>
+        <height>271</height>
        </rect>
       </property>
       <property name="font">
@@ -736,7 +753,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -748,7 +765,7 @@
           <widget class="QLabel" name="ma1_value">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -773,7 +790,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -785,7 +802,7 @@
           <widget class="QLabel" name="ma2_value">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -807,7 +824,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -819,7 +836,7 @@
           <widget class="QLabel" name="ma3_value">
            <property name="font">
             <font>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -841,7 +858,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -853,7 +870,7 @@
           <widget class="QLabel" name="ma4_value">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -875,7 +892,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -887,7 +904,7 @@
           <widget class="QLabel" name="ma5_value">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -909,7 +926,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -921,7 +938,7 @@
           <widget class="QLabel" name="ma6_value">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -936,7 +953,7 @@
      <widget class="QPushButton" name="Open1">
       <property name="geometry">
        <rect>
-        <x>730</x>
+        <x>700</x>
         <y>290</y>
         <width>81</width>
         <height>32</height>
@@ -952,7 +969,7 @@
      <widget class="QPushButton" name="Close1">
       <property name="geometry">
        <rect>
-        <x>840</x>
+        <x>810</x>
         <y>290</y>
         <width>81</width>
         <height>32</height>
@@ -991,8 +1008,8 @@
      <widget class="QPushButton" name="PulsanteInvioPAginaAdvance">
       <property name="geometry">
        <rect>
-        <x>760</x>
-        <y>170</y>
+        <x>730</x>
+        <y>220</y>
         <width>131</width>
         <height>41</height>
        </rect>
@@ -1012,10 +1029,10 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>530</x>
+        <x>490</x>
         <y>50</y>
         <width>111</width>
-        <height>281</height>
+        <height>271</height>
        </rect>
       </property>
       <property name="font">
@@ -1042,7 +1059,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1054,7 +1071,7 @@
           <widget class="QLabel" name="ma1_value1_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1079,7 +1096,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1091,7 +1108,7 @@
           <widget class="QLabel" name="ma2_value2_direct">
            <property name="font">
             <font>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1113,7 +1130,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1125,7 +1142,7 @@
           <widget class="QLabel" name="ma3_value3_direct">
            <property name="font">
             <font>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1147,7 +1164,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1159,7 +1176,7 @@
           <widget class="QLabel" name="ma4_value4_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1181,7 +1198,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1193,7 +1210,7 @@
           <widget class="QLabel" name="ma5_value5_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1215,7 +1232,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1227,7 +1244,7 @@
           <widget class="QLabel" name="ma6_value6_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1242,10 +1259,10 @@
      <widget class="QWidget" name="layoutWidget_7">
       <property name="geometry">
        <rect>
-        <x>210</x>
+        <x>190</x>
         <y>50</y>
-        <width>121</width>
-        <height>281</height>
+        <width>111</width>
+        <height>261</height>
        </rect>
       </property>
       <property name="font">
@@ -1269,7 +1286,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1281,7 +1298,7 @@
           <widget class="QLabel" name="tetaDir_1value">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1303,7 +1320,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1315,7 +1332,7 @@
           <widget class="QLabel" name="tetaDir_2value">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1337,7 +1354,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1349,7 +1366,7 @@
           <widget class="QLabel" name="tetaDir_3value">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1371,7 +1388,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1383,7 +1400,7 @@
           <widget class="QLabel" name="tetaDir_4value">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1405,7 +1422,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1417,7 +1434,7 @@
           <widget class="QLabel" name="tetaDir_5value">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1439,7 +1456,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1451,7 +1468,7 @@
           <widget class="QLabel" name="tetaDir_6value">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1468,8 +1485,8 @@
        <rect>
         <x>10</x>
         <y>40</y>
-        <width>181</width>
-        <height>301</height>
+        <width>171</width>
+        <height>281</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="VEn_Dir_3">
@@ -1482,7 +1499,7 @@
           <widget class="QLabel" name="Angle1_dir">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1494,7 +1511,7 @@
           <widget class="QSpinBox" name="AngleDir_1">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
           </widget>
@@ -1507,7 +1524,7 @@
           <widget class="QLabel" name="Angle2_dir">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1519,7 +1536,7 @@
           <widget class="QSpinBox" name="AngleDir_2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
           </widget>
@@ -1532,7 +1549,7 @@
           <widget class="QLabel" name="Angle3_dir">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1544,7 +1561,7 @@
           <widget class="QSpinBox" name="AngleDir_3">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
           </widget>
@@ -1557,7 +1574,7 @@
           <widget class="QLabel" name="Angle4_dir">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1569,7 +1586,7 @@
           <widget class="QSpinBox" name="AngleDir_4">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
           </widget>
@@ -1582,7 +1599,7 @@
           <widget class="QLabel" name="Angle5_dir">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1594,7 +1611,7 @@
           <widget class="QSpinBox" name="AngleDir_5">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
           </widget>
@@ -1607,7 +1624,7 @@
           <widget class="QLabel" name="Angle6_dir">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1619,7 +1636,7 @@
           <widget class="QSpinBox" name="AngleDir_6">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
           </widget>
@@ -1631,11 +1648,16 @@
      <widget class="QWidget" name="layoutWidget_8">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>310</x>
         <y>50</y>
-        <width>181</width>
-        <height>281</height>
+        <width>161</width>
+        <height>271</height>
        </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
       </property>
       <layout class="QVBoxLayout" name="VEncDir_2">
        <property name="spacing">
@@ -1650,7 +1672,7 @@
           <widget class="QLabel" name="encrease1_2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1662,7 +1684,7 @@
           <widget class="QLabel" name="encrease_value1_2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1678,7 +1700,7 @@
           <widget class="QLabel" name="encrease2_2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1690,7 +1712,7 @@
           <widget class="QLabel" name="encrease_value2_2">
            <property name="font">
             <font>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1706,7 +1728,7 @@
           <widget class="QLabel" name="encrease3_2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1721,7 +1743,7 @@
           <widget class="QLabel" name="encrease_value3_2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1737,7 +1759,7 @@
           <widget class="QLabel" name="encrease4_2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1755,7 +1777,7 @@
           <widget class="QLabel" name="encrease_value4_2">
            <property name="font">
             <font>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1771,7 +1793,7 @@
           <widget class="QLabel" name="encrease5_2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1783,7 +1805,7 @@
           <widget class="QLabel" name="encrease_value5_2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1799,7 +1821,7 @@
           <widget class="QLabel" name="encrease6_2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1811,7 +1833,7 @@
           <widget class="QLabel" name="encrease_value6_2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1842,7 +1864,7 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>650</x>
+        <x>610</x>
         <y>50</y>
         <width>71</width>
         <height>136</height>
@@ -1855,7 +1877,7 @@
           <widget class="QLabel" name="alpha_6">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1864,7 +1886,13 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="alphaValue"/>
+          <widget class="QSpinBox" name="alphaValue">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -1874,7 +1902,7 @@
           <widget class="QLabel" name="beta_4">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1883,7 +1911,13 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="betaValue"/>
+          <widget class="QSpinBox" name="betaValue">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -1893,7 +1927,7 @@
           <widget class="QLabel" name="gamma_3">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1902,7 +1936,13 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="gammaValue"/>
+          <widget class="QSpinBox" name="gammaValue">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -1912,7 +1952,7 @@
           <widget class="QLabel" name="delta_3">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1921,7 +1961,13 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="deltaValue"/>
+          <widget class="QSpinBox" name="deltaValue">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -1930,7 +1976,7 @@
      <widget class="QPushButton" name="open2">
       <property name="geometry">
        <rect>
-        <x>730</x>
+        <x>700</x>
         <y>290</y>
         <width>81</width>
         <height>32</height>
@@ -1946,7 +1992,7 @@
      <widget class="QPushButton" name="close2">
       <property name="geometry">
        <rect>
-        <x>840</x>
+        <x>810</x>
         <y>290</y>
         <width>81</width>
         <height>32</height>
@@ -1986,15 +2032,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;
-</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>θ1:  </string>
@@ -2006,14 +2051,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>0</string>
@@ -2029,14 +2074,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>θ2:  </string>
@@ -2048,14 +2093,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>0</string>
@@ -2071,14 +2116,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>θ3:  </string>
@@ -2090,14 +2135,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>0</string>
@@ -2113,15 +2158,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;
-</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>θ4:  </string>
@@ -2133,14 +2177,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>0</string>
@@ -2156,14 +2200,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>θ5:  </string>
@@ -2175,14 +2219,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>0</string>
@@ -2196,8 +2240,8 @@
      <widget class="QPushButton" name="PulsanteInvioPAgina_Inverse">
       <property name="geometry">
        <rect>
-        <x>760</x>
-        <y>170</y>
+        <x>730</x>
+        <y>220</y>
         <width>131</width>
         <height>41</height>
        </rect>
@@ -2214,81 +2258,38 @@
        <string>ENTER</string>
       </property>
      </widget>
-     <widget class="QRadioButton" name="Gomitoalto">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>140</y>
-        <width>144</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>.SF NS Text</family>
-        <pointsize>15</pointsize>
-        <weight>50</weight>
-        <italic>false</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Gomito alto</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="Gomitobasso">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>170</y>
-        <width>121</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>.SF NS Text</family>
-        <pointsize>15</pointsize>
-        <weight>50</weight>
-        <italic>false</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Gomito basso</string>
-      </property>
-     </widget>
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
         <x>70</x>
-        <y>30</y>
+        <y>40</y>
         <width>121</width>
-        <height>261</height>
+        <height>241</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>-1</number>
+       </property>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetDefaultConstraint</enum>
+         </property>
          <item>
           <widget class="QLabel" name="Xdes">
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
+             <kerning>true</kerning>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Xdes:</string>
@@ -2300,14 +2301,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
           </widget>
          </item>
@@ -2320,14 +2321,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Ydes:</string>
@@ -2339,14 +2340,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
           </widget>
          </item>
@@ -2359,14 +2360,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Zdes:</string>
@@ -2378,14 +2379,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
           </widget>
          </item>
@@ -2396,7 +2397,7 @@
      <widget class="QPushButton" name="close3">
       <property name="geometry">
        <rect>
-        <x>840</x>
+        <x>810</x>
         <y>290</y>
         <width>81</width>
         <height>32</height>
@@ -2412,7 +2413,7 @@
      <widget class="QPushButton" name="open3">
       <property name="geometry">
        <rect>
-        <x>730</x>
+        <x>700</x>
         <y>290</y>
         <width>81</width>
         <height>32</height>
@@ -2424,6 +2425,62 @@
       <property name="text">
        <string>Open</string>
       </property>
+     </widget>
+     <widget class="QWidget" name="layoutWidget">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>70</y>
+        <width>171</width>
+        <height>61</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QRadioButton" name="Gomitoalto">
+         <property name="font">
+          <font>
+           <family>.SF NS Text</family>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Gomito alto</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="Gomitobasso">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>.SF NS Text</family>
+           <pointsize>12</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true"/>
+         </property>
+         <property name="text">
+          <string>Gomito basso</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="Setup">
@@ -2698,7 +2755,7 @@
    <widget class="QLabel" name="image">
     <property name="geometry">
      <rect>
-      <x>980</x>
+      <x>800</x>
       <y>20</y>
       <width>141</width>
       <height>141</height>
@@ -2717,7 +2774,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1153</width>
+     <width>992</width>
      <height>22</height>
     </rect>
    </property>

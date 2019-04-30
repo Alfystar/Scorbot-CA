@@ -75,20 +75,26 @@ void sanityChek(int wait) {
 		// Scopo della parte è limitare il verso degli encoder per evitare di sbattere, ma serve sapere
 		// Con quale segno di speed crescono gli encoder, bisogna modificare la classe L298N, e far bloccare lì
 		// i pwm che non vanno. Da fare in seguito
+
 		/*
+		 for (byte i = 0; i < nMot; i++) {
+		 if (getEn(i) >= sets.maxEn[i] || getEn(i) <= sets.minEn[i])	//se vero, sono oltre limite (i negativi non posono esserci essendo lo 0 a msRead[al massimo -1/-2 ma è rumore])
+		 {
+		 Serial.print("Mot");
+		 Serial.print(i + 1);
+		 Serial.println(" Oltre Limite Encoder");
+		 mot[i]->reversDir();
+		 }
+		 }*/
 		for (byte i = 0; i < nMot; i++) {
-			if (getEn(i) >= sets.maxEn[i] || getEn(i) <= sets.minEn[i])	//se vero, sono oltre limite (i negativi non posono esserci essendo lo 0 a msRead[al massimo -1/-2 ma è rumore])
-					{
-				Serial.print("Mot");
-				Serial.print(i + 1);
-				Serial.println(" Oltre Limite Encoder");
-				mot[i]->reversDir();
-			}
-		}*/
-		for (byte i = 0; i < nMot; i++) {
-			if (sets.maxCurrMed[i] > getSumMot(i)) //se vero, sono oltre limite
-					{
+			if (sets.maxCurrMed[i] < getSumMot(i)) {
 				mot[i]->freeRun();
+				Serial.print("nMot[");
+				Serial.print(i + 1);
+				Serial.print("] overcurrent: ");
+				Serial.print(sets.maxCurrMed[i]);
+				Serial.print(" > ");
+				Serial.println(getSumMot(i));
 			}
 		}
 		sanityTime = millis();
