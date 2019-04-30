@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1153</width>
-    <height>663</height>
+    <width>1084</width>
+    <height>639</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -42,10 +42,10 @@
    <widget class="QTabWidget" name="o">
     <property name="geometry">
      <rect>
-      <x>20</x>
+      <x>30</x>
       <y>20</y>
-      <width>961</width>
-      <height>391</height>
+      <width>931</width>
+      <height>381</height>
      </rect>
     </property>
     <property name="font">
@@ -69,7 +69,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <property name="usesScrollButtons">
      <bool>false</bool>
@@ -93,8 +93,8 @@
      <widget class="QPushButton" name="Pulsante_invio_pagina_Basics">
       <property name="geometry">
        <rect>
-        <x>760</x>
-        <y>170</y>
+        <x>730</x>
+        <y>220</y>
         <width>131</width>
         <height>41</height>
        </rect>
@@ -134,8 +134,8 @@
        <rect>
         <x>10</x>
         <y>40</y>
-        <width>181</width>
-        <height>301</height>
+        <width>171</width>
+        <height>281</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="VEn_Dir">
@@ -285,10 +285,10 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>320</x>
         <y>50</y>
-        <width>181</width>
-        <height>281</height>
+        <width>161</width>
+        <height>271</height>
        </rect>
       </property>
       <property name="font">
@@ -482,10 +482,10 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>210</x>
+        <x>190</x>
         <y>50</y>
         <width>121</width>
-        <height>281</height>
+        <height>271</height>
        </rect>
       </property>
       <property name="font">
@@ -706,10 +706,10 @@
      <widget class="QWidget" name="layoutWidget_5">
       <property name="geometry">
        <rect>
-        <x>530</x>
+        <x>490</x>
         <y>50</y>
-        <width>141</width>
-        <height>281</height>
+        <width>131</width>
+        <height>271</height>
        </rect>
       </property>
       <property name="font">
@@ -936,7 +936,7 @@
      <widget class="QPushButton" name="Open1">
       <property name="geometry">
        <rect>
-        <x>730</x>
+        <x>700</x>
         <y>290</y>
         <width>81</width>
         <height>32</height>
@@ -952,7 +952,7 @@
      <widget class="QPushButton" name="Close1">
       <property name="geometry">
        <rect>
-        <x>840</x>
+        <x>810</x>
         <y>290</y>
         <width>81</width>
         <height>32</height>
@@ -991,8 +991,8 @@
      <widget class="QPushButton" name="PulsanteInvioPAginaAdvance">
       <property name="geometry">
        <rect>
-        <x>760</x>
-        <y>170</y>
+        <x>730</x>
+        <y>220</y>
         <width>131</width>
         <height>41</height>
        </rect>
@@ -1012,10 +1012,10 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>530</x>
+        <x>490</x>
         <y>50</y>
         <width>111</width>
-        <height>281</height>
+        <height>271</height>
        </rect>
       </property>
       <property name="font">
@@ -1242,10 +1242,10 @@
      <widget class="QWidget" name="layoutWidget_7">
       <property name="geometry">
        <rect>
-        <x>210</x>
+        <x>190</x>
         <y>50</y>
         <width>121</width>
-        <height>281</height>
+        <height>271</height>
        </rect>
       </property>
       <property name="font">
@@ -1468,8 +1468,8 @@
        <rect>
         <x>10</x>
         <y>40</y>
-        <width>181</width>
-        <height>301</height>
+        <width>171</width>
+        <height>281</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="VEn_Dir_3">
@@ -1631,10 +1631,10 @@
      <widget class="QWidget" name="layoutWidget_8">
       <property name="geometry">
        <rect>
-        <x>340</x>
+        <x>320</x>
         <y>50</y>
-        <width>181</width>
-        <height>281</height>
+        <width>161</width>
+        <height>271</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="VEncDir_2">
@@ -1842,7 +1842,7 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>650</x>
+        <x>610</x>
         <y>50</y>
         <width>71</width>
         <height>136</height>
@@ -1930,7 +1930,7 @@
      <widget class="QPushButton" name="open2">
       <property name="geometry">
        <rect>
-        <x>730</x>
+        <x>700</x>
         <y>290</y>
         <width>81</width>
         <height>32</height>
@@ -1946,7 +1946,7 @@
      <widget class="QPushButton" name="close2">
       <property name="geometry">
        <rect>
-        <x>840</x>
+        <x>810</x>
         <y>290</y>
         <width>81</width>
         <height>32</height>
@@ -2196,8 +2196,8 @@
      <widget class="QPushButton" name="PulsanteInvioPAgina_Inverse">
       <property name="geometry">
        <rect>
-        <x>760</x>
-        <y>170</y>
+        <x>730</x>
+        <y>220</y>
         <width>131</width>
         <height>41</height>
        </rect>
@@ -2396,7 +2396,7 @@
      <widget class="QPushButton" name="close3">
       <property name="geometry">
        <rect>
-        <x>840</x>
+        <x>810</x>
         <y>290</y>
         <width>81</width>
         <height>32</height>
@@ -2412,7 +2412,7 @@
      <widget class="QPushButton" name="open3">
       <property name="geometry">
        <rect>
-        <x>730</x>
+        <x>700</x>
         <y>290</y>
         <width>81</width>
         <height>32</height>
@@ -2698,7 +2698,7 @@
    <widget class="QLabel" name="image">
     <property name="geometry">
      <rect>
-      <x>980</x>
+      <x>950</x>
       <y>20</y>
       <width>141</width>
       <height>141</height>
@@ -2717,7 +2717,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1153</width>
+     <width>1084</width>
      <height>22</height>
     </rect>
    </property>
