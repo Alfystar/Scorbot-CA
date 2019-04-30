@@ -50,7 +50,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>0</number>
     </property>
     <property name="usesScrollButtons">
      <bool>false</bool>
@@ -126,7 +126,7 @@
        <item>
         <layout class="QHBoxLayout" name="Motore1">
          <property name="spacing">
-          <number>10</number>
+          <number>20</number>
          </property>
          <property name="sizeConstraint">
           <enum>QLayout::SetDefaultConstraint</enum>
@@ -160,7 +160,7 @@
        <item>
         <layout class="QHBoxLayout" name="Motore2" stretch="0,0">
          <property name="spacing">
-          <number>10</number>
+          <number>20</number>
          </property>
          <item>
           <widget class="QLabel" name="Encoder_direct">
@@ -188,7 +188,7 @@
        <item>
         <layout class="QHBoxLayout" name="Motore3" stretch="0,0">
          <property name="spacing">
-          <number>10</number>
+          <number>20</number>
          </property>
          <item>
           <widget class="QLabel" name="Encoder3_direct">
@@ -216,7 +216,7 @@
        <item>
         <layout class="QHBoxLayout" name="Motore4" stretch="0,0">
          <property name="spacing">
-          <number>10</number>
+          <number>20</number>
          </property>
          <item>
           <widget class="QLabel" name="Ecoder4_direct">
@@ -244,7 +244,7 @@
        <item>
         <layout class="QHBoxLayout" name="Motore5" stretch="0,0">
          <property name="spacing">
-          <number>10</number>
+          <number>20</number>
          </property>
          <item>
           <widget class="QLabel" name="Encoder5_direct">
@@ -272,7 +272,7 @@
        <item>
         <layout class="QHBoxLayout" name="Motore6" stretch="0,0">
          <property name="spacing">
-          <number>10</number>
+          <number>20</number>
          </property>
          <item>
           <widget class="QLabel" name="Encoder6_direct">
@@ -2260,56 +2260,6 @@
        <string>ENTER</string>
       </property>
      </widget>
-     <widget class="QRadioButton" name="Gomitoalto">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>140</y>
-        <width>144</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>.SF NS Text</family>
-        <pointsize>15</pointsize>
-        <weight>50</weight>
-        <italic>false</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Gomito alto</string>
-      </property>
-     </widget>
-     <widget class="QRadioButton" name="Gomitobasso">
-      <property name="geometry">
-       <rect>
-        <x>310</x>
-        <y>170</y>
-        <width>121</width>
-        <height>22</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <family>.SF NS Text</family>
-        <pointsize>15</pointsize>
-        <weight>50</weight>
-        <italic>false</italic>
-        <bold>false</bold>
-       </font>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
-      </property>
-      <property name="text">
-       <string>Gomito basso</string>
-      </property>
-     </widget>
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
@@ -2470,6 +2420,56 @@
       <property name="text">
        <string>Open</string>
       </property>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>310</x>
+        <y>140</y>
+        <width>121</width>
+        <height>43</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QRadioButton" name="Gomitoalto">
+         <property name="font">
+          <font>
+           <family>.SF NS Text</family>
+           <pointsize>15</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Gomito alto</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="Gomitobasso">
+         <property name="font">
+          <font>
+           <family>.SF NS Text</family>
+           <pointsize>15</pointsize>
+           <weight>50</weight>
+           <italic>false</italic>
+           <bold>false</bold>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+         </property>
+         <property name="text">
+          <string>Gomito basso</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
      </widget>
     </widget>
     <widget class="QWidget" name="Setup">
