@@ -10,7 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d63bfc8-c3db-4d44-bd04-cb7890be4532" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/UiClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/UiClass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/qtfiles/UiClass.ui" beforeDir="false" afterPath="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/qtfiles/UiClass.ui" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,7 +28,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="435">
@@ -48,11 +49,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/UiClass.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="1655" column="11" lean-forward="true" selection-start-line="1655" selection-start-column="11" selection-end-line="1655" selection-end-column="11" />
+            <state relative-caret-position="445">
+              <caret line="1653" column="11" selection-start-line="1653" selection-start-column="11" selection-end-line="1653" selection-end-column="11" />
             </state>
           </provider>
         </entry>
@@ -113,8 +114,8 @@
         <option value="$PROJECT_DIR$/pyUi/ScorbotUI/mainUi.py" />
         <option value="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/Uiclass.py" />
         <option value="$PROJECT_DIR$/pyUi/ScorbotUI/myUiClass.py" />
-        <option value="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/UiClass.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.py" />
+        <option value="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/UiClass.py" />
       </list>
     </option>
   </component>
@@ -397,7 +398,7 @@
       <workItem from="1556552953127" duration="1525000" />
       <workItem from="1556615953401" duration="659000" />
       <workItem from="1556621020056" duration="106000" />
-      <workItem from="1556627229418" duration="5030000" />
+      <workItem from="1556627229418" duration="5369000" />
     </task>
     <task id="LOCAL-00001" summary="Home Scorebot&#10;Pack Transfert standardize">
       <created>1553794397754</created>
@@ -630,11 +631,18 @@
       <option name="project" value="LOCAL" />
       <updated>1556634270441</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Prova sistemazione grafica">
+      <created>1556634637268</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1556634637268</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="58381000" />
+    <option name="totallyTimeSpent" value="58720000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -860,17 +868,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/UiClass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="1655" column="11" lean-forward="true" selection-start-line="1655" selection-start-column="11" selection-end-line="1655" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="435">
           <caret line="29" column="11" selection-start-line="29" selection-start-column="11" selection-end-line="29" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/UiClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="445">
+          <caret line="1653" column="11" selection-start-line="1653" selection-start-column="11" selection-end-line="1653" selection-end-column="11" />
         </state>
       </provider>
     </entry>
