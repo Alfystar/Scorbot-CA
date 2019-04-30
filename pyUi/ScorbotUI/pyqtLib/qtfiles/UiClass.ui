@@ -135,7 +135,7 @@
           <widget class="QLabel" name="Encoder1_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -150,7 +150,7 @@
           <widget class="QSpinBox" name="riferimento1_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
           </widget>
@@ -166,7 +166,7 @@
           <widget class="QLabel" name="Encoder_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -178,7 +178,7 @@
           <widget class="QSpinBox" name="riferimento1_2_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
           </widget>
@@ -194,7 +194,7 @@
           <widget class="QLabel" name="Encoder3_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -203,7 +203,13 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="riferimento1_3_direct"/>
+          <widget class="QSpinBox" name="riferimento1_3_direct">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -216,7 +222,7 @@
           <widget class="QLabel" name="Ecoder4_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -228,7 +234,7 @@
           <widget class="QSpinBox" name="riferimento1_4_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
           </widget>
@@ -244,7 +250,7 @@
           <widget class="QLabel" name="Encoder5_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -256,7 +262,7 @@
           <widget class="QSpinBox" name="riferimento1_5_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
           </widget>
@@ -272,7 +278,7 @@
           <widget class="QLabel" name="Encoder6_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -281,7 +287,13 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="riferimento1_6_direct"/>
+          <widget class="QSpinBox" name="riferimento1_6_direct">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -311,7 +323,7 @@
           <widget class="QLabel" name="encrease1">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -323,7 +335,7 @@
           <widget class="QLabel" name="encrease_value1">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -339,7 +351,7 @@
           <widget class="QLabel" name="encrease2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -351,7 +363,7 @@
           <widget class="QLabel" name="encrease_value2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -367,7 +379,7 @@
           <widget class="QLabel" name="encrease3">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -382,7 +394,7 @@
           <widget class="QLabel" name="encrease_value3">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -398,7 +410,7 @@
           <widget class="QLabel" name="encrease4">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -416,7 +428,7 @@
           <widget class="QLabel" name="encrease_value4">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -432,7 +444,7 @@
           <widget class="QLabel" name="encrease5">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -444,7 +456,7 @@
           <widget class="QLabel" name="encrease_value5">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -460,7 +472,7 @@
           <widget class="QLabel" name="encrease6">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -472,7 +484,7 @@
           <widget class="QLabel" name="encrease_value6">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -490,7 +502,7 @@
         <x>190</x>
         <y>50</y>
         <width>121</width>
-        <height>271</height>
+        <height>261</height>
        </rect>
       </property>
       <property name="font">
@@ -514,7 +526,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -526,7 +538,7 @@
           <widget class="QLabel" name="passi1_direct">
            <property name="font">
             <font>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -548,7 +560,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -560,7 +572,7 @@
           <widget class="QLabel" name="passi1_2_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -582,7 +594,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -594,7 +606,7 @@
           <widget class="QLabel" name="passi1_3_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -616,7 +628,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -628,7 +640,7 @@
           <widget class="QLabel" name="passi1_4_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -650,7 +662,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -662,7 +674,7 @@
           <widget class="QLabel" name="passi1_5_direct">
            <property name="font">
             <font>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -684,7 +696,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -696,7 +708,7 @@
           <widget class="QLabel" name="passi1_6_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -741,7 +753,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -753,7 +765,7 @@
           <widget class="QLabel" name="ma1_value">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -778,7 +790,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -790,7 +802,7 @@
           <widget class="QLabel" name="ma2_value">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -812,7 +824,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -824,7 +836,7 @@
           <widget class="QLabel" name="ma3_value">
            <property name="font">
             <font>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -846,7 +858,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -858,7 +870,7 @@
           <widget class="QLabel" name="ma4_value">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -880,7 +892,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -892,7 +904,7 @@
           <widget class="QLabel" name="ma5_value">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -914,7 +926,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -926,7 +938,7 @@
           <widget class="QLabel" name="ma6_value">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1047,7 +1059,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1059,7 +1071,7 @@
           <widget class="QLabel" name="ma1_value1_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1084,7 +1096,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1096,7 +1108,7 @@
           <widget class="QLabel" name="ma2_value2_direct">
            <property name="font">
             <font>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1118,7 +1130,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1130,7 +1142,7 @@
           <widget class="QLabel" name="ma3_value3_direct">
            <property name="font">
             <font>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1152,7 +1164,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1164,7 +1176,7 @@
           <widget class="QLabel" name="ma4_value4_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1186,7 +1198,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1198,7 +1210,7 @@
           <widget class="QLabel" name="ma5_value5_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1220,7 +1232,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1232,7 +1244,7 @@
           <widget class="QLabel" name="ma6_value6_direct">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1274,7 +1286,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1286,7 +1298,7 @@
           <widget class="QLabel" name="tetaDir_1value">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1308,7 +1320,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1320,7 +1332,7 @@
           <widget class="QLabel" name="tetaDir_2value">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1342,7 +1354,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1354,7 +1366,7 @@
           <widget class="QLabel" name="tetaDir_3value">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1376,7 +1388,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1388,7 +1400,7 @@
           <widget class="QLabel" name="tetaDir_4value">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1410,7 +1422,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1422,7 +1434,7 @@
           <widget class="QLabel" name="tetaDir_5value">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1444,7 +1456,7 @@
            </property>
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1456,7 +1468,7 @@
           <widget class="QLabel" name="tetaDir_6value">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1487,7 +1499,7 @@
           <widget class="QLabel" name="Angle1_dir">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1499,7 +1511,7 @@
           <widget class="QSpinBox" name="AngleDir_1">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
           </widget>
@@ -1512,7 +1524,7 @@
           <widget class="QLabel" name="Angle2_dir">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1524,7 +1536,7 @@
           <widget class="QSpinBox" name="AngleDir_2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
           </widget>
@@ -1537,7 +1549,7 @@
           <widget class="QLabel" name="Angle3_dir">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1549,7 +1561,7 @@
           <widget class="QSpinBox" name="AngleDir_3">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
           </widget>
@@ -1562,7 +1574,7 @@
           <widget class="QLabel" name="Angle4_dir">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1574,7 +1586,7 @@
           <widget class="QSpinBox" name="AngleDir_4">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
           </widget>
@@ -1587,7 +1599,7 @@
           <widget class="QLabel" name="Angle5_dir">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1599,7 +1611,7 @@
           <widget class="QSpinBox" name="AngleDir_5">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
           </widget>
@@ -1612,7 +1624,7 @@
           <widget class="QLabel" name="Angle6_dir">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1624,7 +1636,7 @@
           <widget class="QSpinBox" name="AngleDir_6">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
           </widget>
@@ -1642,6 +1654,11 @@
         <height>271</height>
        </rect>
       </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
       <layout class="QVBoxLayout" name="VEncDir_2">
        <property name="spacing">
         <number>10</number>
@@ -1655,7 +1672,7 @@
           <widget class="QLabel" name="encrease1_2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1667,7 +1684,7 @@
           <widget class="QLabel" name="encrease_value1_2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1683,7 +1700,7 @@
           <widget class="QLabel" name="encrease2_2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1695,7 +1712,7 @@
           <widget class="QLabel" name="encrease_value2_2">
            <property name="font">
             <font>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1711,7 +1728,7 @@
           <widget class="QLabel" name="encrease3_2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1726,7 +1743,7 @@
           <widget class="QLabel" name="encrease_value3_2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1742,7 +1759,7 @@
           <widget class="QLabel" name="encrease4_2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1760,7 +1777,7 @@
           <widget class="QLabel" name="encrease_value4_2">
            <property name="font">
             <font>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1776,7 +1793,7 @@
           <widget class="QLabel" name="encrease5_2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1788,7 +1805,7 @@
           <widget class="QLabel" name="encrease_value5_2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1804,7 +1821,7 @@
           <widget class="QLabel" name="encrease6_2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1816,7 +1833,7 @@
           <widget class="QLabel" name="encrease_value6_2">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1860,7 +1877,7 @@
           <widget class="QLabel" name="alpha_6">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1869,7 +1886,13 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="alphaValue"/>
+          <widget class="QSpinBox" name="alphaValue">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -1879,7 +1902,7 @@
           <widget class="QLabel" name="beta_4">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1888,7 +1911,13 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="betaValue"/>
+          <widget class="QSpinBox" name="betaValue">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -1898,7 +1927,7 @@
           <widget class="QLabel" name="gamma_3">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1907,7 +1936,13 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="gammaValue"/>
+          <widget class="QSpinBox" name="gammaValue">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
@@ -1917,7 +1952,7 @@
           <widget class="QLabel" name="delta_3">
            <property name="font">
             <font>
-             <pointsize>14</pointsize>
+             <pointsize>12</pointsize>
             </font>
            </property>
            <property name="text">
@@ -1926,7 +1961,13 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="deltaValue"/>
+          <widget class="QSpinBox" name="deltaValue">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+          </widget>
          </item>
         </layout>
        </item>
