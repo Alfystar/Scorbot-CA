@@ -9,8 +9,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1084</width>
-    <height>639</height>
+    <width>947</width>
+    <height>439</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,30 +20,11 @@
    <string notr="true">url:(/newPrefix/Logo-Uni-Tor-Vergata.png_48x48.png)</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QLabel" name="Immagine_tor_Vergata_Grande">
-    <property name="geometry">
-     <rect>
-      <x>1010</x>
-      <y>50</y>
-      <width>111</width>
-      <height>131</height>
-     </rect>
-    </property>
-    <property name="toolTip">
-     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/Immagini/Logo-Uni-Tor-Vergata.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-    </property>
-    <property name="styleSheet">
-     <string notr="true">image: url(:/newPrefix/Logo-Uni-Tor-Vergata.jpg);</string>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-   </widget>
    <widget class="QTabWidget" name="o">
     <property name="geometry">
      <rect>
-      <x>30</x>
-      <y>20</y>
+      <x>10</x>
+      <y>10</y>
       <width>931</width>
       <height>381</height>
      </rect>
@@ -69,7 +50,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>2</number>
     </property>
     <property name="usesScrollButtons">
      <bool>false</bool>
@@ -143,7 +124,13 @@
         <number>11</number>
        </property>
        <item>
-        <layout class="QHBoxLayout" name="Motore1" stretch="0,0">
+        <layout class="QHBoxLayout" name="Motore1">
+         <property name="spacing">
+          <number>10</number>
+         </property>
+         <property name="sizeConstraint">
+          <enum>QLayout::SetDefaultConstraint</enum>
+         </property>
          <item>
           <widget class="QLabel" name="Encoder1_direct">
            <property name="font">
@@ -152,7 +139,10 @@
             </font>
            </property>
            <property name="text">
-            <string>encoder n°1</string>
+            <string>Encoder n°1</string>
+           </property>
+           <property name="scaledContents">
+            <bool>false</bool>
            </property>
           </widget>
          </item>
@@ -169,6 +159,9 @@
        </item>
        <item>
         <layout class="QHBoxLayout" name="Motore2" stretch="0,0">
+         <property name="spacing">
+          <number>10</number>
+         </property>
          <item>
           <widget class="QLabel" name="Encoder_direct">
            <property name="font">
@@ -177,7 +170,7 @@
             </font>
            </property>
            <property name="text">
-            <string>encoder n°2</string>
+            <string>Encoder n°2</string>
            </property>
           </widget>
          </item>
@@ -194,6 +187,9 @@
        </item>
        <item>
         <layout class="QHBoxLayout" name="Motore3" stretch="0,0">
+         <property name="spacing">
+          <number>10</number>
+         </property>
          <item>
           <widget class="QLabel" name="Encoder3_direct">
            <property name="font">
@@ -202,7 +198,7 @@
             </font>
            </property>
            <property name="text">
-            <string>encoder n°3</string>
+            <string>Encoder n°3</string>
            </property>
           </widget>
          </item>
@@ -213,6 +209,9 @@
        </item>
        <item>
         <layout class="QHBoxLayout" name="Motore4" stretch="0,0">
+         <property name="spacing">
+          <number>10</number>
+         </property>
          <item>
           <widget class="QLabel" name="Ecoder4_direct">
            <property name="font">
@@ -221,7 +220,7 @@
             </font>
            </property>
            <property name="text">
-            <string>encoder n°4</string>
+            <string>Encoder n°4</string>
            </property>
           </widget>
          </item>
@@ -238,6 +237,9 @@
        </item>
        <item>
         <layout class="QHBoxLayout" name="Motore5" stretch="0,0">
+         <property name="spacing">
+          <number>10</number>
+         </property>
          <item>
           <widget class="QLabel" name="Encoder5_direct">
            <property name="font">
@@ -246,7 +248,7 @@
             </font>
            </property>
            <property name="text">
-            <string>encoder n°5</string>
+            <string>Encoder n°5</string>
            </property>
           </widget>
          </item>
@@ -263,6 +265,9 @@
        </item>
        <item>
         <layout class="QHBoxLayout" name="Motore6" stretch="0,0">
+         <property name="spacing">
+          <number>10</number>
+         </property>
          <item>
           <widget class="QLabel" name="Encoder6_direct">
            <property name="font">
@@ -271,7 +276,7 @@
             </font>
            </property>
            <property name="text">
-            <string>encoder n°6</string>
+            <string>Encoder n°6</string>
            </property>
           </widget>
          </item>
@@ -2698,8 +2703,8 @@
    <widget class="QLabel" name="image">
     <property name="geometry">
      <rect>
-      <x>950</x>
-      <y>20</y>
+      <x>790</x>
+      <y>0</y>
       <width>141</width>
       <height>141</height>
      </rect>
@@ -2717,7 +2722,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1084</width>
+     <width>947</width>
      <height>22</height>
     </rect>
    </property>
