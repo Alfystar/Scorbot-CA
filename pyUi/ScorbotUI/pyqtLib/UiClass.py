@@ -152,7 +152,7 @@ class Ui_UiClass(object):
         self.Motore6.addWidget(self.riferimento1_6_direct)
         self.VEn_Dir.addLayout(self.Motore6)
         self.layoutWidget1 = QtWidgets.QWidget(self.Direct)
-        self.layoutWidget1.setGeometry(QtCore.QRect(310, 50, 161, 271))
+        self.layoutWidget1.setGeometry(QtCore.QRect(330, 40, 141, 271))
         font = QtGui.QFont()
         font.setPointSize(15)
         self.layoutWidget1.setFont(font)
@@ -254,7 +254,7 @@ class Ui_UiClass(object):
         self.horizontalLayout_18.addWidget(self.encrease_value6)
         self.VEncDir.addLayout(self.horizontalLayout_18)
         self.layoutWidget2 = QtWidgets.QWidget(self.Direct)
-        self.layoutWidget2.setGeometry(QtCore.QRect(190, 50, 111, 261))
+        self.layoutWidget2.setGeometry(QtCore.QRect(210, 40, 111, 271))
         font = QtGui.QFont()
         font.setPointSize(15)
         self.layoutWidget2.setFont(font)
@@ -384,7 +384,7 @@ class Ui_UiClass(object):
         self.horizontalLayout_30.addWidget(self.passi1_6_direct)
         self.VStepDir.addLayout(self.horizontalLayout_30)
         self.layoutWidget_5 = QtWidgets.QWidget(self.Direct)
-        self.layoutWidget_5.setGeometry(QtCore.QRect(490, 50, 131, 271))
+        self.layoutWidget_5.setGeometry(QtCore.QRect(490, 40, 131, 271))
         font = QtGui.QFont()
         font.setPointSize(15)
         self.layoutWidget_5.setFont(font)
@@ -540,7 +540,7 @@ class Ui_UiClass(object):
         self.PulsanteInvioPAginaAdvance.setStyleSheet("background-color: qlineargradient(spread:pad, x1:0.0246305, y1:0.602273, x2:1, y2:0, stop:0 rgba(0, 139, 0, 255), stop:0.655172 rgba(255, 255, 255, 255));")
         self.PulsanteInvioPAginaAdvance.setObjectName("PulsanteInvioPAginaAdvance")
         self.layoutWidget3 = QtWidgets.QWidget(self.Direct_Angular)
-        self.layoutWidget3.setGeometry(QtCore.QRect(490, 50, 111, 271))
+        self.layoutWidget3.setGeometry(QtCore.QRect(490, 40, 111, 271))
         font = QtGui.QFont()
         font.setPointSize(14)
         self.layoutWidget3.setFont(font)
@@ -672,7 +672,7 @@ class Ui_UiClass(object):
         self.horizontalLayout_24.addWidget(self.ma6_value6_direct)
         self.VmADir.addLayout(self.horizontalLayout_24)
         self.layoutWidget_7 = QtWidgets.QWidget(self.Direct_Angular)
-        self.layoutWidget_7.setGeometry(QtCore.QRect(190, 50, 111, 261))
+        self.layoutWidget_7.setGeometry(QtCore.QRect(210, 40, 111, 271))
         font = QtGui.QFont()
         font.setPointSize(16)
         self.layoutWidget_7.setFont(font)
@@ -899,7 +899,7 @@ class Ui_UiClass(object):
         self.Motore6_3.addWidget(self.AngleDir_6)
         self.VEn_Dir_3.addLayout(self.Motore6_3)
         self.layoutWidget_8 = QtWidgets.QWidget(self.Direct_Angular)
-        self.layoutWidget_8.setGeometry(QtCore.QRect(310, 50, 161, 271))
+        self.layoutWidget_8.setGeometry(QtCore.QRect(330, 40, 141, 271))
         font = QtGui.QFont()
         font.setPointSize(12)
         self.layoutWidget_8.setFont(font)
@@ -1652,5 +1652,3 @@ class Ui_UiClass(object):
 
 
 import logo
-
-
