@@ -37,8 +37,8 @@ class MyUiQt (Ui_UiClass):
         """LISTA Setup"""
 
         """Prima pagina"""
-        for i in self.encoder1:
-            i.setMaximum(20000) #il 20000 e' da prendere dalle impostazioni
+	for i in self.encoder1:
+          i.setMaximum(20000) #il 20000 e' da prendere dalle impostazioni
         
         for i in self.encoder1:
           i.setMinimum(20000) #il 20000 e' da prendere dalle impostazioni
