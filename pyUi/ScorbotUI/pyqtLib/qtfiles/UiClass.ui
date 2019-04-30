@@ -9,7 +9,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>947</width>
+    <width>992</width>
     <height>439</height>
    </rect>
   </property>
@@ -23,7 +23,7 @@
    <widget class="QTabWidget" name="o">
     <property name="geometry">
      <rect>
-      <x>10</x>
+      <x>30</x>
       <y>10</y>
       <width>931</width>
       <height>381</height>
@@ -41,7 +41,7 @@
      <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;B&lt;/p&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(244, 242, 246);</string>
+     <string notr="true">background-color: rgb(200, 200, 200);</string>
     </property>
     <property name="tabPosition">
      <enum>QTabWidget::North</enum>
@@ -126,7 +126,7 @@
        <item>
         <layout class="QHBoxLayout" name="Motore1">
          <property name="spacing">
-          <number>20</number>
+          <number>0</number>
          </property>
          <property name="sizeConstraint">
           <enum>QLayout::SetDefaultConstraint</enum>
@@ -160,7 +160,7 @@
        <item>
         <layout class="QHBoxLayout" name="Motore2" stretch="0,0">
          <property name="spacing">
-          <number>20</number>
+          <number>0</number>
          </property>
          <item>
           <widget class="QLabel" name="Encoder_direct">
@@ -188,7 +188,7 @@
        <item>
         <layout class="QHBoxLayout" name="Motore3" stretch="0,0">
          <property name="spacing">
-          <number>20</number>
+          <number>0</number>
          </property>
          <item>
           <widget class="QLabel" name="Encoder3_direct">
@@ -216,7 +216,7 @@
        <item>
         <layout class="QHBoxLayout" name="Motore4" stretch="0,0">
          <property name="spacing">
-          <number>20</number>
+          <number>0</number>
          </property>
          <item>
           <widget class="QLabel" name="Ecoder4_direct">
@@ -244,7 +244,7 @@
        <item>
         <layout class="QHBoxLayout" name="Motore5" stretch="0,0">
          <property name="spacing">
-          <number>20</number>
+          <number>0</number>
          </property>
          <item>
           <widget class="QLabel" name="Encoder5_direct">
@@ -272,7 +272,7 @@
        <item>
         <layout class="QHBoxLayout" name="Motore6" stretch="0,0">
          <property name="spacing">
-          <number>20</number>
+          <number>0</number>
          </property>
          <item>
           <widget class="QLabel" name="Encoder6_direct">
@@ -302,7 +302,7 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>320</x>
+        <x>310</x>
         <y>50</y>
         <width>161</width>
         <height>271</height>
@@ -501,7 +501,7 @@
        <rect>
         <x>190</x>
         <y>50</y>
-        <width>121</width>
+        <width>111</width>
         <height>261</height>
        </rect>
       </property>
@@ -1261,8 +1261,8 @@
        <rect>
         <x>190</x>
         <y>50</y>
-        <width>121</width>
-        <height>271</height>
+        <width>111</width>
+        <height>261</height>
        </rect>
       </property>
       <property name="font">
@@ -1648,7 +1648,7 @@
      <widget class="QWidget" name="layoutWidget_8">
       <property name="geometry">
        <rect>
-        <x>320</x>
+        <x>310</x>
         <y>50</y>
         <width>161</width>
         <height>271</height>
@@ -2032,14 +2032,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;
+            <string notr="true">
 </string>
            </property>
            <property name="text">
@@ -2052,14 +2052,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>0</string>
@@ -2075,14 +2075,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>θ2:  </string>
@@ -2094,14 +2094,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>0</string>
@@ -2117,14 +2117,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>θ3:  </string>
@@ -2136,14 +2136,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>0</string>
@@ -2159,14 +2159,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;
+            <string notr="true">
 </string>
            </property>
            <property name="text">
@@ -2179,14 +2179,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>0</string>
@@ -2202,14 +2202,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>θ5:  </string>
@@ -2221,14 +2221,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>0</string>
@@ -2264,27 +2264,34 @@
       <property name="geometry">
        <rect>
         <x>70</x>
-        <y>30</y>
+        <y>40</y>
         <width>121</width>
-        <height>261</height>
+        <height>241</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>-1</number>
+       </property>
        <item>
         <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetDefaultConstraint</enum>
+         </property>
          <item>
           <widget class="QLabel" name="Xdes">
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
+             <kerning>true</kerning>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Xdes:</string>
@@ -2296,14 +2303,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
           </widget>
          </item>
@@ -2316,14 +2323,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Ydes:</string>
@@ -2335,14 +2342,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
           </widget>
          </item>
@@ -2355,14 +2362,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
            <property name="text">
             <string>Zdes:</string>
@@ -2374,14 +2381,14 @@
            <property name="font">
             <font>
              <family>.SF NS Text</family>
-             <pointsize>15</pointsize>
+             <pointsize>12</pointsize>
              <weight>50</weight>
              <italic>false</italic>
              <bold>false</bold>
             </font>
            </property>
            <property name="styleSheet">
-            <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+            <string notr="true"/>
            </property>
           </widget>
          </item>
@@ -2421,13 +2428,13 @@
        <string>Open</string>
       </property>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>310</x>
-        <y>140</y>
-        <width>121</width>
-        <height>43</height>
+        <x>300</x>
+        <y>70</y>
+        <width>171</width>
+        <height>61</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_3">
@@ -2436,14 +2443,14 @@
          <property name="font">
           <font>
            <family>.SF NS Text</family>
-           <pointsize>15</pointsize>
+           <pointsize>12</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+          <string notr="true"/>
          </property>
          <property name="text">
           <string>Gomito alto</string>
@@ -2452,17 +2459,23 @@
        </item>
        <item>
         <widget class="QRadioButton" name="Gomitobasso">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
          <property name="font">
           <font>
            <family>.SF NS Text</family>
-           <pointsize>15</pointsize>
+           <pointsize>12</pointsize>
            <weight>50</weight>
            <italic>false</italic>
            <bold>false</bold>
           </font>
          </property>
          <property name="styleSheet">
-          <string notr="true">font: 15pt &quot;.SF NS Text&quot;;</string>
+          <string notr="true"/>
          </property>
          <property name="text">
           <string>Gomito basso</string>
@@ -2744,8 +2757,8 @@
    <widget class="QLabel" name="image">
     <property name="geometry">
      <rect>
-      <x>790</x>
-      <y>0</y>
+      <x>800</x>
+      <y>20</y>
       <width>141</width>
       <height>141</height>
      </rect>
@@ -2763,7 +2776,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>947</width>
+     <width>992</width>
      <height>22</height>
     </rect>
    </property>
