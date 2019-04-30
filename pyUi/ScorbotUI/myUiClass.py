@@ -78,7 +78,7 @@ class MyUiQt (Ui_UiClass):
         self.alphaValue.setMinimum(0)
         self.betaValue.setMinimum(0)
         self.gammaValue.setMinimum(0)
-        self.deltaValue.setMinimum(0)
+        self.deltaValue.setMinimum(0) #setValue(1)
 
 
         """Terza pagina"""
