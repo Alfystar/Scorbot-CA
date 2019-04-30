@@ -41,7 +41,7 @@ class MyUiQt (Ui_UiClass):
             i.setMaximum(20000) #il 20000 e' da prendere dalle impostazioni
         
         for i in self.encoder1:
-          i.setMinimum(20000) #il 20000 e' da prendere dalle impostazioni
+            i.setMinimum(-20000) #il 20000 e' da prendere dalle impostazioni
         
         """Seconda pagina"""
         #definizione valori massimi e minimi
@@ -49,13 +49,13 @@ class MyUiQt (Ui_UiClass):
           i.setMaximum(20000) #il 20000 e' da prendere dalle impostazioni
         
         for i in self.angle:
-          i.setMinimum(20000) #il 20000 e' da prendere dalle impostazioni
+          i.setMinimum(-20000) #il 20000 e' da prendere dalle impostazioni
         
         for i in self.param:
-          i.setMaximum(20000) #il 20000 e' da prendere dalle impostazioni
+          i.setMaximum(10) #il 20000 e' da prendere dalle impostazioni
         
         for i in self.param:
-          i.setMinimum(20000) #il 20000 e' da prendere dalle impostazioni
+          i.setMinimum(0.1) #il 20000 e' da prendere dalle impostazioni
         
 
 
@@ -65,7 +65,7 @@ class MyUiQt (Ui_UiClass):
           i.setMaximum(20000) #il 20000 e' da prendere dalle impostazioni
         
         for i in self.inVal:
-          i.setMinimum(20000) #il 20000 e' da prendere dalle impostazioni
+          i.setMinimum(-20000) #il 20000 e' da prendere dalle impostazioni
         
 
 
