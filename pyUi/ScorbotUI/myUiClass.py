@@ -218,44 +218,43 @@ class MyUiQt (Ui_UiClass):
 
         # operazioni matematiche per ricavare i theta.
         # l1, l2, l3, d1 e betad vanno misurati ed impostati
-        l1=16
-        l2= 220
-        l3=220
-        d1=340
-        d5=151
+
+        l1 = 3
+        l2 = 22
+        l3 = 22
+        d1 = 35
+        d5 = 14
         betad=45
         omegad=0
 
-
+        bdr= math.radians(betad)
         theta1 = math.degrees(math.atan2(self.inVal[1], self.inVal[0]))
-        A1 = self.inVal[0] * math.degrees(math.cos(theta1)) + self.inVal[1] * math.degrees(math.sin(theta1)) -d5 * math.degrees(math.cos(betad)) - l1
-        A2 = d1 - self.inVal[2] -d5*math.degrees(math.sin(betad))
-        A3 = (A1**2) + (A2**2) - (l2**2) - (l3**2)
+        theta1r= math.radians(theta1)
+        A1= self.inVal[0]* (math.cos(theta1r)) +self.inVal[1]*(math.sin(theta1r)) -d5*(math.cos(bdr)) -l1
+        A2 = d1 - self.inVal[2] -d5*(math.sin(bdr))
+        A3 = (A1*A1) + (A2*A2) - (l2*l2) - (l3*l3)
         A4 = 2 * l2 * l3
         A5 = A3 / A4
-        if abs(A5)>1:
-            print("Ilaria lo deve ancora scrivere!")
+        theta3 = math.acos(A5)
 
-        theta3 = math.degrees(math.acos(A5))
-        A6 = l2 + l3 * math.cos(theta3) * A2 - l3 * math.sin(theta3) * A1
-        A7 = (l2 + l3 * math.cos(theta3)) * A1 + l3 * math.sin(theta3) * A2
-        theta2 = math.degrees(math.atan2(A6, A7))
-        theta4 = math.degrees(betad - theta2 - theta3 - 90)
-        theta5=omegad
 
         if self.Gomitobasso.isChecked() == True:
             theta3=math.degrees( -1* abs(theta3))
-            A7 = (l2 + l3 * math.cos(theta3)) * A1 + l3 * math.sin(theta3) * A2
-            A6 = l2 + l3 * math.cos(theta3) * A2 - l3 * math.sin(theta3) * A1
-            theta2 = math.degrees(math.atan2(A6, A7))
-            theta4 = math.degrees(betad - theta2 - theta3 - 90)
-        else:
-            theta3 = abs(math.degrees(math.acos(A5)))
-            A6 = l2 + l3 * math.cos(theta3) * A2 - l3 * math.sin(theta3) * A1
-            A7 = (l2 + l3 * math.cos(theta3)) * A1 + l3 * math.sin(theta3) * A2
+            theta3r1 = math.radians(theta3)
+            A7 = (l2 + l3 * math.cos(theta3r1)) * A1 + l3 * math.sin(theta3r1) * A2
+            A6 = (l2 + l3 * math.cos(theta3r1)) * A2 - l3 * math.sin(theta3r1) * A1
             theta2 = math.degrees(math.atan2(A6, A7))
             theta4 = betad - theta2 - theta3 - 90
             theta5 = omegad
+        else:
+            theta3 = abs(math.degrees(math.acos(A5)))
+            theta3r = math.radians(theta3)
+            A6 = (l2 + l3 * math.cos(theta3r))* A2 - l3 * math.sin(theta3r) * A1
+            A7 = (l2 + l3 * math.cos(theta3r)) * A1 + l3 * math.sin(theta3r) * A2
+            theta2 = math.degrees(math.atan2(A6, A7))
+            theta4 = betad - theta2 - theta3 - 90
+            theta5 = omegad
+
 
         self.teta1_inverse_value.setText(str(theta1))
         self.teta2_inverse_value.setText(str(theta2))
