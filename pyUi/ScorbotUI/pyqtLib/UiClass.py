@@ -1617,14 +1617,7 @@ class Ui_UiClass(object):
         self.o.setTabText(self.o.indexOf(self.Setup), _translate("UiClass", "Setup"))
 
 
-import logo_rc
+import logo
 
 
-if __name__ == "__main__":
-    import sys
-    app = QtWidgets.QApplication(sys.argv)
-    UiClass = QtWidgets.QMainWindow()
-    ui = Ui_UiClass()
-    ui.setupUi(UiClass)
-    UiClass.show()
-    sys.exit(app.exec_())
+
