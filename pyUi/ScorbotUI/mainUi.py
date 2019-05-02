@@ -54,8 +54,6 @@ class InputThread (Thread):
 
 if __name__ == '__main__':
 
-	
-
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = QtWidgets.QMainWindow()
     ui = MyUiQt(MainWindow)
