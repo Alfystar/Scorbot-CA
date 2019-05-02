@@ -1,6 +1,5 @@
 import math
 
-
 from typing import List
 
 from PyQt5 import QtCore, QtGui, QtWidgets
@@ -33,7 +32,7 @@ class MyUiQt (Ui_UiClass):
 
         """Terza pagina"""
         # manca Ydes nella lista perché dà errore
-        self.inVal=[self.Xdes_spin_Box,self.Ydes_spin_box,self.Zdes_spin_Box]
+        self.inVal=[self.Xdes_spin_Box,self.Ydes_spin_box,self.Zdes_spin_Box] #
 
         """LISTA Setup"""
 
@@ -45,7 +44,7 @@ class MyUiQt (Ui_UiClass):
             i.setMinimum(-20000) #il 20000 e' da prendere dalle impostazioni
 
         """Seconda pagina"""
-           #definizione valori massimi e minimi
+        #definizione valori massimi e minimi
         for i in self.angle:
             i.setMaximum(20000) #il 20000 e' da prendere dalle impostazioni
 
@@ -63,10 +62,13 @@ class MyUiQt (Ui_UiClass):
         """Terza pagina"""
         #definizione valori massimi e minimi
         for i in self.inVal:
-            i.setMaximum(20000) #il 20000 e' da prendere dalle impostazioni
+          i.setMaximum(20000) #il 20000 e' da prendere dalle impostazioni
 
         for i in self.inVal:
-            i.setMinimum(-20000) #il 20000 e' da prendere dalle impostazioni
+          i.setMinimum(-20000) #il 20000 e' da prendere dalle impostazioni
+
+
+
         """LISTA Eventi"""
         # premendo invio, metto nella lista i passi encoder da aggiungere  quelli attuali
         self.Pulsante_invio_pagina_Basics.clicked.connect(self.encoderValue)  #prima pagina
@@ -75,51 +77,25 @@ class MyUiQt (Ui_UiClass):
         self.PulsanteInvioPAgina_Inverse.clicked.connect((self.inverseValue))
 
     def inserisci(self,lista,tipo):
-        if tipo==0:
-            for i in range(0,len(self.setup)):
-                self.setup[i].setText(str(lista[i]))
+     if tipo==0:
+       for i in range(0,len(self.setup)):
+          self.setup[i].setText(str(lista[i]))
 
-    """ aggiungere per le impostazioni
-    else:
-    for i in range(0,len(self.setup)):
-        self.setup[i].setText(str(lista[i]))
-    """
+     """ aggiungere per le impostazioni
+     else:
+       for i in range(0,len(self.setup)):
+          self.setup[i].setText(str(lista[i]))
+     """
 
     def encoderValue(self):
-        lista=[]
-        for i in range(0,len(self.encoder1)):
-            lista.append(self.encoder1[i].value())
-            invia(lista,"e")
-
-    """    encrease = []  # la variabile encrease mi permette di stampare l'incremento effettivo di ogni encoder
-
-        encrease.append(self.encoder1[0] - self.setup[0])
-        encrease.append(self.encoder1[1] - self.setup[1])
-        encrease.append(self.encoder1[2] - self.setup[2])
-        encrease.append(self.encoder1[3] - self.setup[3])
-        encrease.append(self.encoder1[4] - self.setup[4])
-        encrease.append(self.encoder1[5] - self.setup[5])
-
-
-        self.encrease_value1.setText(str(encrease[0]))
-        self.encrease_value2.setText(str(encrease[1]))
-        self.encrease_value3.setText(str(encrease[2]))
-        self.encrease_value4.setText(str(encrease[3]))
-        self.encrease_value5.setText(str(encrease[4]))
-        self.encrease_value6.setText(str(encrease[5]))
+      lista=[]
+      for i in range(0,len(self.encoder1)):
+        lista.append(self.encoder1[i].value())
+      invia(lista,"e")
 
 
 
-        self.setup[0] = int(self.passi1_direct.text())
-        self.setup[1] = int(self.passi1_2_direct.text())
-        self.setup[2] = int(self.passi1_3_direct.text())
-        self.setup[3] = int(self.passi1_4_direct.text())
-        self.setup[4] = int(self.passi1_5_direct.text())
-        self.setup[5] = int(self.passi1_6_direct.text())
-
-    """
     def angleValue(self):
-
         self.angle[0] = self.AngleDir_1.value()
         self.angle[1] = self.AngleDir_2.value()
         self.angle[2] = self.AngleDir_3.value()
@@ -158,8 +134,6 @@ class MyUiQt (Ui_UiClass):
         self.theta[5] = int(self.tetaDir_6value.text())
 
 
-
-
     def parametersValue(self):
 
         self.param[0]= self.alphaValue.value()
@@ -167,11 +141,6 @@ class MyUiQt (Ui_UiClass):
         self.param[2] = self.gammaValue.value()
         self.param[3] = self.deltaValue.value()
 
-        self.passi1_direct.setText(str(-self.angle[0]/self.param[0]))
-        self.passi1_2_direct.setText(str(-self.angle[1]/self.param[1]))
-        self.passi1_3_direct.setText(str((self.angle[1]+ self.angle[2])/self.param[1]))
-        self.passi1_4_direct.setText(str(0.5*(self.angle[1]+ self.angle[2]+ self.angle[3])/self.param[2] + self.angle[4]/self.param[3]))
-        self.passi1_5_direct.setText(str(0.5*(self.angle[4]/self.param[3]-(self.angle[1]+self.angle[2]+self.angle[3])/self.param[2])))
 
 
     def inverseValue(self):
