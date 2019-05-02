@@ -34,39 +34,42 @@ class MyUiQt (Ui_UiClass):
         # manca Ydes nella lista perché dà errore
         self.inVal=[self.Xdes_spin_Box,self.Ydes_spin_box,self.Zdes_spin_Box] #
 
+
+        """Quarta pagina"""
+
         """LISTA Setup"""
 
         """Prima pagina"""
         for i in self.encoder1:
             i.setMaximum(20000) #il 20000 e' da prendere dalle impostazioni
-        
+
         for i in self.encoder1:
             i.setMinimum(-20000) #il 20000 e' da prendere dalle impostazioni
-        
+
         """Seconda pagina"""
         #definizione valori massimi e minimi
         for i in self.angle:
-          i.setMaximum(20000) #il 20000 e' da prendere dalle impostazioni
-        
+            i.setMaximum(20000) #il 20000 e' da prendere dalle impostazioni
+
         for i in self.angle:
-          i.setMinimum(-20000) #il 20000 e' da prendere dalle impostazioni
-        
+            i.setMinimum(-20000) #il 20000 e' da prendere dalle impostazioni
+
         for i in self.param:
-          i.setMaximum(10) #il 20000 e' da prendere dalle impostazioni
-        
+            i.setMaximum(10) #il 20000 e' da prendere dalle impostazioni
+
         for i in self.param:
-          i.setMinimum(0.1) #il 20000 e' da prendere dalle impostazioni
-        
+            i.setMinimum(0.1) #il 20000 e' da prendere dalle impostazioni
+
 
 
         """Terza pagina"""
         #definizione valori massimi e minimi
         for i in self.inVal:
           i.setMaximum(20000) #il 20000 e' da prendere dalle impostazioni
-        
+
         for i in self.inVal:
           i.setMinimum(-20000) #il 20000 e' da prendere dalle impostazioni
-        
+
 
 
         """LISTA Eventi"""
@@ -80,21 +83,21 @@ class MyUiQt (Ui_UiClass):
      if tipo==0:
        for i in range(0,len(self.setup)):
           self.setup[i].setText(str(lista[i]))
-    
+
      """ aggiungere per le impostazioni
      else:
        for i in range(0,len(self.setup)):
           self.setup[i].setText(str(lista[i]))
      """
- 
-    def encoderValue(self): 
+
+    def encoderValue(self):
       lista=[]
       for i in range(0,len(self.encoder1)):
         lista.append(self.encoder1[i].value())
       invia(lista,"e")
 
 
-      
+
     def angleValue(self):
         self.angle[0] = self.AngleDir_1.value()
         self.angle[1] = self.AngleDir_2.value()
@@ -141,38 +144,62 @@ class MyUiQt (Ui_UiClass):
         self.param[2] = self.gammaValue.value()
         self.param[3] = self.deltaValue.value()
 
+        self.riferimento1_direct.setText(str(-self.angle[0]/self.param[0]))
+        self.riferimento1_2direct.setText(str(-self.angle[1]/self.param[1]))
+        self.riferimento1_3direct.setText(str((self.angle[1]+ self.angle[2])/self.param[1]))
+        self.riferimento1_4direct.setText(str(0.5*(self.angle[1]+ self.angle[2]+ self.angle[3])/self.param[2] + self.angle[4]/self.param[3]))
+        self.riferimento1_5direct.setText(str(0.5*(self.angle[4]/self.param[3]-(self.angle[1]+self.angle[2]+self.angle[3])/self.param[2])))
+
 
 
     def inverseValue(self):
 
         self.inVal[0]=self.Xdes_spin_Box.value()
         self.inVal[1] = self.Ydes_spin_box.value()
-        self.inVal[1] = self.Zdes_spin_Box.value()
+        self.inVal[2] = self.Zdes_spin_Box.value()
 
-        # operazioni matematiche per ricavare i theta.
-        # l1, l2, l3, d1 e betad vanno misurati ed impostati
-        l1=3
-        l2= 22
-        l3=22
-        d1=11
-        betad=1
-        omegad=10
-        theta1 = math.atan2(self.inVal[1], self.inVal[0])
-        A1 = self.inVal[0] * math.cos(theta1) + self.inVal[1] * math.sin(theta1) - l1
-        A2 = d1 - self.inVal[2]  #  per far si che il programma giri mettere inVal[1]
-        A3 = (A1 * A1) + (A2 * A2) - (l2 * l2) - (l3 * l3)
+    # operazioni matematiche per ricavare i theta.
+    # l1, l2, l3, d1 e betad vanno misurati ed impostati
+
+        l1 = 3
+        l2 = 22
+        l3 = 22
+        d1 = 35
+        d5 = 14
+        betad=45
+        omegad=0
+
+        bdr= math.radians(betad)
+        theta1 = math.degrees(math.atan2(self.inVal[1], self.inVal[0]))
+        theta1r= math.radians(theta1)
+        A1= self.inVal[0]* (math.cos(theta1r)) +self.inVal[1]*(math.sin(theta1r)) -d5*(math.cos(bdr)) -l1
+        A2 = d1 - self.inVal[2] -d5*(math.sin(bdr))
+        A3 = (A1*A1) + (A2*A2) - (l2*l2) - (l3*l3)
         A4 = 2 * l2 * l3
         A5 = A3 / A4
         theta3 = math.acos(A5)
-        A6 = l2 + l3 * math.cos(theta3) * A2 - l3 * math.sin(theta3) * A1
-        A7 = (l2 + l3 * math.cos(theta3)) * A1 + l3 * math.sin(theta3) * A2
-        theta2 = math.atan2(A6, A7)
-        theta4 = betad - theta2 - theta3 - 90
-        theta5=omegad
+
+
+        if self.Gomitobasso.isChecked() == True:
+            theta3=math.degrees( -1* abs(theta3))
+            theta3r1 = math.radians(theta3)
+            A7 = (l2 + l3 * math.cos(theta3r1)) * A1 + l3 * math.sin(theta3r1) * A2
+            A6 = (l2 + l3 * math.cos(theta3r1)) * A2 - l3 * math.sin(theta3r1) * A1
+            theta2 = math.degrees(math.atan2(A6, A7))
+            theta4 = betad - theta2 - theta3 - 90
+            theta5 = omegad
+        else:
+            theta3 = abs(math.degrees(math.acos(A5)))
+            theta3r = math.radians(theta3)
+            A6 = (l2 + l3 * math.cos(theta3r))* A2 - l3 * math.sin(theta3r) * A1
+            A7 = (l2 + l3 * math.cos(theta3r)) * A1 + l3 * math.sin(theta3r) * A2
+            theta2 = math.degrees(math.atan2(A6, A7))
+            theta4 = betad - theta2 - theta3 - 90
+            theta5 = omegad
 
 
         self.teta1_inverse_value.setText(str(theta1))
         self.teta2_inverse_value.setText(str(theta2))
         self.teta3_inverse_value.setText(str(theta3))
         self.teta4_inverse_value.setText(str(theta4))
-        self.teta5_invers_value.setText(str(theta5)) # dà lo stesso errore di Ydes quindi  per far si che il programma giri impostarlo come commento
+        self.teta5_invers_value.setText(str(theta5))
