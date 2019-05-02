@@ -50,7 +50,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>2</number>
     </property>
     <property name="usesScrollButtons">
      <bool>false</bool>
@@ -950,38 +950,6 @@
        </item>
       </layout>
      </widget>
-     <widget class="QPushButton" name="Open1">
-      <property name="geometry">
-       <rect>
-        <x>690</x>
-        <y>200</y>
-        <width>81</width>
-        <height>32</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 247);</string>
-      </property>
-      <property name="text">
-       <string>Open</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="Close1">
-      <property name="geometry">
-       <rect>
-        <x>790</x>
-        <y>200</y>
-        <width>81</width>
-        <height>32</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Close</string>
-      </property>
-     </widget>
     </widget>
     <widget class="QWidget" name="Direct_Angular">
      <attribute name="title">
@@ -1861,270 +1829,11 @@
        <string/>
       </property>
      </widget>
-     <widget class="QPushButton" name="open2">
-      <property name="geometry">
-       <rect>
-        <x>690</x>
-        <y>200</y>
-        <width>81</width>
-        <height>32</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 247);</string>
-      </property>
-      <property name="text">
-       <string>Open</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="close2">
-      <property name="geometry">
-       <rect>
-        <x>790</x>
-        <y>200</y>
-        <width>81</width>
-        <height>32</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Close</string>
-      </property>
-     </widget>
     </widget>
     <widget class="QWidget" name="Inverse">
      <attribute name="title">
       <string>Inverse  Kinematics</string>
      </attribute>
-     <widget class="QWidget" name="layoutWidget_4">
-      <property name="geometry">
-       <rect>
-        <x>490</x>
-        <y>40</y>
-        <width>121</width>
-        <height>251</height>
-       </rect>
-      </property>
-      <property name="font">
-       <font>
-        <pointsize>14</pointsize>
-       </font>
-      </property>
-      <layout class="QVBoxLayout" name="VerticalLayout_teta_Invere">
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_4">
-         <item>
-          <widget class="QLabel" name="Teta1_inverse">
-           <property name="font">
-            <font>
-             <family>.SF NS Text</family>
-             <pointsize>12</pointsize>
-             <weight>50</weight>
-             <italic>false</italic>
-             <bold>false</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true"/>
-           </property>
-           <property name="text">
-            <string>θ1:  </string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="teta1_inverse_value">
-           <property name="font">
-            <font>
-             <family>.SF NS Text</family>
-             <pointsize>12</pointsize>
-             <weight>50</weight>
-             <italic>false</italic>
-             <bold>false</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true"/>
-           </property>
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_6">
-         <item>
-          <widget class="QLabel" name="teta2_inverse">
-           <property name="font">
-            <font>
-             <family>.SF NS Text</family>
-             <pointsize>12</pointsize>
-             <weight>50</weight>
-             <italic>false</italic>
-             <bold>false</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true"/>
-           </property>
-           <property name="text">
-            <string>θ2:  </string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="teta2_inverse_value">
-           <property name="font">
-            <font>
-             <family>.SF NS Text</family>
-             <pointsize>12</pointsize>
-             <weight>50</weight>
-             <italic>false</italic>
-             <bold>false</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true"/>
-           </property>
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_5">
-         <item>
-          <widget class="QLabel" name="teta3_inverse">
-           <property name="font">
-            <font>
-             <family>.SF NS Text</family>
-             <pointsize>12</pointsize>
-             <weight>50</weight>
-             <italic>false</italic>
-             <bold>false</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true"/>
-           </property>
-           <property name="text">
-            <string>θ3:  </string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="teta3_inverse_value">
-           <property name="font">
-            <font>
-             <family>.SF NS Text</family>
-             <pointsize>12</pointsize>
-             <weight>50</weight>
-             <italic>false</italic>
-             <bold>false</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true"/>
-           </property>
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_8">
-         <item>
-          <widget class="QLabel" name="teta4_inverse">
-           <property name="font">
-            <font>
-             <family>.SF NS Text</family>
-             <pointsize>12</pointsize>
-             <weight>50</weight>
-             <italic>false</italic>
-             <bold>false</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true"/>
-           </property>
-           <property name="text">
-            <string>θ4:  </string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="teta4_inverse_value">
-           <property name="font">
-            <font>
-             <family>.SF NS Text</family>
-             <pointsize>12</pointsize>
-             <weight>50</weight>
-             <italic>false</italic>
-             <bold>false</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true"/>
-           </property>
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-       <item>
-        <layout class="QHBoxLayout" name="horizontalLayout_7">
-         <item>
-          <widget class="QLabel" name="teta5_inverse">
-           <property name="font">
-            <font>
-             <family>.SF NS Text</family>
-             <pointsize>12</pointsize>
-             <weight>50</weight>
-             <italic>false</italic>
-             <bold>false</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true"/>
-           </property>
-           <property name="text">
-            <string>θ5:  </string>
-           </property>
-          </widget>
-         </item>
-         <item>
-          <widget class="QLabel" name="teta5_invers_value">
-           <property name="font">
-            <font>
-             <family>.SF NS Text</family>
-             <pointsize>12</pointsize>
-             <weight>50</weight>
-             <italic>false</italic>
-             <bold>false</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true"/>
-           </property>
-           <property name="text">
-            <string>0</string>
-           </property>
-          </widget>
-         </item>
-        </layout>
-       </item>
-      </layout>
-     </widget>
      <widget class="QPushButton" name="PulsanteInvioPAgina_Inverse">
       <property name="geometry">
        <rect>
@@ -2149,7 +1858,7 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>70</x>
+        <x>30</x>
         <y>40</y>
         <width>121</width>
         <height>241</height>
@@ -2282,43 +1991,11 @@
        </item>
       </layout>
      </widget>
-     <widget class="QPushButton" name="close3">
-      <property name="geometry">
-       <rect>
-        <x>790</x>
-        <y>200</y>
-        <width>81</width>
-        <height>32</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 255);</string>
-      </property>
-      <property name="text">
-       <string>Close</string>
-      </property>
-     </widget>
-     <widget class="QPushButton" name="open3">
-      <property name="geometry">
-       <rect>
-        <x>690</x>
-        <y>200</y>
-        <width>81</width>
-        <height>32</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">background-color: rgb(255, 255, 247);</string>
-      </property>
-      <property name="text">
-       <string>Open</string>
-      </property>
-     </widget>
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>250</x>
-        <y>110</y>
+        <x>710</x>
+        <y>60</y>
         <width>171</width>
         <height>61</height>
        </rect>
@@ -2367,6 +2044,455 @@
           <string>Gomito basso</string>
          </property>
         </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_2">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>40</y>
+        <width>125</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_7">
+       <property name="spacing">
+        <number>-1</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_4">
+         <property name="sizeConstraint">
+          <enum>QLayout::SetDefaultConstraint</enum>
+         </property>
+         <item>
+          <widget class="QLabel" name="Xattuale">
+           <property name="font">
+            <font>
+             <family>.SF NS Text</family>
+             <pointsize>12</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+             <kerning>true</kerning>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Xattuale:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="Xattuale_value">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_5">
+         <item>
+          <widget class="QLabel" name="Yattuale">
+           <property name="font">
+            <font>
+             <family>.SF NS Text</family>
+             <pointsize>12</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Yattuale:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="Yattuale_value">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_6">
+         <item>
+          <widget class="QLabel" name="Zattuale">
+           <property name="font">
+            <font>
+             <family>.SF NS Text</family>
+             <pointsize>12</pointsize>
+             <weight>50</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true"/>
+           </property>
+           <property name="text">
+            <string>Zattuale:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="Zattuale_value">
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_4">
+      <property name="geometry">
+       <rect>
+        <x>540</x>
+        <y>30</y>
+        <width>111</width>
+        <height>271</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+       </font>
+      </property>
+      <layout class="QVBoxLayout" name="VmADir_4">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_73">
+         <item>
+          <widget class="QLabel" name="mA1_inv">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>mA:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="mA1_inv_v">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_74">
+         <item>
+          <widget class="QLabel" name="mA2_inv">
+           <property name="enabled">
+            <bool>true</bool>
+           </property>
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>mA:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="mA2_inv_v">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_75">
+         <item>
+          <widget class="QLabel" name="mA3_inv">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>mA:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="mA3_inv_v">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_76">
+         <item>
+          <widget class="QLabel" name="mA4_inv">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>mA:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="mA4_inv_v">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_77">
+         <item>
+          <widget class="QLabel" name="mA5_inv">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>mA:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="mA5_inv_v">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_78">
+         <item>
+          <widget class="QLabel" name="mA6_inv">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>mA:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="mA6_inv_v">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="layoutWidget_10">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>40</y>
+        <width>141</width>
+        <height>241</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <layout class="QVBoxLayout" name="VEncDir_3">
+       <property name="spacing">
+        <number>10</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_79">
+         <item>
+          <widget class="QLabel" name="encrease1_3">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encrease of :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="encrease1_inv">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_80">
+         <item>
+          <widget class="QLabel" name="encrease2_3">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encrease of :</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="encrease2_inv">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_81">
+         <item>
+          <widget class="QLabel" name="encrease3_3">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>encrease of :</string>
+           </property>
+           <property name="indent">
+            <number>-1</number>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="encrease3_inv">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>0</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
        </item>
       </layout>
      </widget>
