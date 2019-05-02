@@ -141,6 +141,12 @@ class MyUiQt (Ui_UiClass):
         self.param[2] = self.gammaValue.value()
         self.param[3] = self.deltaValue.value()
 
+        self.riferimento1_direct.setText(str(-self.angle[0]/self.param[0]))
+        self.riferimento1_2direct.setText(str(-self.angle[1]/self.param[1]))
+        self.riferimento1_3direct.setText(str((self.angle[1]+ self.angle[2])/self.param[1]))
+        self.riferimento1_4direct.setText(str(0.5*(self.angle[1]+ self.angle[2]+ self.angle[3])/self.param[2] + self.angle[4]/self.param[3]))
+        self.riferimento1_5direct.setText(str(0.5*(self.angle[4]/self.param[3]-(self.angle[1]+self.angle[2]+self.angle[3])/self.param[2])))
+
 
 
     def inverseValue(self):
