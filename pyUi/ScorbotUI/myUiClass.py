@@ -34,6 +34,9 @@ class MyUiQt (Ui_UiClass):
         # manca Ydes nella lista perché dà errore
         self.inVal=[self.Xdes_spin_Box,self.Ydes_spin_box,self.Zdes_spin_Box] #
 
+
+        """Quarta pagina"""
+
         """LISTA Setup"""
 
         """Prima pagina"""
