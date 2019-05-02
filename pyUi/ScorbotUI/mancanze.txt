@@ -1,0 +1,7 @@
+Togliere open e close dalle schermate (Alberto)
+Fare controlli dei valori max e min degli encoder da inviare a C
+Creare liste per i valori max (Ilaria)
+Inserire grafici nelle prime tre schermate
+Terza schermata: sistemarla completamente
+Quarta pagina:controllare il valore dei parametri alfa,beta,gamma,delta(perche' devono essere float e lo spin prende int)
+Studio dei punti ammissibili nello spazio per lo scorbot
