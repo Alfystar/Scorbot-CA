@@ -102,7 +102,6 @@ struct messaggio* parsing(char* text, char* p){
   //text la stringa da dove fare il parsing e p il carattere di delimitazione
   //restituisce 1 se ho fatto il parsing delle impostazioni, il puntatore al nodo che memorizza gli encoder altrimenti
   char *buff;
- 
   buff=strtok(text,p);
   if(strcmp(buff,"e")==0){
     
@@ -127,15 +126,11 @@ struct messaggio* parsing(char* text, char* p){
     buff=strtok(NULL,p);
     imp_ut->minE[i]=atoi(buff);
    }
+
    for(int i=0;i<6;i++){
     buff=strtok(NULL,p);
     imp_ut->maxC[i]=atoi(buff);
    }
-
-   //m->imp->imp1=buff; //se si vuole prevedere di salvare in memoria anche le impostazioni(cosi' da errore perche' devo allocare memoria per imp1 ed imp2)
-  
-   //m->imp->imp2=buff;
-  //aggiungere eventuali impostazioni
     return 1;
   }
   else{
@@ -150,7 +145,7 @@ void *readerPipe ()
 {//ricevi da Python
   
     int size=sizeof(char);
-    int size2=sizeof(messaggio)+15;
+    int size2=sizeof(messaggio)+130;
     char text[size2];
     testa=NULL;
     coda=NULL;

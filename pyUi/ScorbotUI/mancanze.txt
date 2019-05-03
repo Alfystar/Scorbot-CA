@@ -1,9 +1,18 @@
-Fare controlli dei valori max e min degli encoder da inviare a C
-Inserire grafici nelle prime tre schermate
-Studio dei punti ammissibili nello spazio per lo scorbot
-Fare round di tutte le label
-mettere parametrica la variabile della percentuale(enc 6) e quindi impostare il massimo di enc 6 nel setup
-Vedere perche' non funziona home negativa
-Vedere perche' non funziona ampere nella 3 pagina
-Aggiungere ricezione impostazioni
+...Fare controlli dei valori max e min degli encoder da inviare a C
+//Inserire grafici nelle prime tre schermate
+//Studio dei punti ammissibili nello spazio per lo scorbot
+....Fare round di tutte le label
+...mettere parametrica la variabile della percentuale(enc 6) e quindi impostare il massimo di enc 6 nel setup
+...Vedere perche' non funziona home negativa
+...Vedere perche' non funziona ampere nella 3 pagina
+...Aggiungere ricezione impostazioni
+...Impostare gomito alto nel setup
 Definire alfa,beta ecc
+
+new
+modificare parte visuale:
+ quando i valori sono troppo lunghi ho sovrapposizione delle label
+ aggiungere unita' di misura (cm per x,y,z e gradi per i theta(tranne 6))
+
+aggiungere memoria per la home salvata(e le impostazioni)
+inserire commenti

@@ -8,7 +8,7 @@ from PyQt5.QtWidgets import QLabel
 from pyqtLib.UiClass import Ui_UiClass
 
 from pyqtLib.pyC_com.p import *
-
+nMot=6
 
 class MyUiQt (Ui_UiClass):
 
@@ -68,17 +68,25 @@ class MyUiQt (Ui_UiClass):
 
         for i in self.maxValE:
             i.setMaximum(20000)
-            i.setMinimum(-20000)
-
+            i.setMinimum(-20000)   
+        self.maxValE[5].setMinimum(0)   
 
         for i in self.minValE:
             i.setMaximum(20000)
-            i.setMinimum(-20000)
+            i.setMinimum(-20000)  
+        self.minValE[5].setMinimum(0)   
+
         
         for i in self.maxValC:
             i.setMaximum(2)
+            i.setMinimum(0)  
 
         self.default()
+
+        for i in range(0,len(self.homePos)):
+            self.homePos[i].setMaximum(self.maxValE[i].value()) #il 20000 e' da prendere dalle impostazioni
+            self.homePos[i].setMinimum(self.minValE[i].value()) #il 20000 e' da prendere dalle impostazioni
+        
         """Prima pagina"""
         for i in range(0,len(self.encoder1)):
             self.encoder1[i].setMaximum(self.maxValE[i].value()) #il 20000 e' da prendere dalle impostazioni
@@ -109,6 +117,7 @@ class MyUiQt (Ui_UiClass):
         self.reset.clicked.connect(self.default)
         
     def default(self):
+        self.Gomitoalto.setChecked(True)
         lista_p=[0.1,0.2,0.3,0.4]#MISURARE
         for i in range(0,len(self.param)):
             self.param[i].setValue(lista_p[i])
@@ -119,15 +128,18 @@ class MyUiQt (Ui_UiClass):
             
         for i in range(0,len(self.maxValE)):
             self.maxValE[i].setValue(20000)
+        self.maxValE[5].setValue(5740)
 
         for i in range(0,len(self.minValE)):
             self.minValE[i].setValue(-20000)
+        self.minValE[5].setValue(0)
 
         for i in range(0,len(self.maxValC)):
             self.maxValC[i].setValue(2)
 
         for i in self.homePos:
             i.setValue(0)
+        
     
     def converti_in_e(self,lista):
         lista_e=[]
@@ -136,7 +148,7 @@ class MyUiQt (Ui_UiClass):
         lista_e.append(int((int(lista[1])+int(lista[2]))/self.param[1].value()))
         lista_e.append(int(0.5*((int(lista[1])+int(lista[2])+int(lista[3]))/self.param[2].value()+lista[4]/self.param[3].value())))
         lista_e.append(int(0.5*(int(lista[4])/self.param[3].value()-(int(lista[1])+int(lista[2])+int(lista[3]))/self.param[2].value())))
-        lista_e.append(int(5740*int(lista[5])/100))
+        lista_e.append(int(self.maxValE[5].value()*int(lista[5])/100))
         return lista_e
 
     def converti_in_a(self,lista):
@@ -146,17 +158,17 @@ class MyUiQt (Ui_UiClass):
         lista_a.append(self.param[1].value()*(int(lista[1])+int(lista[2]))) 
         lista_a.append(-self.param[1].value()*int(lista[2])+self.param[2].value()*(int(lista[3])-int(lista[4]))) 
         lista_a.append(self.param[3].value()*(int(lista[3])+int(lista[4])))
-        lista_a.append(round(int(lista[5])*100/5740,3))
+        lista_a.append(round(int(lista[5])*100/self.maxValE[5].value(),3))
         return lista_a
 
     def cin_dir(self,lista):
-      l1 = 3
-      l2 = 22
-      l3 = 22
-      d1 = 35
-      d5 = 14
-      betad=45
-      omegad=0
+      l1 = self.structVal[0].value()
+      l2 = self.structVal[1].value()
+      l3 = self.structVal[2].value()
+      d1 = self.structVal[3].value()
+      d5 = self.structVal[4].value()
+      betad=self.structVal[5].value()
+      omegad=self.structVal[6].value()
       ax=[]
       t1r=math.radians(lista[0])
       t2r=math.radians(lista[1])
@@ -172,14 +184,13 @@ class MyUiQt (Ui_UiClass):
       return ax
 
     def cin_inv(self,lista):
-       l1 = 3
-       l2 = 22
-       l3 = 22
-       d1 = 35
-       d5 = 14
-       betad=45
-       omegad=0
-
+       l1 = self.structVal[0].value()
+       l2 = self.structVal[1].value()
+       l3 = self.structVal[2].value()
+       d1 = self.structVal[3].value()
+       d5 = self.structVal[4].value()
+       betad=self.structVal[5].value()
+       omegad=self.structVal[6].value()
        bdr= math.radians(betad)
        theta1 = math.degrees(math.atan2(lista[1],lista[0]))
        theta1r= math.radians(theta1)
@@ -224,24 +235,47 @@ class MyUiQt (Ui_UiClass):
           self.encr[i].setText(str(int(self.encoder1[i].value()-int(self.setup[i].text()))))
        #cor pagina 1,2,3
        for i in range(0,len(self.cor)):
-          self.cor[i].setText(str(lista[i+6]))
-          self.cor2[i].setText(str(lista[i+6])) 
+          self.cor[i].setText(str(lista[i+nMot]))
+          self.cor2[i].setText(str(lista[i+nMot])) 
+          self.cor3[i].setText(str(lista[i+nMot])) 
 
        lista_a=self.converti_in_a(lista)#lista deve essere una lista di encoder
        #pagina 2
        for i in range(0,len(self.theta)):
-           self.theta[i].setText(str(lista_a[i])) 
-           self.encr1[i].setText(str(self.angle[i].value()-float(self.theta[i].text())))
+           self.theta[i].setText(str(round(lista_a[i],3))) 
+           self.encr1[i].setText(str(round(self.angle[i].value()-float(self.theta[i].text()),3)))
+       
+       #pagina 3
        lista_xyz=self.cin_dir(lista_a)
        for i in range(0,len(self.ax)):
-           self.ax[i].setText(str(lista_xyz[i]))
-           self.encr3[i].setText(str(self.inVal[i].value()-float(self.ax[i].text())))
+           self.ax[i].setText(str(round(lista_xyz[i],3)))
+           self.encr3[i].setText(str(round(self.inVal[i].value()-float(self.ax[i].text()),3)))
             
-     #else:   #esempio
-        #for i in range(0,len(self.setup)):
-         #   self.setup[i].setText(str(lista[i]))
-         #   self.encr[i].setText(str(int(self.encoder1[i].value()-int(self.setup[i].text()))))
-       
+     else:   
+        for i in range(0,len(self.maxValE)):
+           self.maxValE[i].setValue(int(lista[i]))
+        
+        for i in range(0,len(self.minValE)):
+           self.minValE[i].setValue(int(lista[i+nMot]))
+        
+        for i in range(0,len(self.maxValC)):
+           self.maxValC[i].setValue(int(lista[i+2*nMot]))
+        
+        """Quarta pagina"""
+        for i in range(0,len(self.homePos)):
+            self.homePos[i].setMaximum(self.maxValE[i].value()) #il 20000 e' da prendere dalle impostazioni
+            self.homePos[i].setMinimum(self.minValE[i].value()) #il 20000 e' da prendere dalle impostazioni
+        
+        """Prima pagina"""
+        for i in range(0,len(self.encoder1)):
+            self.encoder1[i].setMaximum(self.maxValE[i].value()) #il 20000 e' da prendere dalle impostazioni
+            self.encoder1[i].setMinimum(self.minValE[i].value()) #il 20000 e' da prendere dalle impostazioni
+        
+        """Terza pagina"""
+        #definizione valori massimi e minimi
+        for i in self.inVal:
+          i.setMaximum(int(self.structVal[0].value()+self.structVal[1].value()+self.structVal[2].value())) #il 20000 e' da prendere dalle impostazioni
+          i.setMinimum(-int(self.structVal[0].value()+self.structVal[1].value()+self.structVal[2].value())) #il 20000 e' da prendere dalle impostazioni
         
 
 
@@ -259,6 +293,19 @@ class MyUiQt (Ui_UiClass):
            self.inVal[i].setValue(lista_xyz[i])
       for i in range(0,len(self.listaHp)):
           lista[i]=lista[i]+self.listaHp[i]
+          
+          if lista[i]>self.maxValE[i].value():
+              lista[i]=self.maxValE[i].value()
+          if lista[i]<self.minValE[i].value():
+              lista[i]=self.minValE[i].value()
+      
+      for i in range(0,len(self.setup)):
+          self.encr[i].setText(str(int(self.encoder1[i].value()-int(self.setup[i].text()))))
+      for i in range(0,len(self.theta)):
+           self.encr1[i].setText(str(round(self.angle[i].value()-float(self.theta[i].text()),3)))
+      for i in range(0,len(self.ax)):
+           self.encr3[i].setText(str(round(self.inVal[i].value()-float(self.ax[i].text()),3)))
+         
       invia(lista,"e")
       
       #ERRORE sulla percentuale perche' vuole un intero     
@@ -270,12 +317,22 @@ class MyUiQt (Ui_UiClass):
         lista_e=self.converti_in_e(lista)#lista deve essere una lista di angoli    
         for i in range(0,len(self.encoder1)):
             self.encoder1[i].setValue(lista_e[i])
-        #todo controllo valori minimi 
         lista_xyz=self.cin_dir(lista) 
         for i in range(0,len(self.inVal)):
            self.inVal[i].setValue(lista_xyz[i]) 
         for i in range(0,len(self.listaHp)):
           lista_e[i]=lista_e[i]+self.listaHp[i]
+          if lista_e[i]>self.maxValE[i].value():
+              lista_e[i]=self.maxValE[i].value()
+          if lista_e[i]<self.minValE[i].value():
+              lista_e[i]=self.minValE[i].value()
+        for i in range(0,len(self.setup)):
+          self.encr[i].setText(str(int(self.encoder1[i].value()-int(self.setup[i].text()))))
+        for i in range(0,len(self.theta)):
+           self.encr1[i].setText(str(round(self.angle[i].value()-float(self.theta[i].text()),3)))
+        for i in range(0,len(self.ax)):
+           self.encr3[i].setText(str(round(self.inVal[i].value()-float(self.ax[i].text()),3)))
+        
         invia(lista_e,"e")
        
     def inverseValue(self):
@@ -296,13 +353,49 @@ class MyUiQt (Ui_UiClass):
             self.encoder1[i].setValue(lista_e[i])
        for i in range(0,len(self.listaHp)):
           lista_e[i]=lista_e[i]+self.listaHp[i]
+          
+          if lista_e[i]>self.maxValE[i].value():
+              lista_e[i]=self.maxValE[i].value()
+          if lista_e[i]<self.minValE[i].value():
+              lista_e[i]=self.minValE[i].value()
+       
+       for i in range(0,len(self.setup)):
+          self.encr[i].setText(str(int(self.encoder1[i].value()-int(self.setup[i].text()))))
+       for i in range(0,len(self.theta)):
+           self.encr1[i].setText(str(round(self.angle[i].value()-float(self.theta[i].text()),3)))
+       for i in range(0,len(self.ax)):
+           self.encr3[i].setText(str(round(self.inVal[i].value()-float(self.ax[i].text()),3)))
         
        invia(lista_e,"e")
 
     def setup1(self):
+        for i in range(0,len(self.homePos)):
+            self.homePos[i].setMaximum(self.maxValE[i].value()) #il 20000 e' da prendere dalle impostazioni
+            self.homePos[i].setMinimum(self.minValE[i].value()) #il 20000 e' da prendere dalle impostazioni
+        
+        """Prima pagina"""
+        for i in range(0,len(self.encoder1)):
+            self.encoder1[i].setMaximum(self.maxValE[i].value()) #il 20000 e' da prendere dalle impostazioni
+            self.encoder1[i].setMinimum(self.minValE[i].value()) #il 20000 e' da prendere dalle impostazioni
+        
+        """Terza pagina"""
+        #definizione valori massimi e minimi
+        for i in self.inVal:
+          i.setMaximum(int(self.structVal[0].value()+self.structVal[1].value()+self.structVal[2].value())) #il 20000 e' da prendere dalle impostazioni
+          i.setMinimum(-int(self.structVal[0].value()+self.structVal[1].value()+self.structVal[2].value())) #il 20000 e' da prendere dalle impostazioni
         
         self.listaHp=[]
         for i in self.homePos:
             self.listaHp.append(i.value())
+        lista=[]
+        for i in self.maxValE:
+            lista.append(i.value())
+        
+        for i in self.minValE:
+            lista.append(i.value())
 
+        for i in self.maxValC:
+            lista.append(i.value())
 
+        invia(lista,"i") 
+   
