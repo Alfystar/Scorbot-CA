@@ -1827,9 +1827,9 @@
       <property name="geometry">
        <rect>
         <x>30</x>
-        <y>40</y>
+        <y>10</y>
         <width>121</width>
-        <height>291</height>
+        <height>351</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -2960,9 +2960,9 @@
       <property name="geometry">
        <rect>
         <x>530</x>
-        <y>50</y>
+        <y>40</y>
         <width>111</width>
-        <height>351</height>
+        <height>371</height>
        </rect>
       </property>
       <property name="font">
@@ -2998,14 +2998,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="maxCor1Val">
+          <widget class="QSpinBox" name="maxCor1Val">
            <property name="font">
             <font>
              <pointsize>12</pointsize>
             </font>
-           </property>
-           <property name="text">
-            <string>0</string>
            </property>
           </widget>
          </item>
@@ -3035,14 +3032,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="maxCor2Val">
+          <widget class="QSpinBox" name="maxCor2Val">
            <property name="font">
             <font>
              <pointsize>12</pointsize>
             </font>
-           </property>
-           <property name="text">
-            <string>0</string>
            </property>
           </widget>
          </item>
@@ -3069,14 +3063,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="maxCor3Val">
+          <widget class="QSpinBox" name="maxCor3Val">
            <property name="font">
             <font>
              <pointsize>12</pointsize>
             </font>
-           </property>
-           <property name="text">
-            <string>0</string>
            </property>
           </widget>
          </item>
@@ -3103,14 +3094,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="maxCor4Val">
+          <widget class="QSpinBox" name="maxCor4Val">
            <property name="font">
             <font>
              <pointsize>12</pointsize>
             </font>
-           </property>
-           <property name="text">
-            <string>0</string>
            </property>
           </widget>
          </item>
@@ -3137,14 +3125,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="maxCor5Val">
+          <widget class="QSpinBox" name="maxCor5Val">
            <property name="font">
             <font>
              <pointsize>12</pointsize>
             </font>
-           </property>
-           <property name="text">
-            <string>0</string>
            </property>
           </widget>
          </item>
@@ -3171,14 +3156,11 @@
           </widget>
          </item>
          <item>
-          <widget class="QLabel" name="maxCor6Val">
+          <widget class="QSpinBox" name="maxCor6Val">
            <property name="font">
             <font>
              <pointsize>12</pointsize>
             </font>
-           </property>
-           <property name="text">
-            <string>0</string>
            </property>
           </widget>
          </item>
@@ -3478,7 +3460,7 @@
        <rect>
         <x>660</x>
         <y>320</y>
-        <width>91</width>
+        <width>97</width>
         <height>64</height>
        </rect>
       </property>
