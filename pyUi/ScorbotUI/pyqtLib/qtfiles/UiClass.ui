@@ -26,7 +26,7 @@
       <x>10</x>
       <y>10</y>
       <width>1001</width>
-      <height>421</height>
+      <height>481</height>
      </rect>
     </property>
     <property name="font">
@@ -116,7 +116,7 @@
         <x>10</x>
         <y>40</y>
         <width>171</width>
-        <height>341</height>
+        <height>371</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="VEn_Dir">
@@ -305,7 +305,7 @@
         <x>350</x>
         <y>40</y>
         <width>141</width>
-        <height>341</height>
+        <height>371</height>
        </rect>
       </property>
       <property name="font">
@@ -502,7 +502,7 @@
         <x>230</x>
         <y>40</y>
         <width>111</width>
-        <height>341</height>
+        <height>371</height>
        </rect>
       </property>
       <property name="font">
@@ -726,7 +726,7 @@
         <x>520</x>
         <y>40</y>
         <width>121</width>
-        <height>341</height>
+        <height>371</height>
        </rect>
       </property>
       <property name="font">
@@ -1000,7 +1000,7 @@
         <x>520</x>
         <y>40</y>
         <width>111</width>
-        <height>341</height>
+        <height>371</height>
        </rect>
       </property>
       <property name="font">
@@ -1229,8 +1229,8 @@
        <rect>
         <x>230</x>
         <y>40</y>
-        <width>115</width>
-        <height>341</height>
+        <width>111</width>
+        <height>371</height>
        </rect>
       </property>
       <property name="font">
@@ -1454,7 +1454,7 @@
         <x>10</x>
         <y>40</y>
         <width>171</width>
-        <height>341</height>
+        <height>371</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="VEn_Dir_3">
@@ -1587,7 +1587,7 @@
         <x>350</x>
         <y>40</y>
         <width>141</width>
-        <height>341</height>
+        <height>371</height>
        </rect>
       </property>
       <property name="font">
@@ -1829,7 +1829,7 @@
         <x>30</x>
         <y>40</y>
         <width>121</width>
-        <height>341</height>
+        <height>291</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -2021,7 +2021,7 @@
         <x>190</x>
         <y>40</y>
         <width>125</width>
-        <height>341</height>
+        <height>291</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -2049,7 +2049,7 @@
             <string notr="true"/>
            </property>
            <property name="text">
-            <string>Xattuale:</string>
+            <string>Xpos:</string>
            </property>
           </widget>
          </item>
@@ -2079,7 +2079,7 @@
             <string notr="true"/>
            </property>
            <property name="text">
-            <string>Yattuale:</string>
+            <string>Ypos:</string>
            </property>
           </widget>
          </item>
@@ -2109,7 +2109,7 @@
             <string notr="true"/>
            </property>
            <property name="text">
-            <string>Zattuale:</string>
+            <string>Zpos:</string>
            </property>
           </widget>
          </item>
@@ -2128,9 +2128,9 @@
       <property name="geometry">
        <rect>
         <x>530</x>
-        <y>30</y>
+        <y>40</y>
         <width>111</width>
-        <height>351</height>
+        <height>291</height>
        </rect>
       </property>
       <property name="font">
@@ -2360,7 +2360,7 @@
         <x>360</x>
         <y>40</y>
         <width>141</width>
-        <height>341</height>
+        <height>291</height>
        </rect>
       </property>
       <property name="font">
@@ -2511,8 +2511,8 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>730</x>
-        <y>250</y>
+        <x>870</x>
+        <y>240</y>
         <width>91</width>
         <height>136</height>
        </rect>
@@ -2602,7 +2602,7 @@
         <x>400</x>
         <y>40</y>
         <width>191</width>
-        <height>341</height>
+        <height>371</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -2800,7 +2800,7 @@
         <x>200</x>
         <y>40</y>
         <width>191</width>
-        <height>341</height>
+        <height>371</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -2960,9 +2960,9 @@
       <property name="geometry">
        <rect>
         <x>610</x>
-        <y>40</y>
+        <y>50</y>
         <width>111</width>
-        <height>341</height>
+        <height>351</height>
        </rect>
       </property>
       <property name="font">
@@ -3210,7 +3210,7 @@
         <x>0</x>
         <y>40</y>
         <width>191</width>
-        <height>341</height>
+        <height>371</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -3370,9 +3370,9 @@
       <property name="geometry">
        <rect>
         <x>730</x>
-        <y>40</y>
+        <y>60</y>
         <width>91</width>
-        <height>172</height>
+        <height>211</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -3468,6 +3468,56 @@
          </item>
          <item>
           <widget class="QDoubleSpinBox" name="d5Value"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>290</y>
+        <width>97</width>
+        <height>64</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_9">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_85">
+         <item>
+          <widget class="QLabel" name="bd">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>βd:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="bdValue"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_86">
+         <item>
+          <widget class="QLabel" name="Wd">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>ωd:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="WdValue"/>
          </item>
         </layout>
        </item>
