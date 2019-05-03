@@ -1,12 +1,11 @@
 #ifndef PROGETTO_H
 #define PROGETTO_H
-//#define nMot 6 
+#define nMot 6 
 struct impostazioni{
   int n;  //numero impostazioni
-  char imp1[128];
-  char imp2[128];
-  //int imp1[nMot];  
-  //int imp2[nMot];
+  int maxE[nMot];  
+  int minE[nMot];
+  int maxC[nMot];
 //massimo e minimo numero encoder(vettore da 6)
 //massimo valore corrente(vettore da 6)
 }impostazioni;

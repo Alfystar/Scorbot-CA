@@ -75,7 +75,7 @@ int invia(struct messaggio *m,char *tipo){
  if(strcmp(tipo,"e")==0){
    sprintf(mes,"e|%d|%d|%d|%d|%d|%d|%d|%d|%d|%d|%d|%d",m->enc[0],m->enc[1],m->enc[2],m->enc[3],m->enc[4],m->enc[5],m->cor[0],m->cor[1],m->cor[2],m->cor[3],m->cor[4],m->cor[5]);
  }else{
-   sprintf(mes,"i|%s|%s",m->imp->imp1,m->imp->imp2); 
+   sprintf(mes,"i|%d|%d|%d|%d|%d|%d|%d|%d|%d|%d|%d|%d|%d|%d|%d|%d|%d|%d",m->imp->maxE[0],m->imp->maxE[1],m->imp->maxE[2],m->imp->maxE[3],m->imp->maxE[4],m->imp->maxE[5],m->imp->minE[0],m->imp->minE[1],m->imp->minE[2],m->imp->minE[3],m->imp->minE[4],m->imp->minE[5],m->imp->maxC[0],m->imp->maxC[1],m->imp->maxC[2],m->imp->maxC[3],m->imp->maxC[4],m->imp->maxC[5]); 
  }
 
 
@@ -119,14 +119,21 @@ struct messaggio* parsing(char* text, char* p){
   } 
   else if(strcmp(buff,"i")==0){
    
-   buff=strtok(NULL,p);
-   
+   for(int i=0;i<6;i++){
+    buff=strtok(NULL,p);
+    imp_ut->maxE[i]=atoi(buff);
+   }
+   for(int i=0;i<6;i++){
+    buff=strtok(NULL,p);
+    imp_ut->minE[i]=atoi(buff);
+   }
+   for(int i=0;i<6;i++){
+    buff=strtok(NULL,p);
+    imp_ut->maxC[i]=atoi(buff);
+   }
+
    //m->imp->imp1=buff; //se si vuole prevedere di salvare in memoria anche le impostazioni(cosi' da errore perche' devo allocare memoria per imp1 ed imp2)
-   strcpy(imp_ut->imp1,buff);
-   
-   buff=strtok(NULL,p);
-   strcpy(imp_ut->imp2,buff);
-   buff=strtok(NULL,p);
+  
    //m->imp->imp2=buff;
   //aggiungere eventuali impostazioni
     return 1;
@@ -222,8 +229,11 @@ int main_com(char *file_p[]) {
     pipe(stdInFake);
     pipe(stdOutFake);
     struct impostazioni i_ut;
-    strcpy(i_ut.imp1,"NULLO");
-    strcpy(i_ut.imp2,"NULLO");
+    for(int i=0;i<nMot;i++){
+      i_ut.maxE[i]=i+100;
+      i_ut.minE[i]=-100;
+      i_ut.maxC[i]=5000;
+    }
     imp_ut=&i_ut;  //creo una struttura impostazioni e l'assegno al globale
     
     int pid = fork();
@@ -293,8 +303,12 @@ int main_com(char *file_p[]) {
     invia(&nodo,"e");
     sleep(10);
 
-    strcpy(imp_ut->imp1,"Ciao");
-    strcpy(imp_ut->imp2,"Ciao");
+    
+    for(int i=0;i<nMot;i++){
+     imp_ut->maxE[i]=i+1000;
+     imp_ut->minE[i]=-1000;
+     imp_ut->maxC[i]=i+10;
+   }
     
     invia(&nodo,"i");
     sleep(10);
