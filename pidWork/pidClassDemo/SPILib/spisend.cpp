@@ -53,13 +53,13 @@ void SpiSend::sendPack(SPIPACK *s)
 
     memcpy(this->txbuf,&s->out.pack,sizeof(spiSend));  //imposto i bit utili da inviare
 
-
+    /*
     printf("Byte send");
     for (int i = 0; i < this->sizeTypePack(s); ++i) {
         printf(" %d",txbuf[i]);
     }
     printf("\n");
-
+    */
     //flush_tlb_all();
     __builtin___clear_cache(this->txbuf,this->txbuf+this->size);
 
@@ -78,12 +78,13 @@ void SpiSend::sendPack(SPIPACK *s)
 
     memcpy(&s->in,this->rxbuf,sizeof(spiRet));
 
+    /*
     printf("Byte recive");
     for (int i = 0; i < this->sizeTypePack(s); ++i) {
         printf(" %d",this->rxbuf[i]);
     }
     printf("\n");
-
+    */
 
 }
 
@@ -227,7 +228,7 @@ SPIPACK *SpiSend::pSetPWM(SPIPACK *p, setPWMSend *pwm)
 
 void fillmot(setPWMSend * pack,int mVal,int mNum)
 {
-    if(mVal==fr || mVal==hs || mVal==ss || mVal==ig || abs(mVal)<255)
+    if(mVal==fr || mVal==hs || mVal==ss || mVal==ig || abs(mVal)<=255)
          pack->vel[mNum]=mVal;
      else
          pack->vel[mNum]=ig;
