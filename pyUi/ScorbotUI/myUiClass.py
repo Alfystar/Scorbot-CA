@@ -124,7 +124,9 @@ class MyUiQt (Ui_UiClass):
         for i in self.maxValC:
             i.setMinimum(20000)
 
-
+        for i in range(0,6):
+            a=self.maxValE[i]
+            self.homePos[i].setMaximum(a)
 
 
 
