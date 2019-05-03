@@ -6,6 +6,12 @@
 
 PIDScorbot::PIDScorbot(float kp, float ki, float kd, int MdeadZone, bool posDir)
 {
+    PIDScorbot(kp,ki,kd,MdeadZone,posDir,1.0,0.05);
+}
+
+PIDScorbot::PIDScorbot(float kp, float ki, float kd, int MdeadZone, bool posDir,float cSat, float cDead)
+{
+
     /*pid general*/
     this->Kp=kp;
     this->Ki=ki;
@@ -13,8 +19,8 @@ PIDScorbot::PIDScorbot(float kp, float ki, float kd, int MdeadZone, bool posDir)
     this->MOTOR_DEADZONE=MdeadZone;
     this->posDir=posDir;
 
-    this->CONTROL_SATURATION=1.0;   //100% dell'uscita possibile
-    this->CONTROL_DEADZONE=0.05;    //se per muovermi devo spostarmi di meno freno
+    this->CONTROL_SATURATION=cSat;   //100% dell'uscita possibile
+    this->CONTROL_DEADZONE=cDead;    //se per muovermi devo spostarmi di meno freno
 
     /*Variabili del pid comp*/
     memset(this->mystack,0, sizeof((this->mystack[0]))*8);
@@ -25,6 +31,7 @@ PIDScorbot::PIDScorbot(float kp, float ki, float kd, int MdeadZone, bool posDir)
     /*pid relativi*/
     gettimeofday(&this->temp,NULL);
     gettimeofday(&this->oldTemp,NULL);
+
 
 }
 

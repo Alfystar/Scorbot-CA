@@ -15,6 +15,7 @@
 class PIDScorbot {
 public:
     PIDScorbot(float kp, float ki, float kd, int MdeadZone, bool posDir);
+    PIDScorbot(float kp, float ki, float kd, int MdeadZone, bool posDir,float cSat, float cDead);
     int motVal(int ref,int en);
 
 private:

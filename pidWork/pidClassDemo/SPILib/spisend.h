@@ -18,15 +18,29 @@
 class SpiSend
 {
 public:
+    //costruttori/distruttori
     SpiSend();
     virtual ~SpiSend();
+
+    //debug funx
     void printSPIPACK(SPIPACK *s);
-    SPIPACK *pSetPWM(setPWMSend *pwm);
+
+    //sending metod
+    SPIPACK *pSetPWM(SPIPACK *pack,setPWMSend *pwm);
+    SPIPACK *getEn(SPIPACK *p);
+    SPIPACK *pGetCurrent(SPIPACK *p);
+    SPIPACK *pGetSetting(SPIPACK *p);
+    SPIPACK *pSetSetting(SPIPACK *p,setSettingSend *sets);
+    SPIPACK *pGoHome(SPIPACK *p);
+
+    //utility
     setPWMSend *fillPWMPACK(setPWMSend * pack,int m1,int m2,int m3,int m4,int m5,int m6);
-    SPIPACK *pGetCurrent();
-    SPIPACK *pGetSetting();
-    SPIPACK *pSetSetting(setSettingSend *sets);
-    SPIPACK *pGoHome();
+
+    //create/destroy pack
+    SPIPACK *makeSPIPACK();
+    void freeSPIPACK(SPIPACK *p);
+
+
 protected:
 private:
     char *txbuf,*rxbuf;
@@ -36,7 +50,6 @@ private:
     void setMode(char mode);
     void sendPack (SPIPACK *s);
     int sizeTypePack(SPIPACK *s);
-    SPIPACK *makeSPIPACK();
 
 };
 
