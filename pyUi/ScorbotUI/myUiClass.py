@@ -36,6 +36,14 @@ class MyUiQt (Ui_UiClass):
         """Terza pagina"""
         # manca Ydes nella lista perché dà errore
         self.inVal=[self.Xdes_spin_Box,self.Ydes_spin_box,self.Zdes_spin_Box] #
+        self.ax=[]
+        self.encr3=[]
+        self.cor3=[]
+
+
+
+
+
 
         """LISTA Setup"""
 
@@ -89,28 +97,49 @@ class MyUiQt (Ui_UiClass):
         self.Pulsante_invio_pagina_Basics.clicked.connect(self.encoderValue)  #prima pagina
         self.PulsanteInvioPAginaAdvance.clicked.connect((self.angleValue))
         self.PulsanteInvioPAgina_Inverse.clicked.connect((self.inverseValue))
+        
+    def converti_in_e(self,lista):
+        lista_e=[]
+        lista_e.append(int(-int(lista[0])/self.param[0].value()))
+        lista_e.append(int(-int(lista[1])/self.param[1].value()))
+        lista_e.append(int((int(lista[1])+int(lista[2]))/self.param[1].value()))
+        lista_e.append(int(0.5*((int(lista[1])+int(lista[2])+int(lista[3]))/self.param[2].value()+lista[4]/self.param[3].value())))
+        lista_e.append(int(0.5*(int(lista[4])/self.param[3].value()-(int(lista[1])+int(lista[2])+int(lista[3]))/self.param[2].value())))
+        lista_e.append(int(5740*int(lista[5])/100))
+        return lista_e
+
+    def converti_in_a(self,lista):
+        lista_a=[]        
+        lista_a.append(-self.param[0].value()*int(lista[0])) 
+        lista_a.append(-self.param[1].value()*int(lista[1])) 
+        lista_a.append(self.param[1].value()*(int(lista[1])+int(lista[2]))) 
+        lista_a.append(-self.param[1].value()*int(lista[2])+self.param[2].value()*(int(lista[3])-int(lista[4]))) 
+        lista_a.append(self.param[3].value()*(int(lista[3])+int(lista[4])))
+        lista_a.append(round(int(lista[5])*100/5740,3))
+        return lista_a
 
     def inserisci(self,lista,tipo):
-     if tipo==0:
+     if tipo==0:#aggiungere impostazioni
+       #pagina 1
        for i in range(0,len(self.setup)):
           self.setup[i].setText(str(lista[i]))
           self.encr[i].setText(str(int(self.encoder1[i].value()-int(self.setup[i].text()))))
+       #cor pagina 1,2,3
        for i in range(0,len(self.cor)):
           self.cor[i].setText(str(lista[i+6]))
           self.cor2[i].setText(str(lista[i+6])) 
 
-       lista_a=[]
-       
-       lista_a.append(-self.param[0].value()*int(lista[0])) 
-       lista_a.append(-self.param[1].value()*int(lista[1])) 
-       lista_a.append(self.param[1].value()*(int(lista[1])+int(lista[2]))) 
-       lista_a.append(-self.param[1].value()*int(lista[2])+self.param[2].value()*(int(lista[3])-int(lista[4]))) 
-       lista_a.append(self.param[3].value()*(int(lista[3])+int(lista[4])))
-       lista_a.append(round(int(lista[5])*100/5740,3))
+       lista_a=self.converti_in_a(lista)#lista deve essere una lista di encoder
+       #pagina 2
        for i in range(0,len(self.theta)):
            self.theta[i].setText(str(lista_a[i])) 
            self.encr1[i].setText(str(self.angle[i].value()-float(self.theta[i].text())))
+     #else:   #esempio
+        #for i in range(0,len(self.setup)):
+         #   self.setup[i].setText(str(lista[i]))
+         #   self.encr[i].setText(str(int(self.encoder1[i].value()-int(self.setup[i].text()))))
        
+        
 
 
 
@@ -120,43 +149,29 @@ class MyUiQt (Ui_UiClass):
       for i in range(0,len(self.encoder1)):
         lista.append(self.encoder1[i].value())
       invia(lista,"e")
-      lista_a=[]
-      lista_a.append(-self.param[0].value()*int(lista[0])) 
-      lista_a.append(-self.param[1].value()*int(lista[1])) 
-      lista_a.append(self.param[1].value()*(int(lista[1])+int(lista[2]))) 
-      lista_a.append(-self.param[1].value()*int(lista[2])+self.param[2].value()*(int(lista[3])-int(lista[4]))) 
-      lista_a.append(self.param[3].value()*(int(lista[3])+int(lista[4])))
-      lista_a.append(round(int(lista[5])*100/5740,3))
+      lista_a=self.converti_in_a(lista)
       for i in range(0,len(self.angle)):
            self.angle[i].setValue(lista_a[i]) 
-           
+      #ERRORE sulla percentuale perche' vuole un intero     
 
     def angleValue(self):
         lista=[]
         for i in self.angle:
             lista.append(i.value())
-        lista_e=[]    
-
-        lista_e.append(int(-int(lista[0])/self.param[0].value()))
-        lista_e.append(int(-int(lista[1])/self.param[1].value()))
-        lista_e.append(int((int(lista[1])+int(lista[2]))/self.param[1].value()))
-        lista_e.append(int(0.5*((int(lista[1])+int(lista[2])+int(lista[3]))/self.param[2].value()+lista[4]/self.param[3].value())))
-        lista_e.append(int(0.5*(int(lista[4])/self.param[3].value()-(int(lista[1])+int(lista[2])+int(lista[3]))/self.param[2].value())))
-        lista_e.append(round(5740*int(lista[5])/100,3))
-        invia(lista_e,"e")
-        #todo controllo valori minimi 
+        lista_e=self.converti_in_e(lista)#lista deve essere una lista di angoli    
         for i in range(0,len(self.encoder1)):
             self.encoder1[i].setValue(lista_e[i])
+        invia(lista_e,"e")
+        #todo controllo valori minimi 
 
     def inverseValue(self):
-
-        self.inVal[0]=self.Xdes_spin_Box.value()
-        self.inVal[1] = self.Ydes_spin_box.value()
-        self.inVal[2] = self.Zdes_spin_Box.value()
-
+      lista=[]
+      for i in range(0,len(self.inval)):
+        lista[i]=self.inVal[i].value()
+        
     # operazioni matematiche per ricavare i theta.
     # l1, l2, l3, d1 e betad vanno misurati ed impostati
-
+    #AGGIUNGERE l1,l2 ecc alle impostazioni
         l1 = 3
         l2 = 22
         l3 = 22
@@ -166,10 +181,10 @@ class MyUiQt (Ui_UiClass):
         omegad=0
 
         bdr= math.radians(betad)
-        theta1 = math.degrees(math.atan2(self.inVal[1], self.inVal[0]))
+        theta1 = math.degrees(math.atan2(lista[1], lista[0]))
         theta1r= math.radians(theta1)
-        A1= self.inVal[0]* (math.cos(theta1r)) +self.inVal[1]*(math.sin(theta1r)) -d5*(math.cos(bdr)) -l1
-        A2 = d1 - self.inVal[2] -d5*(math.sin(bdr))
+        A1= lista[0]* (math.cos(theta1r)) +lista[1]*(math.sin(theta1r)) -d5*(math.cos(bdr)) -l1
+        A2 = d1 - lista[2] -d5*(math.sin(bdr))
         A3 = (A1*A1) + (A2*A2) - (l2*l2) - (l3*l3)
         A4 = 2 * l2 * l3
         A5 = A3 / A4
@@ -192,10 +207,6 @@ class MyUiQt (Ui_UiClass):
             theta2 = math.degrees(math.atan2(A6, A7))
             theta4 = betad - theta2 - theta3 - 90
             theta5 = omegad
-
-
-        self.teta1_inverse_value.setText(str(theta1))
-        self.teta2_inverse_value.setText(str(theta2))
-        self.teta3_inverse_value.setText(str(theta3))
-        self.teta4_inverse_value.setText(str(theta4))
-        self.teta5_invers_value.setText(str(theta5))
+        
+        lista_e=self.converti_in_e(theta1,theta2,theta3,theta4,theta5,self.angle[5].value())
+        invia(lista_e,"e")
