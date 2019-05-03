@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>1044</width>
-    <height>436</height>
+    <height>551</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -50,7 +50,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>2</number>
+     <number>3</number>
     </property>
     <property name="usesScrollButtons">
      <bool>false</bool>
@@ -116,7 +116,7 @@
         <x>10</x>
         <y>40</y>
         <width>171</width>
-        <height>281</height>
+        <height>271</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="VEn_Dir">
@@ -282,7 +282,7 @@
             </font>
            </property>
            <property name="text">
-            <string>Encoder n°6</string>
+            <string>Pinza: </string>
            </property>
           </widget>
          </item>
@@ -302,7 +302,7 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>330</x>
+        <x>350</x>
         <y>40</y>
         <width>141</width>
         <height>271</height>
@@ -499,7 +499,7 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>210</x>
+        <x>230</x>
         <y>40</y>
         <width>111</width>
         <height>271</height>
@@ -723,9 +723,9 @@
      <widget class="QWidget" name="layoutWidget_5">
       <property name="geometry">
        <rect>
-        <x>490</x>
+        <x>520</x>
         <y>40</y>
-        <width>131</width>
+        <width>121</width>
         <height>271</height>
        </rect>
       </property>
@@ -997,7 +997,7 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>490</x>
+        <x>520</x>
         <y>40</y>
         <width>111</width>
         <height>271</height>
@@ -1227,9 +1227,9 @@
      <widget class="QWidget" name="layoutWidget_7">
       <property name="geometry">
        <rect>
-        <x>210</x>
+        <x>230</x>
         <y>40</y>
-        <width>111</width>
+        <width>115</width>
         <height>271</height>
        </rect>
       </property>
@@ -1454,7 +1454,7 @@
         <x>10</x>
         <y>40</y>
         <width>171</width>
-        <height>281</height>
+        <height>271</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="VEn_Dir_3">
@@ -1476,13 +1476,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="AngleDir_1">
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-            </font>
-           </property>
-          </widget>
+          <widget class="QDoubleSpinBox" name="AngleDir_1"/>
          </item>
         </layout>
        </item>
@@ -1501,13 +1495,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="AngleDir_2">
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-            </font>
-           </property>
-          </widget>
+          <widget class="QDoubleSpinBox" name="AngleDir_2"/>
          </item>
         </layout>
        </item>
@@ -1526,13 +1514,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="AngleDir_3">
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-            </font>
-           </property>
-          </widget>
+          <widget class="QDoubleSpinBox" name="AngleDir_3"/>
          </item>
         </layout>
        </item>
@@ -1551,13 +1533,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="AngleDir_4">
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-            </font>
-           </property>
-          </widget>
+          <widget class="QDoubleSpinBox" name="AngleDir_4"/>
          </item>
         </layout>
        </item>
@@ -1576,13 +1552,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="AngleDir_5">
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-            </font>
-           </property>
-          </widget>
+          <widget class="QDoubleSpinBox" name="AngleDir_5"/>
          </item>
         </layout>
        </item>
@@ -1596,16 +1566,14 @@
             </font>
            </property>
            <property name="text">
-            <string>Angle θ6:  </string>
+            <string>Pinza %</string>
            </property>
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="AngleDir_6">
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-            </font>
+          <widget class="QSlider" name="AngleDir_6">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
            </property>
           </widget>
          </item>
@@ -1616,7 +1584,7 @@
      <widget class="QWidget" name="layoutWidget_8">
       <property name="geometry">
        <rect>
-        <x>330</x>
+        <x>350</x>
         <y>40</y>
         <width>141</width>
         <height>271</height>
@@ -2545,7 +2513,7 @@
        <rect>
         <x>780</x>
         <y>40</y>
-        <width>71</width>
+        <width>87</width>
         <height>136</height>
        </rect>
       </property>
@@ -2565,13 +2533,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="alphaValue">
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-            </font>
-           </property>
-          </widget>
+          <widget class="QDoubleSpinBox" name="alphaValue"/>
          </item>
         </layout>
        </item>
@@ -2590,13 +2552,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="betaValue">
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-            </font>
-           </property>
-          </widget>
+          <widget class="QDoubleSpinBox" name="betaValue"/>
          </item>
         </layout>
        </item>
@@ -2615,13 +2571,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="gammaValue">
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-            </font>
-           </property>
-          </widget>
+          <widget class="QDoubleSpinBox" name="gammaValue"/>
          </item>
         </layout>
        </item>
@@ -2640,13 +2590,7 @@
           </widget>
          </item>
          <item>
-          <widget class="QSpinBox" name="deltaValue">
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-            </font>
-           </property>
-          </widget>
+          <widget class="QDoubleSpinBox" name="deltaValue"/>
          </item>
         </layout>
        </item>
