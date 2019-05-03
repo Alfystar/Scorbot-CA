@@ -2059,4 +2059,3 @@ class Ui_UiClass(object):
         self.en1HP_2.setText(_translate("UiClass", "Encoder n°6"))
         self.o.setTabText(self.o.indexOf(self.Setup), _translate("UiClass", "Setup"))
 
-
