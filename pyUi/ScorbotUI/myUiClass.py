@@ -169,7 +169,7 @@ class MyUiQt (Ui_UiClass):
       for i in range(0,len(self.inval)):
         lista[i]=self.inVal[i].value()
         
-    # operazioni matematiche per ricavare i theta.
+    # operazioni matematiche per ricavare i theta
     # l1, l2, l3, d1 e betad vanno misurati ed impostati
     #AGGIUNGERE l1,l2 ecc alle impostazioni
         l1 = 3
