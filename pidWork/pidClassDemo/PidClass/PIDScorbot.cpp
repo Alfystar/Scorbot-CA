@@ -6,7 +6,7 @@
 
 PIDScorbot::PIDScorbot(float kp, float ki, float kd, int MdeadZone, bool posDir)
 {
-    PIDScorbot(kp,ki,kd,MdeadZone,posDir,1.0,0.05);
+    PIDScorbot(kp,ki,kd,MdeadZone,posDir,1.0,0.0);
 }
 
 PIDScorbot::PIDScorbot(float kp, float ki, float kd, int MdeadZone, bool posDir,float cSat, float cDead)
@@ -24,13 +24,13 @@ PIDScorbot::PIDScorbot(float kp, float ki, float kd, int MdeadZone, bool posDir,
 
     /*Variabili del pid comp*/
     memset(this->mystack,0, sizeof((this->mystack[0]))*8);
-    this->e_prev = 0;
     this->x_i = 0.0;
     this->y_d = 0.0;
 
     /*pid relativi*/
     gettimeofday(&this->temp,NULL);
     gettimeofday(&this->oldTemp,NULL);
+    printf("kp=%e, ki=%e, kd=%e\n",kp,ki,kd);
 
 
 }
@@ -40,79 +40,85 @@ float fmap(float x, float in_min, float in_max, float out_min, float out_max)
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
+int ts;//tempo da ultima chiamata
 int PIDScorbot::motVal(int ref,int en)
 {
 
     this->oldTemp=this->temp;
-
     gettimeofday(&this->temp,NULL);
 
-    //Serial.print(temp1);Serial.print("    ");
+    int er = (ref - en)*(1-(2*this->posDir)); //per allineare verso dei pwm a incremento degli encoder
 
-    int er = ref - en;
-    float vOut=this->PIDComp(er,this->temp.tv_usec-this->oldTemp.tv_usec);
+    if(this->temp.tv_usec-this->oldTemp.tv_usec<0); //se avviene l'overflow ipotizzo uguale a prima
+    else ts=this->temp.tv_usec-this->oldTemp.tv_usec;
 
-    vOut*=1-(2*this->posDir);   //per allineare verso dei pwm a incremento degli encoder
+    float vOut=this->PIDComp(er,ts);
+    printf("vOut=%f\n",vOut);
 
     if(fabsf(vOut)<this->CONTROL_DEADZONE)
     {
-        return ss; //soft stop
+        return fr; //soft stop
     }else{
-        if(vOut>0) return int(0.5+fmap(vOut,0.0,1.0,this->MOTOR_DEADZONE,255));
-        else return int(0.5-fmap(vOut,0.0,-1.0,-this->MOTOR_DEADZONE,-255));
+        if(vOut>0) return int(fmap(vOut,0.0,1.0,this->MOTOR_DEADZONE,255)+0.5);
+        else
+        {
+            return int(-fmap(-vOut,0.0,1.0,this->MOTOR_DEADZONE,255)-0.5);
+        }
     }
 }
 
 
 
-float PIDScorbot::UpdateSat(float x, float dx, float a, float k, float S)
+float PIDScorbot::UpdateSat(float x, float dx, float a, float k, float s, float S)
 {
     /* Evaluate the suitable increment dxsat from dx of a variable x such that
-      % the saturation constraint |a+k(x+dxsat)| <= S is as much as possibile satisfied
+      % the saturation constraint s <= |a+k(x+dxsat)| <= S is as much as possibile satisfied
       % with |dxsat| <= |dx| and dxsat*dx>=0.
       % x: the variable to be updated
       % dx: the incremental value for x
-      % a,k and S: the parameter of the saturation function |a+k(x+dxsat)| <= S
+      % a,k,s and S: the parameter of the saturation function s <=|a+k(x+dxsat)| <= S
     */
 
     float xhat = x + dx;
+
+    if(fabsf(xhat)<=s)//saturazione di rumore
+        return 0.0;
+
     float temp = S - fabsf(a + k * xhat);
 
-    if (temp <= 0)
+    if (temp <= 0)//saturazione superiore
     {
-        if (fabsf(a + k * xhat) < fabsf(a + k * x))
-        {
+        if (fabsf(a + k * xhat) < fabsf(a + k * x)) //sta decrementando
             return (dx);
-        }
-        else return ((dx >= 0 ? 1 : -1) * fmaxf(0, (S - fabsf(a + k * x)) / k));
-    }
-    else  return (dx);
-
+        else   //da 0 incremento o quello che manca a saturare
+            return ((dx >= 0 ? 1 : -1) * fmaxf(0, (S - fabsf(a + k * x)) / k));
+    }else
+        return (dx);
 }
 
 
 float PIDScorbot::PIDComp(int error, __suseconds_t Ts)
 {
+    printf("error=%d, dt=%ld\n",error,Ts);
     /*Il pid calcola un valore in uscita tra -1.0 e 1.0 che è -100% to 100% della pot di uscita del motore*/
     //TS tempo campione in micro secondi
 
     //stack update, the higher the newer
+    long sum=0;
     for (short int i = 0; i < 7; i++) {
+        sum+=this->mystack[i].time;
         this->mystack[i] = this->mystack[i + 1];
     }
-    this->mystack[7] = error;
+    this->mystack[7].er = error;
+    this->mystack[7].time = Ts;
+
     //7 è la distanza tra i 2 campioni
-    this->y_d = this->Kd * (this->mystack[7] - this->mystack[0]) / (7 * Ts);
-    this->x_i = this->x_i + this->UpdateSat(this->x_i, this->Ki * Ts * this->e_prev, this->Kp * error + this->y_d, 1, this->CONTROL_SATURATION);
-    this->e_prev = error;
-    //   Serial.print("x_i = ");
-    //   Serial.print(x_i);
-    //   Serial.print(", x_d = ");
-    //   Serial.print(y_d);
-    //   Serial.print(", error = ");
-    //   Serial.print(error);
-    //   Serial.print(", u = ");
-    //   Serial.println(Kp*error + x_i + y_d);
+    this->y_d = this->Kd * (this->mystack[7].er - this->mystack[0].er) / sum;
+
+    this->x_i += this->UpdateSat(this->x_i, this->Ki * Ts * this->mystack[6].er, this->Kp * error + this->y_d, 1, this->CONTROL_DEADZONE, this->CONTROL_SATURATION);
+
+    printf("x_i = %f, y_d = %f, error = %d, u = %f\n",x_i,y_d,error,(Kp*error + x_i + y_d));
+
     return ( std::min(this->CONTROL_SATURATION, std::max(-this->CONTROL_SATURATION, this->Kp * error + this->x_i + this->y_d )));
 }
 
