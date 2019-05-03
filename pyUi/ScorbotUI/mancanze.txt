@@ -1,7 +1,9 @@
-Togliere open e close dalle schermate (Alberto)
 Fare controlli dei valori max e min degli encoder da inviare a C
-Creare liste per i valori max (Ilaria)
 Inserire grafici nelle prime tre schermate
-Terza schermata: sistemarla completamente
-Quarta pagina:controllare il valore dei parametri alfa,beta,gamma,delta(perche' devono essere float e lo spin prende int)
 Studio dei punti ammissibili nello spazio per lo scorbot
+Fare round di tutte le label
+mettere parametrica la variabile della percentuale(enc 6) e quindi impostare il massimo di enc 6 nel setup
+Vedere perche' non funziona home negativa
+Vedere perche' non funziona ampere nella 3 pagina
+Aggiungere ricezione impostazioni
+Definire alfa,beta ecc
