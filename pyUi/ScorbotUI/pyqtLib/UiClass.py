@@ -2060,4 +2060,3 @@ class Ui_UiClass(object):
         self.o.setTabText(self.o.indexOf(self.Setup), _translate("UiClass", "Setup"))
 
 
-
