@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>1044</width>
-    <height>551</height>
+    <height>575</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,13 +20,13 @@
    <string notr="true">url:(/newPrefix/Logo-Uni-Tor-Vergata.png_48x48.png)</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTabWidget" name="o">
+   <widget class="QTabWidget" name="tabWidget">
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>10</y>
+      <y>0</y>
       <width>1001</width>
-      <height>481</height>
+      <height>521</height>
      </rect>
     </property>
     <property name="font">
@@ -74,9 +74,9 @@
      <widget class="QPushButton" name="Pulsante_invio_pagina_Basics">
       <property name="geometry">
        <rect>
-        <x>710</x>
-        <y>140</y>
-        <width>131</width>
+        <x>810</x>
+        <y>270</y>
+        <width>141</width>
         <height>41</height>
        </rect>
       </property>
@@ -976,9 +976,9 @@
      <widget class="QPushButton" name="PulsanteInvioPAginaAdvance">
       <property name="geometry">
        <rect>
-        <x>710</x>
-        <y>140</y>
-        <width>131</width>
+        <x>810</x>
+        <y>270</y>
+        <width>141</width>
         <height>41</height>
        </rect>
       </property>
@@ -1805,9 +1805,9 @@
      <widget class="QPushButton" name="PulsanteInvioPAgina_Inverse">
       <property name="geometry">
        <rect>
-        <x>710</x>
-        <y>140</y>
-        <width>131</width>
+        <x>810</x>
+        <y>270</y>
+        <width>141</width>
         <height>41</height>
        </rect>
       </property>
@@ -1962,8 +1962,8 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>710</x>
-        <y>60</y>
+        <x>680</x>
+        <y>150</y>
         <width>171</width>
         <height>61</height>
        </rect>
@@ -2049,7 +2049,7 @@
             <string notr="true"/>
            </property>
            <property name="text">
-            <string>Xpos:</string>
+            <string>Xpinza:</string>
            </property>
           </widget>
          </item>
@@ -2079,7 +2079,7 @@
             <string notr="true"/>
            </property>
            <property name="text">
-            <string>Ypos:</string>
+            <string>Ypinza:</string>
            </property>
           </widget>
          </item>
@@ -2109,7 +2109,7 @@
             <string notr="true"/>
            </property>
            <property name="text">
-            <string>Zpos:</string>
+            <string>Zpinza:</string>
            </property>
           </widget>
          </item>
@@ -2472,9 +2472,9 @@
      <widget class="QPushButton" name="Home">
       <property name="geometry">
        <rect>
-        <x>840</x>
-        <y>150</y>
-        <width>139</width>
+        <x>810</x>
+        <y>270</y>
+        <width>141</width>
         <height>41</height>
        </rect>
       </property>
@@ -2487,7 +2487,7 @@
        <string notr="true">background-color: qlineargradient(spread:pad, x1:0.0246305, y1:0.602273, x2:1, y2:0, stop:0 rgba(0, 139, 0, 255), stop:0.655172 rgba(255, 255, 255, 255));</string>
       </property>
       <property name="text">
-       <string>HOME</string>
+       <string>ENTER</string>
       </property>
      </widget>
      <widget class="QLabel" name="Passi_encoder_scritta_2">
@@ -2511,8 +2511,8 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>870</x>
-        <y>240</y>
+        <x>770</x>
+        <y>70</y>
         <width>91</width>
         <height>136</height>
        </rect>
@@ -2599,9 +2599,9 @@
      <widget class="QWidget" name="layoutWidget_3">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>360</x>
         <y>40</y>
-        <width>191</width>
+        <width>161</width>
         <height>371</height>
        </rect>
       </property>
@@ -2761,7 +2761,7 @@
      <widget class="QLabel" name="valMaxScr">
       <property name="geometry">
        <rect>
-        <x>200</x>
+        <x>180</x>
         <y>10</y>
         <width>141</width>
         <height>20</height>
@@ -2779,7 +2779,7 @@
      <widget class="QLabel" name="valMinScr">
       <property name="geometry">
        <rect>
-        <x>400</x>
+        <x>360</x>
         <y>10</y>
         <width>131</width>
         <height>20</height>
@@ -2797,9 +2797,9 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>200</x>
+        <x>180</x>
         <y>40</y>
-        <width>191</width>
+        <width>161</width>
         <height>371</height>
        </rect>
       </property>
@@ -2959,7 +2959,7 @@
      <widget class="QWidget" name="layoutWidget_6">
       <property name="geometry">
        <rect>
-        <x>610</x>
+        <x>530</x>
         <y>50</y>
         <width>111</width>
         <height>351</height>
@@ -3189,7 +3189,7 @@
      <widget class="QLabel" name="valMinScr_2">
       <property name="geometry">
        <rect>
-        <x>610</x>
+        <x>520</x>
         <y>10</y>
         <width>211</width>
         <height>20</height>
@@ -3209,7 +3209,7 @@
        <rect>
         <x>0</x>
         <y>40</y>
-        <width>191</width>
+        <width>161</width>
         <height>371</height>
        </rect>
       </property>
@@ -3366,10 +3366,10 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>730</x>
+        <x>660</x>
         <y>60</y>
         <width>91</width>
         <height>211</height>
@@ -3473,12 +3473,12 @@
        </item>
       </layout>
      </widget>
-     <widget class="QWidget" name="">
+     <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>730</x>
-        <y>290</y>
-        <width>97</width>
+        <x>660</x>
+        <y>320</y>
+        <width>91</width>
         <height>64</height>
        </rect>
       </property>
@@ -3522,6 +3522,27 @@
         </layout>
        </item>
       </layout>
+     </widget>
+     <widget class="QPushButton" name="reset">
+      <property name="geometry">
+       <rect>
+        <x>290</x>
+        <y>440</y>
+        <width>421</width>
+        <height>41</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: qlineargradient(spread:pad, x1:0.0246305, y1:0.602273, x2:1, y2:0, stop:0 rgba(0, 139, 0, 255), stop:0.655172 rgba(255, 255, 255, 255));</string>
+      </property>
+      <property name="text">
+       <string>RESET</string>
+      </property>
      </widget>
     </widget>
    </widget>

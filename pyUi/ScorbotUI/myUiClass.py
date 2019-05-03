@@ -271,3 +271,6 @@ class MyUiQt (Ui_UiClass):
         for i in self.param:
             listaMinV.append(i.value())
 
+
+
+
