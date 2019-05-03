@@ -118,23 +118,21 @@ class MyUiQt (Ui_UiClass):
             i.setMinimum(-20000)
 
 
-        for i in self.maxValC:
-            i.setMaximum(20000)
-
-        for i in self.maxValC:
-            i.setMinimum(20000)
-
         for i in range(0,6):
-            a=self.maxValE[i]
+            a=self.maxValE[i].value()
+            b=self.minValE[i].value()
             self.homePos[i].setMaximum(a)
-
+            self.homePos[i].setMinimum(b)
 
 
         """LISTA Eventi"""
         # premendo invio, metto nella lista i passi encoder da aggiungere  quelli attuali
         self.Pulsante_invio_pagina_Basics.clicked.connect(self.encoderValue)  #prima pagina
-        self.PulsanteInvioPAginaAdvance.clicked.connect((self.angleValue))
-        self.PulsanteInvioPAgina_Inverse.clicked.connect((self.inverseValue))
+        self.PulsanteInvioPAginaAdvance.clicked.connect(self.angleValue)
+        self.PulsanteInvioPAgina_Inverse.clicked.connect(self.inverseValue)
+
+        """nuova riga"""
+        self.Home.clicked.connect(self.setup1)
         
     def converti_in_e(self,lista):
         lista_e=[]
@@ -248,3 +246,28 @@ class MyUiQt (Ui_UiClass):
         
         lista_e=self.converti_in_e(theta1,theta2,theta3,theta4,theta5,self.angle[5].value())
         invia(lista_e,"e")
+
+
+    """nuove righe"""
+    def setup1(self):
+        lista=[]
+        for i in self.structVal:
+            lista.append(i.value())
+
+        listaHp=[]
+        for i in self.homePos:
+            listaHp.append(i.value())
+
+        listaMaxV=[]
+        for i in self.maxValE:
+            listaMaxV.append(i.value())
+
+        listaMinV=[]
+        for i in self.minValE:
+            listaMinV.append(i.value())
+
+
+        listaPar=[]
+        for i in self.param:
+            listaMinV.append(i.value())
+
