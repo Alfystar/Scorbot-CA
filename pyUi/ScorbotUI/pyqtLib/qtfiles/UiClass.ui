@@ -26,7 +26,7 @@
       <x>10</x>
       <y>10</y>
       <width>1001</width>
-      <height>381</height>
+      <height>421</height>
      </rect>
     </property>
     <property name="font">
@@ -116,7 +116,7 @@
         <x>10</x>
         <y>40</y>
         <width>171</width>
-        <height>271</height>
+        <height>341</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="VEn_Dir">
@@ -305,7 +305,7 @@
         <x>350</x>
         <y>40</y>
         <width>141</width>
-        <height>271</height>
+        <height>341</height>
        </rect>
       </property>
       <property name="font">
@@ -502,7 +502,7 @@
         <x>230</x>
         <y>40</y>
         <width>111</width>
-        <height>271</height>
+        <height>341</height>
        </rect>
       </property>
       <property name="font">
@@ -726,7 +726,7 @@
         <x>520</x>
         <y>40</y>
         <width>121</width>
-        <height>271</height>
+        <height>341</height>
        </rect>
       </property>
       <property name="font">
@@ -1000,7 +1000,7 @@
         <x>520</x>
         <y>40</y>
         <width>111</width>
-        <height>271</height>
+        <height>341</height>
        </rect>
       </property>
       <property name="font">
@@ -1230,7 +1230,7 @@
         <x>230</x>
         <y>40</y>
         <width>115</width>
-        <height>271</height>
+        <height>341</height>
        </rect>
       </property>
       <property name="font">
@@ -1454,7 +1454,7 @@
         <x>10</x>
         <y>40</y>
         <width>171</width>
-        <height>271</height>
+        <height>341</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="VEn_Dir_3">
@@ -1587,7 +1587,7 @@
         <x>350</x>
         <y>40</y>
         <width>141</width>
-        <height>271</height>
+        <height>341</height>
        </rect>
       </property>
       <property name="font">
@@ -1829,7 +1829,7 @@
         <x>30</x>
         <y>40</y>
         <width>121</width>
-        <height>241</height>
+        <height>341</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
@@ -2021,7 +2021,7 @@
         <x>190</x>
         <y>40</y>
         <width>125</width>
-        <height>241</height>
+        <height>341</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_7">
@@ -2127,10 +2127,10 @@
      <widget class="QWidget" name="layoutWidget_4">
       <property name="geometry">
        <rect>
-        <x>540</x>
+        <x>530</x>
         <y>30</y>
         <width>111</width>
-        <height>271</height>
+        <height>351</height>
        </rect>
       </property>
       <property name="font">
@@ -2360,7 +2360,7 @@
         <x>360</x>
         <y>40</y>
         <width>141</width>
-        <height>241</height>
+        <height>341</height>
        </rect>
       </property>
       <property name="font">
@@ -2472,8 +2472,8 @@
      <widget class="QPushButton" name="Home">
       <property name="geometry">
        <rect>
-        <x>820</x>
-        <y>200</y>
+        <x>840</x>
+        <y>150</y>
         <width>139</width>
         <height>41</height>
        </rect>
@@ -2511,9 +2511,9 @@
      <widget class="QWidget" name="layoutWidget">
       <property name="geometry">
        <rect>
-        <x>780</x>
-        <y>40</y>
-        <width>87</width>
+        <x>730</x>
+        <y>250</y>
+        <width>91</width>
         <height>136</height>
        </rect>
       </property>
@@ -2602,7 +2602,7 @@
         <x>400</x>
         <y>40</y>
         <width>191</width>
-        <height>261</height>
+        <height>341</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_5">
@@ -2800,7 +2800,7 @@
         <x>200</x>
         <y>40</y>
         <width>191</width>
-        <height>261</height>
+        <height>341</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_4">
@@ -2961,8 +2961,8 @@
        <rect>
         <x>610</x>
         <y>40</y>
-        <width>161</width>
-        <height>261</height>
+        <width>111</width>
+        <height>341</height>
        </rect>
       </property>
       <property name="font">
@@ -3210,7 +3210,7 @@
         <x>0</x>
         <y>40</y>
         <width>191</width>
-        <height>261</height>
+        <height>341</height>
        </rect>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_6">
@@ -3361,6 +3361,113 @@
          </item>
          <item>
           <widget class="QSpinBox" name="en6HPVal"/>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="">
+      <property name="geometry">
+       <rect>
+        <x>730</x>
+        <y>40</y>
+        <width>91</width>
+        <height>172</height>
+       </rect>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_8">
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <widget class="QLabel" name="L1">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>L1</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="l1Value"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_8">
+         <item>
+          <widget class="QLabel" name="L2">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>L2</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="L2Value"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_82">
+         <item>
+          <widget class="QLabel" name="L3">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>L3</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="L3Value"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_83">
+         <item>
+          <widget class="QLabel" name="d1">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>d1</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="d1Value"/>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_84">
+         <item>
+          <widget class="QLabel" name="d5">
+           <property name="font">
+            <font>
+             <pointsize>12</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>d5</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDoubleSpinBox" name="d5Value"/>
          </item>
         </layout>
        </item>
