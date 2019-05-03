@@ -51,14 +51,13 @@ int PIDScorbot::motVal(int ref,int en)
     else ts=this->temp.tv_usec-this->oldTemp.tv_usec;
 
     int er = (ref - en)*(1-(2*this->posDir)); //per allineare verso dei pwm a incremento degli encoder
-    //if(abs(er)<150) return hs;
 
     float vOut=this->PIDComp(er,ts);
     printf("vOut=%f\n",vOut);
 
     if(fabsf(vOut)<this->CONTROL_DEADZONE)
     {
-        return ss; //free running
+        return ss; //soft stop
     }else{
         if(vOut>0) return int(fmap(vOut,0.0,1.0,this->MOTOR_DEADZONE,255)+0.5);
         else
@@ -73,7 +72,8 @@ int PIDScorbot::motVal(int ref,int en)
 float PIDScorbot::UpdateSat(float x, float dx, float a, float k, float s, float S)
 {
     /* Evaluate the suitable increment dxsat from dx of a variable x such that
-      % the saturation constraint s <= |a+k(x+dxsat)| <= S is as much as possibile satisfied
+      % the saturation constraint |a+k(x+dxsat)| <= S is as much as possibile satisfied
+      % otherwise if |x+dx| is less than s return 0
       % with |dxsat| <= |dx| and dxsat*dx>=0.
       % x: the variable to be updated
       % dx: the incremental value for x

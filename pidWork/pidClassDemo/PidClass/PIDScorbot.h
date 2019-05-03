@@ -39,8 +39,6 @@ private:
     /*pid timing*/
     struct timeval temp;
     struct timeval oldTemp;
-    struct timeval timeStop;
-    int tBreak=10000;
 
     float PIDComp(int error, __suseconds_t Ts);
     float UpdateSat(float x, float dx, float a, float k, float s, float S);

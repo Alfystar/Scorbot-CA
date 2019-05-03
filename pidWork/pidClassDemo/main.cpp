@@ -48,7 +48,7 @@ int main(int argc, char *argv[]) {
     pidM[cMot1] = new PIDScorbot(0.00055,0.0000000015,10,50,false,.8,0.02);
     pidM[cMot2] = new PIDScorbot(0.00055,0.0000000015,10,50,false,1.0,0.02);
     pidM[cMot3] = new PIDScorbot(0.00055,0.0000000015,10,50,true,.8,0.02);
-    pidM[cMot4] = new PIDScorbot(0.00055,0.0000000015,10,110,true,.8,0.02); //true
+    pidM[cMot4] = new PIDScorbot(0.00055,0.0000000015,10,110,true,.8,0.02);
     pidM[cMot5] = new PIDScorbot(0.00055,0.0000000015,10,133,false,.8,0.02);
     pidM[cMot6] = new PIDScorbot(0.00055,0.0000000015,10,85,false,.8,0.02);
     sender = new SpiSend();
