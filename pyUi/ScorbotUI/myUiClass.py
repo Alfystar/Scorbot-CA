@@ -23,9 +23,7 @@ class MyUiQt (Ui_UiClass):
         self.setup = [self.passi1_direct,self.passi1_2_direct, self.passi1_3_direct, self.passi1_4_direct, self.passi1_5_direct,self.passi1_6_direct]
         self.encr = [self.encrease_value1,self.encrease_value2, self.encrease_value3, self.encrease_value4,self.encrease_value5,self.encrease_value6]
         self.cor=[self.ma1_value,self.ma2_value,self.ma3_value,self.ma4_value,self.ma5_value,self.ma6_value]
-      
-        """Quarta pagina"""
-        self.param= [self.alphaValue,self.betaValue,self.gammaValue,self.deltaValue]
+
 
         """Seconda pagina"""
         #lista che contiene i pulsanti della seconda pagina
@@ -33,16 +31,23 @@ class MyUiQt (Ui_UiClass):
         self.theta=[self.tetaDir_1value,self.tetaDir_2value,self.tetaDir_3value,self.tetaDir_4value,self.tetaDir_5value,self.tetaDir_6value]
         self.encr1=[self.encrease_value1_2,self.encrease_value2_2,self.encrease_value3_2,self.encrease_value4_2,self.encrease_value5_2,self.encrease_value6_2]
         self.cor2=[self.ma1_value1_direct,self.ma2_value2_direct,self.ma3_value3_direct,self.ma4_value4_direct,self.ma5_value5_direct,self.ma6_value6_direct]
+
+
         """Terza pagina"""
-        # manca Ydes nella lista perché dà errore
+
         self.inVal=[self.Xdes_spin_Box,self.Ydes_spin_box,self.Zdes_spin_Box] #
         self.ax=[]
         self.encr3=[]
         self.cor3=[]
 
-
-
-
+        """Le prossime 6 righe sono nuove"""
+        """Quarta pagina"""
+        self.param= [self.alphaValue,self.betaValue,self.gammaValue,self.deltaValue]
+        self.structVal=[self.l1Value,self.L2Value,self.L3Value,self.d1Value,self.d5Value]
+        self.homePos=[self.en1HPVal,self.en2HPVal,self.en3HPVal,self.en4HPVal,self.en5HPVal,self.en6HPVal]
+        self.maxValE=[self.maxEn1Val,self.maxEn2Val,self.maxEn3Val,self.maxEn4Val,self.maxEn5Val,self.maxEn6Val]
+        self.minValE=[self.minEn1Val,self.minEn2Val,self.minEn3Val,self.minEn4Val,self.minEn5Val,self.minEn6Val]
+        self.maxValC=[self.maxCor1Val,self.maxCor2Val,self.maxCor3Val,self.maxCor4Val,self.maxCor5Val,self.maxCor6Val]
 
 
         """LISTA Setup"""
@@ -89,6 +94,37 @@ class MyUiQt (Ui_UiClass):
 
         for i in self.param:
           i.setValue(1) #il 20000 e' da prendere dalle impostazioni
+
+
+        """Le prossime righe sono nuove"""
+
+        for i in self.structVal:
+            i.setMaximum(100)
+
+        for i in self.structVal:
+            i.setMinimum(0)
+
+        for i in self.maxValE:
+            i.setMaximum(20000)
+
+        for i in self.maxValE:
+            i.setMinimum(-20000)
+
+
+        for i in self.minValE:
+            i.setMaximum(20000)
+
+        for i in self.minValE:
+            i.setMinimum(-20000)
+
+
+        for i in self.maxValC:
+            i.setMaximum(20000)
+
+        for i in self.maxValC:
+            i.setMinimum(20000)
+
+
 
 
 
