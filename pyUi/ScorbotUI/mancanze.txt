@@ -14,5 +14,6 @@ modificare parte visuale:
  quando i valori sono troppo lunghi ho sovrapposizione delle label
  aggiungere unita' di misura (cm per x,y,z e gradi per i theta(tranne 6))
 
-aggiungere memoria per la home salvata(e le impostazioni)
-inserire commenti
+...aggiungere memoria per la home salvata(e le impostazioni)
+...inserire commenti
+

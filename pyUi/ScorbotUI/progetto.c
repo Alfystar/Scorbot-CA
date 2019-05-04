@@ -252,7 +252,7 @@ int main_com(char *file_p[]) {
         }
     }
     //esempio
-    
+    /*
     struct messaggio nodo;
     nodo.enc[0]=10;
     nodo.enc[1]=5;
@@ -311,7 +311,7 @@ int main_com(char *file_p[]) {
     libera_u(testa);
     while(1){}
     return 0;
-    
+    */
   }
 
 
