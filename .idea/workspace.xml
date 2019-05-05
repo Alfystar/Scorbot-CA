@@ -13,9 +13,65 @@
   <component name="ChangeListManager">
     <list default="true" id="9d63bfc8-c3db-4d44-bd04-cb7890be4532" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/rasp-Cpp/Scorbot_CPP/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/rasp-Cpp/Scorbot_CPP/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/Atmel ATmega 640-1280-1281-2560-2561.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/Atmel ATmega 640-1280-1281-2560-2561.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/ER3-Manual(maybe our scorebot).pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/ER3-Manual(maybe our scorebot).pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/HW component/ACS712-Datasheet.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/HW component/ACS712-Datasheet.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/HW component/ACS723-Datasheet.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/HW component/ACS723-Datasheet.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/HW component/L298_H_Bridge.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/HW component/L298_H_Bridge.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/HW component/txb0108.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/HW component/txb0108.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/ScorBot Board/ER3-Manual(maybe our scorebot).pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/ScorBot Board/ER3-Manual(maybe our scorebot).pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/ScorBot Board/connection Scheme.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/ScorBot Board/connection Scheme.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/ScorBot Board/connettori ScoreBot.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/ScorBot Board/connettori ScoreBot.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/ScorBot Board/connettori ScoreBot.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/ScorBot Board/connettori ScoreBot.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/ScorBot Board/pinOut D-sub50.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/ScorBot Board/pinOut D-sub50.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/ScorBot Board/pinOut D-sub50/D-sub50 Scorbot PinOut.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/ScorBot Board/pinOut D-sub50/D-sub50 Scorbot PinOut.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/ScorBot Board/pinOut D-sub50/Diapositiva1.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/ScorBot Board/pinOut D-sub50/Diapositiva1.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/ScorBot Board/pinOut D-sub50/Diapositiva2.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/ScorBot Board/pinOut D-sub50/Diapositiva2.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/General Documentation/PhDTesiFerro.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/General Documentation/PhDTesiFerro.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/General Documentation/Relazione Gruppo 7 jpeg massima.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/General Documentation/Relazione Gruppo 7 jpeg massima.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Connettore Dsub/Diapositiva1.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Connettore Dsub/Diapositiva1.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Connettore Dsub/Diapositiva2.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Connettore Dsub/Diapositiva2.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Connettore Dsub/dsub board.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Connettore Dsub/dsub board.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Connettore Dsub/dsub50.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Connettore Dsub/dsub50.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Corrente/acs712 funzionalità.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Corrente/acs712 funzionalità.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Corrente/acs712 sens.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Corrente/acs712 sens.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Corrente/acs712 vout.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Corrente/acs712 vout.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Corrente/acs712.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Corrente/acs712.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Encoder/Connessione Sensori.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Encoder/Connessione Sensori.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Encoder/algoritmo encoder.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Encoder/algoritmo encoder.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Encoder/buffer circolari array.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Encoder/buffer circolari array.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Encoder/buffer circolari.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Encoder/buffer circolari.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Encoder/encoder assembly.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Encoder/encoder assembly.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Encoder/encoder disk.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Encoder/encoder disk.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Encoder/encoder quadratura.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Encoder/encoder quadratura.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Encoder/fonto sensori.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Encoder/fonto sensori.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Encoder/home switch.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Encoder/home switch.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Encoder/homming.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Encoder/homming.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Encoder/pcint timing.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Encoder/pcint timing.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Frontale sistema.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Frontale sistema.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Motori/l298.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Motori/l298.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Motori/ponte h.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Motori/ponte h.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Motori/schema 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Motori/schema 2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/dettaglio motori.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/dettaglio motori.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/impostazioni.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/impostazioni.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/old Frontale.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/old Frontale.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/rapsberry pinout.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/rapsberry pinout.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/scheda.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/scheda.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/schema 1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/schema 1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Presentazione progetto.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Presentazione progetto.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Software/SPI_8-bit_circular_transfer.svg.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Software/SPI_8-bit_circular_transfer.svg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Software/SPI_single_slave.svg.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Software/SPI_single_slave.svg.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Software/spi schema a blocchi.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Software/spi schema a blocchi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Software/spi-basics-maxembedded-animated.gif.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Software/spi-basics-maxembedded-animated.gif.mp4" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Software/spi-basics-maxembedded-animated.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Software/spi-basics-maxembedded-animated.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Software/spi-basics-maxembedded-animated/spi-basics-maxembedded-animated.gif" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Software/spi-basics-maxembedded-animated/spi-basics-maxembedded-animated.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Traccia lab ARL.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Traccia lab ARL.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/esLab.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/esLab.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/robot99.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/robot99.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/rasp-Cpp/Scorbot_CPP/cmake-build-debug/" />
+    <ignored path="$PROJECT_DIR$/rasp-Cpp/Scorbot_CPP/CMakeFiles/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -32,11 +88,23 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/rasp-Cpp/Scorbot_CPP/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="68">
               <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="119">
+                <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -99,6 +167,7 @@
         <option value="$PROJECT_DIR$/rasp-Cpp/Scorbot_CPP/SPILib/spisend.cpp" />
         <option value="$PROJECT_DIR$/rasp-Cpp/Scorbot_CPP/main.cpp" />
         <option value="$PROJECT_DIR$/rasp-Cpp/Scorbot_CPP/.gitignore" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -130,38 +199,7 @@
             <path>
               <item name="pidClassDemo" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="pidWork" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="pidClassDemo" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="pidWork" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="pidClassDemo" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="pidClassDemo" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="pidWork" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="pidClassDemo" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="SPILib" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="pidClassDemo" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="rasp-Cpp" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="pidClassDemo" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="rasp-Cpp" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Scorbot_CPP" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-            </path>
-            <path>
-              <item name="pidClassDemo" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
-              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="rasp-Cpp" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="Scorbot_CPP" type="9f88c78c:ScopeViewTreeModel$FileNode" />
-              <item name="SPILib" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="Doc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
@@ -420,14 +458,8 @@
       <workItem from="1556789943774" duration="3067000" />
       <workItem from="1556886393366" duration="3554000" />
       <workItem from="1556893855061" duration="1370000" />
-      <workItem from="1557043996403" duration="2463000" />
-    </task>
-    <task id="LOCAL-00001" summary="Home Scorebot&#10;Pack Transfert standardize">
-      <created>1553794397754</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1553794397754</updated>
+      <workItem from="1557043996403" duration="2491000" />
+      <workItem from="1557046500805" duration="1363000" />
     </task>
     <task id="LOCAL-00002" summary="Home Scorebot&#10;Pack Transfert standardize&#10;readme">
       <created>1553795089082</created>
@@ -765,11 +797,18 @@
       <option name="project" value="LOCAL" />
       <updated>1557046244866</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="spiSend corretto, e aggiornato&#10;memcpy -&gt; memmove&#10;per evitare rischi di overlap (probabili)&#10;&#10;git ignore aggiornato">
+      <created>1557046472172</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1557046472173</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75895000" />
+    <option name="totallyTimeSpent" value="77286000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -782,13 +821,10 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1024" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24759872" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25026682" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32924107" />
-      <window_info anchor="bottom" id="CMake" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32897863" />
       <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4964789" visible="true" weight="0.23717949" />
@@ -802,6 +838,8 @@
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50080776" side_tool="true" weight="0.3219178" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32852563" />
+      <window_info anchor="bottom" id="Messages" order="13" weight="0.32924107" />
+      <window_info anchor="bottom" id="CMake" order="14" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -900,7 +938,8 @@
     <MESSAGE value="Aggiunta l1 ecc ecc" />
     <MESSAGE value="Modifiche Ilaria" />
     <MESSAGE value="spiSend corretto, e aggiornato&#10;memcpy -&gt; memmove&#10;per evitare rischi di overlap (probabili)" />
-    <option name="LAST_COMMIT_MESSAGE" value="spiSend corretto, e aggiornato&#10;memcpy -&gt; memmove&#10;per evitare rischi di overlap (probabili)" />
+    <MESSAGE value="spiSend corretto, e aggiornato&#10;memcpy -&gt; memmove&#10;per evitare rischi di overlap (probabili)&#10;&#10;git ignore aggiornato" />
+    <option name="LAST_COMMIT_MESSAGE" value="spiSend corretto, e aggiornato&#10;memcpy -&gt; memmove&#10;per evitare rischi di overlap (probabili)&#10;&#10;git ignore aggiornato" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/Scorbot_CA$mainUi.coverage" NAME="mainUi Coverage Results" MODIFIED="1556888169925" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/ScorbotUI" />
@@ -1069,6 +1108,19 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Frontale sistema.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="119">
+            <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
