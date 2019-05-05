@@ -4,6 +4,7 @@ View this project on [CADLAB.io](https://cadlab.io/project/1649).
 Progetto di Controlli Automatici
 - Sviluppato da studenti del 3° Ing. Informatica
 - Corso a cura del Prof: Daniele Carnevale
+
 ![Alt text](Doc/Presentazione Scorbot low level/Hardware/Frontale sistema.png?raw=true "Title")
 
 #### Eagle Board Developed by:
