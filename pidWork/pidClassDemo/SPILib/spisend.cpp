@@ -219,7 +219,7 @@ SPIPACK *SpiSend::pSetPWM(SPIPACK *p, setPWMSend *pwm)
 {
 
     p->type=setPWM;
-    memcpy(&p->out.pack.speed,pwm,sizeof(setPWMSend));
+    memmove(&p->out.pack.speed,pwm,sizeof(setPWMSend));
 
     this->sendPack(p);
     return p;
@@ -265,7 +265,7 @@ SPIPACK *SpiSend::pSetSetting(SPIPACK *p,setSettingSend *sets)
 {
 
     p->type=setSetting;
-    memcpy(&p->out.pack.prop,sets,sizeof(setSettingSend));
+    memmove(&p->out.pack.prop,sets,sizeof(setSettingSend));
 
     this->sendPack(p);
     return p;

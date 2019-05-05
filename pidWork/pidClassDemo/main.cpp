@@ -56,7 +56,7 @@ int main(int argc, char *argv[]) {
 
     usleep(500000);
 
-    pack=sender->makeSPIPACK();
+    pack = sender->makeSPIPACK();
     sender->getEn(pack);
     long wait;
 
