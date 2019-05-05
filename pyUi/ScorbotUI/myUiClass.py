@@ -135,7 +135,7 @@ class MyUiQt (Ui_UiClass):
         #pulsante quarta pagina (set impostazioni)
         self.Home.clicked.connect(self.setup1)
         #pulsante quarta pagina (reset impostazioni)
-        self.reset.clicked.connect(self.default)
+        self.reset.clicked.connect(self.reset_i)
         
     def default(self): #setta le impostazioni della quarta pagina tramite i valori definiti nel file config.py
         self.Gomitoalto.setChecked(True)
@@ -438,7 +438,7 @@ class MyUiQt (Ui_UiClass):
         #aggiornamento della lista della nuova home falsa per la mappatura per la home hardware
         self.listaHp=[]
         for i in self.homePos:
-            self.listaHp.append(i.value())
+            self.listaHp.append(i.value())        
         #invio le nuove impostazioni
         lista=[]
         for i in self.maxValE:
@@ -493,3 +493,65 @@ class MyUiQt (Ui_UiClass):
         }
         with open('config.py','w') as configfile:
            config.write(configfile) 
+    def reset_i(self): #setta le impostazioni della quarta pagina tramite i valori definiti nel file config_init.py
+        self.Gomitoalto.setChecked(True)
+  
+        config=configparser.ConfigParser()
+        config.read('.config_init.py')
+        
+        self.homePos[0].setValue(int(config['DEFAULT']['h1']))
+        self.homePos[1].setValue(int(config['DEFAULT']['h2']))
+        self.homePos[2].setValue(int(config['DEFAULT']['h3']))
+        self.homePos[3].setValue(int(config['DEFAULT']['h4']))
+        self.homePos[4].setValue(int(config['DEFAULT']['h5']))
+        self.homePos[5].setValue(int(config['DEFAULT']['h6']))
+
+        self.maxValE[0].setValue(int(config['DEFAULT']['enM1']))
+        self.maxValE[1].setValue(int(config['DEFAULT']['enM2']))
+        self.maxValE[2].setValue(int(config['DEFAULT']['enM3']))
+        self.maxValE[3].setValue(int(config['DEFAULT']['enM4']))
+        self.maxValE[4].setValue(int(config['DEFAULT']['enM5']))
+        self.maxValE[5].setValue(int(config['DEFAULT']['enM6']))
+
+        self.minValE[0].setValue(int(config['DEFAULT']['em1']))
+        self.minValE[1].setValue(int(config['DEFAULT']['em2']))
+        self.minValE[2].setValue(int(config['DEFAULT']['em3']))
+        self.minValE[3].setValue(int(config['DEFAULT']['em4']))
+        self.minValE[4].setValue(int(config['DEFAULT']['em5']))
+        self.minValE[5].setValue(int(config['DEFAULT']['em6']))
+
+        self.maxValC[0].setValue(int(config['DEFAULT']['eC1']))
+        self.maxValC[1].setValue(int(config['DEFAULT']['eC2']))
+        self.maxValC[2].setValue(int(config['DEFAULT']['eC3']))
+        self.maxValC[3].setValue(int(config['DEFAULT']['eC4']))
+        self.maxValC[4].setValue(int(config['DEFAULT']['eC5']))
+        self.maxValC[5].setValue(int(config['DEFAULT']['eC6']))
+ 
+        self.structVal[0].setValue(float(config['DEFAULT']['l1']))
+        self.structVal[1].setValue(float(config['DEFAULT']['l2']))
+        self.structVal[2].setValue(float(config['DEFAULT']['l3']))
+        self.structVal[3].setValue(float(config['DEFAULT']['d1']))
+        self.structVal[4].setValue(float(config['DEFAULT']['d5']))
+        self.structVal[5].setValue(float(config['DEFAULT']['Bd']))
+        self.structVal[6].setValue(float(config['DEFAULT']['Wd']))
+
+        self.param[0].setValue(float(config['DEFAULT']['alfa']))
+        self.param[1].setValue(float(config['DEFAULT']['beta']))
+        self.param[2].setValue(float(config['DEFAULT']['gamma']))
+        self.param[3].setValue(float(config['DEFAULT']['delta']))
+        #aggiornamento della lista della nuova home falsa per la mappatura per la home hardware
+        self.listaHp=[]
+        for i in self.homePos:
+            self.listaHp.append(i.value())   
+        lista=[]
+        for i in self.maxValE:
+            lista.append(i.value())
+        
+        for i in self.minValE:
+            lista.append(i.value())
+
+        for i in self.maxValC:
+            lista.append(i.value())
+        self.connect_db() #salvo le nuove impostazioni
+        invia(lista,"i") 
+    

@@ -16,4 +16,7 @@ modificare parte visuale:
 
 ...aggiungere memoria per la home salvata(e le impostazioni)
 ...inserire commenti
+...tasto reset
+inserimento dei valori corretti quando aggiorno la home falsa
 
+//aggiungere eventuali semafori per la scrittura sulle Qlabel
