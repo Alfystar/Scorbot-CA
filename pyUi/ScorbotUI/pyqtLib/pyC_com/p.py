@@ -1,8 +1,6 @@
 
 import os,sys
 import signal
-mex=[]
-imp=[]
 from PyQt5 import QtCore, QtGui, QtWidgets
 
 def invia(mes_list,tipo):

@@ -9,6 +9,7 @@ from pyqtLib.UiClass import Ui_UiClass
 
 from pyqtLib.pyC_com.p import *
 nMot=6
+Vref=1.1
 
 import configparser
 
@@ -83,18 +84,18 @@ class MyUiQt (Ui_UiClass):
             i.setMinimum(0)
 
         for i in self.maxValE:
-            i.setMaximum(20000)
-            i.setMinimum(-20000)   
+            i.setMaximum(50000)
+            i.setMinimum(-50000)   
         self.maxValE[5].setMinimum(0)   #il sesto encoder parte da 0 ed e' espresso in percentuale nel set dell' angolo(cinematica diretta)
 
         for i in self.minValE:
-            i.setMaximum(20000)
-            i.setMinimum(-20000)  
+            i.setMaximum(50000)
+            i.setMinimum(-50000)  
         self.minValE[5].setMinimum(0)   #il sesto encoder parte da 0 ed e' espresso in percentuale nel set dell' angolo(cinematica diretta)
 
         
         for i in self.maxValC:
-            i.setMaximum(2)
+            i.setMaximum(5000)
             i.setMinimum(0)  
 
         self.default()  #funzione per il settaggio dei parametri della quarta schermata(salvati su file)
@@ -141,7 +142,7 @@ class MyUiQt (Ui_UiClass):
         self.Gomitoalto.setChecked(True)
   
         config=configparser.ConfigParser()
-        config.read('config.py')
+        config.read('config.ini')
         
         self.homePos[0].setValue(int(config['DEFAULT']['h1']))
         self.homePos[1].setValue(int(config['DEFAULT']['h2']))
@@ -287,6 +288,9 @@ class MyUiQt (Ui_UiClass):
           self.setup[i].setText(str(lista[i]))
           self.encr[i].setText(str(int(self.encoder1[i].value()-int(self.setup[i].text()))))
        #cor pagina 1,2,3
+       
+       for i in range(0,len(self.cor)):  #conversione da ADC in corrente
+       	  lista[i+nMot]=(int(lista[i+nMot])*Vref)/(1024*0.185*1000)
        for i in range(0,len(self.cor)): #inserimento correnti
           self.cor[i].setText(str(lista[i+nMot]))
           self.cor2[i].setText(str(lista[i+nMot])) 
@@ -308,6 +312,10 @@ class MyUiQt (Ui_UiClass):
         for i in range(0,len(self.maxValE)):
            self.maxValE[i].setValue(int(lista[i]))
         
+        
+        for i in range(0,len(self.cor)):  #conversione da ADC in corrente
+       	  lista[i+2*nMot]=(int(lista[i+2*nMot])*Vref)/(1024*0.185*8*1000)
+
         for i in range(0,len(self.minValE)):
            self.minValE[i].setValue(int(lista[i+nMot]))
         
@@ -448,7 +456,8 @@ class MyUiQt (Ui_UiClass):
             lista.append(i.value())
 
         for i in self.maxValC:
-            lista.append(i.value())
+            lista.append(int((i.value()*8*1024*0.185)/(Vref*1000)))
+
         self.connect_db() #salvo le nuove impostazioni
         invia(lista,"i") 
      
@@ -491,13 +500,13 @@ class MyUiQt (Ui_UiClass):
 			   'gamma': self.param[2].value(),
 			   'delta': self.param[3].value(),
         }
-        with open('config.py','w') as configfile:
+        with open('config.ini','w') as configfile:
            config.write(configfile) 
     def reset_i(self): #setta le impostazioni della quarta pagina tramite i valori definiti nel file config_init.py
         self.Gomitoalto.setChecked(True)
   
         config=configparser.ConfigParser()
-        config.read('.config_init.py')
+        config.read('.config_init.ini')
         
         self.homePos[0].setValue(int(config['DEFAULT']['h1']))
         self.homePos[1].setValue(int(config['DEFAULT']['h2']))
@@ -551,7 +560,7 @@ class MyUiQt (Ui_UiClass):
             lista.append(i.value())
 
         for i in self.maxValC:
-            lista.append(i.value())
+            lista.append(int((i.value()*8*1024*0.185)/(Vref*1000)))
         self.connect_db() #salvo le nuove impostazioni
         invia(lista,"i") 
     
