@@ -274,6 +274,7 @@ class MyUiQt (Ui_UiClass):
        return lista_a
 
 
+
     def inserisci(self,lista,tipo):#funzione di inserimento dati nelle Qlabel della prima,seconda e terza pagina(se tipo='0') o di dati nella quarta pagina(se tipo='1')
      #lista contiene i dati da inserire ed e' [encode,correnti] se tipo='0' oppure [maxE,minE,maxC] se tipo='1'
      #tipo e' una variabile che esprime se il messaggio ricevuto riguarda un messaggio di dati o di impostazioni 
