@@ -1,15 +1,13 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <pthread.h>
-#include <string.h>
-#include <semaphore.h>
-#include <fcntl.h>
 #include "comC.h"
-//pipefd[0] refers to the read end of the  pipe.
-//pipefd[1] refers to the write end of the pipe
-#define writeEnd 1
-#define readEnd 0
+
+struct uten *testa;  //testa della lista collegata
+struct uten *coda; //coda della lista collegata
+
+struct impostazioni *imp_ut;  //struttura che tiene traccia di tutte le impostazioni
+bool newImpostaziono=false;
+
+int stdInFake[2], stdOutFake[2];
+
 //idee: creare semaforo che viene preso quando sto aspettando da python e rilasciato quando ho finito di ricevere
 // in modo che si viene a sapere quando ho un cambio di encoder desiderati
 
@@ -41,6 +39,8 @@ struct uten *inserisci_u(struct uten *testa, struct uten *mes) {
 struct messaggio *getLast_m()
 {
     /*ritorna l'ultimo messaggio e accorcia la coda*/
+    if (testa==NULL)
+        return NULL;
     struct messaggio * m;
     m=testa->data;
     testa=testa->p;
@@ -178,7 +178,7 @@ void *readerPipe(void *) {//ricevi da Python
     }
 }
 
-int main_com(char *file_p) {
+int main_com(char *dirPy[],char *pathPy) {
 
     pipe(stdInFake);
     pipe(stdOutFake);
@@ -195,7 +195,7 @@ int main_com(char *file_p) {
 
     } else //son
     {
-
+        chdir(pathPy);
         //override stdin and stdout
         dup2(stdInFake[readEnd], 0);
         dup2(stdOutFake[writeEnd], 1);
@@ -204,12 +204,12 @@ int main_com(char *file_p) {
         char *argvExec[2];
         char padding[8];
         char argvPy[128];
-        strncpy(argvPy,file_p,128);
+        //strncpy(argvPy,dirPy,128);
 
         argvExec[0]=padding;
         argvExec[1]=argvPy;
 
-        if (execvp("python3", argvExec)) {
+        if (execvp("python3", dirPy)) {
             perror("execlp fail :");
             exit(0);
         }

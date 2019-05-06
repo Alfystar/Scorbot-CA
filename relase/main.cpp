@@ -28,6 +28,10 @@ struct timeval startCalc,endCalc;
 int mot[nMot];
 
 int main(int argc, char *argv[]) {
+    if(argc!=3)
+    {
+        printf("Attenzione chamare:\nscorbot <mainUi.py> <dirPy>  //file python da chiamare  &  dir in cui si trova");
+    }
 
     /** Variabili per il pid **/
     pidM[cMot1] = new PIDScorbot(0.00055,0.0000000015,10,50,false,.8,0.02);
@@ -47,16 +51,11 @@ int main(int argc, char *argv[]) {
     sender->getEn(pack);
 
     /** Variabili per la com con Python **/
-    main_com("ScorbotUI_py/mainUi.py");
+    //main_com("/ScorbotUI_py/mainUi.py");
+    main_com(argv,argv[2]);
     memset(&msg,0, sizeof(struct messaggio));
 
     usleep(500000);
-
-
-
-
-
-
 
 
     /** Inizio codice */

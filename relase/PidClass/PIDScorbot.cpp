@@ -54,7 +54,7 @@ int PIDScorbot::motVal(int ref,int en)
     int er = (ref - en)*(1-(2*this->posDir)); //per allineare verso dei pwm a incremento degli encoder
 
     float vOut=this->PIDComp(er,ts);
-    printf("vOut=%f\n",vOut);
+    //printf("vOut=%f\n",vOut);
 
     if(fabsf(vOut)<this->CONTROL_DEADZONE)
     {
@@ -118,7 +118,7 @@ float PIDScorbot::PIDComp(int error, __suseconds_t Ts)
 
     this->x_i += this->UpdateSat(this->x_i, this->Ki * Ts * this->mystack[6].er, this->Kp * error + this->y_d, 1, this->CONTROL_DEADZONE, this->CONTROL_SATURATION);
 
-    printf("x_i = %f, y_d = %f, error = %d, u = %f, dt=%ld\n",x_i,y_d,error,(Kp*error + x_i + y_d),Ts);
+    //printf("x_i = %f, y_d = %f, error = %d, u = %f, dt=%ld\n",x_i,y_d,error,(Kp*error + x_i + y_d),Ts);
 
     return ( std::min(this->CONTROL_SATURATION, std::max(-this->CONTROL_SATURATION, this->Kp * error + this->x_i + this->y_d )));
 }

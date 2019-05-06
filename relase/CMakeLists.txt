@@ -9,4 +9,5 @@ set(HEADERS PidClass/PIDScorbot.h SPILib/spi_scorebot_packdefine.h SPILib/spisen
 set(SOURCE PidClass/PIDScorbot.cpp SPILib/spisend.cpp comC/comC.cpp)
 
 add_executable(scorbot main.cpp ${HEADERS} ${SOURCE})
+find_package(Threads REQUIRED)
 target_link_libraries (scorbot ${CMAKE_THREAD_LIBS_INIT})
