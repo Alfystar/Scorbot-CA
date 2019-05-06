@@ -64,7 +64,7 @@ int main() {
         }
         fflush(stdin);
 
-        if (sArgc < 1) {
+        if (sArgc <= 1) {
             if (strcmp(sArgv[0], "m") == 0) {
                 v *= -1;
                 //al posto di pwm si potrebbe anche mettere &s->out.pack.speed,
@@ -136,7 +136,7 @@ int main() {
                 help();
             }
         }
-        if (sArgc < 7) {
+        if (sArgc <= 7) {
             if (strcmp(sArgv[0], "m") == 0) {
                 /*
                  * #define fr 300 //free running
