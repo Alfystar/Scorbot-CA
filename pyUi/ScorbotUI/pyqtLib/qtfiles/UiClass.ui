@@ -10,7 +10,7 @@
     <x>0</x>
     <y>0</y>
     <width>1044</width>
-    <height>575</height>
+    <height>596</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -50,7 +50,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>3</number>
+     <number>1</number>
     </property>
     <property name="usesScrollButtons">
      <bool>false</bool>
@@ -327,7 +327,7 @@
             </font>
            </property>
            <property name="text">
-            <string>encrease of :</string>
+            <string>Error:</string>
            </property>
           </widget>
          </item>
@@ -355,7 +355,7 @@
             </font>
            </property>
            <property name="text">
-            <string>encrease of :</string>
+            <string>Error:</string>
            </property>
           </widget>
          </item>
@@ -383,7 +383,7 @@
             </font>
            </property>
            <property name="text">
-            <string>encrease of :</string>
+            <string>Error:</string>
            </property>
            <property name="indent">
             <number>-1</number>
@@ -414,7 +414,7 @@
             </font>
            </property>
            <property name="text">
-            <string>encrease of :</string>
+            <string>Error:</string>
            </property>
            <property name="scaledContents">
             <bool>false</bool>
@@ -448,7 +448,7 @@
             </font>
            </property>
            <property name="text">
-            <string>encrease of : </string>
+            <string>Error: </string>
            </property>
           </widget>
          </item>
@@ -476,7 +476,7 @@
             </font>
            </property>
            <property name="text">
-            <string>encrease of : </string>
+            <string>Error:</string>
            </property>
           </widget>
          </item>
@@ -1612,7 +1612,7 @@
             </font>
            </property>
            <property name="text">
-            <string>encrease of :</string>
+            <string>Error:</string>
            </property>
           </widget>
          </item>
@@ -1640,7 +1640,7 @@
             </font>
            </property>
            <property name="text">
-            <string>encrease of :</string>
+            <string>Error:</string>
            </property>
           </widget>
          </item>
@@ -1668,7 +1668,7 @@
             </font>
            </property>
            <property name="text">
-            <string>encrease of :</string>
+            <string>Error:</string>
            </property>
            <property name="indent">
             <number>-1</number>
@@ -1699,7 +1699,7 @@
             </font>
            </property>
            <property name="text">
-            <string>encrease of :</string>
+            <string>Error:</string>
            </property>
            <property name="scaledContents">
             <bool>false</bool>
@@ -1733,7 +1733,7 @@
             </font>
            </property>
            <property name="text">
-            <string>encrease of : </string>
+            <string>Error:</string>
            </property>
           </widget>
          </item>
@@ -1761,7 +1761,7 @@
             </font>
            </property>
            <property name="text">
-            <string>encrease of : </string>
+            <string>Error:</string>
            </property>
           </widget>
          </item>
@@ -2385,7 +2385,7 @@
             </font>
            </property>
            <property name="text">
-            <string>encrease of :</string>
+            <string>Error:</string>
            </property>
           </widget>
          </item>
@@ -2413,7 +2413,7 @@
             </font>
            </property>
            <property name="text">
-            <string>encrease of :</string>
+            <string>Error:</string>
            </property>
           </widget>
          </item>
@@ -2441,7 +2441,7 @@
             </font>
            </property>
            <property name="text">
-            <string>encrease of :</string>
+            <string>Error:</string>
            </property>
            <property name="indent">
             <number>-1</number>
@@ -2472,9 +2472,9 @@
      <widget class="QPushButton" name="Home">
       <property name="geometry">
        <rect>
-        <x>810</x>
-        <y>270</y>
-        <width>141</width>
+        <x>300</x>
+        <y>430</y>
+        <width>361</width>
         <height>41</height>
        </rect>
       </property>
@@ -2487,7 +2487,7 @@
        <string notr="true">background-color: qlineargradient(spread:pad, x1:0.0246305, y1:0.602273, x2:1, y2:0, stop:0 rgba(0, 139, 0, 255), stop:0.655172 rgba(255, 255, 255, 255));</string>
       </property>
       <property name="text">
-       <string>ENTER</string>
+       <string>SET IMPOSTAZIONI</string>
       </property>
      </widget>
      <widget class="QLabel" name="Passi_encoder_scritta_2">
@@ -3508,9 +3508,9 @@
      <widget class="QPushButton" name="reset">
       <property name="geometry">
        <rect>
-        <x>290</x>
-        <y>440</y>
-        <width>421</width>
+        <x>810</x>
+        <y>270</y>
+        <width>141</width>
         <height>41</height>
        </rect>
       </property>
