@@ -2165,4 +2165,4 @@ class Ui_UiClass(object):
         self.tabWidget.setTabText(self.tabWidget.indexOf(self.Setup), _translate("UiClass", "Setup"))
 
 
-
+import logo_rc

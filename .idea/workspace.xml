@@ -12,63 +12,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9d63bfc8-c3db-4d44-bd04-cb7890be4532" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/qtfiles/UiClass.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/Atmel ATmega 640-1280-1281-2560-2561.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/Atmel ATmega 640-1280-1281-2560-2561.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/ER3-Manual(maybe our scorebot).pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/ER3-Manual(maybe our scorebot).pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/HW component/ACS712-Datasheet.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/HW component/ACS712-Datasheet.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/HW component/ACS723-Datasheet.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/HW component/ACS723-Datasheet.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/HW component/L298_H_Bridge.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/HW component/L298_H_Bridge.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/HW component/txb0108.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/HW component/txb0108.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/ScorBot Board/ER3-Manual(maybe our scorebot).pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/ScorBot Board/ER3-Manual(maybe our scorebot).pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/ScorBot Board/connection Scheme.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/ScorBot Board/connection Scheme.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/ScorBot Board/connettori ScoreBot.docx" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/ScorBot Board/connettori ScoreBot.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/ScorBot Board/connettori ScoreBot.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/ScorBot Board/connettori ScoreBot.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/ScorBot Board/pinOut D-sub50.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/ScorBot Board/pinOut D-sub50.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/ScorBot Board/pinOut D-sub50/D-sub50 Scorbot PinOut.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/ScorBot Board/pinOut D-sub50/D-sub50 Scorbot PinOut.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/ScorBot Board/pinOut D-sub50/Diapositiva1.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/ScorBot Board/pinOut D-sub50/Diapositiva1.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Datascheet/ScorBot Board/pinOut D-sub50/Diapositiva2.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Datascheet/ScorBot Board/pinOut D-sub50/Diapositiva2.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/General Documentation/PhDTesiFerro.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/General Documentation/PhDTesiFerro.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/General Documentation/Relazione Gruppo 7 jpeg massima.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/General Documentation/Relazione Gruppo 7 jpeg massima.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Connettore Dsub/Diapositiva1.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Connettore Dsub/Diapositiva1.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Connettore Dsub/Diapositiva2.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Connettore Dsub/Diapositiva2.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Connettore Dsub/dsub board.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Connettore Dsub/dsub board.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Connettore Dsub/dsub50.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Connettore Dsub/dsub50.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Corrente/acs712 funzionalità.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Corrente/acs712 funzionalità.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Corrente/acs712 sens.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Corrente/acs712 sens.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Corrente/acs712 vout.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Corrente/acs712 vout.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Corrente/acs712.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Corrente/acs712.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Encoder/Connessione Sensori.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Encoder/Connessione Sensori.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Encoder/algoritmo encoder.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Encoder/algoritmo encoder.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Encoder/buffer circolari array.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Encoder/buffer circolari array.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Encoder/buffer circolari.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Encoder/buffer circolari.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Encoder/encoder assembly.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Encoder/encoder assembly.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Encoder/encoder disk.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Encoder/encoder disk.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Encoder/encoder quadratura.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Encoder/encoder quadratura.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Encoder/fonto sensori.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Encoder/fonto sensori.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Encoder/home switch.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Encoder/home switch.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Encoder/homming.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Encoder/homming.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Encoder/pcint timing.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Encoder/pcint timing.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Frontale sistema.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Frontale sistema.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Motori/l298.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Motori/l298.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Motori/ponte h.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Motori/ponte h.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/Motori/schema 2.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Motori/schema 2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/dettaglio motori.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/dettaglio motori.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/impostazioni.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/impostazioni.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/old Frontale.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/old Frontale.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/rapsberry pinout.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/rapsberry pinout.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/scheda.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/scheda.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Hardware/schema 1.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/schema 1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Presentazione progetto.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Presentazione progetto.pptx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Software/SPI_8-bit_circular_transfer.svg.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Software/SPI_8-bit_circular_transfer.svg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Software/SPI_single_slave.svg.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Software/SPI_single_slave.svg.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Software/spi schema a blocchi.png" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Software/spi schema a blocchi.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Software/spi-basics-maxembedded-animated.gif.mp4" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Software/spi-basics-maxembedded-animated.gif.mp4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Software/spi-basics-maxembedded-animated.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Software/spi-basics-maxembedded-animated.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Presentazione Scorbot low level/Software/spi-basics-maxembedded-animated/spi-basics-maxembedded-animated.gif" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Software/spi-basics-maxembedded-animated/spi-basics-maxembedded-animated.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/Traccia lab ARL.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/Traccia lab ARL.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/esLab.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/esLab.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Documentazione &amp; Fonti/robot99.zip" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/robot99.zip" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/UiClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/UiClass.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/qtfiles/UiClass.ui" beforeDir="false" afterPath="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/qtfiles/UiClass.ui" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/rasp-Cpp/Scorbot_CPP/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/rasp-Cpp/Scorbot_CPP/CMakeFiles/" />
@@ -83,28 +30,15 @@
     <SUITE FILE_PATH="coverage/Scorbot_CA$help2.coverage" NAME="help2 Coverage Results" MODIFIED="1554763780015" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/Designer/QtDesigner/modify" />
     <SUITE FILE_PATH="coverage/Scorbot_CA$interf.coverage" NAME="interf Coverage Results" MODIFIED="1554764692809" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/Designer/QtDesigner/modify" />
     <SUITE FILE_PATH="coverage/Scorbot_CA$aiuto.coverage" NAME="aiuto Coverage Results" MODIFIED="1554757969827" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/Designer/QtDesigner" />
-    <SUITE FILE_PATH="coverage/Scorbot_CA$mainUi.coverage" NAME="mainUi Coverage Results" MODIFIED="1555106904958" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/ScorbotUI" />
+    <SUITE FILE_PATH="coverage/Scorbot_CA$mainUi.coverage" NAME="mainUi Coverage Results" MODIFIED="1557135289201" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/ScorbotUI" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/rasp-Cpp/Scorbot_CPP/.gitignore">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="119">
-                <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
-              </first_editor>
-              <second_editor />
+        <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/myUiClass.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="274" selection-start-line="274" selection-end-line="274" />
             </state>
           </provider>
         </entry>
@@ -160,7 +94,6 @@
         <option value="$PROJECT_DIR$/C-qtPy_comunication/C-qtPy_comunication/myUiClass.py" />
         <option value="$PROJECT_DIR$/pyUi/ScorbotUI/mainUi.py" />
         <option value="$PROJECT_DIR$/pyUi/ScorbotUI/myUiClass.py" />
-        <option value="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/UiClass.py" />
         <option value="$PROJECT_DIR$/rasp-Cpp/Scorbot_CPP/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/pidWork/pidClassDemo/main.cpp" />
         <option value="$PROJECT_DIR$/pidWork/pidClassDemo/SPILib/spisend.cpp" />
@@ -168,6 +101,7 @@
         <option value="$PROJECT_DIR$/rasp-Cpp/Scorbot_CPP/main.cpp" />
         <option value="$PROJECT_DIR$/rasp-Cpp/Scorbot_CPP/.gitignore" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/UiClass.py" />
       </list>
     </option>
   </component>
@@ -179,9 +113,10 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="934" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -189,23 +124,49 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
       <pane id="Scope">
         <subPane subId="Scope 'Project Files'; set:Project Files; class com.intellij.psi.search.scope.ProjectFilesScope">
           <expand>
             <path>
-              <item name="pidClassDemo" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Scorbot-CA" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
             </path>
             <path>
-              <item name="pidClassDemo" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="Scorbot-CA" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
               <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
-              <item name="Doc" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="pyUi" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Scorbot-CA" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="pyUi" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ScorbotUI" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Scorbot-CA" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="pyUi" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ScorbotUI" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="pyqtLib" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Scorbot-CA" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="pyUi" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="ScorbotUI" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="pyqtLib" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+              <item name="qtfiles" type="9f88c78c:ScopeViewTreeModel$FileNode" />
+            </path>
+            <path>
+              <item name="Scorbot-CA" type="3d21c010:ScopeViewTreeModel$ProjectNode" />
+              <item name="" type="442cc68d:ScopeViewTreeModel$RootNode" />
+              <item name="Scorebot_code" type="9f88c78c:ScopeViewTreeModel$FileNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -219,14 +180,14 @@
     <property name="settings.editor.selected.configurable" value="Errors" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/pyUi/Scorbot UI/pyqt" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib" />
       <recent name="$PROJECT_DIR$/rasp-Cpp/Scorbot_CPP" />
       <recent name="$PROJECT_DIR$/pyUi/C-qtPy_comunication" />
       <recent name="$PROJECT_DIR$/pyUi/ScorbotUI" />
       <recent name="$PROJECT_DIR$/pyUi/Scorbot UI/pyqt/qtfiles" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/pyUi/Scorbot UI/pyqt" />
     </key>
   </component>
@@ -242,7 +203,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Scorebot_CPP">
+  <component name="RunManager" selected="Python.mainUi">
     <configuration name="Scorebot_CPP" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pidClassDemo" TARGET_NAME="Scorebot_CPP" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="pidClassDemo" RUN_TARGET_NAME="Scorebot_CPP">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -359,7 +320,6 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.Scorebot_CPP" />
       <item itemvalue="Python.mainUi" />
       <item itemvalue="Python.myUiClass" />
       <item itemvalue="Python.scratch" />
@@ -460,6 +420,10 @@
       <workItem from="1556893855061" duration="1370000" />
       <workItem from="1557043996403" duration="2491000" />
       <workItem from="1557046500805" duration="1363000" />
+      <workItem from="1557133866240" duration="41000" />
+      <workItem from="1557135041112" duration="82000" />
+      <workItem from="1557135162573" duration="16000" />
+      <workItem from="1557135181591" duration="142000" />
     </task>
     <task id="LOCAL-00002" summary="Home Scorebot&#10;Pack Transfert standardize&#10;readme">
       <created>1553795089082</created>
@@ -808,7 +772,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="77286000" />
+    <option name="totallyTimeSpent" value="77567000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -820,21 +784,22 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1024" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="934" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25026682" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26251528" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32897863" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.4964789" visible="true" weight="0.23717949" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.4964789" weight="0.23634204" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39863014" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32852563" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
       <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.49919224" weight="0.32051283" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32700893" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.32660332" />
       <window_info anchor="bottom" id="Event Log" order="10" sideWeight="0.50080776" side_tool="true" weight="0.3219178" />
       <window_info anchor="bottom" id="Docker" order="11" show_stripe_button="false" />
       <window_info anchor="bottom" id="Python Console" order="12" weight="0.32852563" />
@@ -949,7 +914,6 @@
     <SUITE FILE_PATH="coverage/Scorbot_CA$myUiClass.coverage" NAME="myUiClass Coverage Results" MODIFIED="1556891822239" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/pyUi/ScorbotUI" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/../Scorebot_code/.gitignore" />
     <entry file="file://$PROJECT_DIR$/../rasp-Cpp/Scorbot_CPP/Scorbot_CPP.pro.user" />
     <entry file="file://$PROJECT_DIR$/../rasp-Cpp/Scorbot_CPP/spi_scorebot_packdef.cpp" />
     <entry file="file://$PROJECT_DIR$/../Scorebot_code/Project-lib/spiScorebot/SPI_Scorebot_PackDefine.h" />
@@ -977,7 +941,6 @@
     <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/__init__.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/qtfiles/UiClass.py" />
     <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/logo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="7695">
@@ -1008,13 +971,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/UiClass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="713">
-          <caret line="2167" column="11" selection-start-line="2167" selection-start-column="11" selection-end-line="2167" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/mainUi.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="810">
@@ -1022,13 +978,6 @@
           <folding>
             <element signature="e#0#10#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/myUiClass.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="442">
-          <caret line="273" selection-start-line="273" selection-end-line="273" />
         </state>
       </provider>
     </entry>
@@ -1048,13 +997,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/string.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="191">
-          <caret line="344" column="13" selection-start-line="344" selection-start-column="13" selection-end-line="344" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///usr/include/string.h" />
     <entry file="file://$PROJECT_DIR$/rasp-Cpp/Scorbot_CPP/SPILib/spisend.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
@@ -1101,26 +1044,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/rasp-Cpp/Scorbot_CPP/cmake_install.cmake">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/rasp-Cpp/Scorbot_CPP/cmake_install.cmake" />
+    <entry file="file://$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Frontale sistema.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/rasp-Cpp/Scorbot_CPP/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
+        <state relative-caret-position="76">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Doc/Presentazione Scorbot low level/Hardware/Frontale sistema.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/qtfiles/UiClass.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="119">
-            <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+          <first_editor relative-caret-position="133">
+            <caret line="7" selection-start-line="7" selection-end-line="7" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyUi/.directory">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/pyqtLib/UiClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="460">
+          <caret line="2167" lean-forward="true" selection-start-line="2167" selection-end-line="2167" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pyUi/ScorbotUI/myUiClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="274" selection-start-line="274" selection-end-line="274" />
         </state>
       </provider>
     </entry>

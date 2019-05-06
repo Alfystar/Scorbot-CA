@@ -272,7 +272,6 @@ class MyUiQt (Ui_UiClass):
        lista_a=[theta1,theta2,theta3,theta4,theta5,self.angle[5].value()]
        
        return lista_a
-   
 
 
     def inserisci(self,lista,tipo):#funzione di inserimento dati nelle Qlabel della prima,seconda e terza pagina(se tipo='0') o di dati nella quarta pagina(se tipo='1')
