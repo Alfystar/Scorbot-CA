@@ -15,7 +15,8 @@ struct messaggio msg;
 /** Strutture per la comunicazione con lo scorbot**/
 PIDScorbot *pidM[nMot];
 SpiSend *sender;
-SPIPACK *pack;
+SPIPACK *packEn;
+SPIPACK *packCur;
 SPIPACK *packImp;
 setPWMSend pwmSend;
 
@@ -31,7 +32,19 @@ int main(int argc, char *argv[]) {
     if(argc!=3)
     {
         printf("Attenzione chamare:\nscorbot <mainUi.py> <dirPy>  //file python da chiamare  &  dir in cui si trova");
+        exit(0);
     }
+
+    int r[nMot];
+
+    r[cMot1]=  -5490;
+    r[cMot2]=   2000;
+    r[cMot3]=   4195;
+    r[cMot4]=   2500;
+    r[cMot5]=   2500;
+    r[cMot6]=   1000;
+
+
 
     /** Variabili per il pid **/
     pidM[cMot1] = new PIDScorbot(0.00055,0.0000000015,10,50,false,.8,0.02);
@@ -44,39 +57,45 @@ int main(int argc, char *argv[]) {
 
     /** Variabili per la comunicazione con lo scorbot **/
     sender = new SpiSend();
-    memset(&pack,0, sizeof(SPIPACK));
 
-    pack = sender->makeSPIPACK();
+    packEn = sender->makeSPIPACK();
+    packCur = sender->makeSPIPACK();
     packImp = sender->makeSPIPACK();
-    sender->getEn(pack);
+
 
     /** Variabili per la com con Python **/
     //main_com("/ScorbotUI_py/mainUi.py");
-    main_com(argv,argv[2]);
     memset(&msg,0, sizeof(struct messaggio));
+    main_com(argv,argv[2]);
 
     usleep(500000);
 
 
     /** Inizio codice */
-    //invio prime letture encoder e corrente
-    for (int j = 0; j < nMot; ++j) {
-        msg.enc[cMot1+j]=pack->in.pack.en.passi[cMot1+j];
-    }
-    sender->pGetCurrent(pack);
-    for (int j = 0; j < nMot; ++j) {
-        msg.cor[cMot1+j]=pack->in.pack.cur.current[cMot1+j];
-    }
-    invia(&msg,"e");
+    sender->getEn(packEn);
 
     struct messaggio *msgGet;
     //faccio restare fermo il robot
     struct messaggio *oldMsgGet;
     oldMsgGet=(struct messaggio *)malloc(sizeof(struct messaggio));
+    memset(oldMsgGet,0,sizeof(struct messaggio));
     for (int j = 0; j < nMot; ++j) {
-        oldMsgGet->enc[cMot1+j]=pack->in.pack.en.passi[cMot1+j];
+        oldMsgGet->enc[cMot1+j]=packEn->in.pack.en.passi[cMot1+j];
     }
 
+    //invio prime letture encoder e corrente
+    for (int j = 0; j < nMot; ++j) {
+        msg.enc[cMot1+j]=packEn->in.pack.en.passi[cMot1+j];
+    }
+    sender->pGetCurrent(packCur);
+    for (int j = 0; j < nMot; ++j) {
+        msg.cor[cMot1+j]=packCur->in.pack.cur.current[cMot1+j];
+    }
+    invia(&msg,"e");
+
+
+    sleep(1);
+    long counter=0;
     while (true)
     {
         msgGet=getLast_m();
@@ -100,11 +119,17 @@ int main(int argc, char *argv[]) {
 
         /** --------------------------------------------------------------- **/
         //Passaggio dei parametri al pid
-        for(int i=0;i<nMot;i++)
+        int i;
+        for(i=0;i<cMot2;i++)
         {
-            mot[cMot1+i]=pidM[cMot1+i]->motVal(msgGet->enc[cMot1+i],pack->in.pack.en.passi[cMot1+i]);
-            printf("mot[cMot%d]=%d\n\n",i+1,mot[cMot1+i]);
+            //mot[cMot1+i]=pidM[cMot1+i]->motVal(r[cMot1+i],packEn->in.pack.en.passi[cMot1+i]);
+            mot[cMot1+i]=pidM[cMot1+i]->motVal(msgGet->enc[cMot1+i],packEn->in.pack.en.passi[cMot1+i]);
+            printf("msgGet->enc[cMot%d]=%d\tencoder[cMot%d]=%d\tmot[cMot%d]=%d\n\n",i+1,msgGet->enc[cMot1+i],i+1,packEn->in.pack.en.passi[cMot1+i],i+1,mot[cMot1+i]);
+            //printf("r[cMot%d]=%d\tencoder[cMot%d]=%d\tmot[cMot%d]=%d\n\n",i+1,r[cMot1+i],i+1,packEn->in.pack.en.passi[cMot1+i],i+1,mot[cMot1+i]);
         }
+        i=cMot6;
+        mot[cMot1+i]=pidM[cMot1+i]->motVal(r[cMot1+i],packEn->in.pack.en.passi[cMot1+i]);
+
 
         //usati i dati dei pid prepara il pacchetto
         sender->fillPWMPACK(&pwmSend,mot[cMot1],mot[cMot2],mot[cMot3],mot[cMot4],mot[cMot5],mot[cMot6]);
@@ -114,18 +139,25 @@ int main(int argc, char *argv[]) {
         wait=abs((ts-(endCalc.tv_usec-startCalc.tv_usec)))%10000;
         usleep(wait);
 
-        sender->pSetPWM(pack,&pwmSend);
+        sender->pSetPWM(packEn,&pwmSend);
+        //sender->getEn(packEn);
         gettimeofday(&startCalc,NULL);
         /** --------------------------------------------------------------- **/
-        //Invia encoder e correnti a python
-        for (int j = 0; j < nMot; ++j) {
-            msg.enc[cMot1+j]=pack->in.pack.en.passi[cMot1+j];
+        if(counter%10==0)
+        {
+            //Invia encoder e correnti a python
+            for (int j = 0; j < nMot; ++j) {
+                msg.enc[cMot1+j]=packEn->in.pack.en.passi[cMot1+j];
+            }
+            //sender->printSPIPACK(pack);
+            sender->pGetCurrent(packCur);
+            for (int j = 0; j < nMot; ++j) {
+                msg.cor[cMot1+j]=packCur->in.pack.cur.current[cMot1+j];
+            }
+            invia(&msg,"e");
+            //sender->printSPIPACK(packCur);
         }
-        sender->pGetCurrent(pack);
-        for (int j = 0; j < nMot; ++j) {
-            msg.cor[cMot1+j]=pack->in.pack.cur.current[cMot1+j];
-        }
-        invia(&msg,"e");
+        counter= (counter+1)%10;
         /** --------------------------------------------------------------- **/
 
     }
