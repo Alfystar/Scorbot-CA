@@ -2,6 +2,7 @@
 // Created by alfy on 02/05/19.
 //
 
+#include <cstdio>
 #include "PIDScorbot.h"
 
 PIDScorbot::PIDScorbot(float kp, float ki, float kd, int MdeadZone, bool posDir)
