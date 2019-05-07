@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/alfy/Documents/Scorbot-CA/rasp-Cpp/Scorbot_CPP/SPILib/spisend.cpp" "/home/alfy/Documents/Scorbot-CA/rasp-Cpp/Scorbot_CPP/CMakeFiles/Scorebot_CPP.dir/SPILib/spisend.cpp.o"
-  "/home/alfy/Documents/Scorbot-CA/rasp-Cpp/Scorbot_CPP/main.cpp" "/home/alfy/Documents/Scorbot-CA/rasp-Cpp/Scorbot_CPP/CMakeFiles/Scorebot_CPP.dir/main.cpp.o"
+  "/home/scorebot/Scorbot-CA/rasp-Cpp/Scorbot_CPP/SPILib/spisend.cpp" "/home/scorebot/Scorbot-CA/rasp-Cpp/Scorbot_CPP/CMakeFiles/Scorebot_CPP.dir/SPILib/spisend.cpp.o"
+  "/home/scorebot/Scorbot-CA/rasp-Cpp/Scorbot_CPP/main.cpp" "/home/scorebot/Scorbot-CA/rasp-Cpp/Scorbot_CPP/CMakeFiles/Scorebot_CPP.dir/main.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

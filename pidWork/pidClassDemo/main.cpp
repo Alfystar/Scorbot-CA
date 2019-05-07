@@ -63,7 +63,7 @@ int main(int argc, char *argv[]) {
     while (true)
     {
         //Passaggio dei parametri al pid
-        for(int i=cMot4;i<nMot;i++)
+        for(int i=0;i<cMot4;i++)
         {
             mot[cMot1+i]=pidM[cMot1+i]->motVal(r[cMot1+i],pack->in.pack.en.passi[cMot1+i]);
             printf("mot[cMot%d]=%d\n\n",i+1,mot[cMot1+i]);

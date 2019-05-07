@@ -1,4 +1,4 @@
-#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
 
 #IncludeRegexScan: ^.*$
 
@@ -6,15 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/alfy/Documents/Scorbot-CA/rasp-Cpp/Scorbot_CPP/SPILib/spi_scorebot_packdefine.h
+/home/scorebot/Scorbot-CA/rasp-Cpp/Scorbot_CPP/SPILib/spi_scorebot_packdefine.h
 
-/home/alfy/Documents/Scorbot-CA/rasp-Cpp/Scorbot_CPP/SPILib/spisend.cpp
+/home/scorebot/Scorbot-CA/rasp-Cpp/Scorbot_CPP/SPILib/spisend.cpp
 spisend.h
-/home/alfy/Documents/Scorbot-CA/rasp-Cpp/Scorbot_CPP/SPILib/spisend.h
+/home/scorebot/Scorbot-CA/rasp-Cpp/Scorbot_CPP/SPILib/spisend.h
 
-/home/alfy/Documents/Scorbot-CA/rasp-Cpp/Scorbot_CPP/SPILib/spisend.h
+/home/scorebot/Scorbot-CA/rasp-Cpp/Scorbot_CPP/SPILib/spisend.h
 spi_scorebot_packdefine.h
-/home/alfy/Documents/Scorbot-CA/rasp-Cpp/Scorbot_CPP/SPILib/spi_scorebot_packdefine.h
+/home/scorebot/Scorbot-CA/rasp-Cpp/Scorbot_CPP/SPILib/spi_scorebot_packdefine.h
 sys/ioctl.h
 -
 linux/spi/spidev.h
@@ -32,13 +32,13 @@ cstring
 iostream
 -
 
-/home/alfy/Documents/Scorbot-CA/rasp-Cpp/Scorbot_CPP/main.cpp
+/home/scorebot/Scorbot-CA/rasp-Cpp/Scorbot_CPP/main.cpp
 iostream
 -
 SPILib/spisend.h
-/home/alfy/Documents/Scorbot-CA/rasp-Cpp/Scorbot_CPP/SPILib/spisend.h
+/home/scorebot/Scorbot-CA/rasp-Cpp/Scorbot_CPP/SPILib/spisend.h
 SPILib/spi_scorebot_packdefine.h
-/home/alfy/Documents/Scorbot-CA/rasp-Cpp/Scorbot_CPP/SPILib/spi_scorebot_packdefine.h
+/home/scorebot/Scorbot-CA/rasp-Cpp/Scorbot_CPP/SPILib/spi_scorebot_packdefine.h
 string.h
 -
 
