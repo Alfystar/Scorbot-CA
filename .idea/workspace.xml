@@ -12,20 +12,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/relase/ScorbotUI_py/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/relase/ScorbotUI_py/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/relase/ScorbotUI_py/main.c" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/relase/ScorbotUI_py/mancanze.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/relase/ScorbotUI_py/progetto.c" beforeDir="false" afterPath="$PROJECT_DIR$/relase/comC/comC.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/relase/ScorbotUI_py/progetto.h" beforeDir="false" afterPath="$PROJECT_DIR$/relase/comC/comC.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/relase/raspberry_C/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/relase/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/relase/raspberry_C/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/relase/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/relase/raspberry_C/PidClass/PIDScorbot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/relase/PidClass/PIDScorbot.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/relase/raspberry_C/PidClass/PIDScorbot.h" beforeDir="false" afterPath="$PROJECT_DIR$/relase/PidClass/PIDScorbot.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/relase/raspberry_C/SPILib/spi_scorebot_packdefine.h" beforeDir="false" afterPath="$PROJECT_DIR$/relase/SPILib/spi_scorebot_packdefine.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/relase/raspberry_C/SPILib/spisend.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/relase/SPILib/spisend.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/relase/raspberry_C/SPILib/spisend.h" beforeDir="false" afterPath="$PROJECT_DIR$/relase/SPILib/spisend.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/relase/raspberry_C/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/relase/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Doc/PRESPROGALL.pptx" beforeDir="false" afterPath="$PROJECT_DIR$/Doc/PRESPROGALL.pptx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pidWork/fotoPresentazionePID/Pich.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pidWork/fotoPresentazionePID/SimulinkBlocchi.jpeg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pidWork/fotoPresentazionePID/front2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pidWork/fotoPresentazionePID/frontale.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pidWork/fotoPresentazionePID/robot.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pidWork/fotoPresentazionePID/rollPitch.jpg" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/rasp-Cpp/Scorbot_CPP/cmake-build-debug/" />
     <ignored path="$PROJECT_DIR$/rasp-Cpp/Scorbot_CPP/CMakeFiles/" />
@@ -35,47 +29,13 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/relase/comC/comC.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="425">
-              <caret line="244" column="37" selection-start-line="244" selection-start-column="37" selection-end-line="244" selection-end-column="37" />
-              <folding>
-                <element signature="e#0#18#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/relase/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/relase/CMakeLists.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/relase/comC/comC.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="373">
-              <caret line="38" column="12" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="12" />
+            <state relative-caret-position="722">
+              <caret line="38" selection-start-line="38" selection-end-line="38" />
             </state>
           </provider>
         </entry>
@@ -97,44 +57,18 @@
     </option>
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="width" value="1280" />
-    <option name="height" value="800" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1680" />
+    <option name="height" value="934" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane">
-        <subPane>
-          <expand>
-            <path>
-              <item name="pidClassDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scorbot-CA" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pidClassDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scorbot-CA" type="462c0819:PsiDirectoryNode" />
-              <item name="relase" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pidClassDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scorbot-CA" type="462c0819:PsiDirectoryNode" />
-              <item name="relase" type="462c0819:PsiDirectoryNode" />
-              <item name="comC" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pidClassDemo" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Scorbot-CA" type="462c0819:PsiDirectoryNode" />
-              <item name="relase" type="462c0819:PsiDirectoryNode" />
-              <item name="ScorbotUI_py" type="462c0819:PsiDirectoryNode" />
-            </path>
-          </expand>
-          <select />
-        </subPane>
-      </pane>
       <pane id="Scope" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -178,23 +112,23 @@
       <option name="presentableId" value="Default" />
       <updated>1557151489911</updated>
       <workItem from="1557151491051" duration="1318000" />
+      <workItem from="1557164339451" duration="3000" />
+      <workItem from="1557165031301" duration="113000" />
+      <workItem from="1557229340973" duration="152000" />
+      <workItem from="1557229497437" duration="50000" />
+      <workItem from="1557230563250" duration="27000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1318000" />
+    <option name="totallyTimeSpent" value="1663000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="0" width="1920" height="1024" extended-state="6" />
+    <frame x="0" y="23" width="1680" height="934" extended-state="0" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2497332" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26495728" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Terminal" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
-      <window_info active="true" anchor="bottom" id="CMake" visible="true" weight="0.32924107" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32924107" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -202,53 +136,98 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info active="true" anchor="bottom" id="CMake" order="11" visible="true" weight="0.32924107" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Python Console" order="13" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="SciView" order="4" />
     </layout>
+    <layout-to-restore>
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25579977" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32924107" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="8" />
+      <window_info anchor="bottom" id="Event Log" order="9" side_tool="true" />
+      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info active="true" anchor="bottom" id="CMake" order="11" visible="true" weight="0.32924107" />
+      <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Python Console" order="13" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="SciView" order="4" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/relase/ScorbotUI_py/main.c">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/relase/ScorbotUI_py/main.c" />
     <entry file="file://$PROJECT_DIR$/relase/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/relase/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/relase/comC/comC.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="425">
-          <caret line="244" column="37" selection-start-line="244" selection-start-column="37" selection-end-line="244" selection-end-column="37" />
+        <state relative-caret-position="4636">
+          <caret line="244" column="19" selection-start-line="244" selection-start-column="19" selection-end-line="244" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/relase/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="776">
+          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/relase/ScorbotUI_py/mainUi.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
           <folding>
-            <element signature="e#0#18#0" expanded="true" />
+            <element signature="e#0#10#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/relase/ScorbotUI_py/pyqtLib/pyC_com/p.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/relase/ScorbotUI_py/myUiClass.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#0#11#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/relase/comC/comC.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="373">
-          <caret line="38" column="12" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/relase/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="43" column="9" selection-start-line="43" selection-start-column="9" selection-end-line="43" selection-end-column="9" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/relase/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" lean-forward="true" selection-start-line="9" selection-end-line="9" />
+        <state relative-caret-position="722">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
         </state>
       </provider>
     </entry>
