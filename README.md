@@ -5,7 +5,7 @@ Progetto di Controlli Automatici
 - Sviluppato da studenti del 3° Ing. Informatica
 - Corso a cura del Prof: Daniele Carnevale
 
-![Alt text](Doc/Presentazione Scorbot low level/Hardware/Frontale sistema.png?raw=true "Title")
+![Alt text](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/sottoPresentazioni/Presentazione%20Scorbot%20low%20level/Hardware/Frontale%20sistema.png?raw=true "Title")
 
 #### Eagle Board Developed by:
 - Emanuele Alfano
