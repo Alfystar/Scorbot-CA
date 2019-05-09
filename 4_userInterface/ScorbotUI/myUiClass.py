@@ -77,7 +77,7 @@ class MyUiQt (Ui_UiClass):
         
         for i in self.param:
             i.setMaximum(10) #il 20000 e' da prendere dalle impostazioni
-            i.setMinimum(0.1) #il 20000 e' da prendere dalle impostazioni
+            i.setMinimum(0.000001) #il 20000 e' da prendere dalle impostazioni
 
         for i in self.structVal:
             i.setMaximum(100)
@@ -137,6 +137,8 @@ class MyUiQt (Ui_UiClass):
         self.Home.clicked.connect(self.setup1)
         #pulsante quarta pagina (reset impostazioni)
         self.reset.clicked.connect(self.reset_i)
+        #pulsante quarta pagina (ricerca della home)
+        self.reset.clicked.connect(self.reset_home)
         
     def default(self): #setta le impostazioni della quarta pagina tramite i valori definiti nel file config.py
         self.Gomitoalto.setChecked(True)
@@ -563,4 +565,3 @@ class MyUiQt (Ui_UiClass):
             lista.append(int((i.value()*8*1024*0.185)/(Vref*1000)))
         self.connect_db() #salvo le nuove impostazioni
         invia(lista,"i") 
-    

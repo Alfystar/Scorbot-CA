@@ -125,6 +125,11 @@ struct messaggio *parsing(char *text, char *p) {
         }
         newImpostaziono=true;
         return NULL;
+    else if(strcmp(buff,"a")==0){
+     spisend.pGoHome() 
+     return 2;
+    }
+
     } else {
         printf("Messaggio in ricezione da Python errato\n");
         exit(-1);

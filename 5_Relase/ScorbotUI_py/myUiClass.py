@@ -563,4 +563,4 @@ class MyUiQt (Ui_UiClass):
             lista.append(int((i.value()*8*1024*0.185)/(Vref*1000)))
         self.connect_db() #salvo le nuove impostazioni
         invia(lista,"i") 
-    
+        invia(['home'],"a") #ricerca home hardware

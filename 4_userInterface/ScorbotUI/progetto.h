@@ -13,7 +13,6 @@ struct impostazioni{
 struct messaggio{
   int enc[6];
   int cor[6];
-  int pinza;
   struct impostazioni *imp;
 }messaggio;
 

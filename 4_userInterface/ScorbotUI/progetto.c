@@ -126,13 +126,13 @@ struct messaggio* parsing(char* text, char* p){
     buff=strtok(NULL,p);
     imp_ut->minE[i]=atoi(buff);
    }
-
+  
    for(int i=0;i<6;i++){
     buff=strtok(NULL,p);
     imp_ut->maxC[i]=atoi(buff);
    }
     return 1;
-  }
+  } 
   else{
     puts("Messaggio in ricezione da Python errato\n");
     exit(-1);

@@ -9,6 +9,8 @@
 #include <string.h>
 #include <semaphore.h>
 #include <fcntl.h>
+#include "SPILib/spisend.h"
+
 
 //pipefd[0] refers to the read end of the  pipe.
 //pipefd[1] refers to the write end of the pipe
