@@ -1,4 +1,4 @@
-Eagle File directory
+# Eagle File directory
 
 la prima versione (1_scorBoardV1) possiede i seguenti errori:
 - Il transistor di abilitazione elettrico del relè per i motori, attualmente è cortocircuitato poichè non funzionava.

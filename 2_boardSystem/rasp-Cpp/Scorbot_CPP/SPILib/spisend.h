@@ -51,7 +51,7 @@ protected:
 private:
     char *txbuf, *rxbuf;
     int size, fdSpi;
-    const int hzSpeed = 50000; //50Khz per dare tempo ad arduino
+    const int hzSpeed = 31000 ; //31Khz per dare tempo ad arduino, nella realtà 30.5 kHz
     const char bitWord = 8;
 
     void setMode(char mode);
