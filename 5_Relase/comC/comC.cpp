@@ -58,8 +58,6 @@ int invia(struct messaggio *m, char *tipo) {
     //m e' il puntatore al messaggio da cui prendere i dati da inviare,tipo indica se si tratta di un messaggio encoder o di impostazioni
     //ritorna -1 se fallisce l' invio,1 altrimenti
 
-    //PROBLEMA:se fallisce dire a python che l' invio e' fallito(o con un timer o inviando un carattere speciale tipo / o \ (se ho fallito l' invio pero' probabilmente non potro' inviarlo))
-
     int dim = sizeof(messaggio) + 130;
     char mes[dim];   //mes e' la stringa da inviare
     if (strcmp(tipo, "e") == 0) {
