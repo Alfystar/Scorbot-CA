@@ -11,21 +11,20 @@ Risulta necessario riproggettare:
     La taratura delle deadzone sembra essere buona
 
 
-<<<<<*************************************************************************************************************************************>>>>>
-Interfaccia grafica
+###  Interfaccia grafica
 
-Inserire grafici matlab nelle prime tre schermate
-Studio dei punti ammissibili nello spazio per lo scorbot
-inserimento dei valori corretti quando aggiorno la home falsa(quando aggiorno la home i valori delle varie label o spinbox rimangono settati con i valori corrispondenti alla home settata precedentemente e non rispetto a quella nuova appena settata)
-aggiungere eventuali semafori per la scrittura sulle Qlabel
-aggiungere piu' cifre decimali ai parametri di conversione encoder-angoli(alfa,beta,gamma,delta)
+Le caratteristiche da migliorare sono:
+- Inserire grafici matlab nelle prime tre schermate
+- Studio dei punti ammissibili nello spazio per lo scorbot
+- inserimento dei valori corretti quando aggiorno la home falsa(quando aggiorno la home i valori delle varie label o spinbox rimangono settati con i valori corrispondenti alla home settata precedentemente e non rispetto a quella nuova appena settata)
+- aggiungere eventuali semafori per la scrittura sulle Qlabel
+- aggiungere piu' cifre decimali ai parametri di conversione encoder-angoli(alfa,beta,gamma,delta)
 
 
-<<<<<*************************************************************************************************************************************>>>>>
-Comunicazione Raspberry-Python
+###  Comunicazione Raspberry-Python
 
-C (funzione invia):
-rendere automatica la creazione del messaggio(un ciclo for con sprintf piuttosto un %d statico per ogni encoder/corrente o impostazione)
-se fallisce l' invio per Python comunicare a quest' ultimo che l' invio e' fallito(se al posto di ritornare -1 si chiudesse l' applicazione il problema sarebbe risolto a condizione di gestione dei segnali(**))
-
-(**)chiudere C se si chiude python e viceversa (gestione dei segnali e usando kill sapendo il nome del processo)
+Le caratteristiche da migliorare sono:
+- C (funzione invia):
+    - rendere automatica la creazione del messaggio(un ciclo for con sprintf piuttosto un %d statico per ogni encoder/corrente o impostazione)
+    - se fallisce l' invio per Python comunicare a quest' ultimo che l' invio e' fallito(se al posto di ritornare -1 si chiudesse l' applicazione il problema sarebbe risolto a condizione di gestione dei segnali(**))
+- (**)chiudere C se si chiude python e viceversa (gestione dei segnali e usando kill sapendo il nome del processo)
