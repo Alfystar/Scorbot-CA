@@ -1,0 +1,49 @@
+Partlist
+
+Exported from ScoreBoard-V2.brd at 04/08/2019 09:59
+
+EAGLE Version 9.4.2 Copyright (c) 1988-2019 Autodesk, Inc.
+
+Assembly variant: 
+
+Part           Value               Package                   Library                     Position (mil)        Orientation
+
+ARDUINO_MEGA_1 MEGA_ARDUINONO-HOLE MEGA-NO-HOLE              ARDUINO_DODO                (7375 4140)           MR270
+C1             1mF                 E5-13                     rcl                         (125 1840)            R270
+C2             1n                  C025-024X044              rcl                         (7250 3265)           R270
+C3             1n                  C025-024X044              rcl                         (5175 3290)           R180
+D-SUB50                            F50VP                     con-subd                    (3700 3040)           R180
+D1             ES2D                SMB                       diode                       (225 2215)            R180
+F1             2410-BOX            BELFUSE0679-3000-12       polyfuse-smd_10             (4075 2215)           R270
+F2             2410-BOX            BELFUSE0679-3000-12       polyfuse-smd_10             (4075 865)            R270
+F3             2410-BOX            BELFUSE0679-3000-12       polyfuse-smd_10             (2425 2215)           R270
+F4             2410-BOX            BELFUSE0679-3000-12       polyfuse-smd_10             (2425 865)            R270
+F5             2410-BOX            BELFUSE0679-3000-12       polyfuse-smd_10             (800 2215)            R270
+F6             2410-BOX            BELFUSE0679-3000-12       polyfuse-smd_10             (800 865)             R270
+FAN-PWR                            W237-102                  con-wago-500                (100 1340)            R90
+M1             VNH5019             VNH5019                   DRIVER POLOLU               (4500 2190)           R180
+M2             VNH5019             VNH5019                   DRIVER POLOLU               (4500 840)            R180
+M3             VNH5019             VNH5019                   DRIVER POLOLU               (2850 2190)           R180
+M4             VNH5019             VNH5019                   DRIVER POLOLU               (2850 840)            R180
+M5             VNH5019             VNH5019                   DRIVER POLOLU               (1225 2190)           R180
+M6             VNH5019             VNH5019                   DRIVER POLOLU               (1225 840)            R180
+MOT-P                              W237-102                  con-wago-500                (100 2540)            R90
+P-ON                               LED3MM                    led                         (2200 3290)           R90
+PWR                                W237-102                  con-wago-500                (100 2940)            R90
+R-OFF          5k                  RTRIMT93YA                rcl                         (5175 3040)           R0
+R-REF          5k                  RTRIMT93YA                rcl                         (7550 2840)           R180
+R1             39                  0204/5                    rcl                         (3875 2590)           R90
+R2             39                  0204/5                    rcl                         (3975 2590)           R90
+R3             39                  0204/5                    rcl                         (4075 2590)           R90
+R4             39                  0204/5                    rcl                         (4275 2590)           R90
+R5             39                  0204/5                    rcl                         (4175 2590)           R90
+R6             39                  0204/5                    rcl                         (4375 2590)           R90
+RASPBERRY-PY   RASPI_GPIO_B+_BOX   RASPI_GPIO_B+_BOX         raspberrypi_bastelstube_v13 (7550 1465)           R90
+RESET-LOGIC                        1X02                      pinhead                     (7575 3115)           R0
+RL             330                 0204/7                    rcl                         (1825 3190)           R270
+SJ2                                SJ                        jumper                      (2200 3140)           R180
+SP-DW          DC/DC-STEP-DOWNGLOB DC/DC-STEP-DOWN-UNIVERSAL diy-modules                 (1225 3115)           R0
+SV1                                FE08                      con-lsta                    (6425 1365)           MR180
+SV2                                FE08                      con-lsta                    (6425 915)            MR0
+U1             TXB0108PWR          TSSOP20                   TXB0108PWR                  (6425 1140)           MR180
+VTEST-         TP2P2-38-17         P2-38-17                  testpad                     (2200 2840)           R270

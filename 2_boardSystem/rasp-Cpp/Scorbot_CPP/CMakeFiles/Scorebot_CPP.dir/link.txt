@@ -1,1 +1,0 @@
-/usr/bin/c++    -rdynamic CMakeFiles/Scorebot_CPP.dir/main.cpp.o CMakeFiles/Scorebot_CPP.dir/SPILib/spisend.cpp.o  -o Scorebot_CPP 

@@ -1,0 +1,24 @@
+{
+    "Header": {
+        "Comment": "All values are metric (mm)",
+        "CreationDate": "2019-08-04T06:56:14Z",
+        "GenerationSoftware": {
+            "Application": "EAGLE",
+            "Vendor": "Autodesk",
+            "Version": "9.4.2"
+        },
+        "Part": "Single"
+    },
+    "Overall": {
+        "BoardThickness": 1.57,
+        "LayerNumber": 2,
+        "Name": {
+            "ProjectId": "ScoreBoard-V2"
+        },
+        "Owner": "Emanuele Alfano <alfystar1701@gmail.com>",
+        "Size": {
+            "X": 196.195,
+            "Y": 89.84
+        }
+    }
+}

@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="image">
+    <file>Logo-Uni-Tor-Vergata.png_256x256.png</file>
+  </qresource>
+</RCC>
