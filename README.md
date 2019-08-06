@@ -28,7 +28,7 @@ View this project on [CADLAB.io](https://cadlab.io/project/1649).
 #####  Board V1:
 In questa prima versione si sono utilizzati dei ponti H L298, e per leggere gli ACS712.
 La scheda soffriva di vari problemi di connessioni tra i pin in fase di progetto, le quali sono tutte risolvibili a mano.
-La scheda possiede un firmware di controllo che parla al Rapsberry Py per mezzo di una comunicazione SPI. Di questa prima vesione è stata scritta una [presentazione del progetto](link pdf ppt) ai fini dell'esame.
+La scheda possiede un firmware di controllo che parla al Rapsberry Py per mezzo di una comunicazione SPI. Di questa prima vesione è stata scritta una [presentazione del progetto](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ProjectPresentation-V1.pdf) ai fini dell'esame.
 ######  Eagle Draw Developer:
  - Emanuele Alfano
 
@@ -62,7 +62,7 @@ In questa seconda scheda il cambio più evidente è nel driver motori che adesso
 
 # Rapsberry Py Gui controll
 Per controllare il Robot in maniera intuitiva si è pensato di usare un interfaccia grafica scritta in python usando la libreria grafica PyQT5, la quale per mezzo di delle pipe parlava con il processo C++ che si occupava del controllo del robot.
-Una sintesi di questo lavoro è stata scritta nella [presentazione del progetto](link pdf ppt).
+Una sintesi di questo lavoro è stata scritta nella [presentazione del progetto](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ProjectPresentation-V1.pdf).
 ## C++ core Process of Rapsberry Py Developers:
 - Francesco Ferrò
 - Emanuele Alfano
@@ -74,7 +74,7 @@ Una sintesi di questo lavoro è stata scritta nella [presentazione del progetto]
 
 # Controllability Study
 Lo studio è stato svolto per mezzi teorici, con un modello ottenuto dal professore, con l'intento di applicare un PID.
-Una sintesi di questo lavoro è stata scritta nella [presentazione del progetto](link pdf ppt).
+Una sintesi di questo lavoro è stata scritta nella [presentazione del progetto](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ProjectPresentation-V1.pdf).
 ## Matlab Math Controll Developers
 - Alessandro Cosentini
 - Fabio Di Vincenzo
