@@ -23107,102 +23107,6 @@ W = angled&lt;p&gt;
 </deviceset>
 </devicesets>
 </library>
-<library name="testpad" urn="urn:adsk.eagle:library:385">
-<description>&lt;b&gt;Test Pins/Pads&lt;/b&gt;&lt;p&gt;
-Cream on SMD OFF.&lt;br&gt;
-new: Attribute TP_SIGNAL_NAME&lt;br&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="P2-38-17" urn="urn:adsk.eagle:footprint:27898/1" library_version="2">
-<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
-<circle x="-1.905" y="0" radius="0.8128" width="0.1524" layer="51"/>
-<circle x="1.905" y="0" radius="0.8128" width="0.1524" layer="51"/>
-<pad name="TP-1" x="-1.905" y="0" drill="1.7018" diameter="2.1208" shape="long" rot="R90"/>
-<pad name="TP-2" x="1.905" y="0" drill="1.7018" diameter="2.1208" shape="long" rot="R90"/>
-<text x="-2.54" y="2.54" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-2.54" y="-3.81" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-<text x="-2.54" y="-5.715" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
-<rectangle x1="-2.2352" y1="-0.3302" x2="-1.5748" y2="0.3302" layer="51"/>
-<rectangle x1="1.5748" y1="-0.3302" x2="2.2352" y2="0.3302" layer="51"/>
-</package>
-<package name="P2-38-20" urn="urn:adsk.eagle:footprint:27941/1" library_version="2">
-<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
-<circle x="-1.905" y="0" radius="1.016" width="0.1524" layer="51"/>
-<circle x="1.905" y="0" radius="1.016" width="0.1524" layer="51"/>
-<pad name="TP-1" x="-1.905" y="0" drill="2.0066" diameter="2.54" shape="long" rot="R90"/>
-<pad name="TP-2" x="1.905" y="0" drill="2.0066" diameter="2.54" shape="long" rot="R90"/>
-<text x="-2.54" y="2.794" size="1.27" layer="25" ratio="10">&gt;NAME</text>
-<text x="-2.54" y="-4.191" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
-<text x="-2.54" y="-6.35" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
-<rectangle x1="-2.2352" y1="-0.3302" x2="-1.5748" y2="0.3302" layer="51"/>
-<rectangle x1="1.5748" y1="-0.3302" x2="2.2352" y2="0.3302" layer="51"/>
-</package>
-</packages>
-<packages3d>
-<package3d name="P2-38-17" urn="urn:adsk.eagle:package:27945/1" type="box" library_version="2">
-<description>TEST PAD</description>
-<packageinstances>
-<packageinstance name="P2-38-17"/>
-</packageinstances>
-</package3d>
-<package3d name="P2-38-20" urn="urn:adsk.eagle:package:27982/1" type="box" library_version="2">
-<description>TEST PAD</description>
-<packageinstances>
-<packageinstance name="P2-38-20"/>
-</packageinstances>
-</package3d>
-</packages3d>
-<symbols>
-<symbol name="TP" urn="urn:adsk.eagle:symbol:27940/1" library_version="2">
-<wire x1="-0.762" y1="-0.762" x2="0" y2="0" width="0.254" layer="94"/>
-<wire x1="0" y1="0" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
-<wire x1="0.762" y1="-0.762" x2="0" y2="-1.524" width="0.254" layer="94"/>
-<wire x1="0" y1="-1.524" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
-<text x="-1.27" y="1.27" size="1.778" layer="95">&gt;NAME</text>
-<text x="1.27" y="-1.27" size="1.778" layer="97">&gt;TP_SIGNAL_NAME</text>
-<pin name="TP" x="0" y="-2.54" visible="off" length="short" direction="in" rot="R90"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="TP2" urn="urn:adsk.eagle:component:27987/1" prefix="TP" library_version="2">
-<description>&lt;b&gt;Test pad&lt;/b&gt;</description>
-<gates>
-<gate name="A" symbol="TP" x="0" y="0" addlevel="always"/>
-<gate name="B" symbol="TP" x="7.62" y="0" addlevel="always"/>
-</gates>
-<devices>
-<device name="P2-38-17" package="P2-38-17">
-<connects>
-<connect gate="A" pin="TP" pad="TP-1"/>
-<connect gate="B" pin="TP" pad="TP-2"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:27945/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
-</technology>
-</technologies>
-</device>
-<device name="P2-38-20" package="P2-38-20">
-<connects>
-<connect gate="A" pin="TP" pad="TP-1"/>
-<connect gate="B" pin="TP" pad="TP-2"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:27982/1"/>
-</package3dinstances>
-<technologies>
-<technology name="">
-<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
-</technology>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="jumper" urn="urn:adsk.eagle:library:252">
 <description>&lt;b&gt;Jumpers&lt;/b&gt;&lt;p&gt;
 &lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
@@ -28493,6 +28397,102 @@ super fast rectifier, 2 A</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="testpad">
+<description>&lt;b&gt;Test Pins/Pads&lt;/b&gt;&lt;p&gt;
+Cream on SMD OFF.&lt;br&gt;
+new: Attribute TP_SIGNAL_NAME&lt;br&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="P2-38-17" urn="urn:adsk.eagle:footprint:27898/1" locally_modified="yes">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<circle x="-1.905" y="0" radius="0.8128" width="0.1524" layer="51"/>
+<circle x="1.905" y="0" radius="0.8128" width="0.1524" layer="51"/>
+<pad name="TP-1" x="-1.905" y="0" drill="1.7018" diameter="2.54" rot="R90"/>
+<pad name="TP-2" x="1.905" y="0" drill="1.7018" diameter="2.54" rot="R90"/>
+<text x="-2.54" y="2.54" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-2.54" y="-3.81" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<text x="-2.54" y="-5.715" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+<rectangle x1="-2.2352" y1="-0.3302" x2="-1.5748" y2="0.3302" layer="51"/>
+<rectangle x1="1.5748" y1="-0.3302" x2="2.2352" y2="0.3302" layer="51"/>
+</package>
+<package name="P2-38-20" urn="urn:adsk.eagle:footprint:27941/1">
+<description>&lt;b&gt;TEST PAD&lt;/b&gt;</description>
+<circle x="-1.905" y="0" radius="1.016" width="0.1524" layer="51"/>
+<circle x="1.905" y="0" radius="1.016" width="0.1524" layer="51"/>
+<pad name="TP-1" x="-1.905" y="0" drill="2.0066" diameter="2.54" shape="long" rot="R90"/>
+<pad name="TP-2" x="1.905" y="0" drill="2.0066" diameter="2.54" shape="long" rot="R90"/>
+<text x="-2.54" y="2.794" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="-2.54" y="-4.191" size="1.27" layer="27" ratio="10">&gt;VALUE</text>
+<text x="-2.54" y="-6.35" size="1" layer="37">&gt;TP_SIGNAL_NAME</text>
+<rectangle x1="-2.2352" y1="-0.3302" x2="-1.5748" y2="0.3302" layer="51"/>
+<rectangle x1="1.5748" y1="-0.3302" x2="2.2352" y2="0.3302" layer="51"/>
+</package>
+</packages>
+<packages3d>
+<package3d name="P2-38-17" urn="urn:adsk.eagle:package:27945/1" locally_modified="yes" type="box">
+<description>TEST PAD</description>
+<packageinstances>
+<packageinstance name="P2-38-17"/>
+</packageinstances>
+</package3d>
+<package3d name="P2-38-20" urn="urn:adsk.eagle:package:27982/1" type="box">
+<description>TEST PAD</description>
+<packageinstances>
+<packageinstance name="P2-38-20"/>
+</packageinstances>
+</package3d>
+</packages3d>
+<symbols>
+<symbol name="TP">
+<wire x1="-0.762" y1="-0.762" x2="0" y2="0" width="0.254" layer="94"/>
+<wire x1="0" y1="0" x2="0.762" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="0.762" y1="-0.762" x2="0" y2="-1.524" width="0.254" layer="94"/>
+<wire x1="0" y1="-1.524" x2="-0.762" y2="-0.762" width="0.254" layer="94"/>
+<text x="-1.27" y="1.27" size="1.778" layer="95">&gt;NAME</text>
+<text x="1.27" y="-1.27" size="1.778" layer="97">&gt;TP_SIGNAL_NAME</text>
+<pin name="TP" x="0" y="-2.54" visible="off" length="short" direction="in" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="TP2" prefix="TP">
+<description>&lt;b&gt;Test pad&lt;/b&gt;</description>
+<gates>
+<gate name="A" symbol="TP" x="0" y="0" addlevel="always"/>
+<gate name="B" symbol="TP" x="7.62" y="0" addlevel="always"/>
+</gates>
+<devices>
+<device name="P2-38-17" package="P2-38-17">
+<connects>
+<connect gate="A" pin="TP" pad="TP-1"/>
+<connect gate="B" pin="TP" pad="TP-2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27945/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+<device name="P2-38-20" package="P2-38-20">
+<connects>
+<connect gate="A" pin="TP" pad="TP-1"/>
+<connect gate="B" pin="TP" pad="TP-2"/>
+</connects>
+<package3dinstances>
+<package3dinstance package3d_urn="urn:adsk.eagle:package:27982/1"/>
+</package3dinstances>
+<technologies>
+<technology name="">
+<attribute name="TP_SIGNAL_NAME" value="" constant="no"/>
+</technology>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -28576,7 +28576,7 @@ super fast rectifier, 2 A</description>
 <attribute name="SPICEPREFIX" value="G"/>
 </part>
 <part name="P+11" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="V+" device=""/>
-<part name="VTEST-" library="testpad" library_urn="urn:adsk.eagle:library:385" deviceset="TP2" device="P2-38-17" package3d_urn="urn:adsk.eagle:package:27945/1">
+<part name="VTEST-" library="testpad" deviceset="TP2" device="P2-38-17" package3d_urn="urn:adsk.eagle:package:27945/1">
 <attribute name="SPICEPREFIX" value="X"/>
 </part>
 <part name="SJ2" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="SJ" device="" package3d_urn="urn:adsk.eagle:package:15471/1">
@@ -28654,6 +28654,12 @@ super fast rectifier, 2 A</description>
 <part name="U$1" library="loghi" deviceset="ALFY-BIG" device=""/>
 <part name="U$4" library="loghi" deviceset="ALFY-BIG" device=""/>
 <part name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="ES2D" device="" package3d_urn="urn:adsk.eagle:package:43404/2"/>
+<part name="V-OFF-PAD" library="testpad" deviceset="TP2" device="P2-38-17" package3d_urn="urn:adsk.eagle:package:27945/1">
+<attribute name="SPICEPREFIX" value="X"/>
+</part>
+<part name="V-REF-PAD" library="testpad" deviceset="TP2" device="P2-38-17" package3d_urn="urn:adsk.eagle:package:27945/1">
+<attribute name="SPICEPREFIX" value="X"/>
+</part>
 </parts>
 <sheets>
 <sheet>
@@ -28696,9 +28702,9 @@ di una resistenza specifica</text>
 <wire x1="13.335" y1="73.66" x2="14.605" y2="72.39" width="0.1524" layer="97"/>
 <wire x1="14.605" y1="72.39" x2="17.145" y2="72.39" width="0.1524" layer="97"/>
 <text x="12.7" y="75.565" size="1.016" layer="97" rot="R90">Pin Non Connessi</text>
-<wire x1="144.78" y1="144.78" x2="252.73" y2="144.78" width="0.1524" layer="94"/>
-<wire x1="252.73" y1="144.78" x2="252.73" y2="25.4" width="0.1524" layer="94"/>
-<wire x1="252.73" y1="25.4" x2="144.78" y2="25.4" width="0.1524" layer="94"/>
+<wire x1="144.78" y1="144.78" x2="251.46" y2="144.78" width="0.1524" layer="94"/>
+<wire x1="251.46" y1="144.78" x2="251.46" y2="25.4" width="0.1524" layer="94"/>
+<wire x1="251.46" y1="25.4" x2="144.78" y2="25.4" width="0.1524" layer="94"/>
 <wire x1="144.78" y1="25.4" x2="144.78" y2="144.78" width="0.1524" layer="94"/>
 <wire x1="78.74" y1="173.99" x2="137.16" y2="173.99" width="0.1524" layer="94"/>
 <wire x1="137.16" y1="173.99" x2="137.16" y2="92.71" width="0.1524" layer="94"/>
@@ -28710,24 +28716,24 @@ di una resistenza specifica</text>
 <wire x1="78.74" y1="35.56" x2="78.74" y2="91.44" width="0.1524" layer="94"/>
 <text x="80.01" y="81.28" size="1.016" layer="97">Pull OE low to place all
 outputs in 3-state mode.</text>
-<wire x1="160.655" y1="95.25" x2="158.115" y2="95.25" width="0.1524" layer="97"/>
-<wire x1="158.115" y1="95.25" x2="156.845" y2="93.98" width="0.1524" layer="97"/>
-<wire x1="156.845" y1="93.98" x2="156.845" y2="73.66" width="0.1524" layer="97"/>
-<wire x1="156.845" y1="73.66" x2="158.115" y2="72.39" width="0.1524" layer="97"/>
-<wire x1="158.115" y1="72.39" x2="160.655" y2="72.39" width="0.1524" layer="97"/>
-<text x="156.21" y="78.74" size="1.016" layer="97" rot="R90">Attivare PCIE2</text>
-<wire x1="160.655" y1="52.07" x2="158.115" y2="52.07" width="0.1524" layer="97"/>
-<wire x1="158.115" y1="52.07" x2="156.845" y2="50.8" width="0.1524" layer="97"/>
-<wire x1="156.845" y1="50.8" x2="156.845" y2="40.64" width="0.1524" layer="97"/>
-<wire x1="156.845" y1="40.64" x2="158.115" y2="39.37" width="0.1524" layer="97"/>
-<wire x1="158.115" y1="39.37" x2="160.655" y2="39.37" width="0.1524" layer="97"/>
-<text x="156.21" y="40.64" size="1.016" layer="97" rot="R90">Attivare PCIE0</text>
+<wire x1="156.845" y1="95.25" x2="154.305" y2="95.25" width="0.1524" layer="97"/>
+<wire x1="154.305" y1="95.25" x2="153.035" y2="93.98" width="0.1524" layer="97"/>
+<wire x1="153.035" y1="93.98" x2="153.035" y2="73.66" width="0.1524" layer="97"/>
+<wire x1="153.035" y1="73.66" x2="154.305" y2="72.39" width="0.1524" layer="97"/>
+<wire x1="154.305" y1="72.39" x2="156.845" y2="72.39" width="0.1524" layer="97"/>
+<text x="152.4" y="78.74" size="1.016" layer="97" rot="R90">Attivare PCIE2</text>
+<wire x1="156.845" y1="52.07" x2="154.305" y2="52.07" width="0.1524" layer="97"/>
+<wire x1="154.305" y1="52.07" x2="153.035" y2="50.8" width="0.1524" layer="97"/>
+<wire x1="153.035" y1="50.8" x2="153.035" y2="40.64" width="0.1524" layer="97"/>
+<wire x1="153.035" y1="40.64" x2="154.305" y2="39.37" width="0.1524" layer="97"/>
+<wire x1="154.305" y1="39.37" x2="156.845" y2="39.37" width="0.1524" layer="97"/>
+<text x="152.4" y="40.64" size="1.016" layer="97" rot="R90">Attivare PCIE0</text>
 <text x="45.72" y="105.41" size="1.778" layer="97">I pin CHA/B e MS DEVONO
 essere letti in PULL-UP.</text>
 <text x="119.38" y="85.09" size="1.778" layer="97">Traslatore di livello
 3.3V &lt;-&gt;5V</text>
-<wire x1="148.59" y1="173.99" x2="148.59" y2="146.05" width="0.1524" layer="94"/>
-<wire x1="148.59" y1="146.05" x2="213.36" y2="146.05" width="0.1524" layer="94"/>
+<wire x1="144.78" y1="173.99" x2="144.78" y2="146.05" width="0.1524" layer="94"/>
+<wire x1="144.78" y1="146.05" x2="213.36" y2="146.05" width="0.1524" layer="94"/>
 <wire x1="213.36" y1="146.05" x2="251.46" y2="146.05" width="0.1524" layer="94"/>
 <wire x1="251.46" y1="146.05" x2="251.46" y2="173.99" width="0.1524" layer="94"/>
 <wire x1="251.46" y1="173.99" x2="213.36" y2="173.99" width="0.1524" layer="94"/>
@@ -28757,12 +28763,12 @@ Imax 3A    --&gt; V-ref=420mV
 .....
 MAX READING CURRENT:
 Imax 23.5A --&gt;V-ref=3.3V</text>
-<text x="231.14" y="167.64" size="1.016" layer="97">In caso di bisogno, permette di
+<text x="229.87" y="156.21" size="1.016" layer="97">In caso di bisogno, permette di
 sottrarre una tensione fissa
 dagli ingressi analogici</text>
-<wire x1="213.36" y1="173.99" x2="148.59" y2="173.99" width="0.1524" layer="94"/>
+<wire x1="213.36" y1="173.99" x2="144.78" y2="173.99" width="0.1524" layer="94"/>
 <wire x1="213.36" y1="146.05" x2="213.36" y2="173.99" width="0.1524" layer="94" style="shortdash"/>
-<text x="15.24" y="6.35" size="1.778" layer="94">Developed by:
+<text x="16.51" y="6.35" size="1.778" layer="94">Developed by:
 Ing. Emanuele Alfano</text>
 </plain>
 <instances>
@@ -28815,14 +28821,14 @@ Ing. Emanuele Alfano</text>
 <attribute name="LAST_DATE_TIME" x="217.17" y="10.16" size="2.286" layer="94"/>
 <attribute name="SHEET" x="230.505" y="5.08" size="2.54" layer="94"/>
 </instance>
-<instance part="ARDUINO_MEGA_1" gate="G$1" x="204.47" y="82.55" smashed="yes">
-<attribute name="NAME" x="173.99" y="142.24" size="1.6764" layer="95"/>
+<instance part="ARDUINO_MEGA_1" gate="G$1" x="200.66" y="82.55" smashed="yes">
+<attribute name="NAME" x="170.18" y="142.24" size="1.6764" layer="95"/>
 </instance>
-<instance part="P+9" gate="1" x="165.1" y="138.43" smashed="yes">
-<attribute name="VALUE" x="165.1" y="138.43" size="1.778" layer="96" rot="R90"/>
+<instance part="P+9" gate="1" x="161.29" y="138.43" smashed="yes">
+<attribute name="VALUE" x="161.29" y="138.43" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="GND14" gate="1" x="153.67" y="123.19" smashed="yes" rot="R270">
-<attribute name="VALUE" x="151.13" y="125.73" size="1.778" layer="96" rot="R270"/>
+<instance part="GND14" gate="1" x="149.86" y="123.19" smashed="yes" rot="R270">
+<attribute name="VALUE" x="147.32" y="125.73" size="1.778" layer="96" rot="R270"/>
 </instance>
 <instance part="RASPBERRY-PY" gate="G$1" x="106.68" y="140.97" smashed="yes"/>
 <instance part="P+14" gate="1" x="101.6" y="172.72" smashed="yes" rot="MR0">
@@ -28859,16 +28865,16 @@ Ing. Emanuele Alfano</text>
 <attribute name="NAME" x="193.802" y="17.0942" size="1.778" layer="95"/>
 <attribute name="VALUE" x="193.802" y="14.0462" size="1.778" layer="96"/>
 </instance>
-<instance part="R-REF" gate="G$1" x="154.94" y="163.83" smashed="yes">
-<attribute name="NAME" x="151.511" y="160.02" size="1.778" layer="95" rot="R90"/>
-<attribute name="VALUE" x="157.48" y="166.37" size="1.778" layer="96" rot="R90"/>
+<instance part="R-REF" gate="G$1" x="152.4" y="163.83" smashed="yes">
+<attribute name="NAME" x="148.971" y="160.02" size="1.778" layer="95" rot="R90"/>
+<attribute name="VALUE" x="154.94" y="166.37" size="1.778" layer="96" rot="R90"/>
 </instance>
-<instance part="GND7" gate="1" x="154.94" y="151.13" smashed="yes">
-<attribute name="VALUE" x="152.4" y="148.59" size="1.778" layer="96"/>
+<instance part="GND7" gate="1" x="152.4" y="151.13" smashed="yes">
+<attribute name="VALUE" x="149.86" y="148.59" size="1.778" layer="96"/>
 </instance>
-<instance part="C2" gate="G$1" x="161.29" y="160.02" smashed="yes" rot="MR0">
-<attribute name="NAME" x="159.766" y="160.401" size="1.778" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="159.766" y="155.321" size="1.778" layer="96" rot="MR0"/>
+<instance part="C2" gate="G$1" x="158.75" y="160.02" smashed="yes" rot="MR0">
+<attribute name="NAME" x="157.226" y="160.401" size="1.778" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="157.226" y="155.321" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="VDD11" gate="G$1" x="52.07" y="144.78" smashed="yes">
 <attribute name="VALUE" x="49.53" y="142.24" size="1.778" layer="96" rot="R90"/>
@@ -28876,9 +28882,9 @@ Ing. Emanuele Alfano</text>
 <instance part="GND32" gate="1" x="52.07" y="130.81" smashed="yes" rot="MR0">
 <attribute name="VALUE" x="48.26" y="129.54" size="1.778" layer="96" rot="MR180"/>
 </instance>
-<instance part="RESET-LOGIC" gate="G$1" x="148.59" y="129.54" smashed="yes" rot="MR0">
-<attribute name="NAME" x="156.21" y="135.255" size="1.016" layer="95" rot="MR0"/>
-<attribute name="VALUE" x="154.94" y="124.46" size="1.778" layer="96" rot="MR0"/>
+<instance part="RESET-LOGIC" gate="G$1" x="147.32" y="129.54" smashed="yes" rot="MR0">
+<attribute name="NAME" x="154.94" y="135.255" size="1.016" layer="95" rot="MR0"/>
+<attribute name="VALUE" x="153.67" y="124.46" size="1.778" layer="96" rot="MR0"/>
 </instance>
 <instance part="H4" gate="G$1" x="191.77" y="11.43" smashed="yes">
 <attribute name="NAME" x="193.802" y="12.0142" size="1.778" layer="95"/>
@@ -28956,6 +28962,22 @@ Ing. Emanuele Alfano</text>
 <instance part="D1" gate="G$1" x="22.86" y="138.43" smashed="yes" rot="MR180">
 <attribute name="NAME" x="21.59" y="136.6774" size="1.778" layer="95" rot="MR180"/>
 </instance>
+<instance part="V-OFF-PAD" gate="A" x="233.68" y="167.64" smashed="yes">
+<attribute name="NAME" x="229.87" y="168.91" size="1.778" layer="95"/>
+<attribute name="TP_SIGNAL_NAME" x="234.95" y="166.37" size="1.778" layer="97"/>
+</instance>
+<instance part="V-OFF-PAD" gate="B" x="233.68" y="151.13" smashed="yes" rot="R180">
+<attribute name="NAME" x="231.14" y="148.59" size="1.778" layer="95"/>
+<attribute name="TP_SIGNAL_NAME" x="232.41" y="152.4" size="1.778" layer="97" rot="R180"/>
+</instance>
+<instance part="V-REF-PAD" gate="A" x="161.29" y="167.64" smashed="yes">
+<attribute name="NAME" x="157.48" y="167.64" size="1.4224" layer="95"/>
+<attribute name="TP_SIGNAL_NAME" x="162.56" y="166.37" size="1.778" layer="97"/>
+</instance>
+<instance part="V-REF-PAD" gate="B" x="161.29" y="151.13" smashed="yes" rot="R180">
+<attribute name="NAME" x="157.48" y="148.59" size="1.4224" layer="95"/>
+<attribute name="TP_SIGNAL_NAME" x="160.02" y="152.4" size="1.778" layer="97" rot="R180"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -29027,14 +29049,12 @@ Ing. Emanuele Alfano</text>
 <segment>
 <pinref part="GND14" gate="1" pin="GND"/>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="GND"/>
-<wire x1="156.21" y1="123.19" x2="158.75" y2="123.19" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="123.19" x2="154.94" y2="123.19" width="0.1524" layer="91"/>
 <pinref part="RESET-LOGIC" gate="G$1" pin="2"/>
-<wire x1="158.75" y1="123.19" x2="168.91" y2="123.19" width="0.1524" layer="91"/>
-<wire x1="151.13" y1="129.54" x2="156.21" y2="129.54" width="0.1524" layer="91"/>
-<wire x1="156.21" y1="129.54" x2="156.21" y2="127" width="0.1524" layer="91"/>
-<wire x1="156.21" y1="127" x2="158.75" y2="127" width="0.1524" layer="91"/>
-<wire x1="158.75" y1="127" x2="158.75" y2="123.19" width="0.1524" layer="91"/>
-<junction x="158.75" y="123.19"/>
+<wire x1="154.94" y1="123.19" x2="165.1" y2="123.19" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="129.54" x2="154.94" y2="129.54" width="0.1524" layer="91"/>
+<wire x1="154.94" y1="129.54" x2="154.94" y2="123.19" width="0.1524" layer="91"/>
+<junction x="154.94" y="123.19"/>
 </segment>
 <segment>
 <pinref part="GND29" gate="1" pin="GND"/>
@@ -29049,11 +29069,15 @@ Ing. Emanuele Alfano</text>
 <segment>
 <pinref part="GND7" gate="1" pin="GND"/>
 <pinref part="R-REF" gate="G$1" pin="A"/>
-<wire x1="154.94" y1="153.67" x2="154.94" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="153.67" x2="152.4" y2="154.94" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="2"/>
-<wire x1="154.94" y1="154.94" x2="154.94" y2="158.75" width="0.1524" layer="91"/>
-<wire x1="161.29" y1="154.94" x2="154.94" y2="154.94" width="0.1524" layer="91"/>
-<junction x="154.94" y="154.94"/>
+<wire x1="152.4" y1="154.94" x2="152.4" y2="158.75" width="0.1524" layer="91"/>
+<wire x1="158.75" y1="154.94" x2="152.4" y2="154.94" width="0.1524" layer="91"/>
+<junction x="152.4" y="154.94"/>
+<pinref part="V-REF-PAD" gate="B" pin="TP"/>
+<wire x1="158.75" y1="154.94" x2="161.29" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="161.29" y1="154.94" x2="161.29" y2="153.67" width="0.1524" layer="91"/>
+<junction x="158.75" y="154.94"/>
 </segment>
 <segment>
 <wire x1="49.53" y1="157.48" x2="48.26" y2="157.48" width="0.1524" layer="91"/>
@@ -29076,6 +29100,10 @@ Ing. Emanuele Alfano</text>
 <wire x1="219.71" y1="154.94" x2="219.71" y2="158.75" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="154.94" x2="219.71" y2="154.94" width="0.1524" layer="91"/>
 <junction x="219.71" y="154.94"/>
+<pinref part="V-OFF-PAD" gate="B" pin="TP"/>
+<wire x1="226.06" y1="154.94" x2="233.68" y2="154.94" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="154.94" x2="233.68" y2="153.67" width="0.1524" layer="91"/>
+<junction x="226.06" y="154.94"/>
 </segment>
 </net>
 <net name="+5V" class="3">
@@ -29108,8 +29136,8 @@ Ing. Emanuele Alfano</text>
 <segment>
 <pinref part="P+9" gate="1" pin="+5V"/>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="+5V"/>
-<wire x1="165.1" y1="135.89" x2="165.1" y2="133.35" width="0.1524" layer="91"/>
-<wire x1="165.1" y1="133.35" x2="168.91" y2="133.35" width="0.1524" layer="91"/>
+<wire x1="161.29" y1="135.89" x2="161.29" y2="133.35" width="0.1524" layer="91"/>
+<wire x1="161.29" y1="133.35" x2="165.1" y2="133.35" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="P+14" gate="1" pin="+5V"/>
@@ -29223,8 +29251,8 @@ Ing. Emanuele Alfano</text>
 </segment>
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="A09(PK1/ADC9/PCINT17)"/>
-<wire x1="168.91" y1="90.17" x2="165.1" y2="90.17" width="0.1524" layer="91"/>
-<label x="165.1" y="90.17" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="90.17" x2="161.29" y2="90.17" width="0.1524" layer="91"/>
+<label x="161.29" y="90.17" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="CHA1" class="4">
@@ -29235,8 +29263,8 @@ Ing. Emanuele Alfano</text>
 </segment>
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="A08(PK0/ADC8/PCINT16)"/>
-<wire x1="168.91" y1="92.71" x2="165.1" y2="92.71" width="0.1524" layer="91"/>
-<label x="165.1" y="92.71" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="92.71" x2="161.29" y2="92.71" width="0.1524" layer="91"/>
+<label x="161.29" y="92.71" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="CHA5" class="4">
@@ -29246,9 +29274,9 @@ Ing. Emanuele Alfano</text>
 <label x="35.56" y="87.63" size="1.016" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="168.91" y1="82.55" x2="165.1" y2="82.55" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="82.55" x2="161.29" y2="82.55" width="0.1524" layer="91"/>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="A12(PK4/ADC12/PCINT20)"/>
-<label x="165.1" y="82.55" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="161.29" y="82.55" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="CHA6" class="4">
@@ -29258,9 +29286,9 @@ Ing. Emanuele Alfano</text>
 <label x="17.78" y="64.77" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<wire x1="168.91" y1="80.01" x2="165.1" y2="80.01" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="80.01" x2="161.29" y2="80.01" width="0.1524" layer="91"/>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="A13(PK5/ADC13/PCINT21)"/>
-<label x="165.1" y="80.01" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="161.29" y="80.01" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="CHA4" class="4">
@@ -29271,8 +29299,8 @@ Ing. Emanuele Alfano</text>
 </segment>
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="A11(PK3/ADC11/PCINT19)"/>
-<wire x1="168.91" y1="85.09" x2="165.1" y2="85.09" width="0.1524" layer="91"/>
-<label x="165.1" y="85.09" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="85.09" x2="161.29" y2="85.09" width="0.1524" layer="91"/>
+<label x="161.29" y="85.09" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="CHA3" class="4">
@@ -29283,8 +29311,8 @@ Ing. Emanuele Alfano</text>
 </segment>
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="A10(PK2/ADC10/PCINT18)"/>
-<wire x1="168.91" y1="87.63" x2="165.1" y2="87.63" width="0.1524" layer="91"/>
-<label x="165.1" y="87.63" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="87.63" x2="161.29" y2="87.63" width="0.1524" layer="91"/>
+<label x="161.29" y="87.63" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="CHB5" class="4">
@@ -29295,8 +29323,8 @@ Ing. Emanuele Alfano</text>
 </segment>
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="(PWM)D12(PB6/OC1B/PCINT6)"/>
-<wire x1="168.91" y1="44.45" x2="165.1" y2="44.45" width="0.1524" layer="91"/>
-<label x="165.1" y="44.45" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="44.45" x2="161.29" y2="44.45" width="0.1524" layer="91"/>
+<label x="161.29" y="44.45" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="CHB3" class="4">
@@ -29307,8 +29335,8 @@ Ing. Emanuele Alfano</text>
 </segment>
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="(PWM)D10(PB4/OC2A/PCINT4)"/>
-<wire x1="168.91" y1="49.53" x2="165.1" y2="49.53" width="0.1524" layer="91"/>
-<label x="165.1" y="49.53" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="49.53" x2="161.29" y2="49.53" width="0.1524" layer="91"/>
+<label x="161.29" y="49.53" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="CHB1" class="4">
@@ -29318,9 +29346,9 @@ Ing. Emanuele Alfano</text>
 <label x="36.83" y="54.61" size="1.016" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="168.91" y1="77.47" x2="165.1" y2="77.47" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="77.47" x2="161.29" y2="77.47" width="0.1524" layer="91"/>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="A14(PK6/ADC14/PCINT22)"/>
-<label x="165.1" y="77.47" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="161.29" y="77.47" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="CHB6" class="4">
@@ -29331,8 +29359,8 @@ Ing. Emanuele Alfano</text>
 </segment>
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="(PWM)D13(PB7/OC0A/PCINT7)"/>
-<wire x1="168.91" y1="41.91" x2="165.1" y2="41.91" width="0.1524" layer="91"/>
-<label x="165.1" y="41.91" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="41.91" x2="161.29" y2="41.91" width="0.1524" layer="91"/>
+<label x="161.29" y="41.91" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="CHB4" class="4">
@@ -29343,8 +29371,8 @@ Ing. Emanuele Alfano</text>
 </segment>
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="(PWM)D11(PB5/OC1A/PCINT5)"/>
-<wire x1="168.91" y1="46.99" x2="165.1" y2="46.99" width="0.1524" layer="91"/>
-<label x="165.1" y="46.99" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="46.99" x2="161.29" y2="46.99" width="0.1524" layer="91"/>
+<label x="161.29" y="46.99" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="CHB2" class="4">
@@ -29354,9 +29382,9 @@ Ing. Emanuele Alfano</text>
 <label x="36.83" y="95.25" size="1.016" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="168.91" y1="74.93" x2="165.1" y2="74.93" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="74.93" x2="161.29" y2="74.93" width="0.1524" layer="91"/>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="A15(PK7/ADC15/PCINT23)"/>
-<label x="165.1" y="74.93" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="161.29" y="74.93" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="MS5" class="4">
@@ -29367,8 +29395,8 @@ Ing. Emanuele Alfano</text>
 </segment>
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="D33(PC4/A12)"/>
-<wire x1="237.49" y1="80.01" x2="240.03" y2="80.01" width="0.1524" layer="91"/>
-<label x="240.03" y="80.01" size="1.27" layer="95" xref="yes"/>
+<wire x1="233.68" y1="80.01" x2="236.22" y2="80.01" width="0.1524" layer="91"/>
+<label x="236.22" y="80.01" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="MS2" class="4">
@@ -29379,8 +29407,8 @@ Ing. Emanuele Alfano</text>
 </segment>
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="D36(PC1/A9)"/>
-<wire x1="237.49" y1="72.39" x2="240.03" y2="72.39" width="0.1524" layer="91"/>
-<label x="240.03" y="72.39" size="1.27" layer="95" xref="yes"/>
+<wire x1="233.68" y1="72.39" x2="236.22" y2="72.39" width="0.1524" layer="91"/>
+<label x="236.22" y="72.39" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="MS4" class="4">
@@ -29391,8 +29419,8 @@ Ing. Emanuele Alfano</text>
 </segment>
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="D34(PC3/A11)"/>
-<wire x1="237.49" y1="77.47" x2="240.03" y2="77.47" width="0.1524" layer="91"/>
-<label x="240.03" y="77.47" size="1.27" layer="95" xref="yes"/>
+<wire x1="233.68" y1="77.47" x2="236.22" y2="77.47" width="0.1524" layer="91"/>
+<label x="236.22" y="77.47" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="MS6" class="4">
@@ -29403,8 +29431,8 @@ Ing. Emanuele Alfano</text>
 </segment>
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="D32(PC5/A13)"/>
-<wire x1="237.49" y1="82.55" x2="240.03" y2="82.55" width="0.1524" layer="91"/>
-<label x="240.03" y="82.55" size="1.27" layer="95" xref="yes"/>
+<wire x1="233.68" y1="82.55" x2="236.22" y2="82.55" width="0.1524" layer="91"/>
+<label x="236.22" y="82.55" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="MS1" class="4">
@@ -29414,8 +29442,8 @@ Ing. Emanuele Alfano</text>
 <label x="39.37" y="100.33" size="1.016" layer="95" xref="yes"/>
 </segment>
 <segment>
-<wire x1="237.49" y1="69.85" x2="240.03" y2="69.85" width="0.1524" layer="91"/>
-<label x="240.03" y="69.85" size="1.27" layer="95" xref="yes"/>
+<wire x1="233.68" y1="69.85" x2="236.22" y2="69.85" width="0.1524" layer="91"/>
+<label x="236.22" y="69.85" size="1.27" layer="95" xref="yes"/>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="D37(PC0/A8)"/>
 </segment>
 </net>
@@ -29427,8 +29455,8 @@ Ing. Emanuele Alfano</text>
 </segment>
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="D35(PC2/A10)"/>
-<wire x1="237.49" y1="74.93" x2="240.03" y2="74.93" width="0.1524" layer="91"/>
-<label x="240.03" y="74.93" size="1.27" layer="95" xref="yes"/>
+<wire x1="233.68" y1="74.93" x2="236.22" y2="74.93" width="0.1524" layer="91"/>
+<label x="236.22" y="74.93" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="VLED1" class="3">
@@ -29523,8 +29551,8 @@ Ing. Emanuele Alfano</text>
 <net name="AR-SS" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="(SS)D53(PB0/PCINT0)"/>
-<wire x1="168.91" y1="36.83" x2="165.1" y2="36.83" width="0.1524" layer="91"/>
-<label x="165.1" y="36.83" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="36.83" x2="161.29" y2="36.83" width="0.1524" layer="91"/>
+<label x="161.29" y="36.83" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <label x="134.62" y="63.5" size="1.27" layer="95" rot="R180" xref="yes"/>
@@ -29538,8 +29566,8 @@ Ing. Emanuele Alfano</text>
 <net name="AR-SCK" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="(SCK)D52(PB1/PCINT1)"/>
-<wire x1="168.91" y1="34.29" x2="165.1" y2="34.29" width="0.1524" layer="91"/>
-<label x="165.1" y="34.29" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="34.29" x2="161.29" y2="34.29" width="0.1524" layer="91"/>
+<label x="161.29" y="34.29" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <label x="135.89" y="66.04" size="1.27" layer="95" rot="R180" xref="yes"/>
@@ -29553,8 +29581,8 @@ Ing. Emanuele Alfano</text>
 <net name="AR-MOSI" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="(MOSI)D51(PB2/PCINT2)"/>
-<wire x1="168.91" y1="31.75" x2="165.1" y2="31.75" width="0.1524" layer="91"/>
-<label x="165.1" y="31.75" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="31.75" x2="161.29" y2="31.75" width="0.1524" layer="91"/>
+<label x="161.29" y="31.75" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <label x="137.16" y="71.12" size="1.27" layer="95" rot="R180" xref="yes"/>
@@ -29568,8 +29596,8 @@ Ing. Emanuele Alfano</text>
 <net name="AR-MISO" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="(MISO)D50(PB3/PCINT3)"/>
-<wire x1="168.91" y1="29.21" x2="165.1" y2="29.21" width="0.1524" layer="91"/>
-<label x="154.94" y="29.21" size="1.27" layer="95" xref="yes"/>
+<wire x1="165.1" y1="29.21" x2="161.29" y2="29.21" width="0.1524" layer="91"/>
+<label x="151.13" y="29.21" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <label x="127" y="68.58" size="1.27" layer="95" xref="yes"/>
@@ -29583,8 +29611,8 @@ Ing. Emanuele Alfano</text>
 <net name="AR-ARX/PTX" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="(RX1)D19(PD2/INT2/RXD1)"/>
-<wire x1="237.49" y1="120.65" x2="241.3" y2="120.65" width="0.1524" layer="91"/>
-<label x="241.3" y="120.65" size="1.27" layer="95" xref="yes"/>
+<wire x1="233.68" y1="120.65" x2="237.49" y2="120.65" width="0.1524" layer="91"/>
+<label x="237.49" y="120.65" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <label x="139.7" y="60.96" size="1.27" layer="95" rot="R180" xref="yes"/>
@@ -29598,8 +29626,8 @@ Ing. Emanuele Alfano</text>
 <net name="AR-ATX/PRX" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="(TX1)D18(PD3/INT3/TXD1)"/>
-<wire x1="237.49" y1="123.19" x2="241.3" y2="123.19" width="0.1524" layer="91"/>
-<label x="254" y="123.19" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="233.68" y1="123.19" x2="237.49" y2="123.19" width="0.1524" layer="91"/>
+<label x="250.19" y="123.19" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
 <label x="127" y="58.42" size="1.27" layer="95" xref="yes"/>
@@ -29624,9 +29652,9 @@ Ing. Emanuele Alfano</text>
 </net>
 <net name="MOT-EN" class="4">
 <segment>
-<label x="254" y="64.77" size="1.27" layer="95" rot="R180" xref="yes"/>
+<label x="250.19" y="64.77" size="1.27" layer="95" rot="R180" xref="yes"/>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="D38(PD7/T0)"/>
-<wire x1="240.03" y1="64.77" x2="237.49" y2="64.77" width="0.1524" layer="91"/>
+<wire x1="236.22" y1="64.77" x2="233.68" y2="64.77" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="RP-MOSI" class="0">
@@ -29722,8 +29750,8 @@ Ing. Emanuele Alfano</text>
 <net name="AR-SDA" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="(SDA)D20(PD1/INT1/SDA)"/>
-<wire x1="237.49" y1="118.11" x2="241.3" y2="118.11" width="0.1524" layer="91"/>
-<label x="241.3" y="118.11" size="1.27" layer="95" xref="yes"/>
+<wire x1="233.68" y1="118.11" x2="237.49" y2="118.11" width="0.1524" layer="91"/>
+<label x="237.49" y="118.11" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <wire x1="118.11" y1="55.88" x2="125.73" y2="55.88" width="0.1524" layer="91"/>
@@ -29737,8 +29765,8 @@ Ing. Emanuele Alfano</text>
 <net name="AR-SCL" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="(SCL)D21(PD0/INT0/SCL)"/>
-<wire x1="237.49" y1="115.57" x2="241.3" y2="115.57" width="0.1524" layer="91"/>
-<label x="241.3" y="115.57" size="1.27" layer="95" xref="yes"/>
+<wire x1="233.68" y1="115.57" x2="237.49" y2="115.57" width="0.1524" layer="91"/>
+<label x="237.49" y="115.57" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
 <wire x1="118.11" y1="53.34" x2="125.73" y2="53.34" width="0.1524" layer="91"/>
@@ -29794,194 +29822,198 @@ Ing. Emanuele Alfano</text>
 <net name="PWM4" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="(PWM)D06(PH3/OC4A)"/>
-<wire x1="168.91" y1="59.69" x2="167.64" y2="59.69" width="0.1524" layer="91"/>
-<label x="167.64" y="59.69" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="59.69" x2="163.83" y2="59.69" width="0.1524" layer="91"/>
+<label x="163.83" y="59.69" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="PWM5" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="(PWM)D07(PH4/OC4B)"/>
-<wire x1="168.91" y1="57.15" x2="167.64" y2="57.15" width="0.1524" layer="91"/>
-<label x="167.64" y="57.15" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="57.15" x2="163.83" y2="57.15" width="0.1524" layer="91"/>
+<label x="163.83" y="57.15" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="PWM6" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="(PWM)D08(PH5/OC4C)"/>
-<wire x1="168.91" y1="54.61" x2="167.64" y2="54.61" width="0.1524" layer="91"/>
-<label x="167.64" y="54.61" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="54.61" x2="163.83" y2="54.61" width="0.1524" layer="91"/>
+<label x="163.83" y="54.61" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="PWM1" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="(PWM)D05(PE3/AIN1/OC3A)"/>
-<wire x1="168.91" y1="62.23" x2="167.64" y2="62.23" width="0.1524" layer="91"/>
-<label x="167.64" y="62.23" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="62.23" x2="163.83" y2="62.23" width="0.1524" layer="91"/>
+<label x="163.83" y="62.23" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="PWM3" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="(PWM)D03(PE5/INT5/OC3C)"/>
-<wire x1="168.91" y1="67.31" x2="167.64" y2="67.31" width="0.1524" layer="91"/>
-<label x="167.64" y="67.31" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="67.31" x2="163.83" y2="67.31" width="0.1524" layer="91"/>
+<label x="163.83" y="67.31" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="PWM2" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="(PWM)D02(PE4/INT4/OC3B)"/>
-<wire x1="168.91" y1="69.85" x2="167.64" y2="69.85" width="0.1524" layer="91"/>
-<label x="167.64" y="69.85" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="69.85" x2="163.83" y2="69.85" width="0.1524" layer="91"/>
+<label x="163.83" y="69.85" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="IM1V" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="A00(PF0/ADC0)"/>
-<wire x1="168.91" y1="115.57" x2="166.37" y2="115.57" width="0.1524" layer="91"/>
-<label x="166.37" y="115.57" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="115.57" x2="162.56" y2="115.57" width="0.1524" layer="91"/>
+<label x="162.56" y="115.57" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="IM2V" class="4">
 <segment>
-<label x="166.37" y="110.49" size="1.27" layer="95" rot="R180" xref="yes"/>
-<wire x1="168.91" y1="110.49" x2="166.37" y2="110.49" width="0.1524" layer="91"/>
+<label x="162.56" y="110.49" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="110.49" x2="162.56" y2="110.49" width="0.1524" layer="91"/>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="A02(PF2/ADC2)"/>
 </segment>
 </net>
 <net name="IM3V" class="4">
 <segment>
-<label x="166.37" y="107.95" size="1.27" layer="95" rot="R180" xref="yes"/>
-<wire x1="168.91" y1="107.95" x2="166.37" y2="107.95" width="0.1524" layer="91"/>
+<label x="162.56" y="107.95" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="107.95" x2="162.56" y2="107.95" width="0.1524" layer="91"/>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="A03(PF3/ADC3)"/>
 </segment>
 </net>
 <net name="IM4V" class="4">
 <segment>
-<label x="166.37" y="105.41" size="1.27" layer="95" rot="R180" xref="yes"/>
-<wire x1="168.91" y1="105.41" x2="166.37" y2="105.41" width="0.1524" layer="91"/>
+<label x="162.56" y="105.41" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="105.41" x2="162.56" y2="105.41" width="0.1524" layer="91"/>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="A04(PF4/ADC4/TCK)"/>
 </segment>
 </net>
 <net name="IM5V" class="4">
 <segment>
-<label x="166.37" y="102.87" size="1.27" layer="95" rot="R180" xref="yes"/>
-<wire x1="168.91" y1="102.87" x2="166.37" y2="102.87" width="0.1524" layer="91"/>
+<label x="162.56" y="102.87" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="102.87" x2="162.56" y2="102.87" width="0.1524" layer="91"/>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="A05(PF5/ADC5/TMS)"/>
 </segment>
 </net>
 <net name="IM6V" class="4">
 <segment>
-<label x="166.37" y="100.33" size="1.27" layer="95" rot="R180" xref="yes"/>
-<wire x1="168.91" y1="100.33" x2="166.37" y2="100.33" width="0.1524" layer="91"/>
+<label x="162.56" y="100.33" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="100.33" x2="162.56" y2="100.33" width="0.1524" layer="91"/>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="A06(PF6/ADC6/TDO)"/>
 </segment>
 </net>
 <net name="IN5A" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="D49(PL0/ICP4)"/>
-<wire x1="237.49" y1="34.29" x2="241.3" y2="34.29" width="0.1524" layer="91"/>
-<label x="251.46" y="34.29" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="233.68" y1="34.29" x2="237.49" y2="34.29" width="0.1524" layer="91"/>
+<label x="247.65" y="34.29" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="IN5B" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="D48(PL1/ICP5)"/>
-<wire x1="237.49" y1="36.83" x2="241.3" y2="36.83" width="0.1524" layer="91"/>
-<label x="251.46" y="36.83" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="233.68" y1="36.83" x2="237.49" y2="36.83" width="0.1524" layer="91"/>
+<label x="247.65" y="36.83" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="IN6A" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="D47(PL2/T5)"/>
-<wire x1="237.49" y1="39.37" x2="241.3" y2="39.37" width="0.1524" layer="91"/>
-<label x="251.46" y="39.37" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="233.68" y1="39.37" x2="237.49" y2="39.37" width="0.1524" layer="91"/>
+<label x="247.65" y="39.37" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="IN6B" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="(PWM)D46(PL3/OC5A)"/>
-<wire x1="237.49" y1="41.91" x2="241.3" y2="41.91" width="0.1524" layer="91"/>
-<label x="251.46" y="41.91" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="233.68" y1="41.91" x2="237.49" y2="41.91" width="0.1524" layer="91"/>
+<label x="247.65" y="41.91" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="IN4B" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="D29(PA7/AD7)"/>
-<wire x1="237.49" y1="92.71" x2="241.3" y2="92.71" width="0.1524" layer="91"/>
-<label x="251.46" y="92.71" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="233.68" y1="92.71" x2="237.49" y2="92.71" width="0.1524" layer="91"/>
+<label x="247.65" y="92.71" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="IN4A" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="D28(PA6/AD6)"/>
-<wire x1="237.49" y1="95.25" x2="241.3" y2="95.25" width="0.1524" layer="91"/>
-<label x="251.46" y="95.25" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="233.68" y1="95.25" x2="237.49" y2="95.25" width="0.1524" layer="91"/>
+<label x="247.65" y="95.25" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="IN3B" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="D27(PA5/AD5)"/>
-<wire x1="237.49" y1="97.79" x2="241.3" y2="97.79" width="0.1524" layer="91"/>
-<label x="251.46" y="97.79" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="233.68" y1="97.79" x2="237.49" y2="97.79" width="0.1524" layer="91"/>
+<label x="247.65" y="97.79" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="IN3A" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="D26(PA4/AD4)"/>
-<wire x1="237.49" y1="100.33" x2="241.3" y2="100.33" width="0.1524" layer="91"/>
-<label x="251.46" y="100.33" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="233.68" y1="100.33" x2="237.49" y2="100.33" width="0.1524" layer="91"/>
+<label x="247.65" y="100.33" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="IN2B" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="D25(PA3/AD3)"/>
-<wire x1="237.49" y1="102.87" x2="241.3" y2="102.87" width="0.1524" layer="91"/>
-<label x="251.46" y="102.87" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="233.68" y1="102.87" x2="237.49" y2="102.87" width="0.1524" layer="91"/>
+<label x="247.65" y="102.87" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="IN2A" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="D24(PA2/AD2)"/>
-<wire x1="237.49" y1="105.41" x2="241.3" y2="105.41" width="0.1524" layer="91"/>
-<label x="251.46" y="105.41" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="233.68" y1="105.41" x2="237.49" y2="105.41" width="0.1524" layer="91"/>
+<label x="247.65" y="105.41" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="IN1B" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="D23(PA1/AD1)"/>
-<wire x1="237.49" y1="107.95" x2="241.3" y2="107.95" width="0.1524" layer="91"/>
-<label x="251.46" y="107.95" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="233.68" y1="107.95" x2="237.49" y2="107.95" width="0.1524" layer="91"/>
+<label x="247.65" y="107.95" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="IN1A" class="4">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="D22(PA0/AD0)"/>
-<wire x1="237.49" y1="110.49" x2="241.3" y2="110.49" width="0.1524" layer="91"/>
-<label x="251.46" y="110.49" size="1.27" layer="95" rot="R180" xref="yes"/>
+<wire x1="233.68" y1="110.49" x2="237.49" y2="110.49" width="0.1524" layer="91"/>
+<label x="247.65" y="110.49" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="V-REF" class="4">
 <segment>
 <pinref part="R-REF" gate="G$1" pin="S"/>
 <label x="170.18" y="163.83" size="1.27" layer="95" rot="MR0" xref="yes"/>
-<wire x1="160.02" y1="163.83" x2="161.29" y2="163.83" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="163.83" x2="158.75" y2="163.83" width="0.1524" layer="91"/>
 <pinref part="C2" gate="G$1" pin="1"/>
+<wire x1="158.75" y1="163.83" x2="158.75" y2="162.56" width="0.1524" layer="91"/>
+<junction x="158.75" y="163.83"/>
+<wire x1="158.75" y1="163.83" x2="161.29" y2="163.83" width="0.1524" layer="91"/>
+<pinref part="V-REF-PAD" gate="A" pin="TP"/>
 <wire x1="161.29" y1="163.83" x2="162.56" y2="163.83" width="0.1524" layer="91"/>
-<wire x1="161.29" y1="163.83" x2="161.29" y2="162.56" width="0.1524" layer="91"/>
+<wire x1="161.29" y1="165.1" x2="161.29" y2="163.83" width="0.1524" layer="91"/>
 <junction x="161.29" y="163.83"/>
 </segment>
 <segment>
-<label x="166.37" y="118.11" size="1.27" layer="95" rot="MR0" xref="yes"/>
-<wire x1="166.37" y1="118.11" x2="168.91" y2="118.11" width="0.1524" layer="91"/>
+<label x="162.56" y="118.11" size="1.27" layer="95" rot="MR0" xref="yes"/>
+<wire x1="162.56" y1="118.11" x2="165.1" y2="118.11" width="0.1524" layer="91"/>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="AREF"/>
 </segment>
 </net>
 <net name="N$5" class="0">
 <segment>
 <pinref part="RESET-LOGIC" gate="G$1" pin="1"/>
-<wire x1="151.13" y1="132.08" x2="158.75" y2="132.08" width="0.1524" layer="91"/>
-<wire x1="158.75" y1="132.08" x2="158.75" y2="128.27" width="0.1524" layer="91"/>
+<wire x1="149.86" y1="132.08" x2="156.21" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="156.21" y1="132.08" x2="156.21" y2="128.27" width="0.1524" layer="91"/>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="!RESET"/>
-<wire x1="158.75" y1="128.27" x2="168.91" y2="128.27" width="0.1524" layer="91"/>
+<wire x1="156.21" y1="128.27" x2="165.1" y2="128.27" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="3">
@@ -30005,19 +30037,19 @@ Ing. Emanuele Alfano</text>
 <net name="3.3V-ARD" class="3">
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="+3V3"/>
-<wire x1="168.91" y1="130.81" x2="161.29" y2="130.81" width="0.1524" layer="91"/>
-<wire x1="161.29" y1="130.81" x2="161.29" y2="140.97" width="0.1524" layer="91"/>
-<wire x1="161.29" y1="140.97" x2="146.05" y2="140.97" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="130.81" x2="157.48" y2="130.81" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="130.81" x2="157.48" y2="140.97" width="0.1524" layer="91"/>
+<wire x1="157.48" y1="140.97" x2="146.05" y2="140.97" width="0.1524" layer="91"/>
 <wire x1="146.05" y1="140.97" x2="146.05" y2="171.45" width="0.1524" layer="91"/>
 <pinref part="R-REF" gate="G$1" pin="E"/>
-<wire x1="154.94" y1="168.91" x2="154.94" y2="171.45" width="0.1524" layer="91"/>
-<wire x1="146.05" y1="171.45" x2="154.94" y2="171.45" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="168.91" x2="152.4" y2="171.45" width="0.1524" layer="91"/>
+<wire x1="146.05" y1="171.45" x2="152.4" y2="171.45" width="0.1524" layer="91"/>
 <label x="156.21" y="171.45" size="1.016" layer="95"/>
-<label x="162.56" y="130.81" size="1.016" layer="95" rot="R90"/>
+<label x="158.75" y="130.81" size="1.016" layer="95" rot="R90"/>
 <pinref part="R-OFF" gate="G$1" pin="E"/>
-<wire x1="154.94" y1="171.45" x2="219.71" y2="171.45" width="0.1524" layer="91"/>
+<wire x1="152.4" y1="171.45" x2="219.71" y2="171.45" width="0.1524" layer="91"/>
 <wire x1="219.71" y1="171.45" x2="219.71" y2="168.91" width="0.1524" layer="91"/>
-<junction x="154.94" y="171.45"/>
+<junction x="152.4" y="171.45"/>
 <label x="215.9" y="171.45" size="1.016" layer="95"/>
 </segment>
 </net>
@@ -30026,15 +30058,19 @@ Ing. Emanuele Alfano</text>
 <pinref part="R-OFF" gate="G$1" pin="S"/>
 <wire x1="224.79" y1="163.83" x2="226.06" y2="163.83" width="0.1524" layer="91"/>
 <pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="226.06" y1="163.83" x2="227.33" y2="163.83" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="163.83" x2="233.68" y2="163.83" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="163.83" x2="238.76" y2="163.83" width="0.1524" layer="91"/>
 <wire x1="226.06" y1="163.83" x2="226.06" y2="162.56" width="0.1524" layer="91"/>
 <junction x="226.06" y="163.83"/>
-<label x="233.68" y="163.83" size="1.016" layer="95" rot="R180" xref="yes"/>
+<label x="245.11" y="163.83" size="1.016" layer="95" rot="R180" xref="yes"/>
+<pinref part="V-OFF-PAD" gate="A" pin="TP"/>
+<wire x1="233.68" y1="165.1" x2="233.68" y2="163.83" width="0.1524" layer="91"/>
+<junction x="233.68" y="163.83"/>
 </segment>
 <segment>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="A01(PF1/ADC1)"/>
-<wire x1="168.91" y1="113.03" x2="166.37" y2="113.03" width="0.1524" layer="91"/>
-<label x="166.37" y="113.03" size="1.016" layer="95" rot="R180" xref="yes"/>
+<wire x1="165.1" y1="113.03" x2="162.56" y2="113.03" width="0.1524" layer="91"/>
+<label x="162.56" y="113.03" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$2" class="1">
@@ -30069,7 +30105,7 @@ scheda</text>
 <wire x1="78.74" y1="171.45" x2="78.74" y2="53.34" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="7.62" y1="128.27" x2="149.86" y2="128.27" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="7.62" y1="90.17" x2="149.86" y2="90.17" width="0.1524" layer="94" style="shortdash"/>
-<text x="15.24" y="6.35" size="1.778" layer="94">Developed by:
+<text x="16.51" y="6.35" size="1.778" layer="94">Developed by:
 Ing. Emanuele Alfano</text>
 </plain>
 <instances>

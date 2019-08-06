@@ -7030,7 +7030,7 @@ design rules under a new name.</description>
 <element name="RASPBERRY-PY" library="raspberrypi_bastelstube_v13" package="RASPI_GPIO_B+_BOX" value="RASPI_GPIO_B+_BOX" x="191.77" y="37.211" smashed="yes" rot="R90">
 <attribute name="NAME" x="187.198" y="9.271" size="1.27" layer="25" font="vector" ratio="10" rot="R90"/>
 </element>
-<element name="U1" library="TXB0108PWR" package="TSSOP20" value="TXB0108PWR" x="163.195" y="28.956" smashed="yes" rot="MR180">
+<element name="U1" library="TXB0108PWR" package="TSSOP20" value="TXB0108" x="163.195" y="28.956" smashed="yes" rot="MR180">
 <attribute name="AVAILABILITY" value="Unavailable" x="163.195" y="28.956" size="1.016" layer="28" rot="MR180" display="off"/>
 <attribute name="DESCRIPTION" value=" 8-Bit Bidirectional Voltage-Level Translator with Auto Direction Sensing and +/-15-kV ESD Protect 20-TSSOP -40 to 85 " x="163.195" y="28.956" size="1.016" layer="28" rot="MR180" display="off"/>
 <attribute name="MF" value="Texas Instruments" x="163.195" y="28.956" size="1.016" layer="28" rot="MR180" display="off"/>

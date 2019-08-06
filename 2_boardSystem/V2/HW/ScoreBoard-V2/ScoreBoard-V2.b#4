@@ -4587,6 +4587,10 @@ Comments, suggestions and bug reports please send to: &lt;b&gt;&lt;a href="mailt
 &lt;center&gt;&lt;a href="http://diymodules.org/eagle"&gt;&lt;img src="http://diymodules.org/img/diymodules-lbr-image.php?v=1.0.1" alt="DIYmodules.org"&gt;&lt;/a&gt;&lt;/center&gt;</description>
 <packages>
 <package name="DC/DC-STEP-DOWN-UNIVERSAL">
+<description>Footprint adatto sia alla versione: &lt;br&gt;
+LM2596  (old &amp; big)&lt;br&gt;
+Che alla versione:&lt;br&gt;
+MP1584 (new &amp; small)&lt;br&gt;</description>
 <wire x1="-11.25" y1="8.625" x2="11.25" y2="8.625" width="0.127" layer="21"/>
 <wire x1="11.25" y1="8.625" x2="11.25" y2="-8.625" width="0.127" layer="21"/>
 <wire x1="11.25" y1="-8.625" x2="-11.25" y2="-8.625" width="0.127" layer="21"/>
@@ -7083,7 +7087,7 @@ design rules under a new name.</description>
 </element>
 <element name="SP-DW" library="diy-modules" package="DC/DC-STEP-DOWN-UNIVERSAL" value="DC/DC-STEP-DOWNGLOB" x="31.115" y="79.121" smashed="yes">
 <attribute name="NAME" x="31.115" y="81.661" size="1.27" layer="25" align="bottom-center"/>
-<attribute name="VALUE" x="31.115" y="67.691" size="1.27" layer="27" align="top-center"/>
+<attribute name="VALUE" x="31.115" y="72.136" size="0.8128" layer="27" align="top-center"/>
 </element>
 <element name="M1" library="DRIVER POLOLU" package="VNH5019" value="VNH5019" x="114.3" y="55.626" smashed="yes" rot="R180">
 <attribute name="NAME" x="130.81" y="40.005" size="1.27" layer="25" ratio="10" rot="R180"/>

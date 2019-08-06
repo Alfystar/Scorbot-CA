@@ -8740,7 +8740,7 @@ design rules under a new name.</description>
 <wire x1="191.77" y1="27.051" x2="189.5475" y2="27.051" width="0.1524" layer="1"/>
 <wire x1="193.04" y1="25.781" x2="191.77" y2="27.051" width="0.1524" layer="1"/>
 <wire x1="166.21125" y1="31.8135" x2="166.12" y2="31.8738" width="0.1524" layer="16"/>
-<via x="168.17975" y="29.845" extent="1-16" drill="0.4064" diameter="0.9"/>
+<via x="168.17975" y="29.845" extent="1-16" drill="0.4064" diameter="0.9" shape="octagon"/>
 </signal>
 <signal name="V-REF" class="4">
 <contactref element="R-REF" pad="2"/>
