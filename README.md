@@ -8,11 +8,11 @@ Progetto inizialmente portato avanti nell'ambito del corso di Controlli Automati
 - Corso a cura del Prof: Daniele Carnevale
 
 Il progetto è attualmente portato avanti da Emanuele Alfano con la licenza [GPLv3](https://github.com/Alfystar/Scorbot-CA/blob/master/LICENSE "GPLv3")
-
-[![Licenza](https://github.com/Alfystar/Scorbot-CA/blob/master/license.png?raw=true "Licenza")](https://github.com/Alfystar/Scorbot-CA/blob/master/LICENSE "Licenza")
-
-
-![Project](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/Slide%20show%20develop/Presentazione%20Scorbot%20low%20level/Hardware/Frontale%20sistema.png?raw=true "")
+<p align="center">
+  <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/license.png?raw=true">
+  
+  <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/Slide%20show%20develop/Presentazione%20Scorbot%20low%20level/Hardware/Frontale%20sistema.png?raw=true">
+</p>
 
 ## ScoreBoard
 La scheda di controllo dello Scorbot è pensata per essere un ponte tra la meccanica del robot, e il controllo progammato dentro il Rapsberry Py.
