@@ -2,10 +2,10 @@
 
 ------------
 
-# Scorbot-CA
+# Scorbot-CA (Controlli Automatici)
 Progetto inizialmente portato avanti nell'ambito del corso di Controlli Automatici tenuto a Tor-Vergata nell'anno 2019
 - Sviluppato da studenti del 3° Ing. Informatica
-- Corso a cura del Prof: Daniele Carnevale
+- Corso tenuto dal Professor: Daniele Carnevale
 
 Il progetto è attualmente portato avanti da Emanuele Alfano con la licenza [GPLv3](https://github.com/Alfystar/Scorbot-CA/blob/master/LICENSE "GPLv3")
 <p align="center">

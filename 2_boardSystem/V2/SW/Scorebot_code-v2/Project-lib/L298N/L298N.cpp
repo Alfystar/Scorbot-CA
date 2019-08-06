@@ -43,20 +43,13 @@ void L298N::updateMot() {
 		if (millis() > this->time + this->delay_time)
 			this->freeRun();
 		break;
-	case alwaisBrake:
+	case alwaysBrake:
 		break;
 	case free_Mot:
 	default:
 		break;
 	}
 }
-/*
-bool L298N::goHome(funcBool_t f )
-{
-
-}
-*/
-
 
 void L298N::drive_motor(int speed) {
 	this->speed = speed;
@@ -93,7 +86,7 @@ void L298N::hard_stop(unsigned int delay_time) {
 }
 
 void L298N::soft_stop() {
-	this->state = alwaisBrake;
+	this->state = alwaysBrake;
 	this->setup_motor(LOW, LOW);
 	digitalWrite(this->pwm, 1);
 }
@@ -129,4 +122,3 @@ void L298N::anticlockwise() {
 void set_bits_func_correct(volatile uint8_t *port, uint8_t mask) {
 	*port |= mask;
 }
-

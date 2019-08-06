@@ -2,17 +2,17 @@
  * adcReader.cpp
  *				 Formule di Conversione:
  *
- * Sensitività in uscita: 0.185 V/A, l'offset a 0 lo mettiamo con il trimmer
- * Vref attuale 1.1V Interni dell'atmega
+ * Sensitività in uscita: 0.140 V/A, dichiarata dall'VNH5019
+ * Vref scelto tra Aref/1.1V/2.56V
  * ______________________________________________________________________
- * |			 Vref * ADC	 	|  |			Iread * 1024 * 0.185	|
+ * |			 Vref * ADC	 	|  |			Iread * 1024 * Vcs		|
  * |	Iread = --------------	|&&|	ADC = -----------------------	|
- * |			1024 * 0.185   	|  |				Vref				|
+ * |			1024 * Vcs   	|  |				Vref				|
  * |____________________________|__|____________________________________|
- *
  *  Created on: 22 mar 2019
  *      Author: alfy
  */
+ 
 #include "adcReader.h"
 #define history 8 //data la frequenza ~1ms
 
@@ -44,15 +44,17 @@ void setUpADC() {
 	while (ADCSRA & (1 << ADIF))
 		; //wait first reading
 	ADCSRA |= (1 << ADIE); //attiva l'interrupt
-
 }
+
+//todo: funzione di selezione del vref Aref/1.1V/2.56V
+
 
 /*** ELABORATION ***/
 void isrFunxAdc() {
 	// Must read low first
 	int g = ((int) ADCL | ((int) ADCH << 8));
-	if (g > 980)
-		g = 0;
+	//if (g > 980)
+	//	g = 0;
 	ampMot[oldReadId][indexADC] = g;
 	oldReadId = newReadId;
 	if (oldReadId == 0)
@@ -71,6 +73,7 @@ void isrFunxAdc() {
  010110 ADC6 ADC1 1×   Corrente mot 6
  010111 ADC7 ADC1 1×
  */
+ //todo input differenziale o diretto
 int difPinSelect(int p) {
 	byte val = ADMUX & 0xE0; //Cancello il precedente vale selezionato, mantenendo le impostazioni
 	switch (p) {
