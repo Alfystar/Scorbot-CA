@@ -10,10 +10,11 @@
 
 L298N::L298N(byte ena, byte in1, byte in2) {
 	pinMode(ena, OUTPUT);
+	//todo: variable per invertire gli enable in maniera da far crescere con la velocità positiva gli encoder e viceversa
 	pinMode(in1, OUTPUT);
 	pinMode(in2, OUTPUT);
 
-	//this->knowHome=false;
+
 
 	this->in1 = in1;
 	this->in2 = in2;
@@ -27,6 +28,7 @@ L298N::L298N(byte ena, byte in1, byte in2) {
 
 void L298N::updateMot() {
 	//enum {moving, H_brake, S_brake, wait};
+	//todo: add stop if over max/min step
 	switch (this->state) {
 	case moving:
 		//do notting
@@ -52,6 +54,7 @@ void L298N::updateMot() {
 }
 
 void L298N::drive_motor(int speed) {
+	//todo: add stop if sign of speed go over the max/min step
 	this->speed = speed;
 	this->state = moving;
 	if (speed < 0) {

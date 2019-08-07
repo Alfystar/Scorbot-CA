@@ -28967,15 +28967,15 @@ Ing. Emanuele Alfano</text>
 <attribute name="TP_SIGNAL_NAME" x="234.95" y="166.37" size="1.778" layer="97"/>
 </instance>
 <instance part="V-OFF-PAD" gate="B" x="233.68" y="151.13" smashed="yes" rot="R180">
-<attribute name="NAME" x="238.76" y="149.86" size="1.778" layer="95" rot="R180"/>
+<attribute name="NAME" x="231.14" y="148.59" size="1.778" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="232.41" y="152.4" size="1.778" layer="97" rot="R180"/>
 </instance>
 <instance part="V-REF-PAD" gate="A" x="161.29" y="167.64" smashed="yes">
-<attribute name="NAME" x="158.75" y="168.91" size="1.778" layer="95"/>
+<attribute name="NAME" x="157.48" y="167.64" size="1.4224" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="162.56" y="166.37" size="1.778" layer="97"/>
 </instance>
 <instance part="V-REF-PAD" gate="B" x="161.29" y="151.13" smashed="yes" rot="R180">
-<attribute name="NAME" x="166.37" y="149.86" size="1.778" layer="95" rot="R180"/>
+<attribute name="NAME" x="157.48" y="148.59" size="1.4224" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="160.02" y="152.4" size="1.778" layer="97" rot="R180"/>
 </instance>
 </instances>

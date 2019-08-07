@@ -30105,7 +30105,7 @@ scheda</text>
 <wire x1="78.74" y1="171.45" x2="78.74" y2="53.34" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="7.62" y1="128.27" x2="149.86" y2="128.27" width="0.1524" layer="94" style="shortdash"/>
 <wire x1="7.62" y1="90.17" x2="149.86" y2="90.17" width="0.1524" layer="94" style="shortdash"/>
-<text x="15.24" y="6.35" size="1.778" layer="94">Developed by:
+<text x="16.51" y="6.35" size="1.778" layer="94">Developed by:
 Ing. Emanuele Alfano</text>
 </plain>
 <instances>

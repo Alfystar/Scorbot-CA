@@ -28383,85 +28383,6 @@ Source: www.kingbright.com</description>
 </deviceset>
 </devicesets>
 </library>
-<library name="diode" urn="urn:adsk.eagle:library:210">
-<description>&lt;b&gt;Diodes&lt;/b&gt;&lt;p&gt;
-Based on the following sources:
-&lt;ul&gt;
-&lt;li&gt;Motorola : www.onsemi.com
-&lt;li&gt;Fairchild : www.fairchildsemi.com
-&lt;li&gt;Philips : www.semiconductors.com
-&lt;li&gt;Vishay : www.vishay.de
-&lt;/ul&gt;
-&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
-<packages>
-<package name="SMB" urn="urn:adsk.eagle:footprint:43181/1" library_version="7">
-<description>&lt;B&gt;DIODE&lt;/B&gt;</description>
-<wire x1="-2.2606" y1="1.905" x2="2.2606" y2="1.905" width="0.1016" layer="21"/>
-<wire x1="-2.2606" y1="-1.905" x2="2.2606" y2="-1.905" width="0.1016" layer="21"/>
-<wire x1="-2.2606" y1="-1.905" x2="-2.2606" y2="1.905" width="0.1016" layer="51"/>
-<wire x1="2.2606" y1="-1.905" x2="2.2606" y2="1.905" width="0.1016" layer="51"/>
-<wire x1="0.193" y1="1" x2="-0.83" y2="0" width="0.2032" layer="21"/>
-<wire x1="-0.83" y1="0" x2="0.193" y2="-1" width="0.2032" layer="21"/>
-<wire x1="0.193" y1="-1" x2="0.193" y2="1" width="0.2032" layer="21"/>
-<smd name="C" x="-2.2" y="0" dx="2.4" dy="2.4" layer="1"/>
-<smd name="A" x="2.2" y="0" dx="2.4" dy="2.4" layer="1"/>
-<text x="-2.159" y="2.159" size="1.27" layer="25">&gt;NAME</text>
-<text x="-2.159" y="-3.429" size="1.27" layer="27">&gt;VALUE</text>
-<rectangle x1="-2.794" y1="-1.0922" x2="-2.2606" y2="1.0922" layer="51"/>
-<rectangle x1="2.2606" y1="-1.0922" x2="2.794" y2="1.0922" layer="51"/>
-<rectangle x1="-1.35" y1="-1.9" x2="-0.8" y2="1.9" layer="51"/>
-</package>
-</packages>
-<packages3d>
-<package3d name="SMB" urn="urn:adsk.eagle:package:43404/2" type="model" library_version="7">
-<description>DIODE</description>
-<packageinstances>
-<packageinstance name="SMB"/>
-</packageinstances>
-</package3d>
-</packages3d>
-<symbols>
-<symbol name="D" urn="urn:adsk.eagle:symbol:43091/2" library_version="7">
-<wire x1="-1.27" y1="-1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
-<wire x1="1.27" y1="0" x2="-1.27" y2="1.27" width="0.254" layer="94"/>
-<wire x1="1.27" y1="1.27" x2="1.27" y2="0" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="1.27" x2="-1.27" y2="0" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="0" x2="-1.27" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="1.27" y1="0" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="0" x2="-2.54" y2="0" width="0.254" layer="94"/>
-<wire x1="2.54" y1="0" x2="1.27" y2="0" width="0.254" layer="94"/>
-<text x="2.54" y="0.4826" size="1.778" layer="95">&gt;NAME</text>
-<text x="2.54" y="-2.3114" size="1.778" layer="96">&gt;VALUE</text>
-<text x="-2.54" y="0" size="0.4064" layer="99" align="center">SpiceOrder 1</text>
-<text x="2.54" y="0" size="0.4064" layer="99" align="center">SpiceOrder 2</text>
-<pin name="A" x="-2.54" y="0" visible="off" length="point" direction="pas"/>
-<pin name="C" x="2.54" y="0" visible="off" length="point" direction="pas" rot="R180"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="ES2D" urn="urn:adsk.eagle:component:43636/3" prefix="D" library_version="7">
-<description>&lt;B&gt;DIODE&lt;/B&gt;&lt;p&gt;
-super fast rectifier, 2 A</description>
-<gates>
-<gate name="G$1" symbol="D" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="SMB">
-<connects>
-<connect gate="G$1" pin="A" pad="A"/>
-<connect gate="G$1" pin="C" pad="C"/>
-</connects>
-<package3dinstances>
-<package3dinstance package3d_urn="urn:adsk.eagle:package:43404/2"/>
-</package3dinstances>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="testpad">
 <description>&lt;b&gt;Test Pins/Pads&lt;/b&gt;&lt;p&gt;
 Cream on SMD OFF.&lt;br&gt;
@@ -29756,7 +29677,6 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="SV2" library="con-lsta" library_urn="urn:adsk.eagle:library:161" deviceset="FE08-1" device="" package3d_urn="urn:adsk.eagle:package:8194/1"/>
 <part name="U$1" library="loghi" deviceset="ALFY-BIG" device=""/>
 <part name="U$4" library="loghi" deviceset="ALFY-BIG" device=""/>
-<part name="D1" library="diode" library_urn="urn:adsk.eagle:library:210" deviceset="ES2D" device="" package3d_urn="urn:adsk.eagle:package:43404/2"/>
 <part name="V-OFF-PAD" library="testpad" deviceset="TP2" device="P2-38-17" package3d_urn="urn:adsk.eagle:package:27945/1">
 <attribute name="SPICEPREFIX" value="X"/>
 </part>
@@ -30064,9 +29984,6 @@ Ing. Emanuele Alfano</text>
 <attribute name="VALUE" x="109.22" y="48.26" size="1.778" layer="96"/>
 </instance>
 <instance part="U$1" gate="G$1" x="10.16" y="15.24" smashed="yes"/>
-<instance part="D1" gate="G$1" x="22.86" y="138.43" smashed="yes" rot="MR180">
-<attribute name="NAME" x="21.59" y="136.6774" size="1.778" layer="95" rot="MR180"/>
-</instance>
 <instance part="V-OFF-PAD" gate="A" x="233.68" y="167.64" smashed="yes">
 <attribute name="NAME" x="224.79" y="168.91" size="1.778" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="234.95" y="166.37" size="1.778" layer="97"/>
@@ -30649,9 +30566,9 @@ Ing. Emanuele Alfano</text>
 <wire x1="27.94" y1="140.97" x2="27.94" y2="138.43" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="+"/>
 <wire x1="27.94" y1="138.43" x2="30.48" y2="138.43" width="0.1524" layer="91"/>
-<pinref part="D1" gate="G$1" pin="C"/>
-<wire x1="25.4" y1="138.43" x2="27.94" y2="138.43" width="0.1524" layer="91"/>
 <junction x="27.94" y="138.43"/>
+<pinref part="MOT-SW" gate="-1" pin="KL"/>
+<wire x1="17.78" y1="138.43" x2="27.94" y2="138.43" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="VDD11" gate="G$1" pin="VDD"/>
@@ -31184,13 +31101,6 @@ Ing. Emanuele Alfano</text>
 <pinref part="V-OFF-PAD" gate="A" pin="TP"/>
 <wire x1="233.68" y1="165.1" x2="233.68" y2="163.83" width="0.1524" layer="91"/>
 <junction x="233.68" y="163.83"/>
-</segment>
-</net>
-<net name="N$2" class="1">
-<segment>
-<pinref part="D1" gate="G$1" pin="A"/>
-<pinref part="MOT-SW" gate="-1" pin="KL"/>
-<wire x1="20.32" y1="138.43" x2="17.78" y2="138.43" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="V-REF-TRIMM" class="4">

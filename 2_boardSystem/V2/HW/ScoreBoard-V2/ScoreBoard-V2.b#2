@@ -1838,7 +1838,6 @@ Ing. Emanuele Alfano</text>
 Tor Vergata</text>
 <text x="118.745" y="36.576" size="1.27" layer="22" font="vector" rot="SMR0">Developed by:
 Ing. Emanuele Alfano</text>
-<text x="168.783" y="29.972" size="0.8128" layer="22" rot="MR180" align="center-left">Com-enable</text>
 </plain>
 <libraries>
 <library name="rcl" urn="urn:adsk.eagle:library:334">
@@ -7217,10 +7216,9 @@ design rules under a new name.</description>
 <attribute name="POPULARITY" value="61" x="119.38" y="86.995" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="121.92" y="89.916" size="1.27" layer="27" ratio="10" rot="R180"/>
 </element>
-<element name="COM-EN" library="testpad" package="P1-13" package3d_urn="urn:adsk.eagle:package:27946/1" value="PTR1PAD1-13" x="-1.905" y="-3.175" smashed="yes">
-<attribute name="NAME" x="-2.921" y="-1.905" size="1.27" layer="25" ratio="10"/>
-<attribute name="TP_SIGNAL_NAME" value="" x="-1.905" y="-3.175" size="1.778" layer="27" display="off"/>
-<attribute name="VALUE" x="-1.905" y="-3.175" size="0.0254" layer="27"/>
+<element name="COM-EN" library="testpad" package="P1-13" package3d_urn="urn:adsk.eagle:package:27946/1" value="PTR1PAD1-13" x="176.53" y="28.575" smashed="yes">
+<attribute name="NAME" x="178.816" y="29.845" size="0.8128" layer="26" ratio="10" rot="MR0"/>
+<attribute name="TP_SIGNAL_NAME" value="" x="176.53" y="28.575" size="1.778" layer="27" display="off"/>
 </element>
 </elements>
 <signals>
@@ -8822,15 +8820,16 @@ design rules under a new name.</description>
 <contactref element="U1" pad="10"/>
 <contactref element="RASPBERRY-PY" pad="11"/>
 <wire x1="168.17975" y1="29.845" x2="166.21125" y2="31.8135" width="0.1524" layer="16"/>
-<wire x1="170.4975" y1="27.52725" x2="168.17975" y2="29.845" width="0.1524" layer="1"/>
-<wire x1="189.07125" y1="27.52725" x2="170.4975" y2="27.52725" width="0.1524" layer="1"/>
+<wire x1="189.07125" y1="27.52725" x2="176.53" y2="27.52725" width="0.1524" layer="1"/>
+<wire x1="176.53" y1="27.52725" x2="170.4975" y2="27.52725" width="0.1524" layer="1"/>
 <wire x1="189.5475" y1="27.051" x2="189.07125" y2="27.52725" width="0.1524" layer="1"/>
 <wire x1="191.77" y1="27.051" x2="189.5475" y2="27.051" width="0.1524" layer="1"/>
 <wire x1="193.04" y1="25.781" x2="191.77" y2="27.051" width="0.1524" layer="1"/>
 <wire x1="166.21125" y1="31.8135" x2="166.12" y2="31.8738" width="0.1524" layer="16"/>
-<via x="168.17975" y="29.845" extent="1-16" drill="0.4064" diameter="0.9" shape="octagon"/>
 <contactref element="COM-EN" pad="TP"/>
-<wire x1="-1.905" y1="-3.175" x2="166.12" y2="31.8738" width="0" layer="19" extent="16-16"/>
+<via x="168.17975" y="29.845" extent="1-16" drill="0.3048"/>
+<wire x1="170.4975" y1="27.52725" x2="168.17975" y2="29.845" width="0.1524" layer="1"/>
+<wire x1="176.53" y1="28.575" x2="176.53" y2="27.52725" width="0.1524" layer="1"/>
 </signal>
 <signal name="V-REF" class="4">
 <contactref element="ARDUINO_MEGA_1" pad="AREF"/>
@@ -8839,12 +8838,16 @@ design rules under a new name.</description>
 <wire x1="120.65" y1="86.995" x2="121.92" y2="86.995" width="0.2032" layer="1"/>
 <wire x1="121.92" y1="86.995" x2="123.825" y2="85.09" width="0.2032" layer="1"/>
 <wire x1="134.874" y1="84.709" x2="138.303" y2="84.709" width="0.2032" layer="1"/>
-<wire x1="138.303" y1="84.709" x2="140.462" y2="82.55" width="0.2032" layer="1"/>
+<wire x1="138.303" y1="84.709" x2="140.3985" y2="82.6135" width="0.2032" layer="1"/>
+<wire x1="140.3985" y1="82.6135" x2="140.462" y2="82.55" width="0.2032" layer="1"/>
 <wire x1="140.462" y1="82.55" x2="140.462" y2="81.534" width="0.2032" layer="1"/>
 <wire x1="140.462" y1="81.534" x2="139.954" y2="81.026" width="0.2032" layer="1"/>
 <wire x1="139.954" y1="81.026" x2="136.525" y2="81.026" width="0.2032" layer="1"/>
 <wire x1="123.825" y1="85.09" x2="134.493" y2="85.09" width="0.2032" layer="1"/>
 <wire x1="134.493" y1="85.09" x2="134.874" y2="84.709" width="0.2032" layer="1"/>
+<contactref element="C2" pad="1"/>
+<wire x1="184.15" y1="84.201" x2="141.986" y2="84.201" width="0.1524" layer="1"/>
+<wire x1="141.986" y1="84.201" x2="140.3985" y2="82.6135" width="0.1524" layer="1"/>
 </signal>
 <signal name="N$5">
 <contactref element="RESET-LOGIC" pad="1"/>
@@ -8959,18 +8962,18 @@ design rules under a new name.</description>
 </signal>
 <signal name="V-REF-TRIMM" class="4">
 <contactref element="R-REF" pad="2"/>
-<contactref element="C2" pad="1"/>
 <contactref element="V-REF-PAD" pad="TP-1"/>
 <contactref element="AREF-JP" pad="2"/>
 <wire x1="187.16625" y1="76.73975" x2="191.77" y2="72.136" width="0.1524" layer="16"/>
 <wire x1="187.16625" y1="81.18475" x2="187.16625" y2="76.73975" width="0.1524" layer="16"/>
-<wire x1="184.15" y1="84.201" x2="187.16625" y2="81.18475" width="0.1524" layer="16"/>
 <wire x1="113.03" y1="86.995" x2="118.11" y2="86.995" width="0.1524" layer="1"/>
-<wire x1="136.652" y1="88.9" x2="140.843" y2="84.709" width="0.2032" layer="1"/>
+<wire x1="136.652" y1="88.9" x2="139.827" y2="85.725" width="0.2032" layer="1"/>
 <wire x1="136.652" y1="88.9" x2="120.015" y2="88.9" width="0.2032" layer="1"/>
 <wire x1="118.11" y1="86.995" x2="120.015" y2="88.9" width="0.2032" layer="1"/>
-<wire x1="140.843" y1="84.709" x2="183.642" y2="84.709" width="0.2032" layer="1"/>
-<wire x1="183.642" y1="84.709" x2="184.15" y2="84.201" width="0.2032" layer="1"/>
+<wire x1="139.827" y1="85.725" x2="184.15" y2="85.725" width="0.1524" layer="1"/>
+<wire x1="187.16625" y1="82.70875" x2="187.16625" y2="81.18475" width="0.1524" layer="1"/>
+<via x="187.16625" y="81.18475" extent="1-16" drill="0.3048"/>
+<wire x1="184.15" y1="85.725" x2="187.16625" y2="82.70875" width="0.1524" layer="1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>

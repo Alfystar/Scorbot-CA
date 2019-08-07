@@ -49,6 +49,9 @@ typedef struct settingsBoard_ {
 	int maxEn[nMot]; 		//valore massimo di passi prima di considerarsi fuori range di sicurezza (numeri pos)
 	int minEn[nMot]; 		//valore minimo di passi prima di considerarsi fuori range di sicurezza (numeri neg)
 	int maxCurrMed[nMot];	//valore massimo di corrente Efficace (con una media di 1 ms ~ ultime 8 letture), numero * 8 per semplificare i conti)
+	//todo: Quale V-ref
+	//todo: lettura diretta/differenziale
+	//todo: frequenza pwm
 } settingsBoard;
 
 extern settingsBoard sets;

@@ -28725,8 +28725,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="V-REF-PAD" library="testpad" deviceset="TP2" device="P2-38-17" package3d_urn="urn:adsk.eagle:package:27945/1">
 <attribute name="SPICEPREFIX" value="X"/>
 </part>
-<part name="JP1" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="JP1E" device="" package3d_urn="urn:adsk.eagle:package:15455/1"/>
-<part name="JP2" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="JP1E" device="" package3d_urn="urn:adsk.eagle:package:15455/1"/>
+<part name="AREF-JP" library="jumper" library_urn="urn:adsk.eagle:library:252" deviceset="JP1E" device="" package3d_urn="urn:adsk.eagle:package:15455/1"/>
 </parts>
 <sheets>
 <sheet>
@@ -29045,11 +29044,7 @@ Ing. Emanuele Alfano</text>
 <attribute name="NAME" x="157.48" y="148.59" size="1.4224" layer="95"/>
 <attribute name="TP_SIGNAL_NAME" x="160.02" y="152.4" size="1.778" layer="97" rot="R180"/>
 </instance>
-<instance part="JP1" gate="A" x="240.03" y="167.64" smashed="yes">
-<attribute name="NAME" x="243.84" y="166.37" size="1.778" layer="95"/>
-<attribute name="VALUE" x="245.745" y="167.64" size="1.778" layer="96" rot="R90"/>
-</instance>
-<instance part="JP2" gate="A" x="165.1" y="158.75" smashed="yes" rot="R90">
+<instance part="AREF-JP" gate="A" x="165.1" y="158.75" smashed="yes" rot="R90">
 <attribute name="NAME" x="166.37" y="157.48" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="165.1" y="164.465" size="1.778" layer="96" rot="R180"/>
 </instance>
@@ -30069,7 +30064,7 @@ Ing. Emanuele Alfano</text>
 <pinref part="ARDUINO_MEGA_1" gate="G$1" pin="AREF"/>
 </segment>
 <segment>
-<pinref part="JP2" gate="A" pin="1"/>
+<pinref part="AREF-JP" gate="A" pin="1"/>
 <wire x1="167.64" y1="158.75" x2="168.91" y2="158.75" width="0.1524" layer="91"/>
 <label x="175.26" y="158.75" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -30127,10 +30122,17 @@ Ing. Emanuele Alfano</text>
 <label x="162.56" y="113.03" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="JP1" gate="A" pin="2"/>
-<wire x1="242.57" y1="165.1" x2="242.57" y2="163.83" width="0.1524" layer="91"/>
-<wire x1="242.57" y1="163.83" x2="243.84" y2="163.83" width="0.1524" layer="91"/>
 <label x="250.19" y="163.83" size="1.016" layer="95" rot="R180" xref="yes"/>
+<pinref part="R-OFF" gate="G$1" pin="S"/>
+<wire x1="224.79" y1="163.83" x2="226.06" y2="163.83" width="0.1524" layer="91"/>
+<pinref part="C3" gate="G$1" pin="1"/>
+<wire x1="226.06" y1="163.83" x2="233.68" y2="163.83" width="0.1524" layer="91"/>
+<wire x1="233.68" y1="163.83" x2="243.84" y2="163.83" width="0.1524" layer="91"/>
+<wire x1="226.06" y1="163.83" x2="226.06" y2="162.56" width="0.1524" layer="91"/>
+<junction x="226.06" y="163.83"/>
+<pinref part="V-OFF-PAD" gate="A" pin="TP"/>
+<wire x1="233.68" y1="165.1" x2="233.68" y2="163.83" width="0.1524" layer="91"/>
+<junction x="233.68" y="163.83"/>
 </segment>
 </net>
 <net name="N$2" class="1">
@@ -30138,22 +30140,6 @@ Ing. Emanuele Alfano</text>
 <pinref part="D1" gate="G$1" pin="A"/>
 <pinref part="MOT-SW" gate="-1" pin="KL"/>
 <wire x1="20.32" y1="138.43" x2="17.78" y2="138.43" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="V-OFF-TRIMM" class="4">
-<segment>
-<pinref part="R-OFF" gate="G$1" pin="S"/>
-<wire x1="224.79" y1="163.83" x2="226.06" y2="163.83" width="0.1524" layer="91"/>
-<pinref part="C3" gate="G$1" pin="1"/>
-<wire x1="226.06" y1="163.83" x2="233.68" y2="163.83" width="0.1524" layer="91"/>
-<wire x1="233.68" y1="163.83" x2="240.03" y2="163.83" width="0.1524" layer="91"/>
-<wire x1="226.06" y1="163.83" x2="226.06" y2="162.56" width="0.1524" layer="91"/>
-<junction x="226.06" y="163.83"/>
-<pinref part="V-OFF-PAD" gate="A" pin="TP"/>
-<wire x1="233.68" y1="165.1" x2="233.68" y2="163.83" width="0.1524" layer="91"/>
-<junction x="233.68" y="163.83"/>
-<pinref part="JP1" gate="A" pin="1"/>
-<wire x1="240.03" y1="165.1" x2="240.03" y2="163.83" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="V-REF-TRIMM" class="4">
@@ -30167,7 +30153,7 @@ Ing. Emanuele Alfano</text>
 <pinref part="V-REF-PAD" gate="A" pin="TP"/>
 <wire x1="161.29" y1="165.1" x2="161.29" y2="163.83" width="0.1524" layer="91"/>
 <junction x="161.29" y="163.83"/>
-<pinref part="JP2" gate="A" pin="2"/>
+<pinref part="AREF-JP" gate="A" pin="2"/>
 <wire x1="167.64" y1="161.29" x2="167.64" y2="163.83" width="0.1524" layer="91"/>
 <wire x1="167.64" y1="163.83" x2="161.29" y2="163.83" width="0.1524" layer="91"/>
 </segment>
