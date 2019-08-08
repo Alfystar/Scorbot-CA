@@ -10,7 +10,7 @@ Progetto inizialmente portato avanti nell'ambito del corso di Controlli Automati
 Il progetto è attualmente portato avanti da Emanuele Alfano con la licenza [GPLv3](https://github.com/Alfystar/Scorbot-CA/blob/master/LICENSE "GPLv3")
 <p align="center">
   <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/license.png?raw=true">
-  
+  <br>  
   <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/Slide%20show%20develop/Presentazione%20Scorbot%20low%20level/Hardware/Frontale%20sistema.png?raw=true">
 </p>
 
@@ -48,6 +48,11 @@ La scheda possiede un firmware di controllo che parla al Rapsberry Py per mezzo 
 
 #####  Board V2:
 In questa seconda scheda il cambio più evidente è nel driver motori che adesso è diventato un VNH5019, il quale ha integrato dentro una misura di corrente già scalata e non necessita di letture esterne, di questa scheda è presente anche un [**Manuale**](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ScorBoard_v2-MANUAL.pdf "qui")., che descrive nel dettaglio i vari punti del progetto.
+<p align="center">
+  <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/2_boardSystem/V2/HW/ScoreBoard-V2/GerberFile/ScoreBoard-V2_top.png?raw=true"> _Top Face_
+  <br>  
+  <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/2_boardSystem/V2/HW/ScoreBoard-V2/GerberFile/ScoreBoard-V2_bot.png?raw=true"> _Bottom Face_
+</p>
 ######  Eagle Draw Developer:
  - Emanuele Alfano
 
