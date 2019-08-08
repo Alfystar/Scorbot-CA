@@ -55,7 +55,8 @@ In questa seconda scheda il cambio più evidente è nel driver motori che adesso
   <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/2_boardSystem/V2/HW/ScoreBoard-V2/GerberFile/ScoreBoard-V2_bot.png?raw=true"> 
   <i>Bottom Face</i>
 </p>
-######  Eagle Draw Developer:
+
+###### Eagle Draw Developer:
  - Emanuele Alfano
 
 ###### Arduino mega Firmware Developer:
