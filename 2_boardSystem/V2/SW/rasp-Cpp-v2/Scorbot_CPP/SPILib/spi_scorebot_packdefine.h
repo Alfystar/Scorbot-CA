@@ -79,6 +79,7 @@ typedef struct spiRet_ {
 } spiRet;
 
 /** ## -------------------------------------------------------- ## **/
+//todo mettere la stessaforma con le union presente sull'arduino
 typedef struct SPIPACK_ {
     char type;
     spiSend out;
