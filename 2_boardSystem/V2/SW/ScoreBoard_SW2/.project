@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>Scorebot_code</name>
-	<comment></comment>
+	<name>ScoreBoard_SW2</name>
+	<comment>Seconda versione di firmware per la seconda scheda dello Scorbot</comment>
 	<projects>
 	</projects>
 	<buildSpec>
