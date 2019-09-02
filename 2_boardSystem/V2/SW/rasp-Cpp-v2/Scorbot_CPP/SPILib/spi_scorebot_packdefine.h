@@ -85,5 +85,19 @@ typedef struct SPIPACK_ {
     spiSend out;
     spiRet in;
 } SPIPACK;
+/*
+typedef struct SPIPACK_ {
+	char type;
+	union {
+		spiRecive in;
+		char buffIn[sizeof(spiRecive)];
+	}inPack;
+	union {
+		spiSend out;
+		char buffOut[sizeof(spiSend)];
+	}outPack;
+}SPIPACK;
+*/
+
 
 #endif // SPI_SCOREBOT_PACKDEFINE
