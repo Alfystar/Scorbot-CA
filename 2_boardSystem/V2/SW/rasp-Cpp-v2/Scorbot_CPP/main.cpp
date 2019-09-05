@@ -1,16 +1,12 @@
 #include <iostream>
-#include "SPILib/spisend.h"
-#include "SPILib/spi_scorebot_packdefine.h"
+#include "SPILib/SPI_interface.h"
+#include "SPILib/SpiPack.h"
 #include <string.h>
 
-using namespace std;
+using namespace SPI_Interface;
+using namespace spiPack;
 
 #define fflush(stdin) while(getchar() != '\n');
-
-void waitEnter() {
-    scanf("%[^\n]", NULL);
-    fflush(stdin);
-}
 
 void help() {
     printf("Menù di controllo TEST SPI dello scorbot:\n");
@@ -26,7 +22,8 @@ void help() {
 
 }
 
-SpiSend *send;
+ScorBoard &send = ScorBoard::getInstance();;
+Pack *p;
 
 /** Cmd terminal **/
 char cmdBuf[1024];
@@ -36,20 +33,13 @@ char *savePoint;
 
 int main() {
     //Crea gli oggetti e le strutture necessarie alla comunicazione
-    send = new SpiSend();
-    SPIPACK *s = send->makeSPIPACK();
-
-    //Pachetti per comunicazioni specifiche
-    setPWMSend pwm;
-    setSettingSend prop;
-
-
+    p = new Pack();
     int v = 150;
-    send->fillPWMPACK(&pwm, v, -v, v, -v, v, -v);
+    p->pwmSet(v, -v, v, -v, v, -v);
 
     help();
-    printf("Start loop\n");
 
+    printf("Start loop\n");
 
     while (1) {
         printf("\n>> ");
@@ -64,73 +54,44 @@ int main() {
         }
         fflush(stdin);
 
+        p->clearPack();
+
         if (sArgc <= 1) {
             if (strcmp(sArgv[0], "m") == 0) {
                 v *= -1;
-                //al posto di pwm si potrebbe anche mettere &s->out.pack.speed,
+                //al posto di pwm si potrebbe anche mettere &s->out.up.speed,
                 //ma la libreria per sicurezza poi in pSetPWM lo copia nuovamente
                 //in maniera trasparente al progammatore
-                send->fillPWMPACK(&pwm, v, -v, v, -v, v, -v);
-                send->pSetPWM(s, &pwm);
-                send->printSPIPACK(s);
+                p->pwmSet(v, -v, v, -v, v, -v);
+                send.setPwm_EnPack(*p);
             }
             if (strcmp(sArgv[0], "e") == 0) {
-                send->getEn(s);
-                send->pSetPWM(s, &s->out.pack.speed);
-                send->printSPIPACK(s);
+                send.getEnPack(*p);
+                p->printPack();
             }
             if (strcmp(sArgv[0], "c") == 0) {
-                send->pGetCurrent(s);
-                send->printSPIPACK(s);
+                send.getCurrentPack(*p);
+                p->printPack();
             }
             if (strcmp(sArgv[0], "g") == 0) {
-                send->pGetSetting(s);
-                send->printSPIPACK(s);
+                send.getSettingPack(*p);
+                p->printPack();
             }
             if (strcmp(sArgv[0], "s") == 0) {
-                /*for (int i = 0; i < nMot; i++){
-                    prop.sets.maxCurrMed[cMot1+i]+=i;
-                    prop.sets.maxEn[cMot1+i]+=i*2;
-                    prop.sets.minEn[cMot1+i]+=i*3;
-                }*/
                 /*Assegnazione limiti scoperti sperimentalmente*/
-                prop.sets.maxCurrMed[cMot1] = 2160; //250*8
-                prop.sets.maxEn[cMot1] = 24300; //24379
-                prop.sets.minEn[cMot1] = -19450; //-19509
+                p->setMotorLimit(pack4Ard,Mot1,2160,24300,-19450);
+                p->setMotorLimit(pack4Ard,Mot2,2960,16200,-1000);
+                p->setMotorLimit(pack4Ard,Mot3,2960,21900,-7300);
+                p->setMotorLimit(pack4Ard,Mot4,2160,10000,-10000);
+                p->setMotorLimit(pack4Ard,Mot5,2400,10000,-10000);
+                p->setMotorLimit(pack4Ard,Mot6,2160,5770,-10);
 
-                prop.sets.maxCurrMed[cMot2] = 2960; //350*8
-                prop.sets.maxEn[cMot2] = 16200; //16229
-                prop.sets.minEn[cMot2] = -1000; //-1110
-
-                prop.sets.maxCurrMed[cMot3] = 2960; //350*8
-                prop.sets.maxEn[cMot3] = 21900; //21960
-                prop.sets.minEn[cMot3] = -7300; //-7344
-
-                /********************************************
-                 * Dipende da rotazione il numero di encoder, lo lasciamo
-                 * apposta molto grande per non far interferire
-                 */
-                prop.sets.maxCurrMed[cMot4] = 2160; //250*8
-                prop.sets.maxEn[cMot4] = 10000; //NA
-                prop.sets.minEn[cMot4] = -10000; //NA
-
-                prop.sets.maxCurrMed[cMot5] = 2400; //250*8
-                prop.sets.maxEn[cMot5] = 10000; //NA
-                prop.sets.minEn[cMot5] = -10000; //NA
-                /********************************************/
-
-                /*La pinza al contrario vogliamo che si possa aprire tuttu*/
-                prop.sets.maxCurrMed[cMot6] = 2160; //250*8
-                prop.sets.maxEn[cMot6] = 5770; //5749
-                prop.sets.minEn[cMot6] = -10; //0
-
-
-                send->pSetSetting(s, &prop);
-                send->printSPIPACK(s);
+                send.setSettingPack(*p);
+                p->printPack();
             }
             if (strcmp(sArgv[0], "h") == 0) {
-                send->pGoHome(s);
-                send->printSPIPACK(s);
+                send.goHomePack();
+                p->printPack();
             }
             if (strcmp(sArgv[0], "?") == 0) {
                 help();
@@ -138,27 +99,21 @@ int main() {
         }
         if (sArgc <= 7) {
             if (strcmp(sArgv[0], "m") == 0) {
-                /*
-                 * #define fr 300 //free running
-                 * #define hs 350 //hard stop
-                 * #define ss 400 //soft stop
-                 * #define ig 450 //ignore
-                 */
-                int motP[nMot];
+                mSpeed motP;
                 for (int i = 0; i < nMot; ++i) {
                     if (strcmp(sArgv[1 + i], "fr") == 0)
-                        motP[cMot1 + i] = fr;
+                        motP[Mot1 + i] = freeRun;
                     else if (strcmp(sArgv[1 + i], "hs") == 0)
-                        motP[cMot1 + i] = hs;
+                        motP[Mot1 + i] = hardStop;
                     else if (strcmp(sArgv[1 + i], "ss") == 0)
-                        motP[cMot1 + i] = ss;
+                        motP[Mot1 + i] = softStop;
                     else if (strcmp(sArgv[1 + i], "ig") == 0)
-                        motP[cMot1 + i] = ig;
-                    else motP[cMot1 + i] = atoi(sArgv[1 + i]);
+                        motP[Mot1 + i] = ignore;
+                    else motP[Mot1 + i] = atoi(sArgv[1 + i]);
                 }
-                send->fillPWMPACK(&pwm, motP[cMot1], motP[cMot2], motP[cMot3], motP[cMot4], motP[cMot5], motP[cMot6]);
-                send->pSetPWM(s, &pwm);
-                send->printSPIPACK(s);
+                p->pwmSet(motP);
+                send.setPwm_EnPack(*p);
+                p->printPack();
             }
         }else{
             printf("!!! Comando non riconosciuto!!!\n");

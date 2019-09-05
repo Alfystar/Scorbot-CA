@@ -1,6 +1,7 @@
 #include "spiScorebot.h"
 /* Local Var*/
 SPIPACK spiPack[2];
+Pack sP[2];
 volatile byte idTransf = 0; //Index of current Transfert
 volatile byte startConv = 0; //Index of current Transfert
 volatile byte dRecive = 0; //indica su quale buffer si sta scrivendo in questo momento
@@ -18,7 +19,9 @@ void spiSetup() {
 
 /*** ELABORATION ***/
 char *mem;
+/*
 void isrFunxISP() {
+
 
 	if (!startConv) {	//raps ha appena letto 0 e inviato typo
 		spiPack[!dRecive].type = SPDR; //mi segno tipo di comunicazione
@@ -73,12 +76,70 @@ void isrFunxISP() {
 	}
 
 }
+*/
 
-void preparaDati(SPIPACK *p) {
-	memset(&p->outPack.buffOut, 0, sizeof(spiSend));
-	switch (p->type) {
-	case setPWM:
-		memcpy(p->outPack.out.pack.en.passi, captureEn(), sizeof(setPWMSend));
+void isrFunxISP() {
+
+	if (!startConv) {	//raps ha appena letto 0 e inviato tipo
+		sP[!dRecive].setPackType((packType)SPDR); //mi segno tipo di comunicazione
+		preparaDati(&spiPack[!dRecive]);
+		idTransf = 0;
+		startConv = true;
+		SPDR = spiPack[!dRecive].outPack.buffOut[idTransf]; //preparo invio primo dato
+
+#ifdef ISPDEBUG
+		Serial.print("type=");
+		Serial.print((byte) spiPack[!dRecive].type);
+		Serial.print("-");
+		Serial.print("S");
+		Serial.print(":");
+		Serial.print((byte) spiPack[!dRecive].outPack.buffOut[idTransf]);
+		Serial.print("_");
+		Serial.print(idTransf);
+		Serial.print("  ");
+#endif
+	} else {	//salva nuovo dato
+		spiPack[!dRecive].inPack.buffIn[idTransf] = SPDR; //salvo l'ultimo invio
+		idTransf++;
+		SPDR = spiPack[!dRecive].outPack.buffOut[idTransf]; //preparo invio il mio dato
+#ifdef ISPDEBUG
+				Serial.print((byte) spiPack[!dRecive].inPack.buffIn[idTransf - 1]);
+				Serial.print(":");
+				Serial.print((byte) spiPack[!dRecive].outPack.buffOut[idTransf]);
+				Serial.print("_");
+				Serial.print(idTransf);
+				Serial.print("  ");
+#endif
+	}
+
+	if (sizeTypePack(&spiPack[!dRecive]) == -1) {
+		SPDR = 0;		//ripredispongo lo 0 iniziale
+		startConv = false;
+#ifdef ISPDEBUG
+		Serial.println(" -1 !! END  !");
+#endif
+
+		return;
+	}
+	if (idTransf >= sizeTypePack(&spiPack[!dRecive])) { //comunicazione all'ultimo byte
+		SPDR = 0;		//ripredispongo lo 0 iniziale
+		startConv = false;
+		dRecive = !dRecive;
+		newRecive = true;
+#ifdef ISPDEBUG
+		Serial.println(" END;");
+#endif
+
+	}
+
+}
+
+void preparaDati(Pack& p) {
+	memset(&p.getSPIPACK().forRasp, 0, sizeof(spi2Rasp));
+	switch (p.getPackType()) {
+	case PWMsend_EnRet:
+		p.set
+		memcpy(p.Encoder(), captureEn(), sizeof(mEncoder));
 		break;
 	case getCurrent:
 		memcpy(p->outPack.out.pack.curr.current, getAmpMots(),

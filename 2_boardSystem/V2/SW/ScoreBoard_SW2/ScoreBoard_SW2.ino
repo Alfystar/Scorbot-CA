@@ -1,8 +1,8 @@
 #include "Arduino.h"
 #include "Project-lib/globalDef.h"
-#include "Project-lib/spiScorebot/spiScorebot.h"
 #include "Project-lib/adcReader/adcReader.h"
 #include "Project-lib/msEnlib/msEnlib.h"
+#include "Project-lib/spiScorebot/spiScorebot.h"
 
 #define SERIAL_PRINT	//attiva/disattiva compilazione del codice per printare in seriale
 #define sanityDelay 250	//tempo ms di attesa prima di ri-scansionare se il robot è ok

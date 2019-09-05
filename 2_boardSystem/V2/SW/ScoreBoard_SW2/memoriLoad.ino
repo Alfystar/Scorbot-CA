@@ -13,7 +13,7 @@ void memorySave(settingsBoard *set) {
 	for (byte i = 0; i < nMot; i++) {
 
 		Serial.print("\t");
-		Serial.print(sets.maxEn[cMot1 + i]);
+		Serial.print(sets.maxEn[Mot1 + i]);
 	}
 	Serial.println();
 
@@ -21,7 +21,7 @@ void memorySave(settingsBoard *set) {
 	for (byte i = 0; i < nMot; i++) {
 
 		Serial.print("\t");
-		Serial.print(sets.minEn[cMot1 + i]);
+		Serial.print(sets.minEn[Mot1 + i]);
 	}
 	Serial.println();
 
@@ -29,7 +29,7 @@ void memorySave(settingsBoard *set) {
 	for (byte i = 0; i < nMot; i++) {
 
 		Serial.print("\t");
-		Serial.print(sets.maxCurrMed[cMot1 + i]);
+		Serial.print(sets.maxCurrMed[Mot1 + i]);
 	}
 	Serial.println();
 }

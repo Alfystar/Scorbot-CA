@@ -7,10 +7,10 @@
 #include "msEnlib.h"
 
 /* LOCAL VAR */
-int bufMem[sizeMem];
+mEncoder bufMem[sizeMem];
 cbuf_handle_t circularBuf;
-int passi[nMot];
-int passiTemp[nMot];
+mEncoder passi;
+mEncoder passiTemp;
 
 /*** HARDWARE ***/
 void dsubFeedSetup() {
@@ -111,7 +111,7 @@ int getEn(byte i) {
 }
 
 //Fotografa un istante e rimane quello fino alla successiva chiamata della funzione
-int *captureEn() {
+mEncoder *captureEn() {
 	memcpy(passiTemp, passi, sizeof(int) * nMot);
 	return passiTemp;
 }

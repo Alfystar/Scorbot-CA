@@ -3,7 +3,7 @@ project(pidClassDemo)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(HEADERS SPILib/spi_scorebot_packdefine.h SPILib/spisend.h)
-set(SOURCE SPILib/spisend.cpp)
+set(HEADERS SPILib/SpiPack.h SPILib/SPI_interface.h)
+set(SOURCE SPILib/SpiPack.cpp SPILib/SPI_interface.cpp )
 
 add_executable(Scorebot_CPP main.cpp ${HEADERS} ${SOURCE})

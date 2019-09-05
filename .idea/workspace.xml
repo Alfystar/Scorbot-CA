@@ -5,15 +5,41 @@
       <config projectName="pidClassDemo" targetName="Scorebot_CPP" />
     </generated>
   </component>
-  <component name="CMakeSettings">
+  <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
       <configuration PROFILE_NAME="Debug" CONFIG_NAME="Debug" />
     </configurations>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard_Diagrams.vpp.bak_026d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard_Diagrams.vpp.bak_027d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard_Diagrams.vpp.bak_028d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard_Diagrams.vpp.bak_029d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/spiScorebot/SpiPack.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/SPILib/SpiPack.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/SPILib/SpiPack.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/SPILib/spi_scorebot_packdefine.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/SPILib/spi_scorebot_packdefine.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard_Diagrams.vpp" beforeDir="false" afterPath="$PROJECT_DIR$/1_Doc/ScorBoard_Diagrams.vpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard_Diagrams.vpp.bak_000f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard_Diagrams.vpp.bak_001d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard_Diagrams.vpp.bak_002d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/Spi.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_Doc/Spi.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/globalDef.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/globalDef.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/msEnlib/msEnlib.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/msEnlib/msEnlib.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/spiScorebot/SPI_Scorebot_PackDefine.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/spiScorebot/SpiPack.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/spiScorebot/spiScorebot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/spiScorebot/spiScorebot.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/spiScorebot/spiScorebot.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/spiScorebot/spiScorebot.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/ScoreBoard_SW2.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/ScoreBoard_SW2.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/excutePack.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/excutePack.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/memoriLoad.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/memoriLoad.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/motControll.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/motControll.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/SPILib/spi_scorebot_packdefine.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/SPILib/spisend.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/SPILib/SPI_interface.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/SPILib/spisend.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/SPILib/SPI_interface.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -31,6 +57,7 @@
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectId" id="1QEs6LMzclXnGYYUwqGsgySaYhB" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeLists.txt" />
     <property name="node.js.detected.package.eslint" value="true" />
@@ -39,7 +66,8 @@
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="settings.editor.selected.configurable" value="reference.settings.ide.settings.notifications" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -85,6 +113,11 @@
       <workItem from="1567346918327" duration="378000" />
       <workItem from="1567415598113" duration="4348000" />
       <workItem from="1567429480489" duration="3170000" />
+      <workItem from="1567498773892" duration="7416000" />
+      <workItem from="1567517463624" duration="14734000" />
+      <workItem from="1567671085871" duration="3926000" />
+      <workItem from="1567693108480" duration="965000" />
+      <workItem from="1567694893882" duration="11981000" />
     </task>
     <servers />
   </component>

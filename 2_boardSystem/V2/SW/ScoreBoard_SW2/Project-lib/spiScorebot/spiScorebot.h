@@ -2,10 +2,10 @@
 #define SPISCOREBOT_H
 #include "Arduino.h"
 #include <stdlib.h>
-#include "SPI_Scorebot_PackDefine.h"
 #include "../globalDef.h"
 #include "../msEnlib/msEnlib.h"
 #include "../adcReader/adcReader.h"
+#include "SpiPack.h"
 
 /*** HARDWARE ***/
 void spiSetup();

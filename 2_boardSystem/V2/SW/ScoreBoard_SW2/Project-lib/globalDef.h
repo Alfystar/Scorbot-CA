@@ -8,6 +8,9 @@
 #ifndef PROJECT_LIB_GLOBALDEF_H_
 #define PROJECT_LIB_GLOBALDEF_H_
 
+#include "spiScorebot/SpiPack.h"
+using namespace spiPack;
+
 #define motEn 38 //PD7
 
 //define SPI
@@ -17,8 +20,6 @@
 #define SCK 52
 
 //define MOTORI
-#define nMot 6
-enum motCode {cMot1=0, cMot2, cMot3, cMot4, cMot5, cMot6};
 
 #define EN1 5		//PE3
 #define IN1A 22		//PA0
@@ -43,16 +44,6 @@ enum motCode {cMot1=0, cMot2, cMot3, cMot4, cMot5, cMot6};
 #define EN6 8		//PH5
 #define IN6A 47		//PL2
 #define IN6B 46		//PL3
-
-
-typedef struct settingsBoard_ {
-	int maxEn[nMot]; 		//valore massimo di passi prima di considerarsi fuori range di sicurezza (numeri pos)
-	int minEn[nMot]; 		//valore minimo di passi prima di considerarsi fuori range di sicurezza (numeri neg)
-	int maxCurrMed[nMot];	//valore massimo di corrente Efficace (con una media di 1 ms ~ ultime 8 letture), numero * 8 per semplificare i conti)
-	//todo: Quale V-ref
-	//todo: lettura diretta/differenziale
-	//todo: frequenza pwm
-} settingsBoard;
 
 extern settingsBoard sets;
 

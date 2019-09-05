@@ -12,12 +12,12 @@ extern L298N *mot[nMot];
 
 void motSetup() {
 	/*Ordine INA e INB, per avere una rotazione oraria quando il braccio è in piano con la pinza a SINISTRA*/
-	mot[cMot1] = new L298N(EN1, IN1A, IN1B);
-	mot[cMot2] = new L298N(EN2, IN2A, IN2B);
-	mot[cMot3] = new L298N(EN3, IN3B, IN3A);
-	mot[cMot4] = new L298N(EN4, IN4B, IN4A);
-	mot[cMot5] = new L298N(EN5, IN5A, IN5B);
-	mot[cMot6] = new L298N(EN6, IN6A, IN6B);
+	mot[Mot1] = new L298N(EN1, IN1A, IN1B);
+	mot[Mot2] = new L298N(EN2, IN2A, IN2B);
+	mot[Mot3] = new L298N(EN3, IN3B, IN3A);
+	mot[Mot4] = new L298N(EN4, IN4B, IN4A);
+	mot[Mot5] = new L298N(EN5, IN5A, IN5B);
+	mot[Mot6] = new L298N(EN6, IN6A, IN6B);
 }
 
 void motorStateMachine() {
@@ -39,20 +39,20 @@ unsigned long time = 0;
 
 void home() {
 	for (byte i = 0; i < nMot; i++)
-		mot[cMot1 + i]->freeRun();
+		mot[Mot1 + i]->freeRun();
 
 	/*Home del braccio*/
-	homeMot(cMot2, -1);
-	homeMot(cMot3, -1);
+	homeMot(Mot2, -1);
+	homeMot(Mot3, -1);
 	pinzaHome();
 
 	/*Home del braccio agane*/
-	homeMot(cMot2, -1);
-	homeMot(cMot3, -1);
+	homeMot(Mot2, -1);
+	homeMot(Mot3, -1);
 	pinzaHome();
 
 	/*Home Base*/
-	homeMot(cMot1, -1);
+	homeMot(Mot1, -1);
 
 	/*Pinza test*/
 	closeClaw();
@@ -65,7 +65,7 @@ void home() {
 
 	updateStepEn();
 	for (byte i = 0; i < nMot; i++) //reset degli encoder
-		setEn(cMot1 + i, 0);
+		setEn(Mot1 + i, 0);
 }
 
 //1= anti orario
@@ -151,36 +151,36 @@ void pinzaHome() {
 	/** Roll Home**/
 	Serial.println("Searching Claw Roll HW Home:");
 
-	while (!(msRead() & (1 << cMot5))) {
+	while (!(msRead() & (1 << Mot5))) {
 
-		mot[cMot4]->drive_motor(searchVel);
-		mot[cMot5]->drive_motor(-searchVel);
+		mot[Mot4]->drive_motor(searchVel);
+		mot[Mot5]->drive_motor(-searchVel);
 		antiRebound(100);
 	}
 
 	//Fermo
-	mot[cMot4]->hard_stop(100);
-	mot[cMot5]->hard_stop(100);
+	mot[Mot4]->hard_stop(100);
+	mot[Mot5]->hard_stop(100);
 	delay(100);
 
 	//Lieve allontanamento
 	Serial.println("\t--Slow Roll away");
-	while (msRead() & (1 << cMot5)) {	//proseguo durante al click
-		mot[cMot4]->drive_motor(-slowVel);
-		mot[cMot5]->drive_motor(slowVel);
+	while (msRead() & (1 << Mot5)) {	//proseguo durante al click
+		mot[Mot4]->drive_motor(-slowVel);
+		mot[Mot5]->drive_motor(slowVel);
 		antiRebound(100);
 	}
 	delay(200);	//continuo poco
 
 	//Avvicinamento lento dal lato giusto
 	Serial.println("\t--Slow Approach");
-	while (!(msRead() & (1 << cMot5))) {	//proseguo fino al click
-		mot[cMot4]->drive_motor(slowVel);
-		mot[cMot5]->drive_motor(-slowVel);
+	while (!(msRead() & (1 << Mot5))) {	//proseguo fino al click
+		mot[Mot4]->drive_motor(slowVel);
+		mot[Mot5]->drive_motor(-slowVel);
 		antiRebound(100);
 	}
-	mot[cMot4]->soft_stop(100);
-	mot[cMot5]->soft_stop(100);
+	mot[Mot4]->soft_stop(100);
+	mot[Mot5]->soft_stop(100);
 	delay(100);
 	Serial.println("\t--Claw Roll HW Home Found\n");
 
@@ -191,8 +191,8 @@ void pinzaHome() {
 	signed char stDir = -1;
 
 	Serial.println("Searching Claw Pitch HW Home:");
-	mot[cMot4]->drive_motor(stDir * searchVel);
-	mot[cMot5]->drive_motor(stDir * searchVel);
+	mot[Mot4]->drive_motor(stDir * searchVel);
+	mot[Mot5]->drive_motor(stDir * searchVel);
 	delay(10);
 
 	//Cerca Home
@@ -201,27 +201,27 @@ void pinzaHome() {
 	long oldEn5 = 0;
 	long antiReboundTimer = 0;
 
-	while (!(msRead() & (1 << cMot4))) {
+	while (!(msRead() & (1 << Mot4))) {
 		updateStepEn();
 		//Sbattuto a bordo pista, devo andare nel senso opposto per trovare la Home
 		if ((millis() > time + waitTime)) {
-			if ((abs((getEn(cMot4) - oldEn4)) < 3)
-					&& (abs((getEn(cMot5) - oldEn5)) < 3)) {
+			if ((abs((getEn(Mot4) - oldEn4)) < 3)
+					&& (abs((getEn(Mot5) - oldEn5)) < 3)) {
 				stDir *= -1;
-				mot[cMot4]->drive_motor(stDir * searchVel);
-				mot[cMot5]->drive_motor(stDir * searchVel);
+				mot[Mot4]->drive_motor(stDir * searchVel);
+				mot[Mot5]->drive_motor(stDir * searchVel);
 				Serial.print("\t-- Encoder LOCK, Change Direction ");
-				Serial.print(abs((getEn(cMot4) - oldEn4)));
+				Serial.print(abs((getEn(Mot4) - oldEn4)));
 				Serial.print(" && ");
-				Serial.println(abs((getEn(cMot5) - oldEn5)));
+				Serial.println(abs((getEn(Mot5) - oldEn5)));
 				time = millis();
 			}
-			oldEn4 = getEn(cMot4);
-			oldEn5 = getEn(cMot5);
+			oldEn4 = getEn(Mot4);
+			oldEn5 = getEn(Mot5);
 			time=millis();
 		}
-		mot[cMot4]->drive_motor(stDir * searchVel);
-		mot[cMot5]->drive_motor(stDir * searchVel);
+		mot[Mot4]->drive_motor(stDir * searchVel);
+		mot[Mot5]->drive_motor(stDir * searchVel);
 		while (micros() < antiReboundTimer + 100)
 			updateStepEn();
 		antiReboundTimer = micros();
@@ -230,52 +230,52 @@ void pinzaHome() {
 	//Posiziona a destra del riferimento
 	Serial.println("\t--First Click");
 	if (stDir == 1) {	//ero a sx dello switch
-		while (msRead() & (1 << cMot4)) {	//proseguo durante al click
-			mot[cMot4]->drive_motor(slowVel);
-			mot[cMot5]->drive_motor(slowVel);
+		while (msRead() & (1 << Mot4)) {	//proseguo durante al click
+			mot[Mot4]->drive_motor(slowVel);
+			mot[Mot5]->drive_motor(slowVel);
 			delayMicroseconds(100);	//tempo anti rimbalzo
 		}
 	} else {			//ero a dx dello switch
-		mot[cMot4]->hard_stop(100);
-		mot[cMot5]->hard_stop(100);
+		mot[Mot4]->hard_stop(100);
+		mot[Mot5]->hard_stop(100);
 		delay(100);
 	}
 
 	//Lieve allontanamento
 	Serial.println("\t--Slow Roll away");
-	while (msRead() & (1 << cMot4)) {	//proseguo durante al click
-		mot[cMot4]->drive_motor(slowVel);
-		mot[cMot5]->drive_motor(slowVel);
+	while (msRead() & (1 << Mot4)) {	//proseguo durante al click
+		mot[Mot4]->drive_motor(slowVel);
+		mot[Mot5]->drive_motor(slowVel);
 		antiRebound(100);
 	}
 	delay(200);	//continuo poco
 
 	//Avvicinamento lento dal lato giusto
 	Serial.println("\t--Slow Approach");
-	while (!(msRead() & (1 << cMot4))) {	//proseguo fino al click
-		mot[cMot4]->drive_motor(-slowVel);
-		mot[cMot5]->drive_motor(-slowVel);
+	while (!(msRead() & (1 << Mot4))) {	//proseguo fino al click
+		mot[Mot4]->drive_motor(-slowVel);
+		mot[Mot5]->drive_motor(-slowVel);
 		antiRebound(100);
 	}
-	mot[cMot4]->soft_stop(100);
-	mot[cMot5]->soft_stop(100);
+	mot[Mot4]->soft_stop(100);
+	mot[Mot5]->soft_stop(100);
 	delay(100);
 	Serial.println("\t--Claw Pitch HW Home Found\n");
 
 	//reset degli encoder
 	updateStepEn();
-	setEn(cMot4, 0);
-	setEn(cMot5, 0);
+	setEn(Mot4, 0);
+	setEn(Mot5, 0);
 }
 
 void openClaw() {
-	mot[cMot6]->drive_motor(-140, 2000);
+	mot[Mot6]->drive_motor(-140, 2000);
 }
 
 void closeClaw() {
-	mot[cMot6]->drive_motor(140, 2000);
+	mot[Mot6]->drive_motor(140, 2000);
 }
 
 void stopClaw() {
-	mot[cMot6]->soft_stop(2000);
+	mot[Mot6]->soft_stop(2000);
 }
