@@ -7,7 +7,34 @@
 #include "../adcReader/adcReader.h"
 #include "SpiPack.h"
 
+
+namespace SpiLib_Ard
+{
 using namespace spiPack;
+class SpiDevice{
+public:
+	static SpiDevice& getIstance();
+
+	/*** ELABORATION ***/
+	void isrFunxISP();
+	void dataLoad();
+
+	/*** GET VALUE ***/
+	byte spiAvailable();
+	Pack& getLastRecive();
+
+private:
+	Pack sP[2];
+	byte idTransf;
+	byte startConv;
+	byte dRecice;
+	byte newRecive;
+	static SpiDevice& instance;
+
+	SpiDevice();
+};
+
+}
 
 /*** HARDWARE ***/
 void spiSetup();
@@ -15,7 +42,6 @@ void spiSetup();
 /*** ELABORATION ***/
 void isrFunxISP();
 void preparaDati(Pack& p);
-//int limitiDati(char type);
 int sizeTypePack(Pack& p);
 
 /*** GET VALUE ***/
