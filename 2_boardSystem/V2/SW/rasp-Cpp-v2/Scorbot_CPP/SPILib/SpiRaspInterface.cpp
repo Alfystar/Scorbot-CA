@@ -1,6 +1,6 @@
-#include "SPI_interface.h"
+#include "SpiRaspInterface.h"
 
-namespace SPI_Interface {
+namespace SpiRaspInterface {
     //initiaize static variables here
     ScorBoard *ScorBoard::instance = nullptr;
     std::mutex myMutex;
@@ -63,7 +63,7 @@ namespace SPI_Interface {
         memset(this->txbuf, 0, this->size);
         memset(this->rxbuf, 0, this->size);
 
-        memcpy(this->txbuf, p.getSPIPACK().forArd.bufOut, sizeof(spi2Ard));  //imposto i bit utili da inviare
+        memcpy(this->txbuf, p.getSPIPACK().forArd.buf, sizeof(spi2Ard));  //imposto i bit utili da inviare
 
         //memory cache coerence Problem
         __builtin___clear_cache(this->txbuf, this->txbuf + this->size);
@@ -84,20 +84,20 @@ namespace SPI_Interface {
         //memory cache coerence Problem
         __builtin___clear_cache(this->rxbuf, this->rxbuf + this->size);
 
-        memcpy(p.getSPIPACK().forRasp.bufIn, this->rxbuf, sizeof(spi2Rasp));
+        memcpy(p.getSPIPACK().forRasp.buf, this->rxbuf, sizeof(spi2Rasp));
     }
 
     void ScorBoard::bytePrint(Pack & p) {
 
         printf("Byte send");
         for (int i = 0; i < p.sizePack(); ++i) {
-            printf(" %d",p.getSPIPACK().forArd.bufOut[i]);
+            printf(" %d",p.getSPIPACK().forArd.buf[i]);
         }
         printf("\n");
 
         printf("Byte recive");
         for (int i = 0; i < p.sizePack(); ++i) {
-            printf(" %d",p.getSPIPACK().forArd.bufOut[i]);
+            printf(" %d",p.getSPIPACK().forArd.buf[i]);
         }
         printf("\n");
 

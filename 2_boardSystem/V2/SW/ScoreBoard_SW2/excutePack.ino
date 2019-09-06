@@ -3,16 +3,17 @@ extern L298N *mot[nMot];
 
 #define timeOut 2000
 
-void excutePack(SPIPACK *p) {
-	switch (p->type) {
+void excutePack(Pack& p) {
+	switch (p.getPackType()) {
+	case invalid:
+		break;
 	case PWMsend_EnRet:
 	case PWMsend_CurRet:
 	case PWMsend_AllRet:
-		mSpeed vel;
+	{
+		mSpeed& vel=p.getPwm();
 		for (byte i = 0; i < nMot; i++) {
-
-			int read = p->inPack.in.pack.speed.vel[Mot1 + i];
-			switch (read) {
+			switch (vel[Mot1 + i]) {
 			case freeRun:
 				mot[Mot1 + i]->freeRun();
 				break;
@@ -25,17 +26,23 @@ void excutePack(SPIPACK *p) {
 			case ignore:
 				break;
 			default:
-				mot[Mot1 + i]->drive_motor(read, timeOut);
+				mot[Mot1 + i]->drive_motor(vel[Mot1 + i], timeOut);
 				break;
 			}
-
 		}
-		break;
-	case setSetting:
-		memorySave(&p->inPack.in.pack.prop.sets);
-		break;
+	}
+	break;
+	case SettingSet:
+	{
+		memorySave(&p.getSetting(pack4Ard));
+	}
+	break;
 	case goHome:
+	{
 		home();
+	}
+	break;
+	default:
 		break;
 	}
 }

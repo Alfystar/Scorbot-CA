@@ -5,13 +5,16 @@
 #include <stdio.h>
 #include <string.h>
 
-#ifndef Arduino_h
-
+#ifndef ScorboarFirmware
+#warning ScorboarFirmware define not Declared, if you are compiling library to Arduino, add at the end of gcc compiler: -D ScorboarFirmware
 #include <exception>
 #include <string>
 #include <bits/exception.h>
+using std::max;
+#else
 
 #endif
+
 namespace spiPack {
 /// Enum Declaration for the comunication
     enum packDest {
@@ -63,7 +66,7 @@ namespace spiPack {
             mSpeed speed;
             settingsBoard prop;
         } up;
-        char bufOut[sizeof(sendType)];
+        char buf[sizeof(sendType)];
     } spi2Ard;
 
 
@@ -75,7 +78,7 @@ namespace spiPack {
             mAll sens;
             settingsBoard prop;
         } up;
-        char bufIn[sizeof(recType)];
+        char buf[sizeof(recType)];
     } spi2Rasp;
 
 /** ## -------------------------------------------------------- ## **/
@@ -103,7 +106,7 @@ namespace spiPack {
         void pwmSet(mSpeed &pwms);
         void pwmSet(short m1, short m2, short m3, short m4, short m5, short m6);
         void pwmSet(motCode mot, short pwm);
-#ifndef Arduino_h
+#ifndef ScorboarFirmware
         void setEncoder(mEncoder &c) noexcept(false);
         void setEncoder(motCode mot, short en) noexcept(false);
 
@@ -144,7 +147,7 @@ namespace spiPack {
         SPIPACK data;
     };
 
-#ifndef Arduino_h
+#ifndef ScorboarFirmware
 
 //Exeption tree
     class typePackWrongExcept : public std::exception {
@@ -163,6 +166,6 @@ namespace spiPack {
     void freeSPIPACK(SPIPACK *p);
 }
 #ifndef __GNUC__
-#include "SpiPack.cpp"#
+#include "SpiPack.cpp"
 #endif
 #endif // SpiPack_H

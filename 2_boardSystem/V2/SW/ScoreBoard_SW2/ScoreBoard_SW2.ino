@@ -37,18 +37,19 @@ void setup() {
 
 	//home();
 }
-
+#ifdef SERIAL_PRINT
 unsigned long timePrint = 0;
-SPIPACK * r;
+#endif
+Pack * r;
 
 void loop() {
 	sanityChek(sanityDelay);
 	if (spiAvailable()) {
 		r = getLastRecive();
-		excutePack(r);
+		excutePack(*r);
 
 #ifdef SERIAL_PRINT
-		printSpiPack(r);
+		printSpiPack(*r);
 #endif
 	}
 
@@ -68,6 +69,7 @@ void loop() {
 	}
 #endif
 }
+
 
 unsigned long sanityTime = 0;
 void sanityChek(int wait) {

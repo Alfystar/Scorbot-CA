@@ -112,8 +112,8 @@ int getEn(byte i) {
 
 //Fotografa un istante e rimane quello fino alla successiva chiamata della funzione
 mEncoder *captureEn() {
-	memcpy(passiTemp, passi, sizeof(int) * nMot);
-	return passiTemp;
+	memcpy(passiTemp, passi, sizeof(mEncoder));
+	return &passiTemp;
 }
 
 /*** DEBUG & PRINT ***/
@@ -132,7 +132,8 @@ void enDebug() {
 }
 
 void printSteps() {
-	int * passiT = captureEn();
+	mEncoder passiT;
+	memcpy(passiT,captureEn(),sizeof(mEncoder));
 	for (byte i = 0; i < nMot; i++) {
 		Serial.print("\tEn ");
 		Serial.print(i + 1);

@@ -7,21 +7,23 @@
 #include "../adcReader/adcReader.h"
 #include "SpiPack.h"
 
+using namespace spiPack;
+
 /*** HARDWARE ***/
 void spiSetup();
 
 /*** ELABORATION ***/
 void isrFunxISP();
-void preparaDati(SPIPACK *p);
+void preparaDati(Pack& p);
 //int limitiDati(char type);
-int sizeTypePack(SPIPACK *s);
+int sizeTypePack(Pack& p);
 
 /*** GET VALUE ***/
-SPIPACK* getLastRecive();
+Pack* getLastRecive();
 byte spiAvailable();
 
 /*** DEBUG & PRINT ***/
-void printSpiPack(SPIPACK *p);
+void printSpiPack(Pack& p);
 
 #ifndef __IN_ECLIPSE__
 #include "spiScorebot.cpp"

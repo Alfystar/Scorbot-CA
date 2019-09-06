@@ -87,7 +87,7 @@ void homeMot(byte motN, signed char stDir) {
 	//Cerca Home
 	time = millis();
 	long oldEn = 0;
-	long antiReboundTimer = 0;
+	unsigned long antiReboundTimer = 0;
 	while (!(msRead() & (1 << motN))) {
 		updateStepEn();
 		//Sbattuto a bordo pista, devo andare nel senso opposto per trovare la Home
@@ -199,7 +199,7 @@ void pinzaHome() {
 	time = millis();
 	long oldEn4 = 0;
 	long oldEn5 = 0;
-	long antiReboundTimer = 0;
+	unsigned long antiReboundTimer = 0;
 
 	while (!(msRead() & (1 << Mot4))) {
 		updateStepEn();

@@ -1,9 +1,9 @@
 #include <iostream>
-#include "SPILib/SPI_interface.h"
+#include "SPILib/SpiRaspInterface.h"
 #include "SPILib/SpiPack.h"
 #include <string.h>
 
-using namespace SPI_Interface;
+using namespace SpiRaspInterface;
 using namespace spiPack;
 
 #define fflush(stdin) while(getchar() != '\n');

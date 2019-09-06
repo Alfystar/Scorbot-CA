@@ -1,6 +1,10 @@
 # Arduino MEGA (atmega2560) Firmware
 La libreria sviluppata è scritta in c++ ed è pensata per essere eseguita sull'arduino MEGA della board progettata in "eagle-brd".
 
+MOLTO IMPORTANTE AGGIUNGERE ALLA FINE DEL COMPILATORE GCC IL DEFINE:
+	-D ScorboarFirmware
+serve per evitare di far includere librerie e codici che devo essere presenti solo nella versione Rapsberry
+
 ## Ide di sviluppo
 Il codice è stato sviluppato usando come editor Sloebel, un tool open gratuito che si basa su di eclipse, è stato proggettato per essere compatibile con le schede arduino presenti in commercio, se caricate questo progetto con sloebel sicuramente lo riuscirà a leggere e successivamente a caricare sulla scheda.
 ### Windows user

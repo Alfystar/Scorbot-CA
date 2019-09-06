@@ -38,9 +38,9 @@ void isrFunxAdc();
 int difPinSelect(int p);
 
 /*** GET VALUE ***/
-int getAmpMot(byte m);
-int *getAmpMots();		//puntatore di ritorno FERMO per circa 1ms
-int getSumMot(byte i);
+short getAmpMot(byte m);
+mCurrent *getAmpMots();		//puntatore di ritorno FERMO per circa 1ms
+short getSumMot(byte i);
 
 /*** DEBUG & PRINT ***/
 void debugPrintAdc();

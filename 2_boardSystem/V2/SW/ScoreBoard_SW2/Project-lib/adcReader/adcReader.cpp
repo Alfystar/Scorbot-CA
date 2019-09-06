@@ -17,11 +17,11 @@
 #define history 8 //data la frequenza ~1ms
 
 /* LOCAL VAR */
-int ampMot[nMot][history];
+mCurrent ampMot[history];
 volatile byte indexADC = 0; //attuale ultima misura
 //start value
-volatile byte newReadId = cMot1;
-volatile byte oldReadId = cMot1;
+volatile byte newReadId = Mot1;
+volatile byte oldReadId = Mot1;
 
 /*** HARDWARE ***/
 void setUpADC() {
@@ -33,7 +33,7 @@ void setUpADC() {
 
 	/* ADCSRB – ADC Control and Status Register B */
 	ADCSRB &= 0xF8;	// Imposto la modalità di free running, e lascio inalterato il resto
-	difPinSelect(cMot1); //imposto il primo pin da leggere per la lettura sporca
+	difPinSelect(Mot1); //imposto il primo pin da leggere per la lettura sporca
 
 	/* ADCSRA – ADC Control and Status Register A */
 	//A queste condizioni ho 125Khz di clock all'adc e una conversione ogni 14*1/125KHz= 112us ~ 8,9Khz  (14 perchè letto in differential mode)
@@ -77,22 +77,22 @@ void isrFunxAdc() {
 int difPinSelect(int p) {
 	byte val = ADMUX & 0xE0; //Cancello il precedente vale selezionato, mantenendo le impostazioni
 	switch (p) {
-	case cMot1:
+	case Mot1:
 		val |= 0x10;
 		break;
-	case cMot2:
+	case Mot2:
 		val |= 0x12;
 		break;
-	case cMot3:
+	case Mot3:
 		val |= 0x13;
 		break;
-	case cMot4:
+	case Mot4:
 		val |= 0x14;
 		break;
-	case cMot5:
+	case Mot5:
 		val |= 0x15;
 		break;
-	case cMot6:
+	case Mot6:
 		val |= 0x16;
 		break;
 	default:
@@ -104,17 +104,17 @@ int difPinSelect(int p) {
 }
 
 /*** GET VALUE ***/
-int getAmpMot(byte m) {
+short getAmpMot(byte m) {
 	return ampMot[m][indexADC];
 }
 
 //puntatore di ritorno FERMO per circa 1ms
-int *getAmpMots() {
-	return &ampMot[0][((indexADC - 1) + history) % history];
+mCurrent *getAmpMots() {
+	return &ampMot[((indexADC - 1) + history) % history];
 }
 
-int sumCurr;
-int getSumMot(byte i) {
+short sumCurr;
+short getSumMot(byte i) {
 	sumCurr = 0;
 	for (byte j = 0; j < history; j++)
 		sumCurr += ampMot[i][j];
@@ -124,16 +124,16 @@ int getSumMot(byte i) {
 /*** DEBUG & PRINT ***/
 void debugPrintAdc() {
 	Serial.print("Mot 1 diff=");
-	Serial.print(getAmpMot(cMot1));
+	Serial.print(getAmpMot(Mot1));
 	Serial.print("  Mot 2 diff=");
-	Serial.print(getAmpMot(cMot2));
+	Serial.print(getAmpMot(Mot2));
 	Serial.print("  Mot 3 diff=");
-	Serial.print(getAmpMot(cMot3));
+	Serial.print(getAmpMot(Mot3));
 	Serial.print("  Mot 4 diff=");
-	Serial.print(getAmpMot(cMot4));
+	Serial.print(getAmpMot(Mot4));
 	Serial.print("  Mot 5 diff=");
-	Serial.print(getAmpMot(cMot5));
+	Serial.print(getAmpMot(Mot5));
 	Serial.print("  Mot 6 diff=");
-	Serial.println(getAmpMot(cMot6));
+	Serial.println(getAmpMot(Mot6));
 }
 

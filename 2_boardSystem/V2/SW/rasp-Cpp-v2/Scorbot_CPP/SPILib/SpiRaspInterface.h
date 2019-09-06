@@ -14,7 +14,7 @@
 
 
 
-namespace SPI_Interface {
+namespace SpiRaspInterface {
     using namespace spiPack;
 
     class ScorBoard {

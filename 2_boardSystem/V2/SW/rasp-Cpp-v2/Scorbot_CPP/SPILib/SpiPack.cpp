@@ -120,13 +120,13 @@ namespace spiPack {
                 return -1;
                 break;
             case PWMsend_EnRet:
-                return std::max(sizeof(mSpeed), sizeof(mEncoder));
+                return max(sizeof(mSpeed), sizeof(mEncoder));
                 break;
             case PWMsend_CurRet:
-                return std::max(sizeof(mSpeed), sizeof(mCurrent));
+                return max(sizeof(mSpeed), sizeof(mCurrent));
                 break;
             case PWMsend_AllRet:
-                return std::max(sizeof(mSpeed), sizeof(mAll));
+                return max(sizeof(mSpeed), sizeof(mAll));
                 break;
             case CurrentGet:
                 return sizeof(mCurrent);
@@ -181,7 +181,7 @@ namespace spiPack {
             memmove(&this->data.forRasp.up.en, &en, sizeof(mEncoder));
         else if(this->data.type==PWMsend_AllRet)
             memmove(&this->data.forRasp.up.sens.en, &en, sizeof(mEncoder));
-#ifndef Arduino_h
+#ifndef ScorboarFirmware
         else
             throw typePackWrongExcept("This pack can't set Encoder");
 #endif
@@ -192,7 +192,7 @@ namespace spiPack {
             this->data.forRasp.up.cur[mot] = en;
         else if(this->data.type==PWMsend_AllRet)
             this->data.forRasp.up.sens.cur[mot] = en;
-#ifndef Arduino_h
+#ifndef ScorboarFirmware
         else
             throw typePackWrongExcept("This pack can't set Encoder");
 #endif
@@ -203,7 +203,7 @@ namespace spiPack {
             memmove(&this->data.forRasp.up.cur, &c, sizeof(mCurrent));
         else if(this->data.type==PWMsend_AllRet)
             memmove(&this->data.forRasp.up.sens.cur, &c, sizeof(mCurrent));
-#ifndef Arduino_h
+#ifndef ScorboarFirmware
         else
             throw typePackWrongExcept("This pack can't set Current");
 #endif
@@ -215,7 +215,7 @@ namespace spiPack {
             this->data.forRasp.up.cur[mot] = cur;
         else if(this->data.type==PWMsend_AllRet)
             this->data.forRasp.up.sens.cur[mot] = cur;
-#ifndef Arduino_h
+#ifndef ScorboarFirmware
         else
             throw typePackWrongExcept("This pack can't set Encoder");
 #endif
@@ -268,7 +268,7 @@ namespace spiPack {
     }
 
     mSpeed &Pack::getPwm() {
-#ifndef Arduino_h
+#ifndef ScorboarFirmware
         if(this->data.type!=PWMsend_EnRet && this->data.type!=PWMsend_CurRet && this->data.type!=PWMsend_AllRet)
             throw typePackWrongExcept("This pack not contain PWM");
 #endif
@@ -280,7 +280,7 @@ namespace spiPack {
             return this->data.forRasp.up.en;
         else if(this->data.type==PWMsend_AllRet)
             return this->data.forRasp.up.sens.en;
-#ifndef Arduino_h
+#ifndef ScorboarFirmware
         else
             throw typePackWrongExcept("This pack not contain Encoder");
 #endif
@@ -291,7 +291,7 @@ namespace spiPack {
             return this->data.forRasp.up.cur;
         else if(this->data.type==PWMsend_AllRet)
             return this->data.forRasp.up.sens.cur;
-#ifndef Arduino_h
+#ifndef ScorboarFirmware
         else
             throw typePackWrongExcept("This pack not contain Current");
 #endif
@@ -300,16 +300,16 @@ namespace spiPack {
     mAll &Pack::getSens() noexcept(false) {
         if(this->data.type==PWMsend_AllRet)
             return this->data.forRasp.up.sens;
-#ifndef Arduino_h
+#ifndef ScorboarFirmware
         else
             throw typePackWrongExcept("This pack not contain Sensor Data");
 #endif
     }
 
     settingsBoard &Pack::getSetting(packDest dest) {
-#ifndef Arduino_h
+#ifndef ScorboarFirmware
         if(this->data.type!=SettingSet && this->data.type!=SettingGet)
-        throw typePackWrongExcept("This pack not contain Settings");
+            throw typePackWrongExcept("This pack not contain Settings");
 #endif
         if (dest == pack4Ard)
             return this->data.forArd.up.prop;
@@ -318,7 +318,7 @@ namespace spiPack {
     }
 
     settingsBoard &Pack::getSetting() noexcept(false) {
-#ifndef Arduino_h
+#ifndef ScorboarFirmware
         if(this->data.type!=SettingSet && this->data.type!=SettingGet)
             throw typePackWrongExcept("This pack not contain Settings");
 #endif
