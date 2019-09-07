@@ -10,11 +10,11 @@
 #define PROJECT_LIB_MSENLIB_H_
 #include "Arduino.h"
 #include <stdlib.h>
-#include "../circular_buffer/circular_buffer.h"
+#include "circular_buffer/circular_buffer.h"
 #include "../globalDef.h"
 
 #define sizeMem 128 	//numero di celle (di int [2 byte])nel buffer circolare
-
+using namespace spiPack;
 /*** HARDWARE ***/
 // Imposta i pin di uscita e registri
 void dsubFeedSetup();

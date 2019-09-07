@@ -4,20 +4,20 @@
  *  Created on: 26 mar 2019
  *      Author: alfy
  */
-#include "Project-lib/L298N/L298N.h"
 #include "Project-lib/globalDef.h"
+#include "Project-lib/L298N/DCdriver.h"
 #include "Project-lib/msEnlib/msEnlib.h"
 
-extern L298N *mot[nMot];
+extern DCdriver *mot[nMot];
 
 void motSetup() {
 	/*Ordine INA e INB, per avere una rotazione oraria quando il braccio è in piano con la pinza a SINISTRA*/
-	mot[Mot1] = new L298N(EN1, IN1A, IN1B);
-	mot[Mot2] = new L298N(EN2, IN2A, IN2B);
-	mot[Mot3] = new L298N(EN3, IN3B, IN3A);
-	mot[Mot4] = new L298N(EN4, IN4B, IN4A);
-	mot[Mot5] = new L298N(EN5, IN5A, IN5B);
-	mot[Mot6] = new L298N(EN6, IN6A, IN6B);
+	mot[Mot1] = new DCdriver(EN1, IN1A, IN1B);
+	mot[Mot2] = new DCdriver(EN2, IN2A, IN2B);
+	mot[Mot3] = new DCdriver(EN3, IN3B, IN3A);
+	mot[Mot4] = new DCdriver(EN4, IN4B, IN4A);
+	mot[Mot5] = new DCdriver(EN5, IN5A, IN5B);
+	mot[Mot6] = new DCdriver(EN6, IN6A, IN6B);
 }
 
 void motorStateMachine() {

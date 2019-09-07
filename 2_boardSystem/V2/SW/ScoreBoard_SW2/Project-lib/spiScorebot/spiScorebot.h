@@ -3,9 +3,6 @@
 #include "Arduino.h"
 #include <stdlib.h>
 #include "../globalDef.h"
-#include "../msEnlib/msEnlib.h"
-#include "../adcReader/adcReader.h"
-#include "SpiPack.h"
 
 
 namespace InternalDevice{
@@ -13,12 +10,10 @@ namespace InternalDevice{
 	class SpiDevice{
 	public:
 		static SpiDevice& getIstance();
-
-		//*** EXECUTION ***//
+		//## EXECUTION ##//
 		void isrFunxISP();
 		void dataLoad();
-
-		//*** GET VALUE ***//
+		//## GET VALUE ##//
 		byte spiAvailable();
 		Pack& getLastRecive();
 
@@ -26,7 +21,7 @@ namespace InternalDevice{
 		Pack sp[2];
 		volatile byte idTransf, startConv, dRecive, newRecive;
 		static SpiDevice *instance;
-		//*** HARDWARE ***//
+		//## HARDWARE ##//
 		SpiDevice();
 	};
 }//END namespace SpiLib_Ard

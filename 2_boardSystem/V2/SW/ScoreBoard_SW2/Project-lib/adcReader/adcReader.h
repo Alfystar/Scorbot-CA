@@ -28,6 +28,7 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include "../globalDef.h"
+using namespace spiPack;
 
 //data la frequenza di lettura, ogni campo viene mantenuto per circa ~1ms
 #define history 8
@@ -35,7 +36,7 @@
 namespace InternalDevice {
 class AdcDevice {
 public:
-	//*** HARDWARE ***//
+	//### HARDWARE ###//
 	AdcDevice();
 	AdcDevice(adcRef vRef);
 	AdcDevice(bool diff);
@@ -46,15 +47,15 @@ public:
 	void setDiffRead(bool active);
 	bool getDiffRead();
 
-	//*** EXECUTION ***//
+	//### EXECUTION ###//
 	void isrFunxAdc();
-	int pinSelect(motCode mot);
+	byte pinSelect(motCode mot);
 
-	//*** GET VALUE ***//
+	//### GET VALUE ###//
 	mCurrent& getLastCicle();
 	short getCurrentSum(motCode mot);
 
-	//*** DEBUG & PRINT ***//
+	//### DEBUG & PRINT ###//
 	void debugPrintAdc();
 
 private:
@@ -71,22 +72,6 @@ private:
 };
 
 }//END namespace InternalDevice
-
-//*** HARDWARE ***//
-void setUpADC();
-
-//*** ELABORATION ***//
-//Seleziona combinazione in ingresso per leggere motore e togliere Offset
-void isrFunxAdc();
-int difPinSelect(int p);
-
-//*** GET VALUE ***//
-short getAmpMot(byte m);
-mCurrent *getAmpMots();		//puntatore di ritorno FERMO per circa 1ms
-short getSumMot(byte i);
-
-//*** DEBUG & PRINT ***//
-void debugPrintAdc();
 
 #ifndef __IN_ECLIPSE__
 #include "adcReader.cpp"

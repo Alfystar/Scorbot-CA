@@ -34,7 +34,7 @@ void Pack::printPack() {
 		Serial.println("Master Ask 'PWMsend_EnRet', Parameter:");
 		/*Recive*/
 		for (byte i = 0; i < nMot; i++) {
-			Serial.print("\tspeed[Mot");
+			Serial.print("\tSpeed[Mot");
 			Serial.print(i+1);
 			Serial.print("]:");
 			Serial.println(this->getPwm()[Mot1 + i]);
@@ -135,10 +135,13 @@ void Pack::printPack() {
 	break;
 	case goHome:
 		Serial.println("Master Ask 'goHome', Parameter:\n");
-		/*Recive*/
+		//Recive//
 		Serial.print("\tNotting\n");
-		/*Send*/
+		//Send//
 		Serial.print("\tNotting\n");
+		break;
+	case invalid:
+		Serial.println("Pack type is invalid, should be an error on Connection or inside the Pack compiling.");
 		break;
 	}
 
@@ -351,7 +354,7 @@ void Pack::setMotorLimit(packDest dest, motCode mot, short enMax, short enMin, s
 	//Set variable inside the pack to send-out
 	this->setMaxEn(dest, mot, enMax);
 	this->setMinEn(dest, mot, enMin);
-	this->setMaxCurrentMed(dest, mot, enMax);
+	this->setMaxCurrentMed(dest, mot, cur);
 }
 
 void Pack::setMaxEn(packDest dest, motCode mot, short en) {
@@ -416,7 +419,7 @@ mCurrent &Pack::getCurrent() {
 #endif
 }
 
-mAll &Pack::getSens() noexcept(false) {
+mAll &Pack::getSens(){
 	if(this->data.type==PWMsend_AllRet)
 		return this->data.forRasp.up.sens;
 #ifndef ScorboarFirmware
@@ -436,7 +439,7 @@ settingsBoard &Pack::getSetting(packDest dest) {
 		return this->data.forRasp.up.prop;
 }
 
-settingsBoard &Pack::getSetting() noexcept(false) {
+settingsBoard &Pack::getSetting(){
 #ifndef ScorboarFirmware
 	if(this->data.type!=SettingSet && this->data.type!=SettingGet)
 		throw typePackWrongExcept("This pack not contain Settings");

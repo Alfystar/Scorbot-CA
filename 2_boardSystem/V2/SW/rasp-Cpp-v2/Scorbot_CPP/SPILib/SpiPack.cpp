@@ -17,7 +17,7 @@ namespace spiPack {
     }
 
     Pack::~Pack() {
-//for now nothings to delete
+        //for now nothings to delete
     }
 
     void Pack::clearPack() {
@@ -25,6 +25,127 @@ namespace spiPack {
     }
 
     void Pack::printPack() {
+#ifdef ScorboarFirmware
+        switch (this->getPackType()) {
+	case PWMsend_EnRet:
+	case PWMsend_CurRet:
+	case PWMsend_AllRet:
+	{
+		Serial.println("Master Ask 'PWMsend_EnRet', Parameter:");
+		/*Recive*/
+		for (byte i = 0; i < nMot; i++) {
+			Serial.print("\tSpeed[Mot");
+			Serial.print(i+1);
+			Serial.print("]:");
+			Serial.println(this->getPwm()[Mot1 + i]);
+		}
+		/*Send*/
+		if(this->getPackType()==PWMsend_EnRet || this->getPackType()==PWMsend_AllRet)
+		{
+			Serial.println("Sended Encoder Step:");
+			for (byte i = 0; i < nMot; i++) {
+				Serial.print("\tencoder[Mot");
+				Serial.print(i+1);
+				Serial.print("]:");
+				Serial.println(this->getEncoder()[Mot1 + i]);
+			}
+		}
+		if(this->getPackType()==PWMsend_CurRet || this->getPackType()==PWMsend_AllRet)
+		{
+			Serial.println("Sended Current Value:");
+			for (byte i = 0; i < nMot; i++) {
+				Serial.print("\tcurrent[Mot");
+				Serial.print(i + 1);
+				Serial.print("]:");
+				Serial.println(this->getCurrent()[Mot1 + i]);
+			}
+		}
+	}
+	break;
+
+	case CurrentGet:
+	{
+		Serial.println("Master Ask 'CurrentGet', Parameter:");
+		/*Recive*/
+		Serial.print("\tNotting");
+
+		/*Send*/
+		Serial.println("Sended Current Value:");
+		for (byte i = 0; i < nMot; i++) {
+			Serial.print("\tcurrent[Mot");
+			Serial.print(i + 1);
+			Serial.print("]:");
+			Serial.println(this->getCurrent()[Mot1 + i]);
+		}
+	}
+	break;
+	case SettingSet:
+	case SettingGet:
+	{
+		if(this->getPackType()==SettingSet)
+		{
+			Serial.println("Master Ask 'SettingSet':");
+			Serial.println("Recive new Settings:");
+		}
+		else
+		{
+			Serial.println("Master Ask 'SettingGet':");
+			Serial.println("Sending my Settings:");
+		}
+
+		settingsBoard& sets = this->getSetting();
+
+		Serial.print("#maxEn:\t\t");
+		for (byte i = 0; i < nMot; i++) {
+
+			Serial.print("\t");
+			Serial.print(sets.maxEn[Mot1 + i]);
+		}
+		Serial.println();
+
+		Serial.print("#minEn:\t\t");
+		for (byte i = 0; i < nMot; i++) {
+
+			Serial.print("\t");
+			Serial.print(sets.minEn[Mot1 + i]);
+		}
+		Serial.println();
+
+		Serial.print("#maxCurrMed:");
+		for (byte i = 0; i < nMot; i++) {
+
+			Serial.print("\t");
+			Serial.print(sets.maxCurrMed[Mot1 + i]);
+		}
+		Serial.println();
+
+		Serial.print("AdcVref set: ");
+		switch(sets.adcVref){
+		case in1V1:
+			Serial.println("Internal Reference at 1.1V");
+			break;
+		case in2V56:
+			Serial.println("Internal Reference at 2.56V");
+			break;
+		case ext:
+			Serial.println("External Reference (trimmer)");
+			break;
+		}
+	}
+	break;
+	case goHome:
+		Serial.println("Master Ask 'goHome', Parameter:\n");
+		//Recive//
+		Serial.print("\tNotting\n");
+		//Send//
+		Serial.print("\tNotting\n");
+		break;
+	case invalid:
+		Serial.println("Pack type is invalid, should be an error on Connection or inside the Pack compiling.");
+		break;
+	}
+
+#else //Start Rasp print pack
         switch (this->data.type) {
             case PWMsend_EnRet:
                 printf("PackType: PWMsend_EnRet\n");
@@ -112,6 +233,7 @@ namespace spiPack {
                 break;
         }
         printf("\n-------------------------------------------------------\n");
+#endif //END Rasp print pack
     }
 
     int Pack::sizePack() {
@@ -232,7 +354,7 @@ namespace spiPack {
         //Set variable inside the pack to send-out
         this->setMaxEn(dest, mot, enMax);
         this->setMinEn(dest, mot, enMin);
-        this->setMaxCurrentMed(dest, mot, enMax);
+        this->setMaxCurrentMed(dest, mot, cur);
     }
 
     void Pack::setMaxEn(packDest dest, motCode mot, short en) {
@@ -297,7 +419,7 @@ namespace spiPack {
 #endif
     }
 
-    mAll &Pack::getSens() noexcept(false) {
+    mAll &Pack::getSens(){
         if(this->data.type==PWMsend_AllRet)
             return this->data.forRasp.up.sens;
 #ifndef ScorboarFirmware
@@ -317,7 +439,7 @@ namespace spiPack {
             return this->data.forRasp.up.prop;
     }
 
-    settingsBoard &Pack::getSetting() noexcept(false) {
+    settingsBoard &Pack::getSetting(){
 #ifndef ScorboarFirmware
         if(this->data.type!=SettingSet && this->data.type!=SettingGet)
             throw typePackWrongExcept("This pack not contain Settings");

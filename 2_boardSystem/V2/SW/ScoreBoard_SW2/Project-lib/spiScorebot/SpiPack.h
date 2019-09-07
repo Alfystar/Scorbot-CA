@@ -81,7 +81,7 @@ namespace spiPack {
         char buf[sizeof(recType)];
     } spi2Rasp;
 
-/** ## -------------------------------------------------------- ## **/
+//## -------------------------------------------------------- ##//
     typedef struct SPIPACK_ {
         packType type;
         spi2Ard forArd;

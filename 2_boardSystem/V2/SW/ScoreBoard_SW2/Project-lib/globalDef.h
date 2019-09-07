@@ -9,7 +9,16 @@
 #define PROJECT_LIB_GLOBALDEF_H_
 
 #include "spiScorebot/SpiPack.h"
+#include "spiScorebot/spiScorebot.h"
+#include "adcReader/adcReader.h"
+#include "msEnlib/msEnlib.h"
+
 using namespace spiPack;
+extern settingsBoard sets;
+
+using namespace InternalDevice;
+extern class SpiDevice* spi;
+extern class AdcDevice* adc;
 
 #define motEn 38 //PD7
 
@@ -44,7 +53,5 @@ using namespace spiPack;
 #define EN6 8		//PH5
 #define IN6A 47		//PL2
 #define IN6B 46		//PL3
-
-extern settingsBoard sets;
 
 #endif /* PROJECT_LIB_GLOBALDEF_H_ */

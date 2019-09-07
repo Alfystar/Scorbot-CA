@@ -15,138 +15,18 @@
 
 #include "adcReader.h"
 
-/* LOCAL VAR */
-mCurrent ampMot[history];
-volatile byte indexADC = 0; //attuale ultima misura
-//start value
-volatile byte newReadId = Mot1;
-volatile byte oldReadId = Mot1;
-
-/*** HARDWARE ***/
-void setUpADC() {
-	memset((void *) ampMot, 0, sizeof(int) * nMot * history); //pulisco la memoria
-	//ADMUX – ADC Multiplexer Selection Register
-	ADMUX = (0 << REFS0) | (1 << REFS1); // 1.1V Interni Arduino
-
-	DIDR0 = 0x7F; //imposto tutti i pin da A0:A6 come pin di input analiogico
-
-	/* ADCSRB – ADC Control and Status Register B */
-	ADCSRB &= 0xF8;	// Imposto la modalità di free running, e lascio inalterato il resto
-	difPinSelect(Mot1); //imposto il primo pin da leggere per la lettura sporca
-
-	/* ADCSRA – ADC Control and Status Register A */
-	//A queste condizioni ho 125Khz di clock all'adc e una conversione ogni 14*1/125KHz= 112us ~ 8,9Khz  (14 perchè letto in differential mode)
-	ADCSRA |= (1 << ADEN) | (1 << ADATE); //Attiva ADC, Seleziona l'autoTrigger scelto in ADCSRB
-	ADCSRA | 0x7; //prescaler a 1/128 Clock
-	ADCSRA |= (1 << ADSC);	//avvia 1° conversione
-	/** Prima lettura è sporca **/
-	while (ADCSRA & (1 << ADIF))
-		; //wait first reading
-	ADCSRA |= (1 << ADIE); //attiva l'interrupt
-}
-
-//todo: funzione di selezione del vref Aref/1.1V/2.56V
-
-/*** ELABORATION ***/
-void isrFunxAdc() {
-	// Must read low first
-	int g = ((int) ADCL | ((int) ADCH << 8));
-	//if (g > 980)
-	//	g = 0;
-	ampMot[oldReadId][indexADC] = g;
-	oldReadId = newReadId;
-	if (oldReadId == 0)
-		indexADC = (indexADC + 1) % history;
-	newReadId = (newReadId + 1) % nMot;
-	difPinSelect(newReadId);
-}
-/* Tabella Codice/significato dei mux
- MUX5:0  +    -   G
- 010000 ADC0 ADC1 1×   Corrente mot 1
- 010001 ADC1 ADC1 1×   XXXXXX----NON IN USO
- 010010 ADC2 ADC1 1×   Corrente mot 2
- 010011 ADC3 ADC1 1×   Corrente mot 3
- 010100 ADC4 ADC1 1×   Corrente mot 4
- 010101 ADC5 ADC1 1×   Corrente mot 5
- 010110 ADC6 ADC1 1×   Corrente mot 6
- 010111 ADC7 ADC1 1×
- */
-//todo input differenziale o diretto
-int difPinSelect(int p) {
-	byte val = ADMUX & 0xE0; //Cancello il precedente vale selezionato, mantenendo le impostazioni
-	switch (p) {
-	case Mot1:
-		val |= 0x10;
-		break;
-	case Mot2:
-		val |= 0x12;
-		break;
-	case Mot3:
-		val |= 0x13;
-		break;
-	case Mot4:
-		val |= 0x14;
-		break;
-	case Mot5:
-		val |= 0x15;
-		break;
-	case Mot6:
-		val |= 0x16;
-		break;
-	default:
-		return -1;
-		break;
-	}
-	ADMUX = val;
-	return 0;
-}
-
-/*** GET VALUE ***/
-short getAmpMot(byte m) {
-	return ampMot[m][indexADC];
-}
-
-//puntatore di ritorno FERMO per circa 1ms
-mCurrent *getAmpMots() {
-	return &ampMot[((indexADC - 1) + history) % history];
-}
-
-short sumCurr;
-short getSumMot(byte i) {
-	sumCurr = 0;
-	for (byte j = 0; j < history; j++)
-		sumCurr += ampMot[i][j];
-	return sumCurr;
-}
-
-/*** DEBUG & PRINT ***/
-void debugPrintAdc() {
-	Serial.print("Mot 1 diff=");
-	Serial.print(getAmpMot(Mot1));
-	Serial.print("  Mot 2 diff=");
-	Serial.print(getAmpMot(Mot2));
-	Serial.print("  Mot 3 diff=");
-	Serial.print(getAmpMot(Mot3));
-	Serial.print("  Mot 4 diff=");
-	Serial.print(getAmpMot(Mot4));
-	Serial.print("  Mot 5 diff=");
-	Serial.print(getAmpMot(Mot5));
-	Serial.print("  Mot 6 diff=");
-	Serial.println(getAmpMot(Mot6));
-}
-
 namespace InternalDevice {
 
 AdcDevice::AdcDevice() {
-	AdcDevice::AdcDevice(false, in1V1);
+	AdcDevice(false, in1V1);
 }
 
 AdcDevice::AdcDevice(adcRef vRef) {
-	AdcDevice::AdcDevice(false, vRef);
+	AdcDevice(false, vRef);
 }
 
 AdcDevice::AdcDevice(bool diff) {
-	AdcDevice::AdcDevice(diff, in1V1);
+	AdcDevice(diff, in1V1);
 }
 
 AdcDevice::AdcDevice(bool diff, adcRef vRef) {
@@ -159,17 +39,17 @@ AdcDevice::AdcDevice(bool diff, adcRef vRef) {
 void AdcDevice::setUpADC() {
 	DIDR0 = 0x7F; //imposto tutti i pin da A0:A6 come pin di input analiogico
 
-	//* ADCSRB – ADC Control and Status Register B *//
+	// ADCSRB – ADC Control and Status Register B //
 	ADCSRB &= 0xF8;	// Imposto la modalità di free running, e lascio inalterato il resto
 
-	//* ADCSRA – ADC Control and Status Register A *//
+	// ADCSRA – ADC Control and Status Register A //
 	//A queste condizioni ho 125Khz di clock all'adc e una conversione ogni 14*1/125KHz= 112us ~ 8,9Khz  (14 perchè letto in differential mode)
 	ADCSRA |= (1 << ADEN) | (1 << ADATE); //Attiva ADC, Seleziona l'autoTrigger scelto in ADCSRB
 	ADCSRA | 0x7; //prescaler a 1/128 Clock
 
 	this->pinSelect(Mot1); //imposto il primo pin da leggere per la lettura sporca
 	ADCSRA |= (1 << ADSC);	//avvia 1° conversione
-	/** Prima lettura è sporca **/
+	// Prima lettura è sporca //
 	while (ADCSRA & (1 << ADIF))
 		; //wait first reading
 	ADCSRA |= (1 << ADIE); //attiva l'interrupt
@@ -238,7 +118,7 @@ void AdcDevice::isrFunxAdc() {
  010110 ADC6 ADC1 1×   Corrente mot 6 - Offset
  010111 ADC7 ADC1 1×
  */
-int AdcDevice::pinSelect(motCode mot) {
+byte AdcDevice::pinSelect(motCode mot) {
 	byte val = ADMUX & 0xE0; //mantenengo le impostazioni
 	switch (mot) {
 	case Mot1:
@@ -270,14 +150,14 @@ int AdcDevice::pinSelect(motCode mot) {
 }
 //puntatore di ritorno FERMO per circa 1ms
 mCurrent& AdcDevice::getLastCicle() {
-	return &this->ampMot[((indexADC - 1) + history) % history];
+	return this->ampMot[((indexADC - 1) + history) % history];
 }
 
 short AdcDevice::getCurrentSum(motCode mot) {
 	this->sumCur = 0;
 	//todo check access on array
 	for (byte j = 0; j < history; j++)
-		sumCurr += ampMot[j][mot];
+		this->sumCur += this->ampMot[j][mot];
 	return this->sumCur;
 }
 

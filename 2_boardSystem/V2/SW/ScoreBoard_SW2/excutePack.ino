@@ -1,5 +1,5 @@
 #include "Project-lib/globalDef.h"
-extern L298N *mot[nMot];
+extern DCdriver *mot[nMot];
 
 #define timeOut 2000
 

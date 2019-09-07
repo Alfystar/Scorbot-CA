@@ -12,7 +12,7 @@
 #include <bits/exception.h>
 using std::max;
 #else
-
+#include <Arduino.h>
 #endif
 
 namespace spiPack {
@@ -81,7 +81,7 @@ namespace spiPack {
         char buf[sizeof(recType)];
     } spi2Rasp;
 
-/** ## -------------------------------------------------------- ## **/
+//## -------------------------------------------------------- ##//
     typedef struct SPIPACK_ {
         packType type;
         spi2Ard forArd;

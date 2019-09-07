@@ -21,8 +21,7 @@ namespace InternalDevice {
 		SPCR = (1 << SPIE) | (1 << SPE); 	//attiva spi e abilita interrupt
 		SPDR = 5;	 						//predispomgo che al primo invio invio 0
 	}
-
-	/*** ELABORATION ***/
+	//## ELABORATION ##//
 	void SpiDevice::isrFunxISP() {
 		if (!this->startConv) {	//raps ha appena letto 0 e inviato tipo
 			this->sp[!this->dRecive].setPackType((packType) SPDR); //mi segno tipo di comunicazione
@@ -89,11 +88,11 @@ namespace InternalDevice {
 			p.setEncoder(*captureEn());
 			break;
 		case PWMsend_CurRet:
-			p.setCurrent(*getAmpMots());
+			p.setCurrent(adc->getLastCicle());
 			break;
 		case PWMsend_AllRet:
 			p.setEncoder(*captureEn());
-			p.setCurrent(*getAmpMots());
+			p.setCurrent(adc->getLastCicle());
 			break;
 		case SettingGet:
 			p.setSetting(sets, pack4Rasp);
@@ -106,8 +105,7 @@ namespace InternalDevice {
 			break;
 		}
 	}
-
-	/*** GET VALUE ***/
+	//## GET VALUE ##//
 	byte SpiDevice::spiAvailable() {
 		if (this->newRecive != 0) {
 			this->newRecive = 0;

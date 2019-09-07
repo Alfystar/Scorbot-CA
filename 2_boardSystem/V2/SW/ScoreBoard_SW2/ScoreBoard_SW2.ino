@@ -1,17 +1,15 @@
 #include "Arduino.h"
 #include "Project-lib/globalDef.h"
-#include "Project-lib/adcReader/adcReader.h"
-#include "Project-lib/msEnlib/msEnlib.h"
-#include "Project-lib/spiScorebot/spiScorebot.h"
 
 #define SERIAL_PRINT	//attiva/disattiva compilazione del codice per printare in seriale
 #define sanityDelay 250	//tempo ms di attesa prima di ri-scansionare se il robot è ok
 
 settingsBoard sets;
-using namespace InternalDevice;
 SpiDevice *spi;
+AdcDevice *adc;
 
-L298N *mot[nMot];
+using namespace Motor;
+DCdriver *mot[nMot];
 
 //The setup function is called once at startup of the sketch
 void setup() {
@@ -21,7 +19,7 @@ void setup() {
 	Serial.println("\tSetUp SPI");
 	spi = &SpiDevice::getIstance();
 	Serial.println("\tSetUp ADC");
-	setUpADC();
+	adc = new AdcDevice();
 	Serial.println("\tSetUp Scorbot Sensors");
 	dsubFeedSetup();
 	Serial.println("\tMotor Enable");
@@ -85,34 +83,35 @@ void sanityChek(int wait) {
 		 }
 		 }*/
 		for (byte i = 0; i < nMot; i++) {
-			if (sets.maxCurrMed[i] < getSumMot(i)) {
+			if (sets.maxCurrMed[i] < adc->getCurrentSum((motCode)i)) {
 				mot[i]->freeRun();
 				Serial.print("nMot[");
 				Serial.print(i + 1);
 				Serial.print("] overcurrent: ");
 				Serial.print(sets.maxCurrMed[i]);
 				Serial.print(" > ");
-				Serial.println(getSumMot(i));
+				Serial.println(adc->getCurrentSum((motCode)i));
 			}
 		}
 		sanityTime = millis();
 	}
 }
 
-/** SPI INTERRUPT SERVICE **/
+
+//## SPI INTERRUPT SERVICE ##//
 //Si attiva alla fine dell'invio di 1 byte
 ISR(SPI_STC_vect) {
 	spi->isrFunxISP();
 }
 
-/** ADC INTERRUPT SERVICE **/
+//## ADC INTERRUPT SERVICE ##//
 //Si attiva ogni completamento di lettura, la salva e progamma la successiva
 //procede automaticamente
 ISR(ADC_vect) {
-	isrFunxAdc();
+	adc->isrFunxAdc();
 }
 
-/** PCINT INTERRUPT SERVICE **/
+//## PCINT INTERRUPT SERVICE ##//
 //Al Cambio di uno dei pin degli Encoder, li salva tutti in memoria su un buffer circolare
 //per elaborare lo stato in un momento successivo durante il programma
 ISR(PCINT0_vect) {
