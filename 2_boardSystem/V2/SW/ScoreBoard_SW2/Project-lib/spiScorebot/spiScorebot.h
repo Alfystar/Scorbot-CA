@@ -8,48 +8,28 @@
 #include "SpiPack.h"
 
 
-namespace SpiLib_Ard
-{
-using namespace spiPack;
-class SpiDevice{
-public:
-	static SpiDevice& getIstance();
+namespace InternalDevice{
+	using namespace spiPack;
+	class SpiDevice{
+	public:
+		static SpiDevice& getIstance();
 
-	/*** ELABORATION ***/
-	void isrFunxISP();
-	void dataLoad();
+		//*** EXECUTION ***//
+		void isrFunxISP();
+		void dataLoad();
 
-	/*** GET VALUE ***/
-	byte spiAvailable();
-	Pack& getLastRecive();
+		//*** GET VALUE ***//
+		byte spiAvailable();
+		Pack& getLastRecive();
 
-private:
-	Pack sP[2];
-	byte idTransf;
-	byte startConv;
-	byte dRecice;
-	byte newRecive;
-	static SpiDevice& instance;
-
-	SpiDevice();
-};
-
-}
-
-/*** HARDWARE ***/
-void spiSetup();
-
-/*** ELABORATION ***/
-void isrFunxISP();
-void preparaDati(Pack& p);
-int sizeTypePack(Pack& p);
-
-/*** GET VALUE ***/
-Pack* getLastRecive();
-byte spiAvailable();
-
-/*** DEBUG & PRINT ***/
-void printSpiPack(Pack& p);
+	private:
+		Pack sp[2];
+		volatile byte idTransf, startConv, dRecive, newRecive;
+		static SpiDevice *instance;
+		//*** HARDWARE ***//
+		SpiDevice();
+	};
+}//END namespace SpiLib_Ard
 
 #ifndef __IN_ECLIPSE__
 #include "spiScorebot.cpp"

@@ -8,6 +8,8 @@
 #define sanityDelay 250	//tempo ms di attesa prima di ri-scansionare se il robot è ok
 
 settingsBoard sets;
+using namespace InternalDevice;
+SpiDevice *spi;
 
 L298N *mot[nMot];
 
@@ -17,18 +19,13 @@ void setup() {
 	Serial.begin(57600);
 	Serial.println("Start Setup");
 	Serial.println("\tSetUp SPI");
-	spiSetup();
+	spi = &SpiDevice::getIstance();
 	Serial.println("\tSetUp ADC");
 	setUpADC();
 	Serial.println("\tSetUp Scorbot Sensors");
 	dsubFeedSetup();
 	Serial.println("\tMotor Enable");
 	motSetup();
-	/* PER ORA UN CORTO CIRCUITO
-	 Serial.println("\Relè Mot Enable");
-	 pinMode(motEn, OUTPUT);
-	 digitalWrite(motEn, 1);
-	 */
 	Serial.println("\tMemory Load of Settings");
 	memoryLoad();
 	Serial.println("\tGlobal Interrupt Enable");
@@ -44,12 +41,12 @@ Pack * r;
 
 void loop() {
 	sanityChek(sanityDelay);
-	if (spiAvailable()) {
-		r = getLastRecive();
+	if (spi->spiAvailable()) {
+		r = &spi->getLastRecive();
 		excutePack(*r);
 
 #ifdef SERIAL_PRINT
-		printSpiPack(*r);
+		r->printPack();
 #endif
 	}
 
@@ -60,8 +57,7 @@ void loop() {
 	/*Funzione di Print Seriale NON BLOCCANTE*/
 	if (millis() > timePrint + 100) {
 
-		//Serial.println(getAmpMot(cMot1));
-
+		//Serial.println(getAmpMot(Mot1));
 		//debugPrintAdc();
 		//enDebug();
 		//printSteps();
@@ -106,7 +102,7 @@ void sanityChek(int wait) {
 /** SPI INTERRUPT SERVICE **/
 //Si attiva alla fine dell'invio di 1 byte
 ISR(SPI_STC_vect) {
-	isrFunxISP();
+	spi->isrFunxISP();
 }
 
 /** ADC INTERRUPT SERVICE **/

@@ -29,22 +29,64 @@
 #include <avr/interrupt.h>
 #include "../globalDef.h"
 
-/*** HARDWARE ***/
+//data la frequenza di lettura, ogni campo viene mantenuto per circa ~1ms
+#define history 8
+
+namespace InternalDevice {
+class AdcDevice {
+public:
+	//*** HARDWARE ***//
+	AdcDevice();
+	AdcDevice(adcRef vRef);
+	AdcDevice(bool diff);
+	AdcDevice(bool diff, adcRef vRef);
+
+	void setVRefSource(adcRef vRef);
+	adcRef getVRefSource();
+	void setDiffRead(bool active);
+	bool getDiffRead();
+
+	//*** EXECUTION ***//
+	void isrFunxAdc();
+	int pinSelect(motCode mot);
+
+	//*** GET VALUE ***//
+	mCurrent& getLastCicle();
+	short getCurrentSum(motCode mot);
+
+	//*** DEBUG & PRINT ***//
+	void debugPrintAdc();
+
+private:
+	mCurrent ampMot[history];
+	volatile byte indexADC = 0; //attuale ultima misura
+	volatile motCode newReadId = Mot1;
+	volatile motCode oldReadId = Mot1;
+	short sumCur = 0;
+	boolean diffRead = false;
+	adcRef vRef = in1V1;
+
+	void setUpADC();
+	void historyClear();
+};
+
+}//END namespace InternalDevice
+
+//*** HARDWARE ***//
 void setUpADC();
 
-/*** ELABORATION ***/
+//*** ELABORATION ***//
 //Seleziona combinazione in ingresso per leggere motore e togliere Offset
 void isrFunxAdc();
 int difPinSelect(int p);
 
-/*** GET VALUE ***/
+//*** GET VALUE ***//
 short getAmpMot(byte m);
 mCurrent *getAmpMots();		//puntatore di ritorno FERMO per circa 1ms
 short getSumMot(byte i);
 
-/*** DEBUG & PRINT ***/
+//*** DEBUG & PRINT ***//
 void debugPrintAdc();
-void debugPrintAdcOff();
 
 #ifndef __IN_ECLIPSE__
 #include "adcReader.cpp"
