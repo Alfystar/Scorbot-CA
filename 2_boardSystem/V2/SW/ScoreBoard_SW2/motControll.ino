@@ -5,8 +5,8 @@
  *      Author: alfy
  */
 #include "Project-lib/globalDef.h"
-#include "Project-lib/L298N/DCdriver.h"
 #include "Project-lib/msEnlib/msEnlib.h"
+#include "Project-lib/Motor/DCdriver.h"
 
 extern DCdriver *mot[nMot];
 
