@@ -16,7 +16,7 @@
 namespace spiPack {
 }    //to mute the compiler (￣Д￣)
 using namespace spiPack;
-extern settingsBoard sets;
+extern settingsBoard globSets;
 
 namespace InternalDevice {
 }    //to mute the compiler (￣Д￣)

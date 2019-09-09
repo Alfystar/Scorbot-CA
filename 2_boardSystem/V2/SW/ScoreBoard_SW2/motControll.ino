@@ -8,16 +8,53 @@
 #include "Project-lib/msEnlib/msEnlib.h"
 #include "Project-lib/Motor/DCdriver.h"
 
-extern DCdriver *mot[nMot];
+extern DCdriverLimit *mot[nMot];
 
 void motSetup() {
-	/*Ordine INA e INB, per avere una rotazione oraria quando il braccio è in piano con la pinza a SINISTRA*/
-	mot[Mot1] = new DCdriver(EN1, IN1A, IN1B);
-	mot[Mot2] = new DCdriver(EN2, IN2A, IN2B);
-	mot[Mot3] = new DCdriver(EN3, IN3B, IN3A);
-	mot[Mot4] = new DCdriver(EN4, IN4B, IN4A);
-	mot[Mot5] = new DCdriver(EN5, IN5A, IN5B);
-	mot[Mot6] = new DCdriver(EN6, IN6A, IN6B);
+    setMotFreq(globSets.freq);
+    //TODO: verificare sia vero quando scritto sotto
+    //Ordine INA e INB, per avere una rotazione oraria
+    //guardando il braccio di profilo con la pinza a SINISTRA
+    //TODO: aggiungere il corretto parametro clockpos
+    mot[Mot1] = new DCdriverLimit(EN1, IN1A, IN1B, Mot1, globSets, true);
+    mot[Mot2] = new DCdriverLimit(EN2, IN2A, IN2B, Mot2, globSets, true);
+    mot[Mot3] = new DCdriverLimit(EN3, IN3B, IN3A, Mot3, globSets, true);
+    mot[Mot4] = new DCdriverLimit(EN4, IN4B, IN4A, Mot4, globSets, true);
+    mot[Mot5] = new DCdriverLimit(EN5, IN5A, IN5B, Mot5, globSets, true);
+    mot[Mot6] = new DCdriverLimit(EN6, IN6A, IN6B, Mot6, globSets, true);
+    /*
+     mot[Mot1] = new DCdriver(EN1, IN1A, IN1B);
+     mot[Mot2] = new DCdriver(EN2, IN2A, IN2B);
+     mot[Mot3] = new DCdriver(EN3, IN3B, IN3A);
+     mot[Mot4] = new DCdriver(EN4, IN4B, IN4A);
+     mot[Mot5] = new DCdriver(EN5, IN5A, IN5B);
+     mot[Mot6] = new DCdriver(EN6, IN6A, IN6B);
+     */
+}
+
+void setMotFreq(pwmFreq freq) {
+    switch (freq) {
+        case hz30:
+            TCCR3B = (TCCR3B & B11111000) | B00000101; // set timer 3 divisor to  1024 for PWM frequency of    30.64 Hz
+            TCCR4B = (TCCR4B & B11111000) | B00000101; // set timer 4 divisor to  1024 for PWM frequency of    30.64 Hz
+            break;
+        case hz120:
+            TCCR3B = (TCCR3B & B11111000) | B00000100; // set timer 3 divisor to   256 for PWM frequency of   122.55 Hz
+            TCCR4B = (TCCR4B & B11111000) | B00000100; // set timer 4 divisor to   256 for PWM frequency of   122.55 Hz
+            break;
+        case hz490:
+            TCCR3B = (TCCR3B & B11111000) | B00000011; // set timer 3 divisor to    64 for PWM frequency of   490.20 Hz
+            TCCR4B = (TCCR4B & B11111000) | B00000011; // set timer 4 divisor to    64 for PWM frequency of   490.20 Hz
+            break;
+        case hz4k:
+            TCCR3B = (TCCR3B & B11111000) | B00000010; // set timer 3 divisor to     8 for PWM frequency of  3921.16 Hz
+            TCCR4B = (TCCR4B & B11111000) | B00000010; // set timer 4 divisor to     8 for PWM frequency of  3921.16 Hz
+            break;
+        case hz30k:
+            TCCR3B = (TCCR3B & B11111000) | B00000001; // set timer 3 divisor to     1 for PWM frequency of 31372.55 Hz
+            TCCR4B = (TCCR4B & B11111000) | B00000001; // set timer 4 divisor to     1 for PWM frequency of 31372.55 Hz
+            break;
+    }
 }
 
 void motorStateMachine() {

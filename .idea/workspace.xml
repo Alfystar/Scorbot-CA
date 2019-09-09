@@ -12,11 +12,36 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_086d" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/Motor Driver.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_Doc/Motor Driver.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/SPI-structures Class Diagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_Doc/SPI-structures Class Diagram.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard Object.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_Doc/ScorBoard Object.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp" beforeDir="false" afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_056d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_057d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_058d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_059d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_060d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_061d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_062f" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_063d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_064d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_065d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/SpiLib.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_Doc/SpiLib.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/SpiLib_Rasp.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_Doc/SpiLib_Rasp.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/Motor/DCdriver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/Motor/DCdriver.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/Motor/DCdriver.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/Motor/DCdriver.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/adcReader/adcReader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/adcReader/adcReader.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/msEnlib/circular_buffer/circular_buffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/msEnlib/circular_buffer/circular_buffer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib/SpiPack.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib/SpiPack.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/globalDef.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/globalDef.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/spiScorebot/spiScorebot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/spiScorebot/spiScorebot.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/ScoreBoard_SW2.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/ScoreBoard_SW2.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/excutePack.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/excutePack.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/memoriLoad.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/memoriLoad.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/motControll.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/motControll.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiPack/SpiPack.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiPack/SpiPack.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiPack/SpiPack.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiPack/SpiPack.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/link userfull.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib/link userfull.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -56,6 +81,7 @@
       <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiPack" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib" />
       <recent name="$PROJECT_DIR$/relase" />
       <recent name="$PROJECT_DIR$/relase/comC" />
     </key>
@@ -108,7 +134,7 @@
       <workItem from="1567790712942" duration="494000" />
       <workItem from="1567841371535" duration="823000" />
       <workItem from="1567873949084" duration="732000" />
-      <workItem from="1568014176025" duration="2249000" />
+      <workItem from="1568014176025" duration="6444000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
       <created>1568027375662</created>
@@ -117,7 +143,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568027375662</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
+      <created>1568027526977</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1568027526977</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

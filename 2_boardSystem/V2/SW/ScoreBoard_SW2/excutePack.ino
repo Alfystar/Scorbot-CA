@@ -1,5 +1,6 @@
 #include "Project-lib/globalDef.h"
-extern DCdriver *mot[nMot];
+
+extern DCdriverLimit *mot[nMot];
 
 #define timeOut 2000
 
@@ -32,7 +33,11 @@ void excutePack(Pack& p) {
         }
             break;
         case SettingSet: {
-            memorySave(p.getSetting(pack4Ard));
+            settingsBoard &s = p.getSetting(pack4Ard);
+            memorySave(s);
+            setMotFreq(s.freq);
+            adc->setDiffRead(s.diff);
+            adc->setVRefSource(s.adcVref);
         }
             break;
         case goHome: {

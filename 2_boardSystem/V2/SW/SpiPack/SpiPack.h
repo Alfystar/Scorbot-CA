@@ -7,14 +7,15 @@
 
 #ifndef ScorboarFirmware
 #warning ScorboarFirmware define not Declared, if you are compiling library to Arduino, add at the end of gcc compiler: -D ScorboarFirmware
+
 #include <exception>
 #include <string>
 #include <bits/exception.h>
+
 using std::max;
 #else
 #include <Arduino.h>
 #endif
-
 namespace spiPack {
 /// Enum Declaration for the comunication
     enum packDest {
@@ -35,23 +36,31 @@ namespace spiPack {
     enum adcRef {
         in1V1 = -1, in2V56 = -2, ext = -3
     };
+// set timer divisor to     1 for PWM frequency of 31372.55 Hz
+// set timer divisor to     8 for PWM frequency of  3921.16 Hz
+// set timer divisor to    64 for PWM frequency of   490.20 Hz
+// set timer divisor to   256 for PWM frequency of   122.55 Hz
+// set timer divisor to  1024 for PWM frequency of    30.64 Hz
+    enum pwmFreq {
+        hz30, hz120, hz490, hz4k, hz30k
+    };
 ///#################################################################
 ///Pack information structure
 
     typedef short mSpeed[nMot];
 
-    typedef struct settingsBoard_ {
-        short maxEn[nMot];        //valore massimo di passi prima di considerarsi fuori range di sicurezza (numeri pos)
-        short minEn[nMot];        //valore minimo di passi prima di considerarsi fuori range di sicurezza (numeri neg)
-        short maxCurrMed[nMot];    //valore massimo di corrente Efficace (con una media di 1 ms ~ ultime 8 letture), numero * 8 per semplificare i conti)
-        adcRef adcVref;
-        //todo: lettura diretta/differenziale
-        //todo: frequenza pwm
-    } settingsBoard;
-
     typedef short mCurrent[nMot];
 
     typedef short mEncoder[nMot];
+
+    typedef struct settingsBoard_ {
+        mEncoder maxEn;          //valore massimo di passi prima di considerarsi fuori range di sicurezza (numeri pos)
+        mEncoder minEn;          //valore minimo di passi prima di considerarsi fuori range di sicurezza (numeri neg)
+        mCurrent maxCurrMed;     //valore massimo di corrente Efficace (con una media di 1 ms ~ ultime 8 letture), numero * 8 per semplificare i conti)
+        adcRef adcVref;
+        bool diff;                  //true = offset delete, false = basicValue
+        pwmFreq freq;
+    } settingsBoard;
 
     typedef struct mAll_ {
         mEncoder en;
@@ -97,6 +106,8 @@ namespace spiPack {
         /// utility method
         void clearPack();
         void printPack();
+        static void printSetting(settingsBoard &set);
+
         /// send/recive information
         int sizePack();
         SPIPACK &getSPIPACK();
@@ -125,6 +136,8 @@ namespace spiPack {
         void setMinEn(packDest dest, motCode mot, short en);
         void setMaxCurrentMed(packDest dest, motCode mot, short current);
         void setAdcRef(packDest dest, adcRef adc);
+        void setAdcDiff(packDest dest, bool diff);
+        void setPWMfreq(packDest dest, pwmFreq freq);
         /// pack Data read
 
 #ifndef Arduino_h

@@ -96,7 +96,7 @@ namespace InternalDevice {
                 p.setCurrent(adc->getLastCicle());
 			break;
             case SettingGet:
-                p.setSetting(sets, pack4Rasp);
+                p.setSetting(globSets, pack4Rasp);
 			break;
             case SettingSet:
 			break;

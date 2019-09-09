@@ -62,13 +62,13 @@ namespace InternalDevice {
         this->vRef = vRef;
         switch (vRef) {
             case in1V1:
-                ADMUX = (0 << REFS0) | (1 << REFS1); // 1.1V Interni Arduino
+                ADMUX = (0 << REFS0) | (1 << REFS1); // 1.1V Internal Arduino
                 break;
             case in2V56:
-                //todo
+                ADMUX = (1 << REFS0) | (1 << REFS1); // 2.56V Internal Arduino
                 break;
             case ext:
-                //todo
+                ADMUX = (0 << REFS0) | (0 << REFS1); // Ext Vref
                 break;
         }
     }

@@ -27,31 +27,49 @@ namespace spiPack {
     void Pack::printPack() {
 #ifdef ScorboarFirmware
         switch (this->getPackType()) {
-        case PWMsend_EnRet:
-        case PWMsend_CurRet:
-        case PWMsend_AllRet:
-        {
-            Serial.println("Master Ask 'PWMsend_EnRet', Parameter:");
-            /*Recive*/
-            for (byte i = 0; i < nMot; i++) {
-                Serial.print("\tSpeed[Mot");
-                Serial.print(i+1);
-                Serial.print("]:");
-                Serial.println(this->getPwm()[Mot1 + i]);
-            }
-            /*Send*/
-            if(this->getPackType()==PWMsend_EnRet || this->getPackType()==PWMsend_AllRet)
+            case PWMsend_EnRet:
+            case PWMsend_CurRet:
+            case PWMsend_AllRet:
             {
-                Serial.println("Sended Encoder Step:");
+                Serial.println("Master Ask 'PWMsend_EnRet', Parameter:");
+                /*Recive*/
                 for (byte i = 0; i < nMot; i++) {
-                    Serial.print("\tencoder[Mot");
+                    Serial.print("\tSpeed[Mot");
                     Serial.print(i+1);
                     Serial.print("]:");
-                    Serial.println(this->getEncoder()[Mot1 + i]);
+                    Serial.println(this->getPwm()[Mot1 + i]);
+                }
+                /*Send*/
+                if(this->getPackType()==PWMsend_EnRet || this->getPackType()==PWMsend_AllRet)
+                {
+                    Serial.println("Sended Encoder Step:");
+                    for (byte i = 0; i < nMot; i++) {
+                        Serial.print("\tencoder[Mot");
+                        Serial.print(i+1);
+                        Serial.print("]:");
+                        Serial.println(this->getEncoder()[Mot1 + i]);
+                    }
+                }
+                if(this->getPackType()==PWMsend_CurRet || this->getPackType()==PWMsend_AllRet)
+                {
+                    Serial.println("Sended Current Value:");
+                    for (byte i = 0; i < nMot; i++) {
+                        Serial.print("\tcurrent[Mot");
+                        Serial.print(i + 1);
+                        Serial.print("]:");
+                        Serial.println(this->getCurrent()[Mot1 + i]);
+                    }
                 }
             }
-            if(this->getPackType()==PWMsend_CurRet || this->getPackType()==PWMsend_AllRet)
+            break;
+
+            case CurrentGet:
             {
+                Serial.println("Master Ask 'CurrentGet', Parameter:");
+                /*Recive*/
+                Serial.print("\tNotting");
+
+                /*Send*/
                 Serial.println("Sended Current Value:");
                 for (byte i = 0; i < nMot; i++) {
                     Serial.print("\tcurrent[Mot");
@@ -60,91 +78,36 @@ namespace spiPack {
                     Serial.println(this->getCurrent()[Mot1 + i]);
                 }
             }
-        }
-        break;
-
-        case CurrentGet:
-        {
-            Serial.println("Master Ask 'CurrentGet', Parameter:");
-            /*Recive*/
-            Serial.print("\tNotting");
-
-            /*Send*/
-            Serial.println("Sended Current Value:");
-            for (byte i = 0; i < nMot; i++) {
-                Serial.print("\tcurrent[Mot");
-                Serial.print(i + 1);
-                Serial.print("]:");
-                Serial.println(this->getCurrent()[Mot1 + i]);
-            }
-        }
-        break;
-        case SettingSet:
-        case SettingGet:
-        {
-            if(this->getPackType()==SettingSet)
-            {
-                Serial.println("Master Ask 'SettingSet':");
-                Serial.println("Recive new Settings:");
-            }
-            else
-            {
-                Serial.println("Master Ask 'SettingGet':");
-                Serial.println("Sending my Settings:");
-            }
-
-            settingsBoard& sets = this->getSetting();
-
-            Serial.print("#maxEn:\t\t");
-            for (byte i = 0; i < nMot; i++) {
-
-                Serial.print("\t");
-                Serial.print(sets.maxEn[Mot1 + i]);
-            }
-            Serial.println();
-
-            Serial.print("#minEn:\t\t");
-            for (byte i = 0; i < nMot; i++) {
-
-                Serial.print("\t");
-                Serial.print(sets.minEn[Mot1 + i]);
-            }
-            Serial.println();
-
-            Serial.print("#maxCurrMed:");
-            for (byte i = 0; i < nMot; i++) {
-
-                Serial.print("\t");
-                Serial.print(sets.maxCurrMed[Mot1 + i]);
-            }
-            Serial.println();
-
-            Serial.print("AdcVref set: ");
-            switch(sets.adcVref){
-            case in1V1:
-                Serial.println("Internal Reference at 1.1V");
-                break;
-            case in2V56:
-                Serial.println("Internal Reference at 2.56V");
-                break;
-            case ext:
-                Serial.println("External Reference (trimmer)");
-                break;
-            }
-        }
-        break;
-        case goHome:
-            Serial.println("Master Ask 'goHome', Parameter:\n");
-            //Recive//
-            Serial.print("\tNotting\n");
-            //Send//
-            Serial.print("\tNotting\n");
             break;
-        case invalid:
-            Serial.println("Pack type is invalid, should be an error on Connection or inside the Pack compiling.");
-            break;
-        }
+            case SettingSet:
+            case SettingGet:
+            {
+                if(this->getPackType()==SettingSet)
+                {
+                    Serial.println("Master Ask 'SettingSet':");
+                    Serial.println("Recive new Settings:");
+                }
+                else
+                {
+                    Serial.println("Master Ask 'SettingGet':");
+                    Serial.println("Sending my Settings:");
+                }
 
+                this->printSetting(this->getSetting());
+
+            }
+            break;
+            case goHome:
+                Serial.println("Master Ask 'goHome', Parameter:\n");
+                //Recive//
+                Serial.print("\tNotting\n");
+                //Send//
+                Serial.print("\tNotting\n");
+                break;
+            case invalid:
+                Serial.println("Pack type is invalid, should be an error on Connection or inside the Pack compiling.");
+                break;
+        }
 #else //Start Rasp print pack
         switch (this->data.type) {
             case PWMsend_EnRet:
@@ -169,63 +132,17 @@ namespace spiPack {
                     printf("%d)%hd\t", i + 1, this->data.forRasp.up.cur[Mot1 + i]);
                 }
                 break;
-            case SettingGet:
-                printf("PackType: SettingGet\n");
-                printf("Reciving actual settings:\n");
-                printf("maxEn:\t");
-                for (int i = 0; i < nMot; i++) {
-                    printf("%d)%hd\t", i + 1, this->data.forRasp.up.prop.maxEn[Mot1 + i]);
-                }
-                printf("\nminEn:\t");
-                for (int i = 0; i < nMot; i++) {
-                    printf("%d)%hd\t", i + 1, this->data.forRasp.up.prop.minEn[Mot1 + i]);
-                }
-                printf("\nmaxCurrMed:\t");
-                for (int i = 0; i < nMot; i++) {
-                    printf("%d)%hd\t", i + 1, this->data.forRasp.up.prop.maxCurrMed[Mot1 + i]);
-                }
-                printf("\nadcReference voltage:\t");
-                switch (this->data.forArd.up.prop.adcVref) {
-                    case in1V1:
-                        printf("Internal Reference 1.1V\n");
-                        break;
-                    case in2V56:
-                        printf("Internal Reference 2.56V\n");
-                        break;
-                    case ext:
-                        printf("External Source (Trimmer Reference)\n");
-                        break;
-                }
-                break;
             case SettingSet:
-                printf("PackType: SettingSet\n");
-                printf("Sending this parameters\n");
-                printf("maxEn:\t");
-                for (int i = 0; i < nMot; i++) {
-                    printf("%d)%hd\t", i + 1, this->data.forArd.up.prop.maxEn[Mot1 + i]);
+            case SettingGet:
+                if (this->getPackType() == SettingSet) {
+                    printf("PackType: SettingSet\n");
+                    printf("Sending new Settings:");
+                } else {
+                    printf("PackType: SettingGet\n");
+                    printf("Recive current Settings:");
                 }
-                printf("\nminEn:\t");
-                for (int i = 0; i < nMot; i++) {
-                    printf("%d)%hd\t", i + 1, this->data.forArd.up.prop.minEn[Mot1 + i]);
-                }
-                printf("\nmaxCurrMed:\t");
-                for (int i = 0; i < nMot; i++) {
-                    printf("%d)%hd\t", i + 1, this->data.forArd.up.prop.maxCurrMed[Mot1 + i]);
-                }
-                printf("\nadcReference voltage:\t");
-                switch (this->data.forArd.up.prop.adcVref) {
-                    case in1V1:
-                        printf("Internal Reference 1.1V\n");
-                        break;
-                    case in2V56:
-                        printf("Internal Reference 2.56V\n");
-                        break;
-                    case ext:
-                        printf("External Source (Trimmer Reference)\n");
-                        break;
-                }
-                printf("Reciving: no parameters:\n");
-                break;
+                this->printSetting(this->getSetting());
+
             case goHome:
                 printf("PackType: goHomePack\n");
                 printf("Sending: no parameters\n");
@@ -235,6 +152,121 @@ namespace spiPack {
         printf("\n-------------------------------------------------------\n");
 #endif //END Rasp print pack
     }
+
+    void Pack::printSetting(settingsBoard &sets) {
+#ifdef ScorboarFirmware
+        Serial.print("#maxEn:\t\t");
+        for (byte i = 0; i < nMot; i++) {
+
+            Serial.print("\t");
+            Serial.print(sets.maxEn[Mot1 + i]);
+        }
+        Serial.println();
+
+        Serial.print("#minEn:\t\t");
+        for (byte i = 0; i < nMot; i++) {
+
+            Serial.print("\t");
+            Serial.print(sets.minEn[Mot1 + i]);
+        }
+        Serial.println();
+
+        Serial.print("#maxCurrMed:");
+        for (byte i = 0; i < nMot; i++) {
+
+            Serial.print("\t");
+            Serial.print(sets.maxCurrMed[Mot1 + i]);
+        }
+        Serial.println();
+
+        Serial.print("AdcVref set: ");
+        switch(sets.adcVref){
+            case in1V1:
+                Serial.println("Internal Reference at 1.1V");
+                break;
+            case in2V56:
+                Serial.println("Internal Reference at 2.56V");
+                break;
+            case ext:
+                Serial.println("External Reference (trimmer)");
+                break;
+        }
+        Serial.print("Adc offset remove Read: ");
+        if(sets.diff)
+            Serial.println("On");
+        else
+            Serial.println("Off");
+
+        Serial.println("PWM duty cycle set timer 3&4 divisor to: ");
+        switch(sets.freq){
+            case hz30:
+                Serial.println("1024 for PWM frequency of 30.64 Hz");
+                break;
+            case hz120:
+                Serial.println("256 for PWM frequency of 122.55 Hz");
+                break;
+            case hz490:
+                Serial.println("64 for PWM frequency of 490.20 Hz");
+                break;
+            case hz4k:
+                Serial.println("8 for PWM frequency of 3921.16 Hz");
+                break;
+            case hz30k:
+                Serial.println("1 for PWM frequency of 31372.55 Hz");
+                break;
+        }
+#else //Start Rasp print pack
+        printf("maxEn:\t");
+        for (int i = 0; i < nMot; i++) {
+            printf("%d)%hd\t", i + 1, sets.maxEn[Mot1 + i]);
+        }
+        printf("\nminEn:\t");
+        for (int i = 0; i < nMot; i++) {
+            printf("%d)%hd\t", i + 1, sets.minEn[Mot1 + i]);
+        }
+        printf("\nmaxCurrMed:\t");
+        for (int i = 0; i < nMot; i++) {
+            printf("%d)%hd\t", i + 1, sets.maxCurrMed[Mot1 + i]);
+        }
+        printf("\nadcReference voltage:\t");
+        switch (sets.adcVref) {
+            case in1V1:
+                printf("Internal Reference 1.1V\n");
+                break;
+            case in2V56:
+                printf("Internal Reference 2.56V\n");
+                break;
+            case ext:
+                printf("External Source (Trimmer Reference)\n");
+                break;
+        }
+        printf("Adc offset remove Read: ");
+        if (sets.diff)
+            printf("On");
+        else
+            printf("Off");
+        printf("PWM duty cycle set timer 3&4 divisor to: ");
+        switch (sets.freq) {
+            case hz30:
+                printf("1024 for PWM frequency of 30.64 Hz");
+                break;
+            case hz120:
+                printf("256 for PWM frequency of 122.55 Hz");
+                break;
+            case hz490:
+                printf("64 for PWM frequency of 490.20 Hz");
+                break;
+            case hz4k:
+                printf("8 for PWM frequency of 3921.16 Hz");
+                break;
+            case hz30k:
+                printf("1 for PWM frequency of 31372.55 Hz");
+                break;
+        }
+#endif //END Rasp print pack
+
+    }
+
 
     int Pack::sizePack() {
         switch (this->data.type) {
@@ -362,34 +394,66 @@ namespace spiPack {
 
     void Pack::setMaxEn(packDest dest, motCode mot, short en) {
         //Set variable inside the pack to send-out
-        if (dest == pack4Ard)
+        if (dest == pack4Ard) {
+            this->setPackType(SettingSet);
             this->data.forRasp.up.prop.maxEn[mot] = en;
-        else if (dest == pack4Rasp)
+        } else if (dest == pack4Rasp) {
+            this->setPackType(SettingGet);
             this->data.forArd.up.prop.maxEn[mot] = en;
+        }
     }
 
     void Pack::setMinEn(packDest dest, motCode mot, short en) {
         //Set variable inside the pack to send-out
-        if (dest == pack4Ard)
+        if (dest == pack4Ard) {
+            this->setPackType(SettingSet);
             this->data.forRasp.up.prop.minEn[mot] = en;
-        else if (dest == pack4Rasp)
+        } else if (dest == pack4Rasp) {
+            this->setPackType(SettingGet);
             this->data.forArd.up.prop.minEn[mot] = en;
+        }
     }
 
     void Pack::setMaxCurrentMed(packDest dest, motCode mot, short current) {
         //Set variable inside the pack to send-out
-        if (dest == pack4Ard)
+        if (dest == pack4Ard) {
+            this->setPackType(SettingSet);
             this->data.forRasp.up.prop.maxCurrMed[mot] = current;
-        else if (dest == pack4Rasp)
+        } else if (dest == pack4Rasp) {
+            this->setPackType(SettingGet);
             this->data.forArd.up.prop.maxCurrMed[mot] = current;
+        }
     }
 
     void Pack::setAdcRef(packDest dest, adcRef adc) {
         //Set variable inside the pack to send-out
-        if (dest == pack4Ard)
+        if (dest == pack4Ard) {
+            this->setPackType(SettingSet);
             this->data.forRasp.up.prop.adcVref = adc;
-        else if (dest == pack4Rasp)
+        } else if (dest == pack4Rasp) {
+            this->setPackType(SettingGet);
             this->data.forArd.up.prop.adcVref = adc;
+        }
+    }
+
+    void Pack::setAdcDiff(packDest dest, bool diff) {
+        if (dest == pack4Ard) {
+            this->setPackType(SettingSet);
+            this->data.forRasp.up.prop.diff = diff;
+        } else if (dest == pack4Rasp) {
+            this->setPackType(SettingGet);
+            this->data.forArd.up.prop.diff = diff;
+        }
+    }
+
+    void Pack::setPWMfreq(packDest dest, pwmFreq freq) {
+        if (dest == pack4Ard) {
+            this->setPackType(SettingSet);
+            this->data.forRasp.up.prop.freq = freq;
+        } else if (dest == pack4Rasp) {
+            this->setPackType(SettingGet);
+            this->data.forArd.up.prop.freq = freq;
+        }
     }
 
     mSpeed &Pack::getPwm() {

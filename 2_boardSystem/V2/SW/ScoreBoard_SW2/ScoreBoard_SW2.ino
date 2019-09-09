@@ -3,33 +3,36 @@
 
 #define SERIAL_PRINT	//attiva/disattiva compilazione del codice per printare in seriale
 #define sanityDelay 250	//tempo ms di attesa prima di ri-scansionare se il robot è ok
-
-settingsBoard sets;
+settingsBoard globSets;
 SpiDevice *spi;
 AdcDevice *adc;
-
 ScorFeed *sFeed;
-
 using namespace Motor;
-DCdriver *mot[nMot];
+DCdriverLimit *mot[nMot];
 
 //The setup function is called once at startup of the sketch
 void setup() {
 	// Add your initialization code here
 	Serial.begin(57600);
 	Serial.println("Start Setup");
+    Serial.println("\tMemory Load of Settings");
+    memoryLoad();
+
 	Serial.println("\tSetUp SPI");
     spi = new SpiDevice();
+
 	Serial.println("\tSetUp ADC");
-	adc = new AdcDevice();
+    adc = new AdcDevice(globSets.diff, globSets.adcVref);
+
 	Serial.println("\tSetUp Scorbot Sensors");
     sFeed = new ScorFeed();
+
 	Serial.println("\tMotor Enable");
 	motSetup();
-	Serial.println("\tMemory Load of Settings");
-	memoryLoad();
+
 	Serial.println("\tGlobal Interrupt Enable");
 	sei();
+
 	Serial.println("End Setup");
 
     //home();
@@ -37,7 +40,7 @@ void setup() {
 #ifdef SERIAL_PRINT
 unsigned long timePrint = 0;
 #endif
-Pack * r;
+Pack *r;
 
 void loop() {
 	sanityChek(sanityDelay);
@@ -51,7 +54,7 @@ void loop() {
     sFeed->updateStepEn();
 	motorStateMachine();
 #ifdef SERIAL_PRINT
-	/*Funzione di Print Seriale NON BLOCCANTE*/
+    //Funzione di Print Seriale NON BLOCCANTE//
 	if (millis() > timePrint + 100) {
 
         //Serial.println(getAmpMot(Mot1));
@@ -81,12 +84,12 @@ void sanityChek(int wait) {
          }
          }*/
 		for (byte i = 0; i < nMot; i++) {
-            if (sets.maxCurrMed[i] < adc->getCurrentSum((motCode) i)) {
+            if (globSets.maxCurrMed[i] < adc->getCurrentSum((motCode) i)) {
 				mot[i]->freeRun();
 				Serial.print("nMot[");
 				Serial.print(i + 1);
 				Serial.print("] overcurrent: ");
-				Serial.print(sets.maxCurrMed[i]);
+                Serial.print(globSets.maxCurrMed[i]);
 				Serial.print(" > ");
                 Serial.println(adc->getCurrentSum((motCode) i));
 			}

@@ -11,6 +11,7 @@
 #define DCdriver_h
 
 #include "Arduino.h"
+#include "../globalDef.h"
 //typedef bool (funcBool_t)(); // pointer to function with no args and bool return
 
 namespace Motor {
@@ -21,7 +22,7 @@ namespace Motor {
 	class DCdriver {
     public:
         DCdriver(byte ena, byte in1, byte in2);
-        void updateMot();                //no stopping Call, to update status
+        void updateMot();               //no stopping Call, to update status
 
         /*State change motor*/
         void drive_motor(int speed);
@@ -29,19 +30,34 @@ namespace Motor {
         void reversDir();
         void soft_stop();
         void soft_stop(unsigned int delay_time);
-        void hard_stop(unsigned int delay_time);//MAKE HARD STOP FOR DELAYED TIME
+        void hard_stop(unsigned int delay_time); //MAKE HARD STOP FOR DELAYED TIME
         void freeRun();
-    private:
+    protected:
         byte in1, in2, pwm;
         motState state;
         int speed;
         unsigned int delay_time;
         unsigned long time;
-
+    private:
         void clockWise();
         void anticlockwise();
         void setup_motor(byte in1, byte in2);
-	};
+    };
+
+    class DCdriverLimit : public DCdriver {
+    public:
+        DCdriverLimit(byte ena, byte in1, byte in2, motCode mot,
+                      settingsBoard &set, bool clockWisePos);
+        void driver_motor(int speed);
+        void updateMot();
+    private:
+        bool clockWisePos;
+        bool enPosLimit = false;        //true = End clockWise rotation
+        bool enNegLimit = false;    //true = End antiClockWise rotation
+        settingsBoard &limitSets;
+        motCode myMot;
+
+    };
 }
 
 #ifndef __IN_ECLIPSE__

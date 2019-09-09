@@ -26,7 +26,6 @@ namespace Motor {
 
     void DCdriver::updateMot() {
 		//enum {moving, H_brake, S_brake, wait};
-		//todo: add stop if over max/min step
 		switch (this->state) {
             case moving:
                 //do notting
@@ -52,7 +51,6 @@ namespace Motor {
 	}
 
     void DCdriver::drive_motor(int speed) {
-		//todo: add stop if sign of speed go over the max/min step
 		this->speed = speed;
 		this->state = moving;
 		if (speed < 0) {
@@ -74,7 +72,7 @@ namespace Motor {
     void DCdriver::reversDir() {
         drive_motor(-this->speed, 500);
     }
-	
+
 	void DCdriver::hard_stop(unsigned int delay_time) {
 		this->delay_time = delay_time;
 		this->time = millis();
@@ -120,4 +118,56 @@ namespace Motor {
 	void set_bits_func_correct(volatile uint8_t *port, uint8_t mask) {
 		*port |= mask;
 	}
+
+    //##################### DCdriverLimit #####################
+    DCdriverLimit::DCdriverLimit(byte ena, byte in1, byte in2, motCode mot,
+                                 settingsBoard &set, bool clockWisePos) :
+            DCdriver(ena, in1, in2) {
+        this->myMot = mot;
+        this->limitSets = set;
+        this->clockWisePos = clockWisePos;
+    }
+
+    void DCdriverLimit::driver_motor(int speed) {
+        if (this->clockWisePos) {
+            if (speed > 0 && !this->enPosLimit)    // non sono ancora al limite
+                DCdriver::drive_motor(speed);
+            else if (speed < 0 && !this->enNegLimit)
+                DCdriver::drive_motor(speed);
+        } else {
+            if (speed < 0 && !this->enPosLimit)    // non sono ancora al limite
+                DCdriver::drive_motor(speed);
+            else if (speed > 0 && !this->enNegLimit)
+                DCdriver::drive_motor(speed);
+        }
+    }
+
+    void DCdriverLimit::updateMot() {
+        short en = sFeed->getEn(this->myMot);
+        if (en >= this->limitSets.maxEn[this->myMot]) {
+            this->enPosLimit = true;
+            this->enNegLimit = false;
+        } else if (en <= this->limitSets.minEn[this->myMot]) {
+            this->enPosLimit = false;
+            this->enNegLimit = true;
+        } else {
+            this->enPosLimit = false;
+            this->enNegLimit = false;
+        }
+        if (this->clockWisePos) {
+            //sono oltre il limite e mi muovo nella direzione sbagliata
+            if ((this->state == moving || this->state == movingTiming)
+                && (this->speed > 0 && this->enPosLimit)) {
+                this->soft_stop();
+            } else {
+                //sono oltre il limite e mi muovo nella direzione sbagliata
+                if ((this->state == moving || this->state == movingTiming)
+                    && (this->speed < 0 && this->enNegLimit)) {
+                    this->soft_stop();
+                }
+            }
+        }
+        DCdriver::updateMot();
+    }
 }
+
