@@ -142,7 +142,6 @@ namespace spiPack {
                     printf("Recive current Settings:");
                 }
                 this->printSetting(this->getSetting());
-
             case goHome:
                 printf("PackType: goHomePack\n");
                 printf("Sending: no parameters\n");

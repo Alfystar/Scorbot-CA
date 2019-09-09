@@ -7,14 +7,13 @@ namespace SpiRaspInterface {
 
     ScorBoard &ScorBoard::getInstance() {
         std::lock_guard<std::mutex> myLock(myMutex);
-        if ( !ScorBoard::instance ){
-            ScorBoard::instance= new ScorBoard();
+        if (!ScorBoard::instance) {
+            ScorBoard::instance = new ScorBoard();
         }
         return *ScorBoard::instance;
     }
 
     ScorBoard::ScorBoard() {
-
         this->fdSpi = open("/dev/spidev0.0", O_RDWR);
 
         //buffer setup
@@ -25,7 +24,6 @@ namespace SpiRaspInterface {
         this->rxbuf = (char *) malloc(this->size);
         memset(this->txbuf, 0, this->size);
         memset(this->rxbuf, 0, this->size);
-
         ioctl(this->fdSpi, SPI_MODE_0); //polarità e fase di default
         ioctl(this->fdSpi, SPI_IOC_WR_MAX_SPEED_HZ, &this->hzSpeed);
         ioctl(this->fdSpi, SPI_IOC_WR_BITS_PER_WORD, &this->bitWord);
@@ -36,6 +34,7 @@ namespace SpiRaspInterface {
         free(this->txbuf);
         free(this->rxbuf);
     }
+
 /* struct spi_ioc_transfer - describes a single SPI transfer
  * @tx_buf: Holds pointer to userspace buffer with transmit data, or null.
  *          If no data is provided, zeroes are shifted out.
@@ -51,7 +50,7 @@ namespace SpiRaspInterface {
     std::mutex sentMutex;
 
 
-    void ScorBoard::sendPack(Pack& p) {
+    void ScorBoard::sendPack(Pack &p) {
         std::lock_guard<std::mutex> myLock(sentMutex);
         this->setMode(p.getPackType());
         if (p.sizePack() == 0) return;
@@ -59,15 +58,12 @@ namespace SpiRaspInterface {
             fprintf(stderr, "Pack type not recognize!!\n");
             return;
         }
-
         memset(this->txbuf, 0, this->size);
         memset(this->rxbuf, 0, this->size);
-
         memcpy(this->txbuf, p.getSPIPACK().forArd.buf, sizeof(spi2Ard));  //imposto i bit utili da inviare
 
         //memory cache coerence Problem
         __builtin___clear_cache(this->txbuf, this->txbuf + this->size);
-
         memset(&this->spi, 0, sizeof(spi));
         this->spi.tx_buf = (unsigned long) this->txbuf;
         this->spi.rx_buf = (unsigned long) this->rxbuf;
@@ -83,21 +79,18 @@ namespace SpiRaspInterface {
 
         //memory cache coerence Problem
         __builtin___clear_cache(this->rxbuf, this->rxbuf + this->size);
-
         memcpy(p.getSPIPACK().forRasp.buf, this->rxbuf, sizeof(spi2Rasp));
     }
 
-    void ScorBoard::bytePrint(Pack & p) {
-
+    void ScorBoard::bytePrint(Pack &p) {
         printf("Byte send");
         for (int i = 0; i < p.sizePack(); ++i) {
-            printf(" %d",p.getSPIPACK().forArd.buf[i]);
+            printf(" %d", p.getSPIPACK().forArd.buf[i]);
         }
         printf("\n");
-
         printf("Byte recive");
         for (int i = 0; i < p.sizePack(); ++i) {
-            printf(" %d",p.getSPIPACK().forArd.buf[i]);
+            printf(" %d", p.getSPIPACK().forArd.buf[i]);
         }
         printf("\n");
 
@@ -105,21 +98,17 @@ namespace SpiRaspInterface {
 
     void ScorBoard::setMode(packType mode) {
         char m = mode;
-
         memset(&this->spi, 0, sizeof(spi_ioc_transfer));
-
         this->spi.tx_buf = (unsigned long) &m;
         this->spi.rx_buf = (unsigned long) NULL;
         this->spi.len = 1;
         this->spi.bits_per_word = 8;
-
         ioctl(this->fdSpi, SPI_IOC_MESSAGE(1), &this->spi);
     }
 
     void ScorBoard::goHomePack() {
         Pack p;
         p.setPackType(goHome);
-
         this->sendPack(p);
     }
 
@@ -144,7 +133,7 @@ namespace SpiRaspInterface {
 
     void ScorBoard::setSettingPack(settingsBoard &s) {
         Pack p;
-        p.setSetting(s,pack4Ard);
+        p.setSetting(s, pack4Ard);
         this->setSettingPack(p);
     }
 
@@ -205,13 +194,13 @@ namespace SpiRaspInterface {
 
     void ScorBoard::getEnPack(Pack &p) {
         p.clearPack();
-        p.pwmSet(ignore,ignore,ignore,ignore,ignore,ignore);
+        p.pwmSet(ignore, ignore, ignore, ignore, ignore, ignore);
         this->setPwm_EnPack(p);
     }
 
-    mEncoder* ScorBoard::getEnPack() {
+    mEncoder *ScorBoard::getEnPack() {
         Pack p;
-        p.pwmSet(ignore,ignore,ignore,ignore,ignore,ignore);
+        p.pwmSet(ignore, ignore, ignore, ignore, ignore, ignore);
         this->setPwm_EnPack(p);
         mEncoder *me = (mEncoder *) (malloc(sizeof(mEncoder)));
         memmove(me, p.getEncoder(), sizeof(mEncoder));
@@ -222,18 +211,17 @@ namespace SpiRaspInterface {
     ///############################## ScoreCalc Metod ###########################################
     ///##########################################################################################
     //initiaize static variables here
-    float ScoreCalc::vRef=1.1;
-    float ScoreCalc::vCs=0.14;
+    float ScoreCalc::vRef = 1.1;
+    float ScoreCalc::vCs = 0.14;
 
-    ScoreCalc::ScoreCalc()
-    {
+    ScoreCalc::ScoreCalc() {
         //default value
-        ScoreCalc(0.14,1.1);
+        ScoreCalc(0.14, 1.1);
     }
 
-    ScoreCalc::ScoreCalc(float vR, float vC){
-        ScoreCalc::vRef=vR;
-        ScoreCalc::vCs=vC;
+    ScoreCalc::ScoreCalc(float vR, float vC) {
+        ScoreCalc::vRef = vR;
+        ScoreCalc::vCs = vC;
     }
 
     float ScoreCalc::currentConvert(Pack &p, motCode nMot) {
@@ -242,26 +230,25 @@ namespace SpiRaspInterface {
     }
 
     float ScoreCalc::currentConvert(int c) {
-        float iRead= (ScoreCalc::vRef*c)/(1024*ScoreCalc::vCs);
+        float iRead = (ScoreCalc::vRef * c) / (1024 * ScoreCalc::vCs);
         return 0;
 
     }
 
-    void ScoreCalc::vRefSet(float v){
-        if(v==in2V56) v= 2.56;
-        else if (v==in1V1) v=1.1;
-        else if(v<0) v=0.140;
-        ScoreCalc::vRef=v;
+    void ScoreCalc::vRefSet(float v) {
+        if (v == in2V56) v = 2.56;
+        else if (v == in1V1) v = 1.1;
+        else if (v < 0) v = 0.140;
+        ScoreCalc::vRef = v;
     }
 
     float ScoreCalc::vRefGet() {
         return this->vRef;
     }
 
-    void ScoreCalc::vCsSet(float v)
-    {
-        if(v<0) v=0.140;
-        ScoreCalc::vCs=v;
+    void ScoreCalc::vCsSet(float v) {
+        if (v < 0) v = 0.140;
+        ScoreCalc::vCs = v;
     }
 
     float ScoreCalc::vCsGet() {

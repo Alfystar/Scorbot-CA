@@ -1,13 +1,12 @@
 #include "Project-lib/globalDef.h"
 
 extern DCdriverLimit *mot[nMot];
-
 #define timeOut 2000
 
-void excutePack(Pack& p) {
-	switch (p.getPackType()) {
+void excutePack(Pack &p) {
+    switch (p.getPackType()) {
         case invalid:
-		break;
+            break;
         case PWMsend_EnRet:
         case PWMsend_CurRet:
         case PWMsend_AllRet: {
@@ -45,6 +44,6 @@ void excutePack(Pack& p) {
         }
             break;
         default:
-		break;
-	}
+            break;
+    }
 }

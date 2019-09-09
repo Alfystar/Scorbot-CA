@@ -35,7 +35,7 @@ namespace ScorebotRead {
         PCMSK2 = 0xFF;        //abilita tutti
         PCMSK0 = 0xF0;        //abilita la metà superiore
     }
-	
+
 //VARIABILI PRIVATE DI calcStep
 //Dichiarate qui fisse e comuni a tutte le istanze
 //per accelerare l'elaborazione(riducendo gli accessi in memoria)

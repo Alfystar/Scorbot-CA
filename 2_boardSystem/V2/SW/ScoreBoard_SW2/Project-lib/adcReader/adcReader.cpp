@@ -147,6 +147,7 @@ namespace InternalDevice {
         ADMUX = val;
         return 0;
     }
+
 //puntatore di ritorno FERMO per circa 1ms
     mCurrent &AdcDevice::getLastCicle() {
         return this->ampMot[((indexADC - 1) + history) % history];

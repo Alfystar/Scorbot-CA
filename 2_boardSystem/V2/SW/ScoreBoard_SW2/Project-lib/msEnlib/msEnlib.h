@@ -8,12 +8,13 @@
 
 #ifndef PROJECT_LIB_MSENLIB_H_
 #define PROJECT_LIB_MSENLIB_H_
+
 #include "Arduino.h"
 #include <stdlib.h>
 #include "circular_buffer/circular_buffer.h"
 #include "../globalDef.h"
 
-#define sizeMem 128 	//numero di celle (di int [2 byte])nel buffer circolare
+#define sizeMem 128    //numero di celle (di int [2 byte])nel buffer circolare
 namespace ScorebotRead {
     using namespace spiPack;
 
@@ -44,7 +45,8 @@ namespace ScorebotRead {
 }            //END namespace ScorebotRead
 
 #ifndef __IN_ECLIPSE__
-#include "msEnlib.cpp"
-#endif
 
+#include "msEnlib.cpp"
+
+#endif
 #endif /* PROJECT_LIB_MSENLIB_H_ */

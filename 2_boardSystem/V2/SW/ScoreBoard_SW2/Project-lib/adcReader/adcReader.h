@@ -28,11 +28,11 @@
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include "../globalDef.h"
+
 using namespace spiPack;
 
 //data la frequenza di lettura, ogni campo viene mantenuto per circa ~1ms
 #define history 8
-
 namespace InternalDevice {
     class AdcDevice {
     public:
@@ -73,7 +73,8 @@ namespace InternalDevice {
 } //END namespace InternalDevice
 
 #ifndef __IN_ECLIPSE__
-#include "adcReader.cpp"
-#endif
 
+#include "adcReader.cpp"
+
+#endif
 #endif /* PROJECT_LIB_ADCREADER_ADCREADER_H_ */

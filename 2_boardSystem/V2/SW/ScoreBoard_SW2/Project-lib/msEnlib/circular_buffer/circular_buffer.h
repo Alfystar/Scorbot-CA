@@ -27,12 +27,12 @@ struct circular_buf_t_ {
 typedef struct circular_buf_t_ circular_buf_t;
 
 /// Handle type, the way users interact with the API
-typedef circular_buf_t_* cbuf_handle_t;
+typedef circular_buf_t_ *cbuf_handle_t;
 
 /// Pass in a storage buffer and size, returns a circular buffer handle
 /// Requires: buffer is not NULL, size > 0
 /// Ensures: cbuf has been created and is returned in an empty state
-cbuf_handle_t circular_buf_init(uint16_t* buffer, size_t size);
+cbuf_handle_t circular_buf_init(uint16_t *buffer, size_t size);
 
 /// Free a circular buffer structure
 /// Requires: cbuf is valid and created by circular_buf_init
@@ -56,12 +56,12 @@ int circular_buf_put2(cbuf_handle_t cbuf, uint16_t data);
 /// Retrieve a value from the buffer
 /// Requires: cbuf is valid and created by circular_buf_init
 /// Returns 0 on success, -1 if the buffer is empty
-int circular_buf_get(cbuf_handle_t cbuf, uint16_t * data);
+int circular_buf_get(cbuf_handle_t cbuf, uint16_t *data);
 
 /// Retrieve a value from the buffer before the last, and not forward the head
 /// Requires: cbuf is valid and created by circular_buf_init
 /// Returns 0 on success, -1 if the buffer is empty
-int circular_buf_getLastOne(cbuf_handle_t cbuf, uint16_t * data);
+int circular_buf_getLastOne(cbuf_handle_t cbuf, uint16_t *data);
 
 /// CHecks if the buffer is empty
 /// Requires: cbuf is valid and created by circular_buf_init
@@ -82,9 +82,9 @@ size_t circular_buf_capacity(cbuf_handle_t cbuf);
 /// Requires: cbuf is valid and created by circular_buf_init
 /// Returns the current number of elements in the buffer
 size_t circular_buf_size(cbuf_handle_t cbuf);
-
 #ifndef __IN_ECLIPSE__
-#include "circular_buffer.cpp"
-#endif
 
+#include "circular_buffer.cpp"
+
+#endif
 #endif /* PROJECT_LIB_CIRCULAR_BUFFER_CIRCULAR_BUFFER_H_ */

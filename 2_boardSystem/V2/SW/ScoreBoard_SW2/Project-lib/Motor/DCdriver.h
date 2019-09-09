@@ -18,8 +18,8 @@ namespace Motor {
     enum motState {
         moving, movingTiming, H_brake, S_brake, alwaysBrake, free_Mot
     };
-	
-	class DCdriver {
+
+    class DCdriver {
     public:
         DCdriver(byte ena, byte in1, byte in2);
         void updateMot();               //no stopping Call, to update status
@@ -59,9 +59,9 @@ namespace Motor {
 
     };
 }
-
 #ifndef __IN_ECLIPSE__
-#include "DCdriver.cpp"
-#endif
 
+#include "DCdriver.cpp"
+
+#endif
 #endif //DCdriver_h

@@ -5,7 +5,6 @@
 
 using namespace SpiRaspInterface;
 using namespace spiPack;
-
 #define fflush(stdin) while(getchar() != '\n');
 
 void help() {
@@ -36,11 +35,8 @@ int main() {
     p = new Pack();
     int v = 150;
     p->pwmSet(v, -v, v, -v, v, -v);
-
     help();
-
     printf("Start loop\n");
-
     while (1) {
         printf("\n>> ");
         scanf("%[^\n]", cmdBuf);
@@ -53,9 +49,7 @@ int main() {
             sArgv[sArgc] = strtok_r(nullptr, " ", &savePoint);
         }
         fflush(stdin);
-
         p->clearPack();
-
         if (sArgc <= 1) {
             if (strcmp(sArgv[0], "m") == 0) {
                 v *= -1;
@@ -79,13 +73,12 @@ int main() {
             }
             if (strcmp(sArgv[0], "s") == 0) {
                 /*Assegnazione limiti scoperti sperimentalmente*/
-                p->setMotorLimit(pack4Ard,Mot1,2160,24300,-19450);
-                p->setMotorLimit(pack4Ard,Mot2,2960,16200,-1000);
-                p->setMotorLimit(pack4Ard,Mot3,2960,21900,-7300);
-                p->setMotorLimit(pack4Ard,Mot4,2160,10000,-10000);
-                p->setMotorLimit(pack4Ard,Mot5,2400,10000,-10000);
-                p->setMotorLimit(pack4Ard,Mot6,2160,5770,-10);
-
+                p->setMotorLimit(pack4Ard, Mot1, 2160, 24300, -19450);
+                p->setMotorLimit(pack4Ard, Mot2, 2960, 16200, -1000);
+                p->setMotorLimit(pack4Ard, Mot3, 2960, 21900, -7300);
+                p->setMotorLimit(pack4Ard, Mot4, 2160, 10000, -10000);
+                p->setMotorLimit(pack4Ard, Mot5, 2400, 10000, -10000);
+                p->setMotorLimit(pack4Ard, Mot6, 2160, 5770, -10);
                 send.setSettingPack(*p);
                 p->printPack();
             }
@@ -115,7 +108,7 @@ int main() {
                 send.setPwm_EnPack(*p);
                 p->printPack();
             }
-        }else{
+        } else {
             printf("!!! Comando non riconosciuto!!!\n");
             help();
         }

@@ -1,5 +1,6 @@
 #ifndef SPISCOREBOT_H
 #define SPISCOREBOT_H
+
 #include "Arduino.h"
 #include <stdlib.h>
 #include "../globalDef.h"
@@ -25,7 +26,8 @@ namespace InternalDevice {
 } //END namespace SpiLib_Ard
 
 #ifndef __IN_ECLIPSE__
-#include "spiScorebot.cpp"
-#endif
 
+#include "spiScorebot.cpp"
+
+#endif
 #endif
