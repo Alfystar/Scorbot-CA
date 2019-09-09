@@ -83,9 +83,6 @@ size_t circular_buf_capacity(cbuf_handle_t cbuf);
 /// Returns the current number of elements in the buffer
 size_t circular_buf_size(cbuf_handle_t cbuf);
 
-//TODO: int circular_buf_get_range(circular_buf_t cbuf, uint8_t *data, size_t len);
-//TODO: int circular_buf_put_range(circular_buf_t cbuf, uint8_t * data, size_t len);
-
 #ifndef __IN_ECLIPSE__
 #include "circular_buffer.cpp"
 #endif

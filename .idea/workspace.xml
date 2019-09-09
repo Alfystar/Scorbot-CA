@@ -11,121 +11,12 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
-      <change afterPath="$PROJECT_DIR$/1_Doc/Motor Driver.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard Object.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_077d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_078d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_079d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_080d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_081d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_082d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_083d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_084d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_085d" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1_Doc/ScoreBot Feedback Sensor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiPack/SpiPack.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib/SpiPack.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib/SpiRaspInterface.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_Doc/AdcLib.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_Doc/AdcLib.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_Doc/SPI Protocol.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_Doc/SPI Protocol.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_Doc/SPI-structures Class Diagram.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_Doc/SPI-structures Class Diagram.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_Doc/SPI-structures.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp" beforeDir="false" afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_047d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_048d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_049d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_050d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_051d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_052d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_053d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_054d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_055d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_Doc/SpiLib.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_Doc/SpiLib.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/.cproject" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/.cproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/.project" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/.project" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/.settings/org.eclipse.cdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/.settings/org.eclipse.cdt.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/.settings/org.eclipse.cdt.ui.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/.settings/org.eclipse.cdt.ui.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/Motor/DCdriver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/Motor/DCdriver.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/Motor/DCdriver.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/Motor/DCdriver.h" afterDir="false" />
+    <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/adcReader/adcReader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/adcReader/adcReader.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/adcReader/adcReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/adcReader/adcReader.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/globalDef.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/globalDef.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/msEnlib/circular_buffer/circular_buffer.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/msEnlib/circular_buffer/circular_buffer.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/msEnlib/circular_buffer/circular_buffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/msEnlib/circular_buffer/circular_buffer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/msEnlib/msEnlib.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/msEnlib/msEnlib.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/msEnlib/msEnlib.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/msEnlib/msEnlib.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/spiScorebot/SpiPack.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/spiScorebot/SpiPack.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/spiScorebot/spiScorebot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/spiScorebot/spiScorebot.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/spiScorebot/spiScorebot.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/spiScorebot/spiScorebot.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/ScoreBoard_SW2.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/ScoreBoard_SW2.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/excutePack.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/excutePack.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/memoriLoad.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/memoriLoad.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/motControll.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/motControll.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/.directory" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/.idea/Scorbot_CPP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/.idea/Scorbot_CPP.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/3.13.4/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/3.13.4/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/3.13.4/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/3.13.4/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/3.13.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/3.13.4/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/3.13.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/3.13.4/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/3.13.4/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/3.13.4/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/3.13.4/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/3.13.4/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/3.13.4/CompilerIdC/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/3.13.4/CompilerIdC/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/3.13.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/3.13.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/3.13.4/CompilerIdCXX/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/3.13.4/CompilerIdCXX/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/3.5.1/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/3.5.1/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/3.5.1/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/3.5.1/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/3.5.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/3.5.1/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/3.5.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/3.5.1/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/3.5.1/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/3.5.1/CMakeSystem.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/3.5.1/CompilerIdC/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/3.5.1/CompilerIdC/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/3.5.1/CompilerIdCXX/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/3.5.1/CompilerIdCXX/a.out" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/Scorebot_CPP.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/Scorebot_CPP.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/Scorebot_CPP.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/Scorebot_CPP.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/Scorebot_CPP.dir/SPILib/spisend.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/Scorebot_CPP.dir/SPILib/spisend.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/Scorebot_CPP.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/Scorebot_CPP.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/Scorebot_CPP.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/Scorebot_CPP.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/Scorebot_CPP.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/Scorebot_CPP.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/Scorebot_CPP.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/Scorebot_CPP.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/Scorebot_CPP.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/Scorebot_CPP.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/Scorebot_CPP.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/Scorebot_CPP.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/Scorebot_CPP.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/Scorebot_CPP.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/Scorebot_CPP.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/Scorebot_CPP.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/cmake.check_cache" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/feature_tests.bin" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/feature_tests.c" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/feature_tests.c" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/feature_tests.cxx" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/feature_tests.cxx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/CMakeLists.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/SPILib/SpiPack.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib/SpiPack.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/SPILib/SpiPack.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiPack/SpiPack.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/SPILib/SpiRaspInterface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib/SpiRaspInterface.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/SPILib/SpiRaspInterface.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/Scorbot_CPP.pro" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/Scorbot_CPP.pro.user" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/rasp-Cpp-v2/Scorbot_CPP/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib/SpiPack.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib/SpiPack.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -217,8 +108,16 @@
       <workItem from="1567790712942" duration="494000" />
       <workItem from="1567841371535" duration="823000" />
       <workItem from="1567873949084" duration="732000" />
-      <workItem from="1568014176025" duration="1993000" />
+      <workItem from="1568014176025" duration="2249000" />
     </task>
+    <task id="LOCAL-00001" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
+      <created>1568027375662</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1568027375662</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

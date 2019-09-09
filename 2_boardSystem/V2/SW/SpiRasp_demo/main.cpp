@@ -1,6 +1,5 @@
 #include <iostream>
 #include "SPILib/SpiRaspInterface.h"
-//#include "SPILib/SpiPack.h"
 #include "../SpiPack/SpiPack.h"
 #include <string.h>
 

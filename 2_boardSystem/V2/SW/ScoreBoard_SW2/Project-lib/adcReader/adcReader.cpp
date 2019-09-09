@@ -154,7 +154,7 @@ namespace InternalDevice {
 
     short AdcDevice::getCurrentSum(motCode mot) {
         this->sumCur = 0;
-        //todo check access on array
+        //todo: verificare il corretto accesso in memoria di questo doppio array
         for (byte j = 0; j < history; j++)
             this->sumCur += this->ampMot[j][mot];
         return this->sumCur;
