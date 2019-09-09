@@ -8,17 +8,27 @@
 #ifndef PROJECT_LIB_GLOBALDEF_H_
 #define PROJECT_LIB_GLOBALDEF_H_
 
-#include "spiScorebot/SpiPack.h"
+#include "../SpiPack/SpiPack.h"
 #include "spiScorebot/spiScorebot.h"
 #include "adcReader/adcReader.h"
 #include "msEnlib/msEnlib.h"
 
+namespace spiPack {
+}    //to mute the compiler (￣Д￣)
 using namespace spiPack;
 extern settingsBoard sets;
 
+namespace InternalDevice {
+}    //to mute the compiler (￣Д￣)
 using namespace InternalDevice;
 extern class SpiDevice* spi;
 extern class AdcDevice* adc;
+
+namespace ScorebotRead {
+}    //to mute the compiler (￣Д￣)
+using namespace ScorebotRead;
+
+extern class ScorFeed *sFeed;
 
 #define motEn 38 //PD7
 

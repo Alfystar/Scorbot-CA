@@ -1,7 +1,7 @@
 #ifndef SPISEND_H
 #define SPISEND_H
 
-#include "SpiPack.h"
+#include "../../SpiPack/SpiPack.h"
 #include <sys/ioctl.h>
 #include <linux/spi/spidev.h>
 #include <fcntl.h>
@@ -11,8 +11,6 @@
 #include <cstring>
 #include <iostream>
 #include <mutex>
-
-
 
 namespace SpiRaspInterface {
     using namespace spiPack;
@@ -61,7 +59,7 @@ namespace SpiRaspInterface {
         void bytePrint(Pack &p);
     };
 
-    class ScoreCalc{
+    class ScoreCalc {
     public:
         ScoreCalc();
         ScoreCalc(float vRef, float vCs);

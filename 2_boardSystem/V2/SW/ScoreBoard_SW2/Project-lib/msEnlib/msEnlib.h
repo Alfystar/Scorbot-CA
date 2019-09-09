@@ -14,31 +14,34 @@
 #include "../globalDef.h"
 
 #define sizeMem 128 	//numero di celle (di int [2 byte])nel buffer circolare
-using namespace spiPack;
-/*** HARDWARE ***/
-// Imposta i pin di uscita e registri
-void dsubFeedSetup();
-//Ritorna una manschera di bit 1=Premuto (FINE CORSA)
-byte msRead();
-//Ritorna un Intero dove i byte sono :[0]ChA e [1]ChB
-int enRead();
+namespace ScorebotRead {
+    using namespace spiPack;
 
-/*** ELABORATION ***/
-void updateStepEn();
-void calcStep(int oldEn, int newEn);
-void isrFunxEN();
+    class ScorFeed {
+    public:
+        ScorFeed();                //Imposta i pin di uscita e registri
+        void updateStepEn();
+        void isrFunxEN();
 
-/*** SET VALUE ***/
-void setEn(byte m, int p);
+        mEncoder &captureEn();//Crea un istantanea FISSA degli encoder(fino a successiva chiamata)
+        byte msRead();            //Ritorna MicroSwitch con logica 1-hot
+        short enRead();    //Ritorna il valore degli encoder con logica 1-hot dove i byte sono:[0]ChA e [1]ChB
 
-/*** GET VALUE ***/
-int getEn(byte i);
-//Fotografa un istante e rimane quello fino alla successiva chiamata della funzione
-mEncoder *captureEn();
+        void setEn(motCode mot, short st);
+        short getEn(motCode mot);
 
-/*** DEBUG & PRINT ***/
-void enDebug();
-void printSteps();
+        void dSubDebug();
+        void printSteps();
+    private:
+        cbuf_handle_t circularBuf;
+        mEncoder bufMem[sizeMem];
+        mEncoder step;
+        mEncoder tempStep;
+
+        void calcStep(int oldEn, int newEn);
+    };
+
+}            //END namespace ScorebotRead
 
 #ifndef __IN_ECLIPSE__
 #include "msEnlib.cpp"

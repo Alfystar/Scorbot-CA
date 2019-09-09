@@ -2,34 +2,13 @@
 #include "Project-lib/globalDef.h"
 
 void memoryLoad() {
-	EEPROM.get(0, sets);//carico i valori in memoria dentro alla variabile globale sets
+    EEPROM.get(0, sets); //carico i valori in memoria dentro alla variabile globale sets
 }
 
-void memorySave(settingsBoard *set) {
-	EEPROM.put(0, *set);
-	memcpy(&sets, set, sizeof(settingsBoard));
+void memorySave(settingsBoard &set) {
+    EEPROM.put(0, set);
+    Pack p;
+    p.setSetting(set, pack4Ard);
 	Serial.println("\nValue save on ram:");
-	Serial.print("--maxEn:\t\t");
-	for (byte i = 0; i < nMot; i++) {
-
-		Serial.print("\t");
-		Serial.print(sets.maxEn[Mot1 + i]);
-	}
-	Serial.println();
-
-	Serial.print("--minEn:\t\t");
-	for (byte i = 0; i < nMot; i++) {
-
-		Serial.print("\t");
-		Serial.print(sets.minEn[Mot1 + i]);
-	}
-	Serial.println();
-
-	Serial.print("--maxCurrMed:");
-	for (byte i = 0; i < nMot; i++) {
-
-		Serial.print("\t");
-		Serial.print(sets.maxCurrMed[Mot1 + i]);
-	}
-	Serial.println();
+    p.printPack();
 }

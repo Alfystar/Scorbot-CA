@@ -34,44 +34,43 @@ using namespace spiPack;
 #define history 8
 
 namespace InternalDevice {
-class AdcDevice {
-public:
-	//### HARDWARE ###//
-	AdcDevice();
-	AdcDevice(adcRef vRef);
-	AdcDevice(bool diff);
-	AdcDevice(bool diff, adcRef vRef);
+    class AdcDevice {
+    public:
+        //### HARDWARE ###//
+        AdcDevice();
+        AdcDevice(adcRef vRef);
+        AdcDevice(bool diff);
+        AdcDevice(bool diff, adcRef vRef);
 
-	void setVRefSource(adcRef vRef);
-	adcRef getVRefSource();
-	void setDiffRead(bool active);
-	bool getDiffRead();
+        void setVRefSource(adcRef vRef);
+        adcRef getVRefSource();
+        void setDiffRead(bool active);
+        bool getDiffRead();
 
-	//### EXECUTION ###//
-	void isrFunxAdc();
-	byte pinSelect(motCode mot);
+        //### EXECUTION ###//
+        void isrFunxAdc();
+        byte pinSelect(motCode mot);
 
-	//### GET VALUE ###//
-	mCurrent& getLastCicle();
-	short getCurrentSum(motCode mot);
+        //### GET VALUE ###//
+        mCurrent &getLastCicle();
+        short getCurrentSum(motCode mot);
 
-	//### DEBUG & PRINT ###//
-	void debugPrintAdc();
+        //### DEBUG & PRINT ###//
+        void debugPrintAdc();
+    private:
+        mCurrent ampMot[history];
+        volatile byte indexADC = 0; //attuale ultima misura
+        volatile motCode newReadId = Mot1;
+        volatile motCode oldReadId = Mot1;
+        short sumCur = 0;
+        boolean diffRead = false;
+        adcRef vRef = in1V1;
 
-private:
-	mCurrent ampMot[history];
-	volatile byte indexADC = 0; //attuale ultima misura
-	volatile motCode newReadId = Mot1;
-	volatile motCode oldReadId = Mot1;
-	short sumCur = 0;
-	boolean diffRead = false;
-	adcRef vRef = in1V1;
+        void setUpADC();
+        void historyClear();
+    };
 
-	void setUpADC();
-	void historyClear();
-};
-
-}//END namespace InternalDevice
+} //END namespace InternalDevice
 
 #ifndef __IN_ECLIPSE__
 #include "adcReader.cpp"

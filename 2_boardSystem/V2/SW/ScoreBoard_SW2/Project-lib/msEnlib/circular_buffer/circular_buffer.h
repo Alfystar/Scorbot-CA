@@ -16,11 +16,11 @@
 
 // The definition of our circular buffer structure is hidden from the user
 struct circular_buf_t_ {
-	uint16_t * buffer;
-	size_t head;
-	size_t tail;
-	size_t max; //of the buffer
-	bool full;
+    uint16_t *buffer;
+    size_t head;
+    size_t tail;
+    size_t max; //of the buffer
+    bool full;
 };
 
 /// Opaque circular buffer structure

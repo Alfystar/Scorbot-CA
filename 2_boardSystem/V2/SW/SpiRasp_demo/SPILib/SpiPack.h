@@ -7,14 +7,15 @@
 
 #ifndef ScorboarFirmware
 #warning ScorboarFirmware define not Declared, if you are compiling library to Arduino, add at the end of gcc compiler: -D ScorboarFirmware
+
 #include <exception>
 #include <string>
 #include <bits/exception.h>
+
 using std::max;
 #else
 #include <Arduino.h>
 #endif
-
 namespace spiPack {
 /// Enum Declaration for the comunication
     enum packDest {

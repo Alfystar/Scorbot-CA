@@ -32,6 +32,11 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>SpiPack</name>
+			<type>2</type>
+			<location>/home/alfyhack/Documenti/Scorbot-CA/2_boardSystem/V2/SW/SpiPack</location>
+		</link>
+		<link>
 			<name>core/core</name>
 			<type>2</type>
 			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.23/cores/arduino</locationURI>

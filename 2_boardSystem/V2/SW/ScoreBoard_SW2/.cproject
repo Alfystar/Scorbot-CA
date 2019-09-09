@@ -44,6 +44,8 @@
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_SW2/core/variant}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_SW2/libraries/EEPROM/src}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_SW2/SpiPack}&quot;"/>
                                     								
                                 </option>
                                 								
@@ -60,6 +62,8 @@
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_SW2/core/variant}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_SW2/libraries/EEPROM/src}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_SW2/SpiPack}&quot;"/>
                                     								
                                 </option>
                                 								
@@ -76,6 +80,8 @@
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_SW2/core/variant}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_SW2/libraries/EEPROM/src}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_SW2/SpiPack}&quot;"/>
                                     								
                                 </option>
                                 								
