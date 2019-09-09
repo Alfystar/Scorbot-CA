@@ -11,8 +11,11 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/.ScorBoard_Diagrams.vpp.lck" beforeDir="false" />
+    <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="Add son class to DCmotor to improve Working set limits&#10;code reformat&#10;readme update">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,7 +108,7 @@
       <workItem from="1567790712942" duration="494000" />
       <workItem from="1567841371535" duration="823000" />
       <workItem from="1567873949084" duration="732000" />
-      <workItem from="1568014176025" duration="6518000" />
+      <workItem from="1568014176025" duration="7125000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
       <created>1568027375662</created>
@@ -128,7 +131,14 @@
       <option name="project" value="LOCAL" />
       <updated>1568042401850</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Add son class to DCmotor to improve Working set limits&#10;code reformat">
+      <created>1568042629543</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1568042629543</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -150,7 +160,9 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino" />
     <MESSAGE value="Add son class to DCmotor to improve Working set limits" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add son class to DCmotor to improve Working set limits" />
+    <MESSAGE value="Add son class to DCmotor to improve Working set limits&#10;code reformat" />
+    <MESSAGE value="Add son class to DCmotor to improve Working set limits&#10;code reformat&#10;readme update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add son class to DCmotor to improve Working set limits&#10;code reformat&#10;readme update" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

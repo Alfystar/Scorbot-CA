@@ -61,9 +61,11 @@ In questa seconda scheda il cambio più evidente è nel driver motori che adesso
 
 ###### Arduino mega Firmware Developer:
 - Emanuele Alfano
+La libreria è stata documentata completamente usando UML
 
 ###### SPI Serial Comunication Arduino <--> Rapsberry Py Developer:
 - Emanuele Alfano
+La libreria è stata documentata completamente usando UML
 
 [*ScorBoard-V2 repository*](https://github.com/Alfystar/Scorbot-CA/tree/master/2_boardSystem/V2 "ScorBoard-V2 repository")
 

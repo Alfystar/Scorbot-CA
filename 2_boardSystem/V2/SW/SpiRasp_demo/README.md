@@ -1,5 +1,8 @@
 # Rapsberry spi driver, 
-Il codice è stato scritto in c++
+Il codice è stato scritto in c++ e documentata con UML, la struttura della libreria è:
+
+[![SubSystem-structure](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/SpiLib_Rasp.png?raw=true "SubSystem-structure")]("SPI raps-structure")
+
 
 La Demo presente serve a comandare il robot ed esegue tutti i comandi prefissi dall'interfaccia in ricezione codificata sopra l'arduino, visibile dentro "Scorebot_code".
 

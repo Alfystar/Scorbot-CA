@@ -5,6 +5,12 @@ MOLTO IMPORTANTE AGGIUNGERE ALLA FINE DEL COMPILATORE GCC IL DEFINE:
 	-D ScorboarFirmware
 serve per evitare di far includere librerie e codici che devo essere presenti solo nella versione Rapsberry
 
+La documentazione del codice è stata con UML ed è trovabile qui https://github.com/Alfystar/Scorbot-CA/tree/master/1_Doc
+
+Le classi cooperanti al funzionamento del firmware sono:
+[![SubSystem-structure](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ScorBoard%20Object.png?raw=true "SubSystem-structure")]("SPI raps-structure")
+
+
 ## Ide di sviluppo
 Il codice è stato sviluppato usando come editor Sloebel, un tool open gratuito che si basa su di eclipse, è stato proggettato per essere compatibile con le schede arduino presenti in commercio, se caricate questo progetto con sloebel sicuramente lo riuscirà a leggere e successivamente a caricare sulla scheda.
 ### Windows user
