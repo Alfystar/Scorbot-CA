@@ -1,4 +1,5 @@
 #include "Project-lib/globalDef.h"
+#include "Project-lib/Motor/DCdriver.h"
 
 extern DCdriverLimit *mot[nMot];
 #define timeOut 2000

@@ -42,7 +42,9 @@ namespace InternalDevice {
         ADCSRB &= 0xF8;    // Imposto la modalità di free running, e lascio inalterato il resto
 
         // ADCSRA – ADC Control and Status Register A //
-        //A queste condizioni ho 125Khz di clock all'adc e una conversione ogni 14*1/125KHz= 112us ~ 8,9Khz  (14 perchè letto in differential mode)
+        //A queste condizioni ho 125Khz di clock all'adc e una conversione ogni:
+        //14*1/125KHz= 112us ~ 8,9Khz  (14 se letto in differential mode)
+        //13*1/125KHz= 104us ~ 9,6Khz  (13 se letto in normal mode)
         ADCSRA |= (1 << ADEN) | (1 << ADATE); //Attiva ADC, Seleziona l'autoTrigger scelto in ADCSRB
         ADCSRA | 0x7; //prescaler a 1/128 Clock
 
@@ -86,15 +88,14 @@ namespace InternalDevice {
     }
 
     void AdcDevice::isrFunxAdc() {
-        // Must read low first
-        int g = ((int) ADCL | ((int) ADCH << 8));
         //todo: verificare il corretto accesso in memoria di questo doppio array
-        this->ampMot[indexADC][oldReadId] = g;
-        oldReadId = newReadId;
-        if (oldReadId == 0)
+        // Must read low first
+        this->ampMot[indexADC][oldReadId] = ((int) ADCL | ((int) ADCH << 8));
+        oldReadId = newReadId;	//la lettura che è già partita in automatico
+        if (oldReadId == 0)		//finito un ciclo di lettura avanza con i buffer della storia
             indexADC = (indexADC + 1) % history;
-        newReadId = (motCode)((newReadId + 1) % nMot);
-        this->pinSelect(newReadId);
+        newReadId = (motCode)((newReadId + 1) % nMot);	//il prossimo pin da impostare nei registri
+        this->pinSelect(newReadId);	//imposto i registri, verranno usati al successivo interrupt per il Free-running dell'ADC
     }
 
     /* Tabella Codice/significato dei mux
@@ -148,7 +149,7 @@ namespace InternalDevice {
         return 0;
     }
 
-//puntatore di ritorno FERMO per circa 1ms
+//puntatore di ritorno FERMO per ~1ms (
     mCurrent &AdcDevice::getLastCicle() {
         return this->ampMot[((indexADC - 1) + history) % history];
     }

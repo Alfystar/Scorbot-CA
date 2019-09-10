@@ -29,11 +29,18 @@ namespace ScorebotRead {
         circular_buf_get(this->circularBuf, (uint16_t *) &ap);
         circular_buf_put(this->circularBuf, ap);
 
-        //TODO: renderlo time based
+        //Uso il Timer/Counter5 e il suo Overflow Flag (TOV5) per generare l'interrupt ogni ~4Kh
+        //La modalità di default del timer 5 è in 8-bit phase correct pwm mode e prescaler a 64 bit
+        //Mantengo utilizzabili i pin D44, D45 & D46 come normali PWM ma a 3921.16 Hz (default a 490.20 Hz)
+        TCCR5B = (TCCR5B & B11111000) | B00000010; // set timer 5 divisor to 8 for PWM frequency of 3921.16 Hz
+        TIMSK5 |= _BV(TOIE5);	//Timer/Countern, Overflow Interrupt Enable (timer5_ovf_vect)
+
         //PCINT Active
+        /*
         PCICR = (1 << PCIE2) | (1 << PCIE0);        //abilita PCMSK0 & PCMSK2
         PCMSK2 = 0xFF;        //abilita tutti
         PCMSK0 = 0xF0;        //abilita la metà superiore
+        */
     }
 
 //VARIABILI PRIVATE DI calcStep

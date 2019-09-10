@@ -32,31 +32,6 @@ void motSetup() {
      */
 }
 
-void setMotFreq(pwmFreq freq) {
-    switch (freq) {
-        case hz30:
-            TCCR3B = (TCCR3B & B11111000) | B00000101; // set timer 3 divisor to  1024 for PWM frequency of    30.64 Hz
-            TCCR4B = (TCCR4B & B11111000) | B00000101; // set timer 4 divisor to  1024 for PWM frequency of    30.64 Hz
-            break;
-        case hz120:
-            TCCR3B = (TCCR3B & B11111000) | B00000100; // set timer 3 divisor to   256 for PWM frequency of   122.55 Hz
-            TCCR4B = (TCCR4B & B11111000) | B00000100; // set timer 4 divisor to   256 for PWM frequency of   122.55 Hz
-            break;
-        case hz490:
-            TCCR3B = (TCCR3B & B11111000) | B00000011; // set timer 3 divisor to    64 for PWM frequency of   490.20 Hz
-            TCCR4B = (TCCR4B & B11111000) | B00000011; // set timer 4 divisor to    64 for PWM frequency of   490.20 Hz
-            break;
-        case hz4k:
-            TCCR3B = (TCCR3B & B11111000) | B00000010; // set timer 3 divisor to     8 for PWM frequency of  3921.16 Hz
-            TCCR4B = (TCCR4B & B11111000) | B00000010; // set timer 4 divisor to     8 for PWM frequency of  3921.16 Hz
-            break;
-        case hz30k:
-            TCCR3B = (TCCR3B & B11111000) | B00000001; // set timer 3 divisor to     1 for PWM frequency of 31372.55 Hz
-            TCCR4B = (TCCR4B & B11111000) | B00000001; // set timer 4 divisor to     1 for PWM frequency of 31372.55 Hz
-            break;
-    }
-}
-
 void motorStateMachine() {
     for (byte i = 0; i < nMot; i++) {
         mot[i]->updateMot();

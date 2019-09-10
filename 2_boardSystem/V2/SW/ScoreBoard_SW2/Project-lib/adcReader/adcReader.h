@@ -31,8 +31,21 @@
 
 using namespace spiPack;
 
-//data la frequenza di lettura, ogni campo viene mantenuto per circa ~1ms
+//A queste condizioni ho 125Khz di clock all'adc e una conversione ogni:
+//14*1/125KHz= 112us ~ 8,9Khz  (14 se letto in differential mode)
+//13*1/125KHz= 104us ~ 9,6Khz  (13 se letto in normal mode)
+//Per calcolare il tempo di presenza della lettura:
+//
+//     Fciclo             1
+//Fh=----------   or  ----------
+//	  history		  (Tciclo*8)
+//
+//Il ciclo è di 6 letture:
+//==> 672us(1,488Khz)[diff] Fh = 186hz
+//==> 624us(1,602Khz)[norm] Fh = 200hz
+
 #define history 8
+
 namespace InternalDevice {
     class AdcDevice {
     public:
