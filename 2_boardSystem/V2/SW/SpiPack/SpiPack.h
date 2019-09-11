@@ -28,7 +28,7 @@ namespace spiPack {
     enum motCode {
         Mot1 = 0, Mot2, Mot3, Mot4, Mot5, Mot6, nMot
     };
-
+	//todo: rimuovere CurrentGet, la sua funzione è sopperita da PWMsend_CurRet
     enum packType {
         invalid = 0, PWMsend_EnRet = 1, PWMsend_CurRet, PWMsend_AllRet, CurrentGet, SettingGet, SettingSet, goHome
     };
