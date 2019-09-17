@@ -7,16 +7,23 @@ using namespace SpiRaspInterface;
 using namespace spiPack;
 #define fflush(stdin) while(getchar() != '\n');
 
+
+/*
+    enum packType {
+        invalid = 0, PWMsend_EnRet = 1, PWMsend_CurRet, PWMsend_AllRet, SettingGet, SettingSet, goHome
+    };
+*/
 void help() {
     printf("Menù di controllo TEST SPI dello scorbot:\n");
     printf("\tm -- Muove tutti i motori a caso per il timeout sulla scheda\n");
     printf("\t\tm <m1>;<m1>;<m1>;<m1>;<m1>;<m1> -- Muove Ogni motore della scheda a quel PWM\n");
     printf("\t\t\t fr = Free Running, hs = Hard Stop, ss = Soft Stop, ig = Ignora\n");
-    printf("\te -- Ritorna Encoder di tutti\n");
-    printf("\tc -- get current \n");
-    printf("\tg -- get setting\n");
-    printf("\ts -- set setting valori di default\n");
-    printf("\th -- go home\n");
+    printf("\te -- Encoder Reading (PWMsend_EnRet)\n");
+    printf("\tc -- Current Reading (PWMsend_CurRet)\n");
+    printf("\ta -- Encoder&Current Reading (PWMsend_AllRet)\n");
+    printf("\tg -- Read arduino Settings (SettingGet)\n");
+    printf("\ts -- Overide arduino setting (SettingSet)\n");
+    printf("\th -- Start Homming procedure (goHome)\n");
     printf("\t? -- visualizza l'help\n");
 
 }
@@ -79,6 +86,8 @@ int main() {
                 p->setMotorLimit(pack4Ard, Mot4, 2160, 10000, -10000);
                 p->setMotorLimit(pack4Ard, Mot5, 2400, 10000, -10000);
                 p->setMotorLimit(pack4Ard, Mot6, 2160, 5770, -10);
+                p->setAdcDiff(pack4Ard,false);
+                p->setAdcRef(pack4Ard,in1V1);
                 send.setSettingPack(*p);
                 p->printPack();
             }

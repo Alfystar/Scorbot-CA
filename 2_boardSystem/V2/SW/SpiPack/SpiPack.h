@@ -30,8 +30,10 @@ namespace spiPack {
     };
 	//todo: rimuovere CurrentGet, la sua funzione è sopperita da PWMsend_CurRet
     enum packType {
-        invalid = 0, PWMsend_EnRet = 1, PWMsend_CurRet, PWMsend_AllRet, CurrentGet, SettingGet, SettingSet, goHome
+        invalid = 0, PWMsend_EnRet = 1, PWMsend_CurRet, PWMsend_AllRet, SettingGet, SettingSet, goHome
     };
+    //        invalid = 0, PWMsend_EnRet = 1, PWMsend_CurRet, PWMsend_AllRet, CurrentGet, SettingGet, SettingSet, goHome
+
 
     enum adcRef {
         in1V1 = -1, in2V56 = -2, ext = -3

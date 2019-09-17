@@ -31,7 +31,7 @@ namespace spiPack {
             case PWMsend_CurRet:
             case PWMsend_AllRet:
             {
-                Serial.println("Master Ask 'PWMsend_EnRet', Parameter:");
+                Serial.println("Master Ask 'PWMsend_EnRet || PWMsend_CurRet || PWMsend_AllRet', Parameter:");
                 /*Recive*/
                 for (byte i = 0; i < nMot; i++) {
                     Serial.print("\tSpeed[Mot");
@@ -110,28 +110,33 @@ namespace spiPack {
         }
 #else //Start Rasp print pack
         switch (this->data.type) {
-            case PWMsend_EnRet:
-                printf("PackType: PWMsend_EnRet\n");
-                printf("Sending actual speed:\n");
-                printf("Vel:\t");
-                for (int i = 0; i < nMot; i++) {
-                    printf("%d)%hd\t", i + 1, this->data.forArd.up.speed[Mot1 + i]);
+        case PWMsend_EnRet:
+        case PWMsend_CurRet:
+        case PWMsend_AllRet:
+
+                printf("PackType: 'PWMsend_EnRet || PWMsend_CurRet || PWMsend_AllRet', Parameter:");
+                /*Recive*/
+                for (char i = 0; i < nMot; i++) {
+                    printf("%d)%hd\t", i + 1, this->getPwm()[Mot1 + i]);
                 }
-                printf("\nReciving actual encoder:\n");
-                printf("En:\t");
-                for (int i = 0; i < nMot; i++) {
-                    printf("%d)%hd\t", i + 1, this->data.forRasp.up.en[Mot1 + i]);
+
+                /*Send*/
+                if(this->getPackType()==PWMsend_EnRet || this->getPackType()==PWMsend_AllRet)
+                {
+                    printf("En:\t");
+                    for (char i = 0; i < nMot; i++) {
+                        printf("%d)%hd\t", i + 1, this->getEncoder()[Mot1 + i]);
+                    }
                 }
-                break;
-            case CurrentGet:
-                printf("PackType: CurrentGet\n");
-                printf("Sending: no parameters\n");
-                printf("Reciving actual currents:\n");
-                printf("Curr:\t");
-                for (int i = 0; i < nMot; i++) {
-                    printf("%d)%hd\t", i + 1, this->data.forRasp.up.cur[Mot1 + i]);
+
+                if(this->getPackType()==PWMsend_CurRet || this->getPackType()==PWMsend_AllRet)
+                {
+                    printf("Curr:\t");
+                    for (char i = 0; i < nMot; i++) {
+                        printf("%d)%hd\t", i + 1, this->getCurrent()[Mot1 + i]);
+                    }
                 }
-                break;
+            break;
             case SettingSet:
             case SettingGet:
                 if (this->getPackType() == SettingSet) {
@@ -295,9 +300,6 @@ namespace spiPack {
                 break;
             case PWMsend_AllRet:
                 return max(sizeof(mSpeed), sizeof(mAll));
-                break;
-            case CurrentGet:
-                return sizeof(mCurrent);
                 break;
             case SettingGet:
                 return sizeof(settingsBoard);

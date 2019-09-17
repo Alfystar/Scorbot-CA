@@ -120,7 +120,8 @@ namespace SpiRaspInterface {
 
     void ScorBoard::getCurrentPack(Pack &p) {
         p.clearPack();
-        p.setPackType(CurrentGet);
+        p.pwmSet(ignore, ignore, ignore, ignore, ignore, ignore);
+        p.setPackType(PWMsend_CurRet);
         this->setPwm_EnPack(p);
     }
 
