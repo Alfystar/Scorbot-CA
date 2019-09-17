@@ -514,6 +514,7 @@ namespace spiPack {
             return this->data.forArd.up.prop;
         else if (this->data.type == SettingGet)
             return this->data.forRasp.up.prop;
+        return this->data.forArd.up.prop;	//se non parte l'eccezione sono nell'arduino
     }
 
     SPIPACK *makeSPIPACK() {

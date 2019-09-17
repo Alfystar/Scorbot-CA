@@ -74,6 +74,21 @@ void sanityChek(int wait) {
                 Serial.println(adc->getCurrentSum((motCode) i));
 #endif
             }
+            if (((globSets.maxCurrMed[i]*3)/2) < adc->getCurrentSum((motCode) i)) {	// WARNING
+            	digitalWrite(MotEn,0);
+#ifdef SERIAL_PRINT
+                Serial.print("nMot[");
+                Serial.print(i + 1);
+                Serial.print("] High-overcurrent: ");
+                Serial.print(globSets.maxCurrMed[i]);
+                Serial.print(" > ");
+                Serial.println(adc->getCurrentSum((motCode) i));
+#endif
+            }
+            if ((globSets.maxCurrMed[i]/4) < adc->getCurrentSum((motCode) i)) {	// Current problem came back
+            	digitalWrite(MotEn,1);
+            }
+
         }
     }
 }

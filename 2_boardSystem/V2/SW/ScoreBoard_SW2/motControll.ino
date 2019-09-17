@@ -22,6 +22,8 @@ void motSetup() {
     mot[Mot4] = new DCdriverLimit(EN4, IN4B, IN4A, Mot4, globSets, true);
     mot[Mot5] = new DCdriverLimit(EN5, IN5A, IN5B, Mot5, globSets, true);
     mot[Mot6] = new DCdriverLimit(EN6, IN6A, IN6B, Mot6, globSets, true);
+    pinMode(MotEn, OUTPUT);
+    digitalWrite(MotEn,1);
     /*
      mot[Mot1] = new DCdriver(EN1, IN1A, IN1B);
      mot[Mot2] = new DCdriver(EN2, IN2A, IN2B);
