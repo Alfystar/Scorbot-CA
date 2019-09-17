@@ -104,7 +104,7 @@ namespace spiPack {
         case PWMsend_CurRet:
         case PWMsend_AllRet:
 
-                printf("PackType: 'PWMsend_EnRet || PWMsend_CurRet || PWMsend_AllRet', Parameter:");
+                printf("PackType: 'PWMsend_EnRet || PWMsend_CurRet || PWMsend_AllRet', Parameter:\n");
                 /*Recive*/
                 for (char i = 0; i < nMot; i++) {
                     printf("%d)%hd\t", i + 1, this->getPwm()[Mot1 + i]);
@@ -113,7 +113,7 @@ namespace spiPack {
                 /*Send*/
                 if(this->getPackType()==PWMsend_EnRet || this->getPackType()==PWMsend_AllRet)
                 {
-                    printf("En:\t");
+                    printf("\nEn:\t");
                     for (char i = 0; i < nMot; i++) {
                         printf("%d)%hd\t", i + 1, this->getEncoder()[Mot1 + i]);
                     }
@@ -121,7 +121,7 @@ namespace spiPack {
 
                 if(this->getPackType()==PWMsend_CurRet || this->getPackType()==PWMsend_AllRet)
                 {
-                    printf("Curr:\t");
+                    printf("\nCurr:\t");
                     for (char i = 0; i < nMot; i++) {
                         printf("%d)%hd\t", i + 1, this->getCurrent()[Mot1 + i]);
                     }
@@ -229,14 +229,17 @@ namespace spiPack {
         for (int i = 0; i < nMot; i++) {
             printf("%d)%hd\t", i + 1, sets.maxEn[Mot1 + i]);
         }
+
         printf("\nminEn:\t");
         for (int i = 0; i < nMot; i++) {
             printf("%d)%hd\t", i + 1, sets.minEn[Mot1 + i]);
         }
+
         printf("\nmaxCurrMed:\t");
         for (int i = 0; i < nMot; i++) {
             printf("%d)%hd\t", i + 1, sets.maxCurrMed[Mot1 + i]);
         }
+
         printf("\nadcReference voltage:\t");
         switch (sets.adcVref) {
             case in1V1:
@@ -248,12 +251,19 @@ namespace spiPack {
             case ext:
                 printf("External Source (Trimmer Reference)\n");
                 break;
+            default:
+                printf("Register not set, number is: %d",sets.adcVref);
+                break;
         }
+        printf("\n");
+
         printf("Adc offset remove Read: ");
         if (sets.diff)
             printf("On");
         else
             printf("Off");
+        printf("\n");
+
         printf("PWM duty cycle set timer 3&4 divisor to: ");
         switch (sets.freq) {
             case hz30:
@@ -271,7 +281,11 @@ namespace spiPack {
             case hz30k:
                 printf("1 for PWM frequency of 31372.55 Hz");
                 break;
+            default:
+                printf("Register not set, number is: %d",sets.freq);
+                break;
         }
+        printf("\n");
         return;
 #endif //END Rasp print pack
 
