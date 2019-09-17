@@ -48,7 +48,7 @@ int main() {
         printf("\n>> ");
         scanf("%[^\n]", cmdBuf);
 
-        /** Tokenizzazione di cmd per creare un effetto argv[] **/
+        // Tokenizzazione di cmd per creare un effetto argv[] //
         sArgc = 0;
         sArgv[sArgc] = strtok_r(cmdBuf, " ", &savePoint);
         while (sArgv[sArgc] != nullptr) {
@@ -56,6 +56,14 @@ int main() {
             sArgv[sArgc] = strtok_r(nullptr, " ", &savePoint);
         }
         fflush(stdin);
+
+        for (int i=0;i<sArgc;i++)
+        {
+            printf("%d) %s\n",i,sArgv[i]);
+        }
+
+        //todo: capire perche strcmp da segmentation fault in questa condizione
+        //strcmp("m", "m");
         p->clearPack();
         if (sArgc <= 1) {
             if (strcmp(sArgv[0], "m") == 0) {
