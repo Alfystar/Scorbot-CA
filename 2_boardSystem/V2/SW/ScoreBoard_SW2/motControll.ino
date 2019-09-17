@@ -164,6 +164,7 @@ void homeMot(byte motN, signed char stDir) {
 
 void pinzaHome() {
     /** Roll Home**/
+
     Serial.println("Searching Claw Roll HW Home:");
     while (!(sFeed->msRead() & (1 << Mot5))) {
         mot[Mot4]->drive_motor(searchVel);

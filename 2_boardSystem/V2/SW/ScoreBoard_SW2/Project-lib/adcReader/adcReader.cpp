@@ -168,6 +168,7 @@ namespace InternalDevice {
     mCurrent *m;
     void AdcDevice::debugPrintAdc() {
         m = &this->getLastCycle();
+        Serial.flush();
         Serial.println("Last cycle:");
         //Serial.print("#minEn:\t\t");
         for (byte i = 0; i < nMot; i++) {

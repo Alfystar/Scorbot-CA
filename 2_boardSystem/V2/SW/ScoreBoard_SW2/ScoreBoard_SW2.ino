@@ -21,22 +21,28 @@ unsigned long timePrint;	//time to next debug print
 void setup() {
     // Add your initialization code here
     Serial.begin(57600);
+    cli();
     Serial.println("\n##### Start Setup #####");
     delay(250);
 
     memoryLoad();
+    Serial.flush();
     Serial.println("\tLoad Settings from Memory");
 
     motSetup();
+    Serial.flush();
     Serial.println("\tMotor Setup");
 
     sFeed = new ScorFeed();
+    Serial.flush();
     Serial.println("\tSetUp Scorbot Sensors");
 
     adc = new AdcDevice(globSets.diff, globSets.adcVref);
+    Serial.flush();
     Serial.println("\tSetUp ADC");
 
     spi = new SpiDevice();
+    Serial.flush();
     Serial.println("\tSetUp SPI");
 
     sei();
@@ -45,19 +51,18 @@ void setup() {
     Serial.println("End Setup");
 
 #ifdef SERIAL_PRINT
-    delay(500);
+    Serial.flush();
 	Pack::printSetting(globSets);
 	Serial.println("End Setup");
 	timePrint=millis();
-	delay(1000);
 #endif
+	delay(1000);
     //home();
 }
 
 Pack *r;
-
 void loop() {
-	//Serial.println("LOOP");
+
     sanityChek(sanityDelay);
     if (spi->spiAvailable()) {
         r = &spi->getLastRecive();

@@ -31,6 +31,7 @@ namespace spiPack {
             case PWMsend_CurRet:
             case PWMsend_AllRet:
             {
+            	Serial.flush();
                 Serial.println("Master Ask 'PWMsend_EnRet || PWMsend_CurRet || PWMsend_AllRet', Parameter:");
                 /*Recive*/
                 for (byte i = 0; i < nMot; i++) {
@@ -42,6 +43,7 @@ namespace spiPack {
                 /*Send*/
                 if(this->getPackType()==PWMsend_EnRet || this->getPackType()==PWMsend_AllRet)
                 {
+                	Serial.flush();
                     Serial.println("Sended Encoder Step:");
                     for (byte i = 0; i < nMot; i++) {
                         Serial.print("\tencoder[Mot");
@@ -52,6 +54,7 @@ namespace spiPack {
                 }
                 if(this->getPackType()==PWMsend_CurRet || this->getPackType()==PWMsend_AllRet)
                 {
+                	Serial.flush();
                     Serial.println("Sended Current Value:");
                     for (byte i = 0; i < nMot; i++) {
                         Serial.print("\tcurrent[Mot");
@@ -67,11 +70,13 @@ namespace spiPack {
             {
                 if(this->getPackType()==SettingSet)
                 {
+                	Serial.flush();
                     Serial.println("Master Ask 'SettingSet':");
                     Serial.println("Recive new Settings:");
                 }
                 else
                 {
+                	Serial.flush();
                     Serial.println("Master Ask 'SettingGet':");
                     Serial.println("Sending my Settings:");
                 }
@@ -81,6 +86,7 @@ namespace spiPack {
             }
             break;
             case goHome:
+            	Serial.flush();
                 Serial.println("Master Ask 'goHome', Parameter:\n");
                 //Recive//
                 Serial.print("\tNotting\n");
@@ -166,7 +172,7 @@ namespace spiPack {
             delay(1);
         }
         Serial.println();
-
+        Serial.flush();
         Serial.print("#AdcVref set: ");
         switch(sets.adcVref){
             case in1V1:
