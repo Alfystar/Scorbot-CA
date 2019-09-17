@@ -29,7 +29,7 @@ namespace SpiRaspInterface {
         ioctl(this->fdSpi, SPI_IOC_WR_BITS_PER_WORD, &this->bitWord);
         ioctl(this->fdSpi, SPI_IOC_RD_BITS_PER_WORD, &this->bitWord);
 
-        wiringPiSetup();
+        wiringPiSetupSys();
         pinMode(EnCom,OUTPUT);
         digitalWrite(EnCom,0);
     }

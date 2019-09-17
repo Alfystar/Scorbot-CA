@@ -5,6 +5,14 @@
 #include <sys/ioctl.h>
 #include <linux/spi/spidev.h>
 #include <wiringPi.h>       //to enable comunication, on pin GPIO 17 or for this lib pin 0
+/*
+ *Need to be root or inside gpio group
+ * so tips on terminal:
+ * "sudo usermod -a -G gpio <userName>"
+ * <userName> :can be discover tips "whoami" or "id"
+ *
+ * to check the result write "groups <userName>" and search gpio
+*/
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -13,7 +21,7 @@
 #include <iostream>
 #include <mutex>
 
-#define EnCom 0     //Gpio 17(BCM), Pin 0(wiringPi)
+#define EnCom 17     //Gpio 17(BCM), Pin 0(wiringPi)
 
 namespace SpiRaspInterface {
     using namespace spiPack;
