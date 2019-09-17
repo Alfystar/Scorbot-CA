@@ -1,0 +1,1 @@
+/usr/bin/c++    -std=c++11   CMakeFiles/scorbot.dir/main.cpp.o CMakeFiles/scorbot.dir/PidClass/PIDScorbot.cpp.o CMakeFiles/scorbot.dir/SPILib/spisend.cpp.o CMakeFiles/scorbot.dir/comC/comC.cpp.o  -o scorbot -rdynamic -lpthread 

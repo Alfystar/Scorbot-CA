@@ -10,7 +10,7 @@
 
 #include <exception>
 #include <string>
-#include <bits/exception.h>
+//#include <bits/exception.h>
 
 using std::max;
 #else

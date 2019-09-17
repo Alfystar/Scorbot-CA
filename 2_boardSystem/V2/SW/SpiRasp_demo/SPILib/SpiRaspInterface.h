@@ -4,6 +4,7 @@
 #include "../../SpiPack/SpiPack.h"
 #include <sys/ioctl.h>
 #include <linux/spi/spidev.h>
+#include <wiringPi.h>       //to enable comunication, on pin GPIO 17 or for this lib pin 0
 #include <fcntl.h>
 #include <unistd.h>
 #include <stdio.h>
@@ -11,6 +12,8 @@
 #include <cstring>
 #include <iostream>
 #include <mutex>
+
+#define EnCom 0     //Gpio 17(BCM), Pin 0(wiringPi)
 
 namespace SpiRaspInterface {
     using namespace spiPack;

@@ -28,6 +28,10 @@ namespace SpiRaspInterface {
         ioctl(this->fdSpi, SPI_IOC_WR_MAX_SPEED_HZ, &this->hzSpeed);
         ioctl(this->fdSpi, SPI_IOC_WR_BITS_PER_WORD, &this->bitWord);
         ioctl(this->fdSpi, SPI_IOC_RD_BITS_PER_WORD, &this->bitWord);
+
+        wiringPiSetup();
+        pinMode(EnCom,OUTPUT);
+        digitalWrite(EnCom,0);
     }
 
     ScorBoard::~ScorBoard() {
@@ -52,6 +56,7 @@ namespace SpiRaspInterface {
 
     void ScorBoard::sendPack(Pack &p) {
         std::lock_guard<std::mutex> myLock(sentMutex);
+        digitalWrite(EnCom,1);
         this->setMode(p.getPackType());
         if (p.sizePack() == 0) return;
         if (p.sizePack() == -1) {
@@ -80,6 +85,7 @@ namespace SpiRaspInterface {
         //memory cache coerence Problem
         __builtin___clear_cache(this->rxbuf, this->rxbuf + this->size);
         memcpy(p.getSPIPACK().forRasp.buf, this->rxbuf, sizeof(spi2Rasp));
+        digitalWrite(EnCom,0);
     }
 
     void ScorBoard::bytePrint(Pack &p) {
