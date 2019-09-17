@@ -161,6 +161,7 @@ namespace spiPack {
             Serial.print(sets.maxEn[Mot1 + i]);
         }
         Serial.println();
+        delay(10);
 
         Serial.print("#minEn:\t\t");
         for (byte i = 0; i < nMot; i++) {
@@ -169,6 +170,7 @@ namespace spiPack {
             Serial.print(sets.minEn[Mot1 + i]);
         }
         Serial.println();
+        delay(10);
 
         Serial.print("#maxCurrMed:");
         for (byte i = 0; i < nMot; i++) {
@@ -177,8 +179,9 @@ namespace spiPack {
             Serial.print(sets.maxCurrMed[Mot1 + i]);
         }
         Serial.println();
+        delay(10);
 
-        Serial.print("AdcVref set: ");
+        Serial.print("#AdcVref set: ");
         switch(sets.adcVref){
             case in1V1:
                 Serial.println("Internal Reference at 1.1V");
@@ -189,14 +192,20 @@ namespace spiPack {
             case ext:
                 Serial.println("External Reference (trimmer)");
                 break;
+            default:
+            	Serial.print("Register not set, number is: ");
+            	Serial.println(sets.adcVref);
+            	break;
         }
-        Serial.print("Adc offset remove Read: ");
+        Serial.print("#Adc offset remove Read: ");
         if(sets.diff)
             Serial.println("On");
         else
             Serial.println("Off");
+        delay(10);
 
-        Serial.println("PWM duty cycle set timer 3&4 divisor to: ");
+        Serial.println("#PWM duty cycle set timer 3&4 divisor to: ");
+        Serial.print("\t");
         switch(sets.freq){
             case hz30:
                 Serial.println("1024 for PWM frequency of 30.64 Hz");
@@ -213,7 +222,13 @@ namespace spiPack {
             case hz30k:
                 Serial.println("1 for PWM frequency of 31372.55 Hz");
                 break;
+            default:
+                Serial.print("Register not set, number is: ");
+                Serial.println(sets.freq);
+            	break;
         }
+        Serial.println();
+        delay(10);
 #else //Start Rasp print pack
         printf("maxEn:\t");
         for (int i = 0; i < nMot; i++) {

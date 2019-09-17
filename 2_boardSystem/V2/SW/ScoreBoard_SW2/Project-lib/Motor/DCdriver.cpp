@@ -32,6 +32,9 @@ namespace Motor {
 	            TCCR3B = (TCCR3B & B11111000) | B00000001; // set timer 3 divisor to     1 for PWM frequency of 31372.55 Hz
 	            TCCR4B = (TCCR4B & B11111000) | B00000001; // set timer 4 divisor to     1 for PWM frequency of 31372.55 Hz
 	            break;
+	        default:
+	        	setMotFreq(hz4k);
+	        	break;
 	    }
 	}
 
@@ -46,6 +49,10 @@ namespace Motor {
         this->delay_time = 0;
         this->time = 0;
         this->speed = 0;
+#ifdef SERIAL_PRINT
+        Serial.println("DCDriver create");
+        delay(100);
+#endif
     }
 
     void DCdriver::updateMot() {
@@ -145,11 +152,17 @@ namespace Motor {
 
     //##################### DCdriverLimit #####################
     DCdriverLimit::DCdriverLimit(byte ena, byte in1, byte in2, motCode mot,
-                                 settingsBoard &set, bool clockWisePos) :
+                                 settingsBoard *set, bool clockWisePos) :
             DCdriver(ena, in1, in2) {
-        this->myMot = mot;
+    	this->myMot = mot;
         this->limitSets = set;
         this->clockWisePos = clockWisePos;
+#ifdef SERIAL_PRINT
+        Serial.print("Mot");
+        Serial.print(mot+1);
+        Serial.println(" Setup");
+        delay(100);
+#endif
     }
 
     void DCdriverLimit::driver_motor(int speed) {
@@ -168,10 +181,10 @@ namespace Motor {
 
     void DCdriverLimit::updateMot() {
         short en = sFeed->getEn(this->myMot);
-        if (en >= this->limitSets.maxEn[this->myMot]) {
+        if (en >= this->limitSets->maxEn[this->myMot]) {
             this->enPosLimit = true;
             this->enNegLimit = false;
-        } else if (en <= this->limitSets.minEn[this->myMot]) {
+        } else if (en <= this->limitSets->minEn[this->myMot]) {
             this->enPosLimit = false;
             this->enNegLimit = true;
         } else {

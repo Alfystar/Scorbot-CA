@@ -10,6 +10,7 @@
 #define PROJECT_LIB_MSENLIB_H_
 
 #include "Arduino.h"
+#include "wiring_private.h"	//work on bit
 #include <stdlib.h>
 #include "circular_buffer/circular_buffer.h"
 #include "../globalDef.h"
@@ -22,6 +23,7 @@ namespace ScorebotRead {
     public:
         ScorFeed();                //Imposta i pin di uscita e registri
         void updateStepEn();
+        static void interruptEn(bool en);
         void isrFunxEN();
 
         mEncoder &captureEn();//Crea un istantanea FISSA degli encoder(fino a successiva chiamata)

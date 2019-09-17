@@ -9,7 +9,7 @@
 namespace ScorebotRead {
     ScorFeed::ScorFeed() {
         //Memory clean
-        memset(this->bufMem, 0, sizeMem * sizeof(int));
+        memset(this->bufMem, 0, sizeMem * sizeof(mEncoder));
         memset(this->step, 0, sizeof(mEncoder));
 
         //make input pin
@@ -21,8 +21,7 @@ namespace ScorebotRead {
         PORTC = 0b00111111;
         PINK = 0xFF;
         PORTB = 0xF0;
-        this->circularBuf = circular_buf_init((uint16_t *) this->bufMem,
-                                              sizeMem);
+        this->circularBuf = circular_buf_init((uint16_t *) this->bufMem, sizeMem);
         int ap;
         //ne metto 2 uguali per Predisporre la lettura
         circular_buf_put(this->circularBuf, this->enRead());
@@ -33,8 +32,7 @@ namespace ScorebotRead {
         //La modalità di default del timer 5 è in 8-bit phase correct pwm mode e prescaler a 64 bit
         //Mantengo utilizzabili i pin D44, D45 & D46 come normali PWM ma a 3921.16 Hz (default a 490.20 Hz)
         TCCR5B = (TCCR5B & B11111000) | B00000010; // set timer 5 divisor to 8 for PWM frequency of 3921.16 Hz
-        TIMSK5 |= _BV(TOIE5);	//Timer/Countern, Overflow Interrupt Enable (timer5_ovf_vect)
-
+        ScorFeed::interruptEn(true);
         //PCINT Active
         /*
         PCICR = (1 << PCIE2) | (1 << PCIE0);        //abilita PCMSK0 & PCMSK2
@@ -77,7 +75,6 @@ namespace ScorebotRead {
 
     void ScorFeed::isrFunxEN() {
         circular_buf_put(circularBuf, enRead());
-        //Serial.println(enRead(), BIN);
     }
 
     mEncoder &ScorFeed::captureEn() {
@@ -145,4 +142,15 @@ namespace ScorebotRead {
         }
         //Serial.println("END");
     }
+
+    void ScorFeed::interruptEn(bool en) {
+    	//Serial.println("Enable ADC interrupt");
+    	if(en)
+    		sbi(TIMSK5,TOIE5);	//Timer/Counter, Overflow Interrupt Enable (timer5_ovf_vect)
+    	else
+    		cbi(TIMSK5,TOIE5);	//Timer/Counter, Overflow Interrupt Disable(timer5_ovf_vect)
+
+    }
 }    //End namespace ScorebotRead
+
+

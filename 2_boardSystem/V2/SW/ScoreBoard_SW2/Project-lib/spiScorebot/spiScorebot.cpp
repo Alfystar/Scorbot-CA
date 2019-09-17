@@ -19,7 +19,7 @@ namespace InternalDevice {
         this->newRecive = 0;
         this->dRecive = 0;
         SPCR = (1 << SPIE) | (1 << SPE);    //attiva spi e abilita interrupt
-        SPDR = 5;                        //predispomgo che al primo invio invio 0
+        SPDR = 5;                        //predispongo lo 0 del primo invio
     }
 
     //## ELABORATION ##//

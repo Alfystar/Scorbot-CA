@@ -45,8 +45,9 @@ namespace InternalDevice {
         //A queste condizioni ho 125Khz di clock all'adc e una conversione ogni:
         //14*1/125KHz= 112us ~ 8,9Khz  (14 se letto in differential mode)
         //13*1/125KHz= 104us ~ 9,6Khz  (13 se letto in normal mode)
+        ADCSRA = 0;
         ADCSRA |= (1 << ADEN) | (1 << ADATE); //Attiva ADC, Seleziona l'autoTrigger scelto in ADCSRB
-        ADCSRA | 0x7; //prescaler a 1/128 Clock
+        ADCSRA |= 0x7; //prescaler a 1/128 Clock
 
         this->pinSelect(Mot1); //imposto il primo pin da leggere per la lettura sporca
         ADCSRA |= (1 << ADSC);    //avvia 1° conversione
@@ -72,6 +73,9 @@ namespace InternalDevice {
             case ext:
                 ADMUX = (0 << REFS0) | (0 << REFS1); // Ext Vref
                 break;
+            default:
+                ADMUX = (0 << REFS0) | (1 << REFS1); // 1.1V Internal Arduino
+            	break;
         }
     }
 

@@ -11,19 +11,23 @@
 extern DCdriverLimit *mot[nMot];
 
 void motSetup() {
+	pinMode(MotEn, OUTPUT);
+	digitalWrite(MotEn,1);
+
     setMotFreq(globSets.freq);
+
     //TODO: verificare sia vero quando scritto sotto
     //Ordine INA e INB, per avere una rotazione oraria
     //guardando il braccio di profilo con la pinza a SINISTRA
     //TODO: aggiungere il corretto parametro clockpos
-    mot[Mot1] = new DCdriverLimit(EN1, IN1A, IN1B, Mot1, globSets, true);
-    mot[Mot2] = new DCdriverLimit(EN2, IN2A, IN2B, Mot2, globSets, true);
-    mot[Mot3] = new DCdriverLimit(EN3, IN3B, IN3A, Mot3, globSets, true);
-    mot[Mot4] = new DCdriverLimit(EN4, IN4B, IN4A, Mot4, globSets, true);
-    mot[Mot5] = new DCdriverLimit(EN5, IN5A, IN5B, Mot5, globSets, true);
-    mot[Mot6] = new DCdriverLimit(EN6, IN6A, IN6B, Mot6, globSets, true);
-    pinMode(MotEn, OUTPUT);
-    digitalWrite(MotEn,1);
+
+    mot[Mot1] = new DCdriverLimit(EN1, IN1A, IN1B, Mot1, &globSets, true);
+    mot[Mot2] = new DCdriverLimit(EN2, IN2A, IN2B, Mot2, &globSets, true);
+    mot[Mot3] = new DCdriverLimit(EN3, IN3B, IN3A, Mot3, &globSets, true);
+    mot[Mot4] = new DCdriverLimit(EN4, IN4B, IN4A, Mot4, &globSets, true);
+    mot[Mot5] = new DCdriverLimit(EN5, IN5A, IN5B, Mot5, &globSets, true);
+    mot[Mot6] = new DCdriverLimit(EN6, IN6A, IN6B, Mot6, &globSets, true);
+
     /*
      mot[Mot1] = new DCdriver(EN1, IN1A, IN1B);
      mot[Mot2] = new DCdriver(EN2, IN2A, IN2B);

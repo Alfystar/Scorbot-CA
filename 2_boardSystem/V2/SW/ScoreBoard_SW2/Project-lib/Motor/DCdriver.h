@@ -50,14 +50,14 @@ namespace Motor {
     class DCdriverLimit : public DCdriver {
     public:
         DCdriverLimit(byte ena, byte in1, byte in2, motCode mot,
-                      settingsBoard &set, bool clockWisePos);
+                      settingsBoard *set, bool clockWisePos);
         void driver_motor(int speed);
         void updateMot();
     private:
         bool clockWisePos;
         bool enPosLimit = false;        //true = End clockWise rotation
         bool enNegLimit = false;    //true = End antiClockWise rotation
-        settingsBoard &limitSets;
+        settingsBoard *limitSets;
         motCode myMot;
 
     };
