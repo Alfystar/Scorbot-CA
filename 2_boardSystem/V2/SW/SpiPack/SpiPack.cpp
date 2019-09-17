@@ -62,23 +62,6 @@ namespace spiPack {
                 }
             }
             break;
-
-            case CurrentGet:
-            {
-                Serial.println("Master Ask 'CurrentGet', Parameter:");
-                /*Recive*/
-                Serial.print("\tNotting");
-
-                /*Send*/
-                Serial.println("Sended Current Value:");
-                for (byte i = 0; i < nMot; i++) {
-                    Serial.print("\tcurrent[Mot");
-                    Serial.print(i + 1);
-                    Serial.print("]:");
-                    Serial.println(this->getCurrent()[Mot1 + i]);
-                }
-            }
-            break;
             case SettingSet:
             case SettingGet:
             {
@@ -105,6 +88,7 @@ namespace spiPack {
                 Serial.print("\tNotting\n");
                 break;
             case invalid:
+            default:
                 Serial.println("Pack type is invalid, should be an error on Connection or inside the Pack compiling.");
                 break;
         }
@@ -161,30 +145,27 @@ namespace spiPack {
 #ifdef ScorboarFirmware
         Serial.print("#maxEn:\t\t");
         for (byte i = 0; i < nMot; i++) {
-
             Serial.print("\t");
-            Serial.print(sets.maxEn[Mot1 + i]);
+            Serial.print((int)sets.maxEn[Mot1 + i]);
+            delay(1);
         }
         Serial.println();
-        delay(10);
 
         Serial.print("#minEn:\t\t");
         for (byte i = 0; i < nMot; i++) {
-
             Serial.print("\t");
-            Serial.print(sets.minEn[Mot1 + i]);
+            Serial.print((int)sets.minEn[Mot1 + i]);
+            delay(1);
         }
         Serial.println();
-        delay(10);
 
         Serial.print("#maxCurrMed:");
         for (byte i = 0; i < nMot; i++) {
-
             Serial.print("\t");
-            Serial.print(sets.maxCurrMed[Mot1 + i]);
+            Serial.print((int)sets.maxCurrMed[Mot1 + i]);
+            delay(1);
         }
         Serial.println();
-        delay(10);
 
         Serial.print("#AdcVref set: ");
         switch(sets.adcVref){
@@ -202,12 +183,14 @@ namespace spiPack {
             	Serial.println(sets.adcVref);
             	break;
         }
-        Serial.print("#Adc offset remove Read: ");
+        delay(1);
+
+        Serial.print("#Adc offset remove State: ");
         if(sets.diff)
             Serial.println("On");
         else
             Serial.println("Off");
-        delay(10);
+        delay(1);
 
         Serial.println("#PWM duty cycle set timer 3&4 divisor to: ");
         Serial.print("\t");
@@ -233,7 +216,8 @@ namespace spiPack {
             	break;
         }
         Serial.println();
-        delay(10);
+        delay(1);
+        return;
 #else //Start Rasp print pack
         printf("maxEn:\t");
         for (int i = 0; i < nMot; i++) {
@@ -282,6 +266,7 @@ namespace spiPack {
                 printf("1 for PWM frequency of 31372.55 Hz");
                 break;
         }
+        return;
 #endif //END Rasp print pack
 
     }

@@ -154,7 +154,7 @@ namespace InternalDevice {
     }
 
 //puntatore di ritorno FERMO per ~1ms (
-    mCurrent &AdcDevice::getLastCicle() {
+    mCurrent &AdcDevice::getLastCycle() {
         return this->ampMot[((indexADC - 1) + history) % history];
     }
 
@@ -165,26 +165,22 @@ namespace InternalDevice {
             this->sumCur += this->ampMot[j][mot];
         return this->sumCur;
     }
-
+    mCurrent *m;
     void AdcDevice::debugPrintAdc() {
-        mCurrent &m = this->getLastCicle();
-        Serial.print("Mot 1=");
-        Serial.print(m[Mot1]);
-        Serial.print("  Mot 2=");
-        Serial.print(m[Mot2]);
-        Serial.print("  Mot 3=");
-        Serial.print(m[Mot3]);
-        Serial.print("  Mot 4=");
-        Serial.print(m[Mot4]);
-        Serial.print("  Mot 5=");
-        Serial.print(m[Mot5]);
-        Serial.print("  Mot 6=");
-        Serial.println(m[Mot6]);
+        m = &this->getLastCycle();
+        Serial.println("Last cycle:");
+        //Serial.print("#minEn:\t\t");
+        for (byte i = 0; i < nMot; i++) {
+        	Serial.print("Mot");
+        	Serial.print(i+1);
+        	Serial.print(" = ");
+        	Serial.println(*m[Mot1]);
+            delay(1);
+        }
         if (this->diffRead)
             Serial.println("Lettura differenziale ON");
         else
             Serial.println("Lettura differenziale OFF");
-
     }
 
 } //END namespace InternalDevice

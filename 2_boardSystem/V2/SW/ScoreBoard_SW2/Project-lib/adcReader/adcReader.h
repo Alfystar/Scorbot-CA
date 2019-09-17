@@ -65,7 +65,7 @@ namespace InternalDevice {
         byte pinSelect(motCode mot);
 
         //### GET VALUE ###//
-        mCurrent &getLastCicle();
+        mCurrent &getLastCycle();
         short getCurrentSum(motCode mot);
 
         //### DEBUG & PRINT ###//

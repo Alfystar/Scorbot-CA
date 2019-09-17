@@ -1,9 +1,11 @@
 #include "Arduino.h"
 #include "Project-lib/globalDef.h"
-//#define SERIAL_PRINT    //attiva/disattiva compilazione del codice per printare in seriale
+
+//#define SERIAL_PRINT 1    //attiva/disattiva compilazione del codice per printare in seriale
+#define SPI_PRINT 1			//attiva/disattiva compilazione del print del pacchetto spi
 
 #define sanityDelay 250    	//tempo ms di attesa prima di ri-scansionare se il robot è ok
-#define newPrintDelay 1500	//delay tra un debug print e l'altro
+#define newPrintDelay 1000	//delay tra un debug print e l'altro
 
 settingsBoard globSets;
 SpiDevice *spi;
@@ -12,6 +14,9 @@ ScorFeed *sFeed;
 using namespace Motor;
 DCdriverLimit *mot[nMot];
 
+#ifdef SERIAL_PRINT
+unsigned long timePrint;	//time to next debug print
+#endif
 //The setup function is called once at startup of the sketch
 void setup() {
     // Add your initialization code here
@@ -19,30 +24,33 @@ void setup() {
     Serial.println("\n##### Start Setup #####");
     delay(250);
 
-    Serial.println("\tLoad Settings from Memory");
     memoryLoad();
-#ifdef SERIAL_PRINT
-	Pack::printSetting(globSets);
-    delay(1000);
-#endif
+    Serial.println("\tLoad Settings from Memory");
 
-    Serial.println("\tMotor Enable");
     motSetup();
+    Serial.println("\tMotor Setup");
 
-    Serial.println("\tSetUp Scorbot Sensors");
     sFeed = new ScorFeed();
+    Serial.println("\tSetUp Scorbot Sensors");
 
-    Serial.println("\tSetUp ADC");
     adc = new AdcDevice(globSets.diff, globSets.adcVref);
+    Serial.println("\tSetUp ADC");
 
-    Serial.println("\tSetUp SPI");
     spi = new SpiDevice();
+    Serial.println("\tSetUp SPI");
 
-    Serial.println("\tGlobal Interrupt Enable");
     sei();
+    Serial.println("\tGlobal Interrupt Enable");
 
     Serial.println("End Setup");
 
+#ifdef SERIAL_PRINT
+    delay(500);
+	Pack::printSetting(globSets);
+	Serial.println("End Setup");
+	timePrint=millis();
+	delay(1000);
+#endif
     //home();
 }
 
@@ -54,19 +62,20 @@ void loop() {
     if (spi->spiAvailable()) {
         r = &spi->getLastRecive();
         excutePack(*r);
-#ifdef SERIAL_PRINT
+#ifdef SPI_PRINT
         r->printPack();
 #endif
     }
     sFeed->updateStepEn();
     motorStateMachine();
 #ifdef SERIAL_PRINT
-    static unsigned long timePrint = 0;
+
     if (millis() > timePrint + newPrintDelay) {
-        //adc->debugPrintAdc();
-        //sFeed->dSubDebug();
-        //sFeed->printSteps();
+        adc->debugPrintAdc();
+        sFeed->dSubDebug();
+        sFeed->printSteps();
     	Pack::printSetting(globSets);
+        Serial.println();
         timePrint = millis();
     }
 #endif
@@ -113,7 +122,7 @@ void sanityChek(int wait) {
 //(e si ha tempo per eseguire la funzione solo fino al successivo!!)
 ISR(SPI_STC_vect) {
         spi->isrFunxISP();
-    	Serial.print("spi");
+//    	Serial.print("spi");
 }
 
 //## ADC INTERRUPT SERVICE ##//

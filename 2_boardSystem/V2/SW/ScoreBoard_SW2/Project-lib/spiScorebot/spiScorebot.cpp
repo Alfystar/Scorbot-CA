@@ -88,11 +88,11 @@ namespace InternalDevice {
                 p.setEncoder(sFeed->captureEn());
                 break;
             case PWMsend_CurRet:
-                p.setCurrent(adc->getLastCicle());
+                p.setCurrent(adc->getLastCycle());
                 break;
             case PWMsend_AllRet:
                 p.setEncoder(sFeed->captureEn());
-                p.setCurrent(adc->getLastCicle());
+                p.setCurrent(adc->getLastCycle());
                 break;
             case SettingGet:
                 p.setSetting(globSets, pack4Rasp);

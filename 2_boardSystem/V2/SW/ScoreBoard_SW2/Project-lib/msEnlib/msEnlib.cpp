@@ -32,6 +32,7 @@ namespace ScorebotRead {
         //La modalità di default del timer 5 è in 8-bit phase correct pwm mode e prescaler a 64 bit
         //Mantengo utilizzabili i pin D44, D45 & D46 come normali PWM ma a 3921.16 Hz (default a 490.20 Hz)
         TCCR5B = (TCCR5B & B11111000) | B00000010; // set timer 5 divisor to 8 for PWM frequency of 3921.16 Hz
+        TCNT5 = 0;
         ScorFeed::interruptEn(true);
         //PCINT Active
         /*
@@ -104,14 +105,15 @@ namespace ScorebotRead {
         Serial.println(enChB, BIN);
     }
 
+    mEncoder passiT;
     void ScorFeed::printSteps() {
-        mEncoder passiT;
         memcpy(passiT, this->captureEn(), sizeof(mEncoder));
         for (byte i = 0; i < nMot; i++) {
             Serial.print("\tEn ");
             Serial.print(i + 1);
             Serial.print("= ");
             Serial.print(passiT[i]);
+            delay(1);
         }
         Serial.println();
     }
