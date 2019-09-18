@@ -29,7 +29,17 @@ I comandi da eseguire che funzionano sempre sono:
     ls -l ttyAMC*
     sudo chmod o+rwx ttyAMC* 
 
+
 Con questi comandi sarete in grado di sapre su quale tty siete e metterla ad accesso libero. Fatto ciò sloebel certamente funzionerà
+
+
+In alternativa si può aggiungere il proprio user al gruppo "dialout"
+    sudo usermod -a -G dialout <UserName>
+dove "UserName" lo si può scoprire digitando:
+    whoiam
+or
+    id
+A questo punto riavviare la macchina e sloeber non dovrebbe avere più problemi a individuare la periferica
 
 
 Sull'ide arduino questo codice non è stato provato, ma anche funzionasse non conviene usarlo essendo molto meno potente
