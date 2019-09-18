@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated>
-      <config projectName="SpiRasp_demo" targetName="SpiRasp_demo" />
-    </generated>
+    <generated />
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
@@ -12,10 +10,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="Add son class to DCmotor to improve Working set limits&#10;code reformat&#10;readme update">
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/spiScorebot/spiScorebot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/spiScorebot/spiScorebot.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/ScoreBoard_SW2.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/ScoreBoard_SW2.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/excutePack.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/excutePack.ino" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -26,7 +26,6 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
       <list>
@@ -72,13 +71,6 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="SpiRasp_demo" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SpiRasp_demo" TARGET_NAME="SpiRasp_demo" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SpiRasp_demo" RUN_TARGET_NAME="SpiRasp_demo">
-      <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
-      </method>
-    </configuration>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -109,6 +101,7 @@
       <workItem from="1567841371535" duration="823000" />
       <workItem from="1567873949084" duration="732000" />
       <workItem from="1568014176025" duration="7125000" />
+      <workItem from="1568796539386" duration="1445000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
       <created>1568027375662</created>

@@ -127,7 +127,7 @@ void sanityChek(int wait) {
 //(e si ha tempo per eseguire la funzione solo fino al successivo!!)
 ISR(SPI_STC_vect) {
         spi->isrFunxISP();
-//    	Serial.print("spi");
+        //Serial.print("spi");
 }
 
 //## ADC INTERRUPT SERVICE ##//
