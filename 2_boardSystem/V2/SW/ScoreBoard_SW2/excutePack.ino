@@ -6,11 +6,13 @@ extern DCdriverLimit *mot[nMot];
 
 void excutePack(Pack &p) {
 	switch (p.getPackType()) {
-		case invalid:
+		case invalid:{
+			//notting to do
+		}
 		break;
 		case PWMsend_EnRet:
 		case PWMsend_CurRet:
-		case PWMsend_AllRet:
+		case PWMsend_AllRet: {
 			mSpeed &vel = p.getPwm();
 			for (byte i = 0; i < nMot; i++) {
 				switch (vel[Mot1 + i]) {
@@ -30,19 +32,24 @@ void excutePack(Pack &p) {
 					break;
 				}
 			}
+		}
 		break;
-		case SettingSet:
+		case SettingSet: {
 			settingsBoard &s = p.getSetting(pack4Ard);
 			memorySave(s);
 			setMotFreq(s.freq);
 			adc->setDiffRead(s.diff);
 			adc->setVRefSource(s.adcVref);
-
+		}
 		break;
-		case goHome:
+		case goHome: {
 			home();
+		}
 		break;
-		default:
+		case SettingGet:
+		default:{
+			//notting to do
+		}
 		break;
 	}
 }

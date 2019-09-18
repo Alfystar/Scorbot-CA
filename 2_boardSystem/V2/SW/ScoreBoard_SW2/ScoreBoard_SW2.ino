@@ -1,10 +1,11 @@
 #include "Arduino.h"
 #include "Project-lib/globalDef.h"
 
-//#define SERIAL_PRINT 1    //attiva/disattiva compilazione del codice per printare in seriale
+#define SERIAL_PRINT 1    //attiva/disattiva compilazione del codice per printare in seriale
 #define SPI_PRINT 1			//attiva/disattiva compilazione del print del pacchetto spi
+#define SERIAL_PRINT_SENSOR 1 //attiva/disattiva compilazione del codice per printare i sensori ogni "newPrintDelay"
 
-#define sanityDelay 250    	//tempo ms di attesa prima di ri-scansionare se il robot è ok
+#define sanityDelay 1000    	//tempo ms di attesa prima di ri-scansionare se il robot è ok
 #define newPrintDelay 1000	//delay tra un debug print e l'altro
 
 settingsBoard globSets;
@@ -16,6 +17,8 @@ DCdriverLimit *mot[nMot];
 
 #ifdef SERIAL_PRINT
 unsigned long timePrint;	//time to next debug print
+unsigned long sanityTime = 0;
+
 #endif
 //The setup function is called once at startup of the sketch
 void setup() {
@@ -73,23 +76,22 @@ void loop() {
     }
     sFeed->updateStepEn();
     motorStateMachine();
-#ifdef SERIAL_PRINT
-
+#ifdef SERIAL_PRINT_SENSOR
     if (millis() > timePrint + newPrintDelay) {
         adc->debugPrintAdc();
-        sFeed->dSubDebug();
-        sFeed->printSteps();
-    	Pack::printSetting(globSets);
+        //sFeed->dSubDebug();
+        //sFeed->printSteps();
+    	//Pack::printSetting(globSets);
         Serial.println();
         timePrint = millis();
     }
 #endif
 }
 
-unsigned long sanityTime = 0;
 
 void sanityChek(int wait) {
     if (millis() > sanityTime + wait) {
+    	sanityTime=millis();
         for (byte i = 0; i < nMot; i++) {
             if (globSets.maxCurrMed[i] < adc->getCurrentSum((motCode) i)) {
                 mot[i]->freeRun();
