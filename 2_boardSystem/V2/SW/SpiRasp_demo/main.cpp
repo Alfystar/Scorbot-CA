@@ -95,6 +95,7 @@ int main() {
                 /*Assegnazione limiti scoperti sperimentalmente*/
                 p->clearPack();
                 p->setPackType(SettingSet);
+                //curr neg => no limit
                 p->setMotorLimit(pack4Ard, Mot1, 2160, 24300, -19450);
                 p->setMotorLimit(pack4Ard, Mot2, 2960, 16200, -1000);
                 p->setMotorLimit(pack4Ard, Mot3, 2960, 21900, -7300);
