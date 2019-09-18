@@ -83,12 +83,18 @@ int main() {
                 send.getCurrentPack(*p);
                 p->printPack();
             }
+            if (strcmp(sArgv[0], "a") == 0) {
+                send.getSensPack(*p);
+                p->printPack();
+            }
             if (strcmp(sArgv[0], "g") == 0) {
                 send.getSettingPack(*p);
                 p->printPack();
             }
             if (strcmp(sArgv[0], "s") == 0) {
                 /*Assegnazione limiti scoperti sperimentalmente*/
+                p->clearPack();
+                p->setPackType(SettingSet);
                 p->setMotorLimit(pack4Ard, Mot1, 2160, 24300, -19450);
                 p->setMotorLimit(pack4Ard, Mot2, 2960, 16200, -1000);
                 p->setMotorLimit(pack4Ard, Mot3, 2960, 21900, -7300);
@@ -97,6 +103,7 @@ int main() {
                 p->setMotorLimit(pack4Ard, Mot6, 2160, 5770, -10);
                 p->setAdcDiff(pack4Ard,false);
                 p->setAdcRef(pack4Ard,in1V1);
+                p->printPack();
                 send.setSettingPack(*p);
                 p->printPack();
             }

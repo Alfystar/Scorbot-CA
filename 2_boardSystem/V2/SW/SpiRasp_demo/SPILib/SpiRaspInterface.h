@@ -33,15 +33,14 @@ namespace SpiRaspInterface {
         //sending metod
         void goHomePack();
 
-        void getCurrentPack(Pack &p);
-        mCurrent *getCurrentPack();
-
+        //Set board Settings
         void setSettingPack(Pack &p);
         void setSettingPack(settingsBoard &s);
-
+        //Get board Settings
         void getSettingPack(Pack &p);
         settingsBoard *getSettingPack();
 
+        //Motor controll with return
         void setPwm_EnPack(Pack &p);
         mEncoder *setPwm_EnPack(mSpeed &ms);
         void setPwm_CurPack(Pack &p);
@@ -49,8 +48,14 @@ namespace SpiRaspInterface {
         void setPwm_AllPack(Pack &p);
         mAll *setPwm_AllPack(mSpeed &ms);
 
+        //Sensor return
         void getEnPack(Pack &p);
         mEncoder *getEnPack();
+        void getCurrentPack(Pack &p);
+        mCurrent *getCurrentPack();
+        void getSensPack(Pack &p);
+        mAll *getSensPack();
+
     protected:
     private:
         struct spi_ioc_transfer spi;

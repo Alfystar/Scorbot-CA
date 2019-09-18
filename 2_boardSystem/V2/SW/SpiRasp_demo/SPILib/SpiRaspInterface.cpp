@@ -125,21 +125,6 @@ namespace SpiRaspInterface {
         this->sendPack(p);
     }
 
-    void ScorBoard::getCurrentPack(Pack &p) {
-        p.clearPack();
-        p.pwmSet(ignore, ignore, ignore, ignore, ignore, ignore);
-        p.setPackType(PWMsend_CurRet);
-        this->setPwm_EnPack(p);
-    }
-
-    mCurrent *ScorBoard::getCurrentPack() {
-        Pack p;
-        this->getCurrentPack(p);
-        mCurrent *m = (mCurrent *) (malloc(sizeof(mCurrent)));
-        memmove(m, p.getCurrent(), sizeof(mCurrent));
-        return m;
-    }
-
     void ScorBoard::setSettingPack(Pack &p) {
         p.setPackType(SettingSet);
         this->sendPack(p);
@@ -219,6 +204,37 @@ namespace SpiRaspInterface {
         mEncoder *me = (mEncoder *) (malloc(sizeof(mEncoder)));
         memmove(me, p.getEncoder(), sizeof(mEncoder));
         return me;
+    }
+
+    void ScorBoard::getCurrentPack(Pack &p) {
+        p.clearPack();
+        p.pwmSet(ignore, ignore, ignore, ignore, ignore, ignore);
+        p.setPackType(PWMsend_CurRet);
+        this->sendPack(p);
+    }
+
+    mCurrent *ScorBoard::getCurrentPack() {
+        Pack p;
+        this->getCurrentPack(p);
+        mCurrent *mc = (mCurrent *) (malloc(sizeof(mCurrent)));
+        memmove(mc, p.getCurrent(), sizeof(mCurrent));
+        return mc;
+    }
+
+    void ScorBoard::getSensPack(Pack &p) {
+        p.clearPack();
+        p.pwmSet(ignore, ignore, ignore, ignore, ignore, ignore);
+        p.setPackType(PWMsend_AllRet);
+        this->sendPack(p);
+    }
+
+    mAll *ScorBoard::getSensPack() {
+        Pack p;
+        this->getSensPack(p);
+        mAll *ma = (mAll *) (malloc(sizeof(mAll)));
+        memmove(ma->cur, p.getCurrent(), sizeof(mCurrent));
+        memmove(ma->en, p.getEncoder(), sizeof(mEncoder));
+        return ma;
     }
 
     ///##########################################################################################

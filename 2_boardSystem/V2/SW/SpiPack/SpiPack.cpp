@@ -137,6 +137,7 @@ namespace spiPack {
                     printf("Recive current Settings:\n");
                 }
                 this->printSetting(this->getSetting());
+            break;
             case goHome:
                 printf("PackType: goHomePack\n");
                 printf("Sending: no parameters\n");
@@ -417,7 +418,7 @@ namespace spiPack {
         //Set variable inside the pack to send-out
         if (dest == pack4Ard) {
             this->setPackType(SettingSet);
-            this->data.forRasp.up.prop.maxEn[mot] = en;
+            this->data.forArd.up.prop.maxEn[mot] = en;
         } else if (dest == pack4Rasp) {
             this->setPackType(SettingGet);
             this->data.forArd.up.prop.maxEn[mot] = en;
@@ -428,10 +429,10 @@ namespace spiPack {
         //Set variable inside the pack to send-out
         if (dest == pack4Ard) {
             this->setPackType(SettingSet);
-            this->data.forRasp.up.prop.minEn[mot] = en;
+            this->data.forArd.up.prop.minEn[mot] = en;
         } else if (dest == pack4Rasp) {
             this->setPackType(SettingGet);
-            this->data.forArd.up.prop.minEn[mot] = en;
+            this->data.forRasp.up.prop.minEn[mot] = en;
         }
     }
 
@@ -439,10 +440,10 @@ namespace spiPack {
         //Set variable inside the pack to send-out
         if (dest == pack4Ard) {
             this->setPackType(SettingSet);
-            this->data.forRasp.up.prop.maxCurrMed[mot] = current;
+            this->data.forArd.up.prop.maxCurrMed[mot] = current;
         } else if (dest == pack4Rasp) {
             this->setPackType(SettingGet);
-            this->data.forArd.up.prop.maxCurrMed[mot] = current;
+            this->data.forRasp.up.prop.maxCurrMed[mot] = current;
         }
     }
 
@@ -450,30 +451,30 @@ namespace spiPack {
         //Set variable inside the pack to send-out
         if (dest == pack4Ard) {
             this->setPackType(SettingSet);
-            this->data.forRasp.up.prop.adcVref = adc;
-        } else if (dest == pack4Rasp) {
-            this->setPackType(SettingGet);
             this->data.forArd.up.prop.adcVref = adc;
+        }else if (dest == pack4Rasp) {
+            this->setPackType(SettingGet);
+            this->data.forRasp.up.prop.adcVref = adc;
         }
     }
 
     void Pack::setAdcDiff(packDest dest, bool diff) {
         if (dest == pack4Ard) {
             this->setPackType(SettingSet);
-            this->data.forRasp.up.prop.diff = diff;
+            this->data.forArd.up.prop.diff = diff;
         } else if (dest == pack4Rasp) {
             this->setPackType(SettingGet);
-            this->data.forArd.up.prop.diff = diff;
+            this->data.forRasp.up.prop.diff = diff;
         }
     }
 
     void Pack::setPWMfreq(packDest dest, pwmFreq freq) {
         if (dest == pack4Ard) {
             this->setPackType(SettingSet);
-            this->data.forRasp.up.prop.freq = freq;
+            this->data.forArd.up.prop.freq = freq;
         } else if (dest == pack4Rasp) {
             this->setPackType(SettingGet);
-            this->data.forArd.up.prop.freq = freq;
+            this->data.forRasp.up.prop.freq = freq;
         }
     }
 
