@@ -1,3 +1,0 @@
-/home/scorebot/Scorbot-CA/relase/CMakeFiles/edit_cache.dir
-/home/scorebot/Scorbot-CA/relase/CMakeFiles/rebuild_cache.dir
-/home/scorebot/Scorbot-CA/relase/CMakeFiles/scorbot.dir

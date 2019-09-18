@@ -1,3 +1,0 @@
-/home/scorebot/Scorbot-CA/pidWork/pidClassDemo/CMakeFiles/edit_cache.dir
-/home/scorebot/Scorbot-CA/pidWork/pidClassDemo/CMakeFiles/rebuild_cache.dir
-/home/scorebot/Scorbot-CA/pidWork/pidClassDemo/CMakeFiles/pidClassDemo.dir
