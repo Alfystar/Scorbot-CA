@@ -72,7 +72,7 @@ namespace spiPack {
 ///Send/Recive pack union
 
 /*Struttura di Invio, usata dalla classe SPISEND*/
-    typedef struct spi2Ard_ {
+    typedef union {
         union sendType {
             mSpeed speed;
             settingsBoard prop;
@@ -82,7 +82,7 @@ namespace spiPack {
 
 
 /*Struttura di Ricezione, usata dalla classe SPISEND*/
-    typedef struct spi2Rasp_ {
+    typedef union {
         union recType {
             mEncoder en;
             mCurrent cur;
