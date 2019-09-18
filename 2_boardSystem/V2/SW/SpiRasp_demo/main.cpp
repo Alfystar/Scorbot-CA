@@ -65,7 +65,7 @@ int main() {
         //todo: capire perche strcmp da segmentation fault in questa condizione
         //strcmp("m", "m");
         p->clearPack();
-        if (sArgc <= 1) {
+        if (sArgc >= 1) {
             if (strcmp(sArgv[0], "m") == 0) {
                 v *= -1;
                 //al posto di pwm si potrebbe anche mettere &s->out.up.speed,
@@ -73,6 +73,7 @@ int main() {
                 //in maniera trasparente al progammatore
                 p->pwmSet(v, -v, v, -v, v, -v);
                 send.setPwm_EnPack(*p);
+                p->printPack();
             }
             if (strcmp(sArgv[0], "e") == 0) {
                 send.getEnPack(*p);
@@ -106,8 +107,7 @@ int main() {
             if (strcmp(sArgv[0], "?") == 0) {
                 help();
             }
-        }
-        if (sArgc <= 7) {
+        }else if (sArgc >= 7) {
             if (strcmp(sArgv[0], "m") == 0) {
                 mSpeed motP;
                 for (int i = 0; i < nMot; ++i) {

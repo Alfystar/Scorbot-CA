@@ -131,10 +131,10 @@ namespace spiPack {
             case SettingGet:
                 if (this->getPackType() == SettingSet) {
                     printf("PackType: SettingSet\n");
-                    printf("Sending new Settings:");
+                    printf("Sending new Settings:\n");
                 } else {
                     printf("PackType: SettingGet\n");
-                    printf("Recive current Settings:");
+                    printf("Recive current Settings:\n");
                 }
                 this->printSetting(this->getSetting());
             case goHome:

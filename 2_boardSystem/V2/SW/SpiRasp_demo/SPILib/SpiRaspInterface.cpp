@@ -29,9 +29,15 @@ namespace SpiRaspInterface {
         ioctl(this->fdSpi, SPI_IOC_WR_BITS_PER_WORD, &this->bitWord);
         ioctl(this->fdSpi, SPI_IOC_RD_BITS_PER_WORD, &this->bitWord);
 
+        //to expose the pin and not use root (wiringPiSetupSys)
+        char gpioSys[128];
+        sprintf(gpioSys,"gpio export %d OUTPUT",EnCom);
+        system(gpioSys);
         wiringPiSetupSys();
+
+        //wiringPiSetupGpio();    //need to be root
         pinMode(EnCom,OUTPUT);
-        digitalWrite(EnCom,0);
+        digitalWrite(EnCom,1);
     }
 
     ScorBoard::~ScorBoard() {
@@ -86,17 +92,18 @@ namespace SpiRaspInterface {
         __builtin___clear_cache(this->rxbuf, this->rxbuf + this->size);
         memcpy(p.getSPIPACK().forRasp.buf, this->rxbuf, sizeof(spi2Rasp));
         digitalWrite(EnCom,0);
+        this->bytePrint(p);
     }
 
     void ScorBoard::bytePrint(Pack &p) {
-        printf("Byte send");
+        printf("Byte send\t");
         for (int i = 0; i < p.sizePack(); ++i) {
             printf(" %d", p.getSPIPACK().forArd.buf[i]);
         }
         printf("\n");
-        printf("Byte recive");
+        printf("Byte recive\t");
         for (int i = 0; i < p.sizePack(); ++i) {
-            printf(" %d", p.getSPIPACK().forArd.buf[i]);
+            printf(" %d", p.getSPIPACK().forRasp.buf[i]);
         }
         printf("\n");
 
