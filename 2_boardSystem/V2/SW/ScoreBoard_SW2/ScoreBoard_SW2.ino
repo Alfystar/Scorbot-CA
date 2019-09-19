@@ -1,10 +1,12 @@
 #include "Arduino.h"
 #include "Project-lib/globalDef.h"
 
-#define SERIAL_PRINT 1    //attiva/disattiva compilazione del codice per printare in seriale informazioni aggiungtive
+//#define SERIAL_PRINT 1    //attiva/disattiva compilazione del codice per printare in seriale informazioni aggiungtive
 #define SPI_PRINT 1			//attiva/disattiva compilazione del print del pacchetto spi
 //#define SERIAL_PRINT_SENSOR 1 //attiva/disattiva compilazione del codice per printare i sensori ogni "newPrintDelay"
 
+//#define MOVE_CHECK 1 		//attiva/disattiva compilazione del codice che muove tutti i motori per test
+#define MOTOR_LIMIT_ENABLE 1 	//attiva/disattiva compilazione del codice che sceglie la classe da istaziare per i motori
 
 
 settingsBoard globSets;
@@ -61,24 +63,19 @@ void setup() {
 	Pack::printSetting(globSets);
 	Serial.println("End Setup");
 #endif
-	delay(1000);
-		mot[Mot3]->drive_motor(150);
-		delay(2000);
-		mot[Mot3]->drive_motor(-180);
-		delay(2000);
-		mot[Mot3]->freeRun();
-	/*
+
+#ifdef MOVE_CHECK
 	for (byte i=Mot1;i<nMot;i++)
 	{
-	delay(1000);
+	delay(3000);
 	mot[i]->drive_motor(150);
-	delay(1000);
+	delay(3000);
 	mot[i]->drive_motor(-150);
-	delay(1000);
+	delay(3000);
 	mot[i]->freeRun();
 	}
-	*/
-	//home();
+#endif
+
 }
 
 Pack *r;
@@ -96,8 +93,8 @@ void loop() {
 	motorStateMachine();
 #ifdef SERIAL_PRINT_SENSOR
 	if (millis() > timePrint + newPrintDelay) {
-		adc->debugPrintAdc();
-		//sFeed->dSubDebug();
+		//adc->debugPrintAdc();
+		sFeed->dSubDebug();
 		//sFeed->printSteps();
 		//Pack::printSetting(globSets);
 		Serial.println();
