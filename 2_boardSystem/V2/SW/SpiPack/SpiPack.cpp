@@ -278,13 +278,13 @@ namespace spiPack {
 		printf("\nadcReference voltage:\t");
 		switch (sets.adcVref) {
 			case in1V1:
-				printf("Internal Reference 1.1V\n");
+                printf("Internal Reference 1.1V");
 				break;
 			case in2V56:
-				printf("Internal Reference 2.56V\n");
+                printf("Internal Reference 2.56V");
 				break;
 			case ext:
-				printf("External Source (Trimmer Reference)\n");
+                printf("External Source (Trimmer Reference)");
 				break;
 			default:
 				printf("Register not set, number is: %d",sets.adcVref);

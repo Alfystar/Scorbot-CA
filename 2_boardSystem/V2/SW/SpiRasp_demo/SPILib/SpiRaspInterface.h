@@ -61,7 +61,7 @@ namespace SpiRaspInterface {
         struct spi_ioc_transfer spi;
         char *txbuf, *rxbuf;
         int size, fdSpi;
-        const int hzSpeed = 10000; //32Khz per dare tempo ad arduino, nella realtà 30.5 kHz
+        const int hzSpeed = 32000; //32Khz per dare tempo ad arduino, nella realtà 30.5 kHz
         const char bitWord = 8;
 
         static ScorBoard *instance;

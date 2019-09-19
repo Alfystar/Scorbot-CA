@@ -14,15 +14,6 @@ namespace SpiRaspInterface {
     }
 
     ScorBoard::ScorBoard() {
-        printf("Data size:\n");
-        printf("packType size : %d\n",sizeof(packType));
-        printf("mEncoder size : %d\n",sizeof(mEncoder));
-        printf("mCurrent size : %d\n",sizeof(mCurrent));
-        printf("mAll size : %d\n",sizeof(mAll));
-        printf("settingsBoard size : %d\n",sizeof(settingsBoard));
-        printf("adcRef size : %d\n",sizeof(adcRef));
-        printf("bool(diff read) size : %d\n",sizeof(bool));
-        printf("pwmFreq size : %d\n",sizeof(pwmFreq));
 
         this->fdSpi = open("/dev/spidev0.0", O_RDWR);
 
@@ -106,6 +97,8 @@ namespace SpiRaspInterface {
     }
 
     void ScorBoard::bytePrint(Pack &p) {
+        printf("p.sizePack()=%d\n",p.sizePack());
+
         printf("Byte send\t");
         for (int i = 0; i < p.sizePack(); ++i) {
             printf(" %d", p.getSPIPACK().forArd.buf[i]);
