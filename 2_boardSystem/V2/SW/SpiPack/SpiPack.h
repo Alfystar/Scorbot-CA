@@ -62,7 +62,7 @@ namespace spiPack {
         adcRef adcVref;
         bool diff;                  //true = offset delete, false = basicValue
         pwmFreq freq;
-    } settingsBoard;
+    }__attribute__((packed)) settingsBoard; //https://www.geeksforgeeks.org/how-to-avoid-structure-padding-in-c/
 
     typedef struct mAll_ {
         mEncoder en;
