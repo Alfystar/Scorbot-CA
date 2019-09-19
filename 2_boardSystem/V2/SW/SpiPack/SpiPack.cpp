@@ -6,6 +6,22 @@
 namespace spiPack {
     Pack::Pack() {
         this->clearPack();
+#ifdef PackDebug
+#ifdef ScorboarFirmware
+
+#else
+        printf("Data size:\n");
+        printf("packType size : %d\n",sizeof(packType));
+        printf("mEncoder size : %d\n",sizeof(mEncoder));
+        printf("mCurrent size : %d\n",sizeof(mCurrent));
+        printf("mAll size : %d\n",sizeof(mAll));
+        printf("settingsBoard size : %d\n",sizeof(settingsBoard));
+        printf("adcRef size : %d\n",sizeof(adcRef));
+        printf("bool(diff read) size : %d\n",sizeof(bool));
+        printf("pwmFreq size : %d\n",sizeof(pwmFreq));
+#endif //#ifdef ScorboarFirmware
+
+#endif //#ifdef PackDebug
     }
 
     Pack::Pack(Pack &p) {
