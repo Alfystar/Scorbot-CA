@@ -21,8 +21,11 @@ void help() {
     printf("\te -- Encoder Reading (PWMsend_EnRet)\n");
     printf("\tc -- Current Reading (PWMsend_CurRet)\n");
     printf("\ta -- Encoder&Current Reading (PWMsend_AllRet)\n");
+    printf("\taf -- Encoder&Current Reading for 10 seconds\n");
     printf("\tg -- Read arduino Settings (SettingGet)\n");
     printf("\ts -- Overide arduino setting (SettingSet)\n");
+    printf("\tsr -- set next level ref (SettingSet)\n");
+    printf("\tsd -- invert diff read (SettingSet)\n");
     printf("\th -- Start Homming procedure (goHome)\n");
     printf("\t? -- visualizza l'help\n");
 
@@ -87,6 +90,13 @@ int main() {
                 send.getSensPack(*p);
                 p->printPack();
             }
+            if (strcmp(sArgv[0], "af") == 0) {
+                for(int i=0;i<100;i++){
+                    send.getSensPack(*p);
+                    p->printPack();
+                    usleep(100*1000);
+                }
+            }
             if (strcmp(sArgv[0], "g") == 0) {
                 send.getSettingPack(*p);
                 p->printPack();
@@ -106,6 +116,26 @@ int main() {
                 p->setAdcRef(pack4Ard,in1V1);
                 p->setPWMfreq(pack4Ard,hz4k);
                 p->printPack();
+                send.setSettingPack(*p);
+                p->printPack();
+            }
+            if (strcmp(sArgv[0], "sr") == 0) {
+                send.getSettingPack(*p);
+                //move settings from arduino pack to rasp pack
+                p->setSetting(pack4Ard,p->getSetting());
+                //change parameter i need
+                int ref=p->getSetting().adcVref;
+                ref = (ref + 1)%3;
+                p->setAdcRef(pack4Ard,(adcRef)ref);
+                send.setSettingPack(*p);
+                p->printPack();
+            }
+            if (strcmp(sArgv[0], "sd") == 0) {
+                send.getSettingPack(*p);
+                //move settings from arduino pack to rasp pack
+                p->setSetting(pack4Ard,p->getSetting());
+                //change parameter i need
+                p->setAdcDiff(pack4Ard,!p->getSetting().diff);
                 send.setSettingPack(*p);
                 p->printPack();
             }

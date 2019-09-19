@@ -431,7 +431,7 @@ namespace spiPack {
 #endif
 	}
 
-	void Pack::setSetting(settingsBoard &sets, packDest dest) {
+    void Pack::setSetting(packDest dest, settingsBoard &sets) {
 		if (dest == pack4Ard) {
 			this->setPackType(SettingSet);
 			memmove(&this->data.forArd.up.prop, &sets, sizeof(settingsBoard));

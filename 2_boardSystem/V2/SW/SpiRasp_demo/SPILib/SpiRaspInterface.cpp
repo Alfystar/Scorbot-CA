@@ -135,7 +135,7 @@ namespace SpiRaspInterface {
 
     void ScorBoard::setSettingPack(settingsBoard &s) {
         Pack p;
-        p.setSetting(s, pack4Ard);
+        p.setSetting(pack4Ard, s);
         this->setSettingPack(p);
     }
 

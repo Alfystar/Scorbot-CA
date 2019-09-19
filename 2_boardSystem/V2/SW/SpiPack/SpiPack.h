@@ -36,7 +36,7 @@ namespace spiPack {
 
 
     enum adcRef : char {
-        in1V1, in2V56, ext
+        in1V1=0, in2V56, ext
     };
 // set timer divisor to     1 for PWM frequency of 31372.55 Hz
 // set timer divisor to     8 for PWM frequency of  3921.16 Hz
@@ -132,7 +132,7 @@ namespace spiPack {
         void setCurrent(mCurrent &c);
         void setCurrent(motCode mot, short cur);
 #endif
-        void setSetting(settingsBoard &sets, packDest dest);
+        void setSetting(packDest dest, settingsBoard &sets);
         void setMotorLimit(packDest dest, motCode mot, short enMax, short enMin, short cur);
         void setMaxEn(packDest dest, motCode mot, short en);
         void setMinEn(packDest dest, motCode mot, short en);
