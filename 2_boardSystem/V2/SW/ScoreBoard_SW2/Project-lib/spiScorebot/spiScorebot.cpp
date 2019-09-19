@@ -43,11 +43,11 @@ namespace InternalDevice {
             idTransf++;
             SPDR = pTemp->getSPIPACK().forRasp.buf[this->idTransf]; //preparo invio alla prossima trasmissione
 #ifdef ISPDEBUG
-            Serial.print((byte) pTemp->getSPIPACK().forArd.buf[this->idTransf-2]); 	//ricevuto
+            Serial.print((byte) pTemp->getSPIPACK().forArd.buf[this->idTransf-1]); 	//ricevuto
             Serial.print(":");
-            Serial.print((byte) pTemp->getSPIPACK().forRasp.buf[this->idTransf-2]);		//inviato
+            Serial.print((byte) pTemp->getSPIPACK().forRasp.buf[this->idTransf-1]);		//inviato
             Serial.print("_");
-            Serial.print(this->idTransf);
+            Serial.print(this->idTransf-1);
             Serial.print("  ");
 #endif
         }
@@ -89,7 +89,7 @@ namespace InternalDevice {
                 p.setCurrent(adc->getLastCycle());
                 break;
             case SettingGet:
-            	Serial.println("recive SettingGet");
+            	Serial.println("Receive SettingGet");
                 p.setSetting(globSets, pack4Rasp);
                 break;
             case SettingSet:

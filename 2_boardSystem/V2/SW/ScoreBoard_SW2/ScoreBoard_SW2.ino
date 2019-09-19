@@ -25,106 +25,122 @@ unsigned long sanityTime = 0;
 
 //The setup function is called once at startup of the sketch
 void setup() {
-    // Add your initialization code here
-    Serial.begin(57600);
-    cli();
-    Serial.println("\n##### Start Setup #####");
-    delay(250);
+	// Add your initialization code here
+	Serial.begin(57600);
+	cli();
+	Serial.println("\n##### Start Setup #####");
+	delay(250);
 
-    memoryLoad();
-    Serial.flush();
-    Serial.println("\tLoad Settings from Memory");
+	memoryLoad();
+	Serial.flush();
+	Serial.println("\tLoad Settings from Memory");
 
-    motSetup();
-    Serial.flush();
-    Serial.println("\tMotor Setup");
+	motSetup();
+	Serial.flush();
+	Serial.println("\tMotor Setup");
 
-    sFeed = new ScorFeed();
-    Serial.flush();
-    Serial.println("\tSetUp Scorbot Sensors");
+	sFeed = new ScorFeed();
+	Serial.flush();
+	Serial.println("\tSetUp Scorbot Sensors");
 
-    adc = new AdcDevice(globSets.diff, globSets.adcVref);
-    Serial.flush();
-    Serial.println("\tSetUp ADC");
+	adc = new AdcDevice(globSets.diff, globSets.adcVref);
+	Serial.flush();
+	Serial.println("\tSetUp ADC");
 
-    spi = new SpiDevice();
-    Serial.flush();
-    Serial.println("\tSetUp SPI");
+	spi = new SpiDevice();
+	Serial.flush();
+	Serial.println("\tSetUp SPI");
 
-    sei();
-    Serial.println("\tGlobal Interrupt Enable");
+	sei();
+	Serial.println("\tGlobal Interrupt Enable");
 
-    Serial.println("End Setup");
+	Serial.println("End Setup");
 
 #ifdef SERIAL_PRINT
-    Serial.flush();
+	Serial.flush();
 	Pack::printSetting(globSets);
 	Serial.println("End Setup");
 #endif
 	delay(1000);
-    //home();
+		mot[Mot3]->drive_motor(150);
+		delay(2000);
+		mot[Mot3]->drive_motor(-180);
+		delay(2000);
+		mot[Mot3]->freeRun();
+	/*
+	for (byte i=Mot1;i<nMot;i++)
+	{
+	delay(1000);
+	mot[i]->drive_motor(150);
+	delay(1000);
+	mot[i]->drive_motor(-150);
+	delay(1000);
+	mot[i]->freeRun();
+	}
+	*/
+	//home();
 }
 
 Pack *r;
 void loop() {
 
-    sanityChek(sanityDelay);
-    if (spi->spiAvailable()) {
-        r = &spi->getLastRecive();
-        excutePack(*r);
+	sanityChek(sanityDelay);
+	if (spi->spiAvailable()) {
+		r = &spi->getLastRecive();
+		excutePack(*r);
 #ifdef SPI_PRINT
-        r->printPack();
+		r->printPack();
 #endif
-    }
-    sFeed->updateStepEn();
-    motorStateMachine();
+	}
+	sFeed->updateStepEn();
+	motorStateMachine();
 #ifdef SERIAL_PRINT_SENSOR
-    if (millis() > timePrint + newPrintDelay) {
-        adc->debugPrintAdc();
-        //sFeed->dSubDebug();
-        //sFeed->printSteps();
-    	//Pack::printSetting(globSets);
-        Serial.println();
-        timePrint = millis();
-    }
+	if (millis() > timePrint + newPrintDelay) {
+		adc->debugPrintAdc();
+		//sFeed->dSubDebug();
+		//sFeed->printSteps();
+		//Pack::printSetting(globSets);
+		Serial.println();
+		timePrint = millis();
+	}
 #endif
 }
 
 
 void sanityChek(int wait) {
-    if (millis() > sanityTime + wait) {
-    	sanityTime=millis();
-        for (byte i = 0; i < nMot; i++) {
-        	if (globSets.maxCurrMed[i]<0) continue;
+	if (millis() > sanityTime + wait) {
+		sanityTime=millis();
+		for (byte i = 0; i < nMot; i++) {
+			if (globSets.maxCurrMed[i]<0) continue;
 
-            if (globSets.maxCurrMed[i] < adc->getCurrentSum((motCode) i)) {
-                mot[i]->freeRun();
+			if (globSets.maxCurrMed[i] < adc->getCurrentSum((motCode) i)) {
+				mot[i]->freeRun();
 #ifdef SERIAL_PRINT
-                Serial.print("nMot[");
-                Serial.print(i + 1);
-                Serial.print("] overcurrent: ");
-                Serial.print(globSets.maxCurrMed[i]);
-                Serial.print(" > ");
-                Serial.println(adc->getCurrentSum((motCode) i));
+				Serial.print("nMot[");
+				Serial.print(i + 1);
+				Serial.print("] overcurrent: ");
+				Serial.print(globSets.maxCurrMed[i]);
+				Serial.print(" > ");
+				Serial.println(adc->getCurrentSum((motCode) i));
 #endif
-            }
-            if (((globSets.maxCurrMed[i]*3)/2) < adc->getCurrentSum((motCode) i)) {	// WARNING
-            	digitalWrite(MotEn,0);
+			}
+			if (((globSets.maxCurrMed[i]*3)/2) < adc->getCurrentSum((motCode) i)) {	// WARNING
+				digitalWrite(MotEn,0);
 #ifdef SERIAL_PRINT
-                Serial.print("nMot[");
-                Serial.print(i + 1);
-                Serial.print("] High-overcurrent: ");
-                Serial.print(globSets.maxCurrMed[i]);
-                Serial.print(" > ");
-                Serial.println(adc->getCurrentSum((motCode) i));
+				Serial.print("nMot[");
+				Serial.print(i + 1);
+				Serial.print("] High-overcurrent: ");
+				Serial.print(globSets.maxCurrMed[i]);
+				Serial.print(" > ");
+				Serial.println(adc->getCurrentSum((motCode) i));
 #endif
-            }
-            if ((globSets.maxCurrMed[i]/4) < adc->getCurrentSum((motCode) i)) {	// Current problem came back
-            	digitalWrite(MotEn,1);
-            }
+			}
+			if ((globSets.maxCurrMed[i]/4) < adc->getCurrentSum((motCode) i)) {	// Current problem came back
+				digitalWrite(MotEn,1);
+			}
 
-        }
-    }
+		}
+	}
 }
 
 
@@ -132,8 +148,10 @@ void sanityChek(int wait) {
 //Si attiva alla ricezione di ogni byte (8 bit)
 //(e si ha tempo per eseguire la funzione solo fino al successivo!!)
 ISR(SPI_STC_vect) {
-        spi->isrFunxISP();
-        //Serial.print("spi");
+	cli(); //disable global interrupt
+	spi->isrFunxISP();
+	sei(); //enable global interrupt
+	//Serial.print("spi");
 }
 
 //## ADC INTERRUPT SERVICE ##//
@@ -141,8 +159,8 @@ ISR(SPI_STC_vect) {
 //(con i valori presenti nel registro alla ricezione dell'interrupt)
 //la routine salva il valore convertito e imposta i registri per la lettura successiva
 ISR(ADC_vect) {
-		//Serial.print("adc");
-        adc->isrFunxAdc();
+	//Serial.print("adc");
+	adc->isrFunxAdc();
 }
 
 //## Timer/Counter5 Overflow Flag (TOV5)
@@ -151,7 +169,7 @@ ISR(ADC_vect) {
 
 ISR(TIMER5_OVF_vect){
 	sFeed->isrFunxEN();
-    //Serial.println(sFeed->enRead(), BIN);
+	//Serial.println(sFeed->enRead(), BIN);
 
 }
 
@@ -165,4 +183,4 @@ ISR(PCINT0_vect) {
 }
 ISR(PCINT2_vect, ISR_ALIASOF(PCINT0_vect)
 );
-*/
+ */
