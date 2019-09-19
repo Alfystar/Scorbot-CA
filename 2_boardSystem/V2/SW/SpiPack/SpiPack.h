@@ -18,32 +18,32 @@ using std::max;
 #endif
 namespace spiPack {
 /// Enum Declaration for the comunication
-    enum packDest {
+    enum packDest : char {
         pack4Ard, pack4Rasp
     };
 
-    enum specialPwmCode {
+    enum specialPwmCode : short  {
         freeRun = 300, hardStop = 350, softStop = 400, ignore = 450
     };
-    enum motCode {
+    enum motCode : char {
         Mot1 = 0, Mot2, Mot3, Mot4, Mot5, Mot6, nMot
     };
 	//todo: rimuovere CurrentGet, la sua funzione è sopperita da PWMsend_CurRet
-    enum packType {
+    enum packType : char {
         invalid = 0, PWMsend_EnRet = 1, PWMsend_CurRet, PWMsend_AllRet, SettingGet, SettingSet, goHome
     };
     //        invalid = 0, PWMsend_EnRet = 1, PWMsend_CurRet, PWMsend_AllRet, CurrentGet, SettingGet, SettingSet, goHome
 
 
-    enum adcRef {
-        in1V1 = 0, in2V56 = 1, ext = 2
+    enum adcRef : char {
+        in1V1, in2V56, ext
     };
 // set timer divisor to     1 for PWM frequency of 31372.55 Hz
 // set timer divisor to     8 for PWM frequency of  3921.16 Hz
 // set timer divisor to    64 for PWM frequency of   490.20 Hz
 // set timer divisor to   256 for PWM frequency of   122.55 Hz
 // set timer divisor to  1024 for PWM frequency of    30.64 Hz
-    enum pwmFreq {
+    enum pwmFreq : char {
         hz30, hz120, hz490, hz4k, hz30k
     };
 ///#################################################################
