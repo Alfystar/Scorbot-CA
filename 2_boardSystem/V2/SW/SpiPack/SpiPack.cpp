@@ -400,10 +400,10 @@ namespace spiPack {
     void Pack::setSetting(settingsBoard &sets, packDest dest) {
         if (dest == pack4Ard) {
             this->setPackType(SettingSet);
-            memmove(&this->data.forRasp.up.prop, &sets, sizeof(settingsBoard));
+            memmove(&this->data.forArd.up.prop, &sets, sizeof(settingsBoard));
         } else if (dest == pack4Rasp) {
             this->setPackType(SettingGet);
-            memmove(&this->data.forArd.up.prop, &sets, sizeof(settingsBoard));
+            memmove(&this->data.forRasp.up.prop, &sets, sizeof(settingsBoard));
         }
     }
 

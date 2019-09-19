@@ -15,7 +15,7 @@ namespace InternalDevice {
         //static SpiDevice& getIstance();
         //## EXECUTION ##//
         void isrFunxISP();
-        void dataLoad();
+        void dataLoad(Pack &p);
         //## GET VALUE ##//
         byte spiAvailable();
         Pack &getLastRecive();

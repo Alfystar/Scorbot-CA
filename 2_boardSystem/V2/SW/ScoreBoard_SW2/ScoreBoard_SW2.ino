@@ -96,6 +96,7 @@ void sanityChek(int wait) {
     	sanityTime=millis();
         for (byte i = 0; i < nMot; i++) {
         	if (globSets.maxCurrMed[i]<0) continue;
+
             if (globSets.maxCurrMed[i] < adc->getCurrentSum((motCode) i)) {
                 mot[i]->freeRun();
 #ifdef SERIAL_PRINT

@@ -23,43 +23,35 @@ namespace InternalDevice {
     }
 
     //## ELABORATION ##//
+    Pack *pTemp;
     void SpiDevice::isrFunxISP() {
         if (!this->startConv) {    //raps ha appena letto 0 e inviato tipo
-            this->sp[!this->dRecive].setPackType((packType) SPDR); //mi segno tipo di comunicazione
-            this->dataLoad();
+        	pTemp = &this->sp[!this->dRecive];
+        	pTemp->setPackType((packType) SPDR); //mi segno tipo di comunicazione
+            this->dataLoad(*pTemp);
             this->idTransf = 0;
             this->startConv = true;
-            SPDR =
-                    this->sp[!this->dRecive].getSPIPACK().forRasp.buf[this->idTransf]; //preparo invio primo dato
+            SPDR = pTemp->getSPIPACK().forRasp.buf[this->idTransf]; //preparo invio primo dato
 
 #ifdef ISPDEBUG
             Serial.print("type=");
-            Serial.println((byte) this->sp[!this->dRecive].getPackType());
-            /*Serial.print("-");
-            Serial.print("S");
-            Serial.print(":");
-            Serial.print((byte) spiPackp[!this->dRecive].outPack.buffOut[this->idTransf]);
-            Serial.print("_");
-            Serial.print(this->idTransf);
-            Serial.print("  ");
-            */
+            Serial.print((byte) pTemp->getPackType());
+            Serial.println("\t (fromRasp:mySend_PackId)");
 #endif
         } else {    //salva nuovo dato
-            this->sp[!this->dRecive].getSPIPACK().forArd.buf[this->idTransf] =
-                    SPDR; //salvo l'ultimo arrivo
+        	pTemp->getSPIPACK().forArd.buf[this->idTransf] = SPDR; //salvo l'ultimo arrivo
             idTransf++;
-            SPDR =
-                    this->sp[!this->dRecive].getSPIPACK().forRasp.buf[this->idTransf]; //preparo invio il mio dato
+            SPDR = pTemp->getSPIPACK().forRasp.buf[this->idTransf]; //preparo invio alla prossima trasmissione
 #ifdef ISPDEBUG
-            Serial.print((byte) this->sp[!this->dRecive].getSPIPACK().forArd.buf[this->idTransf-1]); 	//ricevuto
+            Serial.print((byte) pTemp->getSPIPACK().forArd.buf[this->idTransf-2]); 	//ricevuto
             Serial.print(":");
-            Serial.print((byte) this->sp[!this->dRecive].getSPIPACK().forRasp.buf[this->idTransf-1]);		//inviato
+            Serial.print((byte) pTemp->getSPIPACK().forRasp.buf[this->idTransf-2]);		//inviato
             Serial.print("_");
             Serial.print(this->idTransf);
             Serial.print("  ");
 #endif
         }
-        if (this->sp[!this->dRecive].sizePack() == -1) { //tipo pacchetto invalido
+        if (pTemp->sizePack() == -1) { //tipo pacchetto invalido
         	//reimposto i registri e variabili di stato
             SPDR = 0;
             this->startConv = false;
@@ -68,7 +60,7 @@ namespace InternalDevice {
 #endif
             return;
         }
-        if (this->idTransf >= this->sp[!this->dRecive].sizePack()) { //comunicato ultimo byte
+        if (this->idTransf >= pTemp->sizePack()) { //comunicato ultimo byte
             SPDR = 0;        //ripredispongo lo 0 iniziale
             this->startConv = false;
             this->dRecive = !this->dRecive;
@@ -80,9 +72,9 @@ namespace InternalDevice {
         }
     }
 
-    void SpiDevice::dataLoad() {
-        Pack &p = this->sp[!this->dRecive];
-        memset(&p.getSPIPACK().forRasp, 0, sizeof(spi2Rasp));
+    void SpiDevice::dataLoad(Pack &p) {
+        //Pack &p = this->sp[!this->dRecive];
+        memset(&p.getSPIPACK().forRasp.buf, 0, sizeof(spi2Rasp));
         switch (p.getPackType()) {
             case invalid:
                 break;
@@ -97,6 +89,7 @@ namespace InternalDevice {
                 p.setCurrent(adc->getLastCycle());
                 break;
             case SettingGet:
+            	Serial.println("recive SettingGet");
                 p.setSetting(globSets, pack4Rasp);
                 break;
             case SettingSet:

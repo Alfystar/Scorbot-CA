@@ -83,13 +83,13 @@ namespace spiPack {
 
 /*Struttura di Ricezione, usata dalla classe SPISEND*/
     typedef union {
-        union recType {
+        union ricType {
             mEncoder en;
             mCurrent cur;
             mAll sens;
             settingsBoard prop;
         } up;
-        char buf[sizeof(recType)];
+        char buf[sizeof(ricType)];
     } spi2Rasp;
 
 //## -------------------------------------------------------- ##//
