@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include "../globalDef.h"
 
+#define ISPDEBUG 1 //attiva/disattiva compilazione del codice per printare i byte della spi
+
 using namespace spiPack;
 namespace InternalDevice {
     class SpiDevice {

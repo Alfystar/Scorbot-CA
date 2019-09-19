@@ -36,7 +36,7 @@ namespace spiPack {
 
 
     enum adcRef {
-        in1V1 = -1, in2V56 = -2, ext = -3
+        in1V1 = 0, in2V56 = 1, ext = 2
     };
 // set timer divisor to     1 for PWM frequency of 31372.55 Hz
 // set timer divisor to     8 for PWM frequency of  3921.16 Hz

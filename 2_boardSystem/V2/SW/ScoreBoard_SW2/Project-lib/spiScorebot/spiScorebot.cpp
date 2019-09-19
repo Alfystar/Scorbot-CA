@@ -34,39 +34,41 @@ namespace InternalDevice {
 
 #ifdef ISPDEBUG
             Serial.print("type=");
-            Serial.print((byte) spiPackp[!this->dRecive].type);
-            Serial.print("-");
+            Serial.println((byte) this->sp[!this->dRecive].getPackType());
+            /*Serial.print("-");
             Serial.print("S");
             Serial.print(":");
             Serial.print((byte) spiPackp[!this->dRecive].outPack.buffOut[this->idTransf]);
             Serial.print("_");
             Serial.print(this->idTransf);
             Serial.print("  ");
+            */
 #endif
         } else {    //salva nuovo dato
             this->sp[!this->dRecive].getSPIPACK().forArd.buf[this->idTransf] =
-                    SPDR; //salvo l'ultimo invio
+                    SPDR; //salvo l'ultimo arrivo
             idTransf++;
             SPDR =
                     this->sp[!this->dRecive].getSPIPACK().forRasp.buf[this->idTransf]; //preparo invio il mio dato
 #ifdef ISPDEBUG
-            Serial.print((byte) spiPackp[!this->dRecive].inPack.buffIn[this->idTransf - 1]);
+            Serial.print((byte) this->sp[!this->dRecive].getSPIPACK().forArd.buf[this->idTransf-1]); 	//ricevuto
             Serial.print(":");
-            Serial.print((byte) spiPackp[!this->dRecive].outPack.buffOut[this->idTransf]);
+            Serial.print((byte) this->sp[!this->dRecive].getSPIPACK().forRasp.buf[this->idTransf-1]);		//inviato
             Serial.print("_");
             Serial.print(this->idTransf);
             Serial.print("  ");
 #endif
         }
-        if (this->sp[!this->dRecive].sizePack() == -1) {
-            SPDR = 0;        //ripredispongo lo 0 iniziale
+        if (this->sp[!this->dRecive].sizePack() == -1) { //tipo pacchetto invalido
+        	//reimposto i registri e variabili di stato
+            SPDR = 0;
             this->startConv = false;
 #ifdef ISPDEBUG
             Serial.println(" -1 !! END  !");
 #endif
             return;
         }
-        if (this->idTransf >= this->sp[!this->dRecive].sizePack()) { //comunicazione all'ultimo byte
+        if (this->idTransf >= this->sp[!this->dRecive].sizePack()) { //comunicato ultimo byte
             SPDR = 0;        //ripredispongo lo 0 iniziale
             this->startConv = false;
             this->dRecive = !this->dRecive;

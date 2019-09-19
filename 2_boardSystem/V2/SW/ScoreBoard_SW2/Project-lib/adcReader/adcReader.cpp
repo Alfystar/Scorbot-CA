@@ -91,10 +91,13 @@ namespace InternalDevice {
         return this->diffRead;
     }
 
+    int g;
     void AdcDevice::isrFunxAdc() {
         //todo: verificare il corretto accesso in memoria di questo doppio array
         // Must read low first
-        this->ampMot[indexADC][oldReadId] = ((int) ADCL | ((int) ADCH << 8));
+    	g = (int) ADCL;
+    	g |= (int) ADCH << 8;
+        this->ampMot[indexADC][oldReadId] = g; //((int) ADCL | ((int) ADCH << 8));
         oldReadId = newReadId;	//la lettura che è già partita in automatico
         if (oldReadId == 0)		//finito un ciclo di lettura avanza con i buffer della storia
             indexADC = (indexADC + 1) % history;
@@ -170,7 +173,6 @@ namespace InternalDevice {
         m = &this->getLastCycle();
         Serial.flush();
         Serial.println("Last cycle:");
-        //Serial.print("#minEn:\t\t");
         for (byte i = 0; i < nMot; i++) {
         	Serial.print("Mot");
         	Serial.print(i+1);
