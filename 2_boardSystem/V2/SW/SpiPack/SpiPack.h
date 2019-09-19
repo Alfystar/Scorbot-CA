@@ -22,13 +22,13 @@ namespace spiPack {
         pack4Ard, pack4Rasp
     };
 
-    enum specialPwmCode : short  {
+    enum specialPwmCode : short {
         freeRun = 300, hardStop = 350, softStop = 400, ignore = 450
     };
     enum motCode : char {
         Mot1 = 0, Mot2, Mot3, Mot4, Mot5, Mot6, nMot
     };
-	//todo: rimuovere CurrentGet, la sua funzione è sopperita da PWMsend_CurRet
+    //todo: rimuovere CurrentGet, la sua funzione è sopperita da PWMsend_CurRet
     enum packType : char {
         invalid = 0, PWMsend_EnRet = 1, PWMsend_CurRet, PWMsend_AllRet, SettingGet, SettingSet, goHome
     };
@@ -36,7 +36,7 @@ namespace spiPack {
 
 
     enum adcRef : char {
-        in1V1=0, in2V56, ext
+        in1V1 = 0, in2V56, ext
     };
 // set timer divisor to     1 for PWM frequency of 31372.55 Hz
 // set timer divisor to     8 for PWM frequency of  3921.16 Hz
@@ -181,6 +181,8 @@ namespace spiPack {
     void freeSPIPACK(SPIPACK *p);
 }
 #ifndef __GNUC__
+
 #include "SpiPack.cpp"
+
 #endif
 #endif // SpiPack_H

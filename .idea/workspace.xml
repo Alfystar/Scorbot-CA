@@ -9,7 +9,23 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="Add son class to DCmotor to improve Working set limits&#10;code reformat&#10;readme update" />
+    <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="Add son class to DCmotor to improve Working set limits&#10;code reformat&#10;readme update">
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/Motor/DCdriver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/Motor/DCdriver.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/Motor/DCdriver.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/Motor/DCdriver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/adcReader/adcReader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/adcReader/adcReader.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/adcReader/adcReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/adcReader/adcReader.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/globalDef.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/globalDef.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/msEnlib/msEnlib.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/msEnlib/msEnlib.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/msEnlib/msEnlib.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/msEnlib/msEnlib.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/ScoreBoard_SW2.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/ScoreBoard_SW2.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/excutePack.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/excutePack.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/motControll.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/motControll.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiPack/SpiPack.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiPack/SpiPack.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiPack/SpiPack.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiPack/SpiPack.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib/SpiRaspInterface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib/SpiRaspInterface.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib/SpiRaspInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib/SpiRaspInterface.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/main.cpp" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,6 +111,7 @@
       <workItem from="1567873949084" duration="732000" />
       <workItem from="1568014176025" duration="7125000" />
       <workItem from="1568796539386" duration="2283000" />
+      <workItem from="1568909638862" duration="331000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
       <created>1568027375662</created>

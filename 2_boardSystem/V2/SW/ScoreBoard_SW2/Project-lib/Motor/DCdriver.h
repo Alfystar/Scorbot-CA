@@ -15,10 +15,9 @@
 //typedef bool (funcBool_t)(); // pointer to function with no args and bool return
 
 namespace Motor {
+    void setMotFreq(pwmFreq freq);
 
-	void setMotFreq(pwmFreq freq);
-
-	enum motState {
+    enum motState {
         moving, movingTiming, H_brake, S_brake, alwaysBrake, free_Mot
     };
 

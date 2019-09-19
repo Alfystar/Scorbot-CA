@@ -7,7 +7,6 @@ using namespace SpiRaspInterface;
 using namespace spiPack;
 #define fflush(stdin) while(getchar() != '\n');
 
-
 /*
     enum packType {
         invalid = 0, PWMsend_EnRet = 1, PWMsend_CurRet, PWMsend_AllRet, SettingGet, SettingSet, goHome
@@ -59,10 +58,8 @@ int main() {
             sArgv[sArgc] = strtok_r(nullptr, " ", &savePoint);
         }
         fflush(stdin);
-
-        for (int i=0;i<sArgc;i++)
-        {
-            printf("%d) %s\n",i,sArgv[i]);
+        for (int i = 0; i < sArgc; i++) {
+            printf("%d) %s\n", i, sArgv[i]);
         }
 
         //todo: capire perche strcmp da segmentation fault in questa condizione
@@ -91,10 +88,10 @@ int main() {
                 p->printPack();
             }
             if (strcmp(sArgv[0], "af") == 0) {
-                for(int i=0;i<100;i++){
+                for (int i = 0; i < 100; i++) {
                     send.getSensPack(*p);
                     p->printPack();
-                    usleep(100*1000);
+                    usleep(100 * 1000);
                 }
             }
             if (strcmp(sArgv[0], "g") == 0) {
@@ -112,9 +109,9 @@ int main() {
                 p->setMotorLimit(pack4Ard, Mot4, 2160, 10000, -10000);
                 p->setMotorLimit(pack4Ard, Mot5, 2400, 10000, -10000);
                 p->setMotorLimit(pack4Ard, Mot6, 2160, 5770, -10);
-                p->setAdcDiff(pack4Ard,false);
-                p->setAdcRef(pack4Ard,in1V1);
-                p->setPWMfreq(pack4Ard,hz4k);
+                p->setAdcDiff(pack4Ard, false);
+                p->setAdcRef(pack4Ard, in1V1);
+                p->setPWMfreq(pack4Ard, hz4k);
                 p->printPack();
                 send.setSettingPack(*p);
                 p->printPack();
@@ -122,20 +119,20 @@ int main() {
             if (strcmp(sArgv[0], "sr") == 0) {
                 send.getSettingPack(*p);
                 //move settings from arduino pack to rasp pack
-                p->setSetting(pack4Ard,p->getSetting());
+                p->setSetting(pack4Ard, p->getSetting());
                 //change parameter i need
-                int ref=p->getSetting().adcVref;
-                ref = (ref + 1)%3;
-                p->setAdcRef(pack4Ard,(adcRef)ref);
+                int ref = p->getSetting().adcVref;
+                ref = (ref + 1) % 3;
+                p->setAdcRef(pack4Ard, (adcRef) ref);
                 send.setSettingPack(*p);
                 p->printPack();
             }
             if (strcmp(sArgv[0], "sd") == 0) {
                 send.getSettingPack(*p);
                 //move settings from arduino pack to rasp pack
-                p->setSetting(pack4Ard,p->getSetting());
+                p->setSetting(pack4Ard, p->getSetting());
                 //change parameter i need
-                p->setAdcDiff(pack4Ard,!p->getSetting().diff);
+                p->setAdcDiff(pack4Ard, !p->getSetting().diff);
                 send.setSettingPack(*p);
                 p->printPack();
             }
@@ -146,7 +143,7 @@ int main() {
             if (strcmp(sArgv[0], "?") == 0) {
                 help();
             }
-        }else if (sArgc >= 7) {
+        } else if (sArgc >= 7) {
             if (strcmp(sArgv[0], "m") == 0) {
                 mSpeed motP;
                 for (int i = 0; i < nMot; ++i) {

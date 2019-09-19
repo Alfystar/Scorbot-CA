@@ -2,142 +2,128 @@
 #include "Project-lib/globalDef.h"
 
 //#define SERIAL_PRINT 1    //attiva/disattiva compilazione del codice per printare in seriale informazioni aggiungtive
-#define SPI_PRINT 1			//attiva/disattiva compilazione del print del pacchetto spi
+#define SPI_PRINT 1            //attiva/disattiva compilazione del print del pacchetto spi
 //#define SERIAL_PRINT_SENSOR 1 //attiva/disattiva compilazione del codice per printare i sensori ogni "newPrintDelay"
 
 //#define MOVE_CHECK 1 		//attiva/disattiva compilazione del codice che muove tutti i motori per test
-#define MOTOR_LIMIT_ENABLE 1 	//attiva/disattiva compilazione del codice che sceglie la classe da istaziare per i motori
-
-
+#define MOTOR_LIMIT_ENABLE 1    //attiva/disattiva compilazione del codice che sceglie la classe da istaziare per i motori
 settingsBoard globSets;
 SpiDevice *spi;
 AdcDevice *adc;
 ScorFeed *sFeed;
 using namespace Motor;
 DCdriverLimit *mot[nMot];
-
 #ifdef SERIAL_PRINT_SENSOR
 unsigned long timePrint;	//time to next debug print
 #endif
-
-#define sanityDelay 1000    	//tempo ms di attesa prima di ri-scansionare se il robot è ok
-#define newPrintDelay 1000	//delay tra un debug print e l'altro
+#define sanityDelay 1000        //tempo ms di attesa prima di ri-scansionare se il robot è ok
+#define newPrintDelay 1000    //delay tra un debug print e l'altro
 unsigned long sanityTime = 0;
 
 
 //The setup function is called once at startup of the sketch
 void setup() {
-	// Add your initialization code here
-	Serial.begin(57600);
-	cli();
-	Serial.println("\n##### Start Setup #####");
-	delay(250);
-
-	memoryLoad();
-	Serial.flush();
-	Serial.println("\tLoad Settings from Memory");
-
-	motSetup();
-	Serial.flush();
-	Serial.println("\tMotor Setup");
-
-	sFeed = new ScorFeed();
-	Serial.flush();
-	Serial.println("\tSetUp Scorbot Sensors");
-
-	adc = new AdcDevice(globSets.diff, globSets.adcVref);
-	Serial.flush();
-	Serial.println("\tSetUp ADC");
-
-	spi = new SpiDevice();
-	Serial.flush();
-	Serial.println("\tSetUp SPI");
-
-	sei();
-	Serial.println("\tGlobal Interrupt Enable");
-
-	Serial.println("End Setup");
-
+    // Add your initialization code here
+    Serial.begin(57600);
+    cli();
+    Serial.println("\n##### Start Setup #####");
+    delay(250);
+    memoryLoad();
+    Serial.flush();
+    Serial.println("\tLoad Settings from Memory");
+    motSetup();
+    Serial.flush();
+    Serial.println("\tMotor Setup");
+    sFeed = new ScorFeed();
+    Serial.flush();
+    Serial.println("\tSetUp Scorbot Sensors");
+    adc = new AdcDevice(globSets.diff, globSets.adcVref);
+    Serial.flush();
+    Serial.println("\tSetUp ADC");
+    spi = new SpiDevice();
+    Serial.flush();
+    Serial.println("\tSetUp SPI");
+    sei();
+    Serial.println("\tGlobal Interrupt Enable");
+    Serial.println("End Setup");
 #ifdef SERIAL_PRINT
-	Serial.flush();
-	Pack::printSetting(globSets);
-	Serial.println("End Setup");
+    Serial.flush();
+    Pack::printSetting(globSets);
+    Serial.println("End Setup");
 #endif
-
 #ifdef MOVE_CHECK
-	for (byte i=Mot1;i<nMot;i++)
-	{
-	delay(3000);
-	mot[i]->drive_motor(150);
-	delay(3000);
-	mot[i]->drive_motor(-150);
-	delay(3000);
-	mot[i]->freeRun();
-	}
+    for (byte i=Mot1;i<nMot;i++)
+    {
+    delay(3000);
+    mot[i]->drive_motor(150);
+    delay(3000);
+    mot[i]->drive_motor(-150);
+    delay(3000);
+    mot[i]->freeRun();
+    }
 #endif
 
 }
 
 Pack *r;
-void loop() {
 
-	sanityChek(sanityDelay);
-	if (spi->spiAvailable()) {
-		r = &spi->getLastRecive();
-		excutePack(*r);
+void loop() {
+    sanityChek(sanityDelay);
+    if (spi->spiAvailable()) {
+        r = &spi->getLastRecive();
+        excutePack(*r);
 #ifdef SPI_PRINT
-		r->printPack();
+        r->printPack();
 #endif
-	}
-	sFeed->updateStepEn();
-	motorStateMachine();
+    }
+    sFeed->updateStepEn();
+    motorStateMachine();
 #ifdef SERIAL_PRINT_SENSOR
-	if (millis() > timePrint + newPrintDelay) {
-		adc->debugPrintAdc();
-		//sFeed->dSubDebug();
-		//sFeed->printSteps();
-		//Pack::printSetting(globSets);
-		Serial.println();
-		timePrint = millis();
-	}
+    if (millis() > timePrint + newPrintDelay) {
+        adc->debugPrintAdc();
+        //sFeed->dSubDebug();
+        //sFeed->printSteps();
+        //Pack::printSetting(globSets);
+        Serial.println();
+        timePrint = millis();
+    }
 #endif
 }
 
 
 void sanityChek(int wait) {
-	if (millis() > sanityTime + wait) {
-		sanityTime=millis();
-		for (byte i = 0; i < nMot; i++) {
-			if (globSets.maxCurrMed[i]<0) continue;
-
-			if (globSets.maxCurrMed[i] < adc->getCurrentSum((motCode) i)) {
-				mot[i]->freeRun();
+    if (millis() > sanityTime + wait) {
+        sanityTime = millis();
+        for (byte i = 0; i < nMot; i++) {
+            if (globSets.maxCurrMed[i] < 0) continue;
+            if (globSets.maxCurrMed[i] < adc->getCurrentSum((motCode) i)) {
+                mot[i]->freeRun();
 #ifdef SERIAL_PRINT
-				Serial.print("nMot[");
-				Serial.print(i + 1);
-				Serial.print("] overcurrent: ");
-				Serial.print(globSets.maxCurrMed[i]);
-				Serial.print(" > ");
-				Serial.println(adc->getCurrentSum((motCode) i));
+                Serial.print("nMot[");
+                Serial.print(i + 1);
+                Serial.print("] overcurrent: ");
+                Serial.print(globSets.maxCurrMed[i]);
+                Serial.print(" > ");
+                Serial.println(adc->getCurrentSum((motCode) i));
 #endif
-			}
-			if (((globSets.maxCurrMed[i]*3)/2) < adc->getCurrentSum((motCode) i)) {	// WARNING
-				digitalWrite(MotEn,0);
+            }
+            if (((globSets.maxCurrMed[i] * 3) / 2) < adc->getCurrentSum((motCode) i)) {    // WARNING
+                digitalWrite(MotEn, 0);
 #ifdef SERIAL_PRINT
-				Serial.print("nMot[");
-				Serial.print(i + 1);
-				Serial.print("] High-overcurrent: ");
-				Serial.print(globSets.maxCurrMed[i]);
-				Serial.print(" > ");
-				Serial.println(adc->getCurrentSum((motCode) i));
+                Serial.print("nMot[");
+                Serial.print(i + 1);
+                Serial.print("] High-overcurrent: ");
+                Serial.print(globSets.maxCurrMed[i]);
+                Serial.print(" > ");
+                Serial.println(adc->getCurrentSum((motCode) i));
 #endif
-			}
-			if ((globSets.maxCurrMed[i]/4) < adc->getCurrentSum((motCode) i)) {	// Current problem came back
-				digitalWrite(MotEn,1);
-			}
+            }
+            if ((globSets.maxCurrMed[i] / 4) < adc->getCurrentSum((motCode) i)) {    // Current problem came back
+                digitalWrite(MotEn, 1);
+            }
 
-		}
-	}
+        }
+    }
 }
 
 
@@ -145,10 +131,10 @@ void sanityChek(int wait) {
 //Si attiva alla ricezione di ogni byte (8 bit)
 //(e si ha tempo per eseguire la funzione solo fino al successivo!!)
 ISR(SPI_STC_vect) {
-	cli(); //disable global interrupt
-	spi->isrFunxISP();
-	sei(); //enable global interrupt
-	//Serial.print("spi");
+        cli(); //disable global interrupt
+        spi->isrFunxISP();
+        sei(); //enable global interrupt
+        //Serial.print("spi");
 }
 
 //## ADC INTERRUPT SERVICE ##//
@@ -156,8 +142,8 @@ ISR(SPI_STC_vect) {
 //(con i valori presenti nel registro alla ricezione dell'interrupt)
 //la routine salva il valore convertito e imposta i registri per la lettura successiva
 ISR(ADC_vect) {
-	//Serial.print("adc");
-	adc->isrFunxAdc();
+        //Serial.print("adc");
+        adc->isrFunxAdc();
 }
 
 //## Timer/Counter5 Overflow Flag (TOV5)
@@ -165,8 +151,8 @@ ISR(ADC_vect) {
 //perdermi mai un passo (freq massima misurata 2khz)
 
 ISR(TIMER5_OVF_vect){
-	sFeed->isrFunxEN();
-	//Serial.println(sFeed->enRead(), BIN);
+        sFeed->isrFunxEN();
+        //Serial.println(sFeed->enRead(), BIN);
 
 }
 

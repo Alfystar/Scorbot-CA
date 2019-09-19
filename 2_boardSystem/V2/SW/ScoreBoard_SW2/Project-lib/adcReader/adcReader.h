@@ -45,7 +45,6 @@ using namespace spiPack;
 //==> 624us(1,602Khz)[norm] Fh = 200hz
 
 #define history 8
-
 namespace InternalDevice {
     class AdcDevice {
     public:

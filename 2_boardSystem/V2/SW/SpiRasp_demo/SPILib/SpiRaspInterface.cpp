@@ -6,7 +6,7 @@ namespace SpiRaspInterface {
     std::mutex myMutex;
 
     ScorBoard &ScorBoard::getInstance() {
-        std::lock_guard<std::mutex> myLock(myMutex);
+        std::lock_guard <std::mutex> myLock(myMutex);
         if (!ScorBoard::instance) {
             ScorBoard::instance = new ScorBoard();
         }
@@ -14,7 +14,6 @@ namespace SpiRaspInterface {
     }
 
     ScorBoard::ScorBoard() {
-
         this->fdSpi = open("/dev/spidev0.0", O_RDWR);
 
         //buffer setup
@@ -32,13 +31,13 @@ namespace SpiRaspInterface {
 
         //to expose the pin and not use root (wiringPiSetupSys)
         char gpioSys[128];
-        sprintf(gpioSys,"gpio export %d OUTPUT",EnCom);
+        sprintf(gpioSys, "gpio export %d OUTPUT", EnCom);
         system(gpioSys);
         wiringPiSetupSys();
 
         //wiringPiSetupGpio();    //need to be root
-        pinMode(EnCom,OUTPUT);
-        digitalWrite(EnCom,1);
+        pinMode(EnCom, OUTPUT);
+        digitalWrite(EnCom, 1);
     }
 
     ScorBoard::~ScorBoard() {
@@ -62,8 +61,8 @@ namespace SpiRaspInterface {
 
 
     void ScorBoard::sendPack(Pack &p) {
-        std::lock_guard<std::mutex> myLock(sentMutex);
-        digitalWrite(EnCom,1);
+        std::lock_guard <std::mutex> myLock(sentMutex);
+        digitalWrite(EnCom, 1);
         this->setMode(p.getPackType());
         if (p.sizePack() == 0) return;
         if (p.sizePack() == -1) {
@@ -92,13 +91,12 @@ namespace SpiRaspInterface {
         //memory cache coerence Problem
         __builtin___clear_cache(this->rxbuf, this->rxbuf + this->size);
         memcpy(p.getSPIPACK().forRasp.buf, this->rxbuf, sizeof(spi2Rasp));
-        digitalWrite(EnCom,0);
+        digitalWrite(EnCom, 0);
         this->bytePrint(p);
     }
 
     void ScorBoard::bytePrint(Pack &p) {
-        printf("p.sizePack()=%d\n",p.sizePack());
-
+        printf("p.sizePack()=%d\n", p.sizePack());
         printf("Byte send\t");
         for (int i = 0; i < p.sizePack(); ++i) {
             printf(" %d", p.getSPIPACK().forArd.buf[i]);

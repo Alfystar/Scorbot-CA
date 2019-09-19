@@ -22,7 +22,6 @@
 #include <mutex>
 
 #define EnCom 17     //Gpio 17(BCM), Pin 0(wiringPi)
-
 namespace SpiRaspInterface {
     using namespace spiPack;
 
@@ -55,7 +54,6 @@ namespace SpiRaspInterface {
         mCurrent *getCurrentPack();
         void getSensPack(Pack &p);
         mAll *getSensPack();
-
     protected:
     private:
         struct spi_ioc_transfer spi;

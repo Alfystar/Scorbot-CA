@@ -21,11 +21,12 @@ namespace ScorebotRead {
         PORTC = 0b00111111;
         PINK = 0xFF;
         PORTB = 0xF0;
-        this->circularBuf = circular_buf_init((uint16_t *) this->bufMem, sizeMem);
+        this->circularBuf = circular_buf_init((uint16_t * )
+        this->bufMem, sizeMem);
         int ap;
         //ne metto 2 uguali per Predisporre la lettura
         circular_buf_put(this->circularBuf, this->enRead());
-        circular_buf_get(this->circularBuf, (uint16_t *) &ap);
+        circular_buf_get(this->circularBuf, (uint16_t * ) & ap);
         circular_buf_put(this->circularBuf, ap);
 
         //Uso il Timer/Counter5 e il suo Overflow Flag (TOV5) per generare l'interrupt ogni ~4Kh
@@ -106,6 +107,7 @@ namespace ScorebotRead {
     }
 
     mEncoder passiT;
+
     void ScorFeed::printSteps() {
         memcpy(passiT, this->captureEn(), sizeof(mEncoder));
         for (byte i = 0; i < nMot; i++) {
@@ -131,9 +133,9 @@ namespace ScorebotRead {
     void ScorFeed::updateStepEn() {
         int oldEn, newEn;
         while (!circular_buf_empty(circularBuf)) {
-            if (circular_buf_getLastOne(circularBuf, (uint16_t *) &oldEn))
+            if (circular_buf_getLastOne(circularBuf, (uint16_t * ) & oldEn))
                 break;    //at start , there are only one value, no reading
-            circular_buf_get(circularBuf, (uint16_t *) &newEn);
+            circular_buf_get(circularBuf, (uint16_t * ) & newEn);
             /*
              Serial.print("old=");
              Serial.print(oldEn,BIN);
@@ -146,11 +148,11 @@ namespace ScorebotRead {
     }
 
     void ScorFeed::interruptEn(bool en) {
-    	//Serial.println("Enable ADC interrupt");
-    	if(en)
-    		sbi(TIMSK5,TOIE5);	//Timer/Counter, Overflow Interrupt Enable (timer5_ovf_vect)
-    	else
-    		cbi(TIMSK5,TOIE5);	//Timer/Counter, Overflow Interrupt Disable(timer5_ovf_vect)
+        //Serial.println("Enable ADC interrupt");
+        if (en)
+            sbi(TIMSK5, TOIE5);    //Timer/Counter, Overflow Interrupt Enable (timer5_ovf_vect)
+        else
+            cbi(TIMSK5, TOIE5);    //Timer/Counter, Overflow Interrupt Disable(timer5_ovf_vect)
 
     }
 }    //End namespace ScorebotRead

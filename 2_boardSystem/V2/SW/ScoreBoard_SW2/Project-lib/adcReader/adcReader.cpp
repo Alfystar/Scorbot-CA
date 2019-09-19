@@ -75,7 +75,7 @@ namespace InternalDevice {
                 break;
             default:
                 ADMUX = (0 << REFS0) | (1 << REFS1); // 1.1V Internal Arduino
-            	break;
+                break;
         }
     }
 
@@ -92,17 +92,19 @@ namespace InternalDevice {
     }
 
     int g;
+
     void AdcDevice::isrFunxAdc() {
         //todo: verificare il corretto accesso in memoria di questo doppio array
         // Must read low first
-    	g = (int) ADCL;
-    	g |= (int) ADCH << 8;
+        g = (int) ADCL;
+        g |= (int) ADCH << 8;
         this->ampMot[indexADC][oldReadId] = g; //((int) ADCL | ((int) ADCH << 8));
-        oldReadId = newReadId;	//la lettura che è già partita in automatico
-        if (oldReadId == 0)		//finito un ciclo di lettura avanza con i buffer della storia
+        oldReadId = newReadId;    //la lettura che è già partita in automatico
+        if (oldReadId == 0)        //finito un ciclo di lettura avanza con i buffer della storia
             indexADC = (indexADC + 1) % history;
-        newReadId = (motCode)((newReadId + 1) % nMot);	//il prossimo pin da impostare nei registri
-        this->pinSelect(newReadId);	//imposto i registri, verranno usati al successivo interrupt per il Free-running dell'ADC
+        newReadId = (motCode)((newReadId + 1) % nMot);    //il prossimo pin da impostare nei registri
+        this->pinSelect(
+                newReadId);    //imposto i registri, verranno usati al successivo interrupt per il Free-running dell'ADC
     }
 
     /* Tabella Codice/significato dei mux
@@ -168,16 +170,18 @@ namespace InternalDevice {
             this->sumCur += this->ampMot[j][mot];
         return this->sumCur;
     }
+
     mCurrent *m;
+
     void AdcDevice::debugPrintAdc() {
         m = &this->getLastCycle();
         Serial.flush();
         Serial.println("Last cycle:");
         for (byte i = 0; i < nMot; i++) {
-        	Serial.print("Mot");
-        	Serial.print(i+1);
-        	Serial.print(" = ");
-        	Serial.println(*m[Mot1]);
+            Serial.print("Mot");
+            Serial.print(i + 1);
+            Serial.print(" = ");
+            Serial.println(*m[Mot1]);
             delay(1);
         }
         if (this->diffRead)
