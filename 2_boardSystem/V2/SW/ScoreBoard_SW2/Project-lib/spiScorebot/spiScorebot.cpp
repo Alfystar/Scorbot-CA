@@ -90,7 +90,7 @@ namespace InternalDevice {
                 break;
             case SettingGet:
             	Serial.println("Receive SettingGet");
-                p.setSetting(globSets, pack4Rasp);
+                p.setSetting(pack4Rasp, globSets);
                 break;
             case SettingSet:
                 break;

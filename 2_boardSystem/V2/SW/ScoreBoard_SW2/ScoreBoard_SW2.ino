@@ -93,8 +93,8 @@ void loop() {
 	motorStateMachine();
 #ifdef SERIAL_PRINT_SENSOR
 	if (millis() > timePrint + newPrintDelay) {
-		//adc->debugPrintAdc();
-		sFeed->dSubDebug();
+		adc->debugPrintAdc();
+		//sFeed->dSubDebug();
 		//sFeed->printSteps();
 		//Pack::printSetting(globSets);
 		Serial.println();
