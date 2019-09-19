@@ -2,7 +2,7 @@
 // Created by alfyhack on 03/09/19.
 //
 #include "SpiPack.h"
-#define PackDebug 1 //attiva/disattiva compilazione del codice per printare dati di debug della classe Pack
+//#define PackDebug 1 //attiva/disattiva compilazione del codice per printare dati di debug della classe Pack
 
 namespace spiPack {
 	Pack::Pack() {
