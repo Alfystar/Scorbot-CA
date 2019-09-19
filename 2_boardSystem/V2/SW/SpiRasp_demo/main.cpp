@@ -104,6 +104,7 @@ int main() {
                 p->setMotorLimit(pack4Ard, Mot6, 2160, 5770, -10);
                 p->setAdcDiff(pack4Ard,false);
                 p->setAdcRef(pack4Ard,in1V1);
+                p->setPWMfreq(pack4Ard,hz4k);
                 p->printPack();
                 send.setSettingPack(*p);
                 p->printPack();

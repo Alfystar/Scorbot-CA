@@ -139,6 +139,7 @@ namespace SpiRaspInterface {
     void ScorBoard::getSettingPack(Pack &p) {
         p.clearPack();
         p.setPackType(SettingGet);
+        this->sendPack(p);
     }
 
     settingsBoard *ScorBoard::getSettingPack() {
