@@ -19,6 +19,7 @@ void help() {
     printf("\t\tm <m1>;<m1>;<m1>;<m1>;<m1>;<m1> -- Muove Ogni motore della scheda a quel PWM\n");
     printf("\t\t fr = Free Running, hs = Hard Stop, ss = Soft Stop, ig = Ignora\n");
     printf("\te -- Encoder Reading (PWMsend_EnRet)\n");
+    printf("\teM -- Encoder Reading (PWMsend_EnRet)\n");
     printf("\tc -- Current Reading (PWMsend_CurRet)\n");
     printf("\tcM -- Current Reading and save for matlab (PWMsend_CurRet)\n");
     printf("\ta -- Encoder&Current Reading (PWMsend_AllRet)\n");
@@ -100,6 +101,41 @@ int main() {
             if (strcmp(sArgv[0], "e") == 0) {
                 send.getEnPack(*p);
                 p->printPack();
+            }
+            if (strcmp(sArgv[0], "eM") == 0) {
+                //file opening
+                do{
+                    sprintf(fileName,"encoderRec%d.dat",indexFile);
+                    indexFile++;
+                    printf("New file name:%s\n",fileName);
+                } while(cfileexists(fileName));
+                fp = fopen(fileName,"w+");
+                fprintf(fp,"Mot1\tMot2\tMot3\tMot4\tMot5\tMot6\tTsample=%dms\n",Tsamp);
+                usleep(3000000);
+                //Moving scorbot
+                v *= -1;
+                p->pwmSet(v, -v, v, -v, v, -v);
+                send.setPwm_EnPack(*p);
+
+                for (int j = 0; j < 1000; j++) {
+                    printf("%d\n",j);
+                    p->pwmSet(v, -v, v, -v, v, -v);
+                    send.setPwm_EnPack(*p);
+                    send.getEnPack(*p);
+                    gettimeofday(&startTime, NULL);
+
+                    //file saving
+                    p->printPack();
+                   for(int i = Mot1;i<nMot;i++){
+                        fprintf(fp,"%d\t",p->getEncoder()[i]);
+                    }
+                    fprintf(fp,"\n");
+
+                    gettimeofday(&endTime, NULL);
+                    wait=abs(Tsamp*1000-(endTime.tv_usec-startTime.tv_usec))%Tsamp*1000;
+                    usleep(wait);
+                }
+                fclose(fp);
             }
             if (strcmp(sArgv[0], "c") == 0) {
                 send.getCurrentPack(*p);
