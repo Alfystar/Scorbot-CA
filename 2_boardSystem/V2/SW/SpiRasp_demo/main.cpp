@@ -54,7 +54,7 @@ char *savePoint;
 struct timeval startTime, endTime;
 long wait;
 
-#define Tsamp 10 //ms
+#define Tsamp 3 //ms
 FILE *fp;
 char fileName[128];
 int indexFile=0;
