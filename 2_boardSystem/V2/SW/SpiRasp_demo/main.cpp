@@ -16,7 +16,7 @@ void help() {
     printf("Menù di controllo TEST SPI dello scorbot:\n");
     printf("\tm -- Muove tutti i motori a caso per il timeout sulla scheda\n");
     printf("\t\tm <m1>;<m1>;<m1>;<m1>;<m1>;<m1> -- Muove Ogni motore della scheda a quel PWM\n");
-    printf("\t\t\t fr = Free Running, hs = Hard Stop, ss = Soft Stop, ig = Ignora\n");
+    printf("\t\t fr = Free Running, hs = Hard Stop, ss = Soft Stop, ig = Ignora\n");
     printf("\te -- Encoder Reading (PWMsend_EnRet)\n");
     printf("\tc -- Current Reading (PWMsend_CurRet)\n");
     printf("\ta -- Encoder&Current Reading (PWMsend_AllRet)\n");
@@ -42,6 +42,8 @@ char *savePoint;
 int main() {
     //Crea gli oggetti e le strutture necessarie alla comunicazione
     p = new Pack();
+    ScoreCalc *calc = new ScoreCalc(0.280,0.140,10);
+    calc->settingPrint();
     int v = 150;
     p->pwmSet(v, -v, v, -v, v, -v);
     help();
@@ -82,16 +84,20 @@ int main() {
             if (strcmp(sArgv[0], "c") == 0) {
                 send.getCurrentPack(*p);
                 p->printPack();
+                calc->adc2curr(*p);
+
             }
             if (strcmp(sArgv[0], "a") == 0) {
                 send.getSensPack(*p);
                 p->printPack();
+                calc->adc2curr(*p);
             }
             if (strcmp(sArgv[0], "af") == 0) {
-                for (int i = 0; i < 100; i++) {
+                for (int i = 0; i < 10000; i++) {
                     send.getSensPack(*p);
                     p->printPack();
-                    usleep(100 * 1000);
+                    calc->adc2curr(*p);
+                    usleep(2 * 1000);
                 }
             }
             if (strcmp(sArgv[0], "g") == 0) {

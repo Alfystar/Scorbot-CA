@@ -68,7 +68,7 @@ namespace spiPack {
                 Serial.flush();
                 Serial.println("Master Ask 'PWMsend_EnRet || PWMsend_CurRet || PWMsend_AllRet', Parameter:");
                 /*Recive*/
-                for (byte i = 0; i < nMot; i++) {
+                for (byte i = Mot1; i < nMot; i++) {
                     Serial.print("\tSpeed[Mot");
                     Serial.print(i+1);
                     Serial.print("]:");
@@ -79,7 +79,7 @@ namespace spiPack {
                 {
                     Serial.flush();
                     Serial.println("Sended Encoder Step:");
-                    for (byte i = 0; i < nMot; i++) {
+                    for (byte i = Mot1; i < nMot; i++) {
                         Serial.print("\tencoder[Mot");
                         Serial.print(i+1);
                         Serial.print("]:");
@@ -90,11 +90,11 @@ namespace spiPack {
                 {
                     Serial.flush();
                     Serial.println("Sended Current Value:");
-                    for (byte i = 0; i < nMot; i++) {
+                    for (byte i = Mot1; i < nMot; i++) {
                         Serial.print("\tcurrent[Mot");
                         Serial.print(i + 1);
                         Serial.print("]:");
-                        Serial.println(this->getCurrent()[Mot1 + i]);
+                        Serial.println(this->getCurrent()[i]);
                     }
                 }
             }
@@ -140,20 +140,20 @@ namespace spiPack {
                 printf("PackType: 'PWMsend_EnRet || PWMsend_CurRet || PWMsend_AllRet', Parameter:\n");
                 /*Recive*/
                 for (char i = 0; i < nMot; i++) {
-                    printf("%d)%hd\t", i + 1, this->getPwm()[Mot1 + i]);
+                    printf("%d)%hd\t", i + 1, this->getPwm()[i]);
                 }
 
                 /*Send*/
                 if (this->getPackType() == PWMsend_EnRet || this->getPackType() == PWMsend_AllRet) {
                     printf("\nEn:\t");
-                    for (char i = 0; i < nMot; i++) {
-                        printf("%d)%hd\t", i + 1, this->getEncoder()[Mot1 + i]);
+                    for (char i = Mot1; i < nMot; i++) {
+                        printf("%d)%hd\t", i + 1, this->getEncoder()[i]);
                     }
                 }
                 if (this->getPackType() == PWMsend_CurRet || this->getPackType() == PWMsend_AllRet) {
                     printf("\nCurr:\t");
-                    for (char i = 0; i < nMot; i++) {
-                        printf("%d)%hd\t", i + 1, this->getCurrent()[Mot1 + i]);
+                    for (char i = Mot1; i < nMot; i++) {
+                        printf("%d)%hd\t", i + 1, this->getCurrent()[i]);
                     }
                 }
                 break;

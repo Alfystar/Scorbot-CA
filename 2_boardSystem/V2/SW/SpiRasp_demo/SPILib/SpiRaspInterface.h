@@ -17,6 +17,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 #include <cstring>
 #include <iostream>
 #include <mutex>
@@ -59,7 +60,7 @@ namespace SpiRaspInterface {
         struct spi_ioc_transfer spi;
         char *txbuf, *rxbuf;
         int size, fdSpi;
-        const int hzSpeed = 32000; //32Khz per dare tempo ad arduino, nella realtà 30.5 kHz
+        const int hzSpeed = 31000; //32Khz per dare tempo ad arduino, nella realtà 30.5 kHz
         const char bitWord = 8;
 
         static ScorBoard *instance;
@@ -76,18 +77,33 @@ namespace SpiRaspInterface {
     class ScoreCalc {
     public:
         ScoreCalc();
-        ScoreCalc(float vRef, float vCs);
+        ScoreCalc(float vRef, float vCs, int bitAdc);
+        void settingPrint();
 //utility function
-        float currentConvert(Pack &p, motCode nMot);
-        float currentConvert(int c);
+        float vRefNeed(float Imax);
+        static float vRefNeed(float Imax,float Vcs);
+
+        void adc2curr(Pack &currPack);
+        float adc2curr(int adc);
+        static float adc2curr(int adc, float vRef, float vCs, int bitADC);
+
+        int curr2adc(float curr);
+        static int curr2adc(float curr, float vRef, float vCs, int bitADC);
+
         void vRefSet(float v);
         float vRefGet();
+
         void vCsSet(float v);
         float vCsGet();
+
+        void bitAdcSet(int bit);
+        int bitAdcGet();
+        int rangeAdcGet();
     private:
         settingsBoard boardSet;
         static float vRef;  //Voltage reference ADC
         static float vCs;  //Voltage current sensitive DriverOutput
+        static int bitAdc;
     };
 
 
