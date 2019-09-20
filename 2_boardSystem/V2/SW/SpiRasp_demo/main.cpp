@@ -1,8 +1,9 @@
 #include <iostream>
+#include <stdio.h>
 #include "SPILib/SpiRaspInterface.h"
 #include "../SpiPack/SpiPack.h"
 #include <string.h>
-
+#include <sys/time.h>
 using namespace SpiRaspInterface;
 using namespace spiPack;
 #define fflush(stdin) while(getchar() != '\n');
@@ -19,6 +20,7 @@ void help() {
     printf("\t\t fr = Free Running, hs = Hard Stop, ss = Soft Stop, ig = Ignora\n");
     printf("\te -- Encoder Reading (PWMsend_EnRet)\n");
     printf("\tc -- Current Reading (PWMsend_CurRet)\n");
+    printf("\tcM -- Current Reading and save for matlab (PWMsend_CurRet)\n");
     printf("\ta -- Encoder&Current Reading (PWMsend_AllRet)\n");
     printf("\taf -- Encoder&Current Reading for 10 seconds\n");
     printf("\tg -- Read arduino Settings (SettingGet)\n");
@@ -30,6 +32,16 @@ void help() {
 
 }
 
+int cfileexists(const char * filename){
+    /* try to open file to read */
+    FILE *file;
+    if (file = fopen(filename, "r")){
+        fclose(file);
+        return 1;
+    }
+    return 0;
+}
+
 ScorBoard &send = ScorBoard::getInstance();;
 Pack *p;
 
@@ -38,6 +50,14 @@ char cmdBuf[1024];
 char *sArgv[64];  //consento lo storage fino a 64 comandi
 int sArgc = 0;
 char *savePoint;
+
+struct timeval startTime, endTime;
+long wait;
+
+#define Tsamp 10 //ms
+FILE *fp;
+char fileName[128];
+int indexFile=0;
 
 int main() {
     //Crea gli oggetti e le strutture necessarie alla comunicazione
@@ -86,6 +106,39 @@ int main() {
                 p->printPack();
                 calc->adc2curr(*p);
 
+            }
+            if (strcmp(sArgv[0], "cM") == 0) {
+                calc->settingPrint();
+                //file opening
+                do{
+                    sprintf(fileName,"current%d.dat",indexFile);
+                    indexFile++;
+                    printf("New file name:%s\n",fileName);
+                } while(cfileexists(fileName));
+                fp = fopen(fileName,"w+");
+                fprintf(fp,"Mot1\tMot2\tMot3\tMot4\tMot5\tMot6\tTsample=%dms\n",Tsamp);
+                usleep(3000000);
+                //Moving scorbot
+                send.goHomePack();
+
+                for (int j = 0; j < 3000; j++) {
+                    printf("%d\n",j);
+                    send.getCurrentPack(*p);
+                    gettimeofday(&startTime, NULL);
+
+                    //file saving
+                    p->printPack();
+                    calc->adc2curr(*p);
+                    for(int i = Mot1;i<nMot;i++){
+                        fprintf(fp,"%.6f\t",calc->adc2curr(p->getCurrent()[i]));
+                    }
+                    fprintf(fp,"\n");
+
+                    gettimeofday(&endTime, NULL);
+                    wait=abs(Tsamp*1000-(endTime.tv_usec-startTime.tv_usec))%Tsamp*1000;
+                    usleep(wait);
+                }
+                fclose(fp);
             }
             if (strcmp(sArgv[0], "a") == 0) {
                 send.getSensPack(*p);

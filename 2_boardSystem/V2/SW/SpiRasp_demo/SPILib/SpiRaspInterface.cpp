@@ -92,7 +92,7 @@ namespace SpiRaspInterface {
         __builtin___clear_cache(this->rxbuf, this->rxbuf + this->size);
         memcpy(p.getSPIPACK().forRasp.buf, this->rxbuf, sizeof(spi2Rasp));
         digitalWrite(EnCom, 0);
-        this->bytePrint(p);
+        //this->bytePrint(p);
     }
 
     void ScorBoard::bytePrint(Pack &p) {
