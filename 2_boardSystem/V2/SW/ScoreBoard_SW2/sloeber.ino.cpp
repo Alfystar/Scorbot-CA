@@ -2,7 +2,7 @@
 //This is a automatic generated file
 //Please do not modify this file
 //If you touch this file your change will be overwritten during the next build
-//This file has been generated on 2019-09-20 13:27:42
+//This file has been generated on 2019-09-20 16:42:19
 
 #include "Arduino.h"
 #include "Arduino.h"
@@ -21,6 +21,7 @@ void sanityChek(int wait) ;
 ISR(SPI_STC_vect) ;
 ISR(ADC_vect) ;
 ISR(TIMER5_OVF_vect);
+ISR(PCINT0_vect) ;
 void excutePack(Pack &p) ;
 void memoryLoad() ;
 void memorySave(settingsBoard &set) ;

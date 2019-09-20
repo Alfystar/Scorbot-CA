@@ -55,14 +55,24 @@ void motorStateMachine() {
 unsigned long time = 0;
 
 void home() {
+	Serial.println("Moving in secure zone");
 	mot[Mot3]->drive_motor(-midVel);
 	delay(3000);
 	mot[Mot3]->soft_stop();
+
+	mot[Mot4]->drive_motor(-midVel);
+	mot[Mot5]->drive_motor(-midVel);
+	delay(1000);
+	mot[Mot4]->soft_stop();
+	mot[Mot5]->soft_stop();
+
+/*
     for (byte i = Mot2; i < nMot; i++) {
         mot[i]->drive_motor(-midVel);
         delay(1000);
         mot[i]->soft_stop();
     }
+    */
     for (byte i = Mot1; i < nMot; i++)
         mot[i]->freeRun();
 
@@ -86,9 +96,11 @@ void home() {
     delay(2000);
     stopClaw();
     delay(10);
+    for (byte i = Mot1; i < nMot; i++) //reset degli encoder
+    	mot[i]->freeRun();
     sFeed->updateStepEn();
-    for (byte i = 0; i < nMot; i++) //reset degli encoder
-        sFeed->setEn((motCode)(Mot1 + i), 0);
+    for (byte i = Mot1; i < nMot; i++) //reset degli encoder
+        sFeed->setEn((motCode)(i), 0);
 }
 
 //stDir: 1(outside) -1 (inside)
@@ -139,11 +151,11 @@ void homeMot(byte motN, signed char stDir) {
         antiReboundTimer = millis();
     }
     if (limitFound) {    //se ho toccato sono già nel lato giusto
-        Serial.println("\t--First Click after lock, switch @ inside rotation (Mot3)");
+        Serial.println("\t--First Click after lock, switch @ inside rotation");
         mot[motN]->hard_stop(100);
         delay(100);
     } else {    //se non ho toccato devo spostarmi dall'altro lato e fermarmi
-        Serial.println("\t--First Click before lock, switch @ outside rotation (Mot3)");
+        Serial.println("\t--First Click before lock, switch @ outside rotation");
         do {    //proseguo durante al click
             mot[motN]->drive_motor(slowVel);
             antiRebound(100);    //tempo anti rimbalzo
@@ -343,13 +355,16 @@ void pinzaHome() {
 }
 
 void openClaw() {
+	Serial.println("Opening claw...");
     mot[Mot6]->drive_motor(-140, 2000);
 }
 
 void closeClaw() {
+	Serial.println("Closing claw...");
     mot[Mot6]->drive_motor(140, 2000);
 }
 
 void stopClaw() {
+	Serial.println("Stopping claw...");
     mot[Mot6]->soft_stop(2000);
 }

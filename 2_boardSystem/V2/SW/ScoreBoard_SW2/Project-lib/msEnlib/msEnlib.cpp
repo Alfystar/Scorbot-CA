@@ -76,12 +76,15 @@ namespace ScorebotRead {
 
     unsigned short enNow,enOld;
     void ScorFeed::isrFunxEN() { //aggiungo solo se diverso e il buffer non vuoto
+    	circular_buf_put(circularBuf,enRead());
+    	/*
     	enOld=enNow;
     	enNow=enRead();
     	if (enNow!=enOld)
     		circular_buf_put(circularBuf, enNow);
     	if(circular_buf_size(circularBuf)>200)
     		this->updateStepEn();
+    		*/
     }
 
     mEncoder &ScorFeed::captureEn() {

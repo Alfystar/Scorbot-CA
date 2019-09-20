@@ -42,9 +42,8 @@ void excutePack(Pack &p) {
             adc->setVRefSource(s.adcVref);
         }
             break;
-        case goHome: {
+        case goHome:
             home();
-        }
             break;
         case SettingGet:
         default: {

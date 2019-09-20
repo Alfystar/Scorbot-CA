@@ -58,6 +58,7 @@ namespace Motor {
         this->delay_time = 0;
         this->time = 0;
         this->speed = 0;
+        this->freeRun();
 #ifdef SERIAL_PRINT
         Serial.println("DCDriver create");
         delay(100);
