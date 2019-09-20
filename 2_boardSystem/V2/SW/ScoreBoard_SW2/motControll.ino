@@ -55,6 +55,9 @@ void motorStateMachine() {
 unsigned long time = 0;
 
 void home() {
+	mot[Mot3]->drive_motor(-midVel);
+	delay(3000);
+	mot[Mot3]->soft_stop();
     for (byte i = Mot2; i < nMot; i++) {
         mot[i]->drive_motor(-midVel);
         delay(1000);

@@ -62,19 +62,20 @@ namespace InternalDevice {
 
     void AdcDevice::setVRefSource(adcRef vRef) {
         //ADMUX – ADC Multiplexer Selection Register
-        this->vRef = vRef;
-        switch (vRef) {
+    	cbi(ADMUX,REFS1);
+    	cbi(ADMUX,REFS0);
+        switch (this->vRef) {
             case in1V1:
-                ADMUX = (0 << REFS0) | (1 << REFS1); // 1.1V Internal Arduino
+                ADMUX |= (0 << REFS0) | (1 << REFS1); // 1.1V Internal Arduino
                 break;
             case in2V56:
-                ADMUX = (1 << REFS0) | (1 << REFS1); // 2.56V Internal Arduino
+                ADMUX |= (1 << REFS0) | (1 << REFS1); // 2.56V Internal Arduino
                 break;
             case ext:
-                ADMUX = (0 << REFS0) | (0 << REFS1); // Ext Vref
+                ADMUX |= (0 << REFS0) | (0 << REFS1); // Ext Vref
                 break;
             default:
-                ADMUX = (0 << REFS0) | (1 << REFS1); // 1.1V Internal Arduino
+                ADMUX |= (0 << REFS0) | (1 << REFS1); // 1.1V Internal Arduino
                 break;
         }
     }

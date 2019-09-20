@@ -32,15 +32,14 @@ namespace ScorebotRead {
         //Uso il Timer/Counter5 e il suo Overflow Flag (TOV5) per generare l'interrupt ogni ~4Kh
         //La modalità di default del timer 5 è in 8-bit phase correct pwm mode e prescaler a 64 bit
         //Mantengo utilizzabili i pin D44, D45 & D46 come normali PWM ma a 3921.16 Hz (default a 490.20 Hz)
+#ifdef TIMER5OVF_EN
         TCCR5B = (TCCR5B & B11111000) | B00000010; // set timer 5 divisor to 8 for PWM frequency of 3921.16 Hz
+        //TCCR5B = (TCCR5B & B11111000) | B00000001; // set timer  divisor to     1 for PWM frequency of 31372.55 Hz
         TCNT5 = 0;
+#endif
         ScorFeed::interruptEn(true);
-        //PCINT Active
-        /*
-        PCICR = (1 << PCIE2) | (1 << PCIE0);        //abilita PCMSK0 & PCMSK2
-        PCMSK2 = 0xFF;        //abilita tutti
-        PCMSK0 = 0xF0;        //abilita la metà superiore
-        */
+
+
     }
 
 //VARIABILI PRIVATE DI calcStep
@@ -75,8 +74,14 @@ namespace ScorebotRead {
         }
     }
 
-    void ScorFeed::isrFunxEN() {
-        circular_buf_put(circularBuf, enRead());
+    unsigned short enNow,enOld;
+    void ScorFeed::isrFunxEN() { //aggiungo solo se diverso e il buffer non vuoto
+    	enOld=enNow;
+    	enNow=enRead();
+    	if (enNow!=enOld)
+    		circular_buf_put(circularBuf, enNow);
+    	if(circular_buf_size(circularBuf)>200)
+    		this->updateStepEn();
     }
 
     mEncoder &ScorFeed::captureEn() {
@@ -104,6 +109,13 @@ namespace ScorebotRead {
         Serial.print(enChA, BIN);
         Serial.print("  enChB: ");
         Serial.println(enChB, BIN);
+        this->storedData();
+    }
+
+    void ScorFeed::storedData()
+    {
+    	Serial.print("Circular size: ");
+    	Serial.println(circular_buf_size(this->circularBuf));
     }
 
     mEncoder passiT;
@@ -149,11 +161,27 @@ namespace ScorebotRead {
 
     void ScorFeed::interruptEn(bool en) {
         //Serial.println("Enable ADC interrupt");
-        if (en)
-            sbi(TIMSK5, TOIE5);    //Timer/Counter, Overflow Interrupt Enable (timer5_ovf_vect)
-        else
-            cbi(TIMSK5, TOIE5);    //Timer/Counter, Overflow Interrupt Disable(timer5_ovf_vect)
+    	if (en){
+#ifdef TIMER5OVF_EN
+    		sbi(TIMSK5, TOIE5);    //Timer/Counter, Overflow Interrupt Enable (timer5_ovf_vect)
+#endif
+#ifdef PCINT_EN
+    		//PCINT Active
 
+    		PCICR = (1 << PCIE2) | (1 << PCIE0);        //abilita PCMSK0 & PCMSK2
+    		PCMSK2 = 0xFF;        //abilita tutti
+    		PCMSK0 = 0xF0;        //abilita la metà superiore
+#endif
+    	}else{
+#ifdef TIMER5OVF_EN
+    		cbi(TIMSK5, TOIE5);    //Timer/Counter, Overflow Interrupt Disable(timer5_ovf_vect)
+#endif
+#ifdef PCINT_EN
+    		PCICR = 0;        //disabilita Tutti PCMSKn
+    		PCMSK2 = 0;        //disabilita tutti
+    		PCMSK0 = 0;        //disabilita la metà superiore
+#endif
+        }
     }
 }    //End namespace ScorebotRead
 

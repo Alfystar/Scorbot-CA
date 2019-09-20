@@ -2,7 +2,7 @@
 #include "Project-lib/globalDef.h"
 
 //#define SERIAL_PRINT 1    //attiva/disattiva compilazione del codice per printare in seriale informazioni aggiungtive
-#define SPI_PRINT 1            //attiva/disattiva compilazione del print del pacchetto spi
+//#define SPI_PRINT 1            //attiva/disattiva compilazione del print del pacchetto spi
 //#define SERIAL_PRINT_SENSOR 1 //attiva/disattiva compilazione del codice per printare i sensori ogni "newPrintDelay"
 
 //#define MOVE_CHECK 1 		//attiva/disattiva compilazione del codice che muove tutti i motori per test
@@ -23,8 +23,8 @@ unsigned long sanityTime = 0;
 
 //The setup function is called once at startup of the sketch
 void setup() {
-    // Add your initialization code here
-    Serial.begin(57600);
+	pinMode(31,OUTPUT);
+	Serial.begin(57600);
     cli();
     Serial.println("\n##### Start Setup #####");
     delay(250);
@@ -66,8 +66,13 @@ void setup() {
 }
 
 Pack *r;
-
+unsigned long timeOverflow [200];
+int timeOverflowId=0;
 void loop() {
+	//sFeed->storedData();
+	sFeed->updateStepEn();
+	//sFeed->storedData();
+	//sFeed->printSteps();
     sanityChek(sanityDelay);
     if (spi->spiAvailable()) {
         r = &spi->getLastRecive();
@@ -76,7 +81,6 @@ void loop() {
         r->printPack();
 #endif
     }
-    sFeed->updateStepEn();
     motorStateMachine();
 #ifdef SERIAL_PRINT_SENSOR
     if (millis() > timePrint + newPrintDelay) {
@@ -88,6 +92,21 @@ void loop() {
         timePrint = millis();
     }
 #endif
+    /*
+    Serial.println(timeOverflowId);
+    if (timeOverflowId>1023)
+    {
+    	for(int i = 0; i<200;i++)
+    	{
+    		Serial.print("T_int= ");
+    		Serial.println(timeOverflow[i+1]-timeOverflow[i]);
+    	}
+    	timeOverflowId=0;
+    }
+    */
+	sFeed->isrFunxEN();
+	digitalWrite(39,!digitalRead(39));
+
 }
 
 
@@ -150,9 +169,10 @@ ISR(ADC_vect) {
 //Ogni ~4Khz aggiorno la lettura degli encoder così da non
 //perdermi mai un passo (freq massima misurata 2khz)
 
+
 ISR(TIMER5_OVF_vect){
-        sFeed->isrFunxEN();
-        //Serial.println(sFeed->enRead(), BIN);
+	sFeed->isrFunxEN();
+        //sFeed->dSubDebug();
 
 }
 
@@ -160,10 +180,9 @@ ISR(TIMER5_OVF_vect){
 //## PCINT INTERRUPT SERVICE ##//
 //Al Cambio di uno dei pin degli Encoder, li salva tutti in memoria su un buffer circolare
 //per elaborare lo stato in un momento successivo durante il programma
-/*
+
 ISR(PCINT0_vect) {
         sFeed->isrFunxEN();
 }
-ISR(PCINT2_vect, ISR_ALIASOF(PCINT0_vect)
-);
- */
+ISR(PCINT2_vect, ISR_ALIASOF(PCINT0_vect));
+

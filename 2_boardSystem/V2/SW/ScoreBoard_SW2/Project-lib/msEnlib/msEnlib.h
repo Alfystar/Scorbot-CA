@@ -15,7 +15,11 @@
 #include "circular_buffer/circular_buffer.h"
 #include "../globalDef.h"
 
-#define sizeMem 128    //numero di celle (di int [2 byte])nel buffer circolare
+#define sizeMem 255    //numero di celle (di int [2 byte])nel buffer circolare
+//One of this 2
+#define PCINT_EN 1
+//#define TIMER5OVF_EN 1
+
 namespace ScorebotRead {
     using namespace spiPack;
 
@@ -34,6 +38,7 @@ namespace ScorebotRead {
         short getEn(motCode mot);
 
         void dSubDebug();
+        void storedData();
         void printSteps();
     private:
         cbuf_handle_t circularBuf;
