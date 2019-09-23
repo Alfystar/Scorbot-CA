@@ -2,7 +2,7 @@
 #include "Project-lib/globalDef.h"
 
 //#define SERIAL_PRINT 1    //attiva/disattiva compilazione del codice per printare in seriale informazioni aggiungtive
-//#define SPI_PRINT 1            //attiva/disattiva compilazione del print del pacchetto spi
+#define SPI_PRINT 1            //attiva/disattiva compilazione del print del pacchetto spi
 //#define SERIAL_PRINT_SENSOR 1 //attiva/disattiva compilazione del codice per printare i sensori ogni "newPrintDelay"
 
 //#define MOVE_CHECK 1 		//attiva/disattiva compilazione del codice che muove tutti i motori per test
@@ -25,6 +25,7 @@ unsigned long sanityTime = 0;
 void setup() {
 	pinMode(31,OUTPUT);
 	Serial.begin(57600);
+    Serial1.begin(57600);
     cli();
     Serial.println("\n##### Start Setup #####");
     delay(250);
@@ -69,6 +70,8 @@ Pack *r;
 unsigned long timeOverflow [200];
 int timeOverflowId=0;
 void loop() {
+    Serial1.println("Ciao raps");
+
 	//sFeed->storedData();
 	sFeed->updateStepEn();
 	//sFeed->storedData();
@@ -86,7 +89,7 @@ void loop() {
     if (millis() > timePrint + newPrintDelay) {
         adc->debugPrintAdc();
         //sFeed->dSubDebug();
-        //sFeed->printSteps();
+        sFeed->printSteps();
         //Pack::printSetting(globSets);
         Serial.println();
         timePrint = millis();
@@ -104,8 +107,8 @@ void loop() {
     	timeOverflowId=0;
     }
     */
-	sFeed->isrFunxEN();
-	digitalWrite(39,!digitalRead(39));
+    //sFeed->isrFunxEN();
+    //digitalWrite(39,!digitalRead(39));
 
 }
 
@@ -183,6 +186,7 @@ ISR(TIMER5_OVF_vect){
 
 ISR(PCINT0_vect) {
         sFeed->isrFunxEN();
+        //sFeed->dSubDebug();
 }
 ISR(PCINT2_vect, ISR_ALIASOF(PCINT0_vect));
 

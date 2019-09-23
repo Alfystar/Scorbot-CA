@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdio.h>
-#include "SPILib/SpiRaspInterface.h"
+#include "../ScorbotRaspLib/SPILib/SpiRaspInterface.h"
+#include "../ScorbotRaspLib/UtilityScorbot/ScorCalc.h"
 #include "../SpiPack/SpiPack.h"
 #include <string.h>
 #include <sys/time.h>
@@ -43,7 +44,7 @@ int cfileexists(const char * filename){
     return 0;
 }
 
-ScorBoard &send = ScorBoard::getInstance();;
+Spi_ScorBoard &send = Spi_ScorBoard::getInstance();;
 Pack *p;
 
 /** Cmd terminal **/

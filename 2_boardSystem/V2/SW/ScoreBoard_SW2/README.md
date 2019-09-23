@@ -8,7 +8,7 @@ serve per evitare di far includere librerie e codici che devo essere presenti so
 La documentazione del codice è stata con UML ed è trovabile qui https://github.com/Alfystar/Scorbot-CA/tree/master/1_Doc
 
 Le classi cooperanti al funzionamento del firmware sono:
-[![SubSystem-structure](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ScorBoard%20Object.png?raw=true "SubSystem-structure")]("SPI raps-structure")
+[![SubSystem-structure](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/Spi_ScorBoard%20Object.png?raw=true "SubSystem-structure")]("SPI raps-structure")
 
 
 ## Ide di sviluppo

@@ -39,3 +39,18 @@ Da notare che ora nel codice è scritto che la frequenza di comunicazione è 50k
 
 Sito dove viene spiegato il problema della memory cache coerence :
 https://community.arm.com/developer/ip-products/processors/b/processors-ip-blog/posts/caches-and-self-modifying-code
+
+Riguardo il setup della UART:
+https://www.electronicwings.com/raspberry-pi/raspberry-pi-uart-communication-using-python-and-c
+da terminale aggiungersi nel gruppo tty:
+
+    sudo usermod -a -G tty <my_user>
+
+e modificare i diritti di accesso per il gruppo permettendo anche la lettura oltre che la scrittura:
+
+    sudo chmod g+r ttyS0
+
+Per modificare le regole delle periferiche qui una rapida guida sintattica:
+http://www.reactivated.net/writing_udev_rules.html
+https://wiki.archlinux.org/index.php/Udev
+(per ora senza successo)

@@ -37,6 +37,10 @@ namespace ScorebotRead {
         //TCCR5B = (TCCR5B & B11111000) | B00000001; // set timer  divisor to     1 for PWM frequency of 31372.55 Hz
         TCNT5 = 0;
 #endif
+#ifdef PCINT_EN
+        PCMSK2 = 0xFF;        //abilita tutti
+        PCMSK0 = 0xF0;        //abilita la metà superiore
+#endif
         ScorFeed::interruptEn(true);
 
 
@@ -172,8 +176,6 @@ namespace ScorebotRead {
     		//PCINT Active
 
     		PCICR = (1 << PCIE2) | (1 << PCIE0);        //abilita PCMSK0 & PCMSK2
-    		PCMSK2 = 0xFF;        //abilita tutti
-    		PCMSK0 = 0xF0;        //abilita la metà superiore
 #endif
     	}else{
 #ifdef TIMER5OVF_EN

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
-    <generated />
+    <generated>
+      <config projectName="SpiRasp_Terminal" targetName="SpiRasp_Terminal" />
+    </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
     <configurations>
@@ -10,21 +12,60 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="Add son class to DCmotor to improve Working set limits&#10;code reformat&#10;readme update">
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/Motor/DCdriver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/Motor/DCdriver.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/Motor/DCdriver.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/Motor/DCdriver.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/adcReader/adcReader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/adcReader/adcReader.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/adcReader/adcReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/adcReader/adcReader.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/globalDef.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/globalDef.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/.ScorBoard_Diagrams.vpp.lck" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_126d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_127d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_128d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_129d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_130d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_131d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_132d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_133d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/src/ADC free-runnig.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/src/AdcLib.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/src/Motor Driver.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/src/Motor State Machine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/src/SPI Protocol.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/src/SPI-structures Class Diagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/src/ScorBoard Object.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/src/ScoreBot Feedback Sensor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/src/SpiLib.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/src/SpiLib_Rasp.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScorbotRaspLib/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScorbotRaspLib/UtilityScorbot/ScorCalc.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScorbotRaspLib/UtilityScorbot/ScorCalc.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ADC free-runnig.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/AdcLib.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/Motor Driver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/Motor State Machine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/SPI Protocol.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/SPI-structures Class Diagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard Object.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp" beforeDir="false" afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_096d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_097d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_098d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_099d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_100d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_101d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_102d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_103d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScoreBot Feedback Sensor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/SpiLib.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/SpiLib_Rasp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/.settings/org.eclipse.cdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/.settings/org.eclipse.cdt.core.prefs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/msEnlib/msEnlib.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/msEnlib/msEnlib.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/msEnlib/msEnlib.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/Project-lib/msEnlib/msEnlib.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/ScoreBoard_SW2.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/ScoreBoard_SW2.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/excutePack.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/excutePack.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/motControll.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/motControll.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiPack/SpiPack.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiPack/SpiPack.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiPack/SpiPack.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiPack/SpiPack.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib/SpiRaspInterface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib/SpiRaspInterface.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib/SpiRaspInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib/SpiRaspInterface.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/sloeber.ino.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScoreBoard_SW2/sloeber.ino.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib/SpiRaspInterface.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScorbotRaspLib/SPILib/SpiRaspInterface.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib/SpiRaspInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScorbotRaspLib/SPILib/SpiRaspInterface.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib/link userfull.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/ScorbotRaspLib/SPILib/link userfull.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -34,6 +75,14 @@
   </component>
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CMakeLists.txt" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="PREVIOUS_COMMIT_AUTHORS">
@@ -45,7 +94,11 @@
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectId" id="1QEs6LMzclXnGYYUwqGsgySaYhB" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiPack" />
@@ -59,13 +112,15 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiPack" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW" />
+      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/ScorbotRaspLib" />
       <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib" />
       <recent name="$PROJECT_DIR$/relase" />
       <recent name="$PROJECT_DIR$/relase/comC" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiPack" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -79,6 +134,13 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager">
+    <configuration name="SpiRasp_Terminal" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SpiRasp_Terminal" TARGET_NAME="SpiRasp_Terminal" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SpiRasp_Terminal" RUN_TARGET_NAME="SpiRasp_Terminal">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -112,6 +174,7 @@
       <workItem from="1568014176025" duration="7125000" />
       <workItem from="1568796539386" duration="2283000" />
       <workItem from="1568909638862" duration="331000" />
+      <workItem from="1569243743338" duration="4780000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
       <created>1568027375662</created>
@@ -161,6 +224,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino" />
     <MESSAGE value="Add son class to DCmotor to improve Working set limits" />
     <MESSAGE value="Add son class to DCmotor to improve Working set limits&#10;code reformat" />

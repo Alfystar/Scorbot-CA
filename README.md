@@ -16,7 +16,7 @@ Il progetto è attualmente portato avanti da Emanuele Alfano con la licenza [GPL
 
 ## ScoreBoard
 La scheda di controllo dello Scorbot è pensata per essere un ponte tra la meccanica del robot, e il controllo progammato dentro il Rapsberry Py.
-[![SubSystem-structure](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/Media/ScorBoard-idea.png?raw=true "SubSystem-structure")](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ScorBoard_v2-MANUAL.pdf "SubSystem-structure")
+[![SubSystem-structure](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/Media/Spi_ScorBoard-idea.png?raw=true "SubSystem-structure")](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ScorBoard_v2-MANUAL.pdf "SubSystem-structure")
 
 Il manuale di questo sotto sistema è trovabile [qui](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ScorBoard_v2-MANUAL.pdf "qui").
 
@@ -42,7 +42,7 @@ La scheda possiede un firmware di controllo che parla al Rapsberry Py per mezzo 
 - Davide Antonini
 - Del Papa Nicolò
 
-[*ScorBoard-V1 repository*](https://github.com/Alfystar/Scorbot-CA/tree/master/2_boardSystem/V1 "ScorBoard-V1 repository")
+[*Spi_ScorBoard-V1 repository*](https://github.com/Alfystar/Scorbot-CA/tree/master/2_boardSystem/V1 "Spi_ScorBoard-V1 repository")
 
 
 
@@ -67,7 +67,7 @@ La libreria è stata documentata completamente usando UML
 - Emanuele Alfano
 La libreria è stata documentata completamente usando UML
 
-[*ScorBoard-V2 repository*](https://github.com/Alfystar/Scorbot-CA/tree/master/2_boardSystem/V2 "ScorBoard-V2 repository")
+[*Spi_ScorBoard-V2 repository*](https://github.com/Alfystar/Scorbot-CA/tree/master/2_boardSystem/V2 "Spi_ScorBoard-V2 repository")
 
 
 # Rapsberry Py Gui controll
