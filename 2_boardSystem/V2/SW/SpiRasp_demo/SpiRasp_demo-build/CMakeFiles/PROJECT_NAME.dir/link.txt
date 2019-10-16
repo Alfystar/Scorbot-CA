@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/PROJECT_NAME.dir/main.cpp.o CMakeFiles/PROJECT_NAME.dir/home/scorebot/Scorbot-CA/2_boardSystem/V2/SW/SpiPack/SpiPack.cpp.o CMakeFiles/PROJECT_NAME.dir/SPILib/SpiRaspInterface.cpp.o  -o PROJECT_NAME -rdynamic -lwiringPi 

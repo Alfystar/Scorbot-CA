@@ -1,0 +1,1 @@
+/usr/bin/c++      CMakeFiles/SpiRasp_Terminal.dir/main.cpp.o CMakeFiles/SpiRasp_Terminal.dir/home/scorebot/Scorbot-CA/2_boardSystem/V2/SW/SpiPack/SpiPack.cpp.o CMakeFiles/SpiRasp_Terminal.dir/SPILib/SpiRaspInterface.cpp.o  -o SpiRasp_Terminal -rdynamic -lwiringPi 

@@ -1,0 +1,3 @@
+/home/scorebot/Scorbot-CA/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/edit_cache.dir
+/home/scorebot/Scorbot-CA/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/rebuild_cache.dir
+/home/scorebot/Scorbot-CA/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_Terminal.dir
