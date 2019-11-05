@@ -11,10 +11,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_SW2/Project-lib/spiScorebot/spiScorebot.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_SW2/Project-lib/spiScorebot/spiScorebot.h" afterDir="false" />
-    </list>
+    <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,7 +124,7 @@
       <workItem from="1570457371210" duration="54000" />
       <workItem from="1571131420355" duration="16912000" />
       <workItem from="1571175385728" duration="205000" />
-      <workItem from="1572961835097" duration="1983000" />
+      <workItem from="1572961835097" duration="2058000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
       <created>1568027375662</created>
@@ -171,7 +168,14 @@
       <option name="project" value="LOCAL" />
       <updated>1572973820378</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="debugging arduino code">
+      <created>1572981038465</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1572981038465</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -198,7 +202,8 @@
     <MESSAGE value="Add son class to DCmotor to improve Working set limits&#10;code reformat&#10;readme update" />
     <MESSAGE value="reorder Rasp lib structure, and update uml diagrams to actualy version" />
     <MESSAGE value="adattato arduino alla nuova libreria di comunicazione" />
-    <option name="LAST_COMMIT_MESSAGE" value="adattato arduino alla nuova libreria di comunicazione" />
+    <MESSAGE value="debugging arduino code" />
+    <option name="LAST_COMMIT_MESSAGE" value="debugging arduino code" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>
