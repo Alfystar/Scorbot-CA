@@ -8,15 +8,27 @@
 #ifndef PROJECT_LIB_GLOBALDEF_H_
 #define PROJECT_LIB_GLOBALDEF_H_
 
-#include "../SpiPack/SpiPack.h"
+#include "../../DataTransfertPackge/DataPrimitive.h"
+#include "../../DataTransfertPackge/DataFactory.h"
+#include "../../DataTransfertPackge/DataManipolation/CurrentMot.h"
+#include "../../DataTransfertPackge/DataManipolation/EncoderMot.h"
+#include "../../DataTransfertPackge/DataManipolation/AllSensor.h"
+#include "../../DataTransfertPackge/DataManipolation/SettingBoard_C.h"
+#include "../../DataTransfertPackge/DataManipolation/SpeedMot.h"
+#include "../../DataTransfertPackge/DataManipolation/Pack.h"
 #include "spiScorebot/spiScorebot.h"
 #include "adcReader/adcReader.h"
 #include "msEnlib/msEnlib.h"
 
-namespace spiPack {
+namespace DataPrimitive {
 }    //to mute the compiler (￣Д￣)
-using namespace spiPack;
+using namespace DataPrimitive;
 extern settingsBoard globSets;
+
+namespace DataManipolation {
+}    //to mute the compiler (￣Д￣)
+using namespace DataManipolation;
+extern SettingBoard_C Gset;
 
 namespace InternalDevice {
 }    //to mute the compiler (￣Д￣)

@@ -8,14 +8,18 @@
 #include <string.h>
 #include <stdio.h>
 
+#ifdef ScorboarFirmware
+#include "Arduino.h"
+#endif
+
 namespace DataManipolation {
     using namespace DataPrimitive;
     class EncoderMot {
     public:
         EncoderMot(mEncoder& en);
         void changePack(mEncoder& en);
-        void copyPack(EncoderMot& en);
-        void copyPack(mEncoder & en);
+        void copyEn(EncoderMot &en);
+        void copyEn(mEncoder &en);
         mEncoder& getEn();
         short getEn(motCode mot);
         void enSet(motCode mot, short en);

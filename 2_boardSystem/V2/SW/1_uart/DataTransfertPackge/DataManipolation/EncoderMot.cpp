@@ -13,11 +13,11 @@ namespace DataManipolation{
         this->enPack=&en;
     }
 
-    void EncoderMot::copyPack(EncoderMot &en) {
-        this->copyPack(en.getEn());
+    void EncoderMot::copyEn(EncoderMot &en) {
+        this->copyEn(en.getEn());
     }
 
-    void EncoderMot::copyPack(mEncoder &en) {
+    void EncoderMot::copyEn(mEncoder &en) {
         memcpy(this->enPack,&en, sizeof(mEncoder));
     }
 
@@ -45,7 +45,7 @@ namespace DataManipolation{
             Serial.print("\tencoder[Mot");
             Serial.print(i+1);
             Serial.print("]:");
-            Serial.println(this->en[i]);
+            Serial.println(en[i]);
         }
 #else
         printf("En:\t");

@@ -29,7 +29,6 @@
 #include <avr/interrupt.h>
 #include "../globalDef.h"
 
-using namespace spiPack;
 
 //A queste condizioni ho 125Khz di clock all'adc e una conversione ogni:
 //14*1/125KHz= 112us ~ 8,9Khz  (14 se letto in differential mode)
@@ -46,6 +45,8 @@ using namespace spiPack;
 
 #define history 8
 namespace InternalDevice {
+    using namespace DataPrimitive;
+
     class AdcDevice {
     public:
         //### HARDWARE ###//

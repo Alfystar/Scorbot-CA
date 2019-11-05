@@ -8,14 +8,18 @@
 #include <stdio.h>
 #include <string.h>
 
+#ifdef ScorboarFirmware
+#include "Arduino.h"
+#endif
+
 namespace DataManipolation {
     using namespace DataPrimitive;
     class CurrentMot {
     public:
         CurrentMot(mCurrent& c);
         void changePack(mCurrent& c);
-        void copyPack(CurrentMot& c);
-        void copyPack(mCurrent & c);
+        void copyCur(CurrentMot &c);
+        void copyCur(mCurrent &c);
         mCurrent& getCurrent();
         short getCurrent(motCode mot);
         void curSet(motCode mot, short cur);

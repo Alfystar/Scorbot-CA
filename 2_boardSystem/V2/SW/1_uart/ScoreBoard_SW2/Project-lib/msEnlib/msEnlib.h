@@ -21,7 +21,7 @@
 //#define TIMER5OVF_EN 1
 
 namespace ScorebotRead {
-    using namespace spiPack;
+    using namespace DataPrimitive;
 
     class ScorFeed {
     public:

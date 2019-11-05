@@ -63,7 +63,7 @@ namespace DataManipolation{
             Serial.print("\tspeed[Mot");
             Serial.print(i+1);
             Serial.print("]:");
-            Serial.println(this->speed[i]);
+            Serial.println(speed[i]);
         }
 #else
         printf("Speed:\t");

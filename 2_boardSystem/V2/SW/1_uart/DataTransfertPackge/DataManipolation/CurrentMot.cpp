@@ -13,11 +13,11 @@ namespace DataManipolation{
         this->curPack=&c;
     }
 
-    void CurrentMot::copyPack(CurrentMot &c) {
-        this->copyPack(c.getCurrent());
+    void CurrentMot::copyCur(CurrentMot &c) {
+        this->copyCur(c.getCurrent());
     }
 
-    void CurrentMot::copyPack(mCurrent &c) {
+    void CurrentMot::copyCur(mCurrent &c) {
         memcpy(this->curPack,&c, sizeof(mCurrent));
     }
 
@@ -45,7 +45,7 @@ namespace DataManipolation{
             Serial.print("\tencoder[Mot");
             Serial.print(i+1);
             Serial.print("]:");
-            Serial.println(this->c[i]);
+            Serial.println(c[i]);
         }
 #else
         printf("Curr:\t");

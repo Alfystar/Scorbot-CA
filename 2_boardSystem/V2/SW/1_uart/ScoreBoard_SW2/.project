@@ -32,9 +32,9 @@
 	</natures>
 	<linkedResources>
 		<link>
-			<name>SpiPack</name>
+			<name>DataTransfertPackge</name>
 			<type>2</type>
-			<location>/home/alfyhack/Documenti/Scorbot-CA/2_boardSystem/V2/SW/SpiPack</location>
+			<location>/home/alfyhack/Scrivania/Scorbot-CA/2_boardSystem/V2/SW/1_uart/DataTransfertPackge</location>
 		</link>
 		<link>
 			<name>core/core</name>

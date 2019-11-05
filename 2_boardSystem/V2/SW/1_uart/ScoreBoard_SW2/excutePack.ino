@@ -6,14 +6,14 @@ extern DCdriverLimit *mot[nMot];
 
 void excutePack(Pack &p) {
     switch (p.getPackType()) {
-        case invalid: {
-            //notting to do
-        }
-            break;
+        //case invalid: {
+        //    //notting to do
+        //}
+        //    break;
         case PWMsend_EnRet:
         case PWMsend_CurRet:
         case PWMsend_AllRet: {
-            mSpeed &vel = p.getPwm();
+            mSpeed &vel = p.speed().getPwm();
             for (byte i = 0; i < nMot; i++) {
                 switch (vel[Mot1 + i]) {
                     case freeRun:
@@ -35,7 +35,7 @@ void excutePack(Pack &p) {
         }
             break;
         case SettingSet: {
-            settingsBoard &s = p.getSetting(pack4Ard);
+            settingsBoard &s = p.setting(pack4Ard).getSetting();
             memorySave(s);
             setMotFreq(s.freq);
             adc->setDiffRead(s.diff);

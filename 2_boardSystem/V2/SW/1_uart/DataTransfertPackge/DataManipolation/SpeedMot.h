@@ -10,6 +10,10 @@
 #include <string.h>
 #include "../DataPrimitive.h"
 
+#ifdef ScorboarFirmware
+#include "Arduino.h"
+#endif
+
 namespace DataManipolation {
     using namespace DataPrimitive;
     class SpeedMot {

@@ -15,34 +15,34 @@ namespace DataManipolation {
         sets2Rasp = new SettingBoard_C(this->data.forRasp.up.prop);
 #ifdef PackDebug
 #ifdef ScorboarFirmware
-        Serial.println("Data size:");
-        Serial.print("packType size :");
-        Serial.println(sizeof(packType));
-        Serial.print("mEncoder size :");
-        Serial.println(sizeof(mEncoder));
-        Serial.print("mCurrent size :");
-        Serial.println(sizeof(mCurrent));
-        Serial.print("mAll size :");
-        Serial.println(sizeof(mAll));
-        Serial.print("settingsBoard size :");
-        Serial.println(sizeof(settingsBoard));
-        Serial.print("adcRef size :");
-        Serial.println(sizeof(adcRef));
-        Serial.print("bool(diff read) size :");
-        Serial.println(sizeof(bool));
-        Serial.print("pwmFreq size :");
-        Serial.println(sizeof(pwmFreq));
-        Serial.println();
+		Serial.println("Data size:");
+		Serial.print("packType size :");
+		Serial.println(sizeof(packType));
+		Serial.print("mEncoder size :");
+		Serial.println(sizeof(mEncoder));
+		Serial.print("mCurrent size :");
+		Serial.println(sizeof(mCurrent));
+		Serial.print("mAll size :");
+		Serial.println(sizeof(mAll));
+		Serial.print("settingsBoard size :");
+		Serial.println(sizeof(settingsBoard));
+		Serial.print("adcRef size :");
+		Serial.println(sizeof(adcRef));
+		Serial.print("bool(diff read) size :");
+		Serial.println(sizeof(bool));
+		Serial.print("pwmFreq size :");
+		Serial.println(sizeof(pwmFreq));
+		Serial.println();
 #else
-        printf("Data size:\n");
-        printf("packType size : %d\n",sizeof(packType));
-        printf("mEncoder size : %d\n",sizeof(mEncoder));
-        printf("mCurrent size : %d\n",sizeof(mCurrent));
-        printf("mAll size : %d\n",sizeof(mAll));
-        printf("settingsBoard size : %d\n",sizeof(settingsBoard));
-        printf("adcRef size : %d\n",sizeof(adcRef));
-        printf("bool(diff read) size : %d\n",sizeof(bool));
-        printf("pwmFreq size : %d\n\n",sizeof(pwmFreq));
+		printf("Data size:\n");
+		printf("packType size : %d\n",sizeof(packType));
+		printf("mEncoder size : %d\n",sizeof(mEncoder));
+		printf("mCurrent size : %d\n",sizeof(mCurrent));
+		printf("mAll size : %d\n",sizeof(mAll));
+		printf("settingsBoard size : %d\n",sizeof(settingsBoard));
+		printf("adcRef size : %d\n",sizeof(adcRef));
+		printf("bool(diff read) size : %d\n",sizeof(bool));
+		printf("pwmFreq size : %d\n\n",sizeof(pwmFreq));
 #endif //#ifdef ScorboarFirmware
 
 #endif //#ifdef PackDebug
@@ -66,7 +66,7 @@ namespace DataManipolation {
     }
 
 
-    void Pack::printPack(Pack* p) {
+    void Pack::printPack(Pack *p) {
         switch (p->data.type) {
             case PWMsend_EnRet:
             case PWMsend_CurRet:
@@ -141,9 +141,9 @@ namespace DataManipolation {
 
     int Pack::sizePack() {
         switch (this->data.type) {
-//            case invalid:
-//                return -1;
-//                break;
+            //            case invalid:
+            //                return -1;
+            //                break;
             case PWMsend_EnRet:
                 return max(sizeof(mSpeed), sizeof(mEncoder));
                 break;
@@ -183,7 +183,7 @@ namespace DataManipolation {
         if (this->getPackType() != SettingSet && this->getPackType() != SettingGet)
             throw typePackWrongExcept("This pack not contain Settings");
 #endif
-        if(dest==pack4Ard)
+        if (dest == pack4Ard)
             return *sets2Ard;
         else
             return *sets2Rasp;
@@ -203,7 +203,8 @@ namespace DataManipolation {
 
     SpeedMot &Pack::speed() {
 #ifndef ScorboarFirmware
-        if (this->getPackType() != PWMsend_EnRet && this->getPackType() != PWMsend_CurRet && this->getPackType() != PWMsend_AllRet)
+        if (this->getPackType() != PWMsend_EnRet && this->getPackType() != PWMsend_CurRet &&
+            this->getPackType() != PWMsend_AllRet)
             throw typePackWrongExcept("This pack not contain Velocity");
 #endif
         return *vel;

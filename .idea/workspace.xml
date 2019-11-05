@@ -12,18 +12,34 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/.ScorBoard_Diagrams.vpp.lck" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/SpiRasp_demo/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/01_SpiRasp_demo/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/SpiRasp_demo/.idea/Scorbot_CPP.iml" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/01_SpiRasp_demo/.idea/Scorbot_CPP.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/SpiRasp_demo/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/01_SpiRasp_demo/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/SpiRasp_demo/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/01_SpiRasp_demo/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/SpiRasp_demo/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/01_SpiRasp_demo/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/SpiRasp_demo/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/01_SpiRasp_demo/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/SpiRasp_demo/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/01_SpiRasp_demo/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/SpiRasp_demo/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/01_SpiRasp_demo/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/SpiRasp_demo/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/01_SpiRasp_demo/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/SpiRasp_demo/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/01_SpiRasp_demo/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/0_spi/ScoreBoard_SW2/.directory" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/0_spi/ScoreBoard_SW2/.project" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/0_spi/ScoreBoard_SW2/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/0_spi/ScoreBoard_SW2/.settings/language.settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/0_spi/ScoreBoard_SW2/.settings/org.eclipse.cdt.codan.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/0_spi/ScoreBoard_SW2/.settings/org.eclipse.cdt.core.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/0_spi/ScoreBoard_SW2/.settings/org.eclipse.cdt.ui.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/0_spi/ScoreBoard_SW2/.settings/org.eclipse.ltk.core.refactoring.prefs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/AllSensor.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/AllSensor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/CurrentMot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/CurrentMot.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/CurrentMot.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/CurrentMot.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/EncoderMot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/EncoderMot.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/EncoderMot.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/EncoderMot.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/Pack.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/Pack.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/SettingBoard_C.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/SettingBoard_C.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/SpeedMot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/SpeedMot.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/SpeedMot.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/SpeedMot.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_SW2/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_SW2/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_SW2/.project" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_SW2/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_SW2/Project-lib/Motor/DCdriver.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_SW2/Project-lib/Motor/DCdriver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_SW2/Project-lib/adcReader/adcReader.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_SW2/Project-lib/adcReader/adcReader.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_SW2/Project-lib/globalDef.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_SW2/Project-lib/globalDef.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_SW2/Project-lib/msEnlib/msEnlib.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_SW2/Project-lib/msEnlib/msEnlib.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_SW2/Project-lib/spiScorebot/spiScorebot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_SW2/Project-lib/spiScorebot/spiScorebot.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_SW2/Project-lib/spiScorebot/spiScorebot.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_SW2/Project-lib/spiScorebot/spiScorebot.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_SW2/excutePack.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_SW2/excutePack.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_SW2/sloeber.ino.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_SW2/sloeber.ino.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -137,6 +153,7 @@
       <workItem from="1570457371210" duration="54000" />
       <workItem from="1571131420355" duration="16912000" />
       <workItem from="1571175385728" duration="205000" />
+      <workItem from="1572961835097" duration="653000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
       <created>1568027375662</created>

@@ -9,7 +9,8 @@
 #include "CurrentMot.h"
 namespace DataManipolation {
     using namespace DataPrimitive;
-    class AllSensor :public EncoderMot, CurrentMot{
+
+    class AllSensor : public CurrentMot, public EncoderMot {
     public:
         AllSensor(mAll& all);
         void changePack(mAll& all);

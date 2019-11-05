@@ -15,6 +15,8 @@
 //typedef bool (funcBool_t)(); // pointer to function with no args and bool return
 
 namespace Motor {
+    using namespace DataPrimitive;
+
     void setMotFreq(pwmFreq freq);
 
     enum motState {

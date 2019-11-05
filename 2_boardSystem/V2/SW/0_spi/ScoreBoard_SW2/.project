@@ -34,7 +34,7 @@
 		<link>
 			<name>SpiPack</name>
 			<type>2</type>
-			<location>/home/alfyhack/Documenti/Scorbot-CA/2_boardSystem/V2/SW/SpiPack</location>
+			<location>/home/alfyhack/Documenti/Scorbot-CA/2_boardSystem/V2/SW/0_spi/SpiPack</location>
 		</link>
 		<link>
 			<name>core/core</name>

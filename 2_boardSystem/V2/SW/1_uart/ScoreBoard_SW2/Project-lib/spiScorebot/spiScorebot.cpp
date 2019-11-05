@@ -74,22 +74,22 @@ namespace InternalDevice {
 
     void SpiDevice::dataLoad(Pack &p) {
         //Pack &p = this->sp[!this->dRecive];
-        memset(&p.getSPIPACK().forRasp.buf, 0, sizeof(spi2Rasp));
+        memset(&p.getSPIPACK().forRasp.buf, 0, sizeof(data2Rasp));
         switch (p.getPackType()) {
-            case invalid:
-                break;
+            //case invalid:
+            //    break;
             case PWMsend_EnRet:
-                p.setEncoder(sFeed->captureEn());
+                p.encoder().copyEn(sFeed->captureEn());
                 break;
             case PWMsend_CurRet:
-                p.setCurrent(adc->getLastCycle());
+                p.current().copyCur(adc->getLastCycle());
                 break;
             case PWMsend_AllRet:
-                p.setEncoder(sFeed->captureEn());
-                p.setCurrent(adc->getLastCycle());
+                p.allSens().copyEn(sFeed->captureEn());
+                p.allSens().copyCur(adc->getLastCycle());
                 break;
             case SettingGet:
-                p.setSetting(pack4Rasp, globSets);
+                p.setting(pack4Rasp).copyPack(globSets);
                 break;
             case SettingSet:
                 break;
