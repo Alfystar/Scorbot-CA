@@ -44,7 +44,7 @@ int cfileexists(const char * filename){
     return 0;
 }
 
-Spi_ScorBoard &send = Spi_ScorBoard::getInstance();;
+Spi_ScorBoard &send = Spi_ScorBoard::getInstance();
 Pack *p;
 
 /** Cmd terminal **/
@@ -67,6 +67,7 @@ int main() {
     ScoreCalc *calc = new ScoreCalc(0.280,0.140,10);
     calc->settingPrint();
     int v = 150;
+    p->setPackType(PWMsend_EnRet);
     p->speed().pwmSet(v, -v, v, -v, v, -v);
     help();
     printf("Start loop\n");
@@ -95,6 +96,7 @@ int main() {
                 //al posto di pwm si potrebbe anche mettere &s->out.up.speed,
                 //ma la libreria per sicurezza poi in pSetPWM lo copia nuovamente
                 //in maniera trasparente al progammatore
+                p->setPackType(PWMsend_EnRet);
                 p->speed().pwmSet(v, -v, v, -v, v, -v);
                 send.setPwm_EnPack(*p);
                 p->printPack();

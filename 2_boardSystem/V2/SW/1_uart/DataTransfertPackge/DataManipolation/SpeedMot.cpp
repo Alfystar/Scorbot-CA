@@ -24,7 +24,8 @@ namespace DataManipolation{
     }
 
     mSpeed &SpeedMot::getPwm() {
-        return *this->speedPack;
+        return *(this->speedPack);
+        //return *this->speedPack;
     }
 
     short SpeedMot::getPwm(motCode mot) {
@@ -45,10 +46,11 @@ namespace DataManipolation{
     }
 
     void SpeedMot::pwmSet(motCode mot, short mVal) {
+        mSpeed& s=this->getPwm();
         if (mVal == freeRun || mVal == hardStop || mVal == softStop || mVal == ignore || abs(mVal) <= 255)
-            *(this->speedPack)[mot] = mVal;
+            s[mot] = mVal;
         else
-            *(this->speedPack)[mot] = ignore;
+            s[mot] = ignore;
     }
 
     void SpeedMot::printSpeed() {
@@ -68,7 +70,7 @@ namespace DataManipolation{
 #else
         printf("Speed:\t");
         for (char i = Mot1; i < nMot; i++) {
-            printf("%d)%hd\t", i + 1, speed[i]);
+            printf("%d)%hd\t", i + 1, (speed[i]));
         }
         printf("\n");
 #endif

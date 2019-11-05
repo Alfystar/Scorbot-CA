@@ -15,6 +15,6 @@ add_executable(${PROJECT_NAME} main.cpp ${HEADERS} ${SOURCE})
 #add_executable(${PROJECT_NAME} main.cpp)
 
 #Copy only on rapsberry CMakeList this line, on other linux Computer may make error
-#add_definitions(-DONLYRaspCompiling)
-#find_library(wiringPi_lib wiringPi)
-#target_link_libraries(${PROJECT_NAME} ${wiringPi_lib})
+add_definitions(-DONLYRaspCompiling)
+find_library(wiringPi_lib wiringPi)
+target_link_libraries(${PROJECT_NAME} ${wiringPi_lib})

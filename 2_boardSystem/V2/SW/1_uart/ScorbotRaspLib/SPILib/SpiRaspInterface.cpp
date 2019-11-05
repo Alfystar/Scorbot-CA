@@ -98,7 +98,7 @@ namespace SpiRaspInterface {
 #ifdef ONLYRaspCompiling
         digitalWrite(EnCom, 0);
 #endif
-        //this->bytePrint(p);
+        this->bytePrint(p);
     }
 
     void Spi_ScorBoard::bytePrint(Pack &p) {
@@ -178,6 +178,7 @@ namespace SpiRaspInterface {
 
     mCurrent *Spi_ScorBoard::setPwm_CurPack(mSpeed &ms) {
         Pack p;
+        p.setPackType(PWMsend_CurRet);
         p.speed().copyPack(ms);
         this->setPwm_CurPack(p);
         mCurrent *mc = (mCurrent *) (malloc(sizeof(mCurrent)));
@@ -192,6 +193,7 @@ namespace SpiRaspInterface {
 
     mAll *Spi_ScorBoard::setPwm_AllPack(mSpeed &ms) {
         Pack p;
+        p.setPackType(PWMsend_AllRet);
         p.speed().copyPack(ms);
         this->setPwm_CurPack(p);
         mAll *ma = (mAll *) (malloc(sizeof(mAll)));
@@ -201,12 +203,16 @@ namespace SpiRaspInterface {
 
     void Spi_ScorBoard::getEnPack(Pack &p) {
         p.clearPack();
+        p.setPackType(PWMsend_EnRet);
+        //p.speed().pwmSet(ignore, 1, 2, 3, 4, 5);
         p.speed().pwmSet(ignore, ignore, ignore, ignore, ignore, ignore);
+        //p.speed().printSpeed();
         this->setPwm_EnPack(p);
     }
 
     mEncoder *Spi_ScorBoard::getEnPack() {
         Pack p;
+        p.setPackType(PWMsend_EnRet);
         p.speed().pwmSet(ignore, ignore, ignore, ignore, ignore, ignore);
         this->setPwm_EnPack(p);
         mEncoder *me = (mEncoder *) (malloc(sizeof(mEncoder)));
@@ -216,6 +222,7 @@ namespace SpiRaspInterface {
 
     void Spi_ScorBoard::getCurrentPack(Pack &p) {
         p.clearPack();
+        p.setPackType(PWMsend_CurRet);
         p.speed().pwmSet(ignore, ignore, ignore, ignore, ignore, ignore);
         p.setPackType(PWMsend_CurRet);
         this->sendPack(p);
@@ -231,6 +238,7 @@ namespace SpiRaspInterface {
 
     void Spi_ScorBoard::getSensPack(Pack &p) {
         p.clearPack();
+        p.setPackType(PWMsend_AllRet);
         p.speed().pwmSet(ignore, ignore, ignore, ignore, ignore, ignore);
         p.setPackType(PWMsend_AllRet);
         this->sendPack(p);
