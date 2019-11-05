@@ -45,7 +45,10 @@ namespace DataManipolation{
             Serial.print("\tencoder[Mot");
             Serial.print(i+1);
             Serial.print("]:");
-            Serial.println(en[i]);
+            //Serial.println(en[i]);
+            Serial.print(en[i]);
+            Serial.print("\t ");
+            Serial.println((int)&en[i],HEX);
         }
 #else
         printf("En:\t");

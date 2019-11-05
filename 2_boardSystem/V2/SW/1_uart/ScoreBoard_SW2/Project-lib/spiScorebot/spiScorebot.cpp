@@ -1,5 +1,7 @@
 #include "spiScorebot.h"
 
+//todo: Capire perche 5 comunicazioni vanno bene 1 capisce ma non passa per l'inizializzazione e l'ultima fa solo il setup sistematicamente!
+
 namespace InternalDevice {
     //Static variable initialize
     //SpiDevice* SpiDevice::instance = NULL;
@@ -24,14 +26,31 @@ namespace InternalDevice {
 
     //## ELABORATION ##//
     Pack *pTemp;
+    char t = 0;
     void SpiDevice::isrFunxISP() {
         if (!this->startConv) {    //raps ha appena letto 0 e inviato tipo
+            t = SPDR;
+            //PWMsend_EnRet = 1, PWMsend_CurRet, PWMsend_AllRet, SettingGet, SettingSet, goHome
+            if (t != PWMsend_EnRet && t != PWMsend_CurRet && t != PWMsend_AllRet && t != SettingGet &&
+                t != SettingSet && t != goHome) //Non è un pacchetto
+            {
+#ifdef ISPDEBUG
+                Serial.print("type=");
+                Serial.print((byte)SPDR);
+                Serial.println(" but is wrong\t (fromRasp:mySend_PackId)");
+#endif
+                SPDR = 0;
+                t = 0;
+                return;
+            }
         	pTemp = &this->sp[!this->dRecive];
         	pTemp->setPackType((packType) SPDR); //mi segno tipo di comunicazione
             this->dataLoad(*pTemp);
             this->idTransf = 0;
             this->startConv = true;
             SPDR = pTemp->getSPIPACK().forRasp.buf[this->idTransf]; //preparo invio primo dato
+            Serial.print("firsDato mem:");
+            Serial.println((int) &pTemp->getSPIPACK().forRasp.buf[this->idTransf]);
 
 #ifdef ISPDEBUG
             Serial.print("type=");
@@ -73,16 +92,19 @@ namespace InternalDevice {
     }
 
     void SpiDevice::dataLoad(Pack &p) {
-        //Pack &p = this->sp[!this->dRecive];
         memset(&p.getSPIPACK().forRasp.buf, 0, sizeof(data2Rasp));
         switch (p.getPackType()) {
             //case invalid:
             //    break;
             case PWMsend_EnRet:
                 p.encoder().copyEn(sFeed->captureEn());
+                Serial.print("en mem:");
+                Serial.println((int) &p.encoder().getEn());
                 break;
             case PWMsend_CurRet:
                 p.current().copyCur(adc->getLastCycle());
+                Serial.print("cur mem:");
+                Serial.println((int) &p.current().getCurrent());
                 break;
             case PWMsend_AllRet:
                 p.allSens().copyEn(sFeed->captureEn());
