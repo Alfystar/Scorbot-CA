@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>ScoreBoard_SW2</name>
+	<name>ScoreBoard_UartSpi</name>
 	<comment>Seconda versione di firmware per la seconda scheda dello Scorbot</comment>
 	<projects>
 	</projects>
@@ -34,7 +34,7 @@
 		<link>
 			<name>DataTransfertPackge</name>
 			<type>2</type>
-			<location>/home/alfyhack/Scrivania/Scorbot-CA/2_boardSystem/V2/SW/1_uart/DataTransfertPackge</location>
+			<location>/home/alfyhack/Scrivania/Scorbot-CA/2_boardSystem/V2/SW/1_uartSpi/DataTransfertPackge</location>
 		</link>
 		<link>
 			<name>core/core</name>

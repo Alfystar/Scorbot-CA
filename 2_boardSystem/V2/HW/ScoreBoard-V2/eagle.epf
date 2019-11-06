@@ -275,11 +275,16 @@ UsedLibrary="C:/Users/emanu/Documents/EAGLE/libraries/testpad.lbr"
 UsedLibrary="C:/Users/emanu/Documents/eagle/libraries/My lib/diy-modules.lbr"
 UsedLibrary="C:/Users/emanu/Documents/eagle/libraries/My lib/DRIVER POLOLU.lbr"
 UsedLibrary="C:/Users/emanu/Documents/eagle/libraries/Loghi/loghi.lbr"
+UsedLibrary="F:/Lavori/Lavori Esterni/Scheda brush carnevale/Brush-pcb/lib/diss.lbr"
 
 [Win_1]
+Number=4
+
+[Win_2]
 Type="Control Panel"
 Number=0
 
 [Desktop]
 Screen="1920 1080"
 Window="Win_1"
+Window="Win_2"
