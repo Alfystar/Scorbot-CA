@@ -517,7 +517,7 @@ environment/project/io.sloeber.core.toolChain.release.178019078/JANTJE.PACKAGE_I
 environment/project/io.sloeber.core.toolChain.release.178019078/JANTJE.PACKAGE_ID/value=arduino
 environment/project/io.sloeber.core.toolChain.release.178019078/JANTJE.PROJECT_NAME/delimiter=\:
 environment/project/io.sloeber.core.toolChain.release.178019078/JANTJE.PROJECT_NAME/operation=replace
-environment/project/io.sloeber.core.toolChain.release.178019078/JANTJE.PROJECT_NAME/value=ScoreBoard_SW2
+environment/project/io.sloeber.core.toolChain.release.178019078/JANTJE.PROJECT_NAME/value=ScoreBoard_Uart
 environment/project/io.sloeber.core.toolChain.release.178019078/JANTJE.SELECTED.PLATFORM/delimiter=\:
 environment/project/io.sloeber.core.toolChain.release.178019078/JANTJE.SELECTED.PLATFORM/operation=replace
 environment/project/io.sloeber.core.toolChain.release.178019078/JANTJE.SELECTED.PLATFORM/value=${eclipse_home}/arduinoPlugin/packages/arduino/hardware/avr/1.6.23

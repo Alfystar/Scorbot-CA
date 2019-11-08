@@ -59,13 +59,13 @@ namespace DataManipolation{
 
     void SpeedMot::printSpeed(mSpeed &speed) {
 #ifdef ScorboarFirmware
-        Serial.flush();
-        Serial.println("Receving Speed Settings:");
+        Db.flush();
+        Db.println("Receving Speed Settings:");
         for (byte i = Mot1; i < nMot; i++) {
-            Serial.print("\tspeed[Mot");
-            Serial.print(i+1);
-            Serial.print("]:");
-            Serial.println(speed[i]);
+            Db.print("\tspeed[Mot");
+            Db.print(i+1);
+            Db.print("]:");
+            Db.println(speed[i]);
         }
 #else
         printf("Speed:\t");

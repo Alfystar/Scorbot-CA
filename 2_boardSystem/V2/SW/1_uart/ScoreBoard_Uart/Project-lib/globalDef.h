@@ -8,6 +8,8 @@
 #ifndef PROJECT_LIB_GLOBALDEF_H_
 #define PROJECT_LIB_GLOBALDEF_H_
 
+#include "../HW_rename.h"
+
 #include "../../DataTransfertPackge/DataPrimitive.h"
 #include "../../DataTransfertPackge/DataFactory.h"
 #include "../../DataTransfertPackge/DataManipolation/CurrentMot.h"
@@ -17,6 +19,7 @@
 #include "../../DataTransfertPackge/DataManipolation/SpeedMot.h"
 #include "../../DataTransfertPackge/DataManipolation/Pack.h"
 #include "spiScorebot/spiScorebot.h"
+#include "uartScorbot/UartCmd.h"
 #include "adcReader/adcReader.h"
 #include "msEnlib/msEnlib.h"
 
@@ -35,6 +38,8 @@ namespace InternalDevice {
 using namespace InternalDevice;
 
 extern class SpiDevice *spi;
+
+extern class UartCmd *uart;
 
 extern class AdcDevice *adc;
 

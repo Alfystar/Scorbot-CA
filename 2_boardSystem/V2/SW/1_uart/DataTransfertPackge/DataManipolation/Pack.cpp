@@ -15,24 +15,24 @@ namespace DataManipolation {
         sets2Rasp = new SettingBoard_C(this->data.forRasp.up.prop);
 #ifdef PackDebug
 #ifdef ScorboarFirmware
-		Serial.println("Data size:");
-		Serial.print("packType size :");
-		Serial.println(sizeof(packType));
-		Serial.print("mEncoder size :");
-		Serial.println(sizeof(mEncoder));
-		Serial.print("mCurrent size :");
-		Serial.println(sizeof(mCurrent));
-		Serial.print("mAll size :");
-		Serial.println(sizeof(mAll));
-		Serial.print("settingsBoard size :");
-		Serial.println(sizeof(settingsBoard));
-		Serial.print("adcRef size :");
-		Serial.println(sizeof(adcRef));
-		Serial.print("bool(diff read) size :");
-		Serial.println(sizeof(bool));
-		Serial.print("pwmFreq size :");
-		Serial.println(sizeof(pwmFreq));
-		Serial.println();
+		Db.println("Data size:");
+		Db.print("packType size :");
+		Db.println(sizeof(packType));
+		Db.print("mEncoder size :");
+		Db.println(sizeof(mEncoder));
+		Db.print("mCurrent size :");
+		Db.println(sizeof(mCurrent));
+		Db.print("mAll size :");
+		Db.println(sizeof(mAll));
+		Db.print("settingsBoard size :");
+		Db.println(sizeof(settingsBoard));
+		Db.print("adcRef size :");
+		Db.println(sizeof(adcRef));
+		Db.print("bool(diff read) size :");
+		Db.println(sizeof(bool));
+		Db.print("pwmFreq size :");
+		Db.println(sizeof(pwmFreq));
+		Db.println();
 #else
 		printf("Data size:\n");
 		printf("packType size : %d\n",sizeof(packType));
@@ -72,8 +72,8 @@ namespace DataManipolation {
             case PWMsend_CurRet:
             case PWMsend_AllRet:
 #ifdef ScorboarFirmware
-                Serial.flush();
-                Serial.println("Master Ask 'PWMsend_EnRet || PWMsend_CurRet || PWMsend_AllRet', Parameter:");
+                Db.flush();
+                Db.println("Master Ask 'PWMsend_EnRet || PWMsend_CurRet || PWMsend_AllRet', Parameter:");
 
 #else
                 printf("PackType: 'PWMsend_EnRet || PWMsend_CurRet || PWMsend_AllRet', Parameter:\n");
@@ -92,9 +92,9 @@ namespace DataManipolation {
             case SettingGet:
                 if (p->getPackType() == SettingSet) {
 #ifdef ScorboarFirmware
-                    Serial.flush();
-                    Serial.println("Master Ask 'SettingSet':");
-                    Serial.println("Recive new Settings:");
+                    Db.flush();
+                    Db.println("Master Ask 'SettingSet':");
+                    Db.println("Recive new Settings:");
 #else
                     printf("PackType: SettingSet\n");
                     printf("Sending new Settings:\n");
@@ -102,9 +102,9 @@ namespace DataManipolation {
                     p->sets2Ard->printSetting();
                 } else {
 #ifdef ScorboarFirmware
-                    Serial.flush();
-                    Serial.println("Master Ask 'SettingGet':");
-                    Serial.println("Sending my Settings:");
+                    Db.flush();
+                    Db.println("Master Ask 'SettingGet':");
+                    Db.println("Sending my Settings:");
 #else
                     printf("PackType: SettingGet\n");
                     printf("Recive current Settings:\n");
@@ -114,12 +114,12 @@ namespace DataManipolation {
                 break;
             case goHome:
 #ifdef ScorboarFirmware
-                Serial.flush();
-                Serial.println("Master Ask 'goHome', Parameter:\n");
+                Db.flush();
+                Db.println("Master Ask 'goHome', Parameter:\n");
                 //Recive//
-                Serial.print("\tNotting\n");
+                Db.print("\tNotting\n");
                 //Send//
-                Serial.print("\tNotting\n");
+                Db.print("\tNotting\n");
 #else
                 printf("PackType: goHomePack\n");
                 printf("Sending: no parameters\n");
@@ -128,7 +128,7 @@ namespace DataManipolation {
                 break;
         }
 #ifdef ScorboarFirmware
-        Serial.println("\n-------------------------------------------------------");
+        Db.println("\n-------------------------------------------------------");
 #else
         printf("\n-------------------------------------------------------\n");
 #endif

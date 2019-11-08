@@ -39,13 +39,13 @@ namespace DataManipolation{
 
     void CurrentMot::printCurrent(mCurrent &c) {
 #ifdef ScorboarFirmware
-        Serial.flush();
-        Serial.println("Sended Current Value:");
+        Db.flush();
+        Db.println("Sended Current Value:");
         for (byte i = Mot1; i < nMot; i++) {
-            Serial.print("\tencoder[Mot");
-            Serial.print(i+1);
-            Serial.print("]:");
-            Serial.println(c[i]);
+            Db.print("\tencoder[Mot");
+            Db.print(i+1);
+            Db.print("]:");
+            Db.println(c[i]);
         }
 #else
         printf("Curr:\t");

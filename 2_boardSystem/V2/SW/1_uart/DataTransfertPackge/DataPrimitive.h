@@ -2,8 +2,10 @@
 // Created by alfyhack on 15/10/19.
 //
 
-#ifndef SPIRASP_TERMINAL_DATAPRIMITIVE_H
-#define SPIRASP_TERMINAL_DATAPRIMITIVE_H
+#ifndef DATAPRIMITIVE_H
+#define DATAPRIMITIVE_H
+
+#include "../ScoreBoard_Uart/HW_rename.h"
 
 namespace DataPrimitive{
     /// Enum Declaration for the comunication
@@ -22,8 +24,9 @@ namespace DataPrimitive{
         PWMsend_EnRet = 1, PWMsend_CurRet, PWMsend_AllRet, SettingGet, SettingSet, goHome
     };
     enum uartPackType : char{
-        mSpeedData=1,settingBoardData, mCurrentData, mAllData, mEncoderData, RESEND
+        mSpeedData=1,settingBoardData, mCurrentData, mAllData, mEncoderData, sampleTimeEn , sampleTimeCur, goHomeUart ,RESEND
     };
+    //sampleTimeEn && sampleTimeCur tempi in micro secondi (unsigned short), se devono essere inviati sia En che Cur, si invia un mAll
     enum adcRef : char {
         in1V1 = 0, in2V56, ext
     };
@@ -63,6 +66,8 @@ namespace DataPrimitive{
         union sendType {
             mSpeed speed;
             settingsBoard prop;
+            unsigned short sampleEn;
+            unsigned short sampleCur;
         } up;
         char buf[sizeof(sendType)];
     } data2Ard;
@@ -103,4 +108,4 @@ namespace DataPrimitive{
 }
 
 
-#endif //SPIRASP_TERMINAL_DATAPRIMITIVE_H
+#endif //DATAPRIMITIVE_H

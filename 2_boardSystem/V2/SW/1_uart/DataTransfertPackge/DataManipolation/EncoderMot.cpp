@@ -39,16 +39,16 @@ namespace DataManipolation{
 
     void EncoderMot::printEncoder(mEncoder &en) {
 #ifdef ScorboarFirmware
-        Serial.flush();
-        Serial.println("Sended Encoder Step:");
+        Db.flush();
+        Db.println("Sended Encoder Step:");
         for (byte i = Mot1; i < nMot; i++) {
-            Serial.print("\tencoder[Mot");
-            Serial.print(i+1);
-            Serial.print("]:");
-            //Serial.println(en[i]);
-            Serial.print(en[i]);
-            Serial.print("\t ");
-            Serial.println((int)&en[i],HEX);
+            Db.print("\tencoder[Mot");
+            Db.print(i+1);
+            Db.print("]:");
+            //Db.println(en[i]);
+            Db.print(en[i]);
+            Db.print("\t ");
+            Db.println((int)&en[i],HEX);
         }
 #else
         printf("En:\t");

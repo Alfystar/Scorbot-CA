@@ -2,8 +2,8 @@
 // Created by alfyhack on 15/10/19.
 //
 
-#ifndef SPIRASP_TERMINAL_DATAFACTORY_H
-#define SPIRASP_TERMINAL_DATAFACTORY_H
+#ifndef DATAFACTORY_H
+#define DATAFACTORY_H
 
 #include "DataPrimitive.h"
 #include "DataManipolation/CurrentMot.h"
@@ -42,4 +42,4 @@ namespace dataFactory {
     void freeUart2Rasp(uart2Rasp* p);
 };
 
-#endif //SPIRASP_TERMINAL_DATAFACTORY_H
+#endif //DATAFACTORY_H

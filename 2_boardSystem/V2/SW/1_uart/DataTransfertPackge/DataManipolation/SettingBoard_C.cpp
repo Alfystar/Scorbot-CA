@@ -62,79 +62,79 @@ namespace DataManipolation{
 
     void SettingBoard_C::printSetting(settingsBoard &sets) {
 #ifdef ScorboarFirmware
-        Serial.print("#maxEn:\t\t");
+        Db.print("#maxEn:\t\t");
         for (byte i = 0; i < nMot; i++) {
-            Serial.print("\t");
-            Serial.print((int)sets.maxEn[Mot1 + i]);
+            Db.print("\t");
+            Db.print((int)sets.maxEn[Mot1 + i]);
             delay(1);
         }
-        Serial.println();
+        Db.println();
 
-        Serial.print("#minEn:\t\t");
+        Db.print("#minEn:\t\t");
         for (byte i = 0; i < nMot; i++) {
-            Serial.print("\t");
-            Serial.print((int)sets.minEn[Mot1 + i]);
+            Db.print("\t");
+            Db.print((int)sets.minEn[Mot1 + i]);
             delay(1);
         }
-        Serial.println();
+        Db.println();
 
-        Serial.print("#maxCurrMed:");
+        Db.print("#maxCurrMed:");
         for (byte i = 0; i < nMot; i++) {
-            Serial.print("\t");
-            Serial.print((int)sets.maxCurrMed[Mot1 + i]);
+            Db.print("\t");
+            Db.print((int)sets.maxCurrMed[Mot1 + i]);
             delay(1);
         }
-        Serial.println();
-        Serial.flush();
-        Serial.print("#AdcVref set: ");
+        Db.println();
+        Db.flush();
+        Db.print("#AdcVref set: ");
         switch(sets.adcVref){
             case in1V1:
-                Serial.println("Internal Reference at 1.1V");
+                Db.println("Internal Reference at 1.1V");
                 break;
             case in2V56:
-                Serial.println("Internal Reference at 2.56V");
+                Db.println("Internal Reference at 2.56V");
                 break;
             case ext:
-                Serial.println("External Reference (trimmer)");
+                Db.println("External Reference (trimmer)");
                 break;
             default:
-                Serial.print("Register not set, number is: ");
-                Serial.println(sets.adcVref);
+                Db.print("Register not set, number is: ");
+                Db.println(sets.adcVref);
                 break;
         }
         delay(1);
 
-        Serial.print("#Adc offset remove State: ");
+        Db.print("#Adc offset remove State: ");
         if(sets.diff)
-            Serial.println("On");
+            Db.println("On");
         else
-            Serial.println("Off");
+            Db.println("Off");
         delay(1);
 
-        Serial.println("#PWM duty cycle set timer 3&4 divisor to: ");
-        Serial.print("\t");
+        Db.println("#PWM duty cycle set timer 3&4 divisor to: ");
+        Db.print("\t");
         switch(sets.freq){
             case hz30:
-                Serial.println("1024 for PWM frequency of 30.64 Hz");
+                Db.println("1024 for PWM frequency of 30.64 Hz");
                 break;
             case hz120:
-                Serial.println("256 for PWM frequency of 122.55 Hz");
+                Db.println("256 for PWM frequency of 122.55 Hz");
                 break;
             case hz490:
-                Serial.println("64 for PWM frequency of 490.20 Hz");
+                Db.println("64 for PWM frequency of 490.20 Hz");
                 break;
             case hz4k:
-                Serial.println("8 for PWM frequency of 3921.16 Hz");
+                Db.println("8 for PWM frequency of 3921.16 Hz");
                 break;
             case hz30k:
-                Serial.println("1 for PWM frequency of 31372.55 Hz");
+                Db.println("1 for PWM frequency of 31372.55 Hz");
                 break;
             default:
-                Serial.print("Register not set, number is: ");
-                Serial.println(sets.freq);
+                Db.print("Register not set, number is: ");
+                Db.println(sets.freq);
                 break;
         }
-        Serial.println();
+        Db.println();
         delay(1);
         return;
 #else //Start Rasp print pack

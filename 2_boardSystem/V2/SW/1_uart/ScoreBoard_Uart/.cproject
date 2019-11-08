@@ -46,6 +46,12 @@
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_SW2/libraries/EEPROM/src}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_SW2/SpiPack}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_Uart/core/core}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_Uart/core/variant}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_Uart/libraries/EEPROM/src}&quot;"/>
                                     								
                                 </option>
                                 								
@@ -64,6 +70,12 @@
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_SW2/libraries/EEPROM/src}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_SW2/SpiPack}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_Uart/core/core}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_Uart/core/variant}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_Uart/libraries/EEPROM/src}&quot;"/>
                                     								
                                 </option>
                                 								
@@ -82,6 +94,12 @@
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_SW2/libraries/EEPROM/src}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_SW2/SpiPack}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_Uart/core/core}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_Uart/core/variant}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_Uart/libraries/EEPROM/src}&quot;"/>
                                     								
                                 </option>
                                 								
