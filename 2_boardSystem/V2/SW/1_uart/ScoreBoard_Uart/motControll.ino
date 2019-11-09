@@ -52,9 +52,11 @@ void motorStateMachine() {
 
 //int overCurrent[nMot] = { 250, 350, 350, 250, 300, 250 }; //correnti sperimentali quando è bloccato
 #define antiRebound(x) delayMicroseconds(x)    //tempo anti rimbalzo
-unsigned long time = 0;
+
 
 void home() {
+    unsigned long time = 0;
+
 	Serial.println("Moving in secure zone");
 	mot[Mot3]->drive_motor(-midVel);
 	delay(3000);

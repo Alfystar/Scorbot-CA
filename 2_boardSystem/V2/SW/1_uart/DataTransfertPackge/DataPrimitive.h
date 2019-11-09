@@ -24,7 +24,16 @@ namespace DataPrimitive{
         PWMsend_EnRet = 1, PWMsend_CurRet, PWMsend_AllRet, SettingGet, SettingSet, goHome
     };
     enum uartPackType : char{
-        mSpeedData=1,settingBoardData, mCurrentData, mAllData, mEncoderData, sampleTimeEn , sampleTimeCur, goHomeUart ,RESEND
+        mSpeedData = 1,
+        settingBoardData,
+        mCurrentData,
+        mAllData,
+        mEncoderData,
+        sampleTimeEn,
+        sampleTimeCur,
+        goHomeUart,
+        settingAsk,
+        RESEND
     };
     //sampleTimeEn && sampleTimeCur tempi in micro secondi (unsigned short), se devono essere inviati sia En che Cur, si invia un mAll
     enum adcRef : char {

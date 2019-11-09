@@ -42,7 +42,7 @@ namespace DataManipolation{
         Db.flush();
         Db.println("Sended Current Value:");
         for (byte i = Mot1; i < nMot; i++) {
-            Db.print("\tencoder[Mot");
+            Db.print("\tcur[Mot");
             Db.print(i+1);
             Db.print("]:");
             Db.println(c[i]);

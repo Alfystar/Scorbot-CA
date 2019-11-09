@@ -2,7 +2,7 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="SpiRasp_Terminal" targetName="SpiRasp_Terminal" />
+      <config projectName="pcListenUart" targetName="pcListenUart" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -11,7 +11,113 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="" />
+    <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSize_root/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSize_root/pcListen_demo/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSize_root/pcListen_demo/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/.ScorBoard_Diagrams.vpp.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSize_root/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/01_SpiRasp_demo/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSize_root/pcListen_demo/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/01_SpiRasp_demo/.idea/Scorbot_CPP.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/01_SpiRasp_demo/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/01_SpiRasp_demo/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/01_SpiRasp_demo/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/01_SpiRasp_demo/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/01_SpiRasp_demo/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/01_SpiRasp_demo/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/01_SpiRasp_demo/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/01_SpiRasp_demo/main.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/CurrentMot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/CurrentMot.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/EncoderMot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation/EncoderMot.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataPrimitive.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataPrimitive.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScorbotRaspLib/CMakeLists.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScorbotRaspLib/SPILib/SpiRaspInterface.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScorbotRaspLib/SPILib/SpiRaspInterface.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScorbotRaspLib/SPILib/link userfull.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScorbotRaspLib/UtilityScorbot/ScorCalc.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScorbotRaspLib/UtilityScorbot/ScorCalc.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/Project-lib/circularBuffer/CircularBuffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/Project-lib/circularBuffer/CircularBuffer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/Project-lib/uartScorbot/UartCmd.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/Project-lib/uartScorbot/UartCmd.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/Project-lib/uartScorbot/UartCmd.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/Project-lib/uartScorbot/UartCmd.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/ScoreBoard_Uart.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/ScoreBoard_Uart.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/excutePack.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/excutePack.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/motControll.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/motControll.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/CMakeLists.txt.user" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/3.5.1/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/3.5.1/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/3.5.1/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/3.5.1/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/3.5.1/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/3.5.1/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/3.5.1/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/3.5.1/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/3.5.1/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/PROJECT_NAME.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/PROJECT_NAME.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/PROJECT_NAME.dir/SPILib/SpiRaspInterface.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/PROJECT_NAME.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/PROJECT_NAME.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/PROJECT_NAME.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/PROJECT_NAME.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/PROJECT_NAME.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/PROJECT_NAME.dir/home/scorebot/Scorbot-CA/2_boardSystem/V2/SW/SpiPack/SpiPack.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/PROJECT_NAME.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/PROJECT_NAME.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/PROJECT_NAME.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_Terminal.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_Terminal.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_Terminal.dir/SPILib/SpiRaspInterface.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_Terminal.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_Terminal.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_Terminal.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_Terminal.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_Terminal.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_Terminal.dir/home/scorebot/Scorbot-CA/2_boardSystem/V2/SW/SpiPack/SpiPack.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_Terminal.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_Terminal.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_Terminal.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_demo.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_demo.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_demo.dir/SPILib/SpiRaspInterface.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_demo.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_demo.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_demo.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_demo.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_demo.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_demo.dir/home/scorebot/Scorbot-CA/2_boardSystem/V2/SW/SpiPack/SpiPack.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_demo.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_demo.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/SpiRasp_demo.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/feature_tests.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/feature_tests.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/feature_tests.cxx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/SpiRasp_Terminal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/SpiRasp_Terminal.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/SpiRasp_demo.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/current0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/current1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/current2.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/current3.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/current4.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/encoderRec0.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/encoderRec1.dat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SpiRasp_demo-build/encoderRec3.dat" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +127,6 @@
   <component name="ClangdSettings">
     <option name="formatViaClangd" value="false" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
@@ -46,7 +151,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/SpiRasp_demo/CMakeLists.txt" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -57,15 +162,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiPack" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSize" />
       <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation" />
       <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW" />
       <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/ScorbotRaspLib" />
       <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/SPILib" />
-      <recent name="$PROJECT_DIR$/relase" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart" />
+      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation" />
+      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge" />
+      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/pcListen_demo" />
+      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiPack" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -80,12 +189,21 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="SpiRasp_Terminal" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="SpiRasp_Terminal" TARGET_NAME="SpiRasp_Terminal" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="SpiRasp_Terminal" RUN_TARGET_NAME="SpiRasp_Terminal">
+  <component name="RunManager" selected="CMake Application.uart_Terminal">
+    <configuration name="pcListenUart" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pcListenUart" TARGET_NAME="pcListenUart" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="pcListenUart" RUN_TARGET_NAME="pcListenUart">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
+    <configuration name="uart_Terminal" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pcListenUart" TARGET_NAME="SpiRasp_Terminal" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="pcListenUart" RUN_TARGET_NAME="SpiRasp_Terminal">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <list>
+      <item itemvalue="CMake Application.uart_Terminal" />
+      <item itemvalue="CMake Application.pcListenUart" />
+    </list>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -125,6 +243,7 @@
       <workItem from="1571131420355" duration="16912000" />
       <workItem from="1571175385728" duration="205000" />
       <workItem from="1572961835097" duration="2058000" />
+      <workItem from="1573321698992" duration="4068000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
       <created>1568027375662</created>

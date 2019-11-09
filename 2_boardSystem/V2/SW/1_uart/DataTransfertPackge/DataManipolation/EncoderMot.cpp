@@ -42,13 +42,10 @@ namespace DataManipolation{
         Db.flush();
         Db.println("Sended Encoder Step:");
         for (byte i = Mot1; i < nMot; i++) {
-            Db.print("\tencoder[Mot");
+            Db.print("\ten[Mot");
             Db.print(i+1);
             Db.print("]:");
-            //Db.println(en[i]);
-            Db.print(en[i]);
-            Db.print("\t ");
-            Db.println((int)&en[i],HEX);
+            Db.println(en[i]);
         }
 #else
         printf("En:\t");

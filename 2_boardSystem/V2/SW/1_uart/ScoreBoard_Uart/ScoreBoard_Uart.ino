@@ -2,8 +2,8 @@
 #include "Project-lib/globalDef.h"
 
 //#define DB_PRINT 1    //attiva/disattiva compilazione del codice per printare in Dbe informazioni aggiungtive
-#define CMD_PRINT 1            //attiva/disattiva compilazione del print del pacchetto spi
 //#define DB_PRINT_SENSOR 1 //attiva/disattiva compilazione del codice per printare i sensori ogni "newPrintDelay"
+#define CMD_PRINT 1            //attiva/disattiva compilazione del print del pacchetto spi
 
 //#define MOVE_CHECK 1 		//attiva/disattiva compilazione del codice che muove tutti i motori per test
 #define MOTOR_LIMIT_ENABLE 1    //attiva/disattiva compilazione del codice che sceglie la classe da istaziare per i motori
@@ -12,11 +12,14 @@ SpiDevice *spi;
 UartCmd *uart;
 AdcDevice *adc;
 ScorFeed *sFeed;
+
 using namespace Motor;
 DCdriverLimit *mot[nMot];
+
 #ifdef DB_PRINT_SENSOR
 unsigned long timePrint;	//time to next debug print
 #endif
+
 #define sanityDelay 1000        //tempo ms di attesa prima di ri-scansionare se il robot è ok
 #define newPrintDelay 1000    //delay tra un debug print e l'altro
 unsigned long sanityTime = 0;
@@ -30,30 +33,33 @@ void setup() {
 	cli();
 	Db.println("\n##### Start Setup #####");
 	delay(250);
+
 	memoryLoad();
 	Db.flush();
 	Db.println("\tLoad Settings from Memory");
+
 	motSetup();
 	Db.flush();
 	Db.println("\tMotor Setup");
+
 	sFeed = new ScorFeed();
 	Db.flush();
 	Db.println("\tSetUp Scorbot Sensors");
+
 	adc = new AdcDevice(globSets.diff, globSets.adcVref);
 	Db.flush();
 	Db.println("\tSetUp ADC");
-	spi = new SpiDevice();
+
+    //spi = new SpiDevice();
 	Db.flush();
 	Db.println("\tSetUp CMD Serial");
-	uart = new UartCmd();
+    uart = new UartCmd(&Cmd);
+    initDataSend();
+
 	sei();
 	Db.println("\tGlobal Interrupt Enable");
+
 	Db.println("End Setup");
-#ifdef DB_PRINT
-	Db.flush();
-	Pack::printSetting(globSets);
-	Db.println("End Setup");
-#endif
 #ifdef MOVE_CHECK
 	for (byte i=Mot1;i<nMot;i++)
 	{
@@ -68,24 +74,37 @@ void setup() {
 
 }
 
-Pack *r;
+uartRecivePack *r;
 
 //tempi in micro secondi, dopo ~ 70 min in overflow, gestito
 unsigned long nextEnSend = 0, nextCurSend = 0;
-unsigned short enP = 1000, curP = 2000;	//di default 2Kh e 0.5Khz
-
+//unsigned short enP = 1000, curP = 2000;	//di default 1Kh e 0.5Khz
+unsigned long enP = 1000 * 1000UL, curP = 2000 * 1000UL;    //di default 1Kh e 0.5Khz
+//500000
 unsigned long timeOverflow[200];
 int timeOverflowId = 0;
 void loop() {
+    //Sensor update
 	sFeed->updateStepEn();
-	sanityChek(sanityDelay);
+
+    //Serial command read
 	if (uart->uartAvailable()) {
-		excutePack(*uart->getLastRecive());
+        r = uart->getLastRecive();
+        excutePack(*r);
 #ifdef CMD_PRINT
-		//r->printPack();
+        Cmd.println("Printo pacchetto ricevuto:");
+        UartCmd::serialPackDb(*r);
 #endif
 	}
+    dataSend();
+    uart->serialTrySend();
+
+    //Internal state update
 	motorStateMachine();
+    sanityChek(sanityDelay);
+
+
+    //Debug Serial zone
 #ifdef DB_PRINT_SENSOR
 	if (millis() > timePrint + newPrintDelay) {
 		adc->debugPrintAdc();

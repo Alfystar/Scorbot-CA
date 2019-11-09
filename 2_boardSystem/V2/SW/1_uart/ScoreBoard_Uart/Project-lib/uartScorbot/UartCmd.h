@@ -13,45 +13,72 @@
 #include "../globalDef.h"
 #include "../circularBuffer/CircularBuffer.h"
 
+#define UartDb 1
+#define CMD_Send_PRINT 1
+
 enum uartCode
-	: unsigned char {StartCode = 192, EndCode = 168
+        : unsigned char {
+    StartCode = 192, EndCode = 168
 };
 
 namespace InternalDevice {
 	using namespace DataPrimitive;
 	using namespace DataManipolation;
+    //todo spostare questi due in DataPrimitive
+    typedef struct uartRecivePack_ {
+        uartPackType type;
+        data2Ard pack;
+    } uartRecivePack;
 
-	typedef struct uartRecivePack_ {
-			uartPackType type;
-			data2Ard pack;
-	} uartRecivePack;
+    typedef struct uartSendPack_ {
+        uartPackType type;
+        data2Rasp pack;
+    } uartSendPack;
 
 #define packBufSize 8
 #define dataBufSize 4*sizeof(uartRecivePack)
 	enum uartState
-		: char {waitStart, waitType, waitEnd
+            : char {
+        waitStart, waitType, waitEnd
 	};
 
 	class UartCmd {
 		public:
-			UartCmd();
+        UartCmd(HardwareSerial *serial);
 			unsigned char uartAvailable();
 			uartRecivePack* getLastRecive();
 
+        void
+        packSend(uartPackType type, data2Rasp *pack); // &pack è l'indirizzo da dove il sender si va a copiare i dati
+
 			void serialIsr();
 
+        void serialTrySend();
+
+        static void serialPackDb(uartRecivePack &p);
+        static void serialPackDb(uartSendPack &p);
+
 		private:
-			char serialRead[dataBufSize];
+        HardwareSerial *com;
+
+        //Variabili per la ricezione dei dati byte
+        char serialRead[dataBufSize];
 			CircularBuffer<unsigned char> *cbData;
 
 			uartState stateUart = waitStart;
-			char potentialPackStart;
-			char potentialPackType;
+        char potPackStart;
+        char potPackType;
 			char expettedEnd;
 
-			uartRecivePack cbPackBuf[packBufSize];
-			CircularBuffer<uartRecivePack> *cbPack;
+        //Variabili per la gestione dei pacchetti ricevuti
+        uartRecivePack cbRecivePackBuf[packBufSize];
+        CircularBuffer<uartRecivePack> *cbRecive;
 			unsigned char packAvailable;
+
+        //Variabili per la gestione dei pacchetti da inviare
+        uartSendPack cbSendPackBuf[packBufSize];
+        CircularBuffer<uartSendPack> *cbSend;
+
 
 			void clearPackBuf();
 			void clearSerialBuf();
