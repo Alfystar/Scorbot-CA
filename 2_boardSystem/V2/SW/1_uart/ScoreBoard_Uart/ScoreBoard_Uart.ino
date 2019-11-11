@@ -74,7 +74,7 @@ void setup() {
 
 }
 
-uartRecivePack *r;
+uart2Ard *r;
 
 //tempi in micro secondi, dopo ~ 70 min in overflow, gestito
 unsigned long nextEnSend = 0, nextCurSend = 0;

@@ -5,17 +5,24 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <iostream>
-#include "../src/DataTransfertPackge/DataPrimitive.h"
-#include "../../DataTransfertPackge/DataManipolation/SpeedMot.h"
+#include <UartDriver.h>
 
-DataPrimitive::data2Ard d;
-DataPrimitive::mSpeed speed;
-DataManipolation::SpeedMot *Speed;
+using namespace std;
+using namespace Uart;
+UartDriver *uart;
 
 int main(int argc, char *argv[]) {
-    d.up.speed[0] = 5;
-    Speed = new DataManipolation::SpeedMot(speed);
-    Speed->printSpeed();
-    std::cout << "hello world" << version_D << "\n";
+    try {
+        uart = new UartDriver("/dev/ttyACM0");
+    } catch (exception e) {
+        e.what();
+        exit(-1);
+    }
+    for (;;) {
+        //std::cout<<"loop\n";
+        if (uart->Available())
+            UartDriver::serialPackDb(*uart->getLastRecive());
+    }
+
     return 0;
 }

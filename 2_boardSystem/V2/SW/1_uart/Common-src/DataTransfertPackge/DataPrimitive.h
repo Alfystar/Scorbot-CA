@@ -4,8 +4,9 @@
 
 #ifndef DATAPRIMITIVE_H
 #define DATAPRIMITIVE_H
-
-#include "../ScoreBoard_Uart/HW_rename.h"
+#ifdef ScorboarFirmware
+#include "../../ScoreBoard_Uart/HW_rename.h"
+#endif
 
 namespace DataPrimitive{
     /// Enum Declaration for the comunication
@@ -23,18 +24,7 @@ namespace DataPrimitive{
         //invalid = 0, prima presente ma forse inutile
         PWMsend_EnRet = 1, PWMsend_CurRet, PWMsend_AllRet, SettingGet, SettingSet, goHome
     };
-    enum uartPackType : char{
-        mSpeedData = 1,
-        settingBoardData,
-        mCurrentData,
-        mAllData,
-        mEncoderData,
-        sampleTimeEn,
-        sampleTimeCur,
-        goHomeUart,
-        settingAsk,
-        RESEND
-    };
+
     //sampleTimeEn && sampleTimeCur tempi in micro secondi (unsigned short), se devono essere inviati sia En che Cur, si invia un mAll
     enum adcRef : char {
         in1V1 = 0, in2V56, ext
@@ -46,6 +36,24 @@ namespace DataPrimitive{
 // set timer divisor to  1024 for PWM frequency of    30.64 Hz
     enum pwmFreq : char {
         hz30, hz120, hz490, hz4k, hz30k
+    };
+
+    enum uartCode
+            : unsigned char {
+        StartCode = 192, EndCode = 168
+    };
+
+    enum uartPackType : char{
+        mSpeedData = 1,
+        settingBoardData,
+        mCurrentData,
+        mAllData,
+        mEncoderData,
+        sampleTimeEn,
+        sampleTimeCur,
+        goHomeUart,
+        settingAsk,
+        RESEND
     };
 ///#################################################################
 ///Pack information structure
@@ -93,6 +101,7 @@ namespace DataPrimitive{
         char buf[sizeof(ricType)];
     } data2Rasp;
 
+
 ///#################################################################
 ///Send/Recive spi pack
    typedef struct SPIPACK_ {
@@ -104,16 +113,17 @@ namespace DataPrimitive{
 ///#################################################################
 ///Sendable uart pack
     typedef struct uart2Ard_ {
-        packType type;
+        uartPackType type;
         //short checkSum; Prima vedere se serve
-        data2Ard data;
+        data2Ard pack;
     } uart2Ard;
 
     typedef struct uart2Rasp_ {
-        packType type;
+        uartPackType type;
         //short checkSum; Prima vedere se serve
-        data2Rasp data;
+        data2Rasp pack;
     } uart2Rasp;
+
 }
 
 

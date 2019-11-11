@@ -52,6 +52,8 @@
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_Uart/core/variant}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_Uart/libraries/EEPROM/src}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_Uart/circularBuffer}&quot;"/>
                                     								
                                 </option>
                                 								
@@ -76,6 +78,8 @@
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_Uart/core/variant}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_Uart/libraries/EEPROM/src}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_Uart/circularBuffer}&quot;"/>
                                     								
                                 </option>
                                 								
@@ -100,6 +104,8 @@
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_Uart/core/variant}&quot;"/>
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_Uart/libraries/EEPROM/src}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/ScoreBoard_Uart/circularBuffer}&quot;"/>
                                     								
                                 </option>
                                 								

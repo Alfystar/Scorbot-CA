@@ -7,42 +7,60 @@
 
 #ifndef PROJECT_LIB_CIRCULARBUFFER_CIRCULARBUFFER_H_
 #define PROJECT_LIB_CIRCULARBUFFER_CIRCULARBUFFER_H_
+#ifndef linuxSide
 #include "Arduino.h"
-#include "../../HW_rename.h"
-template<class T> class CircularBuffer {
-	public:
-		CircularBuffer(T buf[], size_t size);
+#else
 
+#include <stdlib.h>
+
+#endif
+
+template<class T>
+class CircularBuffer {
+public:
+    CircularBuffer(T buf[], size_t size);
+    //Puts metod
     int put(T item);        //return new head
     int put(T *item);    //take obj pointer and copy in internal buffer, return new head
     int put(T *item, size_t len);    //take obj pointer and copy in internal buffer, return new head
-    int put_externalWrite();    //return old head
+    int put_externalWrite();            //return old head
+    int put_externalWrite(int len);     //add len to head, return old head
 
+    //Gets metod
     T get();
+    T *getPtr();
     size_t get_externalRead();    //return new tail
 
-		T readTail();
-		T readHead();
-		T* getPtr();
-		size_t getHead();
+    //Get Head Structure information
+    size_t getHead();
+    T readHead();
     T *getHeadPtr();
 
-		size_t getTail();
+    //Get Tail Structure information
+    size_t getTail();
+    T readTail();
     T *getTailPtr();
+
+    //Special write, to take out char buf in specific structure
     void
     writeMemOut(T *mem, size_t mytail, size_t len);    //salvano in una mem i valori partendo da mytail --> mytail+len
-		void reset();
-    bool empty() const;    //true if empty
-		bool full() const;
-		size_t capacity() const;
-		size_t size() const;
 
-	private:
-		T *buf_;
+
+    //
+    void reset();
+    bool empty() const;    //true if empty
+    bool full() const;
+    size_t capacity() const;
+    size_t size() const;
+    size_t
+    linearEnd() const;   //return how many slot have the head before encounter the last array index (ignore tail position)
+
+private:
+    T *buf_;
     int head_;
     int tail_;
     const int max_size_;
-		bool full_ = 0;
+    bool full_ = 0;
 };
 
 template<class T>
@@ -109,6 +127,7 @@ void CircularBuffer<T>::writeMemOut(T *mem, size_t mytail, size_t len) {
         mem[i] = buf_[(mytail + i) % max_size_];
     }
     full_ = false;
+    tail_ = mytail;
 }
 
 template<class T>
@@ -167,7 +186,7 @@ T CircularBuffer<T>::get() {
 }
 
 template<class T>
-T* CircularBuffer<T>::getPtr() {
+T *CircularBuffer<T>::getPtr() {
     if (empty()) {
         return nullptr;
     }
@@ -201,6 +220,22 @@ inline size_t CircularBuffer<T>::getTail() {
 template<class T>
 inline T *CircularBuffer<T>::getTailPtr() {
     return &buf_[tail_];
+}
+
+template<class T>
+size_t CircularBuffer<T>::linearEnd() const {
+    return max_size_ - head_;
+}
+
+template<class T>
+int CircularBuffer<T>::put_externalWrite(int len) {
+    int oldHead = this->head_;
+    if (this->full_) {
+        this->tail_ = (this->tail_ + len) % this->max_size_;
+    }
+    this->head_ = (this->head_ + len) % this->max_size_;
+    this->full_ = (this->head_ == this->tail_);
+    return oldHead; //old head
 }
 
 #endif /* PROJECT_LIB_CIRCULARBUFFER_CIRCULARBUFFER_H_ */

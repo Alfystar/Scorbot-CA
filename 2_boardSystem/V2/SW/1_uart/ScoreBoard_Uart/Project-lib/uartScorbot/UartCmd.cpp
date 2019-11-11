@@ -21,19 +21,25 @@ namespace InternalDevice {
 
         //Buffer Circolare per i pacchetti ricevuti
 		this->clearPackBuf();
+#ifdef UartDb
         Db.println("cbRecive:");
-        this->cbRecive = new CircularBuffer<uartRecivePack>(
-                (uartRecivePack *) this->cbRecivePackBuf, packBufSize);
+#endif
+        this->cbRecive = new CircularBuffer<uart2Ard>(
+                (uart2Ard *) this->cbRecivePackBuf, packBufSize);
 
         //Buffer Circolare per i pacchetti da inviare (Se la dimensione satura la scrittura)
+#ifdef UartDb
         Db.println("cbSend:");
-        this->cbSend = new CircularBuffer<uartSendPack>(
-                (uartSendPack *) this->cbSendPackBuf, packBufSize);
+#endif
+        this->cbSend = new CircularBuffer<uart2Rasp>(
+                (uart2Rasp *) this->cbSendPackBuf, packBufSize);
 
         //Buffer Circolare per leggere la seriale prima che si satura
 		this->clearSerialBuf();
+#ifdef UartDb
         Db.println("cbData:");
-		this->cbData = new CircularBuffer<unsigned char>(
+#endif
+        this->cbData = new CircularBuffer<unsigned char>(
 				(unsigned char *) this->serialRead,
 				dataBufSize);
 
@@ -42,18 +48,19 @@ namespace InternalDevice {
 	unsigned char UartCmd::uartAvailable() {
 		return this->packAvailable;
 	}
-	
-	uartRecivePack* UartCmd::getLastRecive() {
+
+    uart2Ard *UartCmd::getLastRecive() {
 		if (uartAvailable() > 0) {
 			this->packAvailable--;
             return this->cbRecive->getPtr();
 		}
 		return nullptr;
 	}
-	
-	uartRecivePack tempPack;
+
+    uart2Ard tempPack;
 	void UartCmd::serialIsr() {
-		reAsk: switch (this->stateUart) {
+        reAsk:
+        switch (this->stateUart) {
 			default:
 			case waitStart:
 				//leggo il nuovo dato
@@ -124,13 +131,13 @@ namespace InternalDevice {
     void UartCmd::packSend(uartPackType type, data2Rasp *pack) {
         //lavoro a mano per accelerare il salvataggio, altrimenti usavo "size_t put(T* item, size_t len);"
         //uartSendPack *p = this->cbSend->getHeadPtr();
-        uartSendPack *p = &this->cbSendPackBuf[this->cbSend->getHead()];
+        uart2Rasp *p = &this->cbSendPackBuf[this->cbSend->getHead()];
         this->cbSend->put_externalWrite();
         p->type = type;
         memcpy((void *) p->pack.buf, pack, this->sizeMessage(type));
     }
 
-    uartSendPack *sTemp = nullptr;
+    uart2Rasp *sTemp = nullptr;
     char len = 0;
 
     void UartCmd::serialTrySend() {
@@ -183,7 +190,7 @@ namespace InternalDevice {
 
     }
 
-    void UartCmd::serialPackDb(uartRecivePack &p) {
+    void UartCmd::serialPackDb(uart2Ard &p) {
         Db.print("serialPackDb(uartRecivePack):");
         Db.println((unsigned int) &p);
         switch (p.type) {
@@ -208,7 +215,7 @@ namespace InternalDevice {
         }
     }
 
-    void UartCmd::serialPackDb(uartSendPack &p) {
+    void UartCmd::serialPackDb(uart2Rasp &p) {
         Db.print("serialPackDb(uartSendPack):");
         Db.println((unsigned int) &p);
         switch (p.type) {

@@ -4,7 +4,7 @@
 extern DCdriverLimit *mot[nMot];
 #define timeOut 2000
 
-void excutePack(uartRecivePack &p) {
+void excutePack(uart2Ard &p) {
 	switch (p.type) {
 		case mSpeedData: {
             mSpeed &vel = p.pack.up.speed;

@@ -16,27 +16,13 @@
 #define UartDb 1
 #define CMD_Send_PRINT 1
 
-enum uartCode
-        : unsigned char {
-    StartCode = 192, EndCode = 168
-};
-
 namespace InternalDevice {
 	using namespace DataPrimitive;
 	using namespace DataManipolation;
-    //todo spostare questi due in DataPrimitive
-    typedef struct uartRecivePack_ {
-        uartPackType type;
-        data2Ard pack;
-    } uartRecivePack;
 
-    typedef struct uartSendPack_ {
-        uartPackType type;
-        data2Rasp pack;
-    } uartSendPack;
 
 #define packBufSize 8
-#define dataBufSize 4*sizeof(uartRecivePack)
+#define dataBufSize 4*sizeof(uart2Ard)
 	enum uartState
             : char {
         waitStart, waitType, waitEnd
@@ -46,7 +32,7 @@ namespace InternalDevice {
 		public:
         UartCmd(HardwareSerial *serial);
 			unsigned char uartAvailable();
-			uartRecivePack* getLastRecive();
+        uart2Ard *getLastRecive();
 
         void
         packSend(uartPackType type, data2Rasp *pack); // &pack è l'indirizzo da dove il sender si va a copiare i dati
@@ -55,8 +41,8 @@ namespace InternalDevice {
 
         void serialTrySend();
 
-        static void serialPackDb(uartRecivePack &p);
-        static void serialPackDb(uartSendPack &p);
+        static void serialPackDb(uart2Ard &p);
+        static void serialPackDb(uart2Rasp &p);
 
 		private:
         HardwareSerial *com;
@@ -71,13 +57,13 @@ namespace InternalDevice {
 			char expettedEnd;
 
         //Variabili per la gestione dei pacchetti ricevuti
-        uartRecivePack cbRecivePackBuf[packBufSize];
-        CircularBuffer<uartRecivePack> *cbRecive;
+        uart2Ard cbRecivePackBuf[packBufSize];
+        CircularBuffer<uart2Ard> *cbRecive;
 			unsigned char packAvailable;
 
         //Variabili per la gestione dei pacchetti da inviare
-        uartSendPack cbSendPackBuf[packBufSize];
-        CircularBuffer<uartSendPack> *cbSend;
+        uart2Rasp cbSendPackBuf[packBufSize];
+        CircularBuffer<uart2Rasp> *cbSend;
 
 
 			void clearPackBuf();

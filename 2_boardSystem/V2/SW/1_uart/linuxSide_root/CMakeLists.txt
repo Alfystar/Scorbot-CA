@@ -10,8 +10,6 @@ project(pcListenUart)
 message("Creato Progetto: ${PROJECT_NAME}")
 
 add_subdirectory(src)
-message("Caricata caratella src/")
-
 
 #Exe directory
 add_subdirectory(pcListen_demo)
