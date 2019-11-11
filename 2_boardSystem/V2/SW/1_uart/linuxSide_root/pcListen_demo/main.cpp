@@ -18,11 +18,19 @@ int main(int argc, char *argv[]) {
         e.what();
         exit(-1);
     }
-    for (;;) {
-        //std::cout<<"loop\n";
-        if (uart->Available())
-            UartDriver::serialPackDb(*uart->getLastRecive());
-    }
 
+    uart2Rasp *dato;
+    for (;;) {
+        // Lettura non bloccante, Consuma molta CPU, ma è prestante
+//        if ((dato = uart->getLastRecive()) != nullptr){
+//            UartDriver::serialPackDb(*dato);
+//            std::cout << "\n";
+//        }
+
+        // Leggo ultimo dato, se non è arrivato il thread viene messo in wait, fino all'arrivo
+        UartDriver::serialPackDb(*uart->getLastReciveWait());
+        std::cout << "\n";
+        uart->packSend(settingAsk, nullptr);
+    }
     return 0;
 }

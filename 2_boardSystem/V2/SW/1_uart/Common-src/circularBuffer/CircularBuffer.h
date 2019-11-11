@@ -12,6 +12,7 @@
 #else
 
 #include <stdlib.h>
+#include <iostream>
 
 #endif
 
@@ -52,13 +53,17 @@ public:
     bool full() const;
     size_t capacity() const;
     size_t size() const;
-    size_t
-    linearEnd() const;   //return how many slot have the head before encounter the last array index (ignore tail position)
+    size_t linearEnd() const;   //return how many slot have the head before encounter the last array index (ignore tail position)
 
 private:
     T *buf_;
+#ifndef linuxSide
     int head_;
     int tail_;
+#else
+    size_t head_;
+    size_t tail_;
+#endif
     const int max_size_;
     bool full_ = 0;
 };
@@ -89,7 +94,7 @@ CircularBuffer<T>::CircularBuffer(T buf[], size_t nElem):
 }
 
 template<class T>
-void CircularBuffer<T>::reset() {
+inline void CircularBuffer<T>::reset() {
     this->head_ = this->tail_;
     this->full_ = false;
 }
@@ -127,11 +132,10 @@ void CircularBuffer<T>::writeMemOut(T *mem, size_t mytail, size_t len) {
         mem[i] = buf_[(mytail + i) % max_size_];
     }
     full_ = false;
-    tail_ = mytail;
 }
 
 template<class T>
-size_t CircularBuffer<T>::size() const {
+inline size_t CircularBuffer<T>::size() const {
     size_t size = max_size_;
     if (!full_) {
         if (head_ >= tail_) {
@@ -162,14 +166,8 @@ int CircularBuffer<T>::put(T *item, size_t len) {
 }
 
 template<class T>
-int CircularBuffer<T>::put_externalWrite() {
-    int oldHead = this->head_;
-    if (this->full_) {
-        this->tail_ = (this->tail_ + 1) % this->max_size_;
-    }
-    this->head_ = (this->head_ + 1) % this->max_size_;
-    this->full_ = (this->head_ == this->tail_);
-    return oldHead; //old head
+inline int CircularBuffer<T>::put_externalWrite() {
+   return put_externalWrite(1); //old head
 }
 
 
@@ -191,12 +189,13 @@ T *CircularBuffer<T>::getPtr() {
         return nullptr;
     }
     //Read data and advance the tail (we now have a free space)
+    auto val = getTailPtr();
     get_externalRead();
-    return getTailPtr();
+    return val;
 }
 
 template<class T>
-size_t CircularBuffer<T>::get_externalRead() {
+inline size_t CircularBuffer<T>::get_externalRead() {
     full_ = false;
     tail_ = (tail_ + 1) % max_size_;
     return tail_;
@@ -223,18 +222,17 @@ inline T *CircularBuffer<T>::getTailPtr() {
 }
 
 template<class T>
-size_t CircularBuffer<T>::linearEnd() const {
+inline size_t CircularBuffer<T>::linearEnd() const {
     return max_size_ - head_;
 }
 
 template<class T>
-int CircularBuffer<T>::put_externalWrite(int len) {
+inline int CircularBuffer<T>::put_externalWrite(int len) {
     int oldHead = this->head_;
-    if (this->full_) {
-        this->tail_ = (this->tail_ + len) % this->max_size_;
-    }
-    this->head_ = (this->head_ + len) % this->max_size_;
-    this->full_ = (this->head_ == this->tail_);
+    if (full_)
+        tail_ = (tail_ + len) % max_size_;
+    head_ = (head_ + len) % max_size_;
+    full_ = (head_ == tail_);
     return oldHead; //old head
 }
 

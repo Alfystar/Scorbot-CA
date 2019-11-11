@@ -27,7 +27,7 @@ unsigned long sanityTime = 0;
 //The setup function is called once at startup of the sketch
 void setup() {
 
-	Db.begin(57600);
+	Db.begin(DbVel);
 	Db.println("\n##### Start Db #####");
 
 	cli();
@@ -51,10 +51,11 @@ void setup() {
 	Db.println("\tSetUp ADC");
 
     //spi = new SpiDevice();
+	uart = new UartCmd(&Cmd, CmdVel);
+	initDataSend();
 	Db.flush();
 	Db.println("\tSetUp CMD Serial");
-    uart = new UartCmd(&Cmd);
-    initDataSend();
+
 
 	sei();
 	Db.println("\tGlobal Interrupt Enable");
@@ -79,14 +80,15 @@ uart2Ard *r;
 //tempi in micro secondi, dopo ~ 70 min in overflow, gestito
 unsigned long nextEnSend = 0, nextCurSend = 0;
 //unsigned short enP = 1000, curP = 2000;	//di default 1Kh e 0.5Khz
-unsigned long enP = 1000 * 1000UL, curP = 2000 * 1000UL;    //di default 1Kh e 0.5Khz
+unsigned long enP = 1000 * 1000UL, curP = 1200 * 1000UL;    //di default 1Kh e 0.5Khz
 //500000
 unsigned long timeOverflow[200];
 int timeOverflowId = 0;
 void loop() {
     //Sensor update
 	sFeed->updateStepEn();
-
+	if (Cmd.available())
+		uart->serialIsr();
     //Serial command read
 	if (uart->uartAvailable()) {
         r = uart->getLastRecive();
@@ -167,11 +169,7 @@ void sanityChek(int wait) {
  }
  */
 
-//## Serial "INTERRUPT" SERVICE ##//
-//base on com used change on correct SerialEvent
-void SerialEvent() {
-	uart->serialIsr();
-}
+
 
 //## ADC INTERRUPT SERVICE ##//
 //Si attiva ad ogni fine conversione, e immediatamente si avvia la successiva

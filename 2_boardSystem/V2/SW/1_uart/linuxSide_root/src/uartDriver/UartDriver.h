@@ -5,6 +5,8 @@
 #ifndef PCLISTENUART_UARTDRIVER_H
 #define PCLISTENUART_UARTDRIVER_H
 
+// #define UartDriverDebug 1
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <iostream>
@@ -16,8 +18,11 @@
 #include "UartExeption.h"
 #include <CircularBuffer.h>
 #include <thread>
+#include <semaphore.h>
 #include <mutex>
 #include <DataTransfert_AllInclude.h>
+
+#define sizeofArray(x)  sizeof(x)/sizeof(x[0])
 
 namespace Uart {
     using namespace DataPrimitive;
@@ -35,14 +40,18 @@ namespace Uart {
         packSend(uartPackType type, data2Rasp *pack); // &pack è l'indirizzo da dove il sender si va a copiare i dati
 
         size_t Available();
+        //todo: creare un waiting available per tenere il sistema scarico
         uart2Rasp *getLastRecive();
+        uart2Rasp *getLastReciveWait();
+
+
 
         static void serialPackDb(uart2Ard &p);
         static void serialPackDb(uart2Rasp &p);
     private:
         //todo Rendere un singleton parametrico la classe
         //http://www.jot.fm/issues/issue_2007_03/column2/
-        UartDriver *istance;
+        //UartDriver *istance;
 
         //Variabili della porta
         int fd;                     //file descriptor della com
@@ -53,15 +62,15 @@ namespace Uart {
         CircularBuffer<unsigned char> *cbByteRecive;
 
         uartState stateUart = waitStart;
-        char potPackStart;
-        char potPackType;
-        char expettedEnd;
+        size_t potPackStart;
+        size_t potPackType;
+        size_t expettedEnd;
 
 
         //Variabili della coda di pacchetti riconosciuti
         uart2Rasp cbReciveBuf[32];
         CircularBuffer<uart2Rasp> *cbRecive;
-        unsigned int packAvailable;
+        sem_t recivedPackSem;
 
         //Variabili della coda di invio
         //Probabilmente non servono poichè oltre la write c'e un buffer del S.O.
@@ -77,7 +86,7 @@ namespace Uart {
 
         //State machine to undestand pack
         void dataDiscover();
-        char sizeMessage(uartPackType t);
+        size_t sizeMessage(uartPackType t);
 
 
     };

@@ -13,8 +13,11 @@
 #include "../globalDef.h"
 #include "../circularBuffer/CircularBuffer.h"
 
-#define UartDb 1
-#define CMD_Send_PRINT 1
+#define sizeofArray(x)  sizeof(x)/sizeof(x[0])
+
+
+#define UartDriverDebug 1
+//#define CMD_Send_PRINT 1
 
 namespace InternalDevice {
 	using namespace DataPrimitive;
@@ -30,14 +33,14 @@ namespace InternalDevice {
 
 	class UartCmd {
 		public:
-        UartCmd(HardwareSerial *serial);
+        UartCmd(HardwareSerial *serial, long vel);
 			unsigned char uartAvailable();
         uart2Ard *getLastRecive();
 
         void
         packSend(uartPackType type, data2Rasp *pack); // &pack è l'indirizzo da dove il sender si va a copiare i dati
 
-			void serialIsr();
+		void serialIsr();
 
         void serialTrySend();
 
@@ -48,24 +51,24 @@ namespace InternalDevice {
         HardwareSerial *com;
 
         //Variabili per la ricezione dei dati byte
-        char serialRead[dataBufSize];
-			CircularBuffer<unsigned char> *cbData;
+        unsigned char reciveBuf[dataBufSize];
+		CircularBuffer<unsigned char> *cbByteRecive;
 
-			uartState stateUart = waitStart;
-        char potPackStart;
-        char potPackType;
-			char expettedEnd;
+		uartState stateUart = waitStart;
+        size_t potPackStart;
+        size_t potPackType;
+        size_t expettedEnd;
 
         //Variabili per la gestione dei pacchetti ricevuti
         uart2Ard cbRecivePackBuf[packBufSize];
         CircularBuffer<uart2Ard> *cbRecive;
-			unsigned char packAvailable;
+			//unsigned char packAvailable;
 
         //Variabili per la gestione dei pacchetti da inviare
         uart2Rasp cbSendPackBuf[packBufSize];
         CircularBuffer<uart2Rasp> *cbSend;
 
-
+        	void dataDiscover();
 			void clearPackBuf();
 			void clearSerialBuf();
 			char sizeMessage(uartPackType t);

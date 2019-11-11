@@ -15,3 +15,6 @@ add_library(dataTransfert
 target_include_directories(dataTransfert PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}")
 message("La libreria 'dataTransfert' è stata aggiunta")
 message("CMAKE_CURRENT_SOURCE_DIR:" ${CMAKE_CURRENT_SOURCE_DIR})
+if (${UNIX})
+    target_compile_definitions(dataTransfert PUBLIC linuxSide=1)
+endif ()
