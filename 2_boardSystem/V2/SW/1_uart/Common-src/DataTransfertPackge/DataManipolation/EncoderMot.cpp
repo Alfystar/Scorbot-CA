@@ -4,7 +4,7 @@
 
 #include "EncoderMot.h"
 
-namespace DataManipolation{
+namespace DataManipolation {
     EncoderMot::EncoderMot(mEncoder &en) {
         this->changePack(en);
     }
@@ -14,7 +14,7 @@ namespace DataManipolation{
     }
 
     void EncoderMot::changePack(mEncoder &en) {
-        this->enPack=&en;
+        this->enPack = &en;
     }
 
     void EncoderMot::copyEn(EncoderMot &en) {
@@ -22,7 +22,7 @@ namespace DataManipolation{
     }
 
     void EncoderMot::copyEn(mEncoder &en) {
-        memcpy(this->enPack,&en, sizeof(mEncoder));
+        memcpy(this->enPack, &en, sizeof(mEncoder));
     }
 
     mEncoder &EncoderMot::getEn() {

@@ -4,8 +4,8 @@
 
 #include "SettingBoard_C.h"
 
-namespace DataManipolation{
-    SettingBoard_C::SettingBoard_C(settingsBoard &s){
+namespace DataManipolation {
+    SettingBoard_C::SettingBoard_C(settingsBoard &s) {
         this->changePack(s);
     }
 
@@ -14,7 +14,7 @@ namespace DataManipolation{
     }
 
     void SettingBoard_C::changePack(settingsBoard &sets) {
-        this->setPack=&sets;
+        this->setPack = &sets;
     }
 
     void SettingBoard_C::copyPack(SettingBoard_C &sets) {
@@ -22,14 +22,14 @@ namespace DataManipolation{
     }
 
     void SettingBoard_C::copyPack(settingsBoard &sets) {
-        memcpy(this->setPack,&sets, sizeof(settingsBoard));
+        memcpy(this->setPack, &sets, sizeof(settingsBoard));
     }
 
     settingsBoard &SettingBoard_C::getSetting() {
         return *this->setPack;
     }
 
-    void SettingBoard_C::setMotorLimit( motCode mot, short enMax, short enMin, short cur) {
+    void SettingBoard_C::setMotorLimit(motCode mot, short enMax, short enMin, short cur) {
         //Set variable inside the pack to send-out
         this->setMaxEn(mot, enMax);
         this->setMinEn(mot, enMin);
@@ -40,7 +40,7 @@ namespace DataManipolation{
         this->setPack->maxEn[mot] = en;
     }
 
-    void SettingBoard_C::setMinEn( motCode mot, short en) {
+    void SettingBoard_C::setMinEn(motCode mot, short en) {
         this->setPack->minEn[mot] = en;
     }
 

@@ -7,8 +7,7 @@
 #ifdef ScorboarFirmware
 #include "../../ScoreBoard_Uart/HW_rename.h"
 #endif
-
-namespace DataPrimitive{
+namespace DataPrimitive {
     /// Enum Declaration for the comunication
     enum packDest : char {
         pack4Ard, pack4Rasp
@@ -22,7 +21,7 @@ namespace DataPrimitive{
     };
     enum packType : char {
         //invalid = 0, prima presente ma forse inutile
-        PWMsend_EnRet = 1, PWMsend_CurRet, PWMsend_AllRet, SettingGet, SettingSet, goHome
+                PWMsend_EnRet = 1, PWMsend_CurRet, PWMsend_AllRet, SettingGet, SettingSet, goHome
     };
 
     //sampleTimeEn && sampleTimeCur tempi in micro secondi (unsigned short), se devono essere inviati sia En che Cur, si invia un mAll
@@ -43,7 +42,7 @@ namespace DataPrimitive{
         StartCode = 192, EndCode = 168
     };
 
-    enum uartPackType : char{
+    enum uartPackType : char {
         FIRST_EXLUDE,        //Per rendere parametrico il check del tipo, aggiungere pacchetti tra FIRST_EXLUDE<--> LAST_EXLUDE
         mSpeedData = 1,
         settingBoardData,
@@ -106,11 +105,11 @@ namespace DataPrimitive{
 
 ///#################################################################
 ///Send/Recive spi pack
-   typedef struct SPIPACK_ {
+    typedef struct SPIPACK_ {
         packType type;
         data2Ard forArd;
         data2Rasp forRasp;
-   } __attribute__((packed)) SPIPACK;
+    } __attribute__((packed)) SPIPACK;
 
 ///#################################################################
 ///Sendable uart pack
@@ -127,6 +126,4 @@ namespace DataPrimitive{
     } __attribute__((packed)) uart2Rasp;
 
 }
-
-
 #endif //DATAPRIMITIVE_H

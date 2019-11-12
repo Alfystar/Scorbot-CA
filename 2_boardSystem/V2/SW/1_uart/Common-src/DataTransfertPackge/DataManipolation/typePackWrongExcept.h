@@ -4,10 +4,11 @@
 
 #ifndef SPIRASP_TERMINAL_TYPEPACKWRONGEXCEPT_H
 #define SPIRASP_TERMINAL_TYPEPACKWRONGEXCEPT_H
-
 #ifndef ScorboarFirmware
+
 #include <exception>
 #include <string>
+
 //Exeption tree
 class typePackWrongExcept : public std::exception {
     std::string _msg;
@@ -21,5 +22,4 @@ public:
 };
 
 #endif
-
 #endif //SPIRASP_TERMINAL_TYPEPACKWRONGEXCEPT_H

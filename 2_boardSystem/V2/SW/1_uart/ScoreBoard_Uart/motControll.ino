@@ -53,18 +53,16 @@ void motorStateMachine() {
 //int overCurrent[nMot] = { 250, 350, 350, 250, 300, 250 }; //correnti sperimentali quando è bloccato
 #define antiRebound(x) delayMicroseconds(x)    //tempo anti rimbalzo
 
-
 void home() {
-	Serial.println("Moving in secure zone");
-	mot[Mot3]->drive_motor(-midVel);
-	delay(3000);
-	mot[Mot3]->soft_stop();
-
-	mot[Mot4]->drive_motor(-midVel);
-	mot[Mot5]->drive_motor(-midVel);
-	delay(1000);
-	mot[Mot4]->soft_stop();
-	mot[Mot5]->soft_stop();
+    Serial.println("Moving in secure zone");
+    mot[Mot3]->drive_motor(-midVel);
+    delay(3000);
+    mot[Mot3]->soft_stop();
+    mot[Mot4]->drive_motor(-midVel);
+    mot[Mot5]->drive_motor(-midVel);
+    delay(1000);
+    mot[Mot4]->soft_stop();
+    mot[Mot5]->soft_stop();
 
 /*
     for (byte i = Mot2; i < nMot; i++) {
@@ -97,10 +95,10 @@ void home() {
     stopClaw();
     delay(10);
     for (byte i = Mot1; i < nMot; i++) //reset degli encoder
-    	mot[i]->freeRun();
+        mot[i]->freeRun();
     sFeed->updateStepEn();
     for (byte i = Mot1; i < nMot; i++) //reset degli encoder
-        sFeed->setEn((motCode)(i), 0);
+        sFeed->setEn((motCode) (i), 0);
 }
 
 //stDir: 1(outside) -1 (inside)
@@ -355,16 +353,16 @@ void pinzaHome() {
 }
 
 void openClaw() {
-	Serial.println("Opening claw...");
+    Serial.println("Opening claw...");
     mot[Mot6]->drive_motor(-140, 2000);
 }
 
 void closeClaw() {
-	Serial.println("Closing claw...");
+    Serial.println("Closing claw...");
     mot[Mot6]->drive_motor(140, 2000);
 }
 
 void stopClaw() {
-	Serial.println("Stopping claw...");
+    Serial.println("Stopping claw...");
     mot[Mot6]->soft_stop(2000);
 }

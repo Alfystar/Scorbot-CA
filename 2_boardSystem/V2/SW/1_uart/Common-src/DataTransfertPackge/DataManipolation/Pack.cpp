@@ -15,34 +15,34 @@ namespace DataManipolation {
         sets2Rasp = new SettingBoard_C(&this->data.forRasp.up.prop);
 #ifdef PackDebug
 #ifdef ScorboarFirmware
-		Db.println("Data size:");
-		Db.print("packType size :");
-		Db.println(sizeof(packType));
-		Db.print("mEncoder size :");
-		Db.println(sizeof(mEncoder));
-		Db.print("mCurrent size :");
-		Db.println(sizeof(mCurrent));
-		Db.print("mAll size :");
-		Db.println(sizeof(mAll));
-		Db.print("settingsBoard size :");
-		Db.println(sizeof(settingsBoard));
-		Db.print("adcRef size :");
-		Db.println(sizeof(adcRef));
-		Db.print("bool(diff read) size :");
-		Db.println(sizeof(bool));
-		Db.print("pwmFreq size :");
-		Db.println(sizeof(pwmFreq));
-		Db.println();
+        Db.println("Data size:");
+        Db.print("packType size :");
+        Db.println(sizeof(packType));
+        Db.print("mEncoder size :");
+        Db.println(sizeof(mEncoder));
+        Db.print("mCurrent size :");
+        Db.println(sizeof(mCurrent));
+        Db.print("mAll size :");
+        Db.println(sizeof(mAll));
+        Db.print("settingsBoard size :");
+        Db.println(sizeof(settingsBoard));
+        Db.print("adcRef size :");
+        Db.println(sizeof(adcRef));
+        Db.print("bool(diff read) size :");
+        Db.println(sizeof(bool));
+        Db.print("pwmFreq size :");
+        Db.println(sizeof(pwmFreq));
+        Db.println();
 #else
-		printf("Data size:\n");
-		printf("packType size : %d\n",sizeof(packType));
-		printf("mEncoder size : %d\n",sizeof(mEncoder));
-		printf("mCurrent size : %d\n",sizeof(mCurrent));
-		printf("mAll size : %d\n",sizeof(mAll));
-		printf("settingsBoard size : %d\n",sizeof(settingsBoard));
-		printf("adcRef size : %d\n",sizeof(adcRef));
-		printf("bool(diff read) size : %d\n",sizeof(bool));
-		printf("pwmFreq size : %d\n\n",sizeof(pwmFreq));
+        printf("Data size:\n");
+        printf("packType size : %d\n",sizeof(packType));
+        printf("mEncoder size : %d\n",sizeof(mEncoder));
+        printf("mCurrent size : %d\n",sizeof(mCurrent));
+        printf("mAll size : %d\n",sizeof(mAll));
+        printf("settingsBoard size : %d\n",sizeof(settingsBoard));
+        printf("adcRef size : %d\n",sizeof(adcRef));
+        printf("bool(diff read) size : %d\n",sizeof(bool));
+        printf("pwmFreq size : %d\n\n",sizeof(pwmFreq));
 #endif //#ifdef ScorboarFirmware
 
 #endif //#ifdef PackDebug

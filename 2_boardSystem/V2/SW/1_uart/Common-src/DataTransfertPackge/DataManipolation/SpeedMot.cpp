@@ -4,9 +4,7 @@
 
 #include "SpeedMot.h"
 
-namespace DataManipolation{
-
-
+namespace DataManipolation {
     SpeedMot::SpeedMot(mSpeed &s) {
         this->changePack(s);
     }
@@ -16,7 +14,7 @@ namespace DataManipolation{
     }
 
     void SpeedMot::changePack(mSpeed &speed) {
-        this->speedPack=&speed;
+        this->speedPack = &speed;
     }
 
     void SpeedMot::copyPack(SpeedMot &speed) {
@@ -24,7 +22,7 @@ namespace DataManipolation{
     }
 
     void SpeedMot::copyPack(mSpeed &speed) {
-        memcpy(this->speedPack,&speed, sizeof(mSpeed));
+        memcpy(this->speedPack, &speed, sizeof(mSpeed));
     }
 
     mSpeed &SpeedMot::getPwm() {
@@ -50,7 +48,7 @@ namespace DataManipolation{
     }
 
     void SpeedMot::pwmSet(motCode mot, short mVal) {
-        mSpeed& s=this->getPwm();
+        mSpeed &s = this->getPwm();
         if (mVal == freeRun || mVal == hardStop || mVal == softStop || mVal == ignore || abs(mVal) <= 255)
             s[mot] = mVal;
         else

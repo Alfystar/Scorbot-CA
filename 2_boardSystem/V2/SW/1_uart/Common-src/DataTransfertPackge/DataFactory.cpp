@@ -3,8 +3,8 @@
 //
 
 #include "DataFactory.h"
-namespace dataFactory {
 
+namespace dataFactory {
     SPIPACK &makeSPIPACK() {
         SPIPACK *p = (SPIPACK *) malloc(sizeof(SPIPACK));
         memset(p, 0, sizeof(SPIPACK));

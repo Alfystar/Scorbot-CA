@@ -18,7 +18,6 @@ int main(int argc, char *argv[]) {
         e.what();
         exit(-1);
     }
-
     uart2Rasp *dato;
     settingsBoard pData;
     SettingBoard_C *p = new SettingBoard_C(pData);

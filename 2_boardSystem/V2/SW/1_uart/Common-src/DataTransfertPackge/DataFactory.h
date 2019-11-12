@@ -18,28 +18,27 @@ namespace dataFactory {
     using namespace DataManipolation;
 /// Primitive factory
     mSpeed &makeMSpeed();
-    void freeMSpeed(mSpeed* p);
+    void freeMSpeed(mSpeed *p);
 
     settingsBoard &makeSettingBoard();
-    void freeSettingBoard(settingsBoard* p);
+    void freeSettingBoard(settingsBoard *p);
 
     mCurrent &makeMCurrent();
-    void freeMCurrent(mCurrent* p);
+    void freeMCurrent(mCurrent *p);
 
     mEncoder &makeMEncoder();
-    void freeMEncoder(mEncoder* p);
+    void freeMEncoder(mEncoder *p);
 
     mAll &makeMAll();
-    void freeMAll(mAll* p);
+    void freeMAll(mAll *p);
 
     SPIPACK &makeSPIPACK();
-    void freeSPIPACK(SPIPACK* p);
+    void freeSPIPACK(SPIPACK *p);
 
     uart2Ard &makeUart2Ard();
-    void freeUart2Ard(uart2Ard* p);
+    void freeUart2Ard(uart2Ard *p);
 
     uart2Rasp &makeUart2Rasp();
-    void freeUart2Rasp(uart2Rasp* p);
+    void freeUart2Rasp(uart2Rasp *p);
 };
-
 #endif //DATAFACTORY_H

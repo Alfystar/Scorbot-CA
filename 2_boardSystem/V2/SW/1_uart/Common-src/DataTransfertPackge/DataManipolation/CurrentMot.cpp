@@ -4,7 +4,7 @@
 
 #include "CurrentMot.h"
 
-namespace DataManipolation{
+namespace DataManipolation {
     CurrentMot::CurrentMot(mCurrent &c) {
         this->changePack(c);
     }
@@ -14,7 +14,7 @@ namespace DataManipolation{
     }
 
     void CurrentMot::changePack(mCurrent &c) {
-        this->curPack=&c;
+        this->curPack = &c;
     }
 
     void CurrentMot::copyCur(CurrentMot &c) {
@@ -22,7 +22,7 @@ namespace DataManipolation{
     }
 
     void CurrentMot::copyCur(mCurrent &c) {
-        memcpy(this->curPack,&c, sizeof(mCurrent));
+        memcpy(this->curPack, &c, sizeof(mCurrent));
     }
 
     mCurrent &CurrentMot::getCurrent() {
@@ -34,7 +34,7 @@ namespace DataManipolation{
     }
 
     void CurrentMot::curSet(motCode mot, short cur) {
-        *(this->curPack)[mot]=cur;
+        *(this->curPack)[mot] = cur;
     }
 
     void CurrentMot::printCurrent() {

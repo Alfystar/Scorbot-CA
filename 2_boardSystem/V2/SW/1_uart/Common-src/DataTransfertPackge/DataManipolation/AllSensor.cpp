@@ -4,7 +4,7 @@
 
 #include "AllSensor.h"
 
-namespace DataManipolation{
+namespace DataManipolation {
     AllSensor::AllSensor(mAll &all) :
             DataManipolation::CurrentMot(&all.cur),
             DataManipolation::EncoderMot(&all.en) {
@@ -18,11 +18,11 @@ namespace DataManipolation{
     }
 
     void AllSensor::changePack(mAll &all) {
-        this->allPack=&all;
+        this->allPack = &all;
     }
 
     void AllSensor::copyPack(mAll &all) {
-        memcpy(this->allPack,&all, sizeof(mAll));
+        memcpy(this->allPack, &all, sizeof(mAll));
     }
 
     void AllSensor::copyPack(AllSensor &all) {

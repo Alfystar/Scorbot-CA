@@ -6,6 +6,7 @@
 
 namespace Uart {
 #ifdef linuxSide
+
     UartDriver::UartDriver(const std::string &device) {
         this->fd = open(device.c_str(), O_RDWR | O_NOCTTY);//| O_NDELAY
         if (fd == -1) {
@@ -200,6 +201,7 @@ namespace Uart {
 #endif
 #ifdef linuxSide
     size_t bRead;
+
     void UartDriver::uartReader(UartDriver *d) {
 #ifdef UartDriverDebug
         std::cout << "uartReader Thread start\n";
@@ -220,8 +222,6 @@ namespace Uart {
     }
 
 #endif
-
-
     unsigned char dato;
     size_t datoId;
 
@@ -342,106 +342,106 @@ namespace Uart {
     }
 
 //mSpeedData=1,settingBoardData, mCurrentData, mAllData, mEncoderData, sampleTimeEn , sampleTimeCur, goHomeUart, settingAsk, RESEND
-        size_t UartDriver::sizeMessage(uartPackType t) {
-            switch (t) {
-                case mSpeedData:
-                    return sizeof(mSpeed);
-                case settingBoardData:
-                    return sizeof(settingsBoard);
-                case mCurrentData:
-                    return sizeof(mCurrent);
-                case mAllData:
-                    return sizeof(mAll);
-                case mEncoderData:
-                    return sizeof(mEncoder);
-                case sampleTimeEn:
-                case sampleTimeCur:
-                    return sizeof(short);
-                case goHomeUart:
-                case settingAsk:
-                case RESEND:
-                default:
-                    return 0;
-                    break;
-            }
-        }
-
-        void UartDriver::serialPackDb(uart2Ard &p) {
-#ifdef linuxSide
-            std::cout << "serialPackDb(uartRecivePack):" << &p << "\n";
-#else
-            Db.print("serialPackDb(uartRecivePack):");
-            Db.println((unsigned int) &p);
-#endif
-            switch (p.type) {
-                case mSpeedData:
-                    SpeedMot::printSpeed(&p.pack.up.speed);
-                    break;
-                case settingBoardData:
-                    SettingBoard_C::printSetting(p.pack.up.prop);
-                    break;
-                case sampleTimeEn:
-#ifdef linuxSide
-                    std::cout << "Data Recive: sampleTimeEn=" << (p.pack.up.sampleEn);
-#else
-                Db.print("Data Recive: sampleTimeEn=");
-                    Db.println((int)p.pack.up.sampleEn);
-#endif
-                    break;
-                case sampleTimeCur:
-#ifdef linuxSide
-                    std::cout << "Data Recive: sampleTimeCur=" << (p.pack.up.sampleCur);
-#else
-                Db.print("Data Recive: sampleTimeCur=");
-                                    Db.println((int)p.pack.up.sampleCur);
-#endif
-                    break;
-                case settingAsk:
-#ifdef linuxSide
-                    std::cout << "Data Recive: settingAsk=" << (p.pack.up.sampleCur);
-#else
-                    Db.println("Data Recive: settingAsk= Notting");
-#endif
-                    break;
-                default:
-#ifdef linuxSide
-                    std::cout << "Dentro Default!! type=" << p.type << "\n";
-#else
-                Db.print("Dentro Default!! type=");
-                    Db.println((int)p.type);
-#endif
-                    break;
-            }
-        }
-
-        void UartDriver::serialPackDb(uart2Rasp &p) {
-#ifdef linuxSide
-            std::cout << "serialPackDb(uartSendPack):" << &p << "\n";
-#else
-            Db.print("serialPackDb(uartSendPack):");
-            Db.println((unsigned int) &p);
-#endif
-            switch (p.type) {
-                case mEncoderData:
-                    EncoderMot::printEncoder(&p.pack.up.en);
-                    break;
-                case mCurrentData:
-                    CurrentMot::printCurrent(&p.pack.up.cur);
-                    break;
-                case mAllData:
-                    AllSensor::printAll(&p.pack.up.sens);
-                    break;
-                case settingBoardData:
-                    SettingBoard_C::printSetting(p.pack.up.prop);
-                    break;
-                default:
-#ifdef linuxSide
-                    std::cout << "Dentro Default!! type=" << p.type << "\n";
-#else
-                Db.print("Dentro Default!! type=");
-                Db.println((int)p.type);
-#endif
-                    break;
-            }
+    size_t UartDriver::sizeMessage(uartPackType t) {
+        switch (t) {
+            case mSpeedData:
+                return sizeof(mSpeed);
+            case settingBoardData:
+                return sizeof(settingsBoard);
+            case mCurrentData:
+                return sizeof(mCurrent);
+            case mAllData:
+                return sizeof(mAll);
+            case mEncoderData:
+                return sizeof(mEncoder);
+            case sampleTimeEn:
+            case sampleTimeCur:
+                return sizeof(short);
+            case goHomeUart:
+            case settingAsk:
+            case RESEND:
+            default:
+                return 0;
+                break;
         }
     }
+
+    void UartDriver::serialPackDb(uart2Ard &p) {
+#ifdef linuxSide
+        std::cout << "serialPackDb(uartRecivePack):" << &p << "\n";
+#else
+        Db.print("serialPackDb(uartRecivePack):");
+        Db.println((unsigned int) &p);
+#endif
+        switch (p.type) {
+            case mSpeedData:
+                SpeedMot::printSpeed(&p.pack.up.speed);
+                break;
+            case settingBoardData:
+                SettingBoard_C::printSetting(p.pack.up.prop);
+                break;
+            case sampleTimeEn:
+#ifdef linuxSide
+                std::cout << "Data Recive: sampleTimeEn=" << (p.pack.up.sampleEn);
+#else
+            Db.print("Data Recive: sampleTimeEn=");
+                Db.println((int)p.pack.up.sampleEn);
+#endif
+                break;
+            case sampleTimeCur:
+#ifdef linuxSide
+                std::cout << "Data Recive: sampleTimeCur=" << (p.pack.up.sampleCur);
+#else
+            Db.print("Data Recive: sampleTimeCur=");
+                                Db.println((int)p.pack.up.sampleCur);
+#endif
+                break;
+            case settingAsk:
+#ifdef linuxSide
+                std::cout << "Data Recive: settingAsk=" << (p.pack.up.sampleCur);
+#else
+                Db.println("Data Recive: settingAsk= Notting");
+#endif
+                break;
+            default:
+#ifdef linuxSide
+                std::cout << "Dentro Default!! type=" << p.type << "\n";
+#else
+            Db.print("Dentro Default!! type=");
+                Db.println((int)p.type);
+#endif
+                break;
+        }
+    }
+
+    void UartDriver::serialPackDb(uart2Rasp &p) {
+#ifdef linuxSide
+        std::cout << "serialPackDb(uartSendPack):" << &p << "\n";
+#else
+        Db.print("serialPackDb(uartSendPack):");
+        Db.println((unsigned int) &p);
+#endif
+        switch (p.type) {
+            case mEncoderData:
+                EncoderMot::printEncoder(&p.pack.up.en);
+                break;
+            case mCurrentData:
+                CurrentMot::printCurrent(&p.pack.up.cur);
+                break;
+            case mAllData:
+                AllSensor::printAll(&p.pack.up.sens);
+                break;
+            case settingBoardData:
+                SettingBoard_C::printSetting(p.pack.up.prop);
+                break;
+            default:
+#ifdef linuxSide
+                std::cout << "Dentro Default!! type=" << p.type << "\n";
+#else
+            Db.print("Dentro Default!! type=");
+            Db.println((int)p.type);
+#endif
+                break;
+        }
+    }
+}

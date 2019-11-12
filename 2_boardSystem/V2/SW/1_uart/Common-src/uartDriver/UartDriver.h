@@ -9,6 +9,7 @@
 //#define CMD_Send_PRINT 1
 
 #ifdef linuxSide
+
 #include <stdlib.h>
 #include <stdio.h>
 #include <iostream>
@@ -30,7 +31,6 @@
 #include "../DataTransfertPackge/DataTransfert_AllInclude.h"
 #include "../circularBuffer/CircularBuffer.h"
 #endif
-
 #define sizeofArray(x)  sizeof(x)/sizeof(x[0])
 #ifdef linuxSide
 #define cbSize 32
@@ -39,12 +39,9 @@
 #define cbSize 8
 #define dataSize 4*sizeof(uart2Ard)
 #endif
-
 #ifdef linuxSide
 #else
 #endif
-
-
 namespace Uart {
     using namespace DataPrimitive;
     using namespace DataManipolation;
@@ -75,15 +72,12 @@ namespace Uart {
         void serialIsr();
         void serialTrySend();
 #endif
-
         /// Data get
         size_t Available(); // su ard uartAvailable
         dIn *getLastRecive();
-
 #ifdef linuxSide
         dIn *getLastReciveWait();
 #endif
-
         /// Data print for debug
         static void serialPackDb(uart2Ard &p);
         static void serialPackDb(uart2Rasp &p);
@@ -100,7 +94,6 @@ namespace Uart {
 #else
         HardwareSerial *com;
 #endif
-
         //Variabili della coda di ricezione dati
         unsigned char reciveBuf[dataSize];   //4096
         CircularBuffer<unsigned char> *cbByteRecive;

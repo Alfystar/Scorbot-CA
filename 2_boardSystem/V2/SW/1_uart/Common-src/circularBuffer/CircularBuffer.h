@@ -53,7 +53,8 @@ public:
     bool full() const;
     size_t capacity() const;
     size_t size() const;
-    size_t linearEnd() const;   //return how many slot have the head before encounter the last array index (ignore tail position)
+    size_t
+    linearEnd() const;   //return how many slot have the head before encounter the last array index (ignore tail position)
 
 private:
     T *buf_;
@@ -167,7 +168,7 @@ int CircularBuffer<T>::put(T *item, size_t len) {
 
 template<class T>
 inline int CircularBuffer<T>::put_externalWrite() {
-   return put_externalWrite(1); //old head
+    return put_externalWrite(1); //old head
 }
 
 
