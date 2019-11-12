@@ -15,17 +15,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/uartDriver" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/circularBuffer/CircularBuffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/circularBuffer/CircularBuffer.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/HW_rename.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/HW_rename.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/Project-lib/uartScorbot/UartCmd.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/Project-lib/uartScorbot/UartCmd.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/Project-lib/uartScorbot/UartCmd.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/Project-lib/uartScorbot/UartCmd.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/ScoreBoard_Uart.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/ScoreBoard_Uart.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/pcListen_demo/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/pcListen_demo/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/uartDriver/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/uartDriver/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/uartDriver/UartDriver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/uartDriver/UartDriver.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/uartDriver/UartDriver.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/uartDriver/UartDriver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/uartDriver/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/uartDriver/UartDriver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/UartDriver.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/uartDriver/UartDriver.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/UartDriver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/uartDriver/UartExeption.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/UartExeption.h" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +59,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/uartDriver" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/Project-lib" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -75,19 +70,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/Project-lib" />
+      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src" />
+      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/uartDriver" />
+      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/circularBuffer" />
+      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src" />
       <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSize" />
       <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation" />
       <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW" />
       <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/ScorbotRaspLib" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/uartDriver" />
-      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/circularBuffer" />
-      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src" />
-      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSize_root/src" />
-      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSize_root" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -172,6 +167,7 @@
       <workItem from="1573337970432" duration="6662000" />
       <workItem from="1573379877529" duration="22002000" />
       <workItem from="1573472459143" duration="15932000" />
+      <workItem from="1573564962435" duration="1063000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
       <created>1568027375662</created>
