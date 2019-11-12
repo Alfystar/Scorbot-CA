@@ -19,6 +19,7 @@ namespace DataManipolation {
     class SpeedMot {
     public:
         SpeedMot(mSpeed& s);
+        SpeedMot(mSpeed *s);
         void changePack(mSpeed& speed);
         void copyPack(SpeedMot& speed);
         void copyPack(mSpeed& speed);
@@ -28,6 +29,7 @@ namespace DataManipolation {
         void pwmSet(short m1, short m2, short m3, short m4, short m5, short m6);
         void pwmSet(motCode mot, short pwm);
         void printSpeed();
+        static void printSpeed(mSpeed *speed);
         static void printSpeed(mSpeed& speed);
     private:
         mSpeed* speedPack;

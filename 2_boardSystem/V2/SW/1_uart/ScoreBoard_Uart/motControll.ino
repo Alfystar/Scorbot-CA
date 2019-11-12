@@ -55,8 +55,6 @@ void motorStateMachine() {
 
 
 void home() {
-    unsigned long time = 0;
-
 	Serial.println("Moving in secure zone");
 	mot[Mot3]->drive_motor(-midVel);
 	delay(3000);

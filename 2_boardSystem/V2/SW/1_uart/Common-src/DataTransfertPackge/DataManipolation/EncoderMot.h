@@ -17,6 +17,7 @@ namespace DataManipolation {
     class EncoderMot {
     public:
         EncoderMot(mEncoder& en);
+        EncoderMot(mEncoder *en);
         void changePack(mEncoder& en);
         void copyEn(EncoderMot &en);
         void copyEn(mEncoder &en);
@@ -24,6 +25,7 @@ namespace DataManipolation {
         short getEn(motCode mot);
         void enSet(motCode mot, short en);
         void printEncoder();
+        static void printEncoder(mEncoder *en);
         static void printEncoder(mEncoder& en);
     private:
         mEncoder* enPack;

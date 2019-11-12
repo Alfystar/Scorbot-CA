@@ -9,6 +9,10 @@ namespace DataManipolation{
         this->changePack(s);
     }
 
+    SettingBoard_C::SettingBoard_C(settingsBoard *s) {
+        this->changePack(*s);
+    }
+
     void SettingBoard_C::changePack(settingsBoard &sets) {
         this->setPack=&sets;
     }

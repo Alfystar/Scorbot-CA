@@ -5,6 +5,7 @@
 #include "UartDriver.h"
 
 namespace Uart {
+#ifdef linuxSide
     UartDriver::UartDriver(const std::string &device) {
         this->fd = open(device.c_str(), O_RDWR | O_NOCTTY);//| O_NDELAY
         if (fd == -1) {
@@ -55,41 +56,81 @@ namespace Uart {
             throw UartExeption("Impossibile inizializzare il semaforo a 0", errno);
         }
 
-
-
-//        memset(cbSendBuf, 0, sizeof(cbSendBuf));
-//        this->cbSend = new CircularBuffer<uart2Ard>(cbSendBuf, sizeof(cbSendBuf));
-
-        //pthread_t readerTh;
-        //pthread_create(&readerTh, nullptr, this->uartReader, this);
+        /// Thead init
+        writeUart_mutex.unlock();   //set for sure the unlock state
         this->readerTh = new std::thread(this->uartReader, this);
     }
+
+#else
+    UartDriver::UartDriver(HardwareSerial *serial, long vel) {
+        this->com = serial;
+        com->begin(vel);
+#ifdef UartDriverDebug
+        Db.println("UartCmd Created");
+#endif
+        this->potPackType = 0;
+        this->potPackStart = 0;
+        this->expettedEnd = 0;
+
+        //Buffer Circolare per i pacchetti ricevuti
+        memset(this->cbReciveBuf, 0,sizeof(this->cbReciveBuf));
+        memset(this->cbSendPackBuf, 0,sizeof(this->cbSendPackBuf));
+#ifdef UartDriverDebug
+        Db.println("cbRecive:");
+#endif
+        this->cbRecive = new CircularBuffer<dIn>(
+                (dIn *) this->cbReciveBuf,
+                sizeofArray(cbReciveBuf));
+
+        //Buffer Circolare per i pacchetti da inviare (Se la dimensione satura la scrittura)
+#ifdef UartDriverDebug
+        Db.println("cbSend:");
+#endif
+        this->cbSend = new CircularBuffer<dOut>(
+                (dOut *) this->cbSendPackBuf, sizeofArray(cbSendPackBuf));
+
+        //Buffer Circolare per leggere la seriale prima che si satura
+        //pulisco la memoria byte ricevuti
+        memset(this->reciveBuf, 0, sizeofArray(this->reciveBuf));
+#ifdef UartDriverDebug
+        Db.println("cbData:");
+#endif
+        this->cbByteRecive = new CircularBuffer<unsigned char>(
+                (unsigned char *) this->reciveBuf,
+                sizeofArray(reciveBuf));
+
+    }
+#endif
 
     size_t UartDriver::Available() {
         return this->cbRecive->size();
     }
 
-    uart2Rasp *UartDriver::getLastRecive() {
+
+    dIn *UartDriver::getLastRecive() {
         if (!cbRecive->empty()) {
             return this->cbRecive->getPtr();
         }
         return nullptr;
     }
 
-    uart2Rasp *UartDriver::getLastReciveWait() {
+#ifdef linuxSide
+
+    dIn *UartDriver::getLastReciveWait() {
         sem_wait(&recivedPackSem);
         return this->cbRecive->getPtr();
     }
 
-    std::mutex WriteUart_mutex;  // protects packSend from concurrency
+#endif
 
     void UartDriver::packSend(uartPackType type, data2Rasp *pack) {
+#ifdef linuxSide
         size_t bWrite;
         size_t mexSize;
         unsigned char writeBuf[sizeof(data2Rasp) + 3];  //max data size + startCode+ End code + type;
 
-        std::lock_guard<std::mutex> lock(WriteUart_mutex);
-        // WriteUart_mutex is automatically released when lock goes out of scope
+        std::lock_guard<std::mutex> lock(writeUart_mutex);
+        // writeUart_mutex is automatically released when lock goes out of scope
 
         mexSize = sizeMessage(type);
         writeBuf[0] = StartCode;
@@ -108,11 +149,57 @@ namespace Uart {
             i += bWrite;
             mexSize -= bWrite;
         }
-        std::cout << "Message Send\n";
+#else
+        //Aggiungo il pacchetto al buffer circolare
+        uart2Rasp *p = this->cbSend->getHeadPtr();
+        this->cbSend->put_externalWrite();
+        p->type = type;
+        memcpy((void *) p->pack.buf, pack, this->sizeMessage(type));
+#endif
     }
 
-    size_t bRead;
+#ifndef linuxSide
+    uart2Ard tempPack;
+    void UartDriver::serialIsr() {
+        //carico il buffer dei dati da leggere
+        while (com->available())
+            this->cbByteRecive->put(com->read());
+        //analizzo i dati
+        this->dataDiscover();
+        return;
+    }
 
+    uart2Rasp *sTemp = nullptr;
+    char len = 0;
+    void UartDriver::serialTrySend() {
+        if (this->cbSend->empty()) {
+            return;
+        }
+        sTemp = this->cbSend->getTailPtr();
+        len = this->sizeMessage(sTemp->type);
+
+        if (com->availableForWrite() > (len + 3))   //len+Type+StartCode+EndCode
+        {
+            //aggiorno la lettura della coda
+            this->cbSend->get_externalRead();
+#ifdef CMD_Send_PRINT
+            UartDriver::serialPackDb(*sTemp);
+#endif
+            com->write((unsigned char) StartCode);
+
+            com->write((unsigned char) sTemp->type);
+            for (char i = 0; i < len; i++){
+                com->write((unsigned char) sTemp->pack.buf[i]);
+            }
+            com->write((unsigned char) EndCode);
+        } else { //non c'era abbastanza spazio, la prossima volta riparto dallo stesso punto
+            return;
+        }
+
+    }
+#endif
+#ifdef linuxSide
+    size_t bRead;
     void UartDriver::uartReader(UartDriver *d) {
 #ifdef UartDriverDebug
         std::cout << "uartReader Thread start\n";
@@ -131,6 +218,9 @@ namespace Uart {
             d->dataDiscover();
         }
     }
+
+#endif
+
 
     unsigned char dato;
     size_t datoId;
@@ -275,43 +365,80 @@ namespace Uart {
         }
 
         void UartDriver::serialPackDb(uart2Ard &p) {
+#ifdef linuxSide
             std::cout << "serialPackDb(uartRecivePack):" << &p << "\n";
+#else
+            Db.print("serialPackDb(uartRecivePack):");
+            Db.println((unsigned int) &p);
+#endif
             switch (p.type) {
                 case mSpeedData:
-                    SpeedMot::printSpeed(p.pack.up.speed);
+                    SpeedMot::printSpeed(&p.pack.up.speed);
                     break;
                 case settingBoardData:
                     SettingBoard_C::printSetting(p.pack.up.prop);
                     break;
                 case sampleTimeEn:
-                    std::cout << "Data Recive: sampleTimeEn:" << (p.pack.up.sampleEn);
+#ifdef linuxSide
+                    std::cout << "Data Recive: sampleTimeEn=" << (p.pack.up.sampleEn);
+#else
+                Db.print("Data Recive: sampleTimeEn=");
+                    Db.println((int)p.pack.up.sampleEn);
+#endif
                     break;
                 case sampleTimeCur:
-                    std::cout << "Data Recive: sampleTimeCur:" << (p.pack.up.sampleCur);
+#ifdef linuxSide
+                    std::cout << "Data Recive: sampleTimeCur=" << (p.pack.up.sampleCur);
+#else
+                Db.print("Data Recive: sampleTimeCur=");
+                                    Db.println((int)p.pack.up.sampleCur);
+#endif
+                    break;
+                case settingAsk:
+#ifdef linuxSide
+                    std::cout << "Data Recive: settingAsk=" << (p.pack.up.sampleCur);
+#else
+                    Db.println("Data Recive: settingAsk= Notting");
+#endif
                     break;
                 default:
+#ifdef linuxSide
                     std::cout << "Dentro Default!! type=" << p.type << "\n";
+#else
+                Db.print("Dentro Default!! type=");
+                    Db.println((int)p.type);
+#endif
                     break;
             }
         }
 
         void UartDriver::serialPackDb(uart2Rasp &p) {
+#ifdef linuxSide
             std::cout << "serialPackDb(uartSendPack):" << &p << "\n";
+#else
+            Db.print("serialPackDb(uartSendPack):");
+            Db.println((unsigned int) &p);
+#endif
             switch (p.type) {
                 case mEncoderData:
-                    EncoderMot::printEncoder(p.pack.up.en);
+                    EncoderMot::printEncoder(&p.pack.up.en);
                     break;
                 case mCurrentData:
-                    CurrentMot::printCurrent(p.pack.up.cur);
+                    CurrentMot::printCurrent(&p.pack.up.cur);
                     break;
                 case mAllData:
-                    AllSensor::printAll(p.pack.up.sens);
+                    AllSensor::printAll(&p.pack.up.sens);
                     break;
                 case settingBoardData:
                     SettingBoard_C::printSetting(p.pack.up.prop);
                     break;
                 default:
+#ifdef linuxSide
                     std::cout << "Dentro Default!! type=" << p.type << "\n";
+#else
+                Db.print("Dentro Default!! type=");
+                Db.println((int)p.type);
+#endif
                     break;
             }
         }

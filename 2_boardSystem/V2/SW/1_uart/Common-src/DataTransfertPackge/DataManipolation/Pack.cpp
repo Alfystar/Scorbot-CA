@@ -7,12 +7,12 @@
 namespace DataManipolation {
     Pack::Pack() {
         this->clearPack();
-        sens = new AllSensor(this->data.forRasp.up.sens);
-        vel = new SpeedMot(this->data.forArd.up.speed);
-        cur = new CurrentMot(this->data.forRasp.up.cur);
-        en = new EncoderMot(this->data.forRasp.up.en);
-        sets2Ard = new SettingBoard_C(this->data.forArd.up.prop);
-        sets2Rasp = new SettingBoard_C(this->data.forRasp.up.prop);
+        sens = new AllSensor(&this->data.forRasp.up.sens);
+        vel = new SpeedMot(&this->data.forArd.up.speed);
+        cur = new CurrentMot(&this->data.forRasp.up.cur);
+        en = new EncoderMot(&this->data.forRasp.up.en);
+        sets2Ard = new SettingBoard_C(&this->data.forArd.up.prop);
+        sets2Rasp = new SettingBoard_C(&this->data.forRasp.up.prop);
 #ifdef PackDebug
 #ifdef ScorboarFirmware
 		Db.println("Data size:");

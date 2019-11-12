@@ -11,6 +11,10 @@ namespace DataManipolation{
         this->changePack(s);
     }
 
+    SpeedMot::SpeedMot(mSpeed *s) {
+        this->changePack(*s);
+    }
+
     void SpeedMot::changePack(mSpeed &speed) {
         this->speedPack=&speed;
     }
@@ -55,6 +59,10 @@ namespace DataManipolation{
 
     void SpeedMot::printSpeed() {
         this->printSpeed(this->getPwm());
+    }
+
+    void SpeedMot::printSpeed(mSpeed *speed) {
+        SpeedMot::printSpeed(*speed);
     }
 
     void SpeedMot::printSpeed(mSpeed &speed) {

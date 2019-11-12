@@ -6,9 +6,15 @@
 
 namespace DataManipolation{
     AllSensor::AllSensor(mAll &all) :
-        DataManipolation::CurrentMot(all.cur),
-        DataManipolation::EncoderMot(all.en){
+            DataManipolation::CurrentMot(&all.cur),
+            DataManipolation::EncoderMot(&all.en) {
         this->changePack(all);
+    }
+
+    AllSensor::AllSensor(mAll *all) :
+            DataManipolation::CurrentMot(&all->cur),
+            DataManipolation::EncoderMot(&all->en) {
+        this->changePack(*all);
     }
 
     void AllSensor::changePack(mAll &all) {
@@ -31,8 +37,12 @@ namespace DataManipolation{
         this->printAll(this->getSens());
     }
 
+    void AllSensor::printAll(mAll *all) {
+        AllSensor::printAll(*all);
+    }
+
     void AllSensor::printAll(mAll &all) {
-        AllSensor::printEncoder(all.en);
-        AllSensor::printCurrent(all.cur);
+        AllSensor::printEncoder(&all.en);
+        AllSensor::printCurrent(&all.cur);
     }
 };

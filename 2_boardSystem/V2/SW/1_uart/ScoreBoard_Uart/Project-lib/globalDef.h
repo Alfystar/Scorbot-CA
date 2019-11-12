@@ -9,16 +9,10 @@
 #define PROJECT_LIB_GLOBALDEF_H_
 
 #include "../HW_rename.h"
-#include "../DataTransfertPackge/DataPrimitive.h"
-#include "../DataTransfertPackge/DataFactory.h"
-#include "../DataTransfertPackge/DataManipolation/CurrentMot.h"
-#include "../DataTransfertPackge/DataManipolation/EncoderMot.h"
-#include "../DataTransfertPackge/DataManipolation/AllSensor.h"
-#include "../DataTransfertPackge/DataManipolation/SettingBoard_C.h"
-#include "../DataTransfertPackge/DataManipolation/SpeedMot.h"
-#include "../DataTransfertPackge/DataManipolation/Pack.h"
+#include "../DataTransfertPackge/DataTransfert_AllInclude.h"
 #include "spiScorebot/spiScorebot.h"
-#include "uartScorbot/UartCmd.h"
+//#include "uartScorbot/UartCmd.h"
+#include "../uartDriver/UartDriver.h"
 #include "adcReader/adcReader.h"
 #include "msEnlib/msEnlib.h"
 
@@ -35,10 +29,13 @@ extern SettingBoard_C Gset;
 namespace InternalDevice {
 }    //to mute the compiler (￣Д￣)
 using namespace InternalDevice;
+namespace Uart {
+}    //to mute the compiler (￣Д￣)
+using namespace Uart;
 
 extern class SpiDevice *spi;
 
-extern class UartCmd *uart;
+extern class UartDriver *uart;
 
 extern class AdcDevice *adc;
 

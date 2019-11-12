@@ -9,6 +9,10 @@ namespace DataManipolation{
         this->changePack(c);
     }
 
+    CurrentMot::CurrentMot(mCurrent *c) {
+        this->changePack(*c);
+    }
+
     void CurrentMot::changePack(mCurrent &c) {
         this->curPack=&c;
     }
@@ -35,6 +39,10 @@ namespace DataManipolation{
 
     void CurrentMot::printCurrent() {
         this->printCurrent(this->getCurrent());
+    }
+
+    void CurrentMot::printCurrent(mCurrent *c) {
+        CurrentMot::printCurrent(*c);
     }
 
     void CurrentMot::printCurrent(mCurrent &c) {

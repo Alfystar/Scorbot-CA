@@ -9,7 +9,7 @@
 #define MOTOR_LIMIT_ENABLE 1    //attiva/disattiva compilazione del codice che sceglie la classe da istaziare per i motori
 settingsBoard globSets;
 SpiDevice *spi;
-UartCmd *uart;
+UartDriver *uart;
 AdcDevice *adc;
 ScorFeed *sFeed;
 
@@ -51,7 +51,7 @@ void setup() {
 	Db.println("\tSetUp ADC");
 
     //spi = new SpiDevice();
-	uart = new UartCmd(&Cmd, CmdVel);
+	uart = new UartDriver(&Cmd, CmdVel);
 	initDataSend();
 	Db.flush();
 	Db.println("\tSetUp CMD Serial");
@@ -90,12 +90,12 @@ void loop() {
 	if (Cmd.available())
 		uart->serialIsr();
     //Serial command read
-	if (uart->uartAvailable()) {
+	if (uart->Available()) {
         r = uart->getLastRecive();
         excutePack(*r);
 #ifdef CMD_PRINT
         Cmd.println("Printo pacchetto ricevuto:");
-        UartCmd::serialPackDb(*r);
+        UartDriver::serialPackDb(*r);
 #endif
 	}
     dataSend();
@@ -198,5 +198,5 @@ ISR(PCINT0_vect) {
 	sFeed->isrFunxEN();
 	//sFeed->dSubDebug();
 }
-ISR(PCINT2_vect, ISR_ALIASOF(PCINT0_vect));
+ISR(PCINT2_vect, ISR_ALIASOF(PCINT0_vect)); // @suppress("Unused function declaration")
 

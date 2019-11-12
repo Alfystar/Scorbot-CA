@@ -13,11 +13,13 @@ namespace DataManipolation {
     class AllSensor : public CurrentMot, public EncoderMot {
     public:
         AllSensor(mAll& all);
+        AllSensor(mAll *all);
         void changePack(mAll& all);
         void copyPack(mAll& all);
         void copyPack(AllSensor& all);
         mAll& getSens();
         void printAll();
+        static void printAll(mAll *all);
         static void printAll(mAll& all);
     private:
         mAll* allPack;

@@ -6,6 +6,7 @@ void memoryLoad() {
 }
 
 void memorySave(settingsBoard &set) {
+    Db.println("Salvataggio setting in corso");
     EEPROM.put(0, set);
     memcpy(&globSets, &set, sizeof(settingsBoard));    //update global set
 #ifdef SERIAL_PRINT

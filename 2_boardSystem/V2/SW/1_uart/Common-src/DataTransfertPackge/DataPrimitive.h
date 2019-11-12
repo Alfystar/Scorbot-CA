@@ -49,8 +49,8 @@ namespace DataPrimitive{
         mCurrentData,
         mAllData,
         mEncoderData,
-        sampleTimeEn,
-        sampleTimeCur,
+        sampleTimeEn,        //stabilisco che trasporto un unisgned long
+        sampleTimeCur,        //stabilisco che trasporto un unisgned long
         goHomeUart,
         settingAsk,
         RESEND
@@ -76,7 +76,7 @@ namespace DataPrimitive{
     typedef struct mAll_ {
         mEncoder en;
         mCurrent cur;
-    }mAll;
+    }__attribute__((packed)) mAll;
 
 /*Struttura di Invio dati all'arduino*/
     typedef union {
@@ -86,8 +86,8 @@ namespace DataPrimitive{
             unsigned short sampleEn;
             unsigned short sampleCur;
         } up;
-        char buf[sizeof(sendType)];
-    } data2Ard;
+        unsigned char buf[sizeof(sendType)];
+    } __attribute__((packed)) data2Ard;
 
 
 /*Struttura di Invio dati al Rapsberry*/
@@ -98,8 +98,8 @@ namespace DataPrimitive{
             mAll sens;
             settingsBoard prop;
         } up;
-        char buf[sizeof(ricType)];
-    } data2Rasp;
+        unsigned char buf[sizeof(ricType)];
+    } __attribute__((packed)) data2Rasp;
 
 
 ///#################################################################
@@ -108,7 +108,7 @@ namespace DataPrimitive{
         packType type;
         data2Ard forArd;
         data2Rasp forRasp;
-    } SPIPACK;
+   } __attribute__((packed)) SPIPACK;
 
 ///#################################################################
 ///Sendable uart pack
@@ -116,13 +116,13 @@ namespace DataPrimitive{
         uartPackType type;
         //short checkSum; Prima vedere se serve
         data2Ard pack;
-    } uart2Ard;
+    } __attribute__((packed)) uart2Ard;
 
     typedef struct uart2Rasp_ {
         uartPackType type;
         //short checkSum; Prima vedere se serve
         data2Rasp pack;
-    } uart2Rasp;
+    } __attribute__((packed)) uart2Rasp;
 
 }
 

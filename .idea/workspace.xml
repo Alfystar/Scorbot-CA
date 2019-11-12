@@ -15,12 +15,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/uartDriver" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/uartDriver/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/uartDriver/UartDriver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/UartDriver.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/uartDriver/UartDriver.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/UartDriver.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/uartDriver/UartExeption.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/UartExeption.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/AllSensor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/AllSensor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/AllSensor.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/AllSensor.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/CurrentMot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/CurrentMot.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/CurrentMot.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/CurrentMot.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/EncoderMot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/EncoderMot.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/EncoderMot.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/EncoderMot.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/Pack.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/Pack.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/SettingBoard_C.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/SettingBoard_C.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/SettingBoard_C.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/SettingBoard_C.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/SpeedMot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/SpeedMot.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/SpeedMot.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/SpeedMot.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataPrimitive.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataPrimitive.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataTransfert_AllInclude.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataTransfert_AllInclude.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/circularBuffer/CircularBuffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/circularBuffer/CircularBuffer.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/UartDriver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/UartDriver.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/UartDriver.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/UartDriver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/.cproject" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/.cproject" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/.project" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/.project" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/Project-lib/globalDef.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/Project-lib/globalDef.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/Project-lib/uartScorbot/UartCmd.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/Project-lib/uartScorbot/UartCmd.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/ScoreBoard_Uart.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/ScoreBoard_Uart.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/excutePack.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/excutePack.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/memoriLoad.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/memoriLoad.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/motControll.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/motControll.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/pcListen_demo/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/pcListen_demo/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -167,7 +188,7 @@
       <workItem from="1573337970432" duration="6662000" />
       <workItem from="1573379877529" duration="22002000" />
       <workItem from="1573472459143" duration="15932000" />
-      <workItem from="1573564962435" duration="1063000" />
+      <workItem from="1573564962435" duration="9677000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
       <created>1568027375662</created>
@@ -239,7 +260,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573459294140</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="merge delle classi uart">
+      <created>1573566044054</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1573566044054</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,7 +297,8 @@
     <MESSAGE value="debugging arduino code" />
     <MESSAGE value="debugging arduino code&#10;starting create cmake project for linux size" />
     <MESSAGE value="debugging arduino code&#10;Coding Uart class LinuxSide" />
-    <option name="LAST_COMMIT_MESSAGE" value="debugging arduino code&#10;Coding Uart class LinuxSide" />
+    <MESSAGE value="merge delle classi uart" />
+    <option name="LAST_COMMIT_MESSAGE" value="merge delle classi uart" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="XDebuggerManager">

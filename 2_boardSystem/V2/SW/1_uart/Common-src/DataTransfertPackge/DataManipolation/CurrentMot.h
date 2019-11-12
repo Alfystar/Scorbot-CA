@@ -17,6 +17,7 @@ namespace DataManipolation {
     class CurrentMot {
     public:
         CurrentMot(mCurrent& c);
+        CurrentMot(mCurrent *c);
         void changePack(mCurrent& c);
         void copyCur(CurrentMot &c);
         void copyCur(mCurrent &c);
@@ -24,6 +25,7 @@ namespace DataManipolation {
         short getCurrent(motCode mot);
         void curSet(motCode mot, short cur);
         void printCurrent();
+        static void printCurrent(mCurrent *c);
         static void printCurrent(mCurrent& c);
 
     private:

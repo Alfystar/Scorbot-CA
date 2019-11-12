@@ -5,7 +5,8 @@
 #ifndef PCLISTENUART_UARTDRIVER_H
 #define PCLISTENUART_UARTDRIVER_H
 
-// #define UartDriverDebug 1
+//#define UartDriverDebug 1
+//#define CMD_Send_PRINT 1
 
 #ifdef linuxSide
 #include <stdlib.h>
@@ -26,7 +27,7 @@
 #else
 #include "Arduino.h"
 #include <stdlib.h>
-#include "../globalDef.h"
+#include "../DataTransfertPackge/DataTransfert_AllInclude.h"
 #include "../circularBuffer/CircularBuffer.h"
 #endif
 
@@ -38,18 +39,27 @@
 #define cbSize 8
 #define dataSize 4*sizeof(uart2Ard)
 #endif
+
 #ifdef linuxSide
 #else
 #endif
 
+
 namespace Uart {
     using namespace DataPrimitive;
     using namespace DataManipolation;
-
+#ifdef linuxSide
+    typedef uart2Ard dOut;
+    typedef uart2Rasp dIn;
+#else
+    typedef uart2Ard dIn;
+    typedef uart2Rasp dOut;
+#endif
     enum uartState
             : char {
         waitStart, waitType, waitEnd
     };
+
 
     class UartDriver {
     public:
@@ -61,17 +71,18 @@ namespace Uart {
         /// Data Send
         // &pack è l'indirizzo da dove il sender si va a copiare i dati
         void packSend(uartPackType type, data2Rasp *pack);
-#ifdef linuxSide
-#else
+#ifndef linuxSide
         void serialIsr();
         void serialTrySend();
 #endif
+
         /// Data get
-        uart2Rasp *getLastRecive();
+        size_t Available(); // su ard uartAvailable
+        dIn *getLastRecive();
+
 #ifdef linuxSide
-        uart2Rasp *getLastReciveWait();
+        dIn *getLastReciveWait();
 #endif
-        size_t Available();
 
         /// Data print for debug
         static void serialPackDb(uart2Ard &p);
@@ -99,18 +110,25 @@ namespace Uart {
         size_t potPackType;
         size_t expettedEnd;
 
+        unsigned char dato;
+        size_t datoId;
+
 
         //Variabili della coda di pacchetti riconosciuti
-        uart2Rasp cbReciveBuf[cbSize];
-        CircularBuffer<uart2Rasp> *cbRecive;
+
+        dIn cbReciveBuf[cbSize];
+        CircularBuffer<dIn> *cbRecive;
+#ifdef linuxSide
         sem_t recivedPackSem;
+#endif
 
         //Variabili della coda di invio
 #ifdef linuxSide
         //Probabilmente non servono poichè oltre la write c'e un buffer del S.O.
+        std::mutex writeUart_mutex;  // protects packSend from concurrency
 #else
-        uart2Rasp cbSendPackBuf[packBufSize];
-        CircularBuffer<uart2Rasp> *cbSend;
+        dOut cbSendPackBuf[cbSize];
+        CircularBuffer<dOut> *cbSend;
 #endif
 
         //Reader Thread
@@ -120,11 +138,6 @@ namespace Uart {
         //State machine to undestand pack
         void dataDiscover();
         size_t sizeMessage(uartPackType t);
-#ifdef linuxSide
-#else
-        void clearPackBuf();
-        void clearSerialBuf();
-#endif
     };
 }
 #endif //PCLISTENUART_UARTDRIVER_H

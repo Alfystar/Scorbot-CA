@@ -6,7 +6,11 @@
 
 namespace DataManipolation{
     EncoderMot::EncoderMot(mEncoder &en) {
-        this->enPack=&en;
+        this->changePack(en);
+    }
+
+    EncoderMot::EncoderMot(mEncoder *en) {
+        this->changePack(*en);
     }
 
     void EncoderMot::changePack(mEncoder &en) {
@@ -35,6 +39,10 @@ namespace DataManipolation{
 
     void EncoderMot::printEncoder() {
         this->printEncoder(this->getEn());
+    }
+
+    void EncoderMot::printEncoder(mEncoder *en) {
+        EncoderMot::printEncoder(*en);
     }
 
     void EncoderMot::printEncoder(mEncoder &en) {

@@ -18,6 +18,7 @@ namespace DataManipolation {
     class SettingBoard_C {
     public:
         SettingBoard_C(settingsBoard& s);
+        SettingBoard_C(settingsBoard *s);
         void changePack(settingsBoard& sets);
         void copyPack(SettingBoard_C& sets);
         void copyPack(settingsBoard& sets);

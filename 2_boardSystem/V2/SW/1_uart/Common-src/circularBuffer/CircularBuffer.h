@@ -128,7 +128,7 @@ inline T CircularBuffer<T>::readHead() {
 
 template<class T>
 void CircularBuffer<T>::writeMemOut(T *mem, size_t mytail, size_t len) {
-    for (size_t i = 0; i < len; i++) {
+    for (int i = 0; i < len; i++) {
         mem[i] = buf_[(mytail + i) % max_size_];
     }
     full_ = false;
