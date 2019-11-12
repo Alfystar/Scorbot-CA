@@ -12,47 +12,6 @@ using namespace Uart;
 UartDriver *uart;
 
 int main(int argc, char *argv[]) {
-
-//    uart2Rasp testPack;
-//    char *mem = (char *) &testPack;
-//    mem[0] = 5;
-//    mem[1]= 1 ;
-//    mem[2]= 0 ;
-//    mem[3]= 2 ;
-//    mem[4]= 0 ;
-//    mem[5]= 3 ;
-//    mem[6]= 0 ;
-//    mem[7]= 4 ;
-//    mem[8]= 0 ;
-//    mem[9]= 5 ;
-//    mem[10]= 0;
-//    mem[11]= 6;
-//    mem[12]= 0;
-//
-//    UartDriver::serialPackDb(testPack);
-//
-//    mEncoder testEn;
-//    mem = (char *) testEn;
-//    mem[1-1]= 1 ;
-//    mem[2-1]= 0 ;
-//    mem[3-1]= 2 ;
-//    mem[4-1]= 0 ;
-//    mem[5-1]= 3 ;
-//    mem[6-1]= 0 ;
-//    mem[7-1]= 4 ;
-//    mem[8-1]= 0 ;
-//    mem[9-1]= 5 ;
-//    mem[10-1]= 0;
-//    mem[11-1]= 6;
-//    mem[12-1]= 0;
-//    EncoderMot::printEncoder(testEn);
-//
-//    return 0;
-//    for (size_t i = 0; i < 13; i++) {
-//        std::cout<<"i="<<i<<"\n";
-//    }
-//    return 0;
-
     try {
         uart = new UartDriver("/dev/ttyACM0");
     } catch (exception e) {

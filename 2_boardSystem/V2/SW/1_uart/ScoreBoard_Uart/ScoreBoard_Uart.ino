@@ -51,7 +51,7 @@ void setup() {
 	Db.println("\tSetUp ADC");
 
     //spi = new SpiDevice();
-	uart = new UartDriver(&Cmd, CmdVel);
+    uart = new UartDriver(&Cmd, CmdVel);
 	initDataSend();
 	Db.flush();
 	Db.println("\tSetUp CMD Serial");
@@ -90,7 +90,7 @@ void loop() {
 	if (Cmd.available())
 		uart->serialIsr();
     //Serial command read
-	if (uart->Available()) {
+    if (uart->Available()) {
         r = uart->getLastRecive();
         excutePack(*r);
 #ifdef CMD_PRINT

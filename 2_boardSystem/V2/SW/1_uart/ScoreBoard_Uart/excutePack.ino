@@ -99,26 +99,26 @@ void dataSend()
 	//https://www.norwegiancreations.com/2018/10/arduino-tutorial-avoiding-the-overflow-issue-when-using-millis-and-micros/
 	if(time-nextEnSend>enP && time-nextCurSend>curP)
 	{
-        //sAllSend->copyEn(sFeed->captureEn());
-        //sAllSend->copyCur(adc->getLastCycle());
-        sAllSend->copyEn(enTest);
-        sAllSend->copyCur(curTest);
+        sAllSend->copyEn(sFeed->captureEn());
+        sAllSend->copyCur(adc->getLastCycle());
+        //sAllSend->copyEn(enTest);
+        //sAllSend->copyCur(curTest);
         uart->packSend(mAllData, (data2Rasp *) &sAllSend->getSens());
 		nextEnSend+=enP;
 		nextCurSend+=curP;
         return;
 	}else{
 		if(time-nextEnSend>enP){
-            //sAllSend->copyEn(sFeed->captureEn());
-            sAllSend->copyEn(enTest);
+            sAllSend->copyEn(sFeed->captureEn());
+            //sAllSend->copyEn(enTest);
             uart->packSend(mEncoderData, (data2Rasp *) &sAllSend->getEn());
 			nextEnSend+=enP;
             return;
 		}
 
 		if(time-nextCurSend>curP){
-            //sAllSend->copyEn(sFeed->captureEn());
-            sAllSend->copyCur(curTest);
+            sAllSend->copyEn(sFeed->captureEn());
+            //sAllSend->copyCur(curTest);
             uart->packSend(mCurrentData, (data2Rasp *) &sAllSend->getCurrent());
 			nextCurSend+=curP;
             return;
