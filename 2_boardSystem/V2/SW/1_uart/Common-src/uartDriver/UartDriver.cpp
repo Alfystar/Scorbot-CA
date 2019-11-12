@@ -267,8 +267,7 @@ namespace Uart {
                     this->potPackStart = datoId; //se è buono salvo l'inizio del pacchetto (type compreso), altrimenti non da fastidio
                     this->potPackType = dato;
 //se tra  mSpeedData <--> mEncoderData è un pacchetto con una dimensione
-                    if ((potPackType >= uartPackType::mSpeedData)
-                        && (potPackType <= uartPackType::RESEND)) { //valid type
+                    if (typeCheck(potPackType)) { //valid type
                         this->stateUart = waitEnd;
 #ifdef UartDriverDebug
 #ifdef linuxSide
@@ -338,6 +337,9 @@ namespace Uart {
         }                                //End while
     }
 
+    inline bool UartDriver::typeCheck(int p) {
+        return ((p > uartPackType::FIRST_EXLUDE) && (p < uartPackType::LAST_EXLUDE));
+    }
 
 //mSpeedData=1,settingBoardData, mCurrentData, mAllData, mEncoderData, sampleTimeEn , sampleTimeCur, goHomeUart, settingAsk, RESEND
         size_t UartDriver::sizeMessage(uartPackType t) {

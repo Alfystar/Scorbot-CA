@@ -44,6 +44,7 @@ namespace DataPrimitive{
     };
 
     enum uartPackType : char{
+        FIRST_EXLUDE,        //Per rendere parametrico il check del tipo, aggiungere pacchetti tra FIRST_EXLUDE<--> LAST_EXLUDE
         mSpeedData = 1,
         settingBoardData,
         mCurrentData,
@@ -53,7 +54,8 @@ namespace DataPrimitive{
         sampleTimeCur,        //stabilisco che trasporto un unisgned long
         goHomeUart,
         settingAsk,
-        RESEND
+        RESEND,
+        LAST_EXLUDE         //Per rendere parametrico il check del tipo, aggiungere pacchetti tra FIRST_EXLUDE<--> LAST_EXLUDE
     };
 ///#################################################################
 ///Pack information structure

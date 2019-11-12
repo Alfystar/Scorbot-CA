@@ -137,6 +137,7 @@ namespace Uart {
 #endif
         //State machine to undestand pack
         void dataDiscover();
+        bool typeCheck(int p);
         size_t sizeMessage(uartPackType t);
     };
 }
