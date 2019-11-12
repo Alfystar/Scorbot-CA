@@ -5,6 +5,7 @@
       <config projectName="pcListenUart" targetName="uartDriver" />
       <config projectName="pcListenUart" targetName="pcListenUart" />
       <config projectName="pcListenUart" targetName="circularBuffer" />
+      <config projectName="pcListenUart" targetName="UartSubSystem" />
       <config projectName="pcListenUart" targetName="dataTransfert" />
     </generated>
   </component>
@@ -15,10 +16,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/ComUartAdapter.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/ComUartAdapter.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/GetCom_int.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/InfoExpPack.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/InfoExpPack.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/ScorInterface.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UtilityScorbot/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UtilityScorbot/ScorCalc.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UtilityScorbot/ScorCalc.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/ScoreBoard_Uart.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/ScoreBoard_Uart.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/excutePack.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/excutePack.ino" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/pcListen_demo/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/pcListen_demo/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +67,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/Project-lib" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UtilityScorbot" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -68,19 +78,19 @@
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/Project-lib" />
-      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src" />
-      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/uartDriver" />
-      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/circularBuffer" />
-      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src" />
       <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSize" />
       <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/DataTransfertPackge/DataManipolation" />
       <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW" />
       <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/SpiRasp_demo/ScorbotRaspLib" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UtilityScorbot" />
+      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src" />
+      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem" />
+      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/Project-lib" />
+      <recent name="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -96,6 +106,11 @@
     </option>
   </component>
   <component name="RunManager" selected="CMake Application.uart_Terminal">
+    <configuration name="UartSubSystem" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pcListenUart" TARGET_NAME="UartSubSystem" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="circularBuffer" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="pcListenUart" TARGET_NAME="circularBuffer" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -121,6 +136,7 @@
       <item itemvalue="CMake Application.circularBuffer" />
       <item itemvalue="CMake Application.dataTransfert" />
       <item itemvalue="CMake Application.uartDriver" />
+      <item itemvalue="CMake Application.UartSubSystem" />
     </list>
   </component>
   <component name="SvnConfiguration">
@@ -166,7 +182,7 @@
       <workItem from="1573379877529" duration="22002000" />
       <workItem from="1573472459143" duration="15932000" />
       <workItem from="1573564962435" duration="9767000" />
-      <workItem from="1573582269963" duration="80000" />
+      <workItem from="1573582269963" duration="2686000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
       <created>1568027375662</created>
@@ -252,7 +268,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573582220709</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="merge delle classi uart Completato, dati scambiati correttamente">
+      <created>1573582366185</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1573582366185</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -22,6 +22,8 @@ int main(int argc, char *argv[]) {
     uart2Rasp *dato;
     settingsBoard pData;
     SettingBoard_C *p = new SettingBoard_C(pData);
+
+    //Setting per ora di default
     //curr neg => no limit
     p->setMotorLimit(Mot1, 2160, 24300, -19450);
     p->setMotorLimit(Mot2, 2960, 16200, -1000);
