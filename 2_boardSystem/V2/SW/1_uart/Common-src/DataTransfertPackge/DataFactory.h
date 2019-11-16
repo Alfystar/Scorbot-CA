@@ -6,16 +6,11 @@
 #define DATAFACTORY_H
 
 #include "DataPrimitive.h"
-#include "DataManipolation/CurrentMot.h"
-#include "DataManipolation/EncoderMot.h"
-#include "DataManipolation/AllSensor.h"
-#include "DataManipolation/SpeedMot.h"
-#include "DataManipolation/SettingBoard_C.h"
-#include "DataManipolation/Pack.h"
+#include <stdlib.h>
+#include <string.h>
 
 namespace dataFactory {
     using namespace DataPrimitive;
-    using namespace DataManipolation;
 /// Primitive factory
     mSpeed &makeMSpeed();
     void freeMSpeed(mSpeed *p);
@@ -34,6 +29,12 @@ namespace dataFactory {
 
     SPIPACK &makeSPIPACK();
     void freeSPIPACK(SPIPACK *p);
+
+    uart2Ard &makeData2Ard();
+    void freeData2Ard(uart2Ard *p);
+
+    uart2Rasp &makeData2Rasp();
+    void freeData2Rasp(uart2Rasp *p);
 
     uart2Ard &makeUart2Ard();
     void freeUart2Ard(uart2Ard *p);

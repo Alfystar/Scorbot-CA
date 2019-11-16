@@ -5,9 +5,10 @@
 #ifndef SPIRASP_TERMINAL_ENCODERMOT_H
 #define SPIRASP_TERMINAL_ENCODERMOT_H
 
-#include "../DataPrimitive.h"
 #include <string.h>
 #include <stdio.h>
+#include "../DataPrimitive.h"
+#include "../DataFactory.h"
 
 #ifdef ScorboarFirmware
 #include "Arduino.h"
@@ -19,8 +20,13 @@ namespace DataManipolation {
     public:
         EncoderMot(mEncoder &en);
         EncoderMot(mEncoder *en);
+#ifdef linuxSide
+        EncoderMot();   // creo al mio interno Pack
+        ~EncoderMot();
+#endif
         void changePack(mEncoder &en);
         void copyEn(EncoderMot &en);
+        void copyEn(mEncoder *en);
         void copyEn(mEncoder &en);
         mEncoder &getEn();
         short getEn(motCode mot);
@@ -30,6 +36,10 @@ namespace DataManipolation {
         static void printEncoder(mEncoder &en);
     private:
         mEncoder *enPack;
+#ifdef linuxSide
+        bool enMine = false;
+#endif
+
     };
 };
 #endif //SPIRASP_TERMINAL_ENCODERMOT_H

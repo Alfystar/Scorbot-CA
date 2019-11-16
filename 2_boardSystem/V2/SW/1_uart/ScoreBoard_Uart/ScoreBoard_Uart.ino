@@ -68,7 +68,7 @@ uart2Ard *r;
 //tempi in micro secondi, dopo ~ 70 min in overflow, gestito
 unsigned long nextEnSend = 0, nextCurSend = 0;
 //unsigned short enP = 1000, curP = 2000;	//di default 1Kh e 0.5Khz
-unsigned long enP = 1000 * 1000UL, curP = 1200 * 1000UL;    //di default 1Kh e 0.5Khz
+unsigned long enP = 10 * 1000UL, curP = 12 * 1000UL;    //di default 1Kh e 0.5Khz
 //500000
 unsigned long timeOverflow[200];
 int timeOverflowId = 0;
@@ -80,7 +80,7 @@ void loop() {
         uart->serialIsr();
     //Serial command read
     if (uart->Available()) {
-        r = uart->getLastRecive();
+        r = uart->getData();
         excutePack(*r);
 #ifdef CMD_PRINT
         Cmd.println("Printo pacchetto ricevuto:");

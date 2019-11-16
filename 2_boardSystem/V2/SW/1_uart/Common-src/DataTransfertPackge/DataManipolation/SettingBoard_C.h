@@ -8,6 +8,8 @@
 #include <stdio.h>
 #include <string.h>
 #include "../DataPrimitive.h"
+#include "../DataFactory.h"
+
 
 #ifdef ScorboarFirmware
 #include "Arduino.h"
@@ -19,6 +21,10 @@ namespace DataManipolation {
     public:
         SettingBoard_C(settingsBoard &s);
         SettingBoard_C(settingsBoard *s);
+#ifdef linuxSide
+        SettingBoard_C();   // creo al mio interno Pack
+        ~SettingBoard_C();
+#endif
         void changePack(settingsBoard &sets);
         void copyPack(SettingBoard_C &sets);
         void copyPack(settingsBoard &sets);
@@ -36,6 +42,9 @@ namespace DataManipolation {
         static void printSetting(settingsBoard &set);
     private:
         settingsBoard *setPack;
+#ifdef linuxSide
+        bool setMine = false;
+#endif
     };
 };
 #endif //SPIRASP_TERMINAL_SETTINGBOARD_C_H

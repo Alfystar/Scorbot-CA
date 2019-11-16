@@ -13,7 +13,27 @@ namespace DataManipolation {
         this->changePack(*s);
     }
 
+#ifdef linuxSide
+
+    SettingBoard_C::SettingBoard_C() {
+        setPack = &dataFactory::makeSettingBoard();
+        setMine = true;
+    }
+
+    SettingBoard_C::~SettingBoard_C() {
+        if (setMine)
+            dataFactory::freeSettingBoard(setPack);
+    }
+
+#endif
+
     void SettingBoard_C::changePack(settingsBoard &sets) {
+#ifdef linuxSide
+        if (setMine) {
+            setMine = false;
+            dataFactory::freeSettingBoard(this->setPack);
+        }
+#endif
         this->setPack = &sets;
     }
 

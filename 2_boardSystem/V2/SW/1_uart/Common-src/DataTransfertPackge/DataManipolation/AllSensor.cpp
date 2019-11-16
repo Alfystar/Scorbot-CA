@@ -17,8 +17,33 @@ namespace DataManipolation {
         this->changePack(*all);
     }
 
+#ifdef linuxSide
+
+    AllSensor::AllSensor() : allPack(&dataFactory::makeMAll()),
+                             DataManipolation::CurrentMot(&allPack->cur),
+                             DataManipolation::EncoderMot(&allPack->en) {
+        allMine = true;
+    }
+
+    AllSensor::~AllSensor() {
+        if (allMine)
+            dataFactory::freeMAll(allPack);
+    }
+
+#endif
+
     void AllSensor::changePack(mAll &all) {
+#ifdef linuxSide
+        if (allMine) {
+            allMine = false;
+            dataFactory::freeMAll(allPack);
+        }
+#endif
         this->allPack = &all;
+    }
+
+    void AllSensor::copyPack(mAll *all) {
+        memcpy(this->allPack, all, sizeof(mAll));
     }
 
     void AllSensor::copyPack(mAll &all) {

@@ -13,12 +13,36 @@ namespace DataManipolation {
         this->changePack(*c);
     }
 
+#ifdef linuxSide
+
+    CurrentMot::CurrentMot() {
+        curPack = &dataFactory::makeMCurrent();
+        curMine = true;
+    }
+
+    CurrentMot::~CurrentMot() {
+        if (curMine)
+            dataFactory::freeMCurrent(curPack);
+    }
+
+#endif
+
     void CurrentMot::changePack(mCurrent &c) {
+#ifdef linuxSide
+        if (curMine) {
+            curMine = false;
+            dataFactory::freeMCurrent(curPack);
+        }
+#endif
         this->curPack = &c;
     }
 
     void CurrentMot::copyCur(CurrentMot &c) {
         this->copyCur(c.getCurrent());
+    }
+
+    void CurrentMot::copyCur(mCurrent *c) {
+        memcpy(this->curPack, c, sizeof(mCurrent));
     }
 
     void CurrentMot::copyCur(mCurrent &c) {

@@ -4,6 +4,9 @@
 
 #ifndef DATAPRIMITIVE_H
 #define DATAPRIMITIVE_H
+
+#include <stdint-gcc.h>
+
 #ifdef ScorboarFirmware
 #include "../../ScoreBoard_Uart/HW_rename.h"
 #endif
@@ -84,8 +87,8 @@ namespace DataPrimitive {
         union sendType {
             mSpeed speed;
             settingsBoard prop;
-            unsigned short sampleEn;
-            unsigned short sampleCur;
+            uint32_t sampleEn;
+            uint32_t sampleCur;
         } up;
         unsigned char buf[sizeof(sendType)];
     } __attribute__((packed)) data2Ard;

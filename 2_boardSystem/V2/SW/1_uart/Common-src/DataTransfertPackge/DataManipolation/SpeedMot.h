@@ -9,6 +9,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include "../DataPrimitive.h"
+#include "../DataFactory.h"
+
 
 #ifdef ScorboarFirmware
 #include "Arduino.h"
@@ -20,6 +22,10 @@ namespace DataManipolation {
     public:
         SpeedMot(mSpeed &s);
         SpeedMot(mSpeed *s);
+#ifdef linuxSide
+        SpeedMot();   // creo al mio interno Pack
+        ~SpeedMot();
+#endif
         void changePack(mSpeed &speed);
         void copyPack(SpeedMot &speed);
         void copyPack(mSpeed &speed);
@@ -33,6 +39,9 @@ namespace DataManipolation {
         static void printSpeed(mSpeed &speed);
     private:
         mSpeed *speedPack;
+#ifdef linuxSide
+        bool speedMine = false;
+#endif
     };
 };
 #endif //SPIRASP_TERMINAL_SPEEDMOT_H

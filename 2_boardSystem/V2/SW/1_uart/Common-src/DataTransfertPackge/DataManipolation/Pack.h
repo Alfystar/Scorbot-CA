@@ -15,15 +15,16 @@
 #include "SpeedMot.h"
 #include "SettingBoard_C.h"
 
-#ifndef ScorboarFirmware
-#warning ScorboarFirmware define not Declared, if you are compiling library to Arduino, add at the end of gcc compiler: -D ScorboarFirmware
-
+#ifdef linuxSide
 #include "typePackWrongExcept.h"
-
 using std::max;
 #else
 #include <Arduino.h>
 #endif
+#if !defined(linuxSide) && !defined(ScorboarFirmware)
+#warning ScorboarFirmware define not Declared, if you are compiling library to Arduino, add at the end of gcc compiler: -D ScorboarFirmware
+#endif
+
 namespace DataManipolation {
     using namespace DataPrimitive;
 

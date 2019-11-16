@@ -18,7 +18,7 @@
 #include <unistd.h>
 #include <errno.h>
 #include <string>
-#include "UartExeption.h"
+#include "UartException.h"
 #include <CircularBuffer.h>
 #include <thread>
 #include <semaphore.h>
@@ -46,11 +46,16 @@ namespace Uart {
     using namespace DataPrimitive;
     using namespace DataManipolation;
 #ifdef linuxSide
-    typedef uart2Ard dOut;
-    typedef uart2Rasp dIn;
+    typedef data2Ard dOut;
+    typedef uart2Ard pOut;
+    typedef data2Rasp dIn;
+    typedef uart2Rasp pIn;
 #else
-    typedef uart2Ard dIn;
-    typedef uart2Rasp dOut;
+    typedef data2Ard dIn;
+    typedef uart2Ard pIn;
+    typedef data2Rasp dOut;
+    typedef uart2Rasp pOut;
+
 #endif
     enum uartState
             : char {
@@ -62,30 +67,29 @@ namespace Uart {
     public:
 #ifdef linuxSide
         UartDriver(const std::string &device) noexcept(false);
+        ~UartDriver();  //should be called only by singleton Parametric factory
+        void uartSpeed(int vel) noexcept(false);
 #else
         UartDriver(HardwareSerial *serial, long vel);
 #endif
         /// Data Send
         // &pack è l'indirizzo da dove il sender si va a copiare i dati
-        void packSend(uartPackType type, data2Rasp *pack);
+        void packSend(uartPackType type, dOut *pack);
 #ifndef linuxSide
         void serialIsr();
         void serialTrySend();
 #endif
         /// Data get
         size_t Available(); // su ard uartAvailable
-        dIn *getLastRecive();
+        pIn *getData();
 #ifdef linuxSide
-        dIn *getLastReciveWait();
+        pIn *getDataWait() noexcept(false);
+        pIn *getDataWait(struct timespec *timeOut) noexcept(false);
 #endif
         /// Data print for debug
         static void serialPackDb(uart2Ard &p);
         static void serialPackDb(uart2Rasp &p);
     private:
-        //todo Rendere un singleton parametrico la classe
-        //http://www.jot.fm/issues/issue_2007_03/column2/
-        //UartDriver *istance;
-
         //Variabili della porta Seriale
 #ifdef linuxSide
         int fd;                     //file descriptor della com
@@ -109,9 +113,10 @@ namespace Uart {
 
         //Variabili della coda di pacchetti riconosciuti
 
-        dIn cbReciveBuf[cbSize];
-        CircularBuffer<dIn> *cbRecive;
+        pIn cbReciveBuf[cbSize];
+        CircularBuffer<pIn> *cbRecive;
 #ifdef linuxSide
+        //std::mutex readCb_mutex;  // protects gets data from concurrency
         sem_t recivedPackSem;
 #endif
 
@@ -120,13 +125,13 @@ namespace Uart {
         //Probabilmente non servono poichè oltre la write c'e un buffer del S.O.
         std::mutex writeUart_mutex;  // protects packSend from concurrency
 #else
-        dOut cbSendPackBuf[cbSize];
-        CircularBuffer<dOut> *cbSend;
+        pOut cbSendPackBuf[cbSize];
+        CircularBuffer<pOut> *cbSend;
 #endif
 
         //Reader Thread
 #ifdef linuxSide
-        static void uartReader(UartDriver *d);
+        static void uartReader(UartDriver &d);
 #endif
         //State machine to undestand pack
         void dataDiscover();

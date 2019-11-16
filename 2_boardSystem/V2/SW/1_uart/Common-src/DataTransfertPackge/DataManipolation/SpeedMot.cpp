@@ -13,7 +13,28 @@ namespace DataManipolation {
         this->changePack(*s);
     }
 
+#ifdef linuxSide
+
+    SpeedMot::SpeedMot() {
+        speedPack = &dataFactory::makeMSpeed();
+        speedMine = true;
+    }
+
+    SpeedMot::~SpeedMot() {
+        if (speedMine)
+            dataFactory::freeMSpeed(speedPack);
+
+    }
+
+#endif
+
     void SpeedMot::changePack(mSpeed &speed) {
+#ifdef linuxSide
+        if (speedMine) {
+            speedMine = false;
+            dataFactory::freeMEncoder(speedPack);
+        }
+#endif
         this->speedPack = &speed;
     }
 

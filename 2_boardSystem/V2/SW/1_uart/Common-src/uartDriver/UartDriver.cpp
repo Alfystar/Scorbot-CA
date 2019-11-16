@@ -9,16 +9,15 @@ namespace Uart {
 
     UartDriver::UartDriver(const std::string &device) {
         this->fd = open(device.c_str(), O_RDWR | O_NOCTTY);//| O_NDELAY
-        if (fd == -1) {
-            perror("failed to open port");
-            throw UartExeption("Failed to open port and get FD", errno);
+        if (this->fd == -1) {
+            system("ls /dev/ttyACM* -l");
+            throw UartException("Failed to open port and get FD", errno);
         }
-        if (!isatty(fd)) {
-            perror("Not Uart");
-            throw UartExeption("Not Uart", errno);
+        if (!isatty(this->fd)) {
+            throw UartException("Not Uart", errno);
         }
-        if (tcgetattr(fd, &config)) {
-            throw UartExeption("Impossibile leggere la configurazione", errno);
+        if (tcgetattr(this->fd, &config)) {
+            throw UartException("Impossibile leggere la configurazione", errno);
         }
         // Input flags - Turn off input processing
         config.c_iflag &= ~(IGNBRK | BRKINT | ICRNL | INLCR | PARMRK | INPCK | ISTRIP | IXON);
@@ -35,14 +34,14 @@ namespace Uart {
         config.c_cc[VTIME] = 0;
         // Communication speed (simple version, using the predefined constants)
         if (cfsetispeed(&config, B115200) || cfsetospeed(&config, B115200)) {
-            throw UartExeption("Impossibile Impostare velocità di cominicazione", errno);
+            throw UartException("Impossibile Impostare velocità di cominicazione", errno);
         }
         // Finally, apply the configuration
-        if (tcsetattr(fd, TCSAFLUSH, &config)) {
-            throw UartExeption("Impossibile Impostare i parametri selezionati", errno);
+        if (tcsetattr(this->fd, TCSAFLUSH, &config)) {
+            throw UartException("Impossibile Impostare i parametri selezionati", errno);
         }
         // Ripulisco la memoria del driver
-        tcflush(fd, TCIOFLUSH);
+        tcflush(this->fd, TCIOFLUSH);
 
         ///##################################################################################################
         ///Internal structure initialize
@@ -52,14 +51,31 @@ namespace Uart {
         memset(reciveBuf, 0, sizeof(reciveBuf));
         this->cbByteRecive = new CircularBuffer<unsigned char>(reciveBuf, sizeofArray(reciveBuf));
         memset(cbReciveBuf, 0, sizeof(cbReciveBuf));
-        this->cbRecive = new CircularBuffer<uart2Rasp>(cbReciveBuf, sizeofArray(cbReciveBuf));
+        this->cbRecive = new CircularBuffer<pIn>(cbReciveBuf, sizeofArray(cbReciveBuf));
         if (sem_init(&this->recivedPackSem, 0, 0)) {
-            throw UartExeption("Impossibile inizializzare il semaforo a 0", errno);
+            throw UartException("Impossibile inizializzare il semaforo a 0", errno);
         }
 
         /// Thead init
         writeUart_mutex.unlock();   //set for sure the unlock state
-        this->readerTh = new std::thread(this->uartReader, this);
+        this->readerTh = new std::thread(this->uartReader, std::ref(*this));
+    }
+
+    UartDriver::~UartDriver() {
+        // for now notting are generate dynamicaly
+
+        close(this->fd);
+    }
+
+    void UartDriver::uartSpeed(int vel) noexcept(false) {
+        if (cfsetispeed(&config, vel) || cfsetospeed(&config, vel)) {
+            throw UartException("Impossibile Impostare velocità di cominicazione", errno);
+        }
+
+        // Apply the configuration
+        if (tcsetattr(this->fd, TCSAFLUSH, &config)) {
+            throw UartException("Impossibile Impostare i parametri selezionati", errno);
+        }
     }
 
 #else
@@ -79,16 +95,16 @@ namespace Uart {
 #ifdef UartDriverDebug
         Db.println("cbRecive:");
 #endif
-        this->cbRecive = new CircularBuffer<dIn>(
-                (dIn *) this->cbReciveBuf,
+        this->cbRecive = new CircularBuffer<pIn>(
+                (pIn *) this->cbReciveBuf,
                 sizeofArray(cbReciveBuf));
 
         //Buffer Circolare per i pacchetti da inviare (Se la dimensione satura la scrittura)
 #ifdef UartDriverDebug
         Db.println("cbSend:");
 #endif
-        this->cbSend = new CircularBuffer<dOut>(
-                (dOut *) this->cbSendPackBuf, sizeofArray(cbSendPackBuf));
+        this->cbSend = new CircularBuffer<pOut>(
+                (pOut *) this->cbSendPackBuf, sizeofArray(cbSendPackBuf));
 
         //Buffer Circolare per leggere la seriale prima che si satura
         //pulisco la memoria byte ricevuti
@@ -108,7 +124,7 @@ namespace Uart {
     }
 
 
-    dIn *UartDriver::getLastRecive() {
+    pIn *UartDriver::getData() {
         if (!cbRecive->empty()) {
             return this->cbRecive->getPtr();
         }
@@ -117,18 +133,36 @@ namespace Uart {
 
 #ifdef linuxSide
 
-    dIn *UartDriver::getLastReciveWait() {
-        sem_wait(&recivedPackSem);
+    pIn *UartDriver::getDataWait() {
+        if (sem_wait(&this->recivedPackSem)) {
+            throw UartException("GetData return error:", errno);
+        }
         return this->cbRecive->getPtr();
     }
 
+    pIn *UartDriver::getDataWait(struct timespec *timeOut) {
+        int s;
+        while ((s = sem_timedwait(&this->recivedPackSem, timeOut)) == -1 && errno == EINTR)
+            continue;       /* Restart if interrupted by handler */
+
+        if (s == -1) {
+            if (errno == ETIMEDOUT) {
+                return nullptr;
+            } else {
+                throw UartException("GetData return error:", errno);
+            }
+        }
+        return this->cbRecive->getPtr();
+    }
+
+
 #endif
 
-    void UartDriver::packSend(uartPackType type, data2Rasp *pack) {
+    void UartDriver::packSend(uartPackType type, dOut *pack) {
 #ifdef linuxSide
         size_t bWrite;
         size_t mexSize;
-        unsigned char writeBuf[sizeof(data2Rasp) + 3];  //max data size + startCode+ End code + type;
+        unsigned char writeBuf[sizeof(pOut) + 2];  // pOut=(max data size + type) + startCode + End code;
 
         std::lock_guard<std::mutex> lock(writeUart_mutex);
         // writeUart_mutex is automatically released when lock goes out of scope
@@ -136,13 +170,12 @@ namespace Uart {
         mexSize = sizeMessage(type);
         writeBuf[0] = StartCode;
         writeBuf[1] = type;
-        //if(mexSize>0)
         memcpy(&writeBuf[2], pack, mexSize);
-        writeBuf[mexSize + 2] = EndCode;
-        mexSize += 3;
+        writeBuf[2 + mexSize] = EndCode;
+        mexSize += 3; // StartCode + type + EndCode
         int i = 0;
         while (mexSize > 0) {
-            bWrite = write(fd, &writeBuf[i], mexSize);
+            bWrite = write(this->fd, &writeBuf[i], mexSize);
             if (bWrite < 0) {
                 perror("Reading take error:");
                 exit(-1);
@@ -152,7 +185,7 @@ namespace Uart {
         }
 #else
         //Aggiungo il pacchetto al buffer circolare
-        uart2Rasp *p = this->cbSend->getHeadPtr();
+        pOut *p = this->cbSend->getHeadPtr();
         this->cbSend->put_externalWrite();
         p->type = type;
         memcpy((void *) p->pack.buf, pack, this->sizeMessage(type));
@@ -160,7 +193,7 @@ namespace Uart {
     }
 
 #ifndef linuxSide
-    uart2Ard tempPack;
+    pIn tempPack;
     void UartDriver::serialIsr() {
         //carico il buffer dei dati da leggere
         while (com->available())
@@ -170,7 +203,7 @@ namespace Uart {
         return;
     }
 
-    uart2Rasp *sTemp = nullptr;
+    pOut *sTemp = nullptr;
     char len = 0;
     void UartDriver::serialTrySend() {
         if (this->cbSend->empty()) {
@@ -200,24 +233,26 @@ namespace Uart {
     }
 #endif
 #ifdef linuxSide
-    size_t bRead;
+    long bRead;
 
-    void UartDriver::uartReader(UartDriver *d) {
+    void UartDriver::uartReader(UartDriver &d) {
 #ifdef UartDriverDebug
         std::cout << "uartReader Thread start\n";
 #endif
-        //UartDriver *d = (UartDriver *) data;
+        tcflush(d.fd, TCIOFLUSH);
+
         for (;;) {
-            bRead = read(d->fd, d->cbByteRecive->getHeadPtr(), d->cbByteRecive->linearEnd());
+            bRead = read(d.fd, d.cbByteRecive->getHeadPtr(), d.cbByteRecive->linearEnd());
 #ifdef UartDriverDebug
             std::cout<<"uartReader read:"<< bRead<<"\n";
 #endif
             if (bRead < 0) {
-                perror("Reading take error:");
+                std::cerr << "uartReader fd see:" << d.fd << "\n";
+                perror("\tuartReader take error:");
                 exit(-1);
             }
-            d->cbByteRecive->put_externalWrite(bRead);
-            d->dataDiscover();
+            d.cbByteRecive->put_externalWrite(bRead);
+            d.dataDiscover();
         }
     }
 
@@ -307,7 +342,7 @@ namespace Uart {
                             Db.println(" EndCode Found =D ");
                             this->serialPackDb(*this->cbRecive->getHeadPtr());
 #endif
-#endif        //aggiorno il buffer dei pacchetti aggiungendone 1
+#endif                      //aggiorno il buffer dei pacchetti aggiungendone 1
                             this->cbRecive->put_externalWrite();
 #ifdef linuxSide
                             if (!cbRecive->empty())
@@ -336,7 +371,6 @@ namespace Uart {
 #endif
         }                                //End while
     }
-
     inline bool UartDriver::typeCheck(int p) {
         return ((p > uartPackType::FIRST_EXLUDE) && (p < uartPackType::LAST_EXLUDE));
     }
@@ -355,8 +389,9 @@ namespace Uart {
             case mEncoderData:
                 return sizeof(mEncoder);
             case sampleTimeEn:
+                return sizeof(uint32_t);
             case sampleTimeCur:
-                return sizeof(short);
+                return sizeof(uint32_t);
             case goHomeUart:
             case settingAsk:
             case RESEND:
@@ -444,4 +479,6 @@ namespace Uart {
                 break;
         }
     }
+
+
 }

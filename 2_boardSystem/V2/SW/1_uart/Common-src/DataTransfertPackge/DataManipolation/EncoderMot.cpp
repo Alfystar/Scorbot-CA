@@ -13,12 +13,37 @@ namespace DataManipolation {
         this->changePack(*en);
     }
 
+#ifdef linuxSide
+
+    EncoderMot::EncoderMot() {
+        enPack = &dataFactory::makeMEncoder();
+        enMine = true;
+    }
+
+    EncoderMot::~EncoderMot() {
+        if (enMine)
+            dataFactory::freeMEncoder(enPack);
+    }
+
+#endif
+
     void EncoderMot::changePack(mEncoder &en) {
+#ifdef linuxSide
+        if (enMine) {
+            enMine = false;
+            dataFactory::freeMEncoder(enPack);
+        }
+#endif
         this->enPack = &en;
+
     }
 
     void EncoderMot::copyEn(EncoderMot &en) {
         this->copyEn(en.getEn());
+    }
+
+    void EncoderMot::copyEn(mEncoder *en) {
+        memcpy(this->enPack, en, sizeof(mEncoder));
     }
 
     void EncoderMot::copyEn(mEncoder &en) {

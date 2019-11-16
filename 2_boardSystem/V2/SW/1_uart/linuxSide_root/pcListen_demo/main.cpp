@@ -14,8 +14,8 @@ UartDriver *uart;
 int main(int argc, char *argv[]) {
     try {
         uart = new UartDriver("/dev/ttyACM0");
-    } catch (exception e) {
-        e.what();
+    } catch (std::exception &e) {
+        std::cerr << e.what() << "\n";
         exit(-1);
     }
     uart2Rasp *dato;
@@ -37,14 +37,14 @@ int main(int argc, char *argv[]) {
     int i = 0;
     for (;;) {
         // Lettura non bloccante, Consuma molta CPU, ma è prestante
-//        if ((dato = uart->getLastRecive()) != nullptr){
+//        if ((dato = uart->getData()) != nullptr){
 //            UartDriver::serialPackDb(*dato);
 //            std::cout << "\n";
 //        }
 
         // Leggo ultimo dato, se non è arrivato il thread viene messo in wait, fino all'arrivo
         std::cout << "Recived:\n";
-        UartDriver::serialPackDb(*uart->getLastReciveWait());
+        UartDriver::serialPackDb(*uart->getDataWait());
         std::cout << "\n";
         i++;
         if (i > 5) {
@@ -53,7 +53,7 @@ int main(int argc, char *argv[]) {
             p->setAdcDiff(!p->getSetting().diff);
             std::cout << "\nSend:\n";
             p->printSetting();
-            uart->packSend(settingBoardData, (data2Rasp *) &p->getSetting());
+            uart->packSend(settingBoardData, (data2Ard *) &p->getSetting());
         }
 
     }
