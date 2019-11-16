@@ -9,7 +9,7 @@
 #include <string>
 #include <cstring>
 
-#define excType "SingletonFactoryExepion :"
+#define excType "(SingletonFactoryExepion) "
 
 //Exeption tree
 class SingletonFactoryException : virtual public std::exception {
