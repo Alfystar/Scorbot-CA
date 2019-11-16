@@ -18,10 +18,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/installingCommand" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/UartDriver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/UartDriver.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/AdapterClasses/SingletonFactoryException.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/AdapterClasses/SingletonFactoryException.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/uartDriver/UartException.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/uartDriver/UartException.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/AdapterClasses/ComUartAdapter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/AdapterClasses/ComUartAdapter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/uartSubSystem_demo/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/uartSubSystem_demo/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -188,7 +191,7 @@
       <workItem from="1573724774243" duration="1901000" />
       <workItem from="1573811895342" duration="8501000" />
       <workItem from="1573841077212" duration="15447000" />
-      <workItem from="1573891873188" duration="25796000" />
+      <workItem from="1573891873188" duration="30921000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
       <created>1568027375662</created>
@@ -309,7 +312,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573930966012</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="SubSystem Work!!!!">
+      <created>1573932027706</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1573932027706</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

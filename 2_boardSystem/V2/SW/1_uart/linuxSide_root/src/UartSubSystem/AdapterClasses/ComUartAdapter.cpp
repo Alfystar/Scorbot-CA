@@ -239,7 +239,9 @@ SettingBoard_C &ComUartAdapter::getSettingConrete() {
     setNew.try_lock();   // voglio dati nuovi quindi sia se è unclock che lock lo metto a lock.
     uartDev->packSend(settingBoardData, nullptr);
     setNew.lock();   //Quando uartReader riceverà un setting board verrò sbloccato
-    return *set;
+    SettingBoard_C *p = new SettingBoard_C();
+    p->copyPack(*set);
+    return *p;
 }
 
 ComUartAdapter::ComUartAdapter() : ScorInterface(),
@@ -252,9 +254,19 @@ ComUartAdapter::ComUartAdapter() : ScorInterface(),
     enNew.try_lock();
     curNew.try_lock();
     // Thread di lettura
-    this->readerUartDriverTh = new std::thread(this->uartReader, this);
     timerclear(&sEn);
     timerclear(&sCur);
+    this->readerUartDriverTh = new std::thread(this->uartReader, this);
+#ifdef RT_THREAD
+    // encrease priority
+    sched_param sch;
+    int policy;
+    pthread_getschedparam(this->readerUartDriverTh->native_handle(), &policy, &sch);
+    sch.sched_priority = sched_get_priority_max(SCHED_FIFO);
+    if (pthread_setschedparam(this->readerUartDriverTh->native_handle(), SCHED_FIFO, &sch)) {
+        throw UartException("Failed to setschedparam: ", errno);
+    }
+#endif
 }
 
 struct timespec timeOut, timeToAdd, now;

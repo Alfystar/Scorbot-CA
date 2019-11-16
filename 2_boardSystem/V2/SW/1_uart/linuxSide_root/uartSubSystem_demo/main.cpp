@@ -14,6 +14,7 @@ using namespace DataManipolation;
 ScorInterface *scorbot;
 
 int main(int argc, char *argv[]) {
+    /// Initialize board
     try {
 //        scorbot = &AdapterFactory::makeUart("/dev/ttyACM0",B115200);
         scorbot = &AdapterFactory::makeUart("/dev/ttyACM0", B921600);
@@ -24,8 +25,11 @@ int main(int argc, char *argv[]) {
         std::cerr << e.what() << std::endl;
         exit(-1);
     }
-    scorbot->setSampleTimeEn(100000);
-    scorbot->setSampleTimeCur(1000 * 1000UL);
+    scorbot->setSampleTimeEn(100 * 1000UL);
+    scorbot->setSampleTimeCur(10 * 1000UL);
+
+
+    /// Setting test
     settingsBoard pData;
     SettingBoard_C *p = new SettingBoard_C(pData);
 
@@ -40,22 +44,43 @@ int main(int argc, char *argv[]) {
     p->setAdcDiff(false);
     p->setAdcRef(in1V1);
     p->setPWMfreq(hz4k);
+    // todo debugare il raccoglimento e l'impostazione dei settings
+    std::cout << "============================================================\n";
+    std::cout << "Default Settings:\n";
     p->printSetting();
+    std::cout << "Settings from board directly:\n";
+    scorbot->getSetting_board().printSetting();
+    std::cout << "Settings read from local:\n";
+    scorbot->getSetting_local().printSetting();
+    std::cout << "Sending default settings:\n";
+    scorbot->setSetting(*p);
+    std::cout << "Settings read from local:\n";
+    scorbot->getSetting_local().printSetting();
+    std::cout << "Settings from board directly:\n";
+    scorbot->getSetting_board().printSetting();
+    std::cout << "============================================================\n";
+
+    /// Data test
     int i = 0;
     EncoderMot *e = new EncoderMot();
+    CurrentMot *c = new CurrentMot();
+    AllSensor *allS = new AllSensor();
     struct timespec lastPack, newPack, deltaPack;
     clock_gettime(CLOCK_MONOTONIC_RAW, &lastPack);
     timerclearSpec(&deltaPack);
     for (;;) {
         e->copyEn(scorbot->getValidEncoderWait(&newPack));
+        //todo: capire perchè con getValidCurrentWait non viene preso il tempo
+        //c->copyCur(scorbot->getValidCurrentWait(&newPack));
         timersubSpec(&newPack, &lastPack, &deltaPack);
         timeStampSpec(&deltaPack, "deltaPack");
         lastPack = newPack;
         std::cout << "\n\t##Recived:\n";
         e->printEncoder();
+        //c->printCurrent();
         i++;
         if (i > 100)
-            scorbot->setSampleTimeEn(5 * 1000UL);
+            scorbot->setSampleTimeCur(5 * 1000UL);
         std::cout << i << "\n";
         std::cout << "\n";
     }

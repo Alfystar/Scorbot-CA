@@ -18,5 +18,6 @@ find_package(Threads REQUIRED)
 target_link_libraries(UartSubSystem PUBLIC ${CMAKE_THREAD_LIBS_INIT})
 
 if (${UNIX})
-    target_compile_definitions(uartDriver PUBLIC linuxSide=1)
+    target_compile_definitions(UartSubSystem PUBLIC linuxSide=1)
+    #    target_compile_definitions(UartSubSystem PUBLIC RT_THREAD=1)
 endif ()

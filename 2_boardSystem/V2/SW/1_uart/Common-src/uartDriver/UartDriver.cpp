@@ -59,15 +59,16 @@ namespace Uart {
         /// Thead init
         writeUart_mutex.unlock();   //set for sure the unlock state
         this->readerTh = new std::thread(this->uartReader, std::ref(*this));
-
+#ifdef RT_THREAD
         // encrease priority
         sched_param sch;
         int policy;
         pthread_getschedparam(this->readerTh->native_handle(), &policy, &sch);
-        sch.sched_priority = sched_get_priority_max(SCHED_RR);
-        if (pthread_setschedparam(this->readerTh->native_handle(), SCHED_RR, &sch)) {
+        sch.sched_priority = sched_get_priority_max(SCHED_FIFO);
+        if (pthread_setschedparam(this->readerTh->native_handle(), SCHED_FIFO, &sch)) {
             throw UartException("Failed to setschedparam: ", errno);
         }
+#endif
     }
 
     UartDriver::~UartDriver() {
@@ -179,7 +180,8 @@ namespace Uart {
         mexSize = sizeMessage(type);
         writeBuf[0] = StartCode;
         writeBuf[1] = type;
-        memcpy(&writeBuf[2], pack, mexSize);
+        if (pack)    //if pack null avoid this memory acces
+            memcpy(&writeBuf[2], pack, mexSize);
         writeBuf[2 + mexSize] = EndCode;
         mexSize += 3; // StartCode + type + EndCode
         int i = 0;
