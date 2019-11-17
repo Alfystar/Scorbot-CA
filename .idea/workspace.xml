@@ -18,12 +18,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/installingCommand" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/UartDriver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/UartDriver.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/UartDriver.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/UartDriver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/ScoreBoard_Uart.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/ScoreBoard_Uart.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/excutePack.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/excutePack.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/pcListen_demo/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/pcListen_demo/main.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/AdapterClasses/ComUartAdapter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/AdapterClasses/ComUartAdapter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/AdapterClasses/ComUartAdapter.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/AdapterClasses/ComUartAdapter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/AdapterFactory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/AdapterFactory.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/AdapterFactory.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/AdapterFactory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/ScorInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/ScorInterface.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/uartSubSystem_demo/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/uartSubSystem_demo/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/uartSubSystem_demo/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/uartSubSystem_demo/main.cpp" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -68,6 +74,7 @@
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.sourceCode.C/C++" />
   </component>
   <component name="RecentsManager">
@@ -191,7 +198,8 @@
       <workItem from="1573724774243" duration="1901000" />
       <workItem from="1573811895342" duration="8501000" />
       <workItem from="1573841077212" duration="15447000" />
-      <workItem from="1573891873188" duration="30921000" />
+      <workItem from="1573891873188" duration="31030000" />
+      <workItem from="1574017195443" duration="11860000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
       <created>1568027375662</created>
@@ -319,7 +327,14 @@
       <option name="project" value="LOCAL" />
       <updated>1573932027706</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="SubSystem Work!!!!&#10;now start debugging time">
+      <created>1573940376514</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1573940376514</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,7 +369,8 @@
     <MESSAGE value="Uart SubSystem started" />
     <MESSAGE value="Code reformat" />
     <MESSAGE value="SubSystem Work!!!!" />
-    <option name="LAST_COMMIT_MESSAGE" value="SubSystem Work!!!!" />
+    <MESSAGE value="SubSystem Work!!!!&#10;now start debugging time" />
+    <option name="LAST_COMMIT_MESSAGE" value="SubSystem Work!!!!&#10;now start debugging time" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
 </project>

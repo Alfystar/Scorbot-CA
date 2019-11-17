@@ -11,7 +11,7 @@
 class AdapterFactory {  //abstract class
 public:
     static ComUartAdapter &makeUart(const std::string &device) noexcept(false);
-    static ComUartAdapter &makeUart(const std::string &device, int uartSpeed) noexcept(false);
+    static ComUartAdapter &makeUart(const std::string &device, speed_t uartSpeed) noexcept(false);
 
     AdapterFactory() = delete;
 };

@@ -14,6 +14,7 @@ UartDriver *uart;
 int main(int argc, char *argv[]) {
     try {
         uart = new UartDriver("/dev/ttyACM0");
+        uart->uartSpeed(B921600);
     } catch (std::exception &e) {
         std::cerr << e.what() << "\n";
         exit(-1);

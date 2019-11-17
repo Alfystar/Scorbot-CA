@@ -37,7 +37,7 @@ namespace Uart {
             throw UartException("Impossibile Impostare velocità di cominicazione", errno);
         }
         // Finally, apply the configuration
-        if (tcsetattr(this->fd, TCSAFLUSH, &config)) {
+        if (tcsetattr(this->fd, TCSANOW, &config)) {
             throw UartException("Impossibile Impostare i parametri selezionati", errno);
         }
         // Ripulisco la memoria del driver
@@ -77,13 +77,13 @@ namespace Uart {
         close(this->fd);
     }
 
-    void UartDriver::uartSpeed(int vel) noexcept(false) {
+    void UartDriver::uartSpeed(speed_t vel) noexcept(false) {
         if (cfsetispeed(&config, vel) || cfsetospeed(&config, vel)) {
             throw UartException("Impossibile Impostare velocità di cominicazione", errno);
         }
 
         // Apply the configuration
-        if (tcsetattr(this->fd, TCSAFLUSH, &config)) {
+        if (tcsetattr(this->fd, TCSANOW, &config)) {
             throw UartException("Impossibile Impostare i parametri selezionati", errno);
         }
     }
@@ -247,14 +247,18 @@ namespace Uart {
     long bRead;
 
     void UartDriver::uartReader(UartDriver &d) {
-#ifdef UartDriverDebug
+#ifdef UartDriverDebug_thread
         std::cout << "uartReader Thread start\n";
 #endif
+
         tcflush(d.fd, TCIOFLUSH);
 
         for (;;) {
+#ifdef UartDriverDebug_thread
+            std::cout<<"uartReader try read\n";
+#endif
             bRead = read(d.fd, d.cbByteRecive->getHeadPtr(), d.cbByteRecive->linearEnd());
-#ifdef UartDriverDebug
+#ifdef UartDriverDebug_thread
             std::cout<<"uartReader read:"<< bRead<<"\n";
 #endif
             if (bRead < 0) {

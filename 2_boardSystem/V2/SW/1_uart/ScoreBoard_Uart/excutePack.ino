@@ -60,32 +60,12 @@ void excutePack(uart2Ard &p) {
 mAll mAllTmp;
 AllSensor *sAllSend;
 extern unsigned long nextEnSend, nextCurSend;
-extern unsigned long enP, curP;
+extern uint32_t enP, curP;
 
 void initDataSend() {
     sAllSend = new AllSensor(mAllTmp);
     nextEnSend = millis();    //dall'accenzione almeno 5 secondi di pausa
     nextCurSend = nextEnSend;
-
-    //test packs:
-    uart->packSend(mEncoderData, (data2Rasp *) &sAllSend->getEn());
-    uart->packSend(mAllData, (data2Rasp *) &sAllSend->getSens());
-    uart->packSend(mCurrentData, (data2Rasp *) &sAllSend->getCurrent());
-    uart->packSend(mEncoderData, (data2Rasp *) &sAllSend->getEn());
-    uart->packSend(mAllData, (data2Rasp *) &sAllSend->getSens());
-    uart->packSend(mCurrentData, (data2Rasp *) &sAllSend->getCurrent());
-    uart->packSend(mEncoderData, (data2Rasp *) &sAllSend->getEn());
-    uart->packSend(mAllData, (data2Rasp *) &sAllSend->getSens());
-    //extra carico di test
-    uart->packSend(mEncoderData, (data2Rasp *) &sAllSend->getEn());
-    uart->packSend(mAllData, (data2Rasp *) &sAllSend->getSens());
-    uart->packSend(mCurrentData, (data2Rasp *) &sAllSend->getCurrent());
-    uart->packSend(mEncoderData, (data2Rasp *) &sAllSend->getEn());
-    uart->packSend(mAllData, (data2Rasp *) &sAllSend->getSens());
-    uart->packSend(mCurrentData, (data2Rasp *) &sAllSend->getCurrent());
-    uart->packSend(mEncoderData, (data2Rasp *) &sAllSend->getEn());
-    uart->packSend(mAllData, (data2Rasp *) &sAllSend->getSens());
-
 }
 
 mEncoder enTest = {1, 2, 3, 4, 5, 6};
@@ -106,20 +86,20 @@ void dataSend() {
         nextEnSend += enP;
         nextCurSend += curP;
         return;
-    } else {
-        if (time - nextEnSend > enP) {
-            sAllSend->copyEn(sFeed->captureEn());
-            sAllSend->copyEn(enTest);
-            //uart->packSend(mEncoderData, (data2Rasp *) &sAllSend->getEn());
-            nextEnSend += enP;
-            return;
-        }
-        if (time - nextCurSend > curP) {
-            sAllSend->copyEn(sFeed->captureEn());
-            sAllSend->copyCur(curTest);
-            //uart->packSend(mCurrentData, (data2Rasp *) &sAllSend->getCurrent());
-            nextCurSend += curP;
-            return;
-        }
     }
+    if (time - nextEnSend > enP) {
+        //sAllSend->copyEn(sFeed->captureEn());
+        sAllSend->copyEn(enTest);
+        uart->packSend(mEncoderData, (data2Rasp *) &sAllSend->getEn());
+        nextEnSend += enP;
+        return;
+    }
+    if (time - nextCurSend > curP) {
+        //sAllSend->copyCur(adc->getLastCycle());
+        sAllSend->copyCur(curTest);
+        uart->packSend(mCurrentData, (data2Rasp *) &sAllSend->getCurrent());
+        nextCurSend += curP;
+        return;
+    }
+
 }

@@ -33,6 +33,7 @@ ComUartAdapter &ComUartAdapter::getInstance(const std::string &device) noexcept(
         ComUartAdapter::instance = new ComUartAdapter();
     }
     ComUartAdapter::instance->changeDevice(device);
+    sleep(1);  // wait for 1s to take time to set the class and concurrency
     return *ComUartAdapter::instance;
 }
 
@@ -40,7 +41,7 @@ void ComUartAdapter::changeDevice(const std::string &device) noexcept(false) {
     uartDev = uartFactory.getUartClass(device);
 }
 
-void ComUartAdapter::changeDeviceVel(int uartVel) noexcept(false) {
+void ComUartAdapter::changeDeviceVel(speed_t uartVel) noexcept(false) {
     if (!uartDev)
         throw std::runtime_error("ComUartAdapter::changeDeviceVel, uartDev not define jet");
     uartDev->uartSpeed(uartVel);
@@ -61,65 +62,65 @@ void ComUartAdapter::sendVel(SpeedMot &sp) {
 void ComUartAdapter::setSetting(SettingBoard_C &set) {
     this->set->copyPack(set);
     ComUartAdapter::setNew.unlock();    // di persè è un nuovo dato
-    uartDev->packSend(mSpeedData, (data2Ard *) &set.getSetting());
+    uartDev->packSend(settingBoardData, (data2Ard *) &set.getSetting());
 }
 
 void ComUartAdapter::setSampleTimeEn(uint32_t sEn) {
     this->sEn.tv_usec = sEn;  // time in micro-Second, like arduino expected
-    uartDev->packSend(mSpeedData, (data2Ard *) &sEn);
+    uartDev->packSend(sampleTimeEn, (data2Ard *) &sEn);
 }
 
 void ComUartAdapter::setSampleTimeCur(uint32_t sCur) {
     this->sCur.tv_usec = sCur; // time in micro-Second, like arduino expected
-    uartDev->packSend(mSpeedData, (data2Ard *) &sCur);
+    uartDev->packSend(sampleTimeCur, (data2Ard *) &sCur);
 }
 
 
-EncoderMot &ComUartAdapter::getEncoder() {
+EncoderMot *ComUartAdapter::getEncoder() {
     EncoderMot *e = new EncoderMot();
     e->copyEn(allSensor->getEn());
-    return *e;
+    return e;
 }
 
-CurrentMot &ComUartAdapter::getCurrent() {
+CurrentMot *ComUartAdapter::getCurrent() {
     CurrentMot *c = new CurrentMot();
     c->copyCur(allSensor->getCurrent());
-    return *c;
+    return c;
 }
 
-AllSensor &ComUartAdapter::getSensor() {
+AllSensor *ComUartAdapter::getSensor() {
     AllSensor *all = new AllSensor();
     all->copyPack(allSensor->getSens());
-    return *all;
+    return all;
 }
 
-EncoderMot &ComUartAdapter::getEncoder(struct timespec *t) {
+EncoderMot *ComUartAdapter::getEncoder(struct timespec *t) {
     memcpy(t, &enTime, sizeof(struct timespec));
     return getEncoder();
 }
 
-CurrentMot &ComUartAdapter::getCurrent(struct timespec *t) {
+CurrentMot *ComUartAdapter::getCurrent(struct timespec *t) {
     memcpy(t, &curTime, sizeof(struct timespec));
     return getCurrent();
 }
 
-AllSensor &ComUartAdapter::getSensor(struct timespec *en, struct timespec *cur) {
+AllSensor *ComUartAdapter::getSensor(struct timespec *en, struct timespec *cur) {
     memcpy(en, &enTime, sizeof(struct timespec));
     memcpy(cur, &curTime, sizeof(struct timespec));
     return getSensor();
 }
 
-SettingBoard_C &ComUartAdapter::getSetting_local() {
+SettingBoard_C *ComUartAdapter::getSetting_local() {
     SettingBoard_C *set = new SettingBoard_C();
     set->copyPack(*this->set);
-    return *set;
+    return set;
 }
 
-SettingBoard_C &ComUartAdapter::getSetting_board() {
+SettingBoard_C *ComUartAdapter::getSetting_board() {
     //get data from boart
     SettingBoard_C &set = this->getSettingConrete();
     // update data on infoExpert
-    return set;
+    return &set;
 
 }
 
@@ -135,79 +136,79 @@ bool ComUartAdapter::isAllSensorValid() {
     return isEncoderValid() && isCurrentValid();
 }
 
-EncoderMot &ComUartAdapter::getValidEncoder() {
+EncoderMot *ComUartAdapter::getValidEncoder() {
     if (isEncoderValid()) {
         EncoderMot *p = new EncoderMot();
         p->copyEn(allSensor->getEn());
-        return *p;
+        return p;
     } else
-        return getEncoderConrete();
+        return &getEncoderConrete();
 }
 
-CurrentMot &ComUartAdapter::getValidCurrent() {
+CurrentMot *ComUartAdapter::getValidCurrent() {
     if (isCurrentValid()) {
         CurrentMot *p = new CurrentMot();
         p->copyCur(allSensor->getCurrent());
-        return *p;
+        return p;
     } else
-        return getCurrentConrete();
+        return &getCurrentConrete();
 }
 
-AllSensor &ComUartAdapter::getValidSensor() {
+AllSensor *ComUartAdapter::getValidSensor() {
     if (isAllSensorValid()) {
         AllSensor *p = new AllSensor();
         p->copyPack(allSensor->getSens());
-        return *p;
+        return p;
     } else
-        return getSensorConrete();
+        return &getSensorConrete();
 }
 
-EncoderMot &ComUartAdapter::getValidEncoder(struct timespec *t) {
-    EncoderMot &p = getValidEncoder();
+EncoderMot *ComUartAdapter::getValidEncoder(struct timespec *t) {
+    EncoderMot *p = getValidEncoder();
     memcpy(t, &enTime, sizeof(struct timespec));
     return p;
 }
 
-CurrentMot &ComUartAdapter::getValidCurrent(struct timespec *t) {
-    CurrentMot &p = getValidCurrent();
+CurrentMot *ComUartAdapter::getValidCurrent(struct timespec *t) {
+    CurrentMot *p = getValidCurrent();
     memcpy(t, &curTime, sizeof(struct timespec));
     return p;
 }
 
-AllSensor &ComUartAdapter::getValidSensor(struct timespec *en, struct timespec *cur) {
-    AllSensor &p = getValidSensor();
+AllSensor *ComUartAdapter::getValidSensor(struct timespec *en, struct timespec *cur) {
+    AllSensor *p = getValidSensor();
     memcpy(en, &enTime, sizeof(struct timespec));
     memcpy(cur, &curTime, sizeof(struct timespec));
     return p;
 }
 
-EncoderMot &ComUartAdapter::getValidEncoderWait() {
-    return getEncoderConrete();
+EncoderMot *ComUartAdapter::getValidEncoderWait() {
+    return &getEncoderConrete();
 }
 
-CurrentMot &ComUartAdapter::getValidCurrentWait() {
-    return getCurrentConrete();
+CurrentMot *ComUartAdapter::getValidCurrentWait() {
+    return &getCurrentConrete();
 }
 
-AllSensor &ComUartAdapter::getValidSensorWait() {
-    return getSensorConrete();
+AllSensor *ComUartAdapter::getValidSensorWait() {
+    return &getSensorConrete();
 }
 
 
-EncoderMot &ComUartAdapter::getValidEncoderWait(struct timespec *t) {
-    EncoderMot &p = getValidEncoderWait();
+EncoderMot *ComUartAdapter::getValidEncoderWait(struct timespec *t) {
+    EncoderMot *p = getValidEncoderWait();
     memcpy(t, &enTime, sizeof(struct timespec));
     return p;
 }
 
-CurrentMot &ComUartAdapter::getValidCurrentWait(struct timespec *t) {
-    CurrentMot &p = getValidCurrentWait();
+CurrentMot *ComUartAdapter::getValidCurrentWait(struct timespec *t) {
+    CurrentMot *p = getValidCurrentWait();
     memcpy(t, &curTime, sizeof(struct timespec));
     return p;
 }
 
-AllSensor &ComUartAdapter::getValidSensorWait(struct timespec *en, struct timespec *cur) {
-    AllSensor &p = getValidSensorWait();
+AllSensor *ComUartAdapter::getValidSensorWait(struct timespec *en, struct timespec *cur) {
+    AllSensor *p = getValidSensorWait();
     memcpy(en, &enTime, sizeof(struct timespec));
     memcpy(cur, &curTime, sizeof(struct timespec));
     return p;
@@ -237,7 +238,7 @@ AllSensor &ComUartAdapter::getSensorConrete() {
 
 SettingBoard_C &ComUartAdapter::getSettingConrete() {
     setNew.try_lock();   // voglio dati nuovi quindi sia se è unclock che lock lo metto a lock.
-    uartDev->packSend(settingBoardData, nullptr);
+    uartDev->packSend(settingAsk, nullptr);
     setNew.lock();   //Quando uartReader riceverà un setting board verrò sbloccato
     SettingBoard_C *p = new SettingBoard_C();
     p->copyPack(*set);
@@ -269,13 +270,14 @@ ComUartAdapter::ComUartAdapter() : ScorInterface(),
 #endif
 }
 
-struct timespec timeOut, timeToAdd, now;
 
 void ComUartAdapter::uartReader(ComUartAdapter *u) {
+    struct timespec timeOut, timeToAdd, now;
+    usleep(10 * 1000UL);  // wait for 10ms to take time to set the class
     while (true) {
-        if (!u->uartDev) {
-            std::cerr << "Nessuna com aperta, attendo 1s\n";
-            sleep(1);
+        while (!u->uartDev) {
+            std::cerr << "Nessuna com aperta, attendo 1ms\n";
+            usleep(1 * 1000UL);
         }
         clock_gettime(CLOCK_REALTIME, &now);
         // (1000UL * 1000UL)  //time in millisecond
@@ -291,7 +293,6 @@ void ComUartAdapter::uartReader(ComUartAdapter *u) {
         if (dato) {
             switch (dato->type) {
                 case settingBoardData:
-                    clock_gettime(CLOCK_MONOTONIC_RAW, &u->setTime);
                     u->set->copyPack(dato->pack.up.prop);
                     u->setNew.unlock();
                     break;
@@ -307,7 +308,7 @@ void ComUartAdapter::uartReader(ComUartAdapter *u) {
                     break;
                 case mAllData:
                     clock_gettime(CLOCK_MONOTONIC_RAW, &u->enTime);
-                    memcpy(&u->curTime, &u->enTime, sizeof(&u->enTime));
+                    memcpy(&u->curTime, &u->enTime, sizeof(u->enTime));
                     u->allSensor->copyPack(&dato->pack.up.sens);
                     u->enNew.unlock();
                     u->curNew.unlock();

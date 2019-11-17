@@ -8,7 +8,7 @@ ComUartAdapter &AdapterFactory::makeUart(const std::string &device) {
     return ComUartAdapter::getInstance(device);
 }
 
-ComUartAdapter &AdapterFactory::makeUart(const std::string &device, int uartSpeed) {
+ComUartAdapter &AdapterFactory::makeUart(const std::string &device, speed_t uartSpeed) {
     ComUartAdapter &p = ComUartAdapter::getInstance(device);
     p.changeDeviceVel(uartSpeed);
     return p;

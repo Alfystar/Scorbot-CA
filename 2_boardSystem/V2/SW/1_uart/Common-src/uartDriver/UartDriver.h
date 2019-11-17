@@ -6,6 +6,7 @@
 #define PCLISTENUART_UARTDRIVER_H
 
 //#define UartDriverDebug 1
+//#define UartDriverDebug_thread 1
 //#define CMD_Send_PRINT 1
 
 #ifdef linuxSide
@@ -68,7 +69,7 @@ namespace Uart {
 #ifdef linuxSide
         UartDriver(const std::string &device) noexcept(false);
         ~UartDriver();  //should be called only by singleton Parametric factory
-        void uartSpeed(int vel) noexcept(false);
+        void uartSpeed(speed_t vel) noexcept(false);
 #else
         UartDriver(HardwareSerial *serial, long vel);
 #endif
@@ -83,6 +84,7 @@ namespace Uart {
         size_t Available(); // su ard uartAvailable
         pIn *getData();
 #ifdef linuxSide
+        //todo: aggiungere che prendono il tempo del pacchetto arrivato e lo restituiscono
         pIn *getDataWait() noexcept(false);
         pIn *getDataWait(struct timespec *timeOut) noexcept(false);
 #endif

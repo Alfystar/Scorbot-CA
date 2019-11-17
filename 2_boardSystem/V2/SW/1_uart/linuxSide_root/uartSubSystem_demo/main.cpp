@@ -18,16 +18,10 @@ int main(int argc, char *argv[]) {
     try {
 //        scorbot = &AdapterFactory::makeUart("/dev/ttyACM0",B115200);
         scorbot = &AdapterFactory::makeUart("/dev/ttyACM0", B921600);
-
     } catch (const std::exception &e) {
-        // speciffic handling for all exceptions extending std::exception, except
-        // std::runtime_error which is handled explicitly
         std::cerr << e.what() << std::endl;
         exit(-1);
     }
-    scorbot->setSampleTimeEn(100 * 1000UL);
-    scorbot->setSampleTimeCur(10 * 1000UL);
-
 
     /// Setting test
     settingsBoard pData;
@@ -44,43 +38,66 @@ int main(int argc, char *argv[]) {
     p->setAdcDiff(false);
     p->setAdcRef(in1V1);
     p->setPWMfreq(hz4k);
-    // todo debugare il raccoglimento e l'impostazione dei settings
+    SettingBoard_C *pRecive;
     std::cout << "============================================================\n";
     std::cout << "Default Settings:\n";
     p->printSetting();
+    std::cout << "\n";
+
     std::cout << "Settings from board directly:\n";
-    scorbot->getSetting_board().printSetting();
+    pRecive = scorbot->getSetting_board();
+    pRecive->printSetting();
+    delete pRecive;
+    std::cout << "\n";
+
     std::cout << "Settings read from local:\n";
-    scorbot->getSetting_local().printSetting();
+    pRecive = scorbot->getSetting_local();
+    pRecive->printSetting();
+    delete pRecive;
+    std::cout << "\n";
+
     std::cout << "Sending default settings:\n";
     scorbot->setSetting(*p);
+    std::cout << "\n";
+
     std::cout << "Settings read from local:\n";
-    scorbot->getSetting_local().printSetting();
+    pRecive = scorbot->getSetting_local();
+    pRecive->printSetting();
+    delete pRecive;
+    std::cout << "\n";
+
     std::cout << "Settings from board directly:\n";
-    scorbot->getSetting_board().printSetting();
+    pRecive = scorbot->getSetting_board();
+    pRecive->printSetting();
+    delete pRecive;
     std::cout << "============================================================\n";
 
     /// Data test
     int i = 0;
-    EncoderMot *e = new EncoderMot();
-    CurrentMot *c = new CurrentMot();
-    AllSensor *allS = new AllSensor();
-    struct timespec lastPack, newPack, deltaPack;
-    clock_gettime(CLOCK_MONOTONIC_RAW, &lastPack);
-    timerclearSpec(&deltaPack);
+    EncoderMot *e;
+    CurrentMot *c;
+    AllSensor *allS;
+//    scorbot->setSampleTimeCur(30 * 1000UL);
+    scorbot->setSampleTimeCur(50 * 1000UL);
+    struct timespec lastPackT, newPackT, deltaPackT;
+    clock_gettime(CLOCK_MONOTONIC_RAW, &lastPackT);
+    timerclearSpec(&deltaPackT);
     for (;;) {
-        e->copyEn(scorbot->getValidEncoderWait(&newPack));
-        //todo: capire perchè con getValidCurrentWait non viene preso il tempo
-        //c->copyCur(scorbot->getValidCurrentWait(&newPack));
-        timersubSpec(&newPack, &lastPack, &deltaPack);
-        timeStampSpec(&deltaPack, "deltaPack");
-        lastPack = newPack;
+        e = scorbot->getValidEncoderWait(&newPackT);
+//        c = scorbot->getValidCurrentWait(&newPackT);
+        timersubSpec(&newPackT, &lastPackT, &deltaPackT);
+        timeStampSpec(&deltaPackT, "deltaPackT");
+        lastPackT = newPackT;
         std::cout << "\n\t##Recived:\n";
         e->printEncoder();
-        //c->printCurrent();
+//        c->printCurrent();
         i++;
-        if (i > 100)
-            scorbot->setSampleTimeCur(5 * 1000UL);
+        if (i == 100) {
+//            scorbot->setSampleTimeCur(10 * 1000UL);
+            scorbot->setSampleTimeEn(1 * 1000UL);
+        }
+        delete e;
+//        delete c;
         std::cout << i << "\n";
         std::cout << "\n";
     }
