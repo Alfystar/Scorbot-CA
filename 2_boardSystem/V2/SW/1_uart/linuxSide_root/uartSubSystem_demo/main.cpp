@@ -78,7 +78,7 @@ int main(int argc, char *argv[]) {
     CurrentMot *c;
     AllSensor *allS;
 //    scorbot->setSampleTimeCur(30 * 1000UL);
-    scorbot->setSampleTimeCur(50 * 1000UL);
+    scorbot->setSampleTimeEn(50 * 1000UL);
     struct timespec lastPackT, newPackT, deltaPackT;
     clock_gettime(CLOCK_MONOTONIC_RAW, &lastPackT);
     timerclearSpec(&deltaPackT);
@@ -95,6 +95,7 @@ int main(int argc, char *argv[]) {
         if (i == 100) {
 //            scorbot->setSampleTimeCur(10 * 1000UL);
             scorbot->setSampleTimeEn(1 * 1000UL);
+            i = 0;
         }
         delete e;
 //        delete c;

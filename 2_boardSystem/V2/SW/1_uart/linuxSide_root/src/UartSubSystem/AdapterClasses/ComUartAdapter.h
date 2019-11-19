@@ -51,7 +51,7 @@
         (ts)->tv_nsec=(long) nanoSec%( 1000UL* 1000UL * 1000UL);            \
     }while(0)
 #define timeStampSpec(ts, name) std::cout << name << ".tv_sec=" << (ts)->tv_sec << "\t" \
-    << name << ".tv_nsec=" <<(ts)->tv_nsec << " (" << (ts)->tv_nsec/(1000UL * 1000UL) << "ms)\n"
+    << name << ".tv_nsec=" <<(ts)->tv_nsec << " (" << ((ts)->tv_nsec + (500UL * 1000UL)) /(1000UL * 1000UL) << "ms)\n"
 ///###################################################################################################
 
 
@@ -122,7 +122,8 @@ private:
 
 
     /// Variabili di salvataggio dei pacchetti letti dal Thread uartReader
-    static std::mutex setNew, enNew, curNew;
+    //static std::mutex setNew, enNew, curNew;
+    static sem_t setNew, enNew, curNew;
 
     // L'uartReader unlock il mutex quando arriva un nuvo dato, così se un thread è in attesa del
     // dato viene risvegliato solo al momento della ricezione.
@@ -143,6 +144,11 @@ private:
     ComUartAdapter();
     static void uartReader(ComUartAdapter *u);
     bool timeValid(struct timespec *lastSensorTime, struct timeval *sampleTime);
+
+    //Semaphore utility
+    static void sem_postOnce(sem_t *s);
+    static void sem_clearIthem(sem_t *s);
+    static void dataSemWait(sem_t *s);
 };
 
 #endif //PCLISTENUART_COMUARTADAPTER_H
