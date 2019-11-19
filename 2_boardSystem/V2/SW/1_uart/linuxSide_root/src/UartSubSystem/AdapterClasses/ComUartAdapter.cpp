@@ -154,14 +154,14 @@ CurrentMot *ComUartAdapter::getValidCurrent() {
         return &getCurrentConrete();
 }
 
-AllSensor *ComUartAdapter::getValidSensor() {
-    if (isAllSensorValid()) {
-        AllSensor *p = new AllSensor();
-        p->copyPack(allSensor->getSens());
-        return p;
-    } else
-        return &getSensorConrete();
-}
+//AllSensor *ComUartAdapter::getValidSensor() {
+//    if (isAllSensorValid()) {
+//        AllSensor *p = new AllSensor();
+//        p->copyPack(allSensor->getSens());
+//        return p;
+//    } else
+//        return &getSensorConrete();
+//}
 
 EncoderMot *ComUartAdapter::getValidEncoder(struct timespec *t) {
     EncoderMot *p = getValidEncoder();
@@ -175,12 +175,12 @@ CurrentMot *ComUartAdapter::getValidCurrent(struct timespec *t) {
     return p;
 }
 
-AllSensor *ComUartAdapter::getValidSensor(struct timespec *en, struct timespec *cur) {
-    AllSensor *p = getValidSensor();
-    memcpy(en, &enTime, sizeof(struct timespec));
-    memcpy(cur, &curTime, sizeof(struct timespec));
-    return p;
-}
+//AllSensor *ComUartAdapter::getValidSensor(struct timespec *en, struct timespec *cur) {
+//    AllSensor *p = getValidSensor();
+//    memcpy(en, &enTime, sizeof(struct timespec));
+//    memcpy(cur, &curTime, sizeof(struct timespec));
+//    return p;
+//}
 
 EncoderMot *ComUartAdapter::getValidEncoderWait() {
     return &getEncoderConrete();
@@ -190,9 +190,9 @@ CurrentMot *ComUartAdapter::getValidCurrentWait() {
     return &getCurrentConrete();
 }
 
-AllSensor *ComUartAdapter::getValidSensorWait() {
-    return &getSensorConrete();
-}
+//AllSensor *ComUartAdapter::getValidSensorWait() {
+//    return &getSensorConrete();
+//}
 
 
 EncoderMot *ComUartAdapter::getValidEncoderWait(struct timespec *t) {
@@ -207,13 +207,12 @@ CurrentMot *ComUartAdapter::getValidCurrentWait(struct timespec *t) {
     return p;
 }
 
-AllSensor *ComUartAdapter::getValidSensorWait(struct timespec *en, struct timespec *cur) {
-    AllSensor *p = getValidSensorWait();
-    memcpy(en, &enTime, sizeof(struct timespec));
-    memcpy(cur, &curTime, sizeof(struct timespec));
-    return p;
-
-}
+//AllSensor *ComUartAdapter::getValidSensorWait(struct timespec *en, struct timespec *cur) {
+//    AllSensor *p = getValidSensorWait();
+//    memcpy(en, &enTime, sizeof(struct timespec));
+//    memcpy(cur, &curTime, sizeof(struct timespec));
+//    return p;
+//}
 
 EncoderMot &ComUartAdapter::getEncoderConrete() {
     //enNew.lock();   //Quando uartReader riceverà un mEncoter verrò sbloccato
@@ -230,13 +229,12 @@ CurrentMot &ComUartAdapter::getCurrentConrete() {
     return *p;
 }
 
-AllSensor &ComUartAdapter::getSensorConrete() {
-    //todo: vare la variante a doppia lock
-    //std::lock(enNew, curNew); //Quando uartReader ha disponibili sia current che En
-    AllSensor *p = new AllSensor();
-    p->copyPack(allSensor->getSens());
-    return *p;
-}
+//AllSensor &ComUartAdapter::getSensorConrete() {
+//    sem_clearIthem(&dataNew); //Quando uartReader ha disponibili un nuovo current o En
+//    AllSensor *p = new AllSensor();
+//    p->copyPack(allSensor->getSens());
+//    return *p;
+//}
 
 SettingBoard_C &ComUartAdapter::getSettingConrete() {
     sem_clearIthem(&setNew); // voglio dati nuovi quindi svuoto i token.
@@ -263,6 +261,7 @@ ComUartAdapter::ComUartAdapter() : ScorInterface(),
     if (sem_init(&curNew, 0, 0)) {
         perror("sem_int curNew fails for:");
     }
+
     // Thread di lettura
     timerclear(&sEn);
     timerclear(&sCur);
@@ -281,6 +280,7 @@ ComUartAdapter::ComUartAdapter() : ScorInterface(),
 
 void ComUartAdapter::uartReader(ComUartAdapter *u) {
     struct timespec timeOut, timeToAdd, now;
+    struct timespec timePack;
     int sval;   // to store semaphore value temporally
     usleep(10 * 1000UL);  // wait for 10ms to take time to set the class
     while (true) {
@@ -294,7 +294,8 @@ void ComUartAdapter::uartReader(ComUartAdapter *u) {
         timeraddSpec(&now, &timeToAdd, &timeOut);
         uart2Rasp *dato = nullptr;
         try {
-            dato = u->uartDev->getDataWait(&timeOut);
+//            dato = u->uartDev->getDataWait(&timeOut);
+            dato = u->uartDev->getDataWait_timePack(&timeOut,&timePack);
         } catch (std::exception &e) {
             std::cerr << e.what() << "\n";
             sleep(1);
@@ -306,17 +307,20 @@ void ComUartAdapter::uartReader(ComUartAdapter *u) {
                     sem_postOnce(&u->setNew);
                     break;
                 case mEncoderData:
-                    clock_gettime(CLOCK_MONOTONIC_RAW, &u->enTime);
+//                    clock_gettime(CLOCK_MONOTONIC_RAW, &u->enTime);
+                    memcpy(&u->enTime,&timePack,sizeof(struct timespec));
                     u->allSensor->copyEn(&dato->pack.up.en);
                     sem_postOnce(&u->enNew);
                     break;
                 case mCurrentData:
-                    clock_gettime(CLOCK_MONOTONIC_RAW, &u->curTime);
+//                    clock_gettime(CLOCK_MONOTONIC_RAW, &u->curTime);
+                    memcpy(&u->curTime,&timePack,sizeof(struct timespec));
                     u->allSensor->copyCur(&dato->pack.up.cur);
                     sem_postOnce(&u->curNew);
                     break;
                 case mAllData:
-                    clock_gettime(CLOCK_MONOTONIC_RAW, &u->enTime);
+//                    clock_gettime(CLOCK_MONOTONIC_RAW, &u->enTime);
+                    memcpy(&u->enTime,&timePack,sizeof(struct timespec));
                     memcpy(&u->curTime, &u->enTime, sizeof(u->enTime));
                     u->allSensor->copyPack(&dato->pack.up.sens);
                     sem_postOnce(&u->enNew);
@@ -361,10 +365,11 @@ inline void ComUartAdapter::sem_postOnce(sem_t *s) {
 
 inline void ComUartAdapter::sem_clearIthem(sem_t *s) {
     while (true) {   //repeat until the token is clean
-        if (sem_trywait(s) == -1 && errno == EAGAIN)
-            return;
-        else
-            perror("sem_trywait fail whit error:");
+        if ((sem_trywait(s) == -1))
+            if (errno == EAGAIN)
+                return;
+            else
+                perror("sem_trywait fail whit error:");
     }
 }
 

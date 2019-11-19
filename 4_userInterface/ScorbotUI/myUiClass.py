@@ -1,13 +1,7 @@
 import math
 
-from typing import List
+from python_work.pyqtLib.UiClass import Ui_UiClass
 
-from PyQt5 import QtCore, QtGui, QtWidgets
-from PyQt5.QtWidgets import QLabel
-
-from pyqtLib.UiClass import Ui_UiClass
-
-from pyqtLib.pyC_com.p import *
 nMot=6
 Vref=1.1
 

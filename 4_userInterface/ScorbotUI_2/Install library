@@ -1,0 +1,20 @@
+Per installare pyqt5 dal terminale:
+
+sudo pip3 install pyqt5 pyqt5-stubs
+sudo apt install python3-pyqt5 pyqt5-dev-tools qttools5-dev-tools
+
+e si installeranno anche i tool di sviluppo
+
+con il comando "pyuic5 " si trasformano i file UI in classi python
+pyuic5 dialog.ui > dialog.py
+
+
+PyQt5 also contains a number of utility programs.
+pyuic5 corresponds to the Qt uic utility. It converts QtWidgets based GUIs created using Qt Designer to Python code.
+pyrcc5 corresponds to the Qt rcc utility. It embeds arbitrary resources (eg. icons, images, translation files) described by a resource collection file in a Python module.
+pylupdate5 corresponds to the Qt lupdate utility. It extracts all of the translatable strings from Python code and creates or updates .ts translation files. These are then used by Qt Linguist to manage the translation of those strings.
+
+
+
+esportando questo path sul terminale è possibile aggiungere le cartelle sorgenti
+export PYTHONPATH=/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_2/comLibWork:/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_2/userInterface

@@ -86,7 +86,9 @@ namespace Uart {
 #ifdef linuxSide
         //todo: aggiungere che prendono il tempo del pacchetto arrivato e lo restituiscono
         pIn *getDataWait() noexcept(false);
+        pIn *getDataWait_timePack(struct timespec *t) noexcept(false);
         pIn *getDataWait(struct timespec *timeOut) noexcept(false);
+        pIn *getDataWait_timePack(struct timespec *timeOut, struct timespec *t) noexcept(false);
 #endif
         /// Data print for debug
         static void serialPackDb(uart2Ard &p);
@@ -120,6 +122,7 @@ namespace Uart {
 #ifdef linuxSide
         //std::mutex readCb_mutex;  // protects gets data from concurrency
         sem_t recivedPackSem;
+        struct timespec tPack[cbSize];
 #endif
 
         //Variabili della coda di invio

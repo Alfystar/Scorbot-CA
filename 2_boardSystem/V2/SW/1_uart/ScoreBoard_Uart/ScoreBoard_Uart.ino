@@ -49,6 +49,13 @@ void setup() {
     sei();
     Db.println("\tGlobal Interrupt Enable");
     Db.println("End Setup");
+
+    //Pin to test time respond with oscilloscope
+    //pinMode(31,OUTPUT);
+    //digitalWrite(31,0);
+    //pinMode(30,OUTPUT);
+    //digitalWrite(30,0);
+
 #ifdef MOVE_CHECK
     for (byte i=Mot1;i<nMot;i++)
     {

@@ -36,3 +36,4 @@
 ehthumbs.db
 /.directory
 /.DS_Store
+/cmake-build-debug

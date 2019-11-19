@@ -78,6 +78,8 @@ void dataSend() {
     //To avow the overflow problem this is simple solution
     //https://www.norwegiancreations.com/2018/10/arduino-tutorial-avoiding-the-overflow-issue-when-using-millis-and-micros/
     if (time - nextEnSend > enP && time - nextCurSend > curP) {
+    	//digitalWrite(31,!digitalRead(31));
+    	//digitalWrite(30,!digitalRead(30));
         //sAllSend->copyEn(sFeed->captureEn());
         //sAllSend->copyCur(adc->getLastCycle());
         sAllSend->copyEn(enTest);
@@ -88,6 +90,7 @@ void dataSend() {
         return;
     }
     if (time - nextEnSend > enP) {
+    	//digitalWrite(31,!digitalRead(31));
         //sAllSend->copyEn(sFeed->captureEn());
         sAllSend->copyEn(enTest);
         uart->packSend(mEncoderData, (data2Rasp *) &sAllSend->getEn());
@@ -95,6 +98,7 @@ void dataSend() {
         return;
     }
     if (time - nextCurSend > curP) {
+    	//digitalWrite(30,!digitalRead(30));
         //sAllSend->copyCur(adc->getLastCycle());
         sAllSend->copyCur(curTest);
         uart->packSend(mCurrentData, (data2Rasp *) &sAllSend->getCurrent());

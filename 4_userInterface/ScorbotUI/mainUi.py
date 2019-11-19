@@ -1,13 +1,6 @@
-import sys
-import logo
-from PyQt5 import QtCore, QtGui, QtWidgets
-
-from myUiClass import *
-
-from pyqtLib.pyC_com.p import *
+from python_work.myUiClass import *
 
 import sys
-import signal
 from threading import Thread
 
 class InputThread (Thread):
@@ -45,9 +38,9 @@ class InputThread (Thread):
            testo=testo + messaggio[i] 
 
      if (lista[0]=='e'):
-      self.ui.inserisci(lista[1:], 0)
+         self.ui.updateSensor(lista[1:], 0)
      else:
-      self.ui.inserisci(lista[1:], 1)
+         self.ui.updateSensor(lista[1:], 1)
      return 
 
  

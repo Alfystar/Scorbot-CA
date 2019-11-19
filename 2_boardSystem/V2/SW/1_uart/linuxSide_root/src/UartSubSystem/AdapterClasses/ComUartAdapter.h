@@ -89,17 +89,17 @@ public:
     /// Valid Get data
     EncoderMot *getValidEncoder() override;
     CurrentMot *getValidCurrent() override;
-    AllSensor *getValidSensor() override;
+//    AllSensor *getValidSensor() override;
     EncoderMot *getValidEncoder(struct timespec *t) override;
     CurrentMot *getValidCurrent(struct timespec *t) override;
-    AllSensor *getValidSensor(struct timespec *en, struct timespec *cur) override;
+//    AllSensor *getValidSensor(struct timespec *en, struct timespec *cur) override;
     /// Wait Valid Get data
     EncoderMot *getValidEncoderWait() override;
     CurrentMot *getValidCurrentWait() override;
-    AllSensor *getValidSensorWait() override;
+//    AllSensor *getValidSensorWait() override;
     EncoderMot *getValidEncoderWait(struct timespec *t) override;
     CurrentMot *getValidCurrentWait(struct timespec *t) override;
-    AllSensor *getValidSensorWait(struct timespec *en, struct timespec *cur) override;
+//    AllSensor *getValidSensorWait(struct timespec *en, struct timespec *cur) override;
 
     /// GetCom_int override
     // Nel caso della uart è inutile attendere attivamente la porta,
@@ -108,7 +108,7 @@ public:
     // in infoExpPack appena arrivano
     EncoderMot &getEncoderConrete() override;
     CurrentMot &getCurrentConrete() override;
-    AllSensor &getSensorConrete() override;
+//    AllSensor &getSensorConrete() override;
     SettingBoard_C &getSettingConrete() override;
 private:
     /// Variabili di funzionamento della classe nel sistema
@@ -123,7 +123,9 @@ private:
 
     /// Variabili di salvataggio dei pacchetti letti dal Thread uartReader
     //static std::mutex setNew, enNew, curNew;
+    // setNew, enNew, curNew specific for pack type
     static sem_t setNew, enNew, curNew;
+
 
     // L'uartReader unlock il mutex quando arriva un nuvo dato, così se un thread è in attesa del
     // dato viene risvegliato solo al momento della ricezione.

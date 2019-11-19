@@ -145,10 +145,19 @@ namespace Uart {
 
     pIn *UartDriver::getDataWait() {
         if (sem_wait(&this->recivedPackSem)) {
-            throw UartException("GetData return error:", errno);
+            throw UartException("getDataWait return error:", errno);
         }
         return this->cbRecive->getPtr();
     }
+
+    pIn *UartDriver::getDataWait_timePack(struct timespec *t) {
+        if (sem_wait(&this->recivedPackSem)) {
+            throw UartException("getDataWait_timePack return error:", errno);
+        }
+        memcpy(t,&tPack[this->cbRecive->getTail()],sizeof(struct timespec));
+        return this->cbRecive->getPtr();
+    }
+
 
     pIn *UartDriver::getDataWait(struct timespec *timeOut) {
         int s;
@@ -159,9 +168,25 @@ namespace Uart {
             if (errno == ETIMEDOUT) {
                 return nullptr;
             } else {
-                throw UartException("GetData return error:", errno);
+                throw UartException("getDataWait return error:", errno);
             }
         }
+        return this->cbRecive->getPtr();
+    }
+
+    pIn *UartDriver::getDataWait_timePack(struct timespec *timeOut, struct timespec *t) {
+        int s;
+        while ((s = sem_timedwait(&this->recivedPackSem, timeOut)) == -1 && errno == EINTR)
+            continue;       /* Restart if interrupted by handler */
+
+        if (s == -1) {
+            if (errno == ETIMEDOUT) {
+                return nullptr;
+            } else {
+                throw UartException("getDataWait return error:", errno);
+            }
+        }
+        memcpy(t,&tPack[this->cbRecive->getTail()],sizeof(struct timespec));
         return this->cbRecive->getPtr();
     }
 
@@ -225,6 +250,8 @@ namespace Uart {
 
         if (com->availableForWrite() > (len + 3))   //len+Type+StartCode+EndCode
         {
+        	//if(sTemp->type==mEncoderData)
+        	//	digitalWrite(31,1);
             //aggiorno la lettura della coda
             this->cbSend->get_externalRead();
 #ifdef CMD_Send_PRINT
@@ -237,6 +264,8 @@ namespace Uart {
                 com->write((unsigned char) sTemp->pack.buf[i]);
             }
             com->write((unsigned char) EndCode);
+            //if(sTemp->type==mEncoderData)
+            //	digitalWrite(31,0);
         } else { //non c'era abbastanza spazio, la prossima volta riparto dallo stesso punto
             return;
         }
@@ -344,7 +373,7 @@ namespace Uart {
                     if (this->expettedEnd == 0) {
                         if (dato == EndCode) {
 
-//Aggiungo esternamente a cbRecive il pacchetto ricevuto
+                            //Aggiungo esternamente a cbRecive il pacchetto ricevuto
                             cbByteRecive->writeMemOut((unsigned char *) this->cbRecive->getHeadPtr(), potPackStart,
                                                       1 + this->sizeMessage((uartPackType) potPackType)); //type+mexsize
 #ifdef UartDriverDebug
@@ -357,7 +386,12 @@ namespace Uart {
                             Db.println(" EndCode Found =D ");
                             this->serialPackDb(*this->cbRecive->getHeadPtr());
 #endif
-#endif                      //aggiorno il buffer dei pacchetti aggiungendone 1
+#endif
+#ifdef linuxSide
+                            //Prendo il tempo di arrivo
+                            clock_gettime(CLOCK_MONOTONIC_RAW,&tPack[this->cbRecive->getHead()]);
+#endif
+                            //aggiorno il buffer dei pacchetti aggiungendone 1
                             this->cbRecive->put_externalWrite();
 #ifdef linuxSide
                             if (!cbRecive->empty())

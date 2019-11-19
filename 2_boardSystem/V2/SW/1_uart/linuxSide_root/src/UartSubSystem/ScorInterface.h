@@ -44,18 +44,14 @@ public:
     // other wise the thread are mooved on wait state
     virtual EncoderMot *getValidEncoder() = 0;
     virtual CurrentMot *getValidCurrent() = 0;
-    virtual AllSensor *getValidSensor() = 0;
     virtual EncoderMot *getValidEncoder(struct timespec *t) = 0;
     virtual CurrentMot *getValidCurrent(struct timespec *t) = 0;
-    virtual AllSensor *getValidSensor(struct timespec *en, struct timespec *cur) = 0;
 
     /// Wait Valid Get data
     virtual EncoderMot *getValidEncoderWait() = 0;
     virtual CurrentMot *getValidCurrentWait() = 0;
-    virtual AllSensor *getValidSensorWait() = 0;
     virtual EncoderMot *getValidEncoderWait(struct timespec *t) = 0;
     virtual CurrentMot *getValidCurrentWait(struct timespec *t) = 0;
-    virtual AllSensor *getValidSensorWait(struct timespec *en, struct timespec *cur) = 0;
 protected:
     //InfoExpPack &dataExp;   //Automaticamente l'incato da chiunque realizzi questa interfaccia
 

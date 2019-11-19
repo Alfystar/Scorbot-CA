@@ -13,6 +13,46 @@ using namespace DataPrimitive;
 using namespace DataManipolation;
 ScorInterface *scorbot;
 
+
+
+
+void set_realtime_priority() {
+    int ret;
+
+    // We'll operate on the currently running thread.
+    pthread_t this_thread = pthread_self();
+    // struct sched_param is used to store the scheduling priority
+    struct sched_param params;
+
+    // We'll set the priority to the maximum.
+    params.sched_priority = sched_get_priority_max(SCHED_FIFO);
+    std::cout << "Trying to set thread realtime prio = " << params.sched_priority << std::endl;
+
+    // Attempt to set thread real-time priority to the SCHED_FIFO policy
+    ret = pthread_setschedparam(this_thread, SCHED_FIFO, &params);
+    if (ret != 0) {
+        // Print the error
+        std::cout << "Unsuccessful in setting thread realtime prio" << std::endl;
+        return;
+    }     // Now verify the change in thread priority
+    int policy = 0;
+    ret = pthread_getschedparam(this_thread, &policy, &params);
+    if (ret != 0) {
+        std::cout << "Couldn't retrieve real-time scheduling paramers" << std::endl;
+        return;
+    }
+
+    // Check the correct policy was applied
+    if(policy != SCHED_FIFO) {
+        std::cout << "Scheduling is NOT SCHED_FIFO!" << std::endl;
+    } else {
+        std::cout << "SCHED_FIFO OK" << std::endl;
+    }
+
+    // Print thread scheduling priority
+    std::cout << "Thread priority is " << params.sched_priority << std::endl;
+}
+
 int main(int argc, char *argv[]) {
     /// Initialize board
     try {
@@ -22,6 +62,8 @@ int main(int argc, char *argv[]) {
         std::cerr << e.what() << std::endl;
         exit(-1);
     }
+
+
 
     /// Setting test
     settingsBoard pData;
@@ -72,35 +114,65 @@ int main(int argc, char *argv[]) {
     delete pRecive;
     std::cout << "============================================================\n";
 
-    /// Data test
-    int i = 0;
+    /// Data read test
     EncoderMot *e;
     CurrentMot *c;
     AllSensor *allS;
-//    scorbot->setSampleTimeCur(30 * 1000UL);
-    scorbot->setSampleTimeEn(50 * 1000UL);
     struct timespec lastPackT, newPackT, deltaPackT;
+
+    /// Encoder test
+    std::cout << "\n\n============================================================\n";
+    std::cout << "Test della lettura degli encoder\n";
+    sleep(1);
+
+    scorbot->setSampleTimeCur(50000 * 1000UL);  // no send
+    scorbot->setSampleTimeEn(50 * 1000UL);
     clock_gettime(CLOCK_MONOTONIC_RAW, &lastPackT);
     timerclearSpec(&deltaPackT);
-    for (;;) {
+    for (int i = 0;i<10000;i++) {
         e = scorbot->getValidEncoderWait(&newPackT);
-//        c = scorbot->getValidCurrentWait(&newPackT);
+        timersubSpec(&newPackT, &lastPackT, &deltaPackT);
+        timeStampSpec(&deltaPackT, "deltaPackT");
+        if(deltaPackT.tv_nsec<(500*1000UL))
+            std::cout << "too fast\n";      //falsi positivi dovuti a i ritardi dei thread
+        lastPackT = newPackT;
+        std::cout << "\n\t##Recived:\n";
+        e->printEncoder();
+        if (i == 100) {
+            scorbot->setSampleTimeEn(1 * 1000UL); //max speed
+        }
+        delete e;
+        std::cout << i << "\n";
+        std::cout << "\n";
+    }
+
+    /// Current test
+    std::cout << "\n\n============================================================\n";
+    std::cout << "Test della lettura delle correnti \n";
+    sleep(1);
+
+    scorbot->setSampleTimeEn(50000 * 1000UL);  // no send
+    scorbot->setSampleTimeCur(50 * 1000UL);
+    clock_gettime(CLOCK_MONOTONIC_RAW, &lastPackT);
+    timerclearSpec(&deltaPackT);
+    for (int i = 0;i<10000;i++) {
+        c = scorbot->getValidCurrentWait(&newPackT);
         timersubSpec(&newPackT, &lastPackT, &deltaPackT);
         timeStampSpec(&deltaPackT, "deltaPackT");
         lastPackT = newPackT;
         std::cout << "\n\t##Recived:\n";
-        e->printEncoder();
-//        c->printCurrent();
-        i++;
+        c->printCurrent();
+        if(deltaPackT.tv_nsec<(500*1000UL))
+            std::cout << "too fast\n";
         if (i == 100) {
-//            scorbot->setSampleTimeCur(10 * 1000UL);
-            scorbot->setSampleTimeEn(1 * 1000UL);
-            i = 0;
+            scorbot->setSampleTimeCur(3 * 1000UL); //max speed
         }
-        delete e;
-//        delete c;
+        delete c;
         std::cout << i << "\n";
         std::cout << "\n";
     }
+
+    std::cout << "\n\n============================================================\n";
+    std::cout << "End tests\n";
     return 0;
 }
