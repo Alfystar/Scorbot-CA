@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../Common-src/DataTransfertPackge/DataPrimitive.h
+stdint-gcc.h
+-
+../../ScoreBoard_Uart/HW_rename.h
+../ScoreBoard_Uart/HW_rename.h
+
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_2/comLibWork/c_Side/comLib/comLib.cpp
+stdio.h
+-
+stdlib.h
+-
+unistd.h
+-
+pthread.h
+-
+string.h
+-
+semaphore.h
+-
+fcntl.h
+-
+comLib.h
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_2/comLibWork/c_Side/comLib/comLib.h
+
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_2/comLibWork/c_Side/comLib/comLib.h
+DataPrimitive.h
+-
+

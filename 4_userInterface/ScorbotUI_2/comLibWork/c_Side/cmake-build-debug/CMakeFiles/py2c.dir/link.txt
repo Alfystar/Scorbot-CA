@@ -1,0 +1,1 @@
+/usr/bin/c++  -g  -rdynamic CMakeFiles/py2c.dir/main.cpp.o  -o py2c comLib/libinterProcessCom.a Common-src/DataTransfertPackge/libdataTransfert.a -lpthread 

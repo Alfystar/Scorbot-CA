@@ -1,0 +1,9 @@
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_2/comLibWork/c_Side/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_2/comLibWork/c_Side/cmake-build-debug/CMakeFiles/py2c.dir
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_2/comLibWork/c_Side/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_2/comLibWork/c_Side/cmake-build-debug/Common-src/DataTransfertPackge/CMakeFiles/rebuild_cache.dir
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_2/comLibWork/c_Side/cmake-build-debug/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_2/comLibWork/c_Side/cmake-build-debug/Common-src/DataTransfertPackge/CMakeFiles/edit_cache.dir
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_2/comLibWork/c_Side/cmake-build-debug/comLib/CMakeFiles/rebuild_cache.dir
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_2/comLibWork/c_Side/cmake-build-debug/comLib/CMakeFiles/interProcessCom.dir
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_2/comLibWork/c_Side/cmake-build-debug/comLib/CMakeFiles/edit_cache.dir

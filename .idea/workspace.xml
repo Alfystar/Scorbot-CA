@@ -14,109 +14,7 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/4_userInterface/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/.idea/4_userInterface.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/.idea/ScorbotUI_2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/Install library" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/comLibWork/c_Side/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/comLibWork/c_Side/Common-src" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/comLibWork/c_Side/comLib/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/comLibWork/c_Side/comLib/comLib.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/comLibWork/c_Side/comLib/comLib.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/comLibWork/c_Side/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/comLibWork/py_Side/comLib.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/userInterface/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/userInterface/ConfFile/.config_init.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/userInterface/ConfFile/config.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/userInterface/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/userInterface/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/userInterface/mainUi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/userInterface/myUiClass.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/userInterface/uiClass/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/userInterface/uiClass/qt_Source/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/ScorbotUI_py/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/ScorbotUI_py/logo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/ScorbotUI_py/pyqtLib/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/ScorbotUI_py/pyqtLib/UiClass.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/ScorbotUI_py/pyqtLib/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/ScorbotUI_py/pyqtLib/logo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/ScorbotUI_py/pyqtLib/pyC_com/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/ScorbotUI_py/pyqtLib/qtfiles/Logo-Uni-Tor-Vergata.png_256x256.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/ScorbotUI_py/pyqtLib/qtfiles/UiClass.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/ScorbotUI_py/pyqtLib/qtfiles/UiClass.ui" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/ScorbotUI_py/pyqtLib/qtfiles/logo.qrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore_global" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore_global" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/UartDriver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/UartDriver.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/UartDriver.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/uartDriver/UartDriver.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/ScoreBoard_Uart.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/ScoreBoard_Uart.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/excutePack.ino" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/ScoreBoard_Uart/excutePack.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/AdapterClasses/ComUartAdapter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/AdapterClasses/ComUartAdapter.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/AdapterClasses/ComUartAdapter.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/AdapterClasses/ComUartAdapter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/GetCom_int.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/GetCom_int.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/ScorInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/src/UartSubSystem/ScorInterface.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/uartSubSystem_demo/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/uartSubSystem_demo/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/.directory" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI/mainUi.py" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI/mainUi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI/myUiClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI/myUiClass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/.idea/encodings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/.idea/relase.iml" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/.idea/relase.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/CMakeLists.txt.user" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/CMakeLists.txt.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/PidClass/PIDScorbot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/PidClass/PIDScorbot.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/PidClass/PIDScorbot.h" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/PidClass/PIDScorbot.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/SPILib/spi_scorebot_packdefine.h" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/SPILib/spi_scorebot_packdefine.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/SPILib/spisend.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/SPILib/spisend.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/SPILib/spisend.h" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/SPILib/spisend.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/ScorbotUI_py/.config_init.ini" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/ScorbotUI_py/.config_init.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/ScorbotUI_py/.directory" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/ScorbotUI_py/.directory" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/ScorbotUI_py/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/ScorbotUI_py/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/ScorbotUI_py/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/linuxSide_root/Note sperimentali" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/ScorbotUI_py/config.ini" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/ScorbotUI_py/config.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/ScorbotUI_py/logo.py" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/userInterface/logo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/ScorbotUI_py/mainUi.py" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/ScorbotUI_py/mainUi.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/ScorbotUI_py/myUiClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/ScorbotUI_py/myUiClass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/ScorbotUI_py/pyqtLib/.directory" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/ScorbotUI_py/pyqtLib/.directory" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/ScorbotUI_py/pyqtLib/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/userInterface/uiClass/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/ScorbotUI_py/pyqtLib/UiClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/userInterface/uiClass/UiClass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/ScorbotUI_py/pyqtLib/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI/Install library" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/ScorbotUI_py/pyqtLib/logo.py" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/userInterface/uiClass/logo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/ScorbotUI_py/pyqtLib/pyC_com/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/comLibWork/py_Side/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/ScorbotUI_py/pyqtLib/pyC_com/p.py" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/ScorbotUI_py/pyqtLib/pyC_com/p.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/ScorbotUI_py/pyqtLib/qtfiles/Logo-Uni-Tor-Vergata.png_256x256.png" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/userInterface/uiClass/qt_Source/Logo-Uni-Tor-Vergata.png_256x256.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/ScorbotUI_py/pyqtLib/qtfiles/UiClass.py" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/userInterface/uiClass/qt_Source/UiClass.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/ScorbotUI_py/pyqtLib/qtfiles/UiClass.ui" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/userInterface/uiClass/qt_Source/UiClass.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/ScorbotUI_py/pyqtLib/qtfiles/logo.qrc" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/userInterface/uiClass/qt_Source/logo.qrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/ScorbotUI_py/scorbot" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/ScorbotUI_py/scorbot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/Scorebot_CPP" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/Scorebot_CPP" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/comC/SPILib/spi_scorebot_packdefine.h" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/comC/SPILib/spi_scorebot_packdefine.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/comC/SPILib/spisend.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/comC/SPILib/spisend.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/comC/SPILib/spisend.h" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/comC/SPILib/spisend.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/comC/comC.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/comC/comC.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/comC/comC.h" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/comC/comC.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/scorbot" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/scorbot" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/5_union-subsystem/Scorbot-v1/scorbot.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/5_union-subsystem/Scorbot-V1/scorbot.cbp" afterDir="false" />
-    </list>
+    <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -291,7 +189,7 @@
       <workItem from="1574196237996" duration="5588000" />
       <workItem from="1574201890833" duration="1842000" />
       <workItem from="1574203981190" duration="17000" />
-      <workItem from="1574204014190" duration="956000" />
+      <workItem from="1574204014190" duration="1111000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
       <created>1568027375662</created>
@@ -440,7 +338,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574157296220</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="Iniziato rioridono dell'interfaccia grafica verso una forma più formale">
+      <created>1574205085436</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1574205085436</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -478,7 +383,8 @@
     <MESSAGE value="SubSystem Work!!!!&#10;now start debugging time" />
     <MESSAGE value="SubSystem Work!!!!&#10;now start debugging time&#10;risolto invio richiesta specifiche scheda, setting, sample time, ritorno del tempo trascorso da parte di getCurrentWait&#10;Resta da risolvere la raice condition sui mutex quando i tempi scendono sotto i 5ms" />
     <MESSAGE value="risolta la critc_race sui mutex, mettendo i semafori.&#10;Il problema è che alle alte velocità si perde l'owner&#10;&#10;Trovare come lockare insieme più semafori (forse si deve passare a sistem5)" />
-    <option name="LAST_COMMIT_MESSAGE" value="risolta la critc_race sui mutex, mettendo i semafori.&#10;Il problema è che alle alte velocità si perde l'owner&#10;&#10;Trovare come lockare insieme più semafori (forse si deve passare a sistem5)" />
+    <MESSAGE value="Iniziato rioridono dell'interfaccia grafica verso una forma più formale" />
+    <option name="LAST_COMMIT_MESSAGE" value="Iniziato rioridono dell'interfaccia grafica verso una forma più formale" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">

@@ -1,0 +1,2 @@
+/usr/bin/ar qc libinterProcessCom.a  CMakeFiles/interProcessCom.dir/comLib.cpp.o
+/usr/bin/ranlib libinterProcessCom.a
