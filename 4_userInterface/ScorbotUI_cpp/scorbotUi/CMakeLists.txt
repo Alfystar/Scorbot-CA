@@ -1,0 +1,22 @@
+cmake_minimum_required(VERSION 3.1)
+
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_AUTOUIC ON)
+
+if (CMAKE_VERSION VERSION_LESS "3.7.0")
+    set(CMAKE_INCLUDE_CURRENT_DIR ON)
+endif ()
+
+add_library(scorbotUi SHARED
+        mainwindow.h mainwindow.cpp ui_source/mainwindow.ui
+        #    resources.qrc
+        )
+
+#su qt creator da errore???
+#target_link_directories(scorbotUi PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+
+find_package(Qt5 COMPONENTS Widgets REQUIRED)
+target_link_libraries(scorbotUi Qt5::Widgets)
+
+target_link_libraries(scorbotUi dataTransfert)

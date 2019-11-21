@@ -1,0 +1,345 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="scorbotUi_demo"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\;CMake Files\DataTransfertPackge\;CMake Files\scorbotUi\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="scorbotUi_demo">
+				<Option output="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi_demo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/Makefile&quot;  VERBOSE=1 scorbotUi_demo"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="scorbotUi_demo/fast">
+				<Option output="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi_demo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/Makefile&quot;  VERBOSE=1 scorbotUi_demo/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="dataTransfert">
+				<Option output="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/DataTransfertPackge/libdataTransfert.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/DataTransfertPackge"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DlinuxSide=1"/>
+					<Add directory="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/DataTransfertPackge/Makefile&quot;  VERBOSE=1 dataTransfert"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/DataTransfertPackge/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/DataTransfertPackge/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/DataTransfertPackge/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="dataTransfert/fast">
+				<Option output="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/DataTransfertPackge/libdataTransfert.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/DataTransfertPackge"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DlinuxSide=1"/>
+					<Add directory="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/DataTransfertPackge/Makefile&quot;  VERBOSE=1 dataTransfert/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/DataTransfertPackge/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/DataTransfertPackge/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/DataTransfertPackge/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="scorbotUi">
+				<Option output="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi/libscorbotUi.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add directory="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi/scorbotUi_autogen/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi/Makefile&quot;  VERBOSE=1 scorbotUi"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="scorbotUi/fast">
+				<Option output="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi/libscorbotUi.so" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi"/>
+				<Option object_output="./"/>
+				<Option type="3"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DQT_WIDGETS_LIB"/>
+					<Add option="-DQT_GUI_LIB"/>
+					<Add option="-DQT_CORE_LIB"/>
+					<Add directory="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi/scorbotUi_autogen/include"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
+					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi/Makefile&quot;  VERBOSE=1 scorbotUi/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="scorbotUi_autogen">
+				<Option working_dir="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi/Makefile&quot;  VERBOSE=1 scorbotUi_autogen"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataFactory.cpp">
+			<Option target="dataTransfert"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataFactory.h">
+			<Option target="dataTransfert"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataManipolation/AllSensor.cpp">
+			<Option target="dataTransfert"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataManipolation/AllSensor.h">
+			<Option target="dataTransfert"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataManipolation/CurrentMot.cpp">
+			<Option target="dataTransfert"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataManipolation/CurrentMot.h">
+			<Option target="dataTransfert"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataManipolation/EncoderMot.cpp">
+			<Option target="dataTransfert"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataManipolation/EncoderMot.h">
+			<Option target="dataTransfert"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataManipolation/Pack.cpp">
+			<Option target="dataTransfert"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataManipolation/Pack.h">
+			<Option target="dataTransfert"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataManipolation/SettingBoard_C.cpp">
+			<Option target="dataTransfert"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataManipolation/SettingBoard_C.h">
+			<Option target="dataTransfert"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataManipolation/SpeedMot.cpp">
+			<Option target="dataTransfert"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataManipolation/SpeedMot.h">
+			<Option target="dataTransfert"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataPrimitive.h">
+			<Option target="dataTransfert"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataTransfert_AllInclude.h">
+			<Option target="dataTransfert"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/main.cpp">
+			<Option target="scorbotUi_demo"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/mainwindow.cpp">
+			<Option target="scorbotUi"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/mainwindow.h">
+			<Option target="scorbotUi"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/ui_source/mainwindow.ui">
+			<Option target="scorbotUi"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp">
+			<Option target="scorbotUi"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\DataTransfertPackge\"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\scorbotUi\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,10 @@
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/CMakeFiles/rebuild_cache.dir
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/CMakeFiles/scorbotUi_demo.dir
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/CMakeFiles/edit_cache.dir
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/DataTransfertPackge/CMakeFiles/rebuild_cache.dir
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/DataTransfertPackge/CMakeFiles/dataTransfert.dir
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/DataTransfertPackge/CMakeFiles/edit_cache.dir
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi/CMakeFiles/rebuild_cache.dir
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi/CMakeFiles/scorbotUi.dir
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi/CMakeFiles/edit_cache.dir
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi/CMakeFiles/scorbotUi_autogen.dir
