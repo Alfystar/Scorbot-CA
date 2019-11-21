@@ -1,0 +1,11 @@
+/home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp
+Sono Unix?: 1
+Sono WIN32?: 
+Sono WINDOWS_PHONE?: 
+Sono ANDROID?: 
+Sono APPLE?: 
+La libreria 'dataTransfert' è stata aggiunta
+CMAKE_CURRENT_SOURCE_DIR:/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug
