@@ -12,7 +12,9 @@ CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../DataTransfertPackge/DataManipolatio
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../DataTransfertPackge/DataPrimitive.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../DataTransfertPackge/DataTransfert_AllInclude.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../main.cpp
+CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../scorbotUi/freeMoveWinsow.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../scorbotUi/mainwindow.h
+CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../scorbotUi/settingBoardWindow.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
@@ -116,6 +118,7 @@ CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGu
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication
+CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QRadioButton
@@ -126,6 +129,7 @@ CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWi
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdesktopwidget.h
+CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qradiobutton.h

@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[3];
-    char stringdata0[22];
+    QByteArrayData data[9];
+    char stringdata0[136];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,11 +32,20 @@ struct qt_meta_stringdata_MainWindow_t {
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
-QT_MOC_LITERAL(1, 11, 9), // "testPrint"
-QT_MOC_LITERAL(2, 21, 0) // ""
+QT_MOC_LITERAL(1, 11, 15), // "sendRef_handler"
+QT_MOC_LITERAL(2, 27, 0), // ""
+QT_MOC_LITERAL(3, 28, 20), // "scorParamSet_handler"
+QT_MOC_LITERAL(4, 49, 22), // "scorParamReset_handler"
+QT_MOC_LITERAL(5, 72, 16), // "boardSet_handler"
+QT_MOC_LITERAL(6, 89, 19), // "controllSet_handler"
+QT_MOC_LITERAL(7, 109, 16), // "freeMove_handler"
+QT_MOC_LITERAL(8, 126, 9) // "testPrint"
 
     },
-    "MainWindow\0testPrint\0"
+    "MainWindow\0sendRef_handler\0\0"
+    "scorParamSet_handler\0scorParamReset_handler\0"
+    "boardSet_handler\0controllSet_handler\0"
+    "freeMove_handler\0testPrint"
 };
 #undef QT_MOC_LITERAL
 
@@ -46,7 +55,7 @@ static const uint qt_meta_data_MainWindow[] = {
        7,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       7,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -54,9 +63,21 @@ static const uint qt_meta_data_MainWindow[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   19,    2, 0x08 /* Private */,
+       1,    0,   49,    2, 0x08 /* Private */,
+       3,    0,   50,    2, 0x08 /* Private */,
+       4,    0,   51,    2, 0x08 /* Private */,
+       5,    0,   52,    2, 0x08 /* Private */,
+       6,    0,   53,    2, 0x08 /* Private */,
+       7,    0,   54,    2, 0x08 /* Private */,
+       8,    0,   55,    2, 0x08 /* Private */,
 
  // slots: parameters
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
+    QMetaType::Void,
     QMetaType::Void,
 
        0        // eod
@@ -68,7 +89,13 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         MainWindow *_t = static_cast<MainWindow *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->testPrint(); break;
+        case 0: _t->sendRef_handler(); break;
+        case 1: _t->scorParamSet_handler(); break;
+        case 2: _t->scorParamReset_handler(); break;
+        case 3: _t->boardSet_handler(); break;
+        case 4: _t->controllSet_handler(); break;
+        case 5: _t->freeMove_handler(); break;
+        case 6: _t->testPrint(); break;
         default: ;
         }
     }
@@ -100,13 +127,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 7)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 7;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 1)
+        if (_id < 7)
             *reinterpret_cast<int*>(_a[0]) = -1;
-        _id -= 1;
+        _id -= 7;
     }
     return _id;
 }

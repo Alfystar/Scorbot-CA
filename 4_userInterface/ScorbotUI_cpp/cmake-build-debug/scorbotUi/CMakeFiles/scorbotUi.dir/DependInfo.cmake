@@ -4,8 +4,10 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/freeMoveWinsow.cpp" "/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.o"
   "/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/mainwindow.cpp" "/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o"
   "/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp" "/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o"
+  "/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/settingBoardWindow.cpp" "/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

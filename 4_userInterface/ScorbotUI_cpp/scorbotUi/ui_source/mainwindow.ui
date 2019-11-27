@@ -27,7 +27,7 @@
    <string notr="true">url:(/newPrefix/Logo-Uni-Tor-Vergata.png_48x48.png)</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QTabWidget" name="tabWidget">
+      <widget class="QTabWidget" name="tabReference">
     <property name="geometry">
      <rect>
       <x>10</x>
@@ -57,7 +57,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+        <number>0</number>
     </property>
     <property name="usesScrollButtons">
      <bool>false</bool>
@@ -1519,7 +1519,7 @@
       </property>
       <layout class="QVBoxLayout" name="verticalLayout">
        <item>
-        <widget class="QPushButton" name="Home">
+           <widget class="QPushButton" name="scorParamSet">
          <property name="font">
           <font>
            <pointsize>15</pointsize>
@@ -1529,12 +1529,12 @@
           <string notr="true">background-color: qlineargradient(spread:pad, x1:0.0246305, y1:0.602273, x2:1, y2:0, stop:0 rgba(0, 139, 0, 255), stop:0.655172 rgba(255, 255, 255, 255));</string>
          </property>
          <property name="text">
-          <string>SET IMPOSTAZIONI</string>
+             <string>Scorbot Parameter</string>
          </property>
         </widget>
        </item>
        <item>
-        <widget class="QPushButton" name="reset">
+           <widget class="QPushButton" name="scorParamReset">
          <property name="font">
           <font>
            <pointsize>15</pointsize>
@@ -3692,7 +3692,7 @@
   </action>
  </widget>
  <tabstops>
-  <tabstop>tabWidget</tabstop>
+     <tabstop>tabReference</tabstop>
   <tabstop>en1Ref</tabstop>
   <tabstop>en2Ref</tabstop>
   <tabstop>en3Ref</tabstop>
@@ -3727,8 +3727,8 @@
   <tabstop>bDoubleSpinBox</tabstop>
   <tabstop>cDoubleSpinBox</tabstop>
   <tabstop>dDoubleSpinBox</tabstop>
-  <tabstop>Home</tabstop>
-  <tabstop>reset</tabstop>
+     <tabstop>scorParamSet</tabstop>
+     <tabstop>scorParamReset</tabstop>
   <tabstop>sendRef</tabstop>
   <tabstop>scorBoardSetup</tabstop>
   <tabstop>controlSet</tabstop>

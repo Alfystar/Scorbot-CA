@@ -140,6 +140,33 @@ scorbotUi_autogen/fast:
 	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug && $(MAKE) -f scorbotUi/CMakeFiles/scorbotUi_autogen.dir/build.make scorbotUi/CMakeFiles/scorbotUi_autogen.dir/build
 .PHONY : scorbotUi_autogen/fast
 
+freeMoveWinsow.o: freeMoveWinsow.cpp.o
+
+.PHONY : freeMoveWinsow.o
+
+# target to build an object file
+freeMoveWinsow.cpp.o:
+	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug && $(MAKE) -f scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.o
+.PHONY : freeMoveWinsow.cpp.o
+
+freeMoveWinsow.i: freeMoveWinsow.cpp.i
+
+.PHONY : freeMoveWinsow.i
+
+# target to preprocess a source file
+freeMoveWinsow.cpp.i:
+	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug && $(MAKE) -f scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.i
+.PHONY : freeMoveWinsow.cpp.i
+
+freeMoveWinsow.s: freeMoveWinsow.cpp.s
+
+.PHONY : freeMoveWinsow.s
+
+# target to generate assembly for a file
+freeMoveWinsow.cpp.s:
+	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug && $(MAKE) -f scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.s
+.PHONY : freeMoveWinsow.cpp.s
+
 mainwindow.o: mainwindow.cpp.o
 
 .PHONY : mainwindow.o
@@ -194,6 +221,33 @@ scorbotUi_autogen/mocs_compilation.cpp.s:
 	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug && $(MAKE) -f scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.s
 .PHONY : scorbotUi_autogen/mocs_compilation.cpp.s
 
+settingBoardWindow.o: settingBoardWindow.cpp.o
+
+.PHONY : settingBoardWindow.o
+
+# target to build an object file
+settingBoardWindow.cpp.o:
+	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug && $(MAKE) -f scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o
+.PHONY : settingBoardWindow.cpp.o
+
+settingBoardWindow.i: settingBoardWindow.cpp.i
+
+.PHONY : settingBoardWindow.i
+
+# target to preprocess a source file
+settingBoardWindow.cpp.i:
+	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug && $(MAKE) -f scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.i
+.PHONY : settingBoardWindow.cpp.i
+
+settingBoardWindow.s: settingBoardWindow.cpp.s
+
+.PHONY : settingBoardWindow.s
+
+# target to generate assembly for a file
+settingBoardWindow.cpp.s:
+	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug && $(MAKE) -f scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.s
+.PHONY : settingBoardWindow.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -204,12 +258,18 @@ help:
 	@echo "... scorbotUi"
 	@echo "... edit_cache"
 	@echo "... scorbotUi_autogen"
+	@echo "... freeMoveWinsow.o"
+	@echo "... freeMoveWinsow.i"
+	@echo "... freeMoveWinsow.s"
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
 	@echo "... scorbotUi_autogen/mocs_compilation.o"
 	@echo "... scorbotUi_autogen/mocs_compilation.i"
 	@echo "... scorbotUi_autogen/mocs_compilation.s"
+	@echo "... settingBoardWindow.o"
+	@echo "... settingBoardWindow.i"
+	@echo "... settingBoardWindow.s"
 .PHONY : help
 
 

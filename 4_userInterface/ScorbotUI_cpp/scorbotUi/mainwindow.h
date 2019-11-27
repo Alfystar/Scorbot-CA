@@ -1,9 +1,6 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
-#include <DataTransfert_AllInclude.h>
-#include <iostream>
-
 /// Qt lib
 #include <QMainWindow>
 #include <QSpinBox>
@@ -11,8 +8,14 @@
 #include <QPushButton>
 #include <QRadioButton>
 
+/// SystemLib
+#include <DataTransfert_AllInclude.h>
+#include <iostream>
+#include "settingBoardWindow.h"
+#include "freeMoveWinsow.h"
+
 namespace Ui {
-    class MainWindow;
+    class MainWindow; //Nome del windget radice nel file ui
 }
 using namespace DataPrimitive;
 using namespace DataManipolation;
@@ -24,10 +27,26 @@ public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 private slots:
+    //Data send
+    void sendRef_handler();
+    // Robot Setup
+    void scorParamSet_handler();
+    void scorParamReset_handler();
+    //Other Windows
+    void boardSet_handler();
+    void controllSet_handler();
+    void freeMove_handler();
+
+
     void testPrint();
 private:
     Ui::MainWindow *ui;
+    SettingBoardWindow *setBoardWin;
+    FreeMoveWindow *freeMovWin;
+
     /// Riferimenti da inviare
+    //TabWindget
+    QTabWidget *tabReference;
     //Diretta en
     QSpinBox *enRef[nMot];
     //Diretta angolata
@@ -43,6 +62,15 @@ private:
     QPushButton *sendRef;
 
     ///Robot Setup
+    QPushButton *scorParamSet;
+    QPushButton *scorParamReset;
+
+    ///External button
+    QPushButton *scorBoardSetup;
+    QPushButton *controlSet;
+    QPushButton *freeMove;
+
+
 
 };
 

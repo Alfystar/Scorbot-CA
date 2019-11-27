@@ -128,30 +128,14 @@ DataManipolation/SettingBoard_C.h
 DataManipolation/Pack.h
 ../DataTransfertPackge/DataManipolation/Pack.h
 
-/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/scorbotUi_autogen/EWIEGA46WW/moc_mainwindow.cpp
-../../../../scorbotUi/mainwindow.h
-/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/mainwindow.h
-QtCore/qbytearray.h
--
-QtCore/qmetatype.h
--
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/freeMoveWinsow.cpp
+freeMoveWinsow.h
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/freeMoveWinsow.h
+ui_source/ui_freeMoveWindow.h
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/ui_source/ui_freeMoveWindow.h
 
-/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp
-EWIEGA46WW/moc_mainwindow.cpp
-/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/scorbotUi_autogen/EWIEGA46WW/moc_mainwindow.cpp
-
-/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/mainwindow.cpp
-mainwindow.h
-/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/mainwindow.h
-ui_source/ui_mainwindow.h
-/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/ui_source/ui_mainwindow.h
-
-/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/mainwindow.h
-DataTransfert_AllInclude.h
--
-iostream
--
-QMainWindow
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/freeMoveWinsow.h
+QDialog
 -
 QSpinBox
 -
@@ -160,6 +144,10 @@ QSlider
 QPushButton
 -
 QRadioButton
+-
+DataTransfert_AllInclude.h
+-
+iostream
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant
@@ -1228,21 +1216,13 @@ qapplication.h
 qbuttongroup.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qbuttongroup.h
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QCheckBox
-qcheckbox.h
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcheckbox.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog
+qdialog.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDoubleSpinBox
-qspinbox.h
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qspinbox.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFormLayout
-qformlayout.h
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qformlayout.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFrame
-qframe.h
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialogButtonBox
+qdialogbuttonbox.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialogbuttonbox.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout
 qboxlayout.h
@@ -1256,26 +1236,6 @@ qheaderview.h
 qlabel.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLayout
-qlayout.h
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow
-qmainwindow.h
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenu
-qmenu.h
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenu.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMenuBar
-qmenubar.h
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QProgressBar
-qprogressbar.h
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qprogressbar.h
-
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
 qpushbutton.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h
@@ -1288,21 +1248,13 @@ qradiobutton.h
 qslider.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpacerItem
-qlayoutitem.h
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h
-
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpinBox
 qspinbox.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qspinbox.h
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSplitter
-qsplitter.h
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsplitter.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTabWidget
-qtabwidget.h
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolButton
+qtoolbutton.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbutton.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout
 qboxlayout.h
@@ -1418,22 +1370,22 @@ QtWidgets/qtwidgetsglobal.h
 QtCore/qobject.h
 -
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcheckbox.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qabstractbutton.h
--
-
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdesktopwidget.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qwidget.h
 -
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qformlayout.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
 QtWidgets/qtwidgetsglobal.h
 -
-QtWidgets/QLayout
+QtWidgets/qwidget.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialogbuttonbox.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qwidget.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h
@@ -1494,38 +1446,6 @@ QtCore/qrect.h
 limits.h
 -
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qwidget.h
--
-QtWidgets/qtabwidget.h
--
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenu.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qwidget.h
--
-QtCore/qstring.h
--
-QtGui/qicon.h
--
-QtWidgets/qaction.h
--
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmenubar.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qmenu.h
--
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qprogressbar.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qframe.h
--
-
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -1562,14 +1482,6 @@ QtWidgets/qabstractslider.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qabstractspinbox.h
--
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsplitter.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qframe.h
--
-QtWidgets/qsizepolicy.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h
@@ -1632,6 +1544,12 @@ QtWidgets/qwidget.h
 QtGui/qicon.h
 -
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbutton.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qabstractbutton.h
+-
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h
@@ -1672,7 +1590,7 @@ QtGui/qkeysequence.h
 QtGui/qevent.h
 -
 
-scorbotUi/scorbotUi_autogen/include/ui_source/ui_mainwindow.h
+scorbotUi/scorbotUi_autogen/include/ui_source/ui_freeMoveWindow.h
 QtCore/QVariant
 -
 QtWidgets/QAction
@@ -1681,13 +1599,9 @@ QtWidgets/QApplication
 -
 QtWidgets/QButtonGroup
 -
-QtWidgets/QCheckBox
+QtWidgets/QDialog
 -
-QtWidgets/QDoubleSpinBox
--
-QtWidgets/QFormLayout
--
-QtWidgets/QFrame
+QtWidgets/QDialogButtonBox
 -
 QtWidgets/QHBoxLayout
 -
@@ -1695,27 +1609,7 @@ QtWidgets/QHeaderView
 -
 QtWidgets/QLabel
 -
-QtWidgets/QMainWindow
--
-QtWidgets/QMenu
--
-QtWidgets/QMenuBar
--
-QtWidgets/QProgressBar
--
-QtWidgets/QPushButton
--
-QtWidgets/QRadioButton
--
-QtWidgets/QSlider
--
-QtWidgets/QSpacerItem
--
-QtWidgets/QSpinBox
--
-QtWidgets/QSplitter
--
-QtWidgets/QTabWidget
+QtWidgets/QToolButton
 -
 QtWidgets/QVBoxLayout
 -

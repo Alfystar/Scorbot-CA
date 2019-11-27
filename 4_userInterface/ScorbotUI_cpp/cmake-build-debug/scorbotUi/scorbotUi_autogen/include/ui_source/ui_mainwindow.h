@@ -42,7 +42,7 @@ public:
     QAction *actionInfo;
     QAction *actionCom;
     QWidget *centralwidget;
-    QTabWidget *tabWidget;
+    QTabWidget *tabReference;
     QWidget *Direct;
     QWidget *layoutWidget_6;
     QVBoxLayout *EnRef;
@@ -155,8 +155,8 @@ public:
     QSpacerItem *verticalSpacer_3;
     QWidget *layoutWidget4;
     QVBoxLayout *verticalLayout;
-    QPushButton *Home;
-    QPushButton *reset;
+    QPushButton *scorParamSet;
+    QPushButton *scorParamReset;
     QLabel *image;
     QPushButton *sendRef;
     QWidget *plot;
@@ -321,20 +321,20 @@ public:
         actionCom->setObjectName(QStringLiteral("actionCom"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
-        tabWidget = new QTabWidget(centralwidget);
-        tabWidget->setObjectName(QStringLiteral("tabWidget"));
-        tabWidget->setGeometry(QRect(10, 10, 401, 321));
+        tabReference = new QTabWidget(centralwidget);
+        tabReference->setObjectName(QStringLiteral("tabReference"));
+        tabReference->setGeometry(QRect(10, 10, 401, 321));
         QFont font;
         font.setPointSize(14);
-        tabWidget->setFont(font);
-        tabWidget->setStyleSheet(QStringLiteral("background-color: rgb(240, 240, 240);"));
-        tabWidget->setTabPosition(QTabWidget::North);
-        tabWidget->setTabShape(QTabWidget::Rounded);
-        tabWidget->setUsesScrollButtons(false);
-        tabWidget->setDocumentMode(false);
-        tabWidget->setTabsClosable(false);
-        tabWidget->setMovable(false);
-        tabWidget->setTabBarAutoHide(false);
+        tabReference->setFont(font);
+        tabReference->setStyleSheet(QStringLiteral("background-color: rgb(240, 240, 240);"));
+        tabReference->setTabPosition(QTabWidget::North);
+        tabReference->setTabShape(QTabWidget::Rounded);
+        tabReference->setUsesScrollButtons(false);
+        tabReference->setDocumentMode(false);
+        tabReference->setTabsClosable(false);
+        tabReference->setMovable(false);
+        tabReference->setTabBarAutoHide(false);
         Direct = new QWidget();
         Direct->setObjectName(QStringLiteral("Direct"));
         layoutWidget_6 = new QWidget(Direct);
@@ -444,7 +444,7 @@ public:
 
         EnRef->addLayout(formLayout_4);
 
-        tabWidget->addTab(Direct, QString());
+        tabReference->addTab(Direct, QString());
         Direct_Angular = new QWidget();
         Direct_Angular->setObjectName(QStringLiteral("Direct_Angular"));
         image_2 = new QLabel(Direct_Angular);
@@ -578,7 +578,7 @@ public:
 
         DegRef->addLayout(formLayout_5);
 
-        tabWidget->addTab(Direct_Angular, QString());
+        tabReference->addTab(Direct_Angular, QString());
         Inverse = new QWidget();
         Inverse->setObjectName(QStringLiteral("Inverse"));
         layoutWidget = new QWidget(Inverse);
@@ -788,7 +788,7 @@ public:
 
         horizontalLayout->addLayout(verticalLayout_3);
 
-        tabWidget->addTab(Inverse, QString());
+        tabReference->addTab(Inverse, QString());
         RoboSetup = new QWidget();
         RoboSetup->setObjectName(QStringLiteral("RoboSetup"));
         splitter = new QSplitter(RoboSetup);
@@ -1096,23 +1096,23 @@ public:
         verticalLayout = new QVBoxLayout(layoutWidget4);
         verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        Home = new QPushButton(layoutWidget4);
-        Home->setObjectName(QStringLiteral("Home"));
+        scorParamSet = new QPushButton(layoutWidget4);
+        scorParamSet->setObjectName(QStringLiteral("scorParamSet"));
         QFont font5;
         font5.setPointSize(15);
-        Home->setFont(font5);
-        Home->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0.0246305, y1:0.602273, x2:1, y2:0, stop:0 rgba(0, 139, 0, 255), stop:0.655172 rgba(255, 255, 255, 255));"));
+        scorParamSet->setFont(font5);
+        scorParamSet->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0.0246305, y1:0.602273, x2:1, y2:0, stop:0 rgba(0, 139, 0, 255), stop:0.655172 rgba(255, 255, 255, 255));"));
 
-        verticalLayout->addWidget(Home);
+        verticalLayout->addWidget(scorParamSet);
 
-        reset = new QPushButton(layoutWidget4);
-        reset->setObjectName(QStringLiteral("reset"));
-        reset->setFont(font5);
-        reset->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0.0246305, y1:0.602273, x2:1, y2:0, stop:0 rgba(0, 139, 0, 255), stop:0.655172 rgba(255, 255, 255, 255));"));
+        scorParamReset = new QPushButton(layoutWidget4);
+        scorParamReset->setObjectName(QStringLiteral("scorParamReset"));
+        scorParamReset->setFont(font5);
+        scorParamReset->setStyleSheet(QStringLiteral("background-color: qlineargradient(spread:pad, x1:0.0246305, y1:0.602273, x2:1, y2:0, stop:0 rgba(0, 139, 0, 255), stop:0.655172 rgba(255, 255, 255, 255));"));
 
-        verticalLayout->addWidget(reset);
+        verticalLayout->addWidget(scorParamReset);
 
-        tabWidget->addTab(RoboSetup, QString());
+        tabReference->addTab(RoboSetup, QString());
         image = new QLabel(centralwidget);
         image->setObjectName(QStringLiteral("image"));
         image->setGeometry(QRect(920, 30, 91, 91));
@@ -2177,7 +2177,7 @@ public:
         en5Label_2->setBuddy(en5Home);
         en6Label_2->setBuddy(en6Home);
 #endif // QT_NO_SHORTCUT
-        QWidget::setTabOrder(tabWidget, en1Ref);
+        QWidget::setTabOrder(tabReference, en1Ref);
         QWidget::setTabOrder(en1Ref, en2Ref);
         QWidget::setTabOrder(en2Ref, en3Ref);
         QWidget::setTabOrder(en3Ref, en4Ref);
@@ -2211,9 +2211,9 @@ public:
         QWidget::setTabOrder(aDoubleSpinBox, bDoubleSpinBox);
         QWidget::setTabOrder(bDoubleSpinBox, cDoubleSpinBox);
         QWidget::setTabOrder(cDoubleSpinBox, dDoubleSpinBox);
-        QWidget::setTabOrder(dDoubleSpinBox, Home);
-        QWidget::setTabOrder(Home, reset);
-        QWidget::setTabOrder(reset, sendRef);
+        QWidget::setTabOrder(dDoubleSpinBox, scorParamSet);
+        QWidget::setTabOrder(scorParamSet, scorParamReset);
+        QWidget::setTabOrder(scorParamReset, sendRef);
         QWidget::setTabOrder(sendRef, scorBoardSetup);
         QWidget::setTabOrder(scorBoardSetup, controlSet);
         QWidget::setTabOrder(controlSet, freeMove);
@@ -2232,7 +2232,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabWidget->setCurrentIndex(3);
+        tabReference->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -2244,10 +2244,10 @@ public:
         actionInfo->setText(QApplication::translate("MainWindow", "Info", Q_NULLPTR));
         actionCom->setText(QApplication::translate("MainWindow", "Com", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
-        tabWidget->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>Direct</p><p><br/></p></body></html>", Q_NULLPTR));
+        tabReference->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>Direct</p><p><br/></p></body></html>", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
 #ifndef QT_NO_WHATSTHIS
-        tabWidget->setWhatsThis(QApplication::translate("MainWindow", "<html><head/><body><p>B</p><p><br/></p></body></html>", Q_NULLPTR));
+        tabReference->setWhatsThis(QApplication::translate("MainWindow", "<html><head/><body><p>B</p><p><br/></p></body></html>", Q_NULLPTR));
 #endif // QT_NO_WHATSTHIS
         valMinScr_3->setText(QApplication::translate("MainWindow", "En Reference", Q_NULLPTR));
         en1Label_3->setText(QApplication::translate("MainWindow", "En 1", Q_NULLPTR));
@@ -2256,7 +2256,7 @@ public:
         en4Label_3->setText(QApplication::translate("MainWindow", "En 4", Q_NULLPTR));
         en5Label_3->setText(QApplication::translate("MainWindow", "En 5", Q_NULLPTR));
         en6Label_3->setText(QApplication::translate("MainWindow", "En 6", Q_NULLPTR));
-        tabWidget->setTabText(tabWidget->indexOf(Direct), QApplication::translate("MainWindow", "Dir en", Q_NULLPTR));
+        tabReference->setTabText(tabReference->indexOf(Direct), QApplication::translate("MainWindow", "Dir en", Q_NULLPTR));
         image_2->setText(QString());
         valMinScr_4->setText(QApplication::translate("MainWindow", "Angle Reference", Q_NULLPTR));
         en1Label_4->setText(QApplication::translate("MainWindow", "\316\2701", Q_NULLPTR));
@@ -2265,7 +2265,7 @@ public:
         en4Label_4->setText(QApplication::translate("MainWindow", "\316\2704", Q_NULLPTR));
         en5Label_4->setText(QApplication::translate("MainWindow", "\316\2705", Q_NULLPTR));
         en6Label_4->setText(QApplication::translate("MainWindow", "Pinza %", Q_NULLPTR));
-        tabWidget->setTabText(tabWidget->indexOf(Direct_Angular), QApplication::translate("MainWindow", "Dir deg", Q_NULLPTR));
+        tabReference->setTabText(tabReference->indexOf(Direct_Angular), QApplication::translate("MainWindow", "Dir deg", Q_NULLPTR));
         valMinScr_5->setText(QApplication::translate("MainWindow", "Pos desiderata", Q_NULLPTR));
         en1Label_5->setText(QApplication::translate("MainWindow", "Xdes", Q_NULLPTR));
         en2Label_5->setText(QApplication::translate("MainWindow", "Ydes", Q_NULLPTR));
@@ -2277,7 +2277,7 @@ public:
         label_3->setText(QApplication::translate("MainWindow", "Gomito", Q_NULLPTR));
         gH->setText(QApplication::translate("MainWindow", "Alto", Q_NULLPTR));
         gL->setText(QApplication::translate("MainWindow", "Basso", Q_NULLPTR));
-        tabWidget->setTabText(tabWidget->indexOf(Inverse), QApplication::translate("MainWindow", "Inv", Q_NULLPTR));
+        tabReference->setTabText(tabReference->indexOf(Inverse), QApplication::translate("MainWindow", "Inv", Q_NULLPTR));
         valMinScr_2->setText(QApplication::translate("MainWindow", "Home offset", Q_NULLPTR));
         en1Label_2->setText(QApplication::translate("MainWindow", "En 1", Q_NULLPTR));
         en2Label_2->setText(QApplication::translate("MainWindow", "En 2", Q_NULLPTR));
@@ -2296,9 +2296,9 @@ public:
         bLabel->setText(QApplication::translate("MainWindow", "\316\262", Q_NULLPTR));
         cLabel->setText(QApplication::translate("MainWindow", "\316\263", Q_NULLPTR));
         dLabel->setText(QApplication::translate("MainWindow", "\316\264", Q_NULLPTR));
-        Home->setText(QApplication::translate("MainWindow", "SET IMPOSTAZIONI", Q_NULLPTR));
-        reset->setText(QApplication::translate("MainWindow", "RESET", Q_NULLPTR));
-        tabWidget->setTabText(tabWidget->indexOf(RoboSetup), QApplication::translate("MainWindow", "Robot Setup", Q_NULLPTR));
+        scorParamSet->setText(QApplication::translate("MainWindow", "Scorbot Parameter", Q_NULLPTR));
+        scorParamReset->setText(QApplication::translate("MainWindow", "RESET", Q_NULLPTR));
+        tabReference->setTabText(tabReference->indexOf(RoboSetup), QApplication::translate("MainWindow", "Robot Setup", Q_NULLPTR));
         image->setText(QString());
         sendRef->setText(QApplication::translate("MainWindow", "Send Reference", Q_NULLPTR));
         scorBoardSetup->setText(QApplication::translate("MainWindow", "Board Setting", Q_NULLPTR));

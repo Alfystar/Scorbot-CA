@@ -138,11 +138,23 @@ iostream
 unistd.h
 -
 
-/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/mainwindow.h
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/freeMoveWinsow.h
+QDialog
+-
+QSpinBox
+-
+QSlider
+-
+QPushButton
+-
+QRadioButton
+-
 DataTransfert_AllInclude.h
 -
 iostream
 -
+
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/mainwindow.h
 QMainWindow
 -
 QSpinBox
@@ -152,6 +164,30 @@ QSlider
 QPushButton
 -
 QRadioButton
+-
+DataTransfert_AllInclude.h
+-
+iostream
+-
+settingBoardWindow.h
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/settingBoardWindow.h
+freeMoveWinsow.h
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/freeMoveWinsow.h
+
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/settingBoardWindow.h
+QDialog
+-
+QSpinBox
+-
+QSlider
+-
+QPushButton
+-
+QRadioButton
+-
+DataTransfert_AllInclude.h
+-
+iostream
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
@@ -1186,6 +1222,10 @@ QtGui/qtguiglobal.h
 qapplication.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog
+qdialog.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow
 qmainwindow.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h
@@ -1249,6 +1289,12 @@ QtGui/qguiapplication.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdesktopwidget.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qwidget.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qwidget.h

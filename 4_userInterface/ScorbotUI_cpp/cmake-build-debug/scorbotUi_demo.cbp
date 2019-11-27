@@ -286,13 +286,31 @@
 		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/main.cpp">
 			<Option target="scorbotUi_demo"/>
 		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/freeMoveWinsow.cpp">
+			<Option target="scorbotUi"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/freeMoveWinsow.h">
+			<Option target="scorbotUi"/>
+		</Unit>
 		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/mainwindow.cpp">
 			<Option target="scorbotUi"/>
 		</Unit>
 		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/mainwindow.h">
 			<Option target="scorbotUi"/>
 		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/settingBoardWindow.cpp">
+			<Option target="scorbotUi"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/settingBoardWindow.h">
+			<Option target="scorbotUi"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/ui_source/freeMoveWindow.ui">
+			<Option target="scorbotUi"/>
+		</Unit>
 		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/ui_source/mainwindow.ui">
+			<Option target="scorbotUi"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/ui_source/settingBoardWindow.ui">
 			<Option target="scorbotUi"/>
 		</Unit>
 		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/CMakeLists.txt">

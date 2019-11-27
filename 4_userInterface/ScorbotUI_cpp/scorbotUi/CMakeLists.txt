@@ -11,10 +11,12 @@ endif ()
 add_library(scorbotUi SHARED
         mainwindow.h mainwindow.cpp ui_source/mainwindow.ui
         #    resources.qrc
+        settingBoardWindow.h settingBoardWindow.cpp ui_source/settingBoardWindow.ui
+        freeMoveWinsow.h freeMoveWinsow.cpp ui_source/freeMoveWindow.ui
         )
 
 #su qt creator da errore???
-#target_link_directories(scorbotUi PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_directories(scorbotUi PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
 
 find_package(Qt5 COMPONENTS Widgets REQUIRED)
 target_link_libraries(scorbotUi Qt5::Widgets)

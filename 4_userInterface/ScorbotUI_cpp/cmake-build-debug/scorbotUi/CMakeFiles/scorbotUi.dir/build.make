@@ -83,23 +83,53 @@ scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scorbotUi.dir/mainwindow.cpp.s"
 	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/mainwindow.cpp -o CMakeFiles/scorbotUi.dir/mainwindow.cpp.s
 
+scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: scorbotUi/CMakeFiles/scorbotUi.dir/flags.make
+scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: ../scorbotUi/settingBoardWindow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o"
+	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o -c /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/settingBoardWindow.cpp
+
+scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.i"
+	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/settingBoardWindow.cpp > CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.i
+
+scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.s"
+	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/settingBoardWindow.cpp -o CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.s
+
+scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.o: scorbotUi/CMakeFiles/scorbotUi.dir/flags.make
+scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.o: ../scorbotUi/freeMoveWinsow.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.o"
+	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.o -c /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/freeMoveWinsow.cpp
+
+scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.i"
+	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/freeMoveWinsow.cpp > CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.i
+
+scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.s"
+	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/freeMoveWinsow.cpp -o CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.s
+
 # Object files for target scorbotUi
 scorbotUi_OBJECTS = \
 "CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o" \
-"CMakeFiles/scorbotUi.dir/mainwindow.cpp.o"
+"CMakeFiles/scorbotUi.dir/mainwindow.cpp.o" \
+"CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o" \
+"CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.o"
 
 # External object files for target scorbotUi
 scorbotUi_EXTERNAL_OBJECTS =
 
 scorbotUi/libscorbotUi.so: scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o
 scorbotUi/libscorbotUi.so: scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o
+scorbotUi/libscorbotUi.so: scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o
+scorbotUi/libscorbotUi.so: scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.o
 scorbotUi/libscorbotUi.so: scorbotUi/CMakeFiles/scorbotUi.dir/build.make
 scorbotUi/libscorbotUi.so: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.5
 scorbotUi/libscorbotUi.so: DataTransfertPackge/libdataTransfert.a
 scorbotUi/libscorbotUi.so: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.5
 scorbotUi/libscorbotUi.so: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.9.5
 scorbotUi/libscorbotUi.so: scorbotUi/CMakeFiles/scorbotUi.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX shared library libscorbotUi.so"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX shared library libscorbotUi.so"
 	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scorbotUi.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

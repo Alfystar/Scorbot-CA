@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
-    <class>Dialog</class>
-    <widget class="QDialog" name="Dialog">
+    <class>FreeMoveWindow</class>
+    <widget class="QDialog" name="FreeMoveWindow">
         <property name="geometry">
             <rect>
                 <x>0</x>
                 <y>0</y>
                 <width>272</width>
-                <height>210</height>
+                <height>202</height>
             </rect>
         </property>
         <property name="windowTitle">
@@ -18,8 +18,8 @@
                 <rect>
                     <x>180</x>
                     <y>10</y>
-                    <width>81</width>
-                    <height>201</height>
+                    <width>75</width>
+                    <height>61</height>
                 </rect>
             </property>
             <property name="orientation">
@@ -353,32 +353,32 @@
         <connection>
             <sender>buttonBox</sender>
             <signal>accepted()</signal>
-            <receiver>Dialog</receiver>
+            <receiver>FreeMoveWindow</receiver>
             <slot>accept()</slot>
             <hints>
                 <hint type="sourcelabel">
-                    <x>310</x>
-                    <y>210</y>
+                    <x>190</x>
+                    <y>27</y>
                 </hint>
                 <hint type="destinationlabel">
-                    <x>281</x>
-                    <y>85</y>
+                    <x>189</x>
+                    <y>137</y>
                 </hint>
             </hints>
         </connection>
         <connection>
             <sender>buttonBox</sender>
             <signal>rejected()</signal>
-            <receiver>Dialog</receiver>
+            <receiver>FreeMoveWindow</receiver>
             <slot>reject()</slot>
             <hints>
                 <hint type="sourcelabel">
-                    <x>310</x>
-                    <y>210</y>
+                    <x>241</x>
+                    <y>59</y>
                 </hint>
                 <hint type="destinationlabel">
-                    <x>280</x>
-                    <y>143</y>
+                    <x>246</x>
+                    <y>134</y>
                 </hint>
             </hints>
         </connection>
