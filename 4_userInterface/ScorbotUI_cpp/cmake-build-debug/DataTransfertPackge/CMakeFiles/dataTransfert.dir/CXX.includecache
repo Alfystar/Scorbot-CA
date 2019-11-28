@@ -14,30 +14,16 @@ stdlib.h
 string.h
 -
 
-/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataManipolation/CurrentMot.cpp
-CurrentMot.h
-/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataManipolation/CurrentMot.h
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataManipolation/SpeedMot.cpp
+SpeedMot.h
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataManipolation/SpeedMot.h
 
-/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataManipolation/CurrentMot.h
+/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataManipolation/SpeedMot.h
 stdio.h
 -
-string.h
+stdlib.h
 -
-../DataPrimitive.h
-/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataPrimitive.h
-../DataFactory.h
-/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataFactory.h
-Arduino.h
-/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataManipolation/Arduino.h
-
-/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataManipolation/EncoderMot.cpp
-EncoderMot.h
-/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataManipolation/EncoderMot.h
-
-/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataManipolation/EncoderMot.h
 string.h
--
-stdio.h
 -
 ../DataPrimitive.h
 /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataPrimitive.h

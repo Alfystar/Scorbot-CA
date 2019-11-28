@@ -20,6 +20,18 @@
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
+     <property name="minimumSize">
+         <size>
+             <width>400</width>
+             <height>100</height>
+         </size>
+     </property>
+     <property name="maximumSize">
+         <size>
+             <width>1007</width>
+             <height>476</height>
+         </size>
+     </property>
   <property name="windowTitle">
    <string>ScorbotConnect</string>
   </property>
@@ -57,7 +69,7 @@
      <enum>QTabWidget::Rounded</enum>
     </property>
     <property name="currentIndex">
-        <number>0</number>
+        <number>1</number>
     </property>
     <property name="usesScrollButtons">
      <bool>false</bool>
@@ -275,22 +287,6 @@
      <attribute name="title">
       <string>Dir deg</string>
      </attribute>
-     <widget class="QLabel" name="image_2">
-      <property name="geometry">
-       <rect>
-        <x>1789</x>
-        <y>59</y>
-        <width>141</width>
-        <height>141</height>
-       </rect>
-      </property>
-      <property name="styleSheet">
-       <string notr="true">image: url(:/image/Logo-Uni-Tor-Vergata.png_256x256.png);</string>
-      </property>
-      <property name="text">
-       <string/>
-      </property>
-     </widget>
      <widget class="QWidget" name="layoutWidget_13">
       <property name="geometry">
        <rect>
@@ -1555,18 +1551,24 @@
    <widget class="QLabel" name="image">
     <property name="geometry">
      <rect>
-      <x>920</x>
+         <x>910</x>
       <y>30</y>
       <width>91</width>
-      <height>91</height>
+         <height>101</height>
      </rect>
     </property>
     <property name="styleSheet">
-     <string notr="true">image: url(:/image/Logo-Uni-Tor-Vergata.png_256x256.png);</string>
+        <string notr="true"/>
     </property>
     <property name="text">
      <string/>
     </property>
+       <property name="pixmap">
+           <pixmap>:/scorbotUi/ui_source/Logo-Uni-Tor-Vergata.png_256x256.png</pixmap>
+       </property>
+       <property name="scaledContents">
+           <bool>true</bool>
+       </property>
    </widget>
    <widget class="QPushButton" name="sendRef">
     <property name="geometry">

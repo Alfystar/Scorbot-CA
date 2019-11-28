@@ -3,14 +3,15 @@ cmake_minimum_required(VERSION 3.1)
 set(CMAKE_AUTOMOC ON)
 set(CMAKE_AUTORCC ON)
 set(CMAKE_AUTOUIC ON)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+
 
 if (CMAKE_VERSION VERSION_LESS "3.7.0")
     set(CMAKE_INCLUDE_CURRENT_DIR ON)
 endif ()
 
 add_library(scorbotUi #SHARED
-        mainwindow.h mainwindow.cpp ui_source/mainwindow.ui
-        #    resources.qrc
+        mainwindow.h mainwindow.cpp ui_source/mainwindow.ui ui_source/logo.qrc
         settingBoardWindow.h settingBoardWindow.cpp ui_source/settingBoardWindow.ui
         freeMoveWinsow.h freeMoveWinsow.cpp ui_source/freeMoveWindow.ui
         )

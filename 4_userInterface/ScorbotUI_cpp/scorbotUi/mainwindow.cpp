@@ -1,14 +1,27 @@
 #include "mainwindow.h"
 #include "ui_source/ui_mainwindow.h"
 
-MainWindow::MainWindow(QWidget *parent) :
+MainWindow::MainWindow(QWidget *parent, struct extFooCall *extF) :
         QMainWindow(parent),
         ui(new Ui::MainWindow) {
+    // My Ui
     ui->setupUi(this);
+    //todo: imparare a usare il file .qrc
+    ui->image->setPixmap(
+            QPixmap("/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/ui_source/img/Logo-Uni-Tor-Vergata.png_256x256.png"));
+
+    // Other Windows
     setBoardWin = new SettingBoardWindow(this);    //creo la finestra e la faccio mia figlia
     freeMovWin = new FreeMoveWindow(this);
+
+    // Data get and send
     ref = new EncoderMot();
     feedBack = new AllSensor();
+
+    // Function to call
+    this->ctrlFunx = extF->ctrlFunx;
+    this->setSendFunx = extF->setSendFunx;
+    this->setGetFunx = extF->setGetFunx;
 
     ///##### Set important obj pointer to future use #####///
 
@@ -106,7 +119,10 @@ void MainWindow::sendRef_handler() {
     for (char i = Mot1; i < nMot; i++) {
         ref->enSet((motCode) i, (short) enRef[i]->value());
     }
-    ref->printEncoder();
+    if (ctrlFunx)
+        ctrlFunx(*ref);
+    else
+        std::cerr << "ctrlFunx not define, impossible send Reference\n";
 }
 
 void MainWindow::scorParamSet_handler() {

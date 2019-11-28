@@ -52,7 +52,7 @@ namespace DataManipolation {
     }
 
     short SpeedMot::getPwm(motCode mot) {
-        return *(this->speedPack)[mot];
+        return (*this->speedPack)[mot];
     }
 
     void SpeedMot::pwmSet(mSpeed &pwms) {

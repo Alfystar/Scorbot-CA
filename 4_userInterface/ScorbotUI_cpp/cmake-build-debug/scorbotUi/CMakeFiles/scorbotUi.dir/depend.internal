@@ -354,6 +354,8 @@ scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
  scorbotUi/scorbotUi_autogen/include/ui_source/ui_mainwindow.h
+scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o
+ /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp
 scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o
  ../DataTransfertPackge/DataFactory.h
  ../DataTransfertPackge/DataManipolation/AllSensor.h

@@ -354,6 +354,8 @@ scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-g
 scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h
 scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o: scorbotUi/scorbotUi_autogen/include/ui_source/ui_mainwindow.h
 
+scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o: scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp
+
 scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o: ../DataTransfertPackge/DataFactory.h
 scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o: ../DataTransfertPackge/DataManipolation/AllSensor.h
 scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o: ../DataTransfertPackge/DataManipolation/CurrentMot.h

@@ -57,9 +57,16 @@ include scorbotUi/CMakeFiles/scorbotUi.dir/progress.make
 # Include the compile flags for this target's objects.
 include scorbotUi/CMakeFiles/scorbotUi.dir/flags.make
 
+scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp: ../scorbotUi/ui_source/logo.qrc
+scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp: scorbotUi/CMakeFiles/scorbotUi_autogen.dir/RCClogoInfo.cmake
+scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp: ../scorbotUi/ui_source/img/Logo-Uni-Tor-Vergata.png_256x256.png
+scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp: /usr/lib/qt5/bin/rcc
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic RCC for ui_source/logo.qrc"
+	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi && /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/192.7142.39/bin/cmake/linux/bin/cmake -E cmake_autorcc /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/RCClogoInfo.cmake Debug
+
 scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o: scorbotUi/CMakeFiles/scorbotUi.dir/flags.make
 scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o: scorbotUi/scorbotUi_autogen/mocs_compilation.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o"
 	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o -c /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp
 
 scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.i: cmake_force
@@ -72,7 +79,7 @@ scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.s: cma
 
 scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o: scorbotUi/CMakeFiles/scorbotUi.dir/flags.make
 scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o: ../scorbotUi/mainwindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o"
 	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scorbotUi.dir/mainwindow.cpp.o -c /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/mainwindow.cpp
 
 scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.i: cmake_force
@@ -85,7 +92,7 @@ scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.s: cmake_force
 
 scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: scorbotUi/CMakeFiles/scorbotUi.dir/flags.make
 scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: ../scorbotUi/settingBoardWindow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o"
 	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o -c /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/settingBoardWindow.cpp
 
 scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.i: cmake_force
@@ -98,7 +105,7 @@ scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.s: cmake_force
 
 scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.o: scorbotUi/CMakeFiles/scorbotUi.dir/flags.make
 scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.o: ../scorbotUi/freeMoveWinsow.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.o"
 	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.o -c /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/freeMoveWinsow.cpp
 
 scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.i: cmake_force
@@ -109,12 +116,26 @@ scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.s"
 	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/freeMoveWinsow.cpp -o CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.s
 
+scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o: scorbotUi/CMakeFiles/scorbotUi.dir/flags.make
+scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o: scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o"
+	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o -c /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp
+
+scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.i"
+	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp > CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.i
+
+scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.s"
+	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp -o CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.s
+
 # Object files for target scorbotUi
 scorbotUi_OBJECTS = \
 "CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/scorbotUi.dir/mainwindow.cpp.o" \
 "CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o" \
-"CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.o"
+"CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.o" \
+"CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o"
 
 # External object files for target scorbotUi
 scorbotUi_EXTERNAL_OBJECTS =
@@ -123,9 +144,10 @@ scorbotUi/libscorbotUi.a: scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/m
 scorbotUi/libscorbotUi.a: scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o
 scorbotUi/libscorbotUi.a: scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o
 scorbotUi/libscorbotUi.a: scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.o
+scorbotUi/libscorbotUi.a: scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o
 scorbotUi/libscorbotUi.a: scorbotUi/CMakeFiles/scorbotUi.dir/build.make
 scorbotUi/libscorbotUi.a: scorbotUi/CMakeFiles/scorbotUi.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libscorbotUi.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX static library libscorbotUi.a"
 	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi && $(CMAKE_COMMAND) -P CMakeFiles/scorbotUi.dir/cmake_clean_target.cmake
 	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scorbotUi.dir/link.txt --verbose=$(VERBOSE)
 
@@ -138,7 +160,7 @@ scorbotUi/CMakeFiles/scorbotUi.dir/clean:
 	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi && $(CMAKE_COMMAND) -P CMakeFiles/scorbotUi.dir/cmake_clean.cmake
 .PHONY : scorbotUi/CMakeFiles/scorbotUi.dir/clean
 
-scorbotUi/CMakeFiles/scorbotUi.dir/depend:
+scorbotUi/CMakeFiles/scorbotUi.dir/depend: scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp
 	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : scorbotUi/CMakeFiles/scorbotUi.dir/depend
 

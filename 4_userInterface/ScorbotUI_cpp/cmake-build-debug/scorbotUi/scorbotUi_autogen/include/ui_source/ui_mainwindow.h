@@ -61,7 +61,6 @@ public:
     QLabel *en6Label_3;
     QSpinBox *en6Ref;
     QWidget *Direct_Angular;
-    QLabel *image_2;
     QWidget *layoutWidget_13;
     QVBoxLayout *DegRef;
     QLabel *valMinScr_4;
@@ -314,6 +313,8 @@ public:
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(MainWindow->sizePolicy().hasHeightForWidth());
         MainWindow->setSizePolicy(sizePolicy);
+        MainWindow->setMinimumSize(QSize(400, 100));
+        MainWindow->setMaximumSize(QSize(1007, 476));
         MainWindow->setStyleSheet(QStringLiteral("url:(/newPrefix/Logo-Uni-Tor-Vergata.png_48x48.png)"));
         actionInfo = new QAction(MainWindow);
         actionInfo->setObjectName(QStringLiteral("actionInfo"));
@@ -447,10 +448,6 @@ public:
         tabReference->addTab(Direct, QString());
         Direct_Angular = new QWidget();
         Direct_Angular->setObjectName(QStringLiteral("Direct_Angular"));
-        image_2 = new QLabel(Direct_Angular);
-        image_2->setObjectName(QStringLiteral("image_2"));
-        image_2->setGeometry(QRect(1789, 59, 141, 141));
-        image_2->setStyleSheet(QStringLiteral("image: url(:/image/Logo-Uni-Tor-Vergata.png_256x256.png);"));
         layoutWidget_13 = new QWidget(Direct_Angular);
         layoutWidget_13->setObjectName(QStringLiteral("layoutWidget_13"));
         layoutWidget_13->setGeometry(QRect(10, 10, 141, 190));
@@ -1115,8 +1112,10 @@ public:
         tabReference->addTab(RoboSetup, QString());
         image = new QLabel(centralwidget);
         image->setObjectName(QStringLiteral("image"));
-        image->setGeometry(QRect(920, 30, 91, 91));
-        image->setStyleSheet(QStringLiteral("image: url(:/image/Logo-Uni-Tor-Vergata.png_256x256.png);"));
+        image->setGeometry(QRect(910, 30, 91, 101));
+        image->setStyleSheet(QStringLiteral(""));
+        image->setPixmap(QPixmap(QString::fromUtf8(":/scorbotUi/ui_source/Logo-Uni-Tor-Vergata.png_256x256.png")));
+        image->setScaledContents(true);
         sendRef = new QPushButton(centralwidget);
         sendRef->setObjectName(QStringLiteral("sendRef"));
         sendRef->setGeometry(QRect(250, 340, 161, 41));
@@ -2232,7 +2231,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabReference->setCurrentIndex(0);
+        tabReference->setCurrentIndex(1);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -2257,7 +2256,6 @@ public:
         en5Label_3->setText(QApplication::translate("MainWindow", "En 5", Q_NULLPTR));
         en6Label_3->setText(QApplication::translate("MainWindow", "En 6", Q_NULLPTR));
         tabReference->setTabText(tabReference->indexOf(Direct), QApplication::translate("MainWindow", "Dir en", Q_NULLPTR));
-        image_2->setText(QString());
         valMinScr_4->setText(QApplication::translate("MainWindow", "Angle Reference", Q_NULLPTR));
         en1Label_4->setText(QApplication::translate("MainWindow", "\316\2701", Q_NULLPTR));
         en2Label_4->setText(QApplication::translate("MainWindow", "\316\2702", Q_NULLPTR));

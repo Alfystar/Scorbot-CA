@@ -5,7 +5,7 @@
 		<Option title="scorbotUi_demo"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\;CMake Files\DataTransfertPackge\;CMake Files\scorbotUi\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\;CMake Files\DataTransfertPackge\;CMake Files\scorbotUi\;CMake Files\scorbotUi\ui_source\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug"/>
@@ -164,6 +164,8 @@
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
 					<Add option="-DlinuxSide=1"/>
+					<Add directory="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi"/>
+					<Add directory="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi"/>
 					<Add directory="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/scorbotUi_autogen/include"/>
 					<Add directory="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
@@ -198,6 +200,8 @@
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
 					<Add option="-DlinuxSide=1"/>
+					<Add directory="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi"/>
+					<Add directory="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi"/>
 					<Add directory="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/scorbotUi_autogen/include"/>
 					<Add directory="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
@@ -280,6 +284,12 @@
 		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge/DataTransfert_AllInclude.h">
 			<Option target="dataTransfert"/>
 		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp">
+			<Option target="scorbotUi"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.rule">
+			<Option target="scorbotUi"/>
+		</Unit>
 		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp">
 			<Option target="scorbotUi"/>
 		</Unit>
@@ -305,6 +315,9 @@
 			<Option target="scorbotUi"/>
 		</Unit>
 		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/ui_source/freeMoveWindow.ui">
+			<Option target="scorbotUi"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/ui_source/logo.qrc">
 			<Option target="scorbotUi"/>
 		</Unit>
 		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/ui_source/mainwindow.ui">
@@ -366,6 +379,9 @@
 		</Unit>
 		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\scorbotUi\"/>
+		</Unit>
+		<Unit filename="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/scorbotUi/ui_source/logo.qrc">
+			<Option virtualFolder="CMake Files\scorbotUi\ui_source\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>

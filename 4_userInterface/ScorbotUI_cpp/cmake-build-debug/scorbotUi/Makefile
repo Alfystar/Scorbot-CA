@@ -194,6 +194,33 @@ mainwindow.cpp.s:
 	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug && $(MAKE) -f scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
+scorbotUi_autogen/PI2NXN7FKG/qrc_logo.o: scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o
+
+.PHONY : scorbotUi_autogen/PI2NXN7FKG/qrc_logo.o
+
+# target to build an object file
+scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o:
+	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug && $(MAKE) -f scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o
+.PHONY : scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o
+
+scorbotUi_autogen/PI2NXN7FKG/qrc_logo.i: scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.i
+
+.PHONY : scorbotUi_autogen/PI2NXN7FKG/qrc_logo.i
+
+# target to preprocess a source file
+scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.i:
+	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug && $(MAKE) -f scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.i
+.PHONY : scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.i
+
+scorbotUi_autogen/PI2NXN7FKG/qrc_logo.s: scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.s
+
+.PHONY : scorbotUi_autogen/PI2NXN7FKG/qrc_logo.s
+
+# target to generate assembly for a file
+scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.s:
+	cd /home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug && $(MAKE) -f scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.s
+.PHONY : scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.s
+
 scorbotUi_autogen/mocs_compilation.o: scorbotUi_autogen/mocs_compilation.cpp.o
 
 .PHONY : scorbotUi_autogen/mocs_compilation.o
@@ -264,6 +291,9 @@ help:
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
+	@echo "... scorbotUi_autogen/PI2NXN7FKG/qrc_logo.o"
+	@echo "... scorbotUi_autogen/PI2NXN7FKG/qrc_logo.i"
+	@echo "... scorbotUi_autogen/PI2NXN7FKG/qrc_logo.s"
 	@echo "... scorbotUi_autogen/mocs_compilation.o"
 	@echo "... scorbotUi_autogen/mocs_compilation.i"
 	@echo "... scorbotUi_autogen/mocs_compilation.s"
