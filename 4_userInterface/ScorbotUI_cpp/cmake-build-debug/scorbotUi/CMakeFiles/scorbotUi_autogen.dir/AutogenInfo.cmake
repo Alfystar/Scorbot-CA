@@ -25,7 +25,7 @@ set(AM_SOURCES "/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cp
 set(AM_SOURCES_FLAGS "MU;MU;MU")
 # MOC settings
 set(AM_MOC_SKIP "")
-set(AM_MOC_DEFINITIONS "QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;linuxSide=1;scorbotUi_EXPORTS")
+set(AM_MOC_DEFINITIONS "QT_CORE_LIB;QT_GUI_LIB;QT_WIDGETS_LIB;linuxSide=1")
 set(AM_MOC_INCLUDES "/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/DataTransfertPackge;/usr/include/x86_64-linux-gnu/qt5;/usr/include/x86_64-linux-gnu/qt5/QtWidgets;/usr/include/x86_64-linux-gnu/qt5/QtGui;/usr/include/x86_64-linux-gnu/qt5/QtCore;/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++;/usr/include;/usr/include/c++/7;/usr/include/x86_64-linux-gnu/c++/7;/usr/include/c++/7/backward;/usr/lib/gcc/x86_64-linux-gnu/7/include;/usr/local/include;/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed;/usr/include/x86_64-linux-gnu")
 set(AM_MOC_OPTIONS "")
 set(AM_MOC_RELAXED_MODE "")

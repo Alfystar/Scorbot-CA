@@ -6,8 +6,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/scorbotUi.dir/mainwindow.cpp.o"
   "CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o"
+  "libscorbotUi.a"
   "libscorbotUi.pdb"
-  "libscorbotUi.so"
 )
 
 # Per-language clean rules from dependency scanning.

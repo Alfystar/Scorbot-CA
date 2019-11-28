@@ -17,7 +17,6 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
   "QT_GUI_LIB"
   "QT_WIDGETS_LIB"
   "linuxSide=1"
-  "scorbotUi_EXPORTS"
   )
 
 # The include file search paths:

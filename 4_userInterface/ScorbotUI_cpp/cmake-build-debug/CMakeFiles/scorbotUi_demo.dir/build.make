@@ -80,7 +80,7 @@ scorbotUi_demo_EXTERNAL_OBJECTS =
 scorbotUi_demo: CMakeFiles/scorbotUi_demo.dir/main.cpp.o
 scorbotUi_demo: CMakeFiles/scorbotUi_demo.dir/build.make
 scorbotUi_demo: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.5
-scorbotUi_demo: scorbotUi/libscorbotUi.so
+scorbotUi_demo: scorbotUi/libscorbotUi.a
 scorbotUi_demo: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.5
 scorbotUi_demo: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.9.5
 scorbotUi_demo: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.5
