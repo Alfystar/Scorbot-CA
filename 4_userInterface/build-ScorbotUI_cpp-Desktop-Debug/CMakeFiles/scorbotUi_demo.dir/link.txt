@@ -1,1 +1,0 @@
-/usr/bin/g++  -g  -rdynamic CMakeFiles/scorbotUi_demo.dir/main.cpp.o  -o scorbotUi_demo -Wl,-rpath,/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/build-ScorbotUI_cpp-Desktop-Debug/scorbotUi scorbotUi/libscorbotUi.so /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.5 /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.5 /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.9.5 
