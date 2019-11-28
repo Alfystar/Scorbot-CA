@@ -154,10 +154,10 @@
 				</MakeCommands>
 			</Target>
 			<Target title="scorbotUi">
-				<Option output="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/libscorbotUi.so" prefix_auto="0" extension_auto="0"/>
+				<Option output="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/libscorbotUi.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi"/>
 				<Option object_output="./"/>
-				<Option type="3"/>
+				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DQT_WIDGETS_LIB"/>
@@ -188,10 +188,10 @@
 				</MakeCommands>
 			</Target>
 			<Target title="scorbotUi/fast">
-				<Option output="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/libscorbotUi.so" prefix_auto="0" extension_auto="0"/>
+				<Option output="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/libscorbotUi.a" prefix_auto="0" extension_auto="0"/>
 				<Option working_dir="/home/alfyhack/Documenti/Scorbot-CA/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi"/>
 				<Option object_output="./"/>
-				<Option type="3"/>
+				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DQT_WIDGETS_LIB"/>

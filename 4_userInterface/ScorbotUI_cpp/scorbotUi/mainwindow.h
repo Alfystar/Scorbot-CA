@@ -26,16 +26,22 @@ Q_OBJECT  //Macro di Qt che importa tutti i metodi virtuali necessari, senza dov
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+    // Data update
+    void enSample(EncoderMot &en);
+    void currSample(CurrentMot &cur);
+    void controllSample(SpeedMot &speed);
 private slots:
-    //Data send
+    // Data send
     void sendRef_handler();
     // Robot Setup
     void scorParamSet_handler();
     void scorParamReset_handler();
-    //Other Windows
+    // Other Windows
     void boardSet_handler();
     void controllSet_handler();
     void freeMove_handler();
+    // Cin recalc
+    void cinCalc_handler();
 
 
     void testPrint();
@@ -44,9 +50,17 @@ private:
     SettingBoardWindow *setBoardWin;
     FreeMoveWindow *freeMovWin;
 
-    /// Riferimenti da inviare
+    /// Variabili fuznionali
+    EncoderMot *ref;
+    AllSensor *feedBack;
+
+
+    /// Riferimenti da inviare Qt
     //TabWindget
     QTabWidget *tabReference;
+    enum tabRefName {
+        DirEn, DirDeg, Inv, RobSet
+    };
     //Diretta en
     QSpinBox *enRef[nMot];
     //Diretta angolata

@@ -16,77 +16,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/scorbotUi/freeMoveWinsow.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/scorbotUi/freeMoveWinsow.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/scorbotUi/settingBoardWindow.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/scorbotUi/settingBoardWindow.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/main.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/CurrentMot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/CurrentMot.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/EncoderMot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/2_boardSystem/V2/SW/1_uart/Common-src/DataTransfertPackge/DataManipolation/EncoderMot.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/DataTransfertPackge/libdataTransfert.a" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/DataTransfertPackge/libdataTransfert.a" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/link.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/progress.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/AutogenInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/AutogenInfo.cmake" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/ParseCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/ParseCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/libscorbotUi.so" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/libscorbotUi.so" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/libscorbotUi.so" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/scorbotUi_autogen/EWIEGA46WW/moc_mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/scorbotUi_autogen/EWIEGA46WW/moc_mainwindow.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/scorbotUi_autogen/include/ui_source/ui_mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/scorbotUi_autogen/include/ui_source/ui_mainwindow.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/scorbotUi_autogen/moc_predefs.h" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi/scorbotUi_autogen/moc_predefs.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi_demo" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi_demo" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi_demo.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/scorbotUi_demo.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/scorbotUi.dir/CXX.includecache" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/scorbotUi.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/scorbotUi.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/scorbotUi.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/scorbotUi.dir/cmake_clean_target.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/scorbotUi.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/scorbotUi.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/scorbotUi.dir/flags.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/scorbotUi.dir/link.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/scorbotUi.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/scorbotUi_autogen.dir/AutogenInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/scorbotUi_autogen.dir/AutogenOldSettings.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/scorbotUi_autogen.dir/DependInfo.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/scorbotUi_autogen.dir/ParseCache.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/scorbotUi_autogen.dir/build.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/scorbotUi_autogen.dir/cmake_clean.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/scorbotUi_autogen.dir/depend.internal" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/scorbotUi_autogen.dir/depend.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/CMakeFiles/scorbotUi_autogen.dir/progress.make" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/cmake_install.cmake" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/libscorbotUi.a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/scorbotUi_autogen/EWIEGA46WW/moc_mainwindow.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/scorbotUi_autogen/include/ui_source/ui_mainwindow.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/scorbotUi_autogen/moc_predefs.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/cmake-build-debug/ui_Sys/scorbotUi_autogen/mocs_compilation.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/scorbotUi/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/scorbotUi/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/scorbotUi/mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/scorbotUi/mainwindow.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/scorbotUi/mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/scorbotUi/mainwindow.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/scorbotUi/ui_source/freeMoveWindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/scorbotUi/ui_source/freeMoveWindow.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/scorbotUi/ui_source/mainwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/scorbotUi/ui_source/mainwindow.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/scorbotUi/ui_source/settingBoardWindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/4_userInterface/ScorbotUI_cpp/scorbotUi/ui_source/settingBoardWindow.ui" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -126,7 +71,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/4_userInterface/ScorbotUI_2" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -165,7 +110,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="CMake Application.scorbotUi">
+  <component name="RunManager" selected="CMake Application.scorbotUi_demo">
     <configuration name="dataTransfert" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="scorbotUi_demo" TARGET_NAME="dataTransfert" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
@@ -209,10 +154,10 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="CMake Application.scorbotUi_demo" />
       <item itemvalue="CMake Application.dataTransfert" />
       <item itemvalue="CMake Application.scorbotUi" />
       <item itemvalue="CMake Application.scorbotUi_autogen" />
+      <item itemvalue="CMake Application.scorbotUi_demo" />
       <item itemvalue="Python.mainUi" />
     </list>
     <recent_temporary>
@@ -278,7 +223,11 @@
       <workItem from="1574204014190" duration="1111000" />
       <workItem from="1574322788297" duration="2581000" />
       <workItem from="1574327610320" duration="3670000" />
-      <workItem from="1574842199683" duration="5483000" />
+      <workItem from="1574842199683" duration="5570000" />
+      <workItem from="1574848559659" duration="133000" />
+      <workItem from="1574856972626" duration="248000" />
+      <workItem from="1574866968045" duration="477000" />
+      <workItem from="1574925036063" duration="8418000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
       <created>1568027375662</created>
@@ -441,7 +390,14 @@
       <option name="project" value="LOCAL" />
       <updated>1574331259481</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="creati i collegamenti tra le finestre">
+      <created>1574847758400</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1574847758400</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -481,11 +437,13 @@
     <MESSAGE value="risolta la critc_race sui mutex, mettendo i semafori.&#10;Il problema è che alle alte velocità si perde l'owner&#10;&#10;Trovare come lockare insieme più semafori (forse si deve passare a sistem5)" />
     <MESSAGE value="Iniziato rioridono dell'interfaccia grafica verso una forma più formale" />
     <MESSAGE value="inizio della creazione dell'interfaccia in qt cpp" />
-    <option name="LAST_COMMIT_MESSAGE" value="inizio della creazione dell'interfaccia in qt cpp" />
+    <MESSAGE value="creati i collegamenti tra le finestre" />
+    <option name="LAST_COMMIT_MESSAGE" value="creati i collegamenti tra le finestre" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/pcListenUart$mainUi.coverage" NAME="mainUi Coverage Results" MODIFIED="1574201794435" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/userInterface" />
+    <SUITE FILE_PATH="coverage/scorbotUi_demo$mainUi.coverage" NAME="mainUi Coverage Results" MODIFIED="1574856996168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/userInterface" />
     <SUITE FILE_PATH="coverage/py2c$mainUi.coverage" NAME="mainUi Coverage Results" MODIFIED="1574204930939" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/4_userInterface/ScorbotUI_2/userInterface" />
   </component>
 </project>

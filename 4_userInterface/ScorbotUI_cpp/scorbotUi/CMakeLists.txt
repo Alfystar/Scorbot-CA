@@ -8,7 +8,7 @@ if (CMAKE_VERSION VERSION_LESS "3.7.0")
     set(CMAKE_INCLUDE_CURRENT_DIR ON)
 endif ()
 
-add_library(scorbotUi SHARED
+add_library(scorbotUi #SHARED
         mainwindow.h mainwindow.cpp ui_source/mainwindow.ui
         #    resources.qrc
         settingBoardWindow.h settingBoardWindow.cpp ui_source/settingBoardWindow.ui
@@ -22,3 +22,5 @@ find_package(Qt5 COMPONENTS Widgets REQUIRED)
 target_link_libraries(scorbotUi Qt5::Widgets)
 
 target_link_libraries(scorbotUi dataTransfert)
+#set_property(TARGET scorbotUi PROPERTY POSITION_INDEPENDENT_CODE ON)
+

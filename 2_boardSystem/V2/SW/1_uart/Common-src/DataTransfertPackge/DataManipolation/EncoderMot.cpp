@@ -55,11 +55,11 @@ namespace DataManipolation {
     }
 
     short EncoderMot::getEn(motCode mot) {
-        return *(this->enPack)[mot];
+        return (*this->enPack)[mot];
     }
 
     void EncoderMot::enSet(motCode mot, short en) {
-        *(this->enPack)[mot] = en;
+        (*this->enPack)[mot] = en;
     }
 
     void EncoderMot::printEncoder() {

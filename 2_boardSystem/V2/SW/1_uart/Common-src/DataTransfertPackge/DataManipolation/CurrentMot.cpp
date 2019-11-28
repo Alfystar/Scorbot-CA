@@ -54,11 +54,11 @@ namespace DataManipolation {
     }
 
     short CurrentMot::getCurrent(motCode mot) {
-        return *(this->curPack)[mot];
+        return (*this->curPack)[mot];
     }
 
     void CurrentMot::curSet(motCode mot, short cur) {
-        *(this->curPack)[mot] = cur;
+        (*this->curPack)[mot] = cur;
     }
 
     void CurrentMot::printCurrent() {
