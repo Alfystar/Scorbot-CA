@@ -4,9 +4,9 @@ add_library(circularBuffer
         )
 
 #aggiunge la libreria/eseguibile in modalità INTERFACE|PUBLIC|PRIVATE alla INCLUDE_DIRECTORIES property
-target_include_directories(circularBuffer PUBLIC ".")
+target_include_directories(circularBuffer PUBLIC "${CMAKE_INCLUDE_CURRENT_DIR}")
 message("La libreria 'circularBuffer' è stata aggiunta")
-message("CMAKE_CURRENT_SOURCE_DIR:" . ${x86_64})
+message("CMAKE_CURRENT_SOURCE_DIR:" ${CMAKE_INCLUDE_CURRENT_DIR} ${x86_64})
 if (${UNIX})
     target_compile_definitions(circularBuffer PUBLIC linuxSide=1)
 endif ()

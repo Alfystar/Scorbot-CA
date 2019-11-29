@@ -11,6 +11,7 @@ if (CMAKE_VERSION VERSION_LESS "3.7.0")
 endif ()
 
 add_library(scorbotUi #SHARED
+        commonDefine.h
         mainwindow.h mainwindow.cpp ui_source/mainwindow.ui ui_source/logo.qrc
         settingBoardWindow.h settingBoardWindow.cpp ui_source/settingBoardWindow.ui
         freeMoveWinsow.h freeMoveWinsow.cpp ui_source/freeMoveWindow.ui

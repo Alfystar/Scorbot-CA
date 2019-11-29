@@ -6,6 +6,7 @@
 #define PCLISTENUART_ADAPTERFACTORY_H
 
 #include <string>
+#include <termios.h>
 #include "AdapterClasses/ComUartAdapter.h"
 
 class AdapterFactory {  //abstract class

@@ -8,5 +8,6 @@
 #include "ScorInterface.h"
 #include "AdapterClasses/ComUartAdapter.h"
 #include "AdapterFactory.h"
+#include <termios.h>
 
 #endif //PCLISTENUART_UARTSUBSYSTEM_H

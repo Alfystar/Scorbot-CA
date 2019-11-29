@@ -13,6 +13,7 @@ add_library(UartSubSystem
 target_include_directories(UartSubSystem PUBLIC ".")
 target_link_libraries(UartSubSystem PUBLIC dataTransfert)
 target_link_libraries(UartSubSystem PUBLIC uartDriver)
+target_link_libraries(UartSubSystem PUBLIC timeOp)
 
 find_package(Threads REQUIRED)
 target_link_libraries(UartSubSystem PUBLIC ${CMAKE_THREAD_LIBS_INIT})

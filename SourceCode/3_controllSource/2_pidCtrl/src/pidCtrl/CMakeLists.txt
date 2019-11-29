@@ -5,3 +5,5 @@ add_library(pidCtrl
         )
 
 target_include_directories(pidCtrl PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+target_link_libraries(pidCtrl PUBLIC dataTransfert)
+target_link_libraries(pidCtrl PUBLIC timeOp)

@@ -20,13 +20,14 @@ PIDScorbot::PIDScorbot(float kp, float ki, float kd, int MdeadZone, bool posDir,
     this->CONTROL_DEADZONE = cDead;    //se per muovermi devo spostarmi di meno freno
 
     /*Variabili del pid comp*/
-    memset(this->mystack, 0, sizeof((this->mystack[0])) * 8);
+    memset(this->mystack, 0, sizeof(this->mystack));
     this->x_i = 0.0;
     this->y_d = 0.0;
 
     /*pid relativi*/
-    gettimeofday(&this->temp, NULL);
-    gettimeofday(&this->oldTemp, NULL);
+    clock_gettime(CLOCK_MONOTONIC_RAW, &this->temp);
+    memcpy(&this->oldTemp, &this->temp, sizeof(timespec));
+    memcpy(&this->result, &this->temp, sizeof(timespec));
     printf("kp=%e, ki=%e, kd=%e\n", kp, ki, kd);
 
 
@@ -36,18 +37,23 @@ float fmap(float x, float in_min, float in_max, float out_min, float out_max) {
     return (x - in_min) * (out_max - out_min) / (in_max - in_min) + out_min;
 }
 
-int ts;//tempo da ultima chiamata
-int PIDScorbot::motVal(int ref, int en) {
+int ts;//tempo da ultima chiamata micro secondi
+short PIDScorbot::motVal(int ref, int en) {
     this->oldTemp = this->temp;
-    gettimeofday(&this->temp, NULL);
-    if (this->temp.tv_usec - this->oldTemp.tv_usec < 0); //se avviene l'overflow ipotizzo uguale a prima
-    else ts = this->temp.tv_usec - this->oldTemp.tv_usec;
-    int er = (ref - en) * (1 - (2 * this->posDir)); //per allineare verso dei pwm a incremento degli encoder
+    clock_gettime(CLOCK_MONOTONIC_RAW, &this->temp);
+    timersubSpec(&this->temp, &this->oldTemp, &this->result);
+    this->pid(ref, en, &result);
+}
+
+
+short PIDScorbot::pid(int ref, int feeback, struct timespec *dt) {
+    ts = dt->tv_nsec / 1000UL + dt->tv_sec * 1000000UL;
+    int er = (ref - feeback) * (1 - (2 * this->posDir)); //per allineare verso dei pwm a incremento degli encoder
 
     float vOut = this->PIDComp(er, ts);
     printf("vOut=%f\n", vOut);
     if (fabsf(vOut) < this->CONTROL_DEADZONE) {
-        return ss; //soft stop
+        return softStop; //soft stop
     } else {
         if (vOut > 0) return int(fmap(vOut, 0.0, 1.0, this->MOTOR_DEADZONE, 255) + 0.5);
         else {
@@ -81,8 +87,7 @@ float PIDScorbot::UpdateSat(float x, float dx, float a, float k, float s, float 
         return (dx);
 }
 
-
-float PIDScorbot::PIDComp(int error, __suseconds_t Ts) {
+float PIDScorbot::PIDComp(int error, long Ts) {
     /*Il pid calcola un valore in uscita tra -1.0 e 1.0 che è -100% to 100% della pot di uscita del motore*/
     //TS tempo campione in micro secondi
 

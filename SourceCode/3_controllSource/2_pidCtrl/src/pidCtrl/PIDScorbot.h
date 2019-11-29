@@ -10,18 +10,25 @@
 #include <sys/time.h>
 #include <stdlib.h>
 #include <string.h>
-#include "../SPILib/spi_scorebot_packdefine.h"
+#include <iostream>
+#include <DataTransfert_AllInclude.h>
+#include <timeSpecOp.h>
+//#include "../UartSubSystem/AdapterClasses/ComUartAdapter.h"
 
+
+using namespace DataPrimitive;
+using namespace DataManipolation;
 typedef struct data_ {
-    int er;
-    long time;
+    int er;     //errore dal riferimento
+    long time;  //Tempo dall'ultimo campine
 } data;
 
 class PIDScorbot {
 public:
     PIDScorbot(float kp, float ki, float kd, int MdeadZone, bool posDir);
     PIDScorbot(float kp, float ki, float kd, int MdeadZone, bool posDir, float cSat, float cDead);
-    int motVal(int ref, int en);
+    short motVal(int ref, int en);
+    short pid(int ref, int feeback, struct timespec *dt);
 private:
     /*pid general*/
     float Kp, Ki, Kd;
@@ -36,10 +43,9 @@ private:
     float y_d = 0.0;
 
     /*pid timing*/
-    struct timeval temp;
-    struct timeval oldTemp;
+    struct timespec temp, oldTemp, result;
 
-    float PIDComp(int error, __suseconds_t Ts);
+    float PIDComp(int error, long Ts);  //Ts micro secondi
     float UpdateSat(float x, float dx, float a, float k, float s, float S);
 protected:
 

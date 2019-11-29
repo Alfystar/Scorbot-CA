@@ -54,7 +54,6 @@ void set_realtime_priority() {
 int main(int argc, char *argv[]) {
     /// Initialize board
     try {
-//        scorbot = &AdapterFactory::makeUart("/dev/ttyACM0",B115200);
         scorbot = &AdapterFactory::makeUart("/dev/ttyACM0", B921600);
     } catch (const std::exception &e) {
         std::cerr << e.what() << std::endl;

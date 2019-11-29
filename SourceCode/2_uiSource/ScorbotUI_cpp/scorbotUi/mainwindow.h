@@ -13,23 +13,12 @@
 #include <iostream>
 #include "settingBoardWindow.h"
 #include "freeMoveWinsow.h"
-
+#include "commonDefine.h"
 namespace Ui {
     class MainWindow; //Nome del windget radice nel file ui
 }
 using namespace DataPrimitive;
 using namespace DataManipolation;
-// Dichiaro le funzioni di interfaccia per inviare fuori i dati
-typedef void (*ctrlRefSendFoo)(EncoderMot &);       // Funzione per il controllore che invia fuori i riferimenti
-typedef void (*SettingSendFoo)(SettingBoard_C &);   // Funzione che invia alla board le nuove impostazioni
-typedef SettingBoard_C &(*SettingGetFoo)(void);    // Funzione che richiede alla board le sue impostazioni
-//todo Aggiungere la funzione per personalizzare il controllore
-
-struct extFooCall {
-    ctrlRefSendFoo ctrlFunx;
-    SettingSendFoo setSendFunx;
-    SettingGetFoo setGetFunx;
-};
 
 class MainWindow : public QMainWindow {
 Q_OBJECT  //Macro di Qt che importa tutti i metodi virtuali necessari, senza doverli scrvere a mano
