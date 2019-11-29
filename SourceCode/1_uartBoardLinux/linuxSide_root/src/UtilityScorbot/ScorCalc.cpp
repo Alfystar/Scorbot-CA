@@ -40,7 +40,7 @@ float ScoreCalc::vRefNeed(float Imax, float Vcs) {
 void ScoreCalc::adc2curr(Pack &currPack) {
     if (currPack.getPackType() == PWMsend_CurRet || currPack.getPackType() == PWMsend_AllRet) {
         for (int i = Mot1; i < nMot; i++) {
-            printf("%d)%4.3fA\t", i + 1, this->adc2curr(currPack.getCurrent()[i]));
+            printf("%d)%4.3fA\t", i + 1, this->adc2curr(currPack.current().getCurrent((motCode) i)));
         }
         printf("\n");
     } else {

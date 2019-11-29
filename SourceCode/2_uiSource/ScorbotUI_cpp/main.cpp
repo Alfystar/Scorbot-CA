@@ -1,7 +1,8 @@
 #include <QApplication>
-#include "scorbotUi/mainwindow.h"
+#include "src/scorbotUi/mainwindow.h"
 #include <iostream>
 #include <unistd.h>
+#include <DataTransfert_AllInclude.h>
 
 void controllRefInMoc(EncoderMot &en) {
     en.printEncoder();

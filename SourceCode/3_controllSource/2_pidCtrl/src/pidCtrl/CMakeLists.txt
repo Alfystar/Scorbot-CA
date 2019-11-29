@@ -1,9 +1,10 @@
-cmake_minimum_required(VERSION 3.1)
+if (NOT TARGET pidCtrl)
+    add_library(pidCtrl
+            PIDScorbot.h PIDScorbot.cpp
+            )
 
-add_library(pidCtrl
-        PIDScorbot.h PIDScorbot.cpp
-        )
-
-target_include_directories(pidCtrl PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-target_link_libraries(pidCtrl PUBLIC dataTransfert)
-target_link_libraries(pidCtrl PUBLIC timeOp)
+    target_include_directories(pidCtrl PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+    target_link_libraries(pidCtrl PUBLIC dataTransfert)
+    target_link_libraries(pidCtrl PUBLIC timeOp)
+    message("La libreria 'pidCtrl' è stata aggiunta")
+endif ()

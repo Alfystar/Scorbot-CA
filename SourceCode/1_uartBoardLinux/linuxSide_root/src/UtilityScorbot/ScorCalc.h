@@ -6,6 +6,9 @@
 #define SPIRASP_TERMINAL_SCORCALC_H
 
 #include <math.h>
+#include <DataTransfert_AllInclude.h>
+using namespace DataManipolation;
+using namespace DataPrimitive;
 
 class ScoreCalc {
 public:

@@ -6,7 +6,6 @@
 #include <UartSubSystem.h>
 #include <unistd.h>
 
-PIDScorbot *pidM[nMot];
 using namespace DataPrimitive;
 using namespace DataManipolation;
 ScorInterface *scorbot;
@@ -57,16 +56,20 @@ int main(int argc, char *argv[]) {
     }
     printf("Encoder Reference:\n");
     ref->printEncoder();
+
+    /// Variabili del Controllore
+    PIDScorbot *pidM[nMot];
+    EncoderMot *enFeed; //Puntatore per i dati letti
+    EncoderMot *refPid = new EncoderMot();
+    SpeedMot *pwm = new SpeedMot();
+
     pidM[Mot1] = new PIDScorbot(0.00055, 0.0000000015, 10, 50, false, .8, 0.02);
     pidM[Mot2] = new PIDScorbot(0.00055, 0.0000000015, 10, 50, false, 1.0, 0.02);
     pidM[Mot3] = new PIDScorbot(0.00055, 0.0000000015, 10, 50, true, .8, 0.02);
     pidM[Mot4] = new PIDScorbot(0.00055, 0.0000000015, 10, 110, true, .8, 0.02);
     pidM[Mot5] = new PIDScorbot(0.00055, 0.0000000015, 10, 133, false, .8, 0.02);
     pidM[Mot6] = new PIDScorbot(0.00055, 0.0000000015, 10, 85, false, .8, 0.02);
-    EncoderMot *enFeed; //Puntatore per i dati letti
-    EncoderMot *refPid = new EncoderMot();
 
-    SpeedMot *pwm = new SpeedMot();
     sleep(1);
     struct timespec startCalc, endCalc, ts, delay, sleepTime;   // avevano più senso con la SPI
     timeWriteSpec(&ts, 0, 10 * 1000000UL);    //10ms per il tempo di campionamento

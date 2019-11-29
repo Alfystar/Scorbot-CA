@@ -8,16 +8,13 @@ message("Sono APPLE?: ${APPLE}")
 
 project(scorbotUi_demo)
 
-add_subdirectory(DataTransfertPackge)
-
-add_subdirectory(scorbotUi)
+add_subdirectory(src)
 
 #Exe create
 add_executable(${PROJECT_NAME} main.cpp)
 
-find_package(Qt5 COMPONENTS Widgets REQUIRED)
-target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
-target_link_libraries(${PROJECT_NAME} scorbotUi)
+target_link_libraries(${PROJECT_NAME} PUBLIC scorbotUi)
+target_link_libraries(${PROJECT_NAME} PUBLIC dataTransfert)
 
 # specify the C++ standard
 set(CMAKE_CXX_STANDARD 17)

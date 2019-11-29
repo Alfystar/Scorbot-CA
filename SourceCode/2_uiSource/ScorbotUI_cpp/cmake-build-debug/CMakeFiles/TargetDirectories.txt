@@ -1,0 +1,12 @@
+/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir
+/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/CMakeFiles/rebuild_cache.dir
+/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/CMakeFiles/edit_cache.dir
+/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/rebuild_cache.dir
+/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir
+/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/edit_cache.dir
+/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/rebuild_cache.dir
+/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir
+/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/edit_cache.dir
+/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi_autogen.dir

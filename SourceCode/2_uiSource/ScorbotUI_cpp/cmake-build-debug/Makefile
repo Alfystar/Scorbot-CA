@@ -133,7 +133,7 @@ dataTransfert: cmake_check_build_system
 
 # fast build rule for target.
 dataTransfert/fast:
-	$(MAKE) -f DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make DataTransfertPackge/CMakeFiles/dataTransfert.dir/build
+	$(MAKE) -f src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build
 .PHONY : dataTransfert/fast
 
 #=============================================================================
@@ -146,7 +146,7 @@ scorbotUi: cmake_check_build_system
 
 # fast build rule for target.
 scorbotUi/fast:
-	$(MAKE) -f scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotUi/CMakeFiles/scorbotUi.dir/build
+	$(MAKE) -f src/scorbotUi/CMakeFiles/scorbotUi.dir/build.make src/scorbotUi/CMakeFiles/scorbotUi.dir/build
 .PHONY : scorbotUi/fast
 
 #=============================================================================
@@ -159,7 +159,7 @@ scorbotUi_autogen: cmake_check_build_system
 
 # fast build rule for target.
 scorbotUi_autogen/fast:
-	$(MAKE) -f scorbotUi/CMakeFiles/scorbotUi_autogen.dir/build.make scorbotUi/CMakeFiles/scorbotUi_autogen.dir/build
+	$(MAKE) -f src/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/build.make src/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/build
 .PHONY : scorbotUi_autogen/fast
 
 main.o: main.cpp.o
