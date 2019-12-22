@@ -11,7 +11,7 @@ settingsBoard globSets;
 SpiDevice *spi;
 UartDriver *uart;
 AdcDevice *adc;
-ScorFeed *sFeed;
+MotFeed *sFeed;
 using namespace Motor;
 DCdriverLimit *mot[nMot];
 #ifdef DB_PRINT_SENSOR
@@ -34,7 +34,7 @@ void setup() {
     motSetup();
     Db.flush();
     Db.println("\tMotor Setup");
-    sFeed = new ScorFeed();
+    sFeed = new MotFeed();
     Db.flush();
     Db.println("\tSetUp Scorbot Sensors");
     adc = new AdcDevice(globSets.diff, globSets.adcVref);

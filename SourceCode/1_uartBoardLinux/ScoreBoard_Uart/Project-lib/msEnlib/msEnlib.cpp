@@ -7,7 +7,7 @@
 #include "msEnlib.h"
 
 namespace ScorebotRead {
-    ScorFeed::ScorFeed() {
+    MotFeed::MotFeed() {
         //Memory clean
         memset(this->bufMem, 0, sizeMem * sizeof(mEncoder));
         memset(this->step, 0, sizeof(mEncoder));
@@ -41,7 +41,7 @@ namespace ScorebotRead {
         PCMSK2 = 0xFF;        //abilita tutti
         PCMSK0 = 0xF0;        //abilita la metà superiore
 #endif
-        ScorFeed::interruptEn(true);
+        MotFeed::interruptEn(true);
 
 
     }
@@ -55,7 +55,7 @@ namespace ScorebotRead {
                                  1, -1, 0}; /*[old]BA-BA[new]*/
     byte chAold, chBold, chAnew, chBnew, code;
 
-    void ScorFeed::calcStep(int oldEn, int newEn) {
+    void MotFeed::calcStep(int oldEn, int newEn) {
         /* Monto i bit BA (A LSB)*/
         chAold = oldEn & 0x00FF;
         chBold = (oldEn & 0xFF00) >> 7;    //disallineo di 1 per semplificare l'or binario
@@ -80,7 +80,7 @@ namespace ScorebotRead {
 
     unsigned short enNow, enOld;
 
-    void ScorFeed::isrFunxEN() { //aggiungo solo se diverso e il buffer non vuoto
+    void MotFeed::isrFunxEN() { //aggiungo solo se diverso e il buffer non vuoto
         circular_buf_put(circularBuf, enRead());
         /*
         enOld=enNow;
@@ -92,22 +92,22 @@ namespace ScorebotRead {
             */
     }
 
-    mEncoder &ScorFeed::captureEn() {
+    mEncoder &MotFeed::captureEn() {
         memcpy(this->tempStep, this->step, sizeof(mEncoder));
         return tempStep;
     }
 
-    void ScorFeed::setEn(motCode mot, short st) {
+    void MotFeed::setEn(motCode mot, short st) {
         this->step[mot] = st;
     }
 
-    short ScorFeed::getEn(motCode mot) {
+    short MotFeed::getEn(motCode mot) {
         return this->step[mot];
     }
 
     byte enChA, enChB, ms;
 
-    void ScorFeed::dSubDebug() {
+    void MotFeed::dSubDebug() {
         ms = this->msRead();
         enChA = PINK & 0b00111111;
         enChB = ((PINK & 0b11000000) >> 6) | ((PINB & 0xF0) >> 2);
@@ -120,14 +120,14 @@ namespace ScorebotRead {
         this->storedData();
     }
 
-    void ScorFeed::storedData() {
+    void MotFeed::storedData() {
         Serial.print("Circular size: ");
         Serial.println(circular_buf_size(this->circularBuf));
     }
 
     mEncoder passiT;
 
-    void ScorFeed::printSteps() {
+    void MotFeed::printSteps() {
         memcpy(passiT, this->captureEn(), sizeof(mEncoder));
         for (byte i = 0; i < nMot; i++) {
             Serial.print("\tEn ");
@@ -139,17 +139,17 @@ namespace ScorebotRead {
         Serial.println();
     }
 
-    byte ScorFeed::msRead() {
+    byte MotFeed::msRead() {
         return (~PINC) & 0b00111111;
     }
 
-    short ScorFeed::enRead() {
+    short MotFeed::enRead() {
         return ((((PINK & 0b11000000) >> 6) | ((PINB & 0xF0) >> 2)) << 8)
                | (PINK & 0b00111111);
 
     }
 
-    void ScorFeed::updateStepEn() {
+    void MotFeed::updateStepEn() {
         int oldEn, newEn;
         while (!circular_buf_empty(circularBuf)) {
             if (circular_buf_getLastOne(circularBuf, (uint16_t *) &oldEn))
@@ -166,7 +166,7 @@ namespace ScorebotRead {
         //Serial.println("END");
     }
 
-    void ScorFeed::interruptEn(bool en) {
+    void MotFeed::interruptEn(bool en) {
         //Serial.println("Enable ADC interrupt");
         if (en) {
 #ifdef TIMER5OVF_EN

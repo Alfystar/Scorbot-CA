@@ -63,7 +63,7 @@ namespace Uart {
         waitStart, waitType, waitEnd
     };
 
-
+//todo: Su linux, disattivare il reset della scheda automatico, e aggiungere un comando che esplicitamente resetta l'arduino
     class UartDriver {
     public:
 #ifdef linuxSide

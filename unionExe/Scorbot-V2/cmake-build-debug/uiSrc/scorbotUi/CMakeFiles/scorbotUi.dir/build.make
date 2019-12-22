@@ -34,10 +34,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.103/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5662.56/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.103/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5662.56/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -62,7 +62,7 @@ uiSrc/scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp: uiSrc/scorbotUi/CMake
 uiSrc/scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp: /home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/img/Logo-Uni-Tor-Vergata.png_256x256.png
 uiSrc/scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp: /usr/lib/qt5/bin/rcc
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/alfyhack/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic RCC for ../../../../SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/logo.qrc"
-	cd /home/alfyhack/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/uiSrc/scorbotUi && /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.103/bin/cmake/linux/bin/cmake -E cmake_autorcc /home/alfyhack/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/RCClogoInfo.cmake Debug
+	cd /home/alfyhack/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/uiSrc/scorbotUi && /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5662.56/bin/cmake/linux/bin/cmake -E cmake_autorcc /home/alfyhack/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/RCClogoInfo.cmake Debug
 
 uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o: uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/flags.make
 uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o: uiSrc/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp

@@ -48,14 +48,14 @@ int main(int argc, char *argv[]) {
         UartDriver::serialPackDb(*uart->getDataWait());
         std::cout << "\n";
         i++;
-        if (i > 5) {
-            i = 0;
-            uart->packSend(settingAsk, nullptr);
-            p->setAdcDiff(!p->getSetting().diff);
-            std::cout << "\nSend:\n";
-            p->printSetting();
-            uart->packSend(settingBoardData, (data2Ard * ) & p->getSetting());
-        }
+//        if (i > 5) {
+//            i = 0;
+//            uart->packSend(settingAsk, nullptr);
+//            p->setAdcDiff(!p->getSetting().diff);
+//            std::cout << "\nSend:\n";
+//            p->printSetting();
+//            uart->packSend(settingBoardData, (data2Ard * ) & p->getSetting());
+//        }
 
     }
     return 0;

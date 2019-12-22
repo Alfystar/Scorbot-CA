@@ -9,6 +9,7 @@ namespace Uart {
 
     UartDriver::UartDriver(const std::string &device) {
         this->fd = open(device.c_str(), O_RDWR | O_NOCTTY);//| O_NDELAY
+
         if (this->fd == -1) {
             system("ls /dev/ttyACM* -l");
             throw UartException("Failed to open port and get FD", errno);

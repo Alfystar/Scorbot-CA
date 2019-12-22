@@ -1,4 +1,4 @@
-/home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.103/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/alfyhack/Documenti/Scorbot-CA/unionExe/Scorbot-V2
+/home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5662.56/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/alfyhack/Documenti/Scorbot-CA/unionExe/Scorbot-V2
 La libreria 'dataTransfert' è stata aggiunta
 La libreria 'circularBuffer' è stata aggiunta
 CMAKE_THREAD_LIBS_INIT: -lpthread

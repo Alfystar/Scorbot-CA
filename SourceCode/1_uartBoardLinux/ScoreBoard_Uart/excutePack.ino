@@ -68,7 +68,7 @@ void initDataSend() {
     nextCurSend = nextEnSend;
 }
 
-mEncoder enTest = {1, 2, 3, 4, 5, 6};
+mEncoder enTest = {165, 2, 3, 4, 5, 6};
 mCurrent curTest = {12, 23, 34, 45, 65, 16};
 unsigned long time;
 
@@ -80,10 +80,10 @@ void dataSend() {
     if (time - nextEnSend > enP && time - nextCurSend > curP) {
         //digitalWrite(31,!digitalRead(31));
         //digitalWrite(30,!digitalRead(30));
-        //sAllSend->copyEn(sFeed->captureEn());
-        //sAllSend->copyCur(adc->getLastCycle());
-        sAllSend->copyEn(enTest);
-        sAllSend->copyCur(curTest);
+        sAllSend->copyEn(sFeed->captureEn());
+        sAllSend->copyCur(adc->getLastCycle());
+        //sAllSend->copyEn(enTest);
+        //sAllSend->copyCur(curTest);
         uart->packSend(mAllData, (data2Rasp *) &sAllSend->getSens());
         nextEnSend += enP;
         nextCurSend += curP;
@@ -91,16 +91,16 @@ void dataSend() {
     }
     if (time - nextEnSend > enP) {
         //digitalWrite(31,!digitalRead(31));
-        //sAllSend->copyEn(sFeed->captureEn());
-        sAllSend->copyEn(enTest);
+        sAllSend->copyEn(sFeed->captureEn());
+        //sAllSend->copyEn(enTest);
         uart->packSend(mEncoderData, (data2Rasp *) &sAllSend->getEn());
         nextEnSend += enP;
         return;
     }
     if (time - nextCurSend > curP) {
         //digitalWrite(30,!digitalRead(30));
-        //sAllSend->copyCur(adc->getLastCycle());
-        sAllSend->copyCur(curTest);
+        sAllSend->copyCur(adc->getLastCycle());
+        //sAllSend->copyCur(curTest);
         uart->packSend(mCurrentData, (data2Rasp *) &sAllSend->getCurrent());
         nextCurSend += curP;
         return;

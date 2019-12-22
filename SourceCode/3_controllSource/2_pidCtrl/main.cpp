@@ -12,7 +12,7 @@ ScorInterface *scorbot;
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
-        printf("inserire +/- per indicare obiettivo\n");
+        printf("inserire +/- per indicare obiettivo, h se si vuole rimettere in home\n");
         exit(0);
     }
 
@@ -22,6 +22,10 @@ int main(int argc, char *argv[]) {
     } catch (const std::exception &e) {
         std::cerr << e.what() << std::endl;
         exit(-1);
+    }
+    if (strcmp(argv[1], "h") == 0) {
+        scorbot->goHome();
+        exit(0);
     }
 
     /// Creo i finiti riferimenti
@@ -82,7 +86,7 @@ int main(int argc, char *argv[]) {
     while (true) {
         /// Passaggio dei parametri al pid e calcolo del corrispettivo pwm
 //        clock_gettime(CLOCK_MONOTONIC_RAW,&startCalc);
-        for (int i = Mot1; i < Mot4; i++) {
+        for (int i = Mot1; i <= Mot3; i++) {
 //            pwm->pwmSet((motCode)i, pidM[i]->motVal(r[i], enFeed->getEn((motCode)i)));
 //            pwm->pwmSet((motCode) i, pidM[i]->pid(r[i], enFeed->getEn((motCode) i), &ts));
             pwm->pwmSet((motCode) i, pidM[i]->pid(refPid->getEn((motCode) i), enFeed->getEn((motCode) i), &ts));

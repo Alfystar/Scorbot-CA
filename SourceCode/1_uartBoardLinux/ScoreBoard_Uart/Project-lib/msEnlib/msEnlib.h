@@ -23,16 +23,16 @@
 namespace ScorebotRead {
     using namespace DataPrimitive;
 
-    class ScorFeed {
+    class MotFeed {
     public:
-        ScorFeed();                //Imposta i pin di uscita e registri
+        MotFeed();                //Imposta i pin di uscita e registri
         void updateStepEn();
         static void interruptEn(bool en);
         void isrFunxEN();
 
-        mEncoder &captureEn();//Crea un istantanea FISSA degli encoder(fino a successiva chiamata)
-        byte msRead();            //Ritorna MicroSwitch con logica 1-hot
-        short enRead();    //Ritorna il valore degli encoder con logica 1-hot dove i byte sono:[0]ChA e [1]ChB
+        mEncoder &captureEn();		//Crea un istantanea FISSA degli encoder(fino a successiva chiamata)
+        byte msRead();            	//Ritorna MicroSwitch con logica 1-hot
+        short enRead();    			//Ritorna il valore degli encoder con logica 1-hot dove i byte sono:[0]ChA e [1]ChB
 
         void setEn(motCode mot, short st);
         short getEn(motCode mot);

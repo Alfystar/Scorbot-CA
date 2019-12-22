@@ -102,7 +102,7 @@ float PIDScorbot::PIDComp(int error, long Ts) {
 
     //7 è la distanza tra i 2 campioni
     this->y_d = this->Kd * (this->mystack[7].er - this->mystack[0].er) / sum;
-    this->x_i += this->UpdateSat(this->x_i, this->Ki * Ts * this->mystack[6].er, this->Kp * error + this->y_d, 1,
+    this->x_i += this->UpdateSat(this->x_i, this->Ki * Ts * this->mystack[7].er, this->Kp * error + this->y_d, 1,
                                  this->CONTROL_DEADZONE, this->CONTROL_SATURATION);
     printf("x_i = %f, y_d = %f, error = %d, u = %f, dt=%ld\n", x_i, y_d, error, (Kp * error + x_i + y_d), Ts);
     return (std::min(this->CONTROL_SATURATION,

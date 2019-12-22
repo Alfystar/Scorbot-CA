@@ -42,7 +42,7 @@ namespace ScorebotRead {
 }    //to mute the compiler (￣Д￣)
 using namespace ScorebotRead;
 
-extern class ScorFeed *sFeed;
+extern class MotFeed *sFeed;
 
 #define motEn 38 //PD7
 
