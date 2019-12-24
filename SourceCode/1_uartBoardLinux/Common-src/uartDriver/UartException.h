@@ -28,4 +28,6 @@ namespace Uart {
         }
     };
 }
+#undef excType
+#undef excType
 #endif //PCLISTENUART_UARTEXCEPTION_H

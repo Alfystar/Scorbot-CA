@@ -24,5 +24,5 @@ public:
         return _msg.c_str();
     }
 };
-
+#undef excType
 #endif //SINGLETONFACTORYEXC_H

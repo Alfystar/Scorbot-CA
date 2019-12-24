@@ -69,7 +69,7 @@
                     <enum>QTabWidget::Rounded</enum>
                 </property>
                 <property name="currentIndex">
-                    <number>1</number>
+                    <number>3</number>
                 </property>
                 <property name="usesScrollButtons">
                     <bool>false</bool>
@@ -3680,12 +3680,24 @@
                 </property>
                 <addaction name="separator"/>
                 <addaction name="actionInfo"/>
+                <addaction name="separator"/>
             </widget>
             <widget class="QMenu" name="menuUartSetting">
                 <property name="title">
                     <string>UartSetting</string>
                 </property>
-                <addaction name="actionCom"/>
+                <widget class="QMenu" name="menuSerialPort">
+                    <property name="title">
+                        <string>Serial Port</string>
+                    </property>
+                    <addaction name="actionSerial_Find"/>
+                    <addaction name="separator"/>
+                </widget>
+                <addaction name="menuSerialPort"/>
+                <addaction name="actionConnection_Start"/>
+                <addaction name="actionClose_connection"/>
+                <addaction name="separator"/>
+                <addaction name="actionReset_Board"/>
             </widget>
             <addaction name="menuUartSetting"/>
             <addaction name="menuAbout"/>
@@ -3695,9 +3707,32 @@
                 <string>Info</string>
             </property>
         </action>
-        <action name="actionCom">
+        <action name="serialPort">
             <property name="text">
-                <string>Com</string>
+                <string>Serial Port</string>
+            </property>
+        </action>
+        <action name="actionConnection_Start">
+            <property name="text">
+                <string>Connection Start</string>
+            </property>
+        </action>
+        <action name="actionReset_Board">
+            <property name="text">
+                <string>Reset Board</string>
+            </property>
+        </action>
+        <action name="actionClose_connection">
+            <property name="text">
+                <string>Close connection</string>
+            </property>
+        </action>
+        <action name="actionSerial_Find">
+            <property name="enabled">
+                <bool>true</bool>
+            </property>
+            <property name="text">
+                <string>Serial Find</string>
             </property>
         </action>
     </widget>

@@ -1,2 +1,0 @@
-/usr/bin/ar qc libUartSubSystem.a  CMakeFiles/UartSubSystem.dir/InfoExpPack.cpp.o CMakeFiles/UartSubSystem.dir/AdapterClasses/ParamSingletonFactory.cpp.o CMakeFiles/UartSubSystem.dir/AdapterClasses/ComUartAdapter.cpp.o CMakeFiles/UartSubSystem.dir/AdapterFactory.cpp.o
-/usr/bin/ranlib libUartSubSystem.a

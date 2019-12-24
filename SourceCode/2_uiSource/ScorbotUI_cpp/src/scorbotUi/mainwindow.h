@@ -24,7 +24,7 @@ class MainWindow : public QMainWindow {
 Q_OBJECT  //Macro di Qt che importa tutti i metodi virtuali necessari, senza doverli scrvere a mano
 
 public:
-    explicit MainWindow(QWidget *parent = 0, struct extFooCall *extF = nullptr);
+    explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
     // Data update
     void enSample(EncoderMot &en);
@@ -45,8 +45,9 @@ private slots:
 
 
     void testPrint();
-private:
+protected:
     Ui::MainWindow *ui;
+private:
     SettingBoardWindow *setBoardWin;
     FreeMoveWindow *freeMovWin;
 
@@ -55,9 +56,9 @@ private:
     AllSensor *feedBack;
 
     /// Funzioni di esportazione Comandi
-    ctrlRefSendFoo ctrlFunx;
-    SettingSendFoo setSendFunx;
-    SettingGetFoo setGetFunx;
+//    ctrlRefSendFoo ctrlFunx;
+//    SettingSendFoo setSendFunx;
+//    SettingGetFoo setGetFunx;
 
     /// Riferimenti da inviare Qt
     //TabWindget

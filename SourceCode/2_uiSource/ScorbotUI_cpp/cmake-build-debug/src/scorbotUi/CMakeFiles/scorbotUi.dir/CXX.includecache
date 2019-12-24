@@ -152,8 +152,6 @@ QtCore/qbytearray.h
 QtCore/qmetatype.h
 -
 
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp
-
 /home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp
 EWIEGA46WW/moc_freeMoveWinsow.cpp
 /home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/EWIEGA46WW/moc_freeMoveWinsow.cpp
@@ -163,12 +161,6 @@ EWIEGA46WW/moc_settingBoardWindow.cpp
 /home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/EWIEGA46WW/moc_settingBoardWindow.cpp
 
 /home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/commonDefine.h
-
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/freeMoveWinsow.cpp
-freeMoveWinsow.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/freeMoveWinsow.h
-ui_source/ui_freeMoveWindow.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/ui_freeMoveWindow.h
 
 /home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/freeMoveWinsow.h
 QDialog
@@ -213,12 +205,6 @@ freeMoveWinsow.h
 /home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/freeMoveWinsow.h
 commonDefine.h
 /home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/commonDefine.h
-
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/settingBoardWindow.cpp
-settingBoardWindow.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/settingBoardWindow.h
-ui_source/ui_settingBoardWindow.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/ui_settingBoardWindow.h
 
 /home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/settingBoardWindow.h
 QDialog
@@ -1306,17 +1292,9 @@ qbuttongroup.h
 qcheckbox.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcheckbox.h
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QComboBox
-qcombobox.h
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h
-
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog
 qdialog.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialogButtonBox
-qdialogbuttonbox.h
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialogbuttonbox.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDoubleSpinBox
 qspinbox.h
@@ -1389,10 +1367,6 @@ qsplitter.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTabWidget
 qtabwidget.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolButton
-qtoolbutton.h
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbutton.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout
 qboxlayout.h
@@ -1514,20 +1488,6 @@ QtWidgets/qtwidgetsglobal.h
 QtWidgets/qabstractbutton.h
 -
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcombobox.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qwidget.h
--
-QtWidgets/qabstractitemdelegate.h
--
-QtCore/qabstractitemmodel.h
--
-QtCore/qvariant.h
--
-QtGui/qvalidator.h
--
-
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdesktopwidget.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -1535,12 +1495,6 @@ QtWidgets/qwidget.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qwidget.h
--
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialogbuttonbox.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qwidget.h
@@ -1748,12 +1702,6 @@ QtWidgets/qwidget.h
 QtGui/qicon.h
 -
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbutton.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qabstractbutton.h
--
-
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h
@@ -1792,32 +1740,6 @@ QtGui/qcursor.h
 QtGui/qkeysequence.h
 -
 QtGui/qevent.h
--
-
-src/scorbotUi/scorbotUi_autogen/include/ui_source/ui_freeMoveWindow.h
-QtCore/QVariant
--
-QtWidgets/QAction
--
-QtWidgets/QApplication
--
-QtWidgets/QButtonGroup
--
-QtWidgets/QDialog
--
-QtWidgets/QDialogButtonBox
--
-QtWidgets/QHBoxLayout
--
-QtWidgets/QHeaderView
--
-QtWidgets/QLabel
--
-QtWidgets/QToolButton
--
-QtWidgets/QVBoxLayout
--
-QtWidgets/QWidget
 -
 
 src/scorbotUi/scorbotUi_autogen/include/ui_source/ui_mainwindow.h
@@ -1864,46 +1786,6 @@ QtWidgets/QSpinBox
 QtWidgets/QSplitter
 -
 QtWidgets/QTabWidget
--
-QtWidgets/QVBoxLayout
--
-QtWidgets/QWidget
--
-
-src/scorbotUi/scorbotUi_autogen/include/ui_source/ui_settingBoardWindow.h
-QtCore/QVariant
--
-QtWidgets/QAction
--
-QtWidgets/QApplication
--
-QtWidgets/QButtonGroup
--
-QtWidgets/QComboBox
--
-QtWidgets/QDialog
--
-QtWidgets/QDialogButtonBox
--
-QtWidgets/QDoubleSpinBox
--
-QtWidgets/QFormLayout
--
-QtWidgets/QHBoxLayout
--
-QtWidgets/QHeaderView
--
-QtWidgets/QLabel
--
-QtWidgets/QPushButton
--
-QtWidgets/QRadioButton
--
-QtWidgets/QSpacerItem
--
-QtWidgets/QSpinBox
--
-QtWidgets/QSplitter
 -
 QtWidgets/QVBoxLayout
 -

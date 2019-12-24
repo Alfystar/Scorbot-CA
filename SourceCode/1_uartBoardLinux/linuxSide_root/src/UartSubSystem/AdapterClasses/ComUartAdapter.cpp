@@ -285,8 +285,8 @@ void ComUartAdapter::uartReader(ComUartAdapter *u) {
     usleep(10 * 1000UL);  // wait for 10ms to take time to set the class
     while (true) {
         while (!u->uartDev) {
-            std::cerr << "Nessuna com aperta, attendo 1ms\n";
-            usleep(1 * 1000UL);
+            std::cerr << "Nessuna com aperta, attendo 500ms\n";
+            usleep(500 * 1000UL);
         }
         clock_gettime(CLOCK_REALTIME, &now);
         // (1000UL * 1000UL)  //time in millisecond

@@ -1,7 +1,7 @@
 #include "mainwindow.h"
-#include "ui_source/ui_mainwindow.h"
+#include "ui_source/ui_mainwindow.h" //classe generata dal file di designer in automatico dal cmake
 
-MainWindow::MainWindow(QWidget *parent, struct extFooCall *extF) :
+MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
         ui(new Ui::MainWindow) {
     // My Ui
@@ -19,9 +19,9 @@ MainWindow::MainWindow(QWidget *parent, struct extFooCall *extF) :
     feedBack = new AllSensor();
 
     // Function to call
-    this->ctrlFunx = extF->ctrlFunx;
-    this->setSendFunx = extF->setSendFunx;
-    this->setGetFunx = extF->setGetFunx;
+//    this->ctrlFunx = extF->ctrlFunx;
+//    this->setSendFunx = extF->setSendFunx;
+//    this->setGetFunx = extF->setGetFunx;
 
     ///##### Set important obj pointer to future use #####///
 
@@ -119,10 +119,7 @@ void MainWindow::sendRef_handler() {
     for (char i = Mot1; i < nMot; i++) {
         ref->enSet((motCode) i, (short) enRef[i]->value());
     }
-    if (ctrlFunx)
-        ctrlFunx(*ref);
-    else
-        std::cerr << "ctrlFunx not define, impossible send Reference\n";
+    ref->printEncoder();
 }
 
 void MainWindow::scorParamSet_handler() {

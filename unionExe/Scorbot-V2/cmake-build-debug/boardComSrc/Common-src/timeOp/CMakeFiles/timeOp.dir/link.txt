@@ -1,2 +1,0 @@
-/usr/bin/ar qc libtimeOp.a  CMakeFiles/timeOp.dir/timerSpecOp.cpp.o
-/usr/bin/ranlib libtimeOp.a

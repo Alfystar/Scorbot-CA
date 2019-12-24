@@ -10,9 +10,9 @@ typedef void (*SettingSendFoo)(SettingBoard_C &);   // Funzione che invia alla b
 typedef SettingBoard_C &(*SettingGetFoo)(void);    // Funzione che richiede alla board le sue impostazioni
 //todo Aggiungere la funzione per personalizzare il controllore
 
-struct extFooCall {
-    ctrlRefSendFoo ctrlFunx;
-    SettingSendFoo setSendFunx;
-    SettingGetFoo setGetFunx;
-};
+//struct extFooCall {
+//    ctrlRefSendFoo ctrlFunx;
+//    SettingSendFoo setSendFunx;
+//    SettingGetFoo setGetFunx;
+//};
 #endif //PIDCTRLDEMO_COMMONDEFINE_H

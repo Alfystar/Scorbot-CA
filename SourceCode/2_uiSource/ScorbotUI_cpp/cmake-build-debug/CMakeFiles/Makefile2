@@ -35,10 +35,10 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.103/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5662.56/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5233.103/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.5662.56/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
@@ -73,8 +73,8 @@ preinstall: src/preinstall
 # Target rules for target CMakeFiles/scorbotUi_demo.dir
 
 # All Build rule for target.
-CMakeFiles/scorbotUi_demo.dir/all: src/scorbotUi/CMakeFiles/scorbotUi.dir/all
 CMakeFiles/scorbotUi_demo.dir/all: src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/all
+CMakeFiles/scorbotUi_demo.dir/all: src/scorbotUi/CMakeFiles/scorbotUi.dir/all
 	$(MAKE) -f CMakeFiles/scorbotUi_demo.dir/build.make CMakeFiles/scorbotUi_demo.dir/depend
 	$(MAKE) -f CMakeFiles/scorbotUi_demo.dir/build.make CMakeFiles/scorbotUi_demo.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles --progress-num=17,18 "Built target scorbotUi_demo"
@@ -186,8 +186,8 @@ src/scorbotUi/preinstall:
 # Target rules for target src/scorbotUi/CMakeFiles/scorbotUi.dir
 
 # All Build rule for target.
-src/scorbotUi/CMakeFiles/scorbotUi.dir/all: src/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/all
 src/scorbotUi/CMakeFiles/scorbotUi.dir/all: src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/all
+src/scorbotUi/CMakeFiles/scorbotUi.dir/all: src/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/all
 	$(MAKE) -f src/scorbotUi/CMakeFiles/scorbotUi.dir/build.make src/scorbotUi/CMakeFiles/scorbotUi.dir/depend
 	$(MAKE) -f src/scorbotUi/CMakeFiles/scorbotUi.dir/build.make src/scorbotUi/CMakeFiles/scorbotUi.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles --progress-num=9,10,11,12,13,14,15 "Built target scorbotUi"
