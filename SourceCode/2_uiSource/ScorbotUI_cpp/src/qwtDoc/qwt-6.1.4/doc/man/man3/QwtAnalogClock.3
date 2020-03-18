@@ -80,7 +80,7 @@ clock->setLineWidth(6);
 clock->setFrameShadow(QwtDial::Sunken);
 clock->setTime();
 
-// update the clock every second
+// updateSettingBoard the clock every second
 QTimer *timer = new QTimer(clock);
 timer->connect(timer, SIGNAL(timeout()), clock, SLOT(setCurrentTime()));
 timer->start(1000);

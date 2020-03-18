@@ -101,18 +101,6 @@ MainWindow::~MainWindow() {
     delete feedBack;
 }
 
-void MainWindow::enSample(EncoderMot &en) {
-
-}
-
-void MainWindow::currSample(CurrentMot &cur) {
-
-}
-
-void MainWindow::controllSample(SpeedMot &speed) {
-
-}
-
 void MainWindow::sendRef_handler() {
     //todo: In base al tab selezionato calcola i valori per gli altri e invia gli encoder alla fine
     //è già stato chiamato cinCalc_handler() e ho tutti i dati in enRef
@@ -193,10 +181,5 @@ void MainWindow::cinCalc_handler() {
     pinzaInv->blockSignals(false);
     for (int i = 0; i < 2; ++i)
         gomito[i]->blockSignals(false);
-
-
 }
 
-void MainWindow::testPrint() {
-    std::cout << "testPrint\n";
-}

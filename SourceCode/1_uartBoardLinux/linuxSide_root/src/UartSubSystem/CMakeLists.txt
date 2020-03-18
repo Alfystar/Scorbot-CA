@@ -4,10 +4,15 @@ if (NOT TARGET UartSubSystem)
             UartSubSystem.h
             ScorInterface.h GetCom_int.h #Interface Class
             InfoExpPack.h InfoExpPack.cpp
+
             AdapterClasses/SingletonFactoryException.h
             AdapterClasses/ParamSingletonFactory.h AdapterClasses/ParamSingletonFactory.cpp   #Factory per generare Le classi di comunicazione uniche per tipo
             AdapterClasses/ComUartAdapter.h AdapterClasses/ComUartAdapter.cpp
             AdapterFactory.h AdapterFactory.cpp #Factory per generare gli adapter
+
+            #Observer pattern class, to notifySettingBoard data
+            AdapterClasses/ObserverScorbot.h AdapterClasses/ObservableScorbot.h
+            ConcreteObserver.h ConcreteObserver.cpp
             )
 
     #aggiunge la libreria/eseguibile in modalità INTERFACE|PUBLIC|PRIVATE alla INCLUDE_DIRECTORIES property

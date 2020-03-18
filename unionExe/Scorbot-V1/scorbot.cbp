@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
    <FileVersion major="1" minor="6" />
    <Project>
-      <Option title="scorbot" />
+      <Option title="scorInterface" />
       <Option makefile_is_custom="1" />
       <Option compiler="gcc" />
       <Option virtualFolders="CMake Files\;" />
@@ -37,8 +37,8 @@
             <DistClean command="/usr/bin/make -f &quot;/home/scorebot/Scorbot-CA/relase/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
-      <Target title="scorbot">
-         <Option output="/home/scorebot/Scorbot-CA/relase/scorbot" prefix_auto="0" extension_auto="0" />
+      <Target title="scorInterface">
+         <Option output="/home/scorebot/Scorbot-CA/relase/scorInterface" prefix_auto="0" extension_auto="0" />
          <Option working_dir="/home/scorebot/Scorbot-CA/relase" />
          <Option object_output="./" />
          <Option type="1" />
@@ -54,14 +54,14 @@
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/scorebot/Scorbot-CA/relase/Makefile&quot;  VERBOSE=1 scorbot" />
+            <Build command="/usr/bin/make -f &quot;/home/scorebot/Scorbot-CA/relase/Makefile&quot;  VERBOSE=1 scorInterface" />
             <CompileFile command="/usr/bin/make -f &quot;/home/scorebot/Scorbot-CA/relase/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
             <Clean command="/usr/bin/make -f &quot;/home/scorebot/Scorbot-CA/relase/Makefile&quot;  VERBOSE=1 clean" />
             <DistClean command="/usr/bin/make -f &quot;/home/scorebot/Scorbot-CA/relase/Makefile&quot;  VERBOSE=1 clean" />
          </MakeCommands>
       </Target>
-      <Target title="scorbot/fast">
-         <Option output="/home/scorebot/Scorbot-CA/relase/scorbot" prefix_auto="0" extension_auto="0" />
+      <Target title="scorInterface/fast">
+         <Option output="/home/scorebot/Scorbot-CA/relase/scorInterface" prefix_auto="0" extension_auto="0" />
          <Option working_dir="/home/scorebot/Scorbot-CA/relase" />
          <Option object_output="./" />
          <Option type="1" />
@@ -77,7 +77,7 @@
             <Add directory="/usr/local/include" />
          </Compiler>
          <MakeCommands>
-            <Build command="/usr/bin/make -f &quot;/home/scorebot/Scorbot-CA/relase/Makefile&quot;  VERBOSE=1 scorbot/fast" />
+            <Build command="/usr/bin/make -f &quot;/home/scorebot/Scorbot-CA/relase/Makefile&quot;  VERBOSE=1 scorInterface/fast" />
             <CompileFile command="/usr/bin/make -f &quot;/home/scorebot/Scorbot-CA/relase/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
             <Clean command="/usr/bin/make -f &quot;/home/scorebot/Scorbot-CA/relase/Makefile&quot;  VERBOSE=1 clean" />
             <DistClean command="/usr/bin/make -f &quot;/home/scorebot/Scorbot-CA/relase/Makefile&quot;  VERBOSE=1 clean" />
@@ -85,28 +85,28 @@
       </Target>
       </Build>
       <Unit filename="/home/scorebot/Scorbot-CA/relase/PidClass/PIDScorbot.cpp">
-         <Option target="scorbot"/>
+         <Option target="scorInterface"/>
       </Unit>
       <Unit filename="/home/scorebot/Scorbot-CA/relase/PidClass/PIDScorbot.h">
-         <Option target="scorbot"/>
+         <Option target="scorInterface"/>
       </Unit>
       <Unit filename="/home/scorebot/Scorbot-CA/relase/SPILib/spi_scorebot_packdefine.h">
-         <Option target="scorbot"/>
+         <Option target="scorInterface"/>
       </Unit>
       <Unit filename="/home/scorebot/Scorbot-CA/relase/SPILib/spisend.cpp">
-         <Option target="scorbot"/>
+         <Option target="scorInterface"/>
       </Unit>
       <Unit filename="/home/scorebot/Scorbot-CA/relase/SPILib/spisend.h">
-         <Option target="scorbot"/>
+         <Option target="scorInterface"/>
       </Unit>
       <Unit filename="/home/scorebot/Scorbot-CA/relase/comC/comC.cpp">
-         <Option target="scorbot"/>
+         <Option target="scorInterface"/>
       </Unit>
       <Unit filename="/home/scorebot/Scorbot-CA/relase/comC/comC.h">
-         <Option target="scorbot"/>
+         <Option target="scorInterface"/>
       </Unit>
       <Unit filename="/home/scorebot/Scorbot-CA/relase/main.cpp">
-         <Option target="scorbot"/>
+         <Option target="scorInterface"/>
       </Unit>
       <Unit filename="/home/scorebot/Scorbot-CA/relase/CMakeLists.txt">
           <Option virtualFolder="CMake Files\" />

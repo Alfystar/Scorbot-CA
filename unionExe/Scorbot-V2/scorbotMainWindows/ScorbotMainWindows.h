@@ -7,12 +7,14 @@
 
 //qt
 #include <QApplication>
-#include "uiSrc/scorbotUi/mainwindow.h"
+#include "UI_useCase/uiSrc/scorbotUi/mainwindow.h"
 #include <QAction>
 #include <QtWidgets/QMessageBox>
 
+//USE-Case Class
+#include <UI_useCase/UartConnect.h>
 
-//scorbot subsystem
+//scorInterface subsystem
 #include <PIDScorbot.h>
 #include <DataTransfert_AllInclude.h>
 #include <UartSubSystem.h>
@@ -36,24 +38,24 @@ private:
 
 
 public:
-    explicit ScorbotMainWindows(QWidget *parent = 0);
+    explicit ScorbotMainWindows(QWidget *parent = nullptr);
     ~ScorbotMainWindows();
 
     ///Controll Thread
 private:
+    //Classi che gestiscono i vari UseCase:
+    UartConnect *uartConnect;
+
     PIDScorbot *pidM[nMot];
     EncoderMot *enFeed; //Puntatore per i dati letti
     EncoderMot *refPid;
     std::mutex refMutex;    //Per evitare cambio di riferimenti incontrollato
     SpeedMot *pwm;
     std::thread *ctrl;
-    static void ctrlTh(ScorbotMainWindows *w);
+
+
+//    static void ctrlTh(ScorbotMainWindows *w);
 private slots:
-    void serialPort_handler(QAction *action);
-    void serialSearch_handler();
-    void serialConnect_handler();
-    void closeConnection_handler();
-    void resetBoard_handler();
 
 };
 

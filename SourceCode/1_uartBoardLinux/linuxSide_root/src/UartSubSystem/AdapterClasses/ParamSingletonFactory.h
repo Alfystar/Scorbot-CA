@@ -18,7 +18,7 @@ using namespace Uart;
 
 struct uartNode {
     UartDriver *uart;
-    std::string UartParams;
+    std::string *UartParams;
 
 };
 

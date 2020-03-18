@@ -1,4 +1,4 @@
-Cartella di lavoro per lo sviluppo del Controllo dello scorbot.
+Cartella di lavoro per lo sviluppo del Controllo dello scorInterface.
 
 è stato deciso di implementare un Controllo PID residiente dentro il rapsberry pi
 

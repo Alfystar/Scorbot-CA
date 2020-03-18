@@ -8,7 +8,7 @@
 ComUartAdapter *ComUartAdapter::instance = nullptr;
 UartDriver *ComUartAdapter::uartDev = nullptr;
 std::mutex ComUartAdapter::instanceMutex;
-sem_t ComUartAdapter::setNew, ComUartAdapter::enNew, ComUartAdapter::curNew;
+//sem_t ComUartAdapter::setNew, ComUartAdapter::enNew, ComUartAdapter::curNew;
 
 ComUartAdapter &ComUartAdapter::getInstance() {
     std::lock_guard<std::mutex> myLock(ComUartAdapter::instanceMutex);
@@ -51,28 +51,29 @@ ComUartAdapter::~ComUartAdapter() {
 
 }
 
+
 void ComUartAdapter::goHome() {
     uartDev->packSend(goHomeUart, nullptr);
 }
 
 void ComUartAdapter::sendVel(SpeedMot &sp) {
-    uartDev->packSend(mSpeedData, (data2Ard * ) & sp.getPwm());
+    uartDev->packSend(mSpeedData, (data2Ard *) &sp.getPwm());
 }
 
 void ComUartAdapter::setSetting(SettingBoard_C &set) {
     this->set->copyPack(set);
-    sem_postOnce(&setNew);    // di persè è un nuovo dato
-    uartDev->packSend(settingBoardData, (data2Ard * ) & set.getSetting());
+//    sem_postRestorLimit(&setNew, numReciver);    // di persè è un nuovo dato
+    uartDev->packSend(settingBoardData, (data2Ard *) &set.getSetting());
 }
 
 void ComUartAdapter::setSampleTimeEn(uint32_t sEn) {
     this->sEn.tv_usec = sEn;  // time in micro-Second, like arduino expected
-    uartDev->packSend(sampleTimeEn, (data2Ard * ) & sEn);
+    uartDev->packSend(sampleTimeEn, (data2Ard *) &sEn);
 }
 
 void ComUartAdapter::setSampleTimeCur(uint32_t sCur) {
     this->sCur.tv_usec = sCur; // time in micro-Second, like arduino expected
-    uartDev->packSend(sampleTimeCur, (data2Ard * ) & sCur);
+    uartDev->packSend(sampleTimeCur, (data2Ard *) &sCur);
 }
 
 
@@ -118,10 +119,11 @@ SettingBoard_C *ComUartAdapter::getSetting_local() {
 
 SettingBoard_C *ComUartAdapter::getSetting_board() {
     //get data from boart
-    SettingBoard_C &set = this->getSettingConrete();
-    // update data on infoExpert
-    return &set;
-
+    uartDev->packSend(settingAsk, nullptr);
+    usleep(100 * 1000U);  //100 ms per far copiare il dato
+    SettingBoard_C *p = new SettingBoard_C();
+    p->copyPack(*set);
+    return p;
 }
 
 bool ComUartAdapter::isEncoderValid() {
@@ -136,44 +138,44 @@ bool ComUartAdapter::isAllSensorValid() {
     return isEncoderValid() && isCurrentValid();
 }
 
-EncoderMot *ComUartAdapter::getValidEncoder() {
-    if (isEncoderValid()) {
-        EncoderMot *p = new EncoderMot();
-        p->copyEn(allSensor->getEn());
-        return p;
-    } else
-        return &getEncoderConrete();
-}
-
-CurrentMot *ComUartAdapter::getValidCurrent() {
-    if (isCurrentValid()) {
-        CurrentMot *p = new CurrentMot();
-        p->copyCur(allSensor->getCurrent());
-        return p;
-    } else
-        return &getCurrentConrete();
-}
-
-//AllSensor *ComUartAdapter::getValidSensor() {
-//    if (isAllSensorValid()) {
-//        AllSensor *p = new AllSensor();
-//        p->copyPack(allSensor->getSens());
+//EncoderMot *ComUartAdapter::getValidEncoder() {
+//    if (isEncoderValid()) {
+//        EncoderMot *p = new EncoderMot();
+//        p->copyEn(allSensor->getEn());
 //        return p;
 //    } else
-//        return &getSensorConrete();
+//        return &getEncoderConrete();
 //}
-
-EncoderMot *ComUartAdapter::getValidEncoder(struct timespec *t) {
-    EncoderMot *p = getValidEncoder();
-    memcpy(t, &enTime, sizeof(struct timespec));
-    return p;
-}
-
-CurrentMot *ComUartAdapter::getValidCurrent(struct timespec *t) {
-    CurrentMot *p = getValidCurrent();
-    memcpy(t, &curTime, sizeof(struct timespec));
-    return p;
-}
+//
+//CurrentMot *ComUartAdapter::getValidCurrent() {
+//    if (isCurrentValid()) {
+//        CurrentMot *p = new CurrentMot();
+//        p->copyCur(allSensor->getCurrent());
+//        return p;
+//    } else
+//        return &getCurrentConrete();
+//}
+//
+////AllSensor *ComUartAdapter::getValidSensor() {
+////    if (isAllSensorValid()) {
+////        AllSensor *p = new AllSensor();
+////        p->copyPack(allSensor->getSens());
+////        return p;
+////    } else
+////        return &getSensorConrete();
+////}
+//
+//EncoderMot *ComUartAdapter::getValidEncoder(struct timespec *t) {
+//    EncoderMot *p = getValidEncoder();
+//    memcpy(t, &enTime, sizeof(struct timespec));
+//    return p;
+//}
+//
+//CurrentMot *ComUartAdapter::getValidCurrent(struct timespec *t) {
+//    CurrentMot *p = getValidCurrent();
+//    memcpy(t, &curTime, sizeof(struct timespec));
+//    return p;
+//}
 
 //AllSensor *ComUartAdapter::getValidSensor(struct timespec *en, struct timespec *cur) {
 //    AllSensor *p = getValidSensor();
@@ -182,30 +184,30 @@ CurrentMot *ComUartAdapter::getValidCurrent(struct timespec *t) {
 //    return p;
 //}
 
-EncoderMot *ComUartAdapter::getValidEncoderWait() {
-    return &getEncoderConrete();
-}
-
-CurrentMot *ComUartAdapter::getValidCurrentWait() {
-    return &getCurrentConrete();
-}
-
-//AllSensor *ComUartAdapter::getValidSensorWait() {
-//    return &getSensorConrete();
+//EncoderMot *ComUartAdapter::getValidEncoderWait() {
+//    return &getEncoderConrete();
 //}
-
-
-EncoderMot *ComUartAdapter::getValidEncoderWait(struct timespec *t) {
-    EncoderMot *p = getValidEncoderWait();
-    memcpy(t, &enTime, sizeof(struct timespec));
-    return p;
-}
-
-CurrentMot *ComUartAdapter::getValidCurrentWait(struct timespec *t) {
-    CurrentMot *p = getValidCurrentWait();
-    memcpy(t, &curTime, sizeof(struct timespec));
-    return p;
-}
+//
+//CurrentMot *ComUartAdapter::getValidCurrentWait() {
+//    return &getCurrentConrete();
+//}
+//
+////AllSensor *ComUartAdapter::getValidSensorWait() {
+////    return &getSensorConrete();
+////}
+//
+//
+//EncoderMot *ComUartAdapter::getValidEncoderWait(struct timespec *t) {
+//    EncoderMot *p = getValidEncoderWait();
+//    memcpy(t, &enTime, sizeof(struct timespec));
+//    return p;
+//}
+//
+//CurrentMot *ComUartAdapter::getValidCurrentWait(struct timespec *t) {
+//    CurrentMot *p = getValidCurrentWait();
+//    memcpy(t, &curTime, sizeof(struct timespec));
+//    return p;
+//}
 
 //AllSensor *ComUartAdapter::getValidSensorWait(struct timespec *en, struct timespec *cur) {
 //    AllSensor *p = getValidSensorWait();
@@ -214,36 +216,36 @@ CurrentMot *ComUartAdapter::getValidCurrentWait(struct timespec *t) {
 //    return p;
 //}
 
-EncoderMot &ComUartAdapter::getEncoderConrete() {
-    //enNew.lock();   //Quando uartReader riceverà un mEncoter verrò sbloccato
-    dataSemWait(&enNew);   //Quando uartReader riceverà un setting board verrò sbloccato
-    EncoderMot *p = new EncoderMot();
-    p->copyEn(allSensor->getEn());
-    return *p;
-}
-
-CurrentMot &ComUartAdapter::getCurrentConrete() {
-    dataSemWait(&curNew);   //Quando uartReader riceverà un setting board verrò sbloccato
-    CurrentMot *p = new CurrentMot();
-    p->copyCur(allSensor->getCurrent());
-    return *p;
-}
+//EncoderMot &ComUartAdapter::getEncoderConrete() {
+//    //enNew.lock();   //Quando uartReader riceverà un mEncoter verrò sbloccato
+////    dataSemWait(&enNew);   //Quando uartReader riceverà un setting board verrò sbloccato
+//    EncoderMot *p = new EncoderMot();
+//    p->copyEn(allSensor->getEn());
+//    return *p;
+//}
+//
+//CurrentMot &ComUartAdapter::getCurrentConrete() {
+////    dataSemWait(&curNew);   //Quando uartReader riceverà un setting board verrò sbloccato
+//    CurrentMot *p = new CurrentMot();
+//    p->copyCur(allSensor->getCurrent());
+//    return *p;
+//}
 
 //AllSensor &ComUartAdapter::getSensorConrete() {
-//    sem_clearIthem(&dataNew); //Quando uartReader ha disponibili un nuovo current o En
+//    sem_clearItem(&dataNew); //Quando uartReader ha disponibili un nuovo current o En
 //    AllSensor *p = new AllSensor();
 //    p->copyPack(allSensor->getSens());
 //    return *p;
 //}
 
-SettingBoard_C &ComUartAdapter::getSettingConrete() {
-    sem_clearIthem(&setNew); // voglio dati nuovi quindi svuoto i token.
-    uartDev->packSend(settingAsk, nullptr);
-    dataSemWait(&setNew);   //Quando uartReader riceverà un setting board verrò sbloccato
-    SettingBoard_C *p = new SettingBoard_C();
-    p->copyPack(*set);
-    return *p;
-}
+//SettingBoard_C &ComUartAdapter::getSettingConrete() {
+////    sem_clearItem(&setNew); // voglio dati nuovi quindi svuoto i token.
+//    uartDev->packSend(settingAsk, nullptr);
+////    dataSemWait(&setNew);   //Quando uartReader riceverà un setting board verrò sbloccato
+//    SettingBoard_C *p = new SettingBoard_C();
+//    p->copyPack(*set);
+//    return *p;
+//}
 
 ComUartAdapter::ComUartAdapter() : ScorInterface(),
                                    GetCom_int(),
@@ -252,15 +254,15 @@ ComUartAdapter::ComUartAdapter() : ScorInterface(),
     this->allSensor = new AllSensor(this->sensors);
     //Imposto a lock tutti i mutex, non potendo essere già arrivati dei pacchetti
 
-    if (sem_init(&setNew, 0, 0)) {
-        perror("sem_int setNew fails for:");
-    }
-    if (sem_init(&enNew, 0, 0)) {
-        perror("sem_int enNew fails for:");
-    }
-    if (sem_init(&curNew, 0, 0)) {
-        perror("sem_int curNew fails for:");
-    }
+//    if (sem_init(&setNew, 0, 0)) {
+//        perror("sem_int setNew fails for:");
+//    }
+//    if (sem_init(&enNew, 0, 0)) {
+//        perror("sem_int enNew fails for:");
+//    }
+//    if (sem_init(&curNew, 0, 0)) {
+//        perror("sem_int curNew fails for:");
+//    }
 
     // Thread di lettura
     timerclear(&sEn);
@@ -304,27 +306,32 @@ void ComUartAdapter::uartReader(ComUartAdapter *u) {
             switch (dato->type) {
                 case settingBoardData:
                     u->set->copyPack(dato->pack.up.prop);
-                    sem_postOnce(&u->setNew);
+//                    sem_postRestorLimit(&u->setNew, numReciver);
+                    u->notifySettingBoard();    // Notifico l'arrivo di un dato, al ricevente capire quale e se è interessato
                     break;
                 case mEncoderData:
 //                    clock_gettime(CLOCK_MONOTONIC_RAW, &u->enTime);
                     memcpy(&u->enTime, &timePack, sizeof(struct timespec));
                     u->allSensor->copyEn(&dato->pack.up.en);
-                    sem_postOnce(&u->enNew);
+//                    sem_postRestorLimit(&u->enNew, numReciver);
+                    u->notifyEncoderData();
                     break;
                 case mCurrentData:
 //                    clock_gettime(CLOCK_MONOTONIC_RAW, &u->curTime);
                     memcpy(&u->curTime, &timePack, sizeof(struct timespec));
                     u->allSensor->copyCur(&dato->pack.up.cur);
-                    sem_postOnce(&u->curNew);
+//                    sem_postRestorLimit(&u->curNew, numReciver);
+                    u->notifyCurrentData();
                     break;
                 case mAllData:
 //                    clock_gettime(CLOCK_MONOTONIC_RAW, &u->enTime);
                     memcpy(&u->enTime, &timePack, sizeof(struct timespec));
                     memcpy(&u->curTime, &u->enTime, sizeof(u->enTime));
                     u->allSensor->copyPack(&dato->pack.up.sens);
-                    sem_postOnce(&u->enNew);
-                    sem_postOnce(&u->curNew);
+//                    sem_postRestorLimit(&u->enNew, numReciver);
+//                    sem_postRestorLimit(&u->curNew, numReciver);
+                    u->notifyEncoderData();
+                    u->notifyCurrentData();
                     break;
                 default:
                     fprintf(stderr, "Arrivato un pacchetto impssibile, tipo:%d\n", dato->type);
@@ -349,32 +356,5 @@ bool ComUartAdapter::timeValid(struct timespec *lastSensorTime, struct timeval *
 }
 
 
-inline void ComUartAdapter::sem_postOnce(sem_t *s) {
-    int sval;
-    if (sem_getvalue(s, &sval)) {
-        perror("sem_getvalue fails for:");
-    }
-    // if token >0 return token number, if token ==0,
-    // return negative number when theabs value is the thread waiting
-    if (sval <= 0) {
-        if (sem_post(s)) {
-            perror("sem_post fails for:");
-        }
-    }
-}
 
-inline void ComUartAdapter::sem_clearIthem(sem_t *s) {
-    while (true) {   //repeat until the token is clean
-        if ((sem_trywait(s) == -1))
-            if (errno == EAGAIN)
-                return;
-            else
-                perror("sem_trywait fail whit error:");
-    }
-}
 
-inline void ComUartAdapter::dataSemWait(sem_t *s) {
-    if (sem_wait(s)) {
-        perror("sem_wait fails for:");
-    }
-}

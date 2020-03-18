@@ -1,4 +1,4 @@
-#creo un utente scorbot nel sistema
+#creo un utente scorInterface nel sistema
 
 
 #Aggiungere il gruppo dialout all'utente creato per leggere e scrivere la seriale
@@ -11,7 +11,7 @@ someuser hard rtprio 90
 
 #compilo il programma dai sorgenti per la macchiana corrente
 
-#cambio il gruppo dell'eseguibile generato in quello di scorbot
+#cambio il gruppo dell'eseguibile generato in quello di scorInterface
 
 #imposto l'user bit
 

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 #include <sys/time.h>
+#include <ConcreteObserver.h>
 #include <PIDScorbot.h>
 #include <DataTransfert_AllInclude.h>
 #include <UartSubSystem.h>
@@ -9,6 +10,7 @@
 using namespace DataPrimitive;
 using namespace DataManipolation;
 ScorInterface *scorbot;
+ConcreteObserver *obs;
 
 int main(int argc, char *argv[]) {
     if (argc != 2) {
@@ -27,6 +29,7 @@ int main(int argc, char *argv[]) {
         scorbot->goHome();
         exit(0);
     }
+    obs = new ConcreteObserver(scorbot);
 
     /// Creo i finiti riferimenti
 //    int r[nMot];    //reference
@@ -103,7 +106,7 @@ int main(int argc, char *argv[]) {
         scorbot->sendVel(*pwm);
         /// Pulisco la memoria e aspetto un nuovo pacchetto
         delete enFeed;
-        enFeed = scorbot->getValidEncoderWait();
+        enFeed = obs->getValidEncoderWait();
         printf("\n\n\n\n\n");
     }
     return 0;

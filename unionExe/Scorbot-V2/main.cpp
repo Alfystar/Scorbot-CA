@@ -10,7 +10,7 @@
 using namespace DataPrimitive;
 using namespace DataManipolation;
 
-//ScorInterface *scorbot;
+//ScorInterface *scorInterface;
 //
 ///// Function to support Controll
 //
@@ -43,13 +43,13 @@ using namespace DataManipolation;
 //    sleep(1);
 //    struct timespec  tsEn, tsCur;   // Tempo di campionamento Encoder e Corrente
 //    timeWriteSpec(&tsEn, 0, 10 * 1000000UL);    //10ms per il tempo di campionamento
-//    scorbot->setSampleTimeEn(tsEn.tv_nsec / 1000UL + tsEn.tv_sec * 1000000UL);
+//    scorInterface->setSampleTimeEn(tsEn.tv_nsec / 1000UL + tsEn.tv_sec * 1000000UL);
 //
 //    timeWriteSpec(&tsCur, 0, 10 * 1000000UL);    //10ms per il tempo di campionamento
-//    scorbot->setSampleTimeCur(tsCur.tv_nsec / 1000UL + tsCur.tv_sec * 1000000UL);
+//    scorInterface->setSampleTimeCur(tsCur.tv_nsec / 1000UL + tsCur.tv_sec * 1000000UL);
 //
 //    /// Prendo la prima misura
-//    enFeed = scorbot->getEncoder();
+//    enFeed = scorInterface->getEncoder();
 //    while (true) {
 //        refMutex.lock();
 //        /// Passaggio dei parametri al pid e calcolo del corrispettivo pwm
@@ -60,10 +60,10 @@ using namespace DataManipolation;
 //        refMutex.unlock();
 //
 //        /// Invia il pacchetto il prima possibile
-//        scorbot->sendVel(*pwm);
+//        scorInterface->sendVel(*pwm);
 //        /// Pulisco la memoria e aspetto un nuovo pacchetto
 //        delete enFeed;
-//        enFeed = scorbot->getValidEncoderWait();
+//        enFeed = scorInterface->getValidEncoderWait();
 //        printf("\n\n\n\n\n");
 //    }
 //}
@@ -73,11 +73,11 @@ using namespace DataManipolation;
 //ScorbotMainWindows *w;
 ////wrap to avoi function pointer problem
 //void settingSend_ui(SettingBoard_C &set){
-//    scorbot->setSetting(set);
+//    scorInterface->setSetting(set);
 //}
 //////wrap to avoi function pointer problem
 //SettingBoard_C &settingGet_ui(){
-//    return *scorbot->getSetting_local();
+//    return *scorInterface->getSetting_local();
 //}
 //
 //void enUpdateTh(){
@@ -101,7 +101,7 @@ int main(int argc, char *argv[]) {
 
 //    /// Comunicazione avvio
 //    try {
-//        scorbot = &AdapterFactory::makeUart("/dev/ttyACM0", B921600);
+//        scorInterface = &AdapterFactory::makeUart("/dev/ttyACM0", B921600);
 //    } catch (const std::exception &e) {
 //        std::cerr << e.what() << std::endl;
 //        exit(-1);

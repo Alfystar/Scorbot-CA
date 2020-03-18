@@ -1,5 +1,5 @@
 # Python User Interface Code
-L'interfaccia grafica sviluppata in python con il supporto di pyqt5 e che comunica con il sotto-processo C++, per il controllo dello scorbot da parte dell'operatore.
+L'interfaccia grafica sviluppata in python con il supporto di pyqt5 e che comunica con il sotto-processo C++, per il controllo dello scorInterface da parte dell'operatore.
 
 ## C++ <--> Python Comunication
 

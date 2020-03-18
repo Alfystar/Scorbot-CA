@@ -20,7 +20,7 @@ ParamSingletonFactory &ParamSingletonFactory::getInstance() {
 UartDriver *ParamSingletonFactory::getUartClass(const std::string &device) noexcept(false) {
     /// Search fase:
     for (int i = 0; i < lenUartList; ++i) {
-        if (this->UartList[i].UartParams.compare(device) == 0) {  //Uart found
+        if (this->UartList[i].UartParams->compare(device) == 0) {  //Uart found
             return this->UartList[i].uart;
         }
     }
@@ -31,7 +31,8 @@ UartDriver *ParamSingletonFactory::getUartClass(const std::string &device) noexc
 
     //Create the new device, if not create exeption continue
     this->UartList[lenUartList - 1].uart = new UartDriver(device);    /// Can create Exeption!!!
-    this->UartList[lenUartList - 1].UartParams = device;
+    this->UartList[lenUartList - 1].UartParams = new std::string(device);
+    //this->UartList[lenUartList - 1].UartParams.assign(device);
     //Return the new device
     return this->UartList[lenUartList - 1].uart;
 }

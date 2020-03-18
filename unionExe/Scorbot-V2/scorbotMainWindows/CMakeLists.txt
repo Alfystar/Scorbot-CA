@@ -1,5 +1,4 @@
-    add_subdirectory(uiSrc)
-
+    add_subdirectory(UI_useCase)
     if (NOT TARGET scorbotMainWindows)
         set(CMAKE_AUTOMOC ON)
         set(CMAKE_AUTORCC ON)
@@ -13,22 +12,17 @@
 
         add_library(scorbotMainWindows #SHARED
                 ScorbotMainWindows.h ScorbotMainWindows.cpp
+                ## Aggiunta classi USE CASE ##
                 )
 
         ## qt target
         #su qt creator da errore???
         target_include_directories(scorbotMainWindows PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
-        #    target_link_directories(scorbotMainWindows PUBLIC ".")
         find_package(Qt5 COMPONENTS Widgets REQUIRED)
         target_link_libraries(scorbotMainWindows PUBLIC Qt5::Widgets)
-        #    find_package(Qt5 COMPONENTS Widgets REQUIRED)
-        #    target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
 
         ## System target
-        target_link_libraries(scorbotMainWindows PUBLIC scorbotUi)
-        target_link_libraries(scorbotMainWindows PUBLIC dataTransfert)
-        target_link_libraries(scorbotMainWindows PUBLIC UartSubSystem)
-        target_link_libraries(scorbotMainWindows PUBLIC pidCtrl)
+        target_link_libraries(scorbotMainWindows PUBLIC UI_useCase)
 
         message("La libreria 'scorbotMainWindows' è stata aggiunta")
     endif ()

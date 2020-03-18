@@ -26,10 +26,7 @@ Q_OBJECT  //Macro di Qt che importa tutti i metodi virtuali necessari, senza dov
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    // Data update
-    void enSample(EncoderMot &en);
-    void currSample(CurrentMot &cur);
-    void controllSample(SpeedMot &speed);
+
 private slots:
     // Data send
     void sendRef_handler();
@@ -42,10 +39,7 @@ private slots:
     void freeMove_handler();
     // Cin recalc
     void cinCalc_handler();
-
-
-    void testPrint();
-protected:
+public:
     Ui::MainWindow *ui;
 private:
     SettingBoardWindow *setBoardWin;
@@ -54,11 +48,6 @@ private:
     /// Variabili funznionali
     EncoderMot *ref;
     AllSensor *feedBack;
-
-    /// Funzioni di esportazione Comandi
-//    ctrlRefSendFoo ctrlFunx;
-//    SettingSendFoo setSendFunx;
-//    SettingGetFoo setGetFunx;
 
     /// Riferimenti da inviare Qt
     //TabWindget

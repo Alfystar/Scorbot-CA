@@ -3690,10 +3690,23 @@
                     <property name="title">
                         <string>Serial Port</string>
                     </property>
+                    <property name="separatorsCollapsible">
+                        <bool>false</bool>
+                    </property>
                     <addaction name="actionSerial_Find"/>
                     <addaction name="separator"/>
                 </widget>
+                <widget class="QMenu" name="menuSerial_Speed">
+                    <property name="title">
+                        <string>Serial Speed</string>
+                    </property>
+                    <addaction name="actionB9600"/>
+                    <addaction name="actionB57600"/>
+                    <addaction name="actionB115200"/>
+                    <addaction name="actionB921600"/>
+                </widget>
                 <addaction name="menuSerialPort"/>
+                <addaction name="menuSerial_Speed"/>
                 <addaction name="actionConnection_Start"/>
                 <addaction name="actionClose_connection"/>
                 <addaction name="separator"/>
@@ -3733,6 +3746,42 @@
             </property>
             <property name="text">
                 <string>Serial Find</string>
+            </property>
+            <property name="autoRepeat">
+                <bool>true</bool>
+            </property>
+            <property name="menuRole">
+                <enum>QAction::ApplicationSpecificRole</enum>
+            </property>
+        </action>
+        <action name="actionB9600">
+            <property name="text">
+                <string>B9600</string>
+            </property>
+        </action>
+        <action name="actionB57600">
+            <property name="text">
+                <string>B57600</string>
+            </property>
+        </action>
+        <action name="actionB115200">
+            <property name="text">
+                <string>B115200</string>
+            </property>
+        </action>
+        <action name="actionB230400">
+            <property name="text">
+                <string>B230400</string>
+            </property>
+        </action>
+        <action name="actionB460800">
+            <property name="text">
+                <string>B460800</string>
+            </property>
+        </action>
+        <action name="actionB921600">
+            <property name="text">
+                <string>B921600</string>
             </property>
         </action>
     </widget>

@@ -61,11 +61,18 @@ public:
     //singleton because in all process can be only one uart to board for time
     static ComUartAdapter &getInstance();
     static ComUartAdapter &getInstance(const std::string &device) noexcept(false);
-    //The device for any reason should change, so update state van be necessary
+    //The device for any reason should change, so updateSettingBoard state van be necessary
     void changeDevice(const std::string &device) noexcept(false);
     void changeDeviceVel(speed_t uartVel) noexcept(false);
 
     virtual ~ComUartAdapter();
+
+    /// #### ObservableScorbot override and Extension####
+//    void add(ObserverScorbot *ob, uartPackType typeWant){
+//        ObservableScorbot::add(ob, typeWant);
+//        ComUartAdapter::numReciver=settingBoardDataNotify->capacity();
+//    }
+
 
     /// #### ScorInterface override ####
     /// Set Data
@@ -87,19 +94,19 @@ public:
     bool isEncoderValid() override;
     bool isCurrentValid() override;
     bool isAllSensorValid() override;
-    /// Valid Get data
-    EncoderMot *getValidEncoder() override;
-    CurrentMot *getValidCurrent() override;
-//    AllSensor *getValidSensor() override;
-    EncoderMot *getValidEncoder(struct timespec *t) override;
-    CurrentMot *getValidCurrent(struct timespec *t) override;
+//    /// Valid Get data
+//    EncoderMot *getValidEncoder() override;
+//    CurrentMot *getValidCurrent() override;
+////    AllSensor *getValidSensor() override;
+//    EncoderMot *getValidEncoder(struct timespec *t) override;
+//    CurrentMot *getValidCurrent(struct timespec *t) override;
 //    AllSensor *getValidSensor(struct timespec *en, struct timespec *cur) override;
     /// Wait Valid Get data
-    EncoderMot *getValidEncoderWait() override;
-    CurrentMot *getValidCurrentWait() override;
-//    AllSensor *getValidSensorWait() override;
-    EncoderMot *getValidEncoderWait(struct timespec *t) override;
-    CurrentMot *getValidCurrentWait(struct timespec *t) override;
+//    EncoderMot *getValidEncoderWait() override;
+//    CurrentMot *getValidCurrentWait() override;
+////    AllSensor *getValidSensorWait() override;
+//    EncoderMot *getValidEncoderWait(struct timespec *t) override;
+//    CurrentMot *getValidCurrentWait(struct timespec *t) override;
 //    AllSensor *getValidSensorWait(struct timespec *en, struct timespec *cur) override;
 
     /// GetCom_int override
@@ -107,10 +114,10 @@ public:
     // basta mettersi in attesa che il dato voluto torni valido, a leggere
     // la porta è presente un thread apposito che salva i dati
     // in infoExpPack appena arrivano
-    EncoderMot &getEncoderConrete() override;
-    CurrentMot &getCurrentConrete() override;
-//    AllSensor &getSensorConrete() override;
-    SettingBoard_C &getSettingConrete() override;
+//    EncoderMot &getEncoderConrete() override;
+//    CurrentMot &getCurrentConrete() override;
+////    AllSensor &getSensorConrete() override;
+//    SettingBoard_C &getSettingConrete() override;
 private:
     /// Variabili di funzionamento della classe nel sistema
     static std::mutex instanceMutex;
@@ -125,7 +132,12 @@ private:
     /// Variabili di salvataggio dei pacchetti letti dal Thread uartReader
     //static std::mutex setNew, enNew, curNew;
     // setNew, enNew, curNew specific for pack type
-    static sem_t setNew, enNew, curNew;
+    //todo: Sto testando il pattern Observer, se funziona non c'è più bisogno dei semafori,
+    //  Sarà il thread ricevente che dopo aver ottenuto un dato lo notifica agli altri,
+    //  e diventa responsabilità del ricevente implementare un sistema di sincronia se serve
+
+    //    static int numReciver;
+//    static sem_t setNew, enNew, curNew;
 
 
     // L'uartReader unlock il mutex quando arriva un nuvo dato, così se un thread è in attesa del
@@ -149,7 +161,8 @@ private:
     bool timeValid(struct timespec *lastSensorTime, struct timeval *sampleTime);
 
     //Semaphore utility
-    static void sem_postOnce(sem_t *s);
+    static void sem_postOnce(sem_t *s); // Mette esattamente 1 token nel semaforo
+    static void sem_postRestorLimit(sem_t *s, int value);  // Ripristina il numero di Token a value
     static void sem_clearIthem(sem_t *s);
     static void dataSemWait(sem_t *s);
 };

@@ -7,6 +7,7 @@
 #include <iostream>
 #include <UartSubSystem.h>
 #include <DataTransfert_AllInclude.h>
+#include <ConcreteObserver.h>
 
 using namespace std;
 using namespace DataPrimitive;
@@ -51,15 +52,16 @@ void set_realtime_priority() {
     std::cout << "Thread priority is " << params.sched_priority << std::endl;
 }
 
+ConcreteObserver *obs;
 int main(int argc, char *argv[]) {
     /// Initialize board
     try {
-        scorbot = &AdapterFactory::makeUart("/dev/ttyACM0", B921600);
+        scorbot = &AdapterFactory::makeUart("/dev/ttyUSB0", B115200);
     } catch (const std::exception &e) {
         std::cerr << e.what() << std::endl;
         exit(-1);
     }
-
+    obs = new ConcreteObserver(scorbot);
 
 
     /// Setting test
@@ -82,10 +84,21 @@ int main(int argc, char *argv[]) {
     std::cout << "Default Settings:\n";
     p->printSetting();
     std::cout << "\n";
-    std::cout << "Settings from board directly:\n";
+
+
+    /// Test notify SettingBoard
+    obs->enableSettingBoard(true);
+    std::cout << "============================================================\n";
+    std::cout << "Invio Richiesta alla scheda di una setting Board\n";
     pRecive = scorbot->getSetting_board();
+    std::cout << "Aspetto 2 secondi e mi aspetto che venga printata la notify di ConcreteObserver\n";
+    sleep(2);   // Mi aspetto che ConcreteObserver printi un pacchetto ricevuto!!!
+    std::cout << "\n\n============================================================\n";
+    std::cout << "Ecco cosa ho ricevuto da interfaccia diretta\n";
     pRecive->printSetting();
     delete pRecive;
+    obs->enableSettingBoard(false);
+    std::cout << "============================================================\n";
     std::cout << "\n";
     std::cout << "Settings read from local:\n";
     pRecive = scorbot->getSetting_local();
@@ -113,6 +126,7 @@ int main(int argc, char *argv[]) {
     struct timespec lastPackT, newPackT, deltaPackT;
 
     /// Encoder test
+    obs->enableEncoderData(true);
     std::cout << "\n\n============================================================\n";
     std::cout << "Test della lettura degli encoder\n";
     sleep(1);
@@ -121,7 +135,7 @@ int main(int argc, char *argv[]) {
     clock_gettime(CLOCK_MONOTONIC_RAW, &lastPackT);
     timerclearSpec(&deltaPackT);
     for (int i = 0; i < 10000; i++) {
-        e = scorbot->getValidEncoderWait(&newPackT);
+        e = obs->getValidEncoderWait(&newPackT);
         timersubSpec(&newPackT, &lastPackT, &deltaPackT);
         timeStampSpec(&deltaPackT, "deltaPackT");
         if (deltaPackT.tv_nsec < (500 * 1000UL))
@@ -136,8 +150,10 @@ int main(int argc, char *argv[]) {
         std::cout << i << "\n";
         std::cout << "\n";
     }
+    obs->enableEncoderData(false);
 
     /// Current test
+    obs->enableCurrentData(true);
     std::cout << "\n\n============================================================\n";
     std::cout << "Test della lettura delle correnti \n";
     sleep(1);
@@ -146,7 +162,7 @@ int main(int argc, char *argv[]) {
     clock_gettime(CLOCK_MONOTONIC_RAW, &lastPackT);
     timerclearSpec(&deltaPackT);
     for (int i = 0; i < 10000; i++) {
-        c = scorbot->getValidCurrentWait(&newPackT);
+        c = obs->getValidCurrentWait(&newPackT);
         timersubSpec(&newPackT, &lastPackT, &deltaPackT);
         timeStampSpec(&deltaPackT, "deltaPackT");
         lastPackT = newPackT;
@@ -163,5 +179,6 @@ int main(int argc, char *argv[]) {
     }
     std::cout << "\n\n============================================================\n";
     std::cout << "End tests\n";
+    obs->enableCurrentData(false);
     return 0;
 }

@@ -14,10 +14,10 @@ class GetCom_int {
 public:
     //GetCom_int() {};
     //~GetCom_int() {};
-    virtual EncoderMot &getEncoderConrete() = 0;
-    virtual CurrentMot &getCurrentConrete() = 0;
+//    virtual EncoderMot &getEncoderConrete() = 0;
+//    virtual CurrentMot &getCurrentConrete() = 0;
 //    virtual AllSensor &getSensorConrete() = 0;
-    virtual SettingBoard_C &getSettingConrete() = 0;
+//    virtual SettingBoard_C &getSettingConrete() = 0;
 
 };
 
