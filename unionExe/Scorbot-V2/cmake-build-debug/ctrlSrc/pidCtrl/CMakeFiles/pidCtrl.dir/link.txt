@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpidCtrl.a  CMakeFiles/pidCtrl.dir/PIDScorbot.cpp.o
+/usr/bin/ranlib libpidCtrl.a

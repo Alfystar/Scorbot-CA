@@ -1,0 +1,12 @@
+/home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2
+La libreria 'dataTransfert' è stata aggiunta
+La libreria 'circularBuffer' è stata aggiunta
+CMAKE_THREAD_LIBS_INIT: -lpthread
+La libreria 'UartSubSystem' è stata aggiunta
+La libreria 'pidCtrl' è stata aggiunta
+La libreria 'scorbotUi' è stata aggiunta
+La libreria 'UI_useCase' è stata aggiunta
+La libreria 'scorbotMainWindows' è stata aggiunta
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug
