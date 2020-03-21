@@ -40,7 +40,17 @@ class Ui_MainWindow
 {
 public:
     QAction *actionInfo;
-    QAction *actionCom;
+    QAction *serialPort;
+    QAction *actionConnection_Start;
+    QAction *actionReset_Board;
+    QAction *actionClose_connection;
+    QAction *actionSerial_Find;
+    QAction *actionB9600;
+    QAction *actionB57600;
+    QAction *actionB115200;
+    QAction *actionB230400;
+    QAction *actionB460800;
+    QAction *actionB921600;
     QWidget *centralwidget;
     QTabWidget *tabReference;
     QWidget *Direct;
@@ -301,6 +311,8 @@ public:
     QMenuBar *menuBar;
     QMenu *menuAbout;
     QMenu *menuUartSetting;
+    QMenu *menuSerialPort;
+    QMenu *menuSerial_Speed;
 
     void setupUi(QMainWindow *MainWindow)
     {
@@ -318,8 +330,31 @@ public:
         MainWindow->setStyleSheet(QStringLiteral("url:(/newPrefix/Logo-Uni-Tor-Vergata.png_48x48.png)"));
         actionInfo = new QAction(MainWindow);
         actionInfo->setObjectName(QStringLiteral("actionInfo"));
-        actionCom = new QAction(MainWindow);
-        actionCom->setObjectName(QStringLiteral("actionCom"));
+        serialPort = new QAction(MainWindow);
+        serialPort->setObjectName(QStringLiteral("serialPort"));
+        actionConnection_Start = new QAction(MainWindow);
+        actionConnection_Start->setObjectName(QStringLiteral("actionConnection_Start"));
+        actionReset_Board = new QAction(MainWindow);
+        actionReset_Board->setObjectName(QStringLiteral("actionReset_Board"));
+        actionClose_connection = new QAction(MainWindow);
+        actionClose_connection->setObjectName(QStringLiteral("actionClose_connection"));
+        actionSerial_Find = new QAction(MainWindow);
+        actionSerial_Find->setObjectName(QStringLiteral("actionSerial_Find"));
+        actionSerial_Find->setEnabled(true);
+        actionSerial_Find->setAutoRepeat(true);
+        actionSerial_Find->setMenuRole(QAction::ApplicationSpecificRole);
+        actionB9600 = new QAction(MainWindow);
+        actionB9600->setObjectName(QStringLiteral("actionB9600"));
+        actionB57600 = new QAction(MainWindow);
+        actionB57600->setObjectName(QStringLiteral("actionB57600"));
+        actionB115200 = new QAction(MainWindow);
+        actionB115200->setObjectName(QStringLiteral("actionB115200"));
+        actionB230400 = new QAction(MainWindow);
+        actionB230400->setObjectName(QStringLiteral("actionB230400"));
+        actionB460800 = new QAction(MainWindow);
+        actionB460800->setObjectName(QStringLiteral("actionB460800"));
+        actionB921600 = new QAction(MainWindow);
+        actionB921600->setObjectName(QStringLiteral("actionB921600"));
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QStringLiteral("centralwidget"));
         tabReference = new QTabWidget(centralwidget);
@@ -2157,6 +2192,11 @@ public:
         menuAbout->setObjectName(QStringLiteral("menuAbout"));
         menuUartSetting = new QMenu(menuBar);
         menuUartSetting->setObjectName(QStringLiteral("menuUartSetting"));
+        menuSerialPort = new QMenu(menuUartSetting);
+        menuSerialPort->setObjectName(QStringLiteral("menuSerialPort"));
+        menuSerialPort->setSeparatorsCollapsible(false);
+        menuSerial_Speed = new QMenu(menuUartSetting);
+        menuSerial_Speed->setObjectName(QStringLiteral("menuSerial_Speed"));
         MainWindow->setMenuBar(menuBar);
 #ifndef QT_NO_SHORTCUT
         en1Label_3->setBuddy(en1Home);
@@ -2235,11 +2275,23 @@ public:
         menuBar->addAction(menuAbout->menuAction());
         menuAbout->addSeparator();
         menuAbout->addAction(actionInfo);
-        menuUartSetting->addAction(actionCom);
+        menuAbout->addSeparator();
+        menuUartSetting->addAction(menuSerialPort->menuAction());
+        menuUartSetting->addAction(menuSerial_Speed->menuAction());
+        menuUartSetting->addAction(actionConnection_Start);
+        menuUartSetting->addAction(actionClose_connection);
+        menuUartSetting->addSeparator();
+        menuUartSetting->addAction(actionReset_Board);
+        menuSerialPort->addAction(actionSerial_Find);
+        menuSerialPort->addSeparator();
+        menuSerial_Speed->addAction(actionB9600);
+        menuSerial_Speed->addAction(actionB57600);
+        menuSerial_Speed->addAction(actionB115200);
+        menuSerial_Speed->addAction(actionB921600);
 
         retranslateUi(MainWindow);
 
-        tabReference->setCurrentIndex(1);
+        tabReference->setCurrentIndex(3);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -2249,7 +2301,17 @@ public:
     {
         MainWindow->setWindowTitle(QApplication::translate("MainWindow", "ScorbotConnect", Q_NULLPTR));
         actionInfo->setText(QApplication::translate("MainWindow", "Info", Q_NULLPTR));
-        actionCom->setText(QApplication::translate("MainWindow", "Com", Q_NULLPTR));
+        serialPort->setText(QApplication::translate("MainWindow", "Serial Port", Q_NULLPTR));
+        actionConnection_Start->setText(QApplication::translate("MainWindow", "Connection Start", Q_NULLPTR));
+        actionReset_Board->setText(QApplication::translate("MainWindow", "Reset Board", Q_NULLPTR));
+        actionClose_connection->setText(QApplication::translate("MainWindow", "Close connection", Q_NULLPTR));
+        actionSerial_Find->setText(QApplication::translate("MainWindow", "Serial Find", Q_NULLPTR));
+        actionB9600->setText(QApplication::translate("MainWindow", "B9600", Q_NULLPTR));
+        actionB57600->setText(QApplication::translate("MainWindow", "B57600", Q_NULLPTR));
+        actionB115200->setText(QApplication::translate("MainWindow", "B115200", Q_NULLPTR));
+        actionB230400->setText(QApplication::translate("MainWindow", "B230400", Q_NULLPTR));
+        actionB460800->setText(QApplication::translate("MainWindow", "B460800", Q_NULLPTR));
+        actionB921600->setText(QApplication::translate("MainWindow", "B921600", Q_NULLPTR));
 #ifndef QT_NO_TOOLTIP
         tabReference->setToolTip(QApplication::translate("MainWindow", "<html><head/><body><p>Direct</p><p><br/></p></body></html>", Q_NULLPTR));
 #endif // QT_NO_TOOLTIP
@@ -2403,6 +2465,8 @@ public:
         MotPlot6->setText(QApplication::translate("MainWindow", "Mot6", Q_NULLPTR));
         menuAbout->setTitle(QApplication::translate("MainWindow", "About", Q_NULLPTR));
         menuUartSetting->setTitle(QApplication::translate("MainWindow", "UartSetting", Q_NULLPTR));
+        menuSerialPort->setTitle(QApplication::translate("MainWindow", "Serial Port", Q_NULLPTR));
+        menuSerial_Speed->setTitle(QApplication::translate("MainWindow", "Serial Speed", Q_NULLPTR));
     } // retranslateUi
 
 };

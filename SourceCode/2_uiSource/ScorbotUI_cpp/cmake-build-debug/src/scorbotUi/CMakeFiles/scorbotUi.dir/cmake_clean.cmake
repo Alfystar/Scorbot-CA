@@ -7,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o"
   "CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o"
   "CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o"
+  "CMakeFiles/scorbotUi.dir/uartChoise.cpp.o"
   "libscorbotUi.a"
   "libscorbotUi.pdb"
   "scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp"

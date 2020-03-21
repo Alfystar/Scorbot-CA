@@ -14,6 +14,7 @@ if (NOT TARGET scorbotUi)
             mainwindow.h mainwindow.cpp ui_source/mainwindow.ui ui_source/logo.qrc
             settingBoardWindow.h settingBoardWindow.cpp ui_source/settingBoardWindow.ui
             freeMoveWinsow.h freeMoveWinsow.cpp ui_source/freeMoveWindow.ui
+            uartChoise.h uartChoise.cpp ui_source/uartChoise.ui
             )
 
     #su qt creator da errore???

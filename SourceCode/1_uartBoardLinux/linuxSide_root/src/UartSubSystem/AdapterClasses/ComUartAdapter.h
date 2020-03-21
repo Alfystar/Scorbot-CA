@@ -56,7 +56,7 @@
 /////###################################################################################################
 
 
-class ComUartAdapter : public ScorInterface, public GetCom_int {
+class ComUartAdapter : public ScorInterface {//, public GetCom_int {
 public:
     //singleton because in all process can be only one uart to board for time
     static ComUartAdapter &getInstance();
@@ -75,6 +75,7 @@ public:
 
 
     /// #### ScorInterface override ####
+    bool isConnect() override;
     /// Set Data
     void goHome() override;
     void sendVel(SpeedMot &sp) override;
@@ -122,7 +123,7 @@ private:
     /// Variabili di funzionamento della classe nel sistema
     static std::mutex instanceMutex;
     static ComUartAdapter *instance;
-    ParamSingletonFactory &uartFactory;
+//    ParamSingletonFactory &uartFactory;
     static UartDriver *uartDev;
 
     /// Thread di lettura della porta

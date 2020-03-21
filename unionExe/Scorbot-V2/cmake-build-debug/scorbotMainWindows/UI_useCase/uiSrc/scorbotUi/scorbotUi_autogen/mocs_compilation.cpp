@@ -2,3 +2,4 @@
 #include "EWIEGA46WW/moc_freeMoveWinsow.cpp"
 #include "EWIEGA46WW/moc_mainwindow.cpp"
 #include "EWIEGA46WW/moc_settingBoardWindow.cpp"
+#include "EWIEGA46WW/moc_uartChoise.cpp"

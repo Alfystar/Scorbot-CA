@@ -18,12 +18,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ref = new EncoderMot();
     feedBack = new AllSensor();
 
-    // Function to call
-//    this->ctrlFunx = extF->ctrlFunx;
-//    this->setSendFunx = extF->setSendFunx;
-//    this->setGetFunx = extF->setGetFunx;
 
-    ///##### Set important obj pointer to future use #####///
+    ///##### Set important enObj pointer to future use #####///
 
     /// Riferimenti da inviare
     tabReference = ui->tabReference;
@@ -89,7 +85,27 @@ MainWindow::MainWindow(QWidget *parent) :
         connect(gomito[i], SIGNAL (toggled(bool)), this, SLOT (cinCalc_handler()));
     }
 
+    ///##########################################################
+    enRead[Mot1] = ui->enR1;
+    enRead[Mot2] = ui->enR2;
+    enRead[Mot3] = ui->enR3;
+    enRead[Mot4] = ui->enR4;
+    enRead[Mot5] = ui->enR5;
+    enRead[Mot6] = ui->enR6;
 
+    thetaRead[Mot1] = ui->thR1;
+    thetaRead[Mot2] = ui->thR2;
+    thetaRead[Mot3] = ui->thR3;
+    thetaRead[Mot4] = ui->thR4;
+    thetaRead[Mot5] = ui->thR5;
+    thetaRead[Mot6] = ui->PinzaOpen;
+
+    curRead[Mot1] = ui->mA1;
+    curRead[Mot2] = ui->mA2;
+    curRead[Mot3] = ui->mA3;
+    curRead[Mot4] = ui->mA4;
+    curRead[Mot5] = ui->mA5;
+    curRead[Mot6] = ui->mA6;
 }
 
 MainWindow::~MainWindow() {
@@ -101,13 +117,30 @@ MainWindow::~MainWindow() {
     delete feedBack;
 }
 
+void MainWindow::encoderShow(EncoderMot *e) {
+
+    for (int i = Mot1; i < nMot; ++i) {
+        enRead[i]->setNum(e->getEn((motCode)i));
+        //todo: tramite scorCalc, convertire gli encoder letti in angoli
+        thetaRead[i]->setNum(e->getEn((motCode)i));
+    }
+
+}
+
+void MainWindow::currentShow(CurrentMot *c) {
+    for (int i = Mot1; i < nMot; ++i) {
+        curRead[i]->setNum(c->getCurrent((motCode)i));
+    }
+}
+
+
 void MainWindow::sendRef_handler() {
     //todo: In base al tab selezionato calcola i valori per gli altri e invia gli encoder alla fine
     //è già stato chiamato cinCalc_handler() e ho tutti i dati in enRef
     for (char i = Mot1; i < nMot; i++) {
         ref->enSet((motCode) i, (short) enRef[i]->value());
     }
-    ref->printEncoder();
+    emit newRef(ref);
 }
 
 void MainWindow::scorParamSet_handler() {
@@ -182,4 +215,5 @@ void MainWindow::cinCalc_handler() {
     for (int i = 0; i < 2; ++i)
         gomito[i]->blockSignals(false);
 }
+
 

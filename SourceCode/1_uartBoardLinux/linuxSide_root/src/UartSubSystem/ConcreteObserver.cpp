@@ -58,7 +58,7 @@ void ConcreteObserver::updateSettingBoard() {
     if (!enSet)
         return;
     SettingBoard_C *pNotified;
-    std::cout << "ConcreteObserver:updateSettingBoard\n";
+//    std::cout << "ConcreteObserver:updateSettingBoard\n";
     pNotified = scorbot->getSetting_local();
     pNotified->printSetting();
 
@@ -67,7 +67,7 @@ void ConcreteObserver::updateSettingBoard() {
 void ConcreteObserver::updateCurrendData() {
     if (!enCur)
         return;
-    std::cout << "ConcreteObserver:updateCurrendData\t";
+//    std::cout << "ConcreteObserver:updateCurrendData\t";
     sem_postOnce(&curSem);
 
 }
@@ -75,7 +75,7 @@ void ConcreteObserver::updateCurrendData() {
 void ConcreteObserver::updateEncoderData() {
     if (!enEnc)
         return;
-    std::cout << "ConcreteObserver:updateEncoderData\t";
+//    std::cout << "ConcreteObserver:updateEncoderData\t";
     sem_postOnce(&enSem);
 
 }
@@ -101,7 +101,9 @@ inline void ConcreteObserver::sem_postRestorLimit(sem_t *s, int value) {
             perror("sem_postRestorLimit:sem_post fails for:");
             return;
         }
-        sval++;
+        if (sem_getvalue(s, &sval)) {
+            perror("sem_getvalue fails for:");
+        }
     }
 }
 

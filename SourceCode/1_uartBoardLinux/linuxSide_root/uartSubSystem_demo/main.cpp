@@ -13,6 +13,7 @@ using namespace std;
 using namespace DataPrimitive;
 using namespace DataManipolation;
 ScorInterface *scorbot;
+ComUartAdapter *uartCom;
 
 
 void set_realtime_priority() {
@@ -55,12 +56,17 @@ void set_realtime_priority() {
 ConcreteObserver *obs;
 int main(int argc, char *argv[]) {
     /// Initialize board
+
+
     try {
-        scorbot = &AdapterFactory::makeUart("/dev/ttyUSB0", B115200);
+//        scorbot = &AdapterFactory::makeUart("/dev/ttyUSB0", B115200);
+        uartCom = &ComUartAdapter::getInstance("/dev/ttyUSB0");
+        uartCom->changeDeviceVel(B115200);
     } catch (const std::exception &e) {
         std::cerr << e.what() << std::endl;
         exit(-1);
     }
+    scorbot = uartCom;
     obs = new ConcreteObserver(scorbot);
 
 

@@ -1,4 +1,4 @@
-# Install script for directory: /home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge
+# Install script for directory: /home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -2,8 +2,8 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="ScorbotTerminal" targetName="UartSubSystem" />
       <config projectName="ScorbotTerminal" targetName="dataTransfert" />
+      <config projectName="ScorbotTerminal" targetName="UartSubSystem" />
       <config projectName="ScorbotTerminal" targetName="scoreUtiliy" />
       <config projectName="ScorbotTerminal" targetName="scorbotMainWindows" />
       <config projectName="ScorbotTerminal" targetName="uartDriver" />
@@ -25,80 +25,120 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/AdapterClasses/ObservableScorbot.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/AdapterClasses/ObserverScorbot.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/ConcreteObserver.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/ConcreteObserver.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/mocs_compilation.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/UartConnect.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/UartConnect.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/UartConnectExeption.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/.ScorBoard_Diagrams.vpp.lck" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/uartChoise.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/uartChoise.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/uartChoise.ui" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/MotorCTRL.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/DataShow.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/DataShow.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/MotorCTRL.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/MotorCTRL.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/2_controllStudio/Pid studio/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/2_controllStudio/Pid studio/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/ScoreBoard_Uart/.settings/org.eclipse.cdt.core.prefs" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/ScoreBoard_Uart/.settings/org.eclipse.cdt.core.prefs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/ScoreBoard_Uart/HW_rename.h" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/ScoreBoard_Uart/HW_rename.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/ScoreBoard_Uart/excutePack.ino" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/ScoreBoard_Uart/excutePack.ino" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/installingCommand" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/installingCommand" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/pcListen_demo/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/pcListen_demo/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp" beforeDir="false" afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/circularBuffer/CircularBuffer.h" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/circularBuffer/CircularBuffer.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/AdapterClasses/ComUartAdapter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/AdapterClasses/ComUartAdapter.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/AdapterClasses/ComUartAdapter.h" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/AdapterClasses/ComUartAdapter.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/AdapterClasses/ParamSingletonFactory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/AdapterClasses/ParamSingletonFactory.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/AdapterClasses/ParamSingletonFactory.h" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/AdapterClasses/ParamSingletonFactory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/AdapterFactory.h" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/AdapterFactory.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/GetCom_int.h" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/GetCom_int.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/ScorInterface.h" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/ScorInterface.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/uartSubSystem_demo/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/uartSubSystem_demo/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_2/userInterface/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_2/userInterface/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_abstract_scale.html" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_abstract_scale.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_abstract_slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_abstract_slider.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_analog_clock.html" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_analog_clock.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_compass.html" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_compass.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_dial.html" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_dial.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_knob.html" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_knob.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_picker.html" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_picker.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_plot.html" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_plot.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_plot_canvas.html" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_plot_canvas.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_plot_picker.html" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_plot_picker.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_scale_widget.html" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_scale_widget.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_slider.html" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_slider.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_wheel.html" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/class_qwt_wheel.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/qwt__dial_8h_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/qwt__dial_8h_source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/qwt__matrix__raster__data_8h_source.html" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/html/qwt__matrix__raster__data_8h_source.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/man/man3/QwtAbstractScale.3" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/man/man3/QwtAbstractScale.3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/man/man3/QwtAbstractSlider.3" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/man/man3/QwtAbstractSlider.3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/man/man3/QwtAnalogClock.3" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/man/man3/QwtAnalogClock.3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/man/man3/QwtDial.3" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/man/man3/QwtDial.3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/man/man3/QwtPicker.3" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/man/man3/QwtPicker.3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/man/man3/QwtPlot.3" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/man/man3/QwtPlot.3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/man/man3/QwtPlotCanvas.3" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/man/man3/QwtPlotCanvas.3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/man/man3/QwtPlotPicker.3" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/man/man3/QwtPlotPicker.3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/man/man3/QwtScaleWidget.3" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/man/man3/QwtScaleWidget.3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/man/man3/QwtSlider.3" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/man/man3/QwtSlider.3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/man/man3/QwtWheel.3" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/doc/man/man3/QwtWheel.3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_2/comLibWork/c_Side/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_2/comLibWork/c_Side/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/3.15.3/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/3.15.3/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/a.out" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/a.out" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/main.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/main.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/scorbotUi_demo" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/scorbotUi_demo" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/scorbotUi_demo.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/scorbotUi_demo.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataFactory.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataFactory.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/AllSensor.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/AllSensor.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/CurrentMot.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/CurrentMot.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/EncoderMot.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/EncoderMot.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/Pack.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/Pack.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/SettingBoard_C.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/SettingBoard_C.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/SpeedMot.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/SpeedMot.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/libdataTransfert.a" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/libdataTransfert.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/progress.marks" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/CXX.includecache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/depend.internal" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/depend.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/flags.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/AutogenInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/AutogenInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/AutogenOldSettings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/AutogenOldSettings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/ParseCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/ParseCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/RCClogoInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/RCClogoInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/RCClogoSettings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/RCClogoSettings.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/progress.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/cmake_install.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/cmake_install.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/libscorbotUi.a" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/libscorbotUi.a" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/EWIEGA46WW/moc_freeMoveWinsow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/EWIEGA46WW/moc_freeMoveWinsow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/EWIEGA46WW/moc_mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/EWIEGA46WW/moc_mainwindow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/EWIEGA46WW/moc_settingBoardWindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/EWIEGA46WW/moc_settingBoardWindow.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/include/ui_source/ui_mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/include/ui_source/ui_mainwindow.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/moc_predefs.h" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/moc_predefs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/qwtbuild.pri" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/qwtDoc/qwt-6.1.4/qwtbuild.pri" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/mainwindow.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/mainwindow.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/mainwindow.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/mainwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/mainwindow.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceCode/3_controllSource/2_pidCtrl/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/3_controllSource/2_pidCtrl/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V1/CMakeLists.txt.user" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V1/CMakeLists.txt.user" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V1/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V1/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V1/scorbot.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V1/scorbot.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/uiSrc/scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/uiSrc/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/3_controllSource/2_pidCtrl/src/pidCtrl/PIDScorbot.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/3_controllSource/2_pidCtrl/src/pidCtrl/PIDScorbot.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/_boardSourceOld/V1/SW/rasp-Cpp/Scorbot_CPP/CMakeFiles/CMakeOutput.log" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/_boardSourceOld/V1/SW/rasp-Cpp/Scorbot_CPP/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/mocs_compilation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/mocs_compilation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.h" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/uiSrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/UartConnect.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/UartConnect.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/UartConnect.h" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/UartConnect.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,6 +166,9 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
+  <component name="OCResolveContextSettings">
+    <option name="configuration" value="0-Debug-UI_useCase" />
+  </component>
   <component name="ProjectId" id="1QEs6LMzclXnGYYUwqGsgySaYhB" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -142,7 +185,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/unionExe/Scorbot-V2" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -154,19 +197,19 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem" />
-      <recent name="$PROJECT_DIR$/SourceCode/3_controllSource/2_pidCtrl/src" />
-      <recent name="$PROJECT_DIR$/SourceCode" />
-      <recent name="$PROJECT_DIR$" />
-      <recent name="$PROJECT_DIR$/SourceCode/3_controllSource" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase" />
       <recent name="$PROJECT_DIR$/SourceCode/3_controllSource/2_pidCtrl/src/Common-src/timeOp" />
       <recent name="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/Common-src" />
       <recent name="$PROJECT_DIR$/SourceCode/3_controllSource/2_pidCtrl" />
       <recent name="$PROJECT_DIR$/SourceCode/3_controllSource/2_pidCtrl/PidClass" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi" />
+      <recent name="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem" />
+      <recent name="$PROJECT_DIR$/SourceCode/3_controllSource/2_pidCtrl/src" />
+      <recent name="$PROJECT_DIR$/SourceCode" />
+      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.ScorbotTerminal">
@@ -367,7 +410,9 @@
       <workItem from="1584269187525" duration="865000" />
       <workItem from="1584271408861" duration="4903000" />
       <workItem from="1584522220403" duration="8572000" />
-      <workItem from="1584558369551" duration="5232000" />
+      <workItem from="1584558369551" duration="5720000" />
+      <workItem from="1584725515503" duration="5562000" />
+      <workItem from="1584786494198" duration="8623000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
       <created>1568027375662</created>
@@ -579,7 +624,14 @@
       <option name="project" value="LOCAL" />
       <updated>1577202112071</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="Grandi cambiamenti nella distribuzione nelle notifiche dei nuovi pacchetti, usato un pattern Observer, così da lasciare a una seconda classe la responsabilità di aspettare quanto serve, e rendere di conseguenza il tutto scalare&#10;Testato sul main di test del sotto sistema UART, e modificato il main del controllo">
+      <created>1584572751606</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1584572751606</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -600,7 +652,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Add son class to DCmotor to improve Working set limits" />
     <MESSAGE value="Add son class to DCmotor to improve Working set limits&#10;code reformat" />
     <MESSAGE value="Add son class to DCmotor to improve Working set limits&#10;code reformat&#10;readme update" />
     <MESSAGE value="reorder Rasp lib structure, and update uml diagrams to actualy version" />
@@ -625,7 +676,8 @@
     <MESSAGE value="system structure moved" />
     <MESSAGE value="controll system scritto, da testare" />
     <MESSAGE value="progetto interfaccia grafica a 3 livelli iniziato" />
-    <option name="LAST_COMMIT_MESSAGE" value="progetto interfaccia grafica a 3 livelli iniziato" />
+    <MESSAGE value="Grandi cambiamenti nella distribuzione nelle notifiche dei nuovi pacchetti, usato un pattern Observer, così da lasciare a una seconda classe la responsabilità di aspettare quanto serve, e rendere di conseguenza il tutto scalare&#10;Testato sul main di test del sotto sistema UART, e modificato il main del controllo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Grandi cambiamenti nella distribuzione nelle notifiche dei nuovi pacchetti, usato un pattern Observer, così da lasciare a una seconda classe la responsabilità di aspettare quanto serve, e rendere di conseguenza il tutto scalare&#10;Testato sul main di test del sotto sistema UART, e modificato il main del controllo" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
   </component>
   <component name="WindowStateProjectService">
@@ -637,61 +689,83 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="684" y="325" width="542" height="383" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584571815993" />
-    <state x="768" y="238" width="380" height="557" key="#com.intellij.ide.util.MemberChooser" timestamp="1584558519850">
+    <state x="768" y="238" width="374" height="557" key="#com.intellij.ide.util.MemberChooser" timestamp="1584797865329">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="768" y="238" width="380" height="557" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584558519850" />
+    <state x="768" y="238" width="380" height="557" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1040@0.0.1920.1040" timestamp="1584797865329" />
+    <state x="768" y="247" width="374" height="557" key="#com.intellij.ide.util.MemberChooser/0.0.1920.1080@0.0.1920.1080" timestamp="1584735554021" />
     <state x="669" y="243" width="572" height="546" key="#uartDriver" timestamp="1577273281186">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="669" y="243" width="572" height="546" key="#uartDriver/0.0.1920.1040@0.0.1920.1040" timestamp="1577273281186" />
-    <state x="296" y="117" width="1317" height="798" key="CommitChangelistDialog2" timestamp="1577202110890">
+    <state x="296" y="117" width="1317" height="798" key="CommitChangelistDialog2" timestamp="1584572751212">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="296" y="117" width="1317" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1577202110890" />
-    <state x="0" y="0" width="1910" height="1035" key="FileDocumentManager.FileCacheConflict" timestamp="1584527395931">
+    <state x="296" y="117" width="1317" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1584572751212" />
+    <state x="743" y="277" width="424" height="479" key="FileChooserDialogImpl" timestamp="1584798385713">
       <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="743" y="277" width="424" height="479" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1584798385713" />
+    <state x="0" y="0" width="1910" height="1040" key="FileDocumentManager.FileCacheConflict" timestamp="1584732253047">
+      <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="0" width="1910" height="1035" key="FileDocumentManager.FileCacheConflict/0.0.1920.1040@0.0.1920.1040" timestamp="1584527395931" />
-    <state width="1878" height="371" key="GridCell.Tab.0.bottom" timestamp="1584572295103">
+    <state x="0" y="0" width="1910" height="1040" key="FileDocumentManager.FileCacheConflict/0.0.1920.1080@0.0.1920.1080" timestamp="1584732253047" />
+    <state width="1878" height="371" key="GridCell.Tab.0.bottom" timestamp="1584798386839">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="371" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584572295103" />
-    <state width="1878" height="371" key="GridCell.Tab.0.center" timestamp="1584572295102">
+    <state width="1878" height="371" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584798386839" />
+    <state width="1878" height="371" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584736698959" />
+    <state width="1878" height="371" key="GridCell.Tab.0.center" timestamp="1584798386839">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="371" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584572295102" />
-    <state width="1878" height="371" key="GridCell.Tab.0.left" timestamp="1584572295102">
+    <state width="1878" height="371" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584798386839" />
+    <state width="1878" height="371" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584736698958" />
+    <state width="1878" height="371" key="GridCell.Tab.0.left" timestamp="1584798386839">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="371" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584572295102" />
-    <state width="1878" height="371" key="GridCell.Tab.0.right" timestamp="1584572295102">
+    <state width="1878" height="371" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584798386839" />
+    <state width="1878" height="371" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584736698958" />
+    <state width="1878" height="371" key="GridCell.Tab.0.right" timestamp="1584798386839">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="371" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584572295102" />
-    <state width="1878" height="340" key="GridCell.Tab.1.bottom" timestamp="1584561722160">
+    <state width="1878" height="371" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584798386839" />
+    <state width="1878" height="371" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584736698958" />
+    <state width="1878" height="340" key="GridCell.Tab.1.bottom" timestamp="1584798386837">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584561722160" />
-    <state width="1878" height="340" key="GridCell.Tab.1.center" timestamp="1584561722160">
+    <state width="1878" height="340" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1584798386837" />
+    <state width="1878" height="340" key="GridCell.Tab.1.center" timestamp="1584798386836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="340" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584561722160" />
-    <state width="1878" height="340" key="GridCell.Tab.1.left" timestamp="1584561722160">
+    <state width="1878" height="340" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1584798386836" />
+    <state width="1878" height="340" key="GridCell.Tab.1.left" timestamp="1584798386836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="340" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584561722160" />
-    <state width="1878" height="340" key="GridCell.Tab.1.right" timestamp="1584561722160">
+    <state width="1878" height="340" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1584798386836" />
+    <state width="1878" height="340" key="GridCell.Tab.1.right" timestamp="1584798386836">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1878" height="340" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584561722160" />
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1577202113812">
+    <state width="1878" height="340" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1584798386836" />
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2" timestamp="1584572755121">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1577202113812" />
-    <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1584558373250">
+    <state x="555" y="255" width="800" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1584572755121" />
+    <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1584786498208">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="643" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584558373250" />
+    <state x="643" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1584786498208" />
+    <state x="643" y="360" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584725522543" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$USER_HOME$/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/DataShow.h</url>
+          <line>33</line>
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

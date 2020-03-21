@@ -51,7 +51,7 @@ short PIDScorbot::pid(int ref, int feeback, struct timespec *dt) {
     int er = (ref - feeback) * (1 - (2 * this->posDir)); //per allineare verso dei pwm a incremento degli encoder
 
     float vOut = this->PIDComp(er, ts);
-    printf("vOut=%f\n", vOut);
+//    printf("vOut=%f\n", vOut);
     if (fabsf(vOut) < this->CONTROL_DEADZONE) {
         return softStop; //soft stop
     } else {
@@ -104,7 +104,7 @@ float PIDScorbot::PIDComp(int error, long Ts) {
     this->y_d = this->Kd * (this->mystack[7].er - this->mystack[0].er) / sum;
     this->x_i += this->UpdateSat(this->x_i, this->Ki * Ts * this->mystack[7].er, this->Kp * error + this->y_d, 1,
                                  this->CONTROL_DEADZONE, this->CONTROL_SATURATION);
-    printf("x_i = %f, y_d = %f, error = %d, u = %f, dt=%ld\n", x_i, y_d, error, (Kp * error + x_i + y_d), Ts);
+//    printf("x_i = %f, y_d = %f, error = %d, u = %f, dt=%ld\n", x_i, y_d, error, (Kp * error + x_i + y_d), Ts);
     return (std::min(this->CONTROL_SATURATION,
                      std::max(-this->CONTROL_SATURATION, this->Kp * error + this->x_i + this->y_d)));
 }

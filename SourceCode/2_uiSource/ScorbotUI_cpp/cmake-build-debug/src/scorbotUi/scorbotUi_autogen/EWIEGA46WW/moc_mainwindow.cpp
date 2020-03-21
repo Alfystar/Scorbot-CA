@@ -6,7 +6,7 @@
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../../../src/scorbotUi/mainwindow.h"
+#include "../../../../../../../../../../Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/mainwindow.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
 #if !defined(Q_MOC_OUTPUT_REVISION)
@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
-    QByteArrayData data[10];
-    char stringdata0[152];
+    QByteArrayData data[12];
+    char stringdata0[164];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,22 +32,24 @@ struct qt_meta_stringdata_MainWindow_t {
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
-QT_MOC_LITERAL(1, 11, 15), // "sendRef_handler"
-QT_MOC_LITERAL(2, 27, 0), // ""
-QT_MOC_LITERAL(3, 28, 20), // "scorParamSet_handler"
-QT_MOC_LITERAL(4, 49, 22), // "scorParamReset_handler"
-QT_MOC_LITERAL(5, 72, 16), // "boardSet_handler"
-QT_MOC_LITERAL(6, 89, 19), // "controllSet_handler"
-QT_MOC_LITERAL(7, 109, 16), // "freeMove_handler"
-QT_MOC_LITERAL(8, 126, 15), // "cinCalc_handler"
-QT_MOC_LITERAL(9, 142, 9) // "testPrint"
+QT_MOC_LITERAL(1, 11, 6), // "newRef"
+QT_MOC_LITERAL(2, 18, 0), // ""
+QT_MOC_LITERAL(3, 19, 11), // "EncoderMot*"
+QT_MOC_LITERAL(4, 31, 2), // "en"
+QT_MOC_LITERAL(5, 34, 15), // "sendRef_handler"
+QT_MOC_LITERAL(6, 50, 20), // "scorParamSet_handler"
+QT_MOC_LITERAL(7, 71, 22), // "scorParamReset_handler"
+QT_MOC_LITERAL(8, 94, 16), // "boardSet_handler"
+QT_MOC_LITERAL(9, 111, 19), // "controllSet_handler"
+QT_MOC_LITERAL(10, 131, 16), // "freeMove_handler"
+QT_MOC_LITERAL(11, 148, 15) // "cinCalc_handler"
 
     },
-    "MainWindow\0sendRef_handler\0\0"
-    "scorParamSet_handler\0scorParamReset_handler\0"
-    "boardSet_handler\0controllSet_handler\0"
-    "freeMove_handler\0cinCalc_handler\0"
-    "testPrint"
+    "MainWindow\0newRef\0\0EncoderMot*\0en\0"
+    "sendRef_handler\0scorParamSet_handler\0"
+    "scorParamReset_handler\0boardSet_handler\0"
+    "controllSet_handler\0freeMove_handler\0"
+    "cinCalc_handler"
 };
 #undef QT_MOC_LITERAL
 
@@ -62,20 +64,24 @@ static const uint qt_meta_data_MainWindow[] = {
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       0,       // signalCount
+       1,       // signalCount
+
+ // signals: name, argc, parameters, tag, flags
+       1,    1,   54,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   54,    2, 0x08 /* Private */,
-       3,    0,   55,    2, 0x08 /* Private */,
-       4,    0,   56,    2, 0x08 /* Private */,
        5,    0,   57,    2, 0x08 /* Private */,
        6,    0,   58,    2, 0x08 /* Private */,
        7,    0,   59,    2, 0x08 /* Private */,
        8,    0,   60,    2, 0x08 /* Private */,
        9,    0,   61,    2, 0x08 /* Private */,
+      10,    0,   62,    2, 0x08 /* Private */,
+      11,    0,   63,    2, 0x08 /* Private */,
+
+ // signals: parameters
+    QMetaType::Void, 0x80000000 | 3,    4,
 
  // slots: parameters
-    QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
@@ -93,18 +99,26 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         MainWindow *_t = static_cast<MainWindow *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->sendRef_handler(); break;
-        case 1: _t->scorParamSet_handler(); break;
-        case 2: _t->scorParamReset_handler(); break;
-        case 3: _t->boardSet_handler(); break;
-        case 4: _t->controllSet_handler(); break;
-        case 5: _t->freeMove_handler(); break;
-        case 6: _t->cinCalc_handler(); break;
-        case 7: _t->testPrint(); break;
+        case 0: _t->newRef((*reinterpret_cast< EncoderMot*(*)>(_a[1]))); break;
+        case 1: _t->sendRef_handler(); break;
+        case 2: _t->scorParamSet_handler(); break;
+        case 3: _t->scorParamReset_handler(); break;
+        case 4: _t->boardSet_handler(); break;
+        case 5: _t->controllSet_handler(); break;
+        case 6: _t->freeMove_handler(); break;
+        case 7: _t->cinCalc_handler(); break;
         default: ;
         }
+    } else if (_c == QMetaObject::IndexOfMethod) {
+        int *result = reinterpret_cast<int *>(_a[0]);
+        {
+            typedef void (MainWindow::*_t)(EncoderMot * );
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&MainWindow::newRef)) {
+                *result = 0;
+                return;
+            }
+        }
     }
-    Q_UNUSED(_a);
 }
 
 const QMetaObject MainWindow::staticMetaObject = {
@@ -141,6 +155,13 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
         _id -= 8;
     }
     return _id;
+}
+
+// SIGNAL 0
+void MainWindow::newRef(EncoderMot * _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
+    QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

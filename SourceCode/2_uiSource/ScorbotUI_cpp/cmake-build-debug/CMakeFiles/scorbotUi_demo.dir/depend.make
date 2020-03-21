@@ -16,6 +16,7 @@ CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../src/scorbotUi/commonDefine.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../src/scorbotUi/freeMoveWinsow.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../src/scorbotUi/mainwindow.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../src/scorbotUi/settingBoardWindow.h
+CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../src/scorbotUi/uartChoise.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h

@@ -15,15 +15,15 @@ ComUartAdapter &ComUartAdapter::getInstance() {
     if (!ComUartAdapter::instance) {
         ComUartAdapter::instance = new ComUartAdapter();
     }
-    if (ComUartAdapter::instance->uartDev == nullptr) {
-        try {
-            ComUartAdapter::instance->uartDev = ComUartAdapter::instance->uartFactory.getLastUartClass();
-        } catch (std::exception e) {
-            perror(e.what());
-            throw std::runtime_error(std::string("Impossibile creare una com Funzionante:").append(e.what()));
-        }
-
-    }
+//    if (ComUartAdapter::instance->uartDev == nullptr) {
+//        try {
+//            ComUartAdapter::instance->uartDev = ComUartAdapter::instance->uartFactory.getLastUartClass();
+//        } catch (std::exception e) {
+//            perror(e.what());
+//            throw std::runtime_error(std::string("Impossibile creare una com Funzionante:").append(e.what()));
+//        }
+//
+//    }
     return *ComUartAdapter::instance;
 }
 
@@ -38,7 +38,13 @@ ComUartAdapter &ComUartAdapter::getInstance(const std::string &device) noexcept(
 }
 
 void ComUartAdapter::changeDevice(const std::string &device) noexcept(false) {
-    uartDev = uartFactory.getUartClass(device);
+    if(!uartDev){
+        uartDev = new UartDriver(device);
+    } else{
+        delete uartDev; //todo: Capire se genera concorrenza, e in caso risolvere
+        uartDev = new UartDriver(device);
+    }
+//    uartDev = uartFactory.getUartClass(device);
 }
 
 void ComUartAdapter::changeDeviceVel(speed_t uartVel) noexcept(false) {
@@ -49,6 +55,10 @@ void ComUartAdapter::changeDeviceVel(speed_t uartVel) noexcept(false) {
 
 ComUartAdapter::~ComUartAdapter() {
 
+}
+
+bool ComUartAdapter::isConnect(){
+    return uartDev != nullptr;
 }
 
 
@@ -247,9 +257,9 @@ bool ComUartAdapter::isAllSensorValid() {
 //    return *p;
 //}
 
-ComUartAdapter::ComUartAdapter() : ScorInterface(),
-                                   GetCom_int(),
-                                   uartFactory(ParamSingletonFactory::getInstance()) {
+ComUartAdapter::ComUartAdapter() : ScorInterface(){//,
+//                                   GetCom_int(),
+//                                   uartFactory(ParamSingletonFactory::getInstance()) {
     this->set = new SettingBoard_C(this->setting);
     this->allSensor = new AllSensor(this->sensors);
     //Imposto a lock tutti i mutex, non potendo essere già arrivati dei pacchetti

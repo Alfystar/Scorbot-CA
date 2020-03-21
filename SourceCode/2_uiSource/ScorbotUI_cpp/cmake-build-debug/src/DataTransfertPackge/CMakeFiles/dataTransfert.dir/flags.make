@@ -6,5 +6,5 @@ CXX_FLAGS = -g
 
 CXX_DEFINES = -DlinuxSide=1
 
-CXX_INCLUDES = -I/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/. 
+CXX_INCLUDES = -I/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/. 
 

@@ -6,69 +6,69 @@
 
 #IncludeRegexTransform: 
 
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataFactory.cpp
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataFactory.cpp
 DataFactory.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataFactory.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataFactory.h
 
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataFactory.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataFactory.h
 DataPrimitive.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataPrimitive.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataPrimitive.h
 stdlib.h
 -
 string.h
 -
 
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/AllSensor.cpp
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/AllSensor.cpp
 AllSensor.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/AllSensor.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/AllSensor.h
 
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/AllSensor.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/AllSensor.h
 EncoderMot.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/EncoderMot.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/EncoderMot.h
 CurrentMot.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/CurrentMot.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/CurrentMot.h
 ../DataPrimitive.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataPrimitive.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataPrimitive.h
 ../DataFactory.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataFactory.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataFactory.h
 
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/CurrentMot.cpp
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/CurrentMot.cpp
 CurrentMot.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/CurrentMot.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/CurrentMot.h
 
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/CurrentMot.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/CurrentMot.h
 stdio.h
 -
 string.h
 -
 ../DataPrimitive.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataPrimitive.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataPrimitive.h
 ../DataFactory.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataFactory.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataFactory.h
 Arduino.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/Arduino.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/Arduino.h
 
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/EncoderMot.cpp
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/EncoderMot.cpp
 EncoderMot.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/EncoderMot.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/EncoderMot.h
 
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/EncoderMot.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/EncoderMot.h
 string.h
 -
 stdio.h
 -
 ../DataPrimitive.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataPrimitive.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataPrimitive.h
 ../DataFactory.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataFactory.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataFactory.h
 Arduino.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/Arduino.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/Arduino.h
 
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/Pack.cpp
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/Pack.cpp
 Pack.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/Pack.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/Pack.h
 
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/Pack.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/Pack.h
 stdlib.h
 -
 stdio.h
@@ -76,43 +76,43 @@ stdio.h
 string.h
 -
 ../DataPrimitive.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataPrimitive.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataPrimitive.h
 CurrentMot.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/CurrentMot.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/CurrentMot.h
 EncoderMot.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/EncoderMot.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/EncoderMot.h
 AllSensor.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/AllSensor.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/AllSensor.h
 SpeedMot.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SpeedMot.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SpeedMot.h
 SettingBoard_C.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SettingBoard_C.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SettingBoard_C.h
 typePackWrongExcept.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/typePackWrongExcept.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/typePackWrongExcept.h
 Arduino.h
 -
 
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SettingBoard_C.cpp
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SettingBoard_C.cpp
 SettingBoard_C.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SettingBoard_C.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SettingBoard_C.h
 
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SettingBoard_C.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SettingBoard_C.h
 stdio.h
 -
 string.h
 -
 ../DataPrimitive.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataPrimitive.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataPrimitive.h
 ../DataFactory.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataFactory.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataFactory.h
 Arduino.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/Arduino.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/Arduino.h
 
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SpeedMot.cpp
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SpeedMot.cpp
 SpeedMot.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SpeedMot.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SpeedMot.h
 
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SpeedMot.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SpeedMot.h
 stdio.h
 -
 stdlib.h
@@ -120,21 +120,21 @@ stdlib.h
 string.h
 -
 ../DataPrimitive.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataPrimitive.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataPrimitive.h
 ../DataFactory.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataFactory.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataFactory.h
 Arduino.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/Arduino.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/Arduino.h
 
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/typePackWrongExcept.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/typePackWrongExcept.h
 exception
 -
 string
 -
 
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataPrimitive.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataPrimitive.h
 stdint-gcc.h
 -
 ../../ScoreBoard_Uart/HW_rename.h
-/home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/ScoreBoard_Uart/HW_rename.h
+/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/ScoreBoard_Uart/HW_rename.h
 

@@ -8,6 +8,8 @@
 ScorbotMainWindows::ScorbotMainWindows(QWidget *parent) : MainWindow(parent) {
     std::cout << "ScorbotMainWindows constructor\n";
     this->uartConnect = new UartConnect(this);  //Gli passo il riferimento ai miei oggetti
+    this->motCtrl = new MotorCTRL(this);
+    this->dataShow = new DataShow(this);
 
 }
 

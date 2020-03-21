@@ -22,6 +22,8 @@
 //linux
 #include <iostream>
 #include <unistd.h>
+#include <UI_useCase/MotorCTRL.h>
+#include <UI_useCase/DataShow.h>
 
 using namespace DataPrimitive;
 using namespace DataManipolation;
@@ -33,29 +35,14 @@ private:
     ScorInterface *scorbot;
     std::string uartPath;
 
-/// Function to support Controll
-
-
+    //Classi che gestiscono i vari UseCase:
+    UartConnect *uartConnect;
+    MotorCTRL *motCtrl;
+    DataShow *dataShow;
 
 public:
     explicit ScorbotMainWindows(QWidget *parent = nullptr);
     ~ScorbotMainWindows();
-
-    ///Controll Thread
-private:
-    //Classi che gestiscono i vari UseCase:
-    UartConnect *uartConnect;
-
-    PIDScorbot *pidM[nMot];
-    EncoderMot *enFeed; //Puntatore per i dati letti
-    EncoderMot *refPid;
-    std::mutex refMutex;    //Per evitare cambio di riferimenti incontrollato
-    SpeedMot *pwm;
-    std::thread *ctrl;
-
-
-//    static void ctrlTh(ScorbotMainWindows *w);
-private slots:
 
 };
 

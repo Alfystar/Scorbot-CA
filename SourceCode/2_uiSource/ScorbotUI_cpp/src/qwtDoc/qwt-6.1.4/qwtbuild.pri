@@ -68,5 +68,5 @@ RCC_DIR      = resources
 
     # in case of debug_and_release object files
     # are built in the release and debug subdirectories
-    OBJECTS_DIR       = obj
+    OBJECTS_DIR       = enObj
 }

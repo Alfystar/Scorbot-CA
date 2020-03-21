@@ -17,6 +17,8 @@ using namespace DataManipolation;
 // new data form scorbot
 class ScorInterface : public ObservableScorbot {
 public:
+
+    virtual bool isConnect() = 0;
     /// Set Data
     virtual void goHome() = 0;
     virtual void sendVel(SpeedMot &sp) = 0;

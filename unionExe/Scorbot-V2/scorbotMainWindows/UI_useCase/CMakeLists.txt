@@ -14,6 +14,8 @@
         add_library(UI_useCase #SHARED
                 ## Aggiunta classi USE CASE ##
                 UartConnect.h UartConnect.cpp UartConnectExeption.h
+                MotorCTRL.h MotorCTRL.cpp
+                DataShow.h DataShow.cpp
                 )
 
         ## qt target

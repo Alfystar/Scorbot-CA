@@ -7,6 +7,7 @@
 #include <QSlider>
 #include <QPushButton>
 #include <QRadioButton>
+#include <QLabel>
 
 /// SystemLib
 #include <DataTransfert_AllInclude.h>
@@ -23,29 +24,12 @@ using namespace DataManipolation;
 class MainWindow : public QMainWindow {
 Q_OBJECT  //Macro di Qt che importa tutti i metodi virtuali necessari, senza doverli scrvere a mano
 
-public:
-    explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow();
-
-private slots:
-    // Data send
-    void sendRef_handler();
-    // Robot Setup
-    void scorParamSet_handler();
-    void scorParamReset_handler();
-    // Other Windows
-    void boardSet_handler();
-    void controllSet_handler();
-    void freeMove_handler();
-    // Cin recalc
-    void cinCalc_handler();
-public:
-    Ui::MainWindow *ui;
-private:
     SettingBoardWindow *setBoardWin;
     FreeMoveWindow *freeMovWin;
 
-    /// Variabili funznionali
+    //// #####################################################################
+    /// Oggetti nel tabWindget
+    /// Variabili funzionali
     EncoderMot *ref;
     AllSensor *feedBack;
 
@@ -72,11 +56,45 @@ private:
     ///Robot Setup
     QPushButton *scorParamSet;
     QPushButton *scorParamReset;
+//// #####################################################################
+    /// Oggetti di visualizzazione
+    QLabel *enRead[nMot];
+    QLabel *thetaRead[nMot];
+    QLabel *curRead[nMot];
 
+
+//// #####################################################################
     ///External button
     QPushButton *scorBoardSetup;
     QPushButton *controlSet;
     QPushButton *freeMove;
+
+
+public:
+    explicit MainWindow(QWidget *parent = 0);
+    ~MainWindow();
+
+    void encoderShow(EncoderMot *e);
+    void currentShow(CurrentMot *c);
+
+signals:
+    void newRef(EncoderMot *en);
+
+private slots:
+    // Data send
+    void sendRef_handler();
+    // Robot Setup
+    void scorParamSet_handler();
+    void scorParamReset_handler();
+    // Other Windows
+    void boardSet_handler();
+    void controllSet_handler();
+    void freeMove_handler();
+    // Cin recalc
+    void cinCalc_handler();
+public:
+    Ui::MainWindow *ui;
+
 
 
 };

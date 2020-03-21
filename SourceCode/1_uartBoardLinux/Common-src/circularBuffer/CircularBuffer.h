@@ -22,8 +22,8 @@ public:
     CircularBuffer(T buf[], size_t size);
     //Puts metod
     int put(T item);        //return new head
-    int put(T *item);    //take obj pointer and copy in internal buffer, return new head
-    int put(T *item, size_t len);    //take obj pointer and copy in internal buffer, return new head
+    int put(T *item);    //take enObj pointer and copy in internal buffer, return new head
+    int put(T *item, size_t len);    //take enObj pointer and copy in internal buffer, return new head
     int put_externalWrite();            //return old head
     int put_externalWrite(int len);     //add len to head, return old head
 

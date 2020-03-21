@@ -10,6 +10,7 @@
 using namespace DataPrimitive;
 using namespace DataManipolation;
 ScorInterface *scorbot;
+ComUartAdapter *uartCom;
 ConcreteObserver *obs;
 
 int main(int argc, char *argv[]) {
@@ -20,16 +21,20 @@ int main(int argc, char *argv[]) {
 
     /// Initialize board Comunication
     try {
-        scorbot = &AdapterFactory::makeUart("/dev/ttyACM0", B921600);
+//        scorbot = &AdapterFactory::makeUart("/dev/ttyUSB0", B115200);
+        uartCom = &ComUartAdapter::getInstance("/dev/ttyUSB0");
+        uartCom->changeDeviceVel(B115200);
     } catch (const std::exception &e) {
         std::cerr << e.what() << std::endl;
         exit(-1);
     }
+    scorbot = uartCom;
+    obs = new ConcreteObserver(scorbot);
+
     if (strcmp(argv[1], "h") == 0) {
         scorbot->goHome();
         exit(0);
     }
-    obs = new ConcreteObserver(scorbot);
 
     /// Creo i finiti riferimenti
 //    int r[nMot];    //reference
