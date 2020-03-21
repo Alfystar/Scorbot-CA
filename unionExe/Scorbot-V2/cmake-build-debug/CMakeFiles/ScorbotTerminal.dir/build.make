@@ -91,6 +91,7 @@ ScorbotTerminal: scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/libscorbotUi.a
 ScorbotTerminal: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.9.5
 ScorbotTerminal: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.9.5
 ScorbotTerminal: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.9.5
+ScorbotTerminal: boardComSrc/UtilityScorbot/libscoreUtiliy.a
 ScorbotTerminal: boardComSrc/UartSubSystem/libUartSubSystem.a
 ScorbotTerminal: boardComSrc/Common-src/uartDriver/libuartDriver.a
 ScorbotTerminal: boardComSrc/Common-src/circularBuffer/libcircularBuffer.a

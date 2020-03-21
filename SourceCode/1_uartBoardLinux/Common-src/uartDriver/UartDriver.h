@@ -70,6 +70,7 @@ namespace Uart {
         UartDriver(const std::string &device) noexcept(false);
         ~UartDriver();  //should be called only by singleton Parametric factory
         void uartSpeed(speed_t vel) noexcept(false);
+        void bufClear();
 #else
         UartDriver(HardwareSerial *serial, long vel);
 #endif

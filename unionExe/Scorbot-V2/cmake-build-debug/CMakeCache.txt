@@ -248,7 +248,7 @@ pidCtrl_LIB_DEPENDS:STATIC=general;dataTransfert;general;timeOp;
 scorbotMainWindows_LIB_DEPENDS:STATIC=general;Qt5::Widgets;general;UI_useCase;
 
 //Dependencies for the target
-scorbotUi_LIB_DEPENDS:STATIC=general;Qt5::Widgets;general;dataTransfert;
+scorbotUi_LIB_DEPENDS:STATIC=general;Qt5::Widgets;general;dataTransfert;general;scoreUtiliy;
 
 //Dependencies for the target
 scoreUtiliy_LIB_DEPENDS:STATIC=general;dataTransfert;

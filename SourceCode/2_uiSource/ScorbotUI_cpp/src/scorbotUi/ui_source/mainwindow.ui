@@ -35,6 +35,10 @@
   <property name="windowTitle">
    <string>ScorbotConnect</string>
   </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>img/Logo-Uni-Tor-Vergata.png_256x256.png</normaloff>img/Logo-Uni-Tor-Vergata.png_256x256.png</iconset>
+  </property>
   <property name="styleSheet">
    <string notr="true">url:(/newPrefix/Logo-Uni-Tor-Vergata.png_48x48.png)</string>
   </property>
@@ -1016,6 +1020,9 @@
           <property name="formAlignment">
            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
           </property>
+          <property name="verticalSpacing">
+           <number>-1</number>
+          </property>
           <item row="0" column="0">
            <widget class="QLabel" name="en1Label_2">
             <property name="text">
@@ -1023,6 +1030,19 @@
             </property>
             <property name="buddy">
              <cstring>en1Home</cstring>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QSpinBox" name="en1Home">
+            <property name="buttonSymbols">
+             <enum>QAbstractSpinBox::PlusMinus</enum>
+            </property>
+            <property name="minimum">
+             <number>-99999</number>
+            </property>
+            <property name="maximum">
+             <number>99999</number>
             </property>
            </widget>
           </item>
@@ -1149,32 +1169,6 @@
              <number>99999</number>
             </property>
            </widget>
-          </item>
-          <item row="0" column="1">
-           <widget class="QSpinBox" name="en1Home">
-            <property name="buttonSymbols">
-             <enum>QAbstractSpinBox::PlusMinus</enum>
-            </property>
-            <property name="minimum">
-             <number>-99999</number>
-            </property>
-            <property name="maximum">
-             <number>99999</number>
-            </property>
-           </widget>
-          </item>
-          <item row="6" column="1">
-           <spacer name="verticalSpacer">
-            <property name="orientation">
-             <enum>Qt::Vertical</enum>
-            </property>
-            <property name="sizeHint" stdset="0">
-             <size>
-              <width>20</width>
-              <height>40</height>
-             </size>
-            </property>
-           </spacer>
           </item>
          </layout>
         </item>
@@ -1328,6 +1322,19 @@
           </item>
           <item row="5" column="1">
            <spacer name="verticalSpacer_2">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+          <item row="5" column="0">
+           <spacer name="verticalSpacer_7">
             <property name="orientation">
              <enum>Qt::Vertical</enum>
             </property>
@@ -1499,6 +1506,19 @@
             </property>
            </spacer>
           </item>
+          <item row="4" column="0">
+           <spacer name="verticalSpacer_8">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
          </layout>
         </item>
        </layout>
@@ -1528,7 +1548,7 @@
                                         </string>
          </property>
          <property name="text">
-          <string>Scorbot Parameter</string>
+          <string>Scorbot Parameter Load</string>
          </property>
         </widget>
        </item>
@@ -3339,7 +3359,7 @@
      <property name="lineWidth">
       <number>2</number>
      </property>
-     <layout class="QVBoxLayout" name="verticalLayout_14">
+     <layout class="QVBoxLayout" name="verticalLayout_14" stretch="0,0">
       <item>
        <widget class="QLabel" name="label_6">
         <property name="sizePolicy">

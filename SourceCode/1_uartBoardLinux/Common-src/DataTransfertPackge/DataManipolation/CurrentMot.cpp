@@ -10,7 +10,7 @@ namespace DataManipolation {
     }
 
     CurrentMot::CurrentMot(mCurrent *c) {
-        this->changePack(*c);
+        this->changePack(c);
     }
 
 #ifdef linuxSide
@@ -36,6 +36,17 @@ namespace DataManipolation {
 #endif
         this->curPack = &c;
     }
+
+    void CurrentMot::changePack(mCurrent *c){
+#ifdef linuxSide
+        if (curMine) {
+            curMine = false;
+            dataFactory::freeMCurrent(curPack);
+        }
+#endif
+        this->curPack = c;
+    }
+
 
     void CurrentMot::copyCur(CurrentMot &c) {
         this->copyCur(c.getCurrent());

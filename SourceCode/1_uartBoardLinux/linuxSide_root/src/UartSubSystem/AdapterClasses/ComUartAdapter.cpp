@@ -297,7 +297,7 @@ void ComUartAdapter::uartReader(ComUartAdapter *u) {
     usleep(10 * 1000UL);  // wait for 10ms to take time to set the class
     while (true) {
         while (!u->uartDev) {
-            std::cerr << "Nessuna com aperta, attendo 500ms\n";
+            std::cerr << "ComUartAdapter::uartReader: Nessuna com aperta, attendo 500ms\n";
             usleep(500 * 1000UL);
         }
         clock_gettime(CLOCK_REALTIME, &now);
@@ -348,8 +348,10 @@ void ComUartAdapter::uartReader(ComUartAdapter *u) {
                     break;
             }
         } else {
-            fprintf(stderr, "Nessuna connessione da %lds %ldms\n", timeToAdd.tv_sec,
+            fprintf(stderr, "ComUartAdapter::uartReader: Nessuna connessione da %lds %ldms\n", timeToAdd.tv_sec,
                     timeToAdd.tv_nsec / (1000UL * 1000UL));
+            u->uartDev->bufClear();
+
         }
     }//while end
 }

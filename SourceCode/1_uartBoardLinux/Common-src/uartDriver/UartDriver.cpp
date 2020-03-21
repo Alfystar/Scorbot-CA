@@ -46,16 +46,12 @@ namespace Uart {
 
         ///##################################################################################################
         ///Internal structure initialize
-        this->potPackType = 0;
-        this->potPackStart = 0;
-        this->expettedEnd = 0;
-        memset(reciveBuf, 0, sizeof(reciveBuf));
         this->cbByteRecive = new CircularBuffer<unsigned char>(reciveBuf, sizeofArray(reciveBuf));
-        memset(cbReciveBuf, 0, sizeof(cbReciveBuf));
         this->cbRecive = new CircularBuffer<pIn>(cbReciveBuf, sizeofArray(cbReciveBuf));
         if (sem_init(&this->recivedPackSem, 0, 0)) {
             throw UartException("Impossibile inizializzare il semaforo a 0", errno);
         }
+        this->bufClear();
 
         /// Thead init
         writeUart_mutex.unlock();   //set for sure the unlock state
@@ -87,6 +83,17 @@ namespace Uart {
         if (tcsetattr(this->fd, TCSANOW, &config)) {
             throw UartException("Impossibile Impostare i parametri selezionati", errno);
         }
+    }
+
+    void UartDriver::bufClear() {
+        this->potPackType = 0;
+        this->potPackStart = 0;
+        this->expettedEnd = 0;
+        memset(reciveBuf, 0, sizeof(reciveBuf));
+        memset(cbReciveBuf, 0, sizeof(cbReciveBuf));
+        tcflush(fd, TCIOFLUSH);
+        cbByteRecive->reset();
+        cbRecive->reset();
     }
 
 #else

@@ -27,10 +27,12 @@ CMakeFiles/ScorbotTerminal.dir/main.cpp.o
  ../boardComSrc/UartSubSystem/InfoExpPack.h
  ../boardComSrc/UartSubSystem/ScorInterface.h
  ../boardComSrc/UartSubSystem/UartSubSystem.h
+ ../boardComSrc/UtilityScorbot/ScorCalc.h
  ../ctrlSrc/pidCtrl/PIDScorbot.h
  ../scorbotMainWindows/ScorbotMainWindows.h
  ../scorbotMainWindows/UI_useCase/DataShow.h
  ../scorbotMainWindows/UI_useCase/MotorCTRL.h
+ ../scorbotMainWindows/UI_useCase/SetupBoard.h
  ../scorbotMainWindows/UI_useCase/UartConnect.h
  ../scorbotMainWindows/UI_useCase/UartConnectExeption.h
  ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h

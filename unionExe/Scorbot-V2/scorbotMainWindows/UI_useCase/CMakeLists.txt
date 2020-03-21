@@ -16,6 +16,7 @@
                 UartConnect.h UartConnect.cpp UartConnectExeption.h
                 MotorCTRL.h MotorCTRL.cpp
                 DataShow.h DataShow.cpp
+                SetupBoard.h SetupBoard.cpp
                 )
 
         ## qt target

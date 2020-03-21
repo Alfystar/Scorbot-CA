@@ -27,6 +27,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi"
   "scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/include"
   "../boardComSrc/Common-src/DataTransfertPackge/."
+  "../boardComSrc/UtilityScorbot/."
   "/usr/include/x86_64-linux-gnu/qt5"
   "/usr/include/x86_64-linux-gnu/qt5/QtWidgets"
   "/usr/include/x86_64-linux-gnu/qt5/QtGui"
@@ -37,6 +38,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DependInfo.cmake"
+  "/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

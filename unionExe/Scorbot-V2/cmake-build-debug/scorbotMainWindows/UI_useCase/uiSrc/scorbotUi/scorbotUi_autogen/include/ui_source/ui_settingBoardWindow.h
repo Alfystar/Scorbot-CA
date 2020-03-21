@@ -625,6 +625,9 @@ public:
         QObject::connect(buttonBox, SIGNAL(accepted()), SettingBoardWindow, SLOT(accept()));
         QObject::connect(buttonBox, SIGNAL(rejected()), SettingBoardWindow, SLOT(reject()));
 
+        motFreqChose->setCurrentIndex(3);
+
+
         QMetaObject::connectSlotsByName(SettingBoardWindow);
     } // setupUi
 

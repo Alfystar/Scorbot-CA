@@ -109,12 +109,26 @@ scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/DataShow.cpp.s: cmake_fo
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UI_useCase.dir/DataShow.cpp.s"
 	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/DataShow.cpp -o CMakeFiles/UI_useCase.dir/DataShow.cpp.s
 
+scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o: scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/flags.make
+scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o: ../scorbotMainWindows/UI_useCase/SetupBoard.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o"
+	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o -c /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/SetupBoard.cpp
+
+scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/UI_useCase.dir/SetupBoard.cpp.i"
+	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/SetupBoard.cpp > CMakeFiles/UI_useCase.dir/SetupBoard.cpp.i
+
+scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/UI_useCase.dir/SetupBoard.cpp.s"
+	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/SetupBoard.cpp -o CMakeFiles/UI_useCase.dir/SetupBoard.cpp.s
+
 # Object files for target UI_useCase
 UI_useCase_OBJECTS = \
 "CMakeFiles/UI_useCase.dir/UI_useCase_autogen/mocs_compilation.cpp.o" \
 "CMakeFiles/UI_useCase.dir/UartConnect.cpp.o" \
 "CMakeFiles/UI_useCase.dir/MotorCTRL.cpp.o" \
-"CMakeFiles/UI_useCase.dir/DataShow.cpp.o"
+"CMakeFiles/UI_useCase.dir/DataShow.cpp.o" \
+"CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o"
 
 # External object files for target UI_useCase
 UI_useCase_EXTERNAL_OBJECTS =
@@ -123,9 +137,10 @@ scorbotMainWindows/UI_useCase/libUI_useCase.a: scorbotMainWindows/UI_useCase/CMa
 scorbotMainWindows/UI_useCase/libUI_useCase.a: scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/UartConnect.cpp.o
 scorbotMainWindows/UI_useCase/libUI_useCase.a: scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/MotorCTRL.cpp.o
 scorbotMainWindows/UI_useCase/libUI_useCase.a: scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/DataShow.cpp.o
+scorbotMainWindows/UI_useCase/libUI_useCase.a: scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o
 scorbotMainWindows/UI_useCase/libUI_useCase.a: scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/build.make
 scorbotMainWindows/UI_useCase/libUI_useCase.a: scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX static library libUI_useCase.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX static library libUI_useCase.a"
 	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase && $(CMAKE_COMMAND) -P CMakeFiles/UI_useCase.dir/cmake_clean_target.cmake
 	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/UI_useCase.dir/link.txt --verbose=$(VERBOSE)
 

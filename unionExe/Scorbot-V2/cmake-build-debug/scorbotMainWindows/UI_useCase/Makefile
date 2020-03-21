@@ -194,6 +194,33 @@ MotorCTRL.cpp.s:
 	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/build.make scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/MotorCTRL.cpp.s
 .PHONY : MotorCTRL.cpp.s
 
+SetupBoard.o: SetupBoard.cpp.o
+
+.PHONY : SetupBoard.o
+
+# target to build an object file
+SetupBoard.cpp.o:
+	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/build.make scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o
+.PHONY : SetupBoard.cpp.o
+
+SetupBoard.i: SetupBoard.cpp.i
+
+.PHONY : SetupBoard.i
+
+# target to preprocess a source file
+SetupBoard.cpp.i:
+	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/build.make scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.i
+.PHONY : SetupBoard.cpp.i
+
+SetupBoard.s: SetupBoard.cpp.s
+
+.PHONY : SetupBoard.s
+
+# target to generate assembly for a file
+SetupBoard.cpp.s:
+	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/build.make scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.s
+.PHONY : SetupBoard.cpp.s
+
 UI_useCase_autogen/mocs_compilation.o: UI_useCase_autogen/mocs_compilation.cpp.o
 
 .PHONY : UI_useCase_autogen/mocs_compilation.o
@@ -264,6 +291,9 @@ help:
 	@echo "... MotorCTRL.o"
 	@echo "... MotorCTRL.i"
 	@echo "... MotorCTRL.s"
+	@echo "... SetupBoard.o"
+	@echo "... SetupBoard.i"
+	@echo "... SetupBoard.s"
 	@echo "... UI_useCase_autogen/mocs_compilation.o"
 	@echo "... UI_useCase_autogen/mocs_compilation.i"
 	@echo "... UI_useCase_autogen/mocs_compilation.s"

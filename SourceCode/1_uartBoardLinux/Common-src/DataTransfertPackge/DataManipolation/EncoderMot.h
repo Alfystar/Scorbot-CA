@@ -25,6 +25,7 @@ namespace DataManipolation {
         ~EncoderMot();
 #endif
         void changePack(mEncoder &en);
+        void changePack(mEncoder *en);
         void copyEn(EncoderMot &en);
         void copyEn(mEncoder *en);
         void copyEn(mEncoder &en);
@@ -35,7 +36,7 @@ namespace DataManipolation {
         static void printEncoder(mEncoder *en);
         static void printEncoder(mEncoder &en);
     private:
-        mEncoder *enPack;
+        mEncoder *enPack = nullptr;
 #ifdef linuxSide
         bool enMine = false;
 #endif

@@ -46,7 +46,6 @@ public:
     explicit UartConnect(MainWindow *parent = nullptr);
     ~UartConnect();
 
-    ScorInterface *getScorInterface() noexcept(false);
 
     ///Controll Thread
 signals:

@@ -19,9 +19,7 @@ namespace DataManipolation {
 
 #ifdef linuxSide
 
-    AllSensor::AllSensor() : allPack(&dataFactory::makeMAll()),
-                             DataManipolation::CurrentMot(&allPack->cur),
-                             DataManipolation::EncoderMot(&allPack->en) {
+    AllSensor::AllSensor() : AllSensor(&dataFactory::makeMAll()){
         allMine = true;
     }
 

@@ -64,9 +64,3 @@ void UartConnect::resetBoard_handler() {
     std::cout << "resetBoard_handler" << "\n";
 
 }
-
-ScorInterface *UartConnect::getScorInterface() {
-    if (!scorInterface)
-        throw new UartConnectExeption("scorInterface = null\nPlease connect the Scorbot\n");
-    return scorInterface;
-}

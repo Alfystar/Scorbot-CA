@@ -27,6 +27,8 @@ if (NOT TARGET scorbotUi)
 #    target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
 
     target_link_libraries(scorbotUi dataTransfert)
+    target_link_libraries(scorbotUi scoreUtiliy)
+
     #set_property(TARGET scorbotUi PROPERTY POSITION_INDEPENDENT_CODE ON)
 
     message("La libreria 'scorbotUi' è stata aggiunta")

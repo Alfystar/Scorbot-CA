@@ -122,6 +122,7 @@ public:
     QLabel *valMinScr_2;
     QFormLayout *formLayout_2;
     QLabel *en1Label_2;
+    QSpinBox *en1Home;
     QLabel *en2Label_2;
     QSpinBox *en2Home;
     QLabel *en3Label_2;
@@ -132,8 +133,6 @@ public:
     QSpinBox *en5Home;
     QLabel *en6Label_2;
     QSpinBox *en6Home;
-    QSpinBox *en1Home;
-    QSpacerItem *verticalSpacer;
     QWidget *layoutWidget2;
     QVBoxLayout *RoboSize;
     QLabel *label;
@@ -149,6 +148,7 @@ public:
     QLabel *l5Label;
     QDoubleSpinBox *l5DoubleSpinBox;
     QSpacerItem *verticalSpacer_2;
+    QSpacerItem *verticalSpacer_7;
     QWidget *layoutWidget3;
     QVBoxLayout *en2deg;
     QLabel *label_2;
@@ -162,6 +162,7 @@ public:
     QLabel *dLabel;
     QDoubleSpinBox *dDoubleSpinBox;
     QSpacerItem *verticalSpacer_3;
+    QSpacerItem *verticalSpacer_8;
     QWidget *layoutWidget4;
     QVBoxLayout *verticalLayout;
     QPushButton *scorParamSet;
@@ -325,6 +326,9 @@ public:
         MainWindow->setSizePolicy(sizePolicy);
         MainWindow->setMinimumSize(QSize(400, 100));
         MainWindow->setMaximumSize(QSize(1007, 476));
+        QIcon icon;
+        icon.addFile(QStringLiteral("img/Logo-Uni-Tor-Vergata.png_256x256.png"), QSize(), QIcon::Normal, QIcon::Off);
+        MainWindow->setWindowIcon(icon);
         MainWindow->setStyleSheet(QStringLiteral("url:(/newPrefix/Logo-Uni-Tor-Vergata.png_48x48.png)"));
         actionInfo = new QAction(MainWindow);
         actionInfo->setObjectName(QStringLiteral("actionInfo"));
@@ -844,10 +848,19 @@ public:
         formLayout_2->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
         formLayout_2->setLabelAlignment(Qt::AlignCenter);
         formLayout_2->setFormAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
+        formLayout_2->setVerticalSpacing(-1);
         en1Label_2 = new QLabel(layoutWidget1);
         en1Label_2->setObjectName(QStringLiteral("en1Label_2"));
 
         formLayout_2->setWidget(0, QFormLayout::LabelRole, en1Label_2);
+
+        en1Home = new QSpinBox(layoutWidget1);
+        en1Home->setObjectName(QStringLiteral("en1Home"));
+        en1Home->setButtonSymbols(QAbstractSpinBox::PlusMinus);
+        en1Home->setMinimum(-99999);
+        en1Home->setMaximum(99999);
+
+        formLayout_2->setWidget(0, QFormLayout::FieldRole, en1Home);
 
         en2Label_2 = new QLabel(layoutWidget1);
         en2Label_2->setObjectName(QStringLiteral("en2Label_2"));
@@ -916,18 +929,6 @@ public:
         en6Home->setMaximum(99999);
 
         formLayout_2->setWidget(5, QFormLayout::FieldRole, en6Home);
-
-        en1Home = new QSpinBox(layoutWidget1);
-        en1Home->setObjectName(QStringLiteral("en1Home"));
-        en1Home->setButtonSymbols(QAbstractSpinBox::PlusMinus);
-        en1Home->setMinimum(-99999);
-        en1Home->setMaximum(99999);
-
-        formLayout_2->setWidget(0, QFormLayout::FieldRole, en1Home);
-
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        formLayout_2->setItem(6, QFormLayout::FieldRole, verticalSpacer);
 
 
         homeOffset->addLayout(formLayout_2);
@@ -1028,6 +1029,10 @@ public:
 
         formLayout->setItem(5, QFormLayout::FieldRole, verticalSpacer_2);
 
+        verticalSpacer_7 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        formLayout->setItem(5, QFormLayout::LabelRole, verticalSpacer_7);
+
 
         RoboSize->addLayout(formLayout);
 
@@ -1115,6 +1120,10 @@ public:
         verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
         formLayout_3->setItem(4, QFormLayout::FieldRole, verticalSpacer_3);
+
+        verticalSpacer_8 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        formLayout_3->setItem(4, QFormLayout::LabelRole, verticalSpacer_8);
 
 
         en2deg->addLayout(formLayout_3);
@@ -2363,7 +2372,7 @@ public:
         bLabel->setText(QApplication::translate("MainWindow", "\316\262", Q_NULLPTR));
         cLabel->setText(QApplication::translate("MainWindow", "\316\263", Q_NULLPTR));
         dLabel->setText(QApplication::translate("MainWindow", "\316\264", Q_NULLPTR));
-        scorParamSet->setText(QApplication::translate("MainWindow", "Scorbot Parameter", Q_NULLPTR));
+        scorParamSet->setText(QApplication::translate("MainWindow", "Scorbot Parameter Load", Q_NULLPTR));
         scorParamReset->setText(QApplication::translate("MainWindow", "RESET", Q_NULLPTR));
         tabReference->setTabText(tabReference->indexOf(RoboSetup), QApplication::translate("MainWindow", "Robot Setup", Q_NULLPTR));
         image->setText(QString());

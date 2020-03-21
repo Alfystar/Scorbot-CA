@@ -10,7 +10,7 @@ namespace DataManipolation {
     }
 
     EncoderMot::EncoderMot(mEncoder *en) {
-        this->changePack(*en);
+        this->changePack(en);
     }
 
 #ifdef linuxSide
@@ -35,6 +35,17 @@ namespace DataManipolation {
         }
 #endif
         this->enPack = &en;
+
+    }
+
+    void EncoderMot::changePack(mEncoder *en){
+#ifdef linuxSide
+        if (enMine) {
+            enMine = false;
+            dataFactory::freeMEncoder(enPack);
+        }
+#endif
+        this->enPack = en;
 
     }
 

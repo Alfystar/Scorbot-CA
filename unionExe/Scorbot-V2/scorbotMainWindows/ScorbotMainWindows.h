@@ -24,6 +24,7 @@
 #include <unistd.h>
 #include <UI_useCase/MotorCTRL.h>
 #include <UI_useCase/DataShow.h>
+#include <UI_useCase/SetupBoard.h>
 
 using namespace DataPrimitive;
 using namespace DataManipolation;
@@ -39,6 +40,7 @@ private:
     UartConnect *uartConnect;
     MotorCTRL *motCtrl;
     DataShow *dataShow;
+    SetupBoard *setupBoard;
 
 public:
     explicit ScorbotMainWindows(QWidget *parent = nullptr);

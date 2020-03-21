@@ -26,10 +26,12 @@ CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../boardComSrc/UartSubSystem/GetCom_i
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../boardComSrc/UartSubSystem/InfoExpPack.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../boardComSrc/UartSubSystem/ScorInterface.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../boardComSrc/UartSubSystem/UartSubSystem.h
+CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../boardComSrc/UtilityScorbot/ScorCalc.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../ctrlSrc/pidCtrl/PIDScorbot.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/ScorbotMainWindows.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/DataShow.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/MotorCTRL.h
+CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/SetupBoard.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/UartConnect.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/UartConnectExeption.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h

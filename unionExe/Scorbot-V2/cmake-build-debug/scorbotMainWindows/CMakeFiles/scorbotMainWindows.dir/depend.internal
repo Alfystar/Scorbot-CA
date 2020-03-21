@@ -27,12 +27,15 @@ scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o
  ../boardComSrc/UartSubSystem/InfoExpPack.h
  ../boardComSrc/UartSubSystem/ScorInterface.h
  ../boardComSrc/UartSubSystem/UartSubSystem.h
+ ../boardComSrc/UtilityScorbot/ScorCalc.h
  ../ctrlSrc/pidCtrl/PIDScorbot.h
  ../scorbotMainWindows/UI_useCase/DataShow.h
  ../scorbotMainWindows/UI_useCase/MotorCTRL.h
+ ../scorbotMainWindows/UI_useCase/SetupBoard.h
  ../scorbotMainWindows/UI_useCase/UartConnect.h
  ../scorbotMainWindows/UI_useCase/UartConnectExeption.h
  ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
+ ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h
  ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/uartChoise.h
  /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.cpp
  /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.h
@@ -238,12 +241,15 @@ scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/
  ../boardComSrc/UartSubSystem/InfoExpPack.h
  ../boardComSrc/UartSubSystem/ScorInterface.h
  ../boardComSrc/UartSubSystem/UartSubSystem.h
+ ../boardComSrc/UtilityScorbot/ScorCalc.h
  ../ctrlSrc/pidCtrl/PIDScorbot.h
  ../scorbotMainWindows/UI_useCase/DataShow.h
  ../scorbotMainWindows/UI_useCase/MotorCTRL.h
+ ../scorbotMainWindows/UI_useCase/SetupBoard.h
  ../scorbotMainWindows/UI_useCase/UartConnect.h
  ../scorbotMainWindows/UI_useCase/UartConnectExeption.h
  ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
+ ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h
  ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/uartChoise.h
  /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/scorbotMainWindows_autogen/EWIEGA46WW/moc_ScorbotMainWindows.cpp
  /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/scorbotMainWindows_autogen/mocs_compilation.cpp

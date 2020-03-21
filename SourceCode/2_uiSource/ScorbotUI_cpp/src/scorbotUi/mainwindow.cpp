@@ -4,6 +4,8 @@
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
         ui(new Ui::MainWindow) {
+
+
     // My Ui
     ui->setupUi(this);
     //todo: imparare a usare il file .qrc
@@ -12,6 +14,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // Other Windows
     setBoardWin = new SettingBoardWindow(this);    //creo la finestra e la faccio mia figlia
+    calc = setBoardWin->getScorCalcSetuped();
     freeMovWin = new FreeMoveWindow(this);
 
     // Data get and send
@@ -56,8 +59,8 @@ MainWindow::MainWindow(QWidget *parent) :
     controlSet = ui->controlSet;
     freeMove = ui->freeMove;
     /// Button Signal
-    connect(scorParamSet, SIGNAL (released()), this, SLOT (scorParamSet_handler()));
-    connect(scorParamReset, SIGNAL (released()), this, SLOT (scorParamReset_handler()));
+    connect(scorParamSet, SIGNAL (released()), this, SLOT (scorParamSet_handler()));    // Parametri dimensionali Scorbot
+    connect(scorParamReset, SIGNAL (released()), this, SLOT (scorParamReset_handler()));    // Parametri dimensionali Scorbot
     connect(sendRef, SIGNAL (released()), this, SLOT (sendRef_handler()));
     connect(scorBoardSetup, SIGNAL (released()), this, SLOT (boardSet_handler()));
     connect(controlSet, SIGNAL (released()), this, SLOT (controllSet_handler()));
@@ -118,9 +121,9 @@ MainWindow::~MainWindow() {
 }
 
 void MainWindow::encoderShow(EncoderMot *e) {
-
+    feedBack->copyEn(*e);
     for (int i = Mot1; i < nMot; ++i) {
-        enRead[i]->setNum(e->getEn((motCode)i));
+        enRead[i]->setNum(feedBack->getEn((motCode)i));
         //todo: tramite scorCalc, convertire gli encoder letti in angoli
         thetaRead[i]->setNum(e->getEn((motCode)i));
     }
@@ -128,10 +131,13 @@ void MainWindow::encoderShow(EncoderMot *e) {
 }
 
 void MainWindow::currentShow(CurrentMot *c) {
+    feedBack->copyCur(*c);
     for (int i = Mot1; i < nMot; ++i) {
-        curRead[i]->setNum(c->getCurrent((motCode)i));
+        curRead[i]->setNum(feedBack->getCurrent((motCode)i));
     }
 }
+
+
 
 
 void MainWindow::sendRef_handler() {

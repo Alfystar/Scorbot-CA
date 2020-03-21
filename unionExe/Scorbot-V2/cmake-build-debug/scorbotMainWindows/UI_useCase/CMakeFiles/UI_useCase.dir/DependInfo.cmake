@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/DataShow.cpp" "/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/DataShow.cpp.o"
   "/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/MotorCTRL.cpp" "/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/MotorCTRL.cpp.o"
+  "/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/SetupBoard.cpp" "/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o"
   "/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/mocs_compilation.cpp" "/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/UI_useCase_autogen/mocs_compilation.cpp.o"
   "/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/UartConnect.cpp" "/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/UartConnect.cpp.o"
   )
@@ -25,6 +26,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../scorbotMainWindows/UI_useCase"
   "scorbotMainWindows/UI_useCase/UI_useCase_autogen/include"
   "../boardComSrc/Common-src/DataTransfertPackge/."
+  "../boardComSrc/UtilityScorbot/."
   "../boardComSrc/UartSubSystem/."
   "../boardComSrc/Common-src/uartDriver/."
   "../boardComSrc/Common-src/circularBuffer"
@@ -43,6 +45,7 @@ set(CMAKE_TARGET_LINKED_INFO_FILES
   "/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DependInfo.cmake"
   "/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/DependInfo.cmake"
   "/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/DependInfo.cmake"
+  "/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/DependInfo.cmake"
   "/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/DependInfo.cmake"
   "/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/circularBuffer/CMakeFiles/circularBuffer.dir/DependInfo.cmake"
   "/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/DependInfo.cmake"

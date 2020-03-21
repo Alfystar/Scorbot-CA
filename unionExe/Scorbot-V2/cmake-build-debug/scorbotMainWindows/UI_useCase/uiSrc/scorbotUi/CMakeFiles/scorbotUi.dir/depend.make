@@ -179,6 +179,7 @@ scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindo
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o: ../boardComSrc/Common-src/DataTransfertPackge/DataManipolation/typePackWrongExcept.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o: ../boardComSrc/Common-src/DataTransfertPackge/DataPrimitive.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o: ../boardComSrc/Common-src/DataTransfertPackge/DataTransfert_AllInclude.h
+scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o: ../boardComSrc/UtilityScorbot/ScorCalc.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWinsow.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.cpp
@@ -367,6 +368,7 @@ scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o: ../boardComSrc/Common-src/DataTransfertPackge/DataManipolation/typePackWrongExcept.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o: ../boardComSrc/Common-src/DataTransfertPackge/DataPrimitive.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o: ../boardComSrc/Common-src/DataTransfertPackge/DataTransfert_AllInclude.h
+scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o: ../boardComSrc/UtilityScorbot/ScorCalc.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o: /home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/commonDefine.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o: /home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/freeMoveWinsow.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o: /home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/mainwindow.h
@@ -511,6 +513,7 @@ scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBo
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: ../boardComSrc/Common-src/DataTransfertPackge/DataManipolation/typePackWrongExcept.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: ../boardComSrc/Common-src/DataTransfertPackge/DataPrimitive.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: ../boardComSrc/Common-src/DataTransfertPackge/DataTransfert_AllInclude.h
+scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: ../boardComSrc/UtilityScorbot/ScorCalc.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.cpp
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant
@@ -604,12 +607,16 @@ scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBo
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpaintdevice.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpainterpath.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpalette.h
+scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpen.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixelformat.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpixmap.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qpolygon.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qregion.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgb.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qrgba64.h
+scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h
+scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextformat.h
+scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qtgui-config.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qtguiglobal.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qtouchdevice.h
@@ -628,6 +635,7 @@ scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBo
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFormLayout
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHeaderView
+scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QInputDialog
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLayout
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
@@ -657,9 +665,11 @@ scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBo
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h
+scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qinputdialog.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h
+scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlineedit.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qradiobutton.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h

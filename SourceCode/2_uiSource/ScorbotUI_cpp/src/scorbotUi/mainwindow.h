@@ -15,6 +15,8 @@
 #include "settingBoardWindow.h"
 #include "freeMoveWinsow.h"
 #include "commonDefine.h"
+#include <ScorCalc.h>
+
 namespace Ui {
     class MainWindow; //Nome del windget radice nel file ui
 }
@@ -24,8 +26,7 @@ using namespace DataManipolation;
 class MainWindow : public QMainWindow {
 Q_OBJECT  //Macro di Qt che importa tutti i metodi virtuali necessari, senza doverli scrvere a mano
 
-    SettingBoardWindow *setBoardWin;
-    FreeMoveWindow *freeMovWin;
+    ScoreCalc *calc;
 
     //// #####################################################################
     /// Oggetti nel tabWindget
@@ -71,11 +72,17 @@ Q_OBJECT  //Macro di Qt che importa tutti i metodi virtuali necessari, senza dov
 
 
 public:
+
+    SettingBoardWindow *setBoardWin;
+    FreeMoveWindow *freeMovWin;
+
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
 
     void encoderShow(EncoderMot *e);
     void currentShow(CurrentMot *c);
+    void SettingShow(SettingBoard_C *s);
+
 
 signals:
     void newRef(EncoderMot *en);
@@ -84,8 +91,8 @@ private slots:
     // Data send
     void sendRef_handler();
     // Robot Setup
-    void scorParamSet_handler();
-    void scorParamReset_handler();
+    void scorParamSet_handler(); // Parametri dimensionali Scorbot
+    void scorParamReset_handler(); // Parametri dimensionali Scorbot
     // Other Windows
     void boardSet_handler();
     void controllSet_handler();

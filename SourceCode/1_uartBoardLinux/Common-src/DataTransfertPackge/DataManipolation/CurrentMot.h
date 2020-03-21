@@ -25,6 +25,7 @@ namespace DataManipolation {
         ~CurrentMot();
 #endif
         void changePack(mCurrent &c);
+        void changePack(mCurrent *c);
         void copyCur(CurrentMot &c);
         void copyCur(mCurrent *c);
         void copyCur(mCurrent &c);
@@ -35,7 +36,7 @@ namespace DataManipolation {
         static void printCurrent(mCurrent *c);
         static void printCurrent(mCurrent &c);
     private:
-        mCurrent *curPack;
+        mCurrent *curPack = nullptr;
 #ifdef linuxSide
         bool curMine = false;
 #endif

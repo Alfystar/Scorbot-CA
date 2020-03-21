@@ -282,6 +282,12 @@ AdapterFactory.h
 termios.h
 -
 
+../boardComSrc/UtilityScorbot/ScorCalc.h
+math.h
+-
+DataTransfert_AllInclude.h
+-
+
 ../ctrlSrc/pidCtrl/PIDScorbot.h
 cmath
 -
@@ -325,6 +331,8 @@ UI_useCase/MotorCTRL.h
 -
 UI_useCase/DataShow.h
 -
+UI_useCase/SetupBoard.h
+-
 
 ../scorbotMainWindows/UI_useCase/DataShow.h
 QApplication
@@ -364,6 +372,28 @@ UartSubSystem.h
 ConcreteObserver.h
 -
 PIDScorbot.h
+-
+iostream
+-
+unistd.h
+-
+
+../scorbotMainWindows/UI_useCase/SetupBoard.h
+QApplication
+-
+QAction
+-
+QtWidgets/QMessageBox
+-
+DataTransfert_AllInclude.h
+-
+UartSubSystem.h
+-
+uiSrc/scorbotUi/mainwindow.h
+-
+uiSrc/scorbotUi/settingBoardWindow.h
+-
+ConcreteObserver.h
 -
 iostream
 -
@@ -439,6 +469,8 @@ freeMoveWinsow.h
 ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWinsow.h
 commonDefine.h
 ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
+ScorCalc.h
+-
 
 ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h
 QDialog
@@ -454,6 +486,8 @@ QRadioButton
 DataTransfert_AllInclude.h
 -
 iostream
+-
+ScorCalc.h
 -
 
 ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/uartChoise.h
