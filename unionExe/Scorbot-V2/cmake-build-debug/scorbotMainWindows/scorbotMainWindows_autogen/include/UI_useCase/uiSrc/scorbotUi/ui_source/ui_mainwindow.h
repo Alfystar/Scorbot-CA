@@ -282,7 +282,7 @@ public:
     QLabel *thEr3;
     QLabel *thEr4;
     QLabel *thEr5;
-    QLabel *thEr6;
+    QLabel *PinzaOpenErr;
     QFrame *curRead;
     QVBoxLayout *verticalLayout_14;
     QLabel *label_6;
@@ -2003,14 +2003,14 @@ public:
 
         verticalLayout_12->addWidget(thEr5);
 
-        thEr6 = new QLabel(layoutWidget11);
-        thEr6->setObjectName(QStringLiteral("thEr6"));
-        sizePolicy3.setHeightForWidth(thEr6->sizePolicy().hasHeightForWidth());
-        thEr6->setSizePolicy(sizePolicy3);
-        thEr6->setFont(font4);
-        thEr6->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
+        PinzaOpenErr = new QLabel(layoutWidget11);
+        PinzaOpenErr->setObjectName(QStringLiteral("PinzaOpenErr"));
+        sizePolicy3.setHeightForWidth(PinzaOpenErr->sizePolicy().hasHeightForWidth());
+        PinzaOpenErr->setSizePolicy(sizePolicy3);
+        PinzaOpenErr->setFont(font4);
+        PinzaOpenErr->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
-        verticalLayout_12->addWidget(thEr6);
+        verticalLayout_12->addWidget(PinzaOpenErr);
 
 
         horizontalLayout_8->addLayout(verticalLayout_12);
@@ -2451,7 +2451,7 @@ public:
         thEr3->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
         thEr4->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
         thEr5->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
-        thEr6->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
+        PinzaOpenErr->setText(QApplication::translate("MainWindow", "0", Q_NULLPTR));
         label_6->setText(QApplication::translate("MainWindow", "Current Read", Q_NULLPTR));
         ma1->setText(QApplication::translate("MainWindow", "mA:", Q_NULLPTR));
         ma2->setText(QApplication::translate("MainWindow", "mA:", Q_NULLPTR));
