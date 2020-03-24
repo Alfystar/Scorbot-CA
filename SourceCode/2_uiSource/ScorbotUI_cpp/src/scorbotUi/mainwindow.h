@@ -60,7 +60,9 @@ Q_OBJECT  //Macro di Qt che importa tutti i metodi virtuali necessari, senza dov
 //// #####################################################################
     /// Oggetti di visualizzazione
     QLabel *enRead[nMot];
+    QLabel *enReadErr[nMot];
     QLabel *thetaRead[nMot];
+    QLabel *thetaReadErr[nMot];
     QLabel *curRead[nMot];
 
 

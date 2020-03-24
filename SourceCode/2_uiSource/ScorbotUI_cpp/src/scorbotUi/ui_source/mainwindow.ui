@@ -3309,7 +3309,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="thEr6">
+             <widget class="QLabel" name="PinzaOpenErr">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                 <horstretch>0</horstretch>

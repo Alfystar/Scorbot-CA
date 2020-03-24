@@ -96,12 +96,28 @@ MainWindow::MainWindow(QWidget *parent) :
     enRead[Mot5] = ui->enR5;
     enRead[Mot6] = ui->enR6;
 
+    enReadErr[Mot1] = ui->enEr1;
+    enReadErr[Mot2] = ui->enEr2;
+    enReadErr[Mot3] = ui->enEr3;
+    enReadErr[Mot4] = ui->enEr4;
+    enReadErr[Mot5] = ui->enEr5;
+    enReadErr[Mot6] = ui->enEr6;
+
+
     thetaRead[Mot1] = ui->thR1;
     thetaRead[Mot2] = ui->thR2;
     thetaRead[Mot3] = ui->thR3;
     thetaRead[Mot4] = ui->thR4;
     thetaRead[Mot5] = ui->thR5;
     thetaRead[Mot6] = ui->PinzaOpen;
+
+    thetaReadErr[Mot1] = ui->thEr1;
+    thetaReadErr[Mot2] = ui->thEr2;
+    thetaReadErr[Mot3] = ui->thEr3;
+    thetaReadErr[Mot4] = ui->thEr4;
+    thetaReadErr[Mot5] = ui->thEr5;
+    thetaReadErr[Mot6] = ui->PinzaOpenErr;
+
 
     curRead[Mot1] = ui->mA1;
     curRead[Mot2] = ui->mA2;
@@ -124,8 +140,11 @@ void MainWindow::encoderShow(EncoderMot *e) {
     feedBack->copyEn(*e);
     for (int i = Mot1; i < nMot; ++i) {
         enRead[i]->setNum(feedBack->getEn((motCode)i));
+        enReadErr[i]->setNum(feedBack->getEn((motCode)i)-ref->getEn((motCode)i));
         //todo: tramite scorCalc, convertire gli encoder letti in angoli
         thetaRead[i]->setNum(e->getEn((motCode)i));
+        thetaReadErr[i]->setNum(feedBack->getEn((motCode)i)-ref->getEn((motCode)i));
+
     }
 
 }
