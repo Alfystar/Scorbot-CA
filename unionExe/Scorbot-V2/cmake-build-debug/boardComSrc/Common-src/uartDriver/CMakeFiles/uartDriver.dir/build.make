@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/alfystar/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/alfystar/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2
+CMAKE_SOURCE_DIR = /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/depend.make
@@ -59,16 +59,16 @@ include boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/flags.make
 
 boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/UartDriver.cpp.o: boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/flags.make
 boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/UartDriver.cpp.o: ../boardComSrc/Common-src/uartDriver/UartDriver.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/UartDriver.cpp.o"
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uartDriver.dir/UartDriver.cpp.o -c /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/UartDriver.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/UartDriver.cpp.o"
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/uartDriver.dir/UartDriver.cpp.o -c /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/UartDriver.cpp
 
 boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/UartDriver.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/uartDriver.dir/UartDriver.cpp.i"
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/UartDriver.cpp > CMakeFiles/uartDriver.dir/UartDriver.cpp.i
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/UartDriver.cpp > CMakeFiles/uartDriver.dir/UartDriver.cpp.i
 
 boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/UartDriver.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/uartDriver.dir/UartDriver.cpp.s"
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/UartDriver.cpp -o CMakeFiles/uartDriver.dir/UartDriver.cpp.s
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/UartDriver.cpp -o CMakeFiles/uartDriver.dir/UartDriver.cpp.s
 
 # Object files for target uartDriver
 uartDriver_OBJECTS = \
@@ -80,9 +80,9 @@ uartDriver_EXTERNAL_OBJECTS =
 boardComSrc/Common-src/uartDriver/libuartDriver.a: boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/UartDriver.cpp.o
 boardComSrc/Common-src/uartDriver/libuartDriver.a: boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/build.make
 boardComSrc/Common-src/uartDriver/libuartDriver.a: boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libuartDriver.a"
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver && $(CMAKE_COMMAND) -P CMakeFiles/uartDriver.dir/cmake_clean_target.cmake
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/uartDriver.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libuartDriver.a"
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver && $(CMAKE_COMMAND) -P CMakeFiles/uartDriver.dir/cmake_clean_target.cmake
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/uartDriver.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/build: boardComSrc/Common-src/uartDriver/libuartDriver.a
@@ -90,10 +90,10 @@ boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/build: boardComSrc/C
 .PHONY : boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/build
 
 boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/clean:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver && $(CMAKE_COMMAND) -P CMakeFiles/uartDriver.dir/cmake_clean.cmake
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver && $(CMAKE_COMMAND) -P CMakeFiles/uartDriver.dir/cmake_clean.cmake
 .PHONY : boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/clean
 
 boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/depend:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2 /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2 /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/depend
 

@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/alfystar/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/alfystar/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2
+CMAKE_SOURCE_DIR = /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/depend.make
@@ -59,16 +59,16 @@ include boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/flags.make
 
 boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/ScorCalc.cpp.o: boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/flags.make
 boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/ScorCalc.cpp.o: ../boardComSrc/UtilityScorbot/ScorCalc.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/ScorCalc.cpp.o"
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scoreUtiliy.dir/ScorCalc.cpp.o -c /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UtilityScorbot/ScorCalc.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/ScorCalc.cpp.o"
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/scoreUtiliy.dir/ScorCalc.cpp.o -c /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UtilityScorbot/ScorCalc.cpp
 
 boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/ScorCalc.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/scoreUtiliy.dir/ScorCalc.cpp.i"
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UtilityScorbot/ScorCalc.cpp > CMakeFiles/scoreUtiliy.dir/ScorCalc.cpp.i
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UtilityScorbot/ScorCalc.cpp > CMakeFiles/scoreUtiliy.dir/ScorCalc.cpp.i
 
 boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/ScorCalc.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/scoreUtiliy.dir/ScorCalc.cpp.s"
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UtilityScorbot/ScorCalc.cpp -o CMakeFiles/scoreUtiliy.dir/ScorCalc.cpp.s
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UtilityScorbot/ScorCalc.cpp -o CMakeFiles/scoreUtiliy.dir/ScorCalc.cpp.s
 
 # Object files for target scoreUtiliy
 scoreUtiliy_OBJECTS = \
@@ -80,9 +80,9 @@ scoreUtiliy_EXTERNAL_OBJECTS =
 boardComSrc/UtilityScorbot/libscoreUtiliy.a: boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/ScorCalc.cpp.o
 boardComSrc/UtilityScorbot/libscoreUtiliy.a: boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/build.make
 boardComSrc/UtilityScorbot/libscoreUtiliy.a: boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libscoreUtiliy.a"
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot && $(CMAKE_COMMAND) -P CMakeFiles/scoreUtiliy.dir/cmake_clean_target.cmake
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scoreUtiliy.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libscoreUtiliy.a"
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot && $(CMAKE_COMMAND) -P CMakeFiles/scoreUtiliy.dir/cmake_clean_target.cmake
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/scoreUtiliy.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/build: boardComSrc/UtilityScorbot/libscoreUtiliy.a
@@ -90,10 +90,10 @@ boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/build: boardComSrc/Utility
 .PHONY : boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/build
 
 boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/clean:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot && $(CMAKE_COMMAND) -P CMakeFiles/scoreUtiliy.dir/cmake_clean.cmake
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot && $(CMAKE_COMMAND) -P CMakeFiles/scoreUtiliy.dir/cmake_clean.cmake
 .PHONY : boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/clean
 
 boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/depend:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2 /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UtilityScorbot /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2 /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UtilityScorbot /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/depend
 

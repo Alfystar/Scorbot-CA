@@ -1,4 +1,4 @@
-# Install script for directory: /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase
+# Install script for directory: /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/cmake_install.cmake")
+  include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/cmake_install.cmake")
 
 endif()
 

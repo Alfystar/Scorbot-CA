@@ -136,37 +136,37 @@ stdlib.h
 iostream
 -
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/DataTransfert_AllInclude.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/DataTransfert_AllInclude.h
 DataPrimitive.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/DataPrimitive.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/DataPrimitive.h
 DataFactory.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/DataFactory.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/DataFactory.h
 DataManipolation/AllSensor.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/DataManipolation/AllSensor.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/DataManipolation/AllSensor.h
 DataManipolation/CurrentMot.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/DataManipolation/CurrentMot.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/DataManipolation/CurrentMot.h
 DataManipolation/EncoderMot.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/DataManipolation/EncoderMot.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/DataManipolation/EncoderMot.h
 DataManipolation/SpeedMot.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/DataManipolation/SpeedMot.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/DataManipolation/SpeedMot.h
 DataManipolation/SettingBoard_C.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/DataManipolation/SettingBoard_C.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/DataManipolation/SettingBoard_C.h
 DataManipolation/Pack.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/DataManipolation/Pack.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/DataManipolation/Pack.h
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/circularBuffer/CircularBuffer.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/circularBuffer/CircularBuffer.h
 Arduino.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/circularBuffer/Arduino.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/circularBuffer/Arduino.h
 stdlib.h
 -
 iostream
 -
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/UartDriver.cpp
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/UartDriver.cpp
 UartDriver.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/UartDriver.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/UartDriver.h
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/UartDriver.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/UartDriver.h
 stdlib.h
 -
 stdio.h
@@ -184,7 +184,7 @@ errno.h
 string
 -
 UartException.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/UartException.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/UartException.h
 CircularBuffer.h
 -
 thread
@@ -196,15 +196,15 @@ mutex
 DataTransfert_AllInclude.h
 -
 Arduino.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/Arduino.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/Arduino.h
 stdlib.h
 -
 ../DataTransfertPackge/DataTransfert_AllInclude.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/DataTransfert_AllInclude.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/DataTransfert_AllInclude.h
 ../circularBuffer/CircularBuffer.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/circularBuffer/CircularBuffer.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/circularBuffer/CircularBuffer.h
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/UartException.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/UartException.h
 exception
 -
 string

@@ -37,14 +37,13 @@ scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o
  ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
  ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h
  ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/uartChoise.h
- /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.cpp
- /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.h
- /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
- /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWinsow.h
- /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
- /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h
+ /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.cpp
+ /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.h
+ /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
+ /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWinsow.h
+ /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
+ /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
@@ -74,7 +73,6 @@ scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
- /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qline.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlist.h
@@ -118,6 +116,7 @@ scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qversiontagging.h
+ /usr/include/x86_64-linux-gnu/qt5/QtGui/QIcon
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qcolor.h
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qcursor.h
@@ -150,14 +149,12 @@ scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QAction
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QButtonGroup
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QCheckBox
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDoubleSpinBox
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFormLayout
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QFrame
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHeaderView
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLayout
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow
@@ -171,27 +168,23 @@ scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpacerItem
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpinBox
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSplitter
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTabWidget
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QWidget
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qaction.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qactiongroup.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qbuttongroup.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcheckbox.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdesktopwidget.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qformlayout.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayoutitem.h
@@ -202,14 +195,11 @@ scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qprogressbar.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qradiobutton.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qspinbox.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsplitter.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h
- /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstatusbar.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h
@@ -251,13 +241,13 @@ scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/
  ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
  ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h
  ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/uartChoise.h
- /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/scorbotMainWindows_autogen/EWIEGA46WW/moc_ScorbotMainWindows.cpp
- /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/scorbotMainWindows_autogen/mocs_compilation.cpp
- /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.h
- /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
- /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWinsow.h
- /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
- /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h
+ /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/scorbotMainWindows_autogen/EWIEGA46WW/moc_ScorbotMainWindows.cpp
+ /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/scorbotMainWindows_autogen/mocs_compilation.cpp
+ /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.h
+ /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
+ /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWinsow.h
+ /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
+ /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h

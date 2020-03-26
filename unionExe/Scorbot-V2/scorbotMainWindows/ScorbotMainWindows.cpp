@@ -11,6 +11,7 @@ ScorbotMainWindows::ScorbotMainWindows(QWidget *parent) : MainWindow(parent) {
     this->motCtrl = new MotorCTRL(this);
     this->dataShow = new DataShow(this);
     this->setupBoard = new SetupBoard(this);
+    this->statusBar()->showMessage("Avvio interfaccia");
 }
 
 ScorbotMainWindows::~ScorbotMainWindows() {

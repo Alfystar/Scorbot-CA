@@ -1,18 +1,20 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'ScorbotMainWindows.h'
 **
-** Created by: The Qt Meta Object Compiler version 67 (Qt 5.9.5)
+** Created by: The Qt Meta Object Compiler version 67 (Qt 5.14.1)
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
-#include "../../../../../../../../Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.h"
+#include <memory>
+#include "../../../../scorbotMainWindows/ScorbotMainWindows.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
+
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'ScorbotMainWindows.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
-#error "This file was generated using the moc from 5.9.5. It"
+#error "This file was generated using the moc from 5.14.1. It"
 #error "cannot be used with the include files from this version of Qt."
 #error "(The moc has changed too much.)"
 #endif
@@ -40,41 +42,43 @@ QT_MOC_LITERAL(0, 0, 18) // "ScorbotMainWindows"
 
 static const uint qt_meta_data_ScorbotMainWindows[] = {
 
- // content:
-       7,       // revision
-       0,       // classname
-       0,    0, // classinfo
-       0,    0, // methods
-       0,    0, // properties
-       0,    0, // enums/sets
-       0,    0, // constructors
-       0,       // flags
-       0,       // signalCount
+        // content:
+        8,       // revision
+        0,       // classname
+        0, 0, // classinfo
+        0, 0, // methods
+        0, 0, // properties
+        0, 0, // enums/sets
+        0, 0, // constructors
+        0,       // flags
+        0,       // signalCount
 
-       0        // eod
+        0        // eod
 };
 
-void ScorbotMainWindows::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
-{
+void ScorbotMainWindows::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a) {
     Q_UNUSED(_o);
     Q_UNUSED(_id);
     Q_UNUSED(_c);
     Q_UNUSED(_a);
 }
 
-const QMetaObject ScorbotMainWindows::staticMetaObject = {
-    { &MainWindow::staticMetaObject, qt_meta_stringdata_ScorbotMainWindows.data,
-      qt_meta_data_ScorbotMainWindows,  qt_static_metacall, nullptr, nullptr}
-};
+QT_INIT_METAOBJECT const QMetaObject
+ScorbotMainWindows::staticMetaObject = {{
+                                                QMetaObject::SuperData::link<MainWindow::staticMetaObject>(),
+                                                qt_meta_stringdata_ScorbotMainWindows.data,
+                                                qt_meta_data_ScorbotMainWindows,
+                                                qt_static_metacall,
+                                                nullptr,
+                                                nullptr
+                                        }};
 
 
-const QMetaObject *ScorbotMainWindows::metaObject() const
-{
+const QMetaObject *ScorbotMainWindows::metaObject() const {
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *ScorbotMainWindows::qt_metacast(const char *_clname)
-{
+void *ScorbotMainWindows::qt_metacast(const char *_clname) {
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_ScorbotMainWindows.stringdata0))
         return static_cast<void*>(this);

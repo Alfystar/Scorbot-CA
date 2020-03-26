@@ -132,11 +132,11 @@ DataManipolation/Pack.h
 time.h
 -
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/ctrlSrc/pidCtrl/PIDScorbot.cpp
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/ctrlSrc/pidCtrl/PIDScorbot.cpp
 PIDScorbot.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/ctrlSrc/pidCtrl/PIDScorbot.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/ctrlSrc/pidCtrl/PIDScorbot.h
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/ctrlSrc/pidCtrl/PIDScorbot.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/ctrlSrc/pidCtrl/PIDScorbot.h
 cmath
 -
 algorithm

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'uartChoise.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.5
+** Created by: Qt User Interface Compiler version 5.14.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,13 +10,10 @@
 #define UI_UARTCHOISE_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialogButtonBox>
 #include <QtWidgets/QGridLayout>
-#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
@@ -34,34 +31,37 @@ public:
     QComboBox *uartFind;
     QLabel *label;
 
-    void setupUi(QWidget *UartChoise)
-    {
+    void setupUi(QWidget *UartChoise) {
         if (UartChoise->objectName().isEmpty())
-            UartChoise->setObjectName(QStringLiteral("UartChoise"));
-        UartChoise->resize(320, 240);
+            UartChoise->setObjectName(QString::fromUtf8("UartChoise"));
+        UartChoise->resize(320, 139);
         buttonBox = new QDialogButtonBox(UartChoise);
-        buttonBox->setObjectName(QStringLiteral("buttonBox"));
-        buttonBox->setGeometry(QRect(140, 200, 160, 26));
-        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
+        buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
+        buttonBox->setGeometry(QRect(140, 110, 160, 26));
+        buttonBox->setStandardButtons(QDialogButtonBox::Cancel | QDialogButtonBox::Ok);
         layoutWidget = new QWidget(UartChoise);
-        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 30, 301, 86));
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(10, 10, 301, 86));
         gridLayout = new QGridLayout(layoutWidget);
-        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
         speedChose = new QComboBox(layoutWidget);
-        speedChose->setObjectName(QStringLiteral("speedChose"));
+        speedChose->addItem(QString());
+        speedChose->addItem(QString());
+        speedChose->addItem(QString());
+        speedChose->addItem(QString());
+        speedChose->setObjectName(QString::fromUtf8("speedChose"));
         speedChose->setEditable(false);
 
         gridLayout->addWidget(speedChose, 2, 1, 1, 1);
 
         serial_find = new QPushButton(layoutWidget);
-        serial_find->setObjectName(QStringLiteral("serial_find"));
+        serial_find->setObjectName(QString::fromUtf8("serial_find"));
 
         gridLayout->addWidget(serial_find, 0, 0, 1, 1);
 
         uartFind = new QComboBox(layoutWidget);
-        uartFind->setObjectName(QStringLiteral("uartFind"));
+        uartFind->setObjectName(QString::fromUtf8("uartFind"));
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -71,7 +71,7 @@ public:
         gridLayout->addWidget(uartFind, 0, 1, 1, 1);
 
         label = new QLabel(layoutWidget);
-        label->setObjectName(QStringLiteral("label"));
+        label->setObjectName(QString::fromUtf8("label"));
 
         gridLayout->addWidget(label, 2, 0, 1, 1);
 
@@ -85,21 +85,18 @@ public:
         QMetaObject::connectSlotsByName(UartChoise);
     } // setupUi
 
-    void retranslateUi(QWidget *UartChoise)
-    {
-        UartChoise->setWindowTitle(QApplication::translate("UartChoise", "Form", Q_NULLPTR));
-        speedChose->clear();
-        speedChose->insertItems(0, QStringList()
-         << QApplication::translate("UartChoise", "B9600", Q_NULLPTR)
-         << QApplication::translate("UartChoise", "B57600", Q_NULLPTR)
-         << QApplication::translate("UartChoise", "B115200", Q_NULLPTR)
-         << QApplication::translate("UartChoise", "B921600", Q_NULLPTR)
-        );
-        serial_find->setText(QApplication::translate("UartChoise", "Serial find", Q_NULLPTR));
-#ifndef QT_NO_WHATSTHIS
-        uartFind->setWhatsThis(QApplication::translate("UartChoise", "<html><head/><body><p>Seleziona la Porta Seriale</p></body></html>", Q_NULLPTR));
-#endif // QT_NO_WHATSTHIS
-        label->setText(QApplication::translate("UartChoise", "Uart Speed", Q_NULLPTR));
+    void retranslateUi(QWidget *UartChoise) {
+        UartChoise->setWindowTitle(QCoreApplication::translate("UartChoise", "Form", nullptr));
+        speedChose->setItemText(0, QCoreApplication::translate("UartChoise", "B9600", nullptr));
+        speedChose->setItemText(1, QCoreApplication::translate("UartChoise", "B57600", nullptr));
+        speedChose->setItemText(2, QCoreApplication::translate("UartChoise", "B115200", nullptr));
+        speedChose->setItemText(3, QCoreApplication::translate("UartChoise", "B921600", nullptr));
+
+        serial_find->setText(QCoreApplication::translate("UartChoise", "Serial find", nullptr));
+#if QT_CONFIG(whatsthis)
+        uartFind->setWhatsThis(QCoreApplication::translate("UartChoise", "<html><head/><body><p>Seleziona la Porta Seriale</p></body></html>", nullptr));
+#endif // QT_CONFIG(whatsthis)
+        label->setText(QCoreApplication::translate("UartChoise", "Uart Speed", nullptr));
     } // retranslateUi
 
 };

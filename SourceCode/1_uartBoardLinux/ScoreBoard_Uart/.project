@@ -34,32 +34,32 @@
 		<link>
 			<name>DataTransfertPackge</name>
 			<type>2</type>
-			<location>/home/alfyhack/Documenti/Scorbot-CA/SourceCode/1_uartBoardLinux/Common-src/DataTransfertPackge</location>
+			<location>/home/alfystar/Documenti/Scorbot-CA/SourceCode/1_uartBoardLinux/Common-src/DataTransfertPackge</location>
 		</link>
 		<link>
 			<name>circularBuffer</name>
 			<type>2</type>
-			<location>/home/alfyhack/Documenti/Scorbot-CA/SourceCode/1_uartBoardLinux/Common-src/circularBuffer</location>
+			<location>/home/alfystar/Documenti/Scorbot-CA/SourceCode/1_uartBoardLinux/Common-src/circularBuffer</location>
 		</link>
 		<link>
 			<name>uartDriver</name>
 			<type>2</type>
-			<location>/home/alfyhack/Documenti/Scorbot-CA/SourceCode/1_uartBoardLinux/Common-src/uartDriver</location>
+			<location>/home/alfystar/Documenti/Scorbot-CA/SourceCode/1_uartBoardLinux/Common-src/uartDriver</location>
 		</link>
 		<link>
 			<name>core/core</name>
 			<type>2</type>
-			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.23/cores/arduino</locationURI>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/cores/arduino</locationURI>
 		</link>
 		<link>
 			<name>core/variant</name>
 			<type>2</type>
-			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.23/variants/mega</locationURI>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/variants/mega</locationURI>
 		</link>
 		<link>
 			<name>libraries/EEPROM</name>
 			<type>2</type>
-			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.6.23/libraries/EEPROM</locationURI>
+			<locationURI>ECLIPSE_HOME/arduinoPlugin/packages/arduino/hardware/avr/1.8.2/libraries/EEPROM</locationURI>
 		</link>
 	</linkedResources>
 </projectDescription>

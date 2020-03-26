@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/alfystar/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/alfystar/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2
+CMAKE_SOURCE_DIR = /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/alfystar/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/alfystar/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/progress.marks
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/progress.marks
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/clean
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/preinstall
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/preinstall
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/rule:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/rule
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/rule
 .PHONY : scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/rule
 
 # Convenience name for target.
@@ -122,12 +122,12 @@ scorbotUi: scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.di
 
 # fast build rule for target.
 scorbotUi/fast:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build
 .PHONY : scorbotUi/fast
 
 # Convenience name for target.
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/rule:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/rule
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/rule
 .PHONY : scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/rule
 
 # Convenience name for target.
@@ -137,7 +137,7 @@ scorbotUi_autogen: scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scor
 
 # fast build rule for target.
 scorbotUi_autogen/fast:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/build
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/build
 .PHONY : scorbotUi_autogen/fast
 
 freeMoveWinsow.o: freeMoveWinsow.cpp.o
@@ -146,7 +146,7 @@ freeMoveWinsow.o: freeMoveWinsow.cpp.o
 
 # target to build an object file
 freeMoveWinsow.cpp.o:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.o
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.o
 .PHONY : freeMoveWinsow.cpp.o
 
 freeMoveWinsow.i: freeMoveWinsow.cpp.i
@@ -155,7 +155,7 @@ freeMoveWinsow.i: freeMoveWinsow.cpp.i
 
 # target to preprocess a source file
 freeMoveWinsow.cpp.i:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.i
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.i
 .PHONY : freeMoveWinsow.cpp.i
 
 freeMoveWinsow.s: freeMoveWinsow.cpp.s
@@ -164,7 +164,7 @@ freeMoveWinsow.s: freeMoveWinsow.cpp.s
 
 # target to generate assembly for a file
 freeMoveWinsow.cpp.s:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.s
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.s
 .PHONY : freeMoveWinsow.cpp.s
 
 mainwindow.o: mainwindow.cpp.o
@@ -173,7 +173,7 @@ mainwindow.o: mainwindow.cpp.o
 
 # target to build an object file
 mainwindow.cpp.o:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o
 .PHONY : mainwindow.cpp.o
 
 mainwindow.i: mainwindow.cpp.i
@@ -182,7 +182,7 @@ mainwindow.i: mainwindow.cpp.i
 
 # target to preprocess a source file
 mainwindow.cpp.i:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.i
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.i
 .PHONY : mainwindow.cpp.i
 
 mainwindow.s: mainwindow.cpp.s
@@ -191,7 +191,7 @@ mainwindow.s: mainwindow.cpp.s
 
 # target to generate assembly for a file
 mainwindow.cpp.s:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.s
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
 scorbotUi_autogen/PI2NXN7FKG/qrc_logo.o: scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o
@@ -200,7 +200,7 @@ scorbotUi_autogen/PI2NXN7FKG/qrc_logo.o: scorbotUi_autogen/PI2NXN7FKG/qrc_logo.c
 
 # target to build an object file
 scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o
 .PHONY : scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o
 
 scorbotUi_autogen/PI2NXN7FKG/qrc_logo.i: scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.i
@@ -209,7 +209,7 @@ scorbotUi_autogen/PI2NXN7FKG/qrc_logo.i: scorbotUi_autogen/PI2NXN7FKG/qrc_logo.c
 
 # target to preprocess a source file
 scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.i:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.i
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.i
 .PHONY : scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.i
 
 scorbotUi_autogen/PI2NXN7FKG/qrc_logo.s: scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.s
@@ -218,7 +218,7 @@ scorbotUi_autogen/PI2NXN7FKG/qrc_logo.s: scorbotUi_autogen/PI2NXN7FKG/qrc_logo.c
 
 # target to generate assembly for a file
 scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.s:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.s
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.s
 .PHONY : scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.s
 
 scorbotUi_autogen/mocs_compilation.o: scorbotUi_autogen/mocs_compilation.cpp.o
@@ -227,7 +227,7 @@ scorbotUi_autogen/mocs_compilation.o: scorbotUi_autogen/mocs_compilation.cpp.o
 
 # target to build an object file
 scorbotUi_autogen/mocs_compilation.cpp.o:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o
 .PHONY : scorbotUi_autogen/mocs_compilation.cpp.o
 
 scorbotUi_autogen/mocs_compilation.i: scorbotUi_autogen/mocs_compilation.cpp.i
@@ -236,7 +236,7 @@ scorbotUi_autogen/mocs_compilation.i: scorbotUi_autogen/mocs_compilation.cpp.i
 
 # target to preprocess a source file
 scorbotUi_autogen/mocs_compilation.cpp.i:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.i
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.i
 .PHONY : scorbotUi_autogen/mocs_compilation.cpp.i
 
 scorbotUi_autogen/mocs_compilation.s: scorbotUi_autogen/mocs_compilation.cpp.s
@@ -245,7 +245,7 @@ scorbotUi_autogen/mocs_compilation.s: scorbotUi_autogen/mocs_compilation.cpp.s
 
 # target to generate assembly for a file
 scorbotUi_autogen/mocs_compilation.cpp.s:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.s
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.s
 .PHONY : scorbotUi_autogen/mocs_compilation.cpp.s
 
 settingBoardWindow.o: settingBoardWindow.cpp.o
@@ -254,7 +254,7 @@ settingBoardWindow.o: settingBoardWindow.cpp.o
 
 # target to build an object file
 settingBoardWindow.cpp.o:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o
 .PHONY : settingBoardWindow.cpp.o
 
 settingBoardWindow.i: settingBoardWindow.cpp.i
@@ -263,7 +263,7 @@ settingBoardWindow.i: settingBoardWindow.cpp.i
 
 # target to preprocess a source file
 settingBoardWindow.cpp.i:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.i
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.i
 .PHONY : settingBoardWindow.cpp.i
 
 settingBoardWindow.s: settingBoardWindow.cpp.s
@@ -272,7 +272,7 @@ settingBoardWindow.s: settingBoardWindow.cpp.s
 
 # target to generate assembly for a file
 settingBoardWindow.cpp.s:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.s
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.s
 .PHONY : settingBoardWindow.cpp.s
 
 uartChoise.o: uartChoise.cpp.o
@@ -281,7 +281,7 @@ uartChoise.o: uartChoise.cpp.o
 
 # target to build an object file
 uartChoise.cpp.o:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/uartChoise.cpp.o
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/uartChoise.cpp.o
 .PHONY : uartChoise.cpp.o
 
 uartChoise.i: uartChoise.cpp.i
@@ -290,7 +290,7 @@ uartChoise.i: uartChoise.cpp.i
 
 # target to preprocess a source file
 uartChoise.cpp.i:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/uartChoise.cpp.i
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/uartChoise.cpp.i
 .PHONY : uartChoise.cpp.i
 
 uartChoise.s: uartChoise.cpp.s
@@ -299,7 +299,7 @@ uartChoise.s: uartChoise.cpp.s
 
 # target to generate assembly for a file
 uartChoise.cpp.s:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/uartChoise.cpp.s
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/uartChoise.cpp.s
 .PHONY : uartChoise.cpp.s
 
 # Help Target
@@ -341,6 +341,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

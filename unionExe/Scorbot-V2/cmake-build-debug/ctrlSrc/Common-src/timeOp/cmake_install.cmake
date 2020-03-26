@@ -1,4 +1,4 @@
-# Install script for directory: /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/ctrlSrc/Common-src/timeOp
+# Install script for directory: /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/ctrlSrc/Common-src/timeOp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

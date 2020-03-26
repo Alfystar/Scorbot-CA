@@ -1,4 +1,4 @@
-# Install script for directory: /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/ctrlSrc/Common-src
+# Install script for directory: /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/ctrlSrc/Common-src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,11 +38,11 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/timeOp/cmake_install.cmake")
-  include("/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/DataTransfertPackge/cmake_install.cmake")
-  include("/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/circularBuffer/cmake_install.cmake")
-  include("/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/uartDriver/cmake_install.cmake")
+    # Include the install script for each subdirectory.
+    include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/timeOp/cmake_install.cmake")
+    include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/DataTransfertPackge/cmake_install.cmake")
+    include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/circularBuffer/cmake_install.cmake")
+    include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/uartDriver/cmake_install.cmake")
 
 endif()
 

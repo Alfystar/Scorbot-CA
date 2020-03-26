@@ -6,5 +6,5 @@ CXX_FLAGS = -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/timeOp/. 
+CXX_INCLUDES = -I/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/timeOp/. 
 

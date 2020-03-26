@@ -1,4 +1,4 @@
-# Install script for directory: /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/ctrlSrc/Common-src/uartDriver
+# Install script for directory: /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/ctrlSrc/Common-src/uartDriver
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

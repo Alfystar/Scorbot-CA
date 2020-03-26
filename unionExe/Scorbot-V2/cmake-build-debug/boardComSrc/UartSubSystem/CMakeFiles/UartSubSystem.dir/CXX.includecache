@@ -236,11 +236,11 @@ AdapterClasses/ObservableScorbot.h
 ctime
 -
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/ComUartAdapter.cpp
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/ComUartAdapter.cpp
 ComUartAdapter.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/ComUartAdapter.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/ComUartAdapter.h
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/ComUartAdapter.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/ComUartAdapter.h
 ScorInterface.h
 -
 GetCom_int.h
@@ -258,13 +258,13 @@ sys/time.h
 timeSpecOp.h
 -
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/ParamSingletonFactory.cpp
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/ParamSingletonFactory.cpp
 ParamSingletonFactory.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/ParamSingletonFactory.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/ParamSingletonFactory.h
 SingletonFactoryException.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/SingletonFactoryException.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/SingletonFactoryException.h
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/ParamSingletonFactory.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/ParamSingletonFactory.h
 string
 -
 UartDriver.h
@@ -272,9 +272,9 @@ UartDriver.h
 mutex
 -
 SingletonFactoryException.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/SingletonFactoryException.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/SingletonFactoryException.h
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/SingletonFactoryException.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/SingletonFactoryException.h
 exception
 -
 string
@@ -282,23 +282,23 @@ string
 cstring
 -
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterFactory.cpp
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterFactory.cpp
 AdapterFactory.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterFactory.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterFactory.h
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterFactory.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterFactory.h
 string
 -
 termios.h
 -
 AdapterClasses/ComUartAdapter.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/ComUartAdapter.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/ComUartAdapter.h
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/ConcreteObserver.cpp
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/ConcreteObserver.cpp
 ConcreteObserver.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/ConcreteObserver.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/ConcreteObserver.h
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/ConcreteObserver.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/ConcreteObserver.h
 AdapterClasses/ObserverScorbot.h
 -
 ScorInterface.h
@@ -308,19 +308,19 @@ iostream
 semaphore.h
 -
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/GetCom_int.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/GetCom_int.h
 DataTransfert_AllInclude.h
 -
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/InfoExpPack.cpp
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/InfoExpPack.cpp
 InfoExpPack.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/InfoExpPack.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/InfoExpPack.h
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/InfoExpPack.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/InfoExpPack.h
 DataTransfert_AllInclude.h
 -
 GetCom_int.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/GetCom_int.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/GetCom_int.h
 time.h
 -
 

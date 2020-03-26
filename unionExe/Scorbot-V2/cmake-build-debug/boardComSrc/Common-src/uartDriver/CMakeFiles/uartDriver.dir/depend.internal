@@ -13,8 +13,8 @@ boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/UartDriver.cpp.o
  ../boardComSrc/Common-src/DataTransfertPackge/DataPrimitive.h
  ../boardComSrc/Common-src/DataTransfertPackge/DataTransfert_AllInclude.h
  ../boardComSrc/Common-src/circularBuffer/CircularBuffer.h
- /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/DataTransfert_AllInclude.h
- /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/circularBuffer/CircularBuffer.h
- /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/UartDriver.cpp
- /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/UartDriver.h
- /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/UartException.h
+ /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/DataTransfert_AllInclude.h
+ /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/circularBuffer/CircularBuffer.h
+ /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/UartDriver.cpp
+ /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/UartDriver.h
+ /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/UartException.h

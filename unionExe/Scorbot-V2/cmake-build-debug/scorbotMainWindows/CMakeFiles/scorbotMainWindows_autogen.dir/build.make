@@ -34,19 +34,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/alfystar/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/alfystar/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2
+CMAKE_SOURCE_DIR = /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug
 
 # Utility rule file for scorbotMainWindows_autogen.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake
 include scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/progress.make
 
 scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target scorbotMainWindows"
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows && /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E cmake_autogen /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/AutogenInfo.cmake Debug
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target scorbotMainWindows"
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows && /home/alfystar/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E cmake_autogen /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/AutogenInfo.cmake Debug
 
 scorbotMainWindows_autogen: scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen
 scorbotMainWindows_autogen: scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/build.make
@@ -68,10 +68,10 @@ scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/build: scorbotMainW
 .PHONY : scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/build
 
 scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/clean:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows && $(CMAKE_COMMAND) -P CMakeFiles/scorbotMainWindows_autogen.dir/cmake_clean.cmake
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows && $(CMAKE_COMMAND) -P CMakeFiles/scorbotMainWindows_autogen.dir/cmake_clean.cmake
 .PHONY : scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/clean
 
 scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/depend:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2 /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2 /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/depend
 

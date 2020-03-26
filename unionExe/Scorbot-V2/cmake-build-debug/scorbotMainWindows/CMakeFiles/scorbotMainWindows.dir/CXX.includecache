@@ -462,29 +462,17 @@ DataTransfert_AllInclude.h
 iostream
 -
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/scorbotMainWindows_autogen/EWIEGA46WW/moc_ScorbotMainWindows.cpp
-../../../../../../../../Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.h
-QtCore/qbytearray.h
--
-QtCore/qmetatype.h
--
-
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/scorbotMainWindows_autogen/mocs_compilation.cpp
-EWIEGA46WW/moc_ScorbotMainWindows.cpp
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/scorbotMainWindows_autogen/EWIEGA46WW/moc_ScorbotMainWindows.cpp
-
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.cpp
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.cpp
 ScorbotMainWindows.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.h
 UI_useCase/uiSrc/scorbotUi/ui_source/ui_mainwindow.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/ui_source/ui_mainwindow.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/ui_source/ui_mainwindow.h
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.h
 QApplication
 -
 UI_useCase/uiSrc/scorbotUi/mainwindow.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
 QAction
 -
 QtWidgets/QMessageBox
@@ -508,9 +496,9 @@ UI_useCase/DataShow.h
 UI_useCase/SetupBoard.h
 -
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWinsow.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWinsow.h
 QDialog
 -
 QSpinBox
@@ -526,7 +514,7 @@ DataTransfert_AllInclude.h
 iostream
 -
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
 QMainWindow
 -
 QSpinBox
@@ -544,15 +532,15 @@ DataTransfert_AllInclude.h
 iostream
 -
 settingBoardWindow.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h
 freeMoveWinsow.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWinsow.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWinsow.h
 commonDefine.h
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
 ScorCalc.h
 -
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h
 QDialog
 -
 QSpinBox
@@ -573,16 +561,6 @@ ScorCalc.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QVariant
 qvariant.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h
-QtCore/qvariant.h
--
-QtCore/qobject.h
--
-QtCore/qhash.h
--
-QtCore/qvector.h
--
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
 QtCore/qglobal.h
@@ -852,18 +830,6 @@ QtCore/qobjectdefs.h
 QtCore/qscopedpointer.h
 -
 QtCore/qstring.h
--
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h
-QtCore/qglobal.h
--
-QtCore/qset.h
--
-QtCore/qvector.h
--
-QtCore/qlist.h
--
-QtCore/qabstractitemmodel.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qiterator.h
@@ -1284,6 +1250,10 @@ QtCore/qpoint.h
 QtCore/qglobal.h
 -
 
+/usr/include/x86_64-linux-gnu/qt5/QtGui/QIcon
+qicon.h
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtGui/qbrush.h
 QtGui/qtguiglobal.h
 -
@@ -1632,10 +1602,6 @@ qaction.h
 qapplication.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QButtonGroup
-qbuttongroup.h
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qbuttongroup.h
-
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QCheckBox
 qcheckbox.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcheckbox.h
@@ -1659,10 +1625,6 @@ qframe.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout
 qboxlayout.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHeaderView
-qheaderview.h
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel
 qlabel.h
@@ -1716,6 +1678,10 @@ qspinbox.h
 qsplitter.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsplitter.h
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStatusBar
+qstatusbar.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstatusbar.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTabWidget
 qtabwidget.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
@@ -1736,32 +1702,6 @@ QtGui/qicon.h
 QtGui/qkeysequence.h
 -
 QtWidgets/qwidget.h
--
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h
-QtWidgets/qtwidgetsglobal.h
--
-QtCore/qobject.h
--
-QtWidgets/qstyleoption.h
--
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qabstractscrollarea.h
--
-QtCore/qabstractitemmodel.h
--
-QtCore/qitemselectionmodel.h
--
-QtWidgets/qabstractitemdelegate.h
--
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qframe.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h
@@ -1828,12 +1768,6 @@ QtWidgets/qwidget.h
 limits.h
 -
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qbuttongroup.h
-QtWidgets/qtwidgetsglobal.h
--
-QtCore/qobject.h
--
-
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qcheckbox.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -1872,12 +1806,6 @@ QtWidgets/qlayout.h
 QtWidgets/qwidget.h
 -
 limits.h
--
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qheaderview.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qabstractitemview.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h
@@ -1966,12 +1894,6 @@ QtWidgets/qtwidgetsglobal.h
 QtWidgets/qabstractbutton.h
 -
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h
-QtWidgets/qtwidgetsglobal.h
--
-QtWidgets/qwidget.h
--
-
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -2000,53 +1922,7 @@ QtWidgets/qframe.h
 QtWidgets/qsizepolicy.h
 -
 
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h
-QtWidgets/qtwidgetsglobal.h
--
-QtCore/qobject.h
--
-QtCore/qrect.h
--
-QtCore/qsize.h
--
-QtGui/qicon.h
--
-QtGui/qpixmap.h
--
-QtGui/qpalette.h
--
-QtWidgets/qsizepolicy.h
--
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h
-QtWidgets/qtwidgetsglobal.h
--
-QtCore/qlocale.h
--
-QtCore/qvariant.h
--
-QtWidgets/qabstractspinbox.h
--
-QtGui/qicon.h
--
-QtGui/qmatrix.h
--
-QtWidgets/qslider.h
--
-QtWidgets/qstyle.h
--
-QtWidgets/qtabbar.h
--
-QtWidgets/qtabwidget.h
--
-QtWidgets/qrubberband.h
--
-QtWidgets/qframe.h
--
-QtCore/qabstractitemmodel.h
--
-
-/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstatusbar.h
 QtWidgets/qtwidgetsglobal.h
 -
 QtWidgets/qwidget.h
@@ -2103,11 +1979,11 @@ QtGui/qevent.h
 scorbotMainWindows/scorbotMainWindows_autogen/include/UI_useCase/uiSrc/scorbotUi/ui_source/ui_mainwindow.h
 QtCore/QVariant
 -
+QtGui/QIcon
+-
 QtWidgets/QAction
 -
 QtWidgets/QApplication
--
-QtWidgets/QButtonGroup
 -
 QtWidgets/QCheckBox
 -
@@ -2118,8 +1994,6 @@ QtWidgets/QFormLayout
 QtWidgets/QFrame
 -
 QtWidgets/QHBoxLayout
--
-QtWidgets/QHeaderView
 -
 QtWidgets/QLabel
 -
@@ -2142,6 +2016,8 @@ QtWidgets/QSpacerItem
 QtWidgets/QSpinBox
 -
 QtWidgets/QSplitter
+-
+QtWidgets/QStatusBar
 -
 QtWidgets/QTabWidget
 -

@@ -35,19 +35,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/alfystar/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/alfystar/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2
+CMAKE_SOURCE_DIR = /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug
 
 #=============================================================================
 # Directory level rules for the build root directory
@@ -91,14 +91,14 @@ CMakeFiles/ScorbotTerminal.dir/all: scorbotMainWindows/UI_useCase/CMakeFiles/UI_
 CMakeFiles/ScorbotTerminal.dir/all: scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/all
 	$(MAKE) -f CMakeFiles/ScorbotTerminal.dir/build.make CMakeFiles/ScorbotTerminal.dir/depend
 	$(MAKE) -f CMakeFiles/ScorbotTerminal.dir/build.make CMakeFiles/ScorbotTerminal.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target ScorbotTerminal"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=1,2 "Built target ScorbotTerminal"
 .PHONY : CMakeFiles/ScorbotTerminal.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/ScorbotTerminal.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 46
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 46
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/ScorbotTerminal.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
 .PHONY : CMakeFiles/ScorbotTerminal.dir/rule
 
 # Convenience name for target.
@@ -187,14 +187,14 @@ boardComSrc/Common-src/timeOp/preinstall:
 boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/all:
 	$(MAKE) -f boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/build.make boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/depend
 	$(MAKE) -f boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/build.make boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=43,44 "Built target timeOp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=43,44 "Built target timeOp"
 .PHONY : boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/all
 
 # Build rule for subdir invocation for target.
 boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
 .PHONY : boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/rule
 
 # Convenience name for target.
@@ -232,14 +232,14 @@ boardComSrc/Common-src/DataTransfertPackge/preinstall:
 boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/all:
 	$(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/depend
 	$(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=18,19,20,21,22,23,24,25 "Built target dataTransfert"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=18,19,20,21,22,23,24,25 "Built target dataTransfert"
 .PHONY : boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/all
 
 # Build rule for subdir invocation for target.
 boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
 .PHONY : boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/rule
 
 # Convenience name for target.
@@ -277,14 +277,14 @@ boardComSrc/Common-src/circularBuffer/preinstall:
 boardComSrc/Common-src/circularBuffer/CMakeFiles/circularBuffer.dir/all:
 	$(MAKE) -f boardComSrc/Common-src/circularBuffer/CMakeFiles/circularBuffer.dir/build.make boardComSrc/Common-src/circularBuffer/CMakeFiles/circularBuffer.dir/depend
 	$(MAKE) -f boardComSrc/Common-src/circularBuffer/CMakeFiles/circularBuffer.dir/build.make boardComSrc/Common-src/circularBuffer/CMakeFiles/circularBuffer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=16,17 "Built target circularBuffer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=16,17 "Built target circularBuffer"
 .PHONY : boardComSrc/Common-src/circularBuffer/CMakeFiles/circularBuffer.dir/all
 
 # Build rule for subdir invocation for target.
 boardComSrc/Common-src/circularBuffer/CMakeFiles/circularBuffer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 2
 	$(MAKE) -f CMakeFiles/Makefile2 boardComSrc/Common-src/circularBuffer/CMakeFiles/circularBuffer.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
 .PHONY : boardComSrc/Common-src/circularBuffer/CMakeFiles/circularBuffer.dir/rule
 
 # Convenience name for target.
@@ -323,14 +323,14 @@ boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/all: boardComSrc/Com
 boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/all: boardComSrc/Common-src/circularBuffer/CMakeFiles/circularBuffer.dir/all
 	$(MAKE) -f boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/build.make boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/depend
 	$(MAKE) -f boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/build.make boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=45,46 "Built target uartDriver"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=45,46 "Built target uartDriver"
 .PHONY : boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/all
 
 # Build rule for subdir invocation for target.
 boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
 .PHONY : boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/rule
 
 # Convenience name for target.
@@ -368,14 +368,14 @@ boardComSrc/UtilityScorbot/preinstall:
 boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/all: boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/all
 	$(MAKE) -f boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/build.make boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/depend
 	$(MAKE) -f boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/build.make boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=41,42 "Built target scoreUtiliy"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=41,42 "Built target scoreUtiliy"
 .PHONY : boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/all
 
 # Build rule for subdir invocation for target.
 boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 10
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 10
 	$(MAKE) -f CMakeFiles/Makefile2 boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
 .PHONY : boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/rule
 
 # Convenience name for target.
@@ -416,14 +416,14 @@ boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/all: boardComSrc/Common-s
 boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/all: boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/all
 	$(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/depend
 	$(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=10,11,12,13,14,15 "Built target UartSubSystem"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=10,11,12,13,14,15 "Built target UartSubSystem"
 .PHONY : boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/all
 
 # Build rule for subdir invocation for target.
 boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 20
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 20
 	$(MAKE) -f CMakeFiles/Makefile2 boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
 .PHONY : boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/rule
 
 # Convenience name for target.
@@ -603,14 +603,14 @@ ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/all: boardComSrc/Common-src/timeOp/CMakeF
 ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/all: boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/all
 	$(MAKE) -f ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/build.make ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/depend
 	$(MAKE) -f ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/build.make ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=26,27 "Built target pidCtrl"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=26,27 "Built target pidCtrl"
 .PHONY : ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/all
 
 # Build rule for subdir invocation for target.
 ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 12
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 12
 	$(MAKE) -f CMakeFiles/Makefile2 ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
 .PHONY : ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/rule
 
 # Convenience name for target.
@@ -660,14 +660,14 @@ scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/all: scorbotMainWindows/UI_
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/all: scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/all
 	$(MAKE) -f scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/build.make scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/depend
 	$(MAKE) -f scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/build.make scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=28,29,30 "Built target scorbotMainWindows"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=28,29,30 "Built target scorbotMainWindows"
 .PHONY : scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/all
 
 # Build rule for subdir invocation for target.
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 44
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 44
 	$(MAKE) -f CMakeFiles/Makefile2 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
 .PHONY : scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/rule
 
 # Convenience name for target.
@@ -687,14 +687,14 @@ scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/clean:
 scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/all: scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/all
 	$(MAKE) -f scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/build.make scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/depend
 	$(MAKE) -f scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/build.make scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=31 "Built target scorbotMainWindows_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=31 "Built target scorbotMainWindows_autogen"
 .PHONY : scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/all
 
 # Build rule for subdir invocation for target.
 scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 41
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 41
 	$(MAKE) -f CMakeFiles/Makefile2 scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
 .PHONY : scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/rule
 
 # Convenience name for target.
@@ -743,14 +743,14 @@ scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/all: scorbotMainWindows/
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/all: scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/all
 	$(MAKE) -f scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/build.make scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/depend
 	$(MAKE) -f scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/build.make scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=3,4,5,6,7,8 "Built target UI_useCase"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=3,4,5,6,7,8 "Built target UI_useCase"
 .PHONY : scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/all
 
 # Build rule for subdir invocation for target.
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 40
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 40
 	$(MAKE) -f CMakeFiles/Makefile2 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
 .PHONY : scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/rule
 
 # Convenience name for target.
@@ -773,14 +773,14 @@ scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/all: ctrlSrc/pid
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/all: scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/all
 	$(MAKE) -f scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/build.make scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/depend
 	$(MAKE) -f scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/build.make scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=9 "Built target UI_useCase_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=9 "Built target UI_useCase_autogen"
 .PHONY : scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/all
 
 # Build rule for subdir invocation for target.
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 34
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 34
 	$(MAKE) -f CMakeFiles/Makefile2 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
 .PHONY : scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/rule
 
 # Convenience name for target.
@@ -860,14 +860,14 @@ scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/all: boar
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/all: scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/all
 	$(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/depend
 	$(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=32,33,34,35,36,37,38,39 "Built target scorbotUi"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=32,33,34,35,36,37,38,39 "Built target scorbotUi"
 .PHONY : scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/all
 
 # Build rule for subdir invocation for target.
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 19
 	$(MAKE) -f CMakeFiles/Makefile2 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
 .PHONY : scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/rule
 
 # Convenience name for target.
@@ -888,14 +888,14 @@ scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/a
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/all: boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/all
 	$(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/depend
 	$(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=40 "Built target scorbotUi_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles --progress-num=40 "Built target scorbotUi_autogen"
 .PHONY : scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/all
 
 # Build rule for subdir invocation for target.
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 11
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 11
 	$(MAKE) -f CMakeFiles/Makefile2 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
 .PHONY : scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/rule
 
 # Convenience name for target.

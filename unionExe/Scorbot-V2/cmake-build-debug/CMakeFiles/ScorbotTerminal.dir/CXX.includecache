@@ -508,7 +508,7 @@ DataTransfert_AllInclude.h
 iostream
 -
 
-/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/main.cpp
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/main.cpp
 ScorbotMainWindows.h
 -
 QApplication
@@ -549,7 +549,7 @@ QtCore/qgenericatomic.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qbasicatomic.h
-QtCore/qatomic.h
+QtCore/qglobal.h
 -
 QtCore/qatomic_bootstrap.h
 -
@@ -575,8 +575,6 @@ string
 -
 iterator
 -
-QtCore/qstring.h
--
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qbytearraylist.h
 QtCore/qlist.h
@@ -600,6 +598,12 @@ utility
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
 QtCore/qglobal.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h
+QtCore/qglobal.h
+-
+iterator
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
@@ -709,6 +713,8 @@ cstddef
 -
 utility
 -
+assert.h
+-
 stddef.h
 -
 QtCore/qconfig-bootstrapped.h
@@ -749,6 +755,8 @@ QtCore/qatomic.h
 -
 QtCore/qmutex.h
 -
+mutex
+-
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h
 QtCore/qchar.h
@@ -761,17 +769,21 @@ QtCore/qrefcount.h
 -
 QtCore/qhashfunctions.h
 -
-initializer_list
+QtCore/qcontainertools_impl.h
 -
 algorithm
 -
+initializer_list
+-
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qhashfunctions.h
-QtCore/qchar.h
+QtCore/qstring.h
 -
 QtCore/qpair.h
 -
 numeric
+-
+functional
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qiodevice.h
@@ -805,13 +817,17 @@ QtCore/qarraydata.h
 -
 QtCore/qhashfunctions.h
 -
-iterator
+QtCore/qvector.h
 -
-list
+QtCore/qcontainertools_impl.h
 -
 algorithm
 -
 initializer_list
+-
+iterator
+-
+list
 -
 stdlib.h
 -
@@ -851,13 +867,13 @@ QtCore/qpair.h
 -
 QtCore/qdebug.h
 -
-map
--
-new
--
 functional
 -
 initializer_list
+-
+map
+-
+new
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
@@ -987,6 +1003,8 @@ stdlib.h
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h
 QtCore/qhash.h
 -
+QtCore/qcontainertools_impl.h
+-
 initializer_list
 -
 iterator
@@ -1011,6 +1029,8 @@ QtCore/qshareddata.h
 -
 QtCore/qsharedpointer_impl.h
 -
+memory
+-
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h
 new
@@ -1023,9 +1043,13 @@ QtCore/qhash.h
 -
 QtCore/qhashfunctions.h
 -
+memory
+-
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
 QtCore/qnamespace.h
+-
+QtCore/qmargins.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
@@ -1037,6 +1061,12 @@ QtCore/qrefcount.h
 -
 QtCore/qnamespace.h
 -
+QtCore/qstringliteral.h
+-
+QtCore/qstringalgorithms.h
+-
+QtCore/qstringview.h
+-
 string
 -
 iterator
@@ -1044,6 +1074,10 @@ iterator
 stdarg.h
 -
 QtCore/qstringbuilder.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstringalgorithms.h
+QtCore/qnamespace.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
@@ -1059,6 +1093,8 @@ QtCore/qlist.h
 -
 QtCore/qalgorithms.h
 -
+QtCore/qcontainertools_impl.h
+-
 QtCore/qregexp.h
 -
 QtCore/qstring.h
@@ -1066,8 +1102,26 @@ QtCore/qstring.h
 QtCore/qstringmatcher.h
 -
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstringliteral.h
+QtCore/qarraydata.h
+-
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h
 QtCore/qstring.h
+-
+QtCore/qstringview.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qstringview.h
+QtCore/qchar.h
+-
+QtCore/qbytearray.h
+-
+QtCore/qstringliteral.h
+-
+QtCore/qstringalgorithms.h
+-
+string
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
@@ -1129,6 +1183,8 @@ QtCore/qurl.h
 -
 QtCore/qstringlist.h
 -
+initializer_list
+-
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h
 QtCore/qatomic.h
@@ -1151,6 +1207,8 @@ QtCore/qobject.h
 -
 QtCore/qbytearraylist.h
 -
+variant
+-
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qvarlengtharray.h
 QtCore/qcontainerfwd.h
@@ -1159,11 +1217,9 @@ QtCore/qglobal.h
 -
 QtCore/qalgorithms.h
 -
-new
+QtCore/qcontainertools_impl.h
 -
-string.h
--
-stdlib.h
+QtCore/qhashfunctions.h
 -
 algorithm
 -
@@ -1171,13 +1227,17 @@ initializer_list
 -
 iterator
 -
+new
+-
+string.h
+-
+stdlib.h
+-
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qvector.h
 QtCore/qalgorithms.h
 -
 QtCore/qiterator.h
--
-QtCore/qlist.h
 -
 QtCore/qrefcount.h
 -
@@ -1185,15 +1245,17 @@ QtCore/qarraydata.h
 -
 QtCore/qhashfunctions.h
 -
+QtCore/qcontainertools_impl.h
+-
 iterator
+-
+initializer_list
 -
 vector
 -
 stdlib.h
 -
 string.h
--
-initializer_list
 -
 algorithm
 -

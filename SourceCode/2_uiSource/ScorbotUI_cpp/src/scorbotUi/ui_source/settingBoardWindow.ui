@@ -3,30 +3,36 @@
  <author>Emanuele Alfano</author>
  <class>SettingBoardWindow</class>
  <widget class="QDialog" name="SettingBoardWindow">
-  <property name="geometry">
-   <rect>
-    <x>0</x>
-    <y>0</y>
-    <width>505</width>
-    <height>405</height>
-   </rect>
-  </property>
-  <property name="windowTitle">
-   <string>SettingBoard</string>
-  </property>
-  <property name="sizeGripEnabled">
-   <bool>false</bool>
-  </property>
-  <property name="modal">
-   <bool>false</bool>
-  </property>
-  <widget class="QWidget" name="layoutWidget">
+     <property name="geometry">
+         <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>505</width>
+             <height>517</height>
+         </rect>
+     </property>
+     <property name="sizePolicy">
+         <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+         </sizepolicy>
+     </property>
+     <property name="windowTitle">
+         <string>SettingBoard</string>
+     </property>
+     <property name="sizeGripEnabled">
+         <bool>false</bool>
+     </property>
+     <property name="modal">
+         <bool>false</bool>
+     </property>
+     <widget class="QWidget" name="layoutWidget">
    <property name="geometry">
     <rect>
      <x>10</x>
      <y>10</y>
      <width>481</width>
-     <height>381</height>
+        <height>498</height>
     </rect>
    </property>
    <layout class="QVBoxLayout" name="verticalLayout">

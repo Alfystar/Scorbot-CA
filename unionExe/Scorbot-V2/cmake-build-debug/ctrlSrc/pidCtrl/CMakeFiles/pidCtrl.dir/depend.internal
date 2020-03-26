@@ -13,5 +13,5 @@ ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/PIDScorbot.cpp.o
  ../boardComSrc/Common-src/DataTransfertPackge/DataPrimitive.h
  ../boardComSrc/Common-src/DataTransfertPackge/DataTransfert_AllInclude.h
  ../boardComSrc/Common-src/timeOp/timeSpecOp.h
- /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/ctrlSrc/pidCtrl/PIDScorbot.cpp
- /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/ctrlSrc/pidCtrl/PIDScorbot.h
+ /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/ctrlSrc/pidCtrl/PIDScorbot.cpp
+ /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/ctrlSrc/pidCtrl/PIDScorbot.h

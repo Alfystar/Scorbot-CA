@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/alfystar/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/alfystar/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2
+CMAKE_SOURCE_DIR = /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/alfystar/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/alfystar/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/progress.marks
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 boardComSrc/Common-src/DataTransfertPackge/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/progress.marks
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 boardComSrc/Common-src/DataTransfertPackge/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 boardComSrc/Common-src/DataTransfertPackge/clean
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 boardComSrc/Common-src/DataTransfertPackge/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 boardComSrc/Common-src/DataTransfertPackge/preinstall
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 boardComSrc/Common-src/DataTransfertPackge/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 boardComSrc/Common-src/DataTransfertPackge/preinstall
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 boardComSrc/Common-src/DataTransfertPackge/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/rule:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/rule
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/rule
 .PHONY : boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ dataTransfert: boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfe
 
 # fast build rule for target.
 dataTransfert/fast:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build
 .PHONY : dataTransfert/fast
 
 DataFactory.o: DataFactory.cpp.o
@@ -131,7 +131,7 @@ DataFactory.o: DataFactory.cpp.o
 
 # target to build an object file
 DataFactory.cpp.o:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataFactory.cpp.o
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataFactory.cpp.o
 .PHONY : DataFactory.cpp.o
 
 DataFactory.i: DataFactory.cpp.i
@@ -140,7 +140,7 @@ DataFactory.i: DataFactory.cpp.i
 
 # target to preprocess a source file
 DataFactory.cpp.i:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataFactory.cpp.i
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataFactory.cpp.i
 .PHONY : DataFactory.cpp.i
 
 DataFactory.s: DataFactory.cpp.s
@@ -149,7 +149,7 @@ DataFactory.s: DataFactory.cpp.s
 
 # target to generate assembly for a file
 DataFactory.cpp.s:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataFactory.cpp.s
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataFactory.cpp.s
 .PHONY : DataFactory.cpp.s
 
 DataManipolation/AllSensor.o: DataManipolation/AllSensor.cpp.o
@@ -158,7 +158,7 @@ DataManipolation/AllSensor.o: DataManipolation/AllSensor.cpp.o
 
 # target to build an object file
 DataManipolation/AllSensor.cpp.o:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/AllSensor.cpp.o
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/AllSensor.cpp.o
 .PHONY : DataManipolation/AllSensor.cpp.o
 
 DataManipolation/AllSensor.i: DataManipolation/AllSensor.cpp.i
@@ -167,7 +167,7 @@ DataManipolation/AllSensor.i: DataManipolation/AllSensor.cpp.i
 
 # target to preprocess a source file
 DataManipolation/AllSensor.cpp.i:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/AllSensor.cpp.i
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/AllSensor.cpp.i
 .PHONY : DataManipolation/AllSensor.cpp.i
 
 DataManipolation/AllSensor.s: DataManipolation/AllSensor.cpp.s
@@ -176,7 +176,7 @@ DataManipolation/AllSensor.s: DataManipolation/AllSensor.cpp.s
 
 # target to generate assembly for a file
 DataManipolation/AllSensor.cpp.s:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/AllSensor.cpp.s
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/AllSensor.cpp.s
 .PHONY : DataManipolation/AllSensor.cpp.s
 
 DataManipolation/CurrentMot.o: DataManipolation/CurrentMot.cpp.o
@@ -185,7 +185,7 @@ DataManipolation/CurrentMot.o: DataManipolation/CurrentMot.cpp.o
 
 # target to build an object file
 DataManipolation/CurrentMot.cpp.o:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/CurrentMot.cpp.o
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/CurrentMot.cpp.o
 .PHONY : DataManipolation/CurrentMot.cpp.o
 
 DataManipolation/CurrentMot.i: DataManipolation/CurrentMot.cpp.i
@@ -194,7 +194,7 @@ DataManipolation/CurrentMot.i: DataManipolation/CurrentMot.cpp.i
 
 # target to preprocess a source file
 DataManipolation/CurrentMot.cpp.i:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/CurrentMot.cpp.i
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/CurrentMot.cpp.i
 .PHONY : DataManipolation/CurrentMot.cpp.i
 
 DataManipolation/CurrentMot.s: DataManipolation/CurrentMot.cpp.s
@@ -203,7 +203,7 @@ DataManipolation/CurrentMot.s: DataManipolation/CurrentMot.cpp.s
 
 # target to generate assembly for a file
 DataManipolation/CurrentMot.cpp.s:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/CurrentMot.cpp.s
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/CurrentMot.cpp.s
 .PHONY : DataManipolation/CurrentMot.cpp.s
 
 DataManipolation/EncoderMot.o: DataManipolation/EncoderMot.cpp.o
@@ -212,7 +212,7 @@ DataManipolation/EncoderMot.o: DataManipolation/EncoderMot.cpp.o
 
 # target to build an object file
 DataManipolation/EncoderMot.cpp.o:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/EncoderMot.cpp.o
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/EncoderMot.cpp.o
 .PHONY : DataManipolation/EncoderMot.cpp.o
 
 DataManipolation/EncoderMot.i: DataManipolation/EncoderMot.cpp.i
@@ -221,7 +221,7 @@ DataManipolation/EncoderMot.i: DataManipolation/EncoderMot.cpp.i
 
 # target to preprocess a source file
 DataManipolation/EncoderMot.cpp.i:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/EncoderMot.cpp.i
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/EncoderMot.cpp.i
 .PHONY : DataManipolation/EncoderMot.cpp.i
 
 DataManipolation/EncoderMot.s: DataManipolation/EncoderMot.cpp.s
@@ -230,7 +230,7 @@ DataManipolation/EncoderMot.s: DataManipolation/EncoderMot.cpp.s
 
 # target to generate assembly for a file
 DataManipolation/EncoderMot.cpp.s:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/EncoderMot.cpp.s
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/EncoderMot.cpp.s
 .PHONY : DataManipolation/EncoderMot.cpp.s
 
 DataManipolation/Pack.o: DataManipolation/Pack.cpp.o
@@ -239,7 +239,7 @@ DataManipolation/Pack.o: DataManipolation/Pack.cpp.o
 
 # target to build an object file
 DataManipolation/Pack.cpp.o:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/Pack.cpp.o
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/Pack.cpp.o
 .PHONY : DataManipolation/Pack.cpp.o
 
 DataManipolation/Pack.i: DataManipolation/Pack.cpp.i
@@ -248,7 +248,7 @@ DataManipolation/Pack.i: DataManipolation/Pack.cpp.i
 
 # target to preprocess a source file
 DataManipolation/Pack.cpp.i:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/Pack.cpp.i
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/Pack.cpp.i
 .PHONY : DataManipolation/Pack.cpp.i
 
 DataManipolation/Pack.s: DataManipolation/Pack.cpp.s
@@ -257,7 +257,7 @@ DataManipolation/Pack.s: DataManipolation/Pack.cpp.s
 
 # target to generate assembly for a file
 DataManipolation/Pack.cpp.s:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/Pack.cpp.s
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/Pack.cpp.s
 .PHONY : DataManipolation/Pack.cpp.s
 
 DataManipolation/SettingBoard_C.o: DataManipolation/SettingBoard_C.cpp.o
@@ -266,7 +266,7 @@ DataManipolation/SettingBoard_C.o: DataManipolation/SettingBoard_C.cpp.o
 
 # target to build an object file
 DataManipolation/SettingBoard_C.cpp.o:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/SettingBoard_C.cpp.o
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/SettingBoard_C.cpp.o
 .PHONY : DataManipolation/SettingBoard_C.cpp.o
 
 DataManipolation/SettingBoard_C.i: DataManipolation/SettingBoard_C.cpp.i
@@ -275,7 +275,7 @@ DataManipolation/SettingBoard_C.i: DataManipolation/SettingBoard_C.cpp.i
 
 # target to preprocess a source file
 DataManipolation/SettingBoard_C.cpp.i:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/SettingBoard_C.cpp.i
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/SettingBoard_C.cpp.i
 .PHONY : DataManipolation/SettingBoard_C.cpp.i
 
 DataManipolation/SettingBoard_C.s: DataManipolation/SettingBoard_C.cpp.s
@@ -284,7 +284,7 @@ DataManipolation/SettingBoard_C.s: DataManipolation/SettingBoard_C.cpp.s
 
 # target to generate assembly for a file
 DataManipolation/SettingBoard_C.cpp.s:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/SettingBoard_C.cpp.s
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/SettingBoard_C.cpp.s
 .PHONY : DataManipolation/SettingBoard_C.cpp.s
 
 DataManipolation/SpeedMot.o: DataManipolation/SpeedMot.cpp.o
@@ -293,7 +293,7 @@ DataManipolation/SpeedMot.o: DataManipolation/SpeedMot.cpp.o
 
 # target to build an object file
 DataManipolation/SpeedMot.cpp.o:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/SpeedMot.cpp.o
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/SpeedMot.cpp.o
 .PHONY : DataManipolation/SpeedMot.cpp.o
 
 DataManipolation/SpeedMot.i: DataManipolation/SpeedMot.cpp.i
@@ -302,7 +302,7 @@ DataManipolation/SpeedMot.i: DataManipolation/SpeedMot.cpp.i
 
 # target to preprocess a source file
 DataManipolation/SpeedMot.cpp.i:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/SpeedMot.cpp.i
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/SpeedMot.cpp.i
 .PHONY : DataManipolation/SpeedMot.cpp.i
 
 DataManipolation/SpeedMot.s: DataManipolation/SpeedMot.cpp.s
@@ -311,7 +311,7 @@ DataManipolation/SpeedMot.s: DataManipolation/SpeedMot.cpp.s
 
 # target to generate assembly for a file
 DataManipolation/SpeedMot.cpp.s:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/SpeedMot.cpp.s
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/SpeedMot.cpp.s
 .PHONY : DataManipolation/SpeedMot.cpp.s
 
 # Help Target
@@ -355,6 +355,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

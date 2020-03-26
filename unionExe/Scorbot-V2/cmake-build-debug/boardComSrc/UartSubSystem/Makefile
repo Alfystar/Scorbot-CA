@@ -39,19 +39,19 @@ cmake_force:
 SHELL = /bin/sh
 
 # The CMake executable.
-CMAKE_COMMAND = /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake
+CMAKE_COMMAND = /home/alfystar/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake
 
 # The command to remove a file.
-RM = /home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E remove -f
+RM = /home/alfystar/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E remove -f
 
 # Escaping for special characters.
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2
+CMAKE_SOURCE_DIR = /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug
+CMAKE_BINARY_DIR = /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -59,7 +59,7 @@ CMAKE_BINARY_DIR = /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake
 # Special rule for the target rebuild_cache
 rebuild_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+	/home/alfystar/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
 .PHONY : rebuild_cache
 
 # Special rule for the target rebuild_cache
@@ -70,7 +70,7 @@ rebuild_cache/fast: rebuild_cache
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/home/alfyhack/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+	/home/alfystar/.local/share/JetBrains/Toolbox/apps/CLion/ch-0/193.6911.21/bin/cmake/linux/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
 .PHONY : edit_cache
 
 # Special rule for the target edit_cache
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UartSubSystem/CMakeFiles/progress.marks
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 boardComSrc/UartSubSystem/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UartSubSystem/CMakeFiles/progress.marks
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 boardComSrc/UartSubSystem/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 boardComSrc/UartSubSystem/clean
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 boardComSrc/UartSubSystem/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 boardComSrc/UartSubSystem/preinstall
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 boardComSrc/UartSubSystem/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 boardComSrc/UartSubSystem/preinstall
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 boardComSrc/UartSubSystem/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/rule:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/rule
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f CMakeFiles/Makefile2 boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/rule
 .PHONY : boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ UartSubSystem: boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/rule
 
 # fast build rule for target.
 UartSubSystem/fast:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build
 .PHONY : UartSubSystem/fast
 
 AdapterClasses/ComUartAdapter.o: AdapterClasses/ComUartAdapter.cpp.o
@@ -131,7 +131,7 @@ AdapterClasses/ComUartAdapter.o: AdapterClasses/ComUartAdapter.cpp.o
 
 # target to build an object file
 AdapterClasses/ComUartAdapter.cpp.o:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterClasses/ComUartAdapter.cpp.o
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterClasses/ComUartAdapter.cpp.o
 .PHONY : AdapterClasses/ComUartAdapter.cpp.o
 
 AdapterClasses/ComUartAdapter.i: AdapterClasses/ComUartAdapter.cpp.i
@@ -140,7 +140,7 @@ AdapterClasses/ComUartAdapter.i: AdapterClasses/ComUartAdapter.cpp.i
 
 # target to preprocess a source file
 AdapterClasses/ComUartAdapter.cpp.i:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterClasses/ComUartAdapter.cpp.i
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterClasses/ComUartAdapter.cpp.i
 .PHONY : AdapterClasses/ComUartAdapter.cpp.i
 
 AdapterClasses/ComUartAdapter.s: AdapterClasses/ComUartAdapter.cpp.s
@@ -149,7 +149,7 @@ AdapterClasses/ComUartAdapter.s: AdapterClasses/ComUartAdapter.cpp.s
 
 # target to generate assembly for a file
 AdapterClasses/ComUartAdapter.cpp.s:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterClasses/ComUartAdapter.cpp.s
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterClasses/ComUartAdapter.cpp.s
 .PHONY : AdapterClasses/ComUartAdapter.cpp.s
 
 AdapterClasses/ParamSingletonFactory.o: AdapterClasses/ParamSingletonFactory.cpp.o
@@ -158,7 +158,7 @@ AdapterClasses/ParamSingletonFactory.o: AdapterClasses/ParamSingletonFactory.cpp
 
 # target to build an object file
 AdapterClasses/ParamSingletonFactory.cpp.o:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterClasses/ParamSingletonFactory.cpp.o
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterClasses/ParamSingletonFactory.cpp.o
 .PHONY : AdapterClasses/ParamSingletonFactory.cpp.o
 
 AdapterClasses/ParamSingletonFactory.i: AdapterClasses/ParamSingletonFactory.cpp.i
@@ -167,7 +167,7 @@ AdapterClasses/ParamSingletonFactory.i: AdapterClasses/ParamSingletonFactory.cpp
 
 # target to preprocess a source file
 AdapterClasses/ParamSingletonFactory.cpp.i:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterClasses/ParamSingletonFactory.cpp.i
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterClasses/ParamSingletonFactory.cpp.i
 .PHONY : AdapterClasses/ParamSingletonFactory.cpp.i
 
 AdapterClasses/ParamSingletonFactory.s: AdapterClasses/ParamSingletonFactory.cpp.s
@@ -176,7 +176,7 @@ AdapterClasses/ParamSingletonFactory.s: AdapterClasses/ParamSingletonFactory.cpp
 
 # target to generate assembly for a file
 AdapterClasses/ParamSingletonFactory.cpp.s:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterClasses/ParamSingletonFactory.cpp.s
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterClasses/ParamSingletonFactory.cpp.s
 .PHONY : AdapterClasses/ParamSingletonFactory.cpp.s
 
 AdapterFactory.o: AdapterFactory.cpp.o
@@ -185,7 +185,7 @@ AdapterFactory.o: AdapterFactory.cpp.o
 
 # target to build an object file
 AdapterFactory.cpp.o:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterFactory.cpp.o
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterFactory.cpp.o
 .PHONY : AdapterFactory.cpp.o
 
 AdapterFactory.i: AdapterFactory.cpp.i
@@ -194,7 +194,7 @@ AdapterFactory.i: AdapterFactory.cpp.i
 
 # target to preprocess a source file
 AdapterFactory.cpp.i:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterFactory.cpp.i
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterFactory.cpp.i
 .PHONY : AdapterFactory.cpp.i
 
 AdapterFactory.s: AdapterFactory.cpp.s
@@ -203,7 +203,7 @@ AdapterFactory.s: AdapterFactory.cpp.s
 
 # target to generate assembly for a file
 AdapterFactory.cpp.s:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterFactory.cpp.s
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterFactory.cpp.s
 .PHONY : AdapterFactory.cpp.s
 
 ConcreteObserver.o: ConcreteObserver.cpp.o
@@ -212,7 +212,7 @@ ConcreteObserver.o: ConcreteObserver.cpp.o
 
 # target to build an object file
 ConcreteObserver.cpp.o:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/ConcreteObserver.cpp.o
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/ConcreteObserver.cpp.o
 .PHONY : ConcreteObserver.cpp.o
 
 ConcreteObserver.i: ConcreteObserver.cpp.i
@@ -221,7 +221,7 @@ ConcreteObserver.i: ConcreteObserver.cpp.i
 
 # target to preprocess a source file
 ConcreteObserver.cpp.i:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/ConcreteObserver.cpp.i
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/ConcreteObserver.cpp.i
 .PHONY : ConcreteObserver.cpp.i
 
 ConcreteObserver.s: ConcreteObserver.cpp.s
@@ -230,7 +230,7 @@ ConcreteObserver.s: ConcreteObserver.cpp.s
 
 # target to generate assembly for a file
 ConcreteObserver.cpp.s:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/ConcreteObserver.cpp.s
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/ConcreteObserver.cpp.s
 .PHONY : ConcreteObserver.cpp.s
 
 InfoExpPack.o: InfoExpPack.cpp.o
@@ -239,7 +239,7 @@ InfoExpPack.o: InfoExpPack.cpp.o
 
 # target to build an object file
 InfoExpPack.cpp.o:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/InfoExpPack.cpp.o
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/InfoExpPack.cpp.o
 .PHONY : InfoExpPack.cpp.o
 
 InfoExpPack.i: InfoExpPack.cpp.i
@@ -248,7 +248,7 @@ InfoExpPack.i: InfoExpPack.cpp.i
 
 # target to preprocess a source file
 InfoExpPack.cpp.i:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/InfoExpPack.cpp.i
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/InfoExpPack.cpp.i
 .PHONY : InfoExpPack.cpp.i
 
 InfoExpPack.s: InfoExpPack.cpp.s
@@ -257,7 +257,7 @@ InfoExpPack.s: InfoExpPack.cpp.s
 
 # target to generate assembly for a file
 InfoExpPack.cpp.s:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/InfoExpPack.cpp.s
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/InfoExpPack.cpp.s
 .PHONY : InfoExpPack.cpp.s
 
 # Help Target
@@ -295,6 +295,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

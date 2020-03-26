@@ -40,9 +40,9 @@ void UartConnect::uartChoised_handler(){
             comUartAdapter->changeDeviceVel(B9600);
         else if(speed.compare("B57600") == 0)
             comUartAdapter->changeDeviceVel(B57600);
-        else if(speed.compare("B115200") == 0)
+        else if (speed.compare("B115200") == 0)
             comUartAdapter->changeDeviceVel(B115200);
-        else if(speed.compare("B921600") == 0)
+        else if (speed.compare("B921600") == 0)
             comUartAdapter->changeDeviceVel(B921600);
 
     } catch (const std::exception &e) {
@@ -50,6 +50,8 @@ void UartConnect::uartChoised_handler(){
         return;
     }
 
+    comUartAdapter->setSampleTimeEn(10 * 1000U);
+    comUartAdapter->setSampleTimeCur(10 * 1000U);
     /// Notifica di avvio
     win->ui->actionConnection_Start->setDisabled(true);
     emit uartMake();

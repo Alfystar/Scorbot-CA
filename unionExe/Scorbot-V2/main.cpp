@@ -15,9 +15,9 @@ ScorbotMainWindows *w;
 int main(int argc, char *argv[]) {
 
     QApplication a(argc, argv);
+    QApplication::setStyle("fusion");
 
     w = new ScorbotMainWindows(nullptr);
     w->show();   //visualizza gli estremi della finestra, ma non carica nulla.
-
     return a.exec(); //Avvia l'applicazione e il programma
 }

@@ -1,13 +1,13 @@
 /****************************************************************************
 ** Resource object code
 **
-** Created by: The Resource Compiler for Qt version 5.9.5
+** Created by: The Resource Compiler for Qt version 5.14.1
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
 static const unsigned char qt_resource_data[] = {
-        // /home/alfyhack/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/img/Logo-Uni-Tor-Vergata.png_256x256.png
+        // /home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/img/Logo-Uni-Tor-Vergata.png_256x256.png
         0x0, 0x0, 0x4d, 0x1b,
         0x89,
         0x50, 0x4e, 0x47, 0xd, 0xa, 0x1a, 0xa, 0x0, 0x0, 0x0, 0xd, 0x49, 0x48, 0x44, 0x52, 0x0,
@@ -1274,9 +1274,10 @@ static const unsigned char qt_resource_struct[] = {
         0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0, 0x0,
         // :/img/Logo-Uni-Tor-Vergata.png_256x256.png
         0x0, 0x0, 0x0, 0xc, 0x0, 0x0, 0x0, 0x0, 0x0, 0x1, 0x0, 0x0, 0x0, 0x0,
-        0x0, 0x0, 0x1, 0x6c, 0xec, 0xea, 0x40, 0x91,
+        0x0, 0x0, 0x1, 0x71, 0x13, 0x3b, 0x45, 0x8d,
 
 };
+
 #ifdef QT_NAMESPACE
                                                                                                                         #  define QT_RCC_PREPEND_NAMESPACE(name) ::QT_NAMESPACE::name
 #  define QT_RCC_MANGLE_NAMESPACE0(x) x
@@ -1288,28 +1289,33 @@ static const unsigned char qt_resource_struct[] = {
 #   define QT_RCC_PREPEND_NAMESPACE(name) name
 #   define QT_RCC_MANGLE_NAMESPACE(name) name
 #endif
+
 #ifdef QT_NAMESPACE
 namespace QT_NAMESPACE {
 #endif
-bool qRegisterResourceData(int, const unsigned char *, const unsigned char *, const unsigned char *);
 
+bool qRegisterResourceData(int, const unsigned char *, const unsigned char *, const unsigned char *);
 bool qUnregisterResourceData(int, const unsigned char *, const unsigned char *, const unsigned char *);
+
 #ifdef QT_NAMESPACE
 }
 #endif
+
 int QT_RCC_MANGLE_NAMESPACE(qInitResources_logo)();
 
 int QT_RCC_MANGLE_NAMESPACE(qInitResources_logo)() {
+    int version = 3;
     QT_RCC_PREPEND_NAMESPACE(qRegisterResourceData)
-            (0x2, qt_resource_struct, qt_resource_name, qt_resource_data);
+            (version, qt_resource_struct, qt_resource_name, qt_resource_data);
     return 1;
 }
 
 int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_logo)();
 
 int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_logo)() {
+    int version = 3;
     QT_RCC_PREPEND_NAMESPACE(qUnregisterResourceData)
-            (0x2, qt_resource_struct, qt_resource_name, qt_resource_data);
+            (version, qt_resource_struct, qt_resource_name, qt_resource_data);
     return 1;
 }
 

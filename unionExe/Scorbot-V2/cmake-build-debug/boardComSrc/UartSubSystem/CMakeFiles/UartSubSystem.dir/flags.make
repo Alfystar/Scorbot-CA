@@ -6,5 +6,5 @@ CXX_FLAGS = -g
 
 CXX_DEFINES = -DlinuxSide=1
 
-CXX_INCLUDES = -I/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/. -I/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/. -I/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/. -I/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/circularBuffer -I/home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/timeOp/. 
+CXX_INCLUDES = -I/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/. -I/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/DataTransfertPackge/. -I/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/uartDriver/. -I/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/circularBuffer -I/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/timeOp/. 
 

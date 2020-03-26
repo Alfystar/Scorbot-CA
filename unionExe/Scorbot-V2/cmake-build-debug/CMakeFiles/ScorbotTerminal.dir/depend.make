@@ -54,6 +54,7 @@ CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtC
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig-bootstrapped.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
+CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
@@ -98,9 +99,12 @@ CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtC
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
+CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringalgorithms.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
+CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringliteral.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h
+CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringview.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h

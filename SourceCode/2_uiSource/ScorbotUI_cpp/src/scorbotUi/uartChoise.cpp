@@ -45,7 +45,6 @@ void UartChoise::serialFind_handler() {
         exit(-1);
     }
     /* Read the output a line at a time - output it. */
-    QAction *newAct;
     std::string s;
     while (fgets(path, sizeof(path), fp) != NULL) {
         //remove new line from return
@@ -53,8 +52,6 @@ void UartChoise::serialFind_handler() {
             if (*i == '\n') *i = 0;
         }
         std::cout << path <<"\n";
-        newAct = new QAction(path);
-        newAct->setCheckable(true);
         ui->uartFind->addItem(path);
     }
     /* close */

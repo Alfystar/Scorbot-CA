@@ -40,7 +40,7 @@ CMakeFiles/ScorbotTerminal.dir/main.cpp.o
  ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
  ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h
  ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/uartChoise.h
- /home/alfyhack/Scrivania/Scorbot-CA/unionExe/Scorbot-V2/main.cpp
+ /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/main.cpp
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
@@ -55,6 +55,7 @@ CMakeFiles/ScorbotTerminal.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig-bootstrapped.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
@@ -99,9 +100,12 @@ CMakeFiles/ScorbotTerminal.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringalgorithms.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringliteral.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringview.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h

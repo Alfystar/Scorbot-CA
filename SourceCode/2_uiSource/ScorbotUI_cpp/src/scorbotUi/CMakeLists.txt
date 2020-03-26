@@ -20,11 +20,13 @@ if (NOT TARGET scorbotUi)
     #su qt creator da errore???
     target_link_directories(scorbotUi PUBLIC ".")
 
+    # Per installare i pacchetti necessari se serve:
+    # sudo apt install qt5-d* qtbase5-dev qtdeclarative5-dev qttools5-dev-tools
     find_package(Qt5 COMPONENTS Widgets REQUIRED)
     target_link_libraries(scorbotUi Qt5::Widgets)
 
-#    find_package(Qt5 COMPONENTS Widgets REQUIRED)
-#    target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
+    #    find_package(Qt5 COMPONENTS Widgets REQUIRED)
+    #    target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
 
     target_link_libraries(scorbotUi dataTransfert)
     target_link_libraries(scorbotUi scoreUtiliy)
