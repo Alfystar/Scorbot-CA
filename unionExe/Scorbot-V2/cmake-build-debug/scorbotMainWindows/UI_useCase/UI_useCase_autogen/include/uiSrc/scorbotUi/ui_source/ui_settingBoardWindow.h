@@ -20,7 +20,6 @@
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
-#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QSplitter>
 #include <QtWidgets/QVBoxLayout>
@@ -100,13 +99,13 @@ public:
     QPushButton *saveSetting;
     QPushButton *loadSetting;
     QPushButton *restoreSetting;
-    QSpacerItem *verticalSpacer;
     QDialogButtonBox *buttonBox;
 
-    void setupUi(QDialog *SettingBoardWindow) {
+    void setupUi(QDialog *SettingBoardWindow)
+    {
         if (SettingBoardWindow->objectName().isEmpty())
             SettingBoardWindow->setObjectName(QString::fromUtf8("SettingBoardWindow"));
-        SettingBoardWindow->resize(505, 517);
+        SettingBoardWindow->resize(505, 447);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -116,7 +115,7 @@ public:
         SettingBoardWindow->setModal(false);
         layoutWidget = new QWidget(SettingBoardWindow);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 10, 481, 498));
+        layoutWidget->setGeometry(QRect(10, 10, 481, 431));
         verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setSpacing(16);
         verticalLayout->setContentsMargins(9, 9, 9, 9);
@@ -578,10 +577,6 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_2);
 
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer);
-
         buttonBox = new QDialogButtonBox(layoutWidget);
         buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
         buttonBox->setOrientation(Qt::Horizontal);
@@ -639,7 +634,8 @@ public:
         QMetaObject::connectSlotsByName(SettingBoardWindow);
     } // setupUi
 
-    void retranslateUi(QDialog *SettingBoardWindow) {
+    void retranslateUi(QDialog *SettingBoardWindow)
+    {
         SettingBoardWindow->setWindowTitle(QCoreApplication::translate("SettingBoardWindow", "SettingBoard", nullptr));
         valMinScr_2->setText(QCoreApplication::translate("SettingBoardWindow", "En min [Step]", nullptr));
         en1Label_2->setText(QCoreApplication::translate("SettingBoardWindow", "En 1", nullptr));

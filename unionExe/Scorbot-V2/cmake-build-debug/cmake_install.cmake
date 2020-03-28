@@ -38,10 +38,10 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-    # Include the install script for each subdirectory.
-    include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/cmake_install.cmake")
-    include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/cmake_install.cmake")
-    include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/cmake_install.cmake")
+  # Include the install script for each subdirectory.
+  include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/cmake_install.cmake")
+  include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/cmake_install.cmake")
+  include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/cmake_install.cmake")
 
 endif()
 
@@ -52,6 +52,6 @@ else()
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
-        "${CMAKE_INSTALL_MANIFEST_FILES}")
+       "${CMAKE_INSTALL_MANIFEST_FILES}")
 file(WRITE "/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
-        "${CMAKE_INSTALL_MANIFEST_CONTENT}")
+     "${CMAKE_INSTALL_MANIFEST_CONTENT}")

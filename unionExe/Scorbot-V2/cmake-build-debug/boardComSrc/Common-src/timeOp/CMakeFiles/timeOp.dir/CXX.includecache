@@ -6,11 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/timeOp/timeSpecOp.h
-time.h
--
-
-/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/timeOp/timerSpecOp.cpp
-timeSpecOp.h
-/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/timeOp/timeSpecOp.h
-

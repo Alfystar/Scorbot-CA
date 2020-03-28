@@ -49,7 +49,8 @@ public:
     QToolButton *mp5;
     QToolButton *mp6;
 
-    void setupUi(QDialog *FreeMoveWindow) {
+    void setupUi(QDialog *FreeMoveWindow)
+    {
         if (FreeMoveWindow->objectName().isEmpty())
             FreeMoveWindow->setObjectName(QString::fromUtf8("FreeMoveWindow"));
         FreeMoveWindow->resize(272, 268);
@@ -57,10 +58,10 @@ public:
         buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
         buttonBox->setGeometry(QRect(180, 10, 75, 61));
         buttonBox->setOrientation(Qt::Vertical);
-        buttonBox->setStandardButtons(QDialogButtonBox::Cancel | QDialogButtonBox::Ok);
+        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
         layoutWidget = new QWidget(FreeMoveWindow);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 10, 128, 250));
+        layoutWidget->setGeometry(QRect(10, 10, 151, 250));
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setSpacing(12);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
@@ -121,7 +122,7 @@ public:
         verticalLayout_2->setSizeConstraint(QLayout::SetMaximumSize);
         Step1_direct = new QLabel(layoutWidget);
         Step1_direct->setObjectName(QString::fromUtf8("Step1_direct"));
-        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Fixed);
+        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(Step1_direct->sizePolicy().hasHeightForWidth());
@@ -237,7 +238,8 @@ public:
         QMetaObject::connectSlotsByName(FreeMoveWindow);
     } // setupUi
 
-    void retranslateUi(QDialog *FreeMoveWindow) {
+    void retranslateUi(QDialog *FreeMoveWindow)
+    {
         FreeMoveWindow->setWindowTitle(QCoreApplication::translate("FreeMoveWindow", "Dialog", nullptr));
         mn1->setText(QCoreApplication::translate("FreeMoveWindow", "-", nullptr));
         mn2->setText(QCoreApplication::translate("FreeMoveWindow", "-", nullptr));

@@ -138,29 +138,29 @@ public:
     QLabel *label;
     QFormLayout *formLayout;
     QLabel *l1Label;
-    QDoubleSpinBox *l1DoubleSpinBox;
+    QDoubleSpinBox *l1Robot;
     QLabel *l2Label;
-    QDoubleSpinBox *l2DoubleSpinBox;
+    QDoubleSpinBox *l2Robot;
     QLabel *l3Label;
-    QDoubleSpinBox *l3DoubleSpinBox;
+    QDoubleSpinBox *l3Robot;
     QLabel *l4Label;
-    QDoubleSpinBox *l4DoubleSpinBox;
+    QDoubleSpinBox *d1Robot;
     QLabel *l5Label;
-    QDoubleSpinBox *l5DoubleSpinBox;
-    QPushButton *scorSetHome;
+    QDoubleSpinBox *d5Robot;
+    QPushButton *scorSwHome;
     QWidget *layoutWidget3;
     QVBoxLayout *en2deg;
     QLabel *label_2;
     QFormLayout *formLayout_3;
     QLabel *aLabel;
-    QDoubleSpinBox *aDoubleSpinBox;
+    QDoubleSpinBox *alphaRobot;
     QLabel *bLabel;
-    QDoubleSpinBox *bDoubleSpinBox;
+    QDoubleSpinBox *betaRobot;
     QLabel *cLabel;
-    QDoubleSpinBox *cDoubleSpinBox;
+    QDoubleSpinBox *gammaRobot;
     QLabel *dLabel;
-    QDoubleSpinBox *dDoubleSpinBox;
-    QPushButton *scorParamSet;
+    QDoubleSpinBox *deltaRobot;
+    QPushButton *scorParamLoad;
     QPushButton *scorParamReset;
     QPushButton *sendRef;
     QWidget *plot;
@@ -260,7 +260,7 @@ public:
     QLabel *thR3;
     QLabel *thR4;
     QLabel *thR5;
-    QLabel *PinzaOpen;
+    QLabel *pinzaOpen;
     QWidget *layoutWidget10;
     QHBoxLayout *horizontalLayout_8;
     QVBoxLayout *verticalLayout_9;
@@ -276,7 +276,7 @@ public:
     QLabel *thEr3;
     QLabel *thEr4;
     QLabel *thEr5;
-    QLabel *PinzaOpenErr;
+    QLabel *pinzaOpenErr;
     QFrame *curRead;
     QVBoxLayout *verticalLayout_14;
     QLabel *label_6;
@@ -309,12 +309,13 @@ public:
     QMenu *menuUartSetting;
     QStatusBar *statusBar;
 
-    void setupUi(QMainWindow *MainWindow) {
+    void setupUi(QMainWindow *MainWindow)
+    {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
         MainWindow->setWindowModality(Qt::ApplicationModal);
         MainWindow->setEnabled(true);
-        MainWindow->resize(1011, 498);
+        MainWindow->resize(1000, 498);
         QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -323,7 +324,7 @@ public:
         MainWindow->setMinimumSize(QSize(400, 100));
         MainWindow->setMaximumSize(QSize(16777215, 16777215));
         QIcon icon;
-        icon.addFile(QString::fromUtf8("img/Logo-Uni-Tor-Vergata.png_256x256.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8("../../../../../../../../.designer/backup/img/Logo-Uni-Tor-Vergata.png_256x256.png"), QSize(), QIcon::Normal, QIcon::Off);
         MainWindow->setWindowIcon(icon);
         MainWindow->setStyleSheet(QString::fromUtf8("url:(/newPrefix/Logo-Uni-Tor-Vergata.png_48x48.png)"));
         MainWindow->setTabShape(QTabWidget::Rounded);
@@ -363,7 +364,6 @@ public:
         QFont font;
         font.setPointSize(14);
         tabReference->setFont(font);
-        tabReference->setStyleSheet(QString::fromUtf8("background-color: rgb(240, 240, 240);"));
         tabReference->setTabPosition(QTabWidget::North);
         tabReference->setTabShape(QTabWidget::Rounded);
         tabReference->setUsesScrollButtons(false);
@@ -504,8 +504,8 @@ public:
         formLayout_5 = new QFormLayout();
         formLayout_5->setObjectName(QString::fromUtf8("formLayout_5"));
         formLayout_5->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
-        formLayout_5->setLabelAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
-        formLayout_5->setFormAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignTop);
+        formLayout_5->setLabelAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        formLayout_5->setFormAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
         en1Label_4 = new QLabel(layoutWidget_13);
         en1Label_4->setObjectName(QString::fromUtf8("en1Label_4"));
         QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Preferred);
@@ -643,7 +643,7 @@ public:
         sizePolicy1.setHeightForWidth(en1Label_5->sizePolicy().hasHeightForWidth());
         en1Label_5->setSizePolicy(sizePolicy1);
         en1Label_5->setLayoutDirection(Qt::LeftToRight);
-        en1Label_5->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        en1Label_5->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         formLayout_6->setWidget(0, QFormLayout::LabelRole, en1Label_5);
 
@@ -661,7 +661,7 @@ public:
         sizePolicy1.setHeightForWidth(en2Label_5->sizePolicy().hasHeightForWidth());
         en2Label_5->setSizePolicy(sizePolicy1);
         en2Label_5->setLayoutDirection(Qt::LeftToRight);
-        en2Label_5->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        en2Label_5->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         formLayout_6->setWidget(1, QFormLayout::LabelRole, en2Label_5);
 
@@ -680,7 +680,7 @@ public:
         sizePolicy1.setHeightForWidth(en3Label_5->sizePolicy().hasHeightForWidth());
         en3Label_5->setSizePolicy(sizePolicy1);
         en3Label_5->setLayoutDirection(Qt::LeftToRight);
-        en3Label_5->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        en3Label_5->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         formLayout_6->setWidget(2, QFormLayout::LabelRole, en3Label_5);
 
@@ -723,7 +723,7 @@ public:
         sizePolicy1.setHeightForWidth(en1Label_6->sizePolicy().hasHeightForWidth());
         en1Label_6->setSizePolicy(sizePolicy1);
         en1Label_6->setLayoutDirection(Qt::LeftToRight);
-        en1Label_6->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        en1Label_6->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         formLayout_7->setWidget(0, QFormLayout::LabelRole, en1Label_6);
 
@@ -741,7 +741,7 @@ public:
         sizePolicy1.setHeightForWidth(en2Label_6->sizePolicy().hasHeightForWidth());
         en2Label_6->setSizePolicy(sizePolicy1);
         en2Label_6->setLayoutDirection(Qt::LeftToRight);
-        en2Label_6->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        en2Label_6->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         formLayout_7->setWidget(1, QFormLayout::LabelRole, en2Label_6);
 
@@ -801,6 +801,7 @@ public:
         font3.setItalic(false);
         font3.setWeight(50);
         gH->setFont(font3);
+        gH->setToolTipDuration(-1);
         gH->setStyleSheet(QString::fromUtf8(""));
 
         verticalLayout_3->addWidget(gH);
@@ -851,7 +852,7 @@ public:
         formLayout_2->setObjectName(QString::fromUtf8("formLayout_2"));
         formLayout_2->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
         formLayout_2->setLabelAlignment(Qt::AlignCenter);
-        formLayout_2->setFormAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignTop);
+        formLayout_2->setFormAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
         formLayout_2->setVerticalSpacing(6);
         en1Label_2 = new QLabel(layoutWidget1);
         en1Label_2->setObjectName(QString::fromUtf8("en1Label_2"));
@@ -960,87 +961,97 @@ public:
 
         formLayout->setWidget(0, QFormLayout::LabelRole, l1Label);
 
-        l1DoubleSpinBox = new QDoubleSpinBox(layoutWidget2);
-        l1DoubleSpinBox->setObjectName(QString::fromUtf8("l1DoubleSpinBox"));
+        l1Robot = new QDoubleSpinBox(layoutWidget2);
+        l1Robot->setObjectName(QString::fromUtf8("l1Robot"));
         QSizePolicy sizePolicy3(QSizePolicy::Expanding, QSizePolicy::Fixed);
         sizePolicy3.setHorizontalStretch(0);
         sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(l1DoubleSpinBox->sizePolicy().hasHeightForWidth());
-        l1DoubleSpinBox->setSizePolicy(sizePolicy3);
-        l1DoubleSpinBox->setButtonSymbols(QAbstractSpinBox::PlusMinus);
-        l1DoubleSpinBox->setMinimum(-99999.000000000000000);
-        l1DoubleSpinBox->setMaximum(99999.000000000000000);
+        sizePolicy3.setHeightForWidth(l1Robot->sizePolicy().hasHeightForWidth());
+        l1Robot->setSizePolicy(sizePolicy3);
+        l1Robot->setButtonSymbols(QAbstractSpinBox::PlusMinus);
+        l1Robot->setMinimum(-99999.000000000000000);
+        l1Robot->setMaximum(99999.000000000000000);
+        l1Robot->setSingleStep(0.500000000000000);
+        l1Robot->setValue(5.000000000000000);
 
-        formLayout->setWidget(0, QFormLayout::FieldRole, l1DoubleSpinBox);
+        formLayout->setWidget(0, QFormLayout::FieldRole, l1Robot);
 
         l2Label = new QLabel(layoutWidget2);
         l2Label->setObjectName(QString::fromUtf8("l2Label"));
 
         formLayout->setWidget(1, QFormLayout::LabelRole, l2Label);
 
-        l2DoubleSpinBox = new QDoubleSpinBox(layoutWidget2);
-        l2DoubleSpinBox->setObjectName(QString::fromUtf8("l2DoubleSpinBox"));
-        sizePolicy3.setHeightForWidth(l2DoubleSpinBox->sizePolicy().hasHeightForWidth());
-        l2DoubleSpinBox->setSizePolicy(sizePolicy3);
-        l2DoubleSpinBox->setButtonSymbols(QAbstractSpinBox::PlusMinus);
-        l2DoubleSpinBox->setMinimum(-99999.000000000000000);
-        l2DoubleSpinBox->setMaximum(99999.000000000000000);
+        l2Robot = new QDoubleSpinBox(layoutWidget2);
+        l2Robot->setObjectName(QString::fromUtf8("l2Robot"));
+        sizePolicy3.setHeightForWidth(l2Robot->sizePolicy().hasHeightForWidth());
+        l2Robot->setSizePolicy(sizePolicy3);
+        l2Robot->setButtonSymbols(QAbstractSpinBox::PlusMinus);
+        l2Robot->setMinimum(-99999.000000000000000);
+        l2Robot->setMaximum(99999.000000000000000);
+        l2Robot->setSingleStep(0.500000000000000);
+        l2Robot->setValue(22.000000000000000);
 
-        formLayout->setWidget(1, QFormLayout::FieldRole, l2DoubleSpinBox);
+        formLayout->setWidget(1, QFormLayout::FieldRole, l2Robot);
 
         l3Label = new QLabel(layoutWidget2);
         l3Label->setObjectName(QString::fromUtf8("l3Label"));
 
         formLayout->setWidget(2, QFormLayout::LabelRole, l3Label);
 
-        l3DoubleSpinBox = new QDoubleSpinBox(layoutWidget2);
-        l3DoubleSpinBox->setObjectName(QString::fromUtf8("l3DoubleSpinBox"));
-        sizePolicy3.setHeightForWidth(l3DoubleSpinBox->sizePolicy().hasHeightForWidth());
-        l3DoubleSpinBox->setSizePolicy(sizePolicy3);
-        l3DoubleSpinBox->setButtonSymbols(QAbstractSpinBox::PlusMinus);
-        l3DoubleSpinBox->setMinimum(-99999.000000000000000);
-        l3DoubleSpinBox->setMaximum(99999.000000000000000);
+        l3Robot = new QDoubleSpinBox(layoutWidget2);
+        l3Robot->setObjectName(QString::fromUtf8("l3Robot"));
+        sizePolicy3.setHeightForWidth(l3Robot->sizePolicy().hasHeightForWidth());
+        l3Robot->setSizePolicy(sizePolicy3);
+        l3Robot->setButtonSymbols(QAbstractSpinBox::PlusMinus);
+        l3Robot->setMinimum(-99999.000000000000000);
+        l3Robot->setMaximum(99999.000000000000000);
+        l3Robot->setSingleStep(0.500000000000000);
+        l3Robot->setValue(22.000000000000000);
 
-        formLayout->setWidget(2, QFormLayout::FieldRole, l3DoubleSpinBox);
+        formLayout->setWidget(2, QFormLayout::FieldRole, l3Robot);
 
         l4Label = new QLabel(layoutWidget2);
         l4Label->setObjectName(QString::fromUtf8("l4Label"));
 
         formLayout->setWidget(3, QFormLayout::LabelRole, l4Label);
 
-        l4DoubleSpinBox = new QDoubleSpinBox(layoutWidget2);
-        l4DoubleSpinBox->setObjectName(QString::fromUtf8("l4DoubleSpinBox"));
-        sizePolicy3.setHeightForWidth(l4DoubleSpinBox->sizePolicy().hasHeightForWidth());
-        l4DoubleSpinBox->setSizePolicy(sizePolicy3);
-        l4DoubleSpinBox->setButtonSymbols(QAbstractSpinBox::PlusMinus);
-        l4DoubleSpinBox->setMinimum(-99999.000000000000000);
-        l4DoubleSpinBox->setMaximum(99999.000000000000000);
+        d1Robot = new QDoubleSpinBox(layoutWidget2);
+        d1Robot->setObjectName(QString::fromUtf8("d1Robot"));
+        sizePolicy3.setHeightForWidth(d1Robot->sizePolicy().hasHeightForWidth());
+        d1Robot->setSizePolicy(sizePolicy3);
+        d1Robot->setButtonSymbols(QAbstractSpinBox::PlusMinus);
+        d1Robot->setMinimum(-99999.000000000000000);
+        d1Robot->setMaximum(99999.000000000000000);
+        d1Robot->setSingleStep(0.500000000000000);
+        d1Robot->setValue(2.000000000000000);
 
-        formLayout->setWidget(3, QFormLayout::FieldRole, l4DoubleSpinBox);
+        formLayout->setWidget(3, QFormLayout::FieldRole, d1Robot);
 
         l5Label = new QLabel(layoutWidget2);
         l5Label->setObjectName(QString::fromUtf8("l5Label"));
 
         formLayout->setWidget(4, QFormLayout::LabelRole, l5Label);
 
-        l5DoubleSpinBox = new QDoubleSpinBox(layoutWidget2);
-        l5DoubleSpinBox->setObjectName(QString::fromUtf8("l5DoubleSpinBox"));
-        sizePolicy3.setHeightForWidth(l5DoubleSpinBox->sizePolicy().hasHeightForWidth());
-        l5DoubleSpinBox->setSizePolicy(sizePolicy3);
-        l5DoubleSpinBox->setButtonSymbols(QAbstractSpinBox::PlusMinus);
-        l5DoubleSpinBox->setMinimum(-99999.000000000000000);
-        l5DoubleSpinBox->setMaximum(99999.000000000000000);
+        d5Robot = new QDoubleSpinBox(layoutWidget2);
+        d5Robot->setObjectName(QString::fromUtf8("d5Robot"));
+        sizePolicy3.setHeightForWidth(d5Robot->sizePolicy().hasHeightForWidth());
+        d5Robot->setSizePolicy(sizePolicy3);
+        d5Robot->setButtonSymbols(QAbstractSpinBox::PlusMinus);
+        d5Robot->setMinimum(-99999.000000000000000);
+        d5Robot->setMaximum(99999.000000000000000);
+        d5Robot->setSingleStep(0.500000000000000);
+        d5Robot->setValue(3.000000000000000);
 
-        formLayout->setWidget(4, QFormLayout::FieldRole, l5DoubleSpinBox);
+        formLayout->setWidget(4, QFormLayout::FieldRole, d5Robot);
 
-        scorSetHome = new QPushButton(layoutWidget2);
-        scorSetHome->setObjectName(QString::fromUtf8("scorSetHome"));
+        scorSwHome = new QPushButton(layoutWidget2);
+        scorSwHome->setObjectName(QString::fromUtf8("scorSwHome"));
         QFont font4;
         font4.setPointSize(10);
-        scorSetHome->setFont(font4);
-        scorSetHome->setStyleSheet(QString::fromUtf8(""));
+        scorSwHome->setFont(font4);
+        scorSwHome->setStyleSheet(QString::fromUtf8(""));
 
-        formLayout->setWidget(5, QFormLayout::FieldRole, scorSetHome);
+        formLayout->setWidget(5, QFormLayout::FieldRole, scorSwHome);
 
 
         RoboSize->addLayout(formLayout);
@@ -1069,15 +1080,17 @@ public:
 
         formLayout_3->setWidget(0, QFormLayout::LabelRole, aLabel);
 
-        aDoubleSpinBox = new QDoubleSpinBox(layoutWidget3);
-        aDoubleSpinBox->setObjectName(QString::fromUtf8("aDoubleSpinBox"));
-        sizePolicy3.setHeightForWidth(aDoubleSpinBox->sizePolicy().hasHeightForWidth());
-        aDoubleSpinBox->setSizePolicy(sizePolicy3);
-        aDoubleSpinBox->setButtonSymbols(QAbstractSpinBox::PlusMinus);
-        aDoubleSpinBox->setMinimum(-99999.000000000000000);
-        aDoubleSpinBox->setMaximum(99999.000000000000000);
+        alphaRobot = new QDoubleSpinBox(layoutWidget3);
+        alphaRobot->setObjectName(QString::fromUtf8("alphaRobot"));
+        sizePolicy3.setHeightForWidth(alphaRobot->sizePolicy().hasHeightForWidth());
+        alphaRobot->setSizePolicy(sizePolicy3);
+        alphaRobot->setButtonSymbols(QAbstractSpinBox::PlusMinus);
+        alphaRobot->setMinimum(-99999.000000000000000);
+        alphaRobot->setMaximum(99999.000000000000000);
+        alphaRobot->setSingleStep(0.010000000000000);
+        alphaRobot->setValue(4.100000000000000);
 
-        formLayout_3->setWidget(0, QFormLayout::FieldRole, aDoubleSpinBox);
+        formLayout_3->setWidget(0, QFormLayout::FieldRole, alphaRobot);
 
         bLabel = new QLabel(layoutWidget3);
         bLabel->setObjectName(QString::fromUtf8("bLabel"));
@@ -1085,15 +1098,17 @@ public:
 
         formLayout_3->setWidget(1, QFormLayout::LabelRole, bLabel);
 
-        bDoubleSpinBox = new QDoubleSpinBox(layoutWidget3);
-        bDoubleSpinBox->setObjectName(QString::fromUtf8("bDoubleSpinBox"));
-        sizePolicy3.setHeightForWidth(bDoubleSpinBox->sizePolicy().hasHeightForWidth());
-        bDoubleSpinBox->setSizePolicy(sizePolicy3);
-        bDoubleSpinBox->setButtonSymbols(QAbstractSpinBox::PlusMinus);
-        bDoubleSpinBox->setMinimum(-99999.000000000000000);
-        bDoubleSpinBox->setMaximum(99999.000000000000000);
+        betaRobot = new QDoubleSpinBox(layoutWidget3);
+        betaRobot->setObjectName(QString::fromUtf8("betaRobot"));
+        sizePolicy3.setHeightForWidth(betaRobot->sizePolicy().hasHeightForWidth());
+        betaRobot->setSizePolicy(sizePolicy3);
+        betaRobot->setButtonSymbols(QAbstractSpinBox::PlusMinus);
+        betaRobot->setMinimum(-99999.000000000000000);
+        betaRobot->setMaximum(99999.000000000000000);
+        betaRobot->setSingleStep(0.010000000000000);
+        betaRobot->setValue(0.200000000000000);
 
-        formLayout_3->setWidget(1, QFormLayout::FieldRole, bDoubleSpinBox);
+        formLayout_3->setWidget(1, QFormLayout::FieldRole, betaRobot);
 
         cLabel = new QLabel(layoutWidget3);
         cLabel->setObjectName(QString::fromUtf8("cLabel"));
@@ -1101,15 +1116,17 @@ public:
 
         formLayout_3->setWidget(2, QFormLayout::LabelRole, cLabel);
 
-        cDoubleSpinBox = new QDoubleSpinBox(layoutWidget3);
-        cDoubleSpinBox->setObjectName(QString::fromUtf8("cDoubleSpinBox"));
-        sizePolicy3.setHeightForWidth(cDoubleSpinBox->sizePolicy().hasHeightForWidth());
-        cDoubleSpinBox->setSizePolicy(sizePolicy3);
-        cDoubleSpinBox->setButtonSymbols(QAbstractSpinBox::PlusMinus);
-        cDoubleSpinBox->setMinimum(-99999.000000000000000);
-        cDoubleSpinBox->setMaximum(99999.000000000000000);
+        gammaRobot = new QDoubleSpinBox(layoutWidget3);
+        gammaRobot->setObjectName(QString::fromUtf8("gammaRobot"));
+        sizePolicy3.setHeightForWidth(gammaRobot->sizePolicy().hasHeightForWidth());
+        gammaRobot->setSizePolicy(sizePolicy3);
+        gammaRobot->setButtonSymbols(QAbstractSpinBox::PlusMinus);
+        gammaRobot->setMinimum(-99999.000000000000000);
+        gammaRobot->setMaximum(99999.000000000000000);
+        gammaRobot->setSingleStep(0.010000000000000);
+        gammaRobot->setValue(0.300000000000000);
 
-        formLayout_3->setWidget(2, QFormLayout::FieldRole, cDoubleSpinBox);
+        formLayout_3->setWidget(2, QFormLayout::FieldRole, gammaRobot);
 
         dLabel = new QLabel(layoutWidget3);
         dLabel->setObjectName(QString::fromUtf8("dLabel"));
@@ -1117,22 +1134,24 @@ public:
 
         formLayout_3->setWidget(3, QFormLayout::LabelRole, dLabel);
 
-        dDoubleSpinBox = new QDoubleSpinBox(layoutWidget3);
-        dDoubleSpinBox->setObjectName(QString::fromUtf8("dDoubleSpinBox"));
-        sizePolicy3.setHeightForWidth(dDoubleSpinBox->sizePolicy().hasHeightForWidth());
-        dDoubleSpinBox->setSizePolicy(sizePolicy3);
-        dDoubleSpinBox->setButtonSymbols(QAbstractSpinBox::PlusMinus);
-        dDoubleSpinBox->setMinimum(-99999.000000000000000);
-        dDoubleSpinBox->setMaximum(99999.000000000000000);
+        deltaRobot = new QDoubleSpinBox(layoutWidget3);
+        deltaRobot->setObjectName(QString::fromUtf8("deltaRobot"));
+        sizePolicy3.setHeightForWidth(deltaRobot->sizePolicy().hasHeightForWidth());
+        deltaRobot->setSizePolicy(sizePolicy3);
+        deltaRobot->setButtonSymbols(QAbstractSpinBox::PlusMinus);
+        deltaRobot->setMinimum(-99999.000000000000000);
+        deltaRobot->setMaximum(99999.000000000000000);
+        deltaRobot->setSingleStep(0.010000000000000);
+        deltaRobot->setValue(0.400000000000000);
 
-        formLayout_3->setWidget(3, QFormLayout::FieldRole, dDoubleSpinBox);
+        formLayout_3->setWidget(3, QFormLayout::FieldRole, deltaRobot);
 
-        scorParamSet = new QPushButton(layoutWidget3);
-        scorParamSet->setObjectName(QString::fromUtf8("scorParamSet"));
-        scorParamSet->setFont(font4);
-        scorParamSet->setStyleSheet(QString::fromUtf8(""));
+        scorParamLoad = new QPushButton(layoutWidget3);
+        scorParamLoad->setObjectName(QString::fromUtf8("scorParamLoad"));
+        scorParamLoad->setFont(font4);
+        scorParamLoad->setStyleSheet(QString::fromUtf8(""));
 
-        formLayout_3->setWidget(4, QFormLayout::FieldRole, scorParamSet);
+        formLayout_3->setWidget(4, QFormLayout::FieldRole, scorParamLoad);
 
         scorParamReset = new QPushButton(layoutWidget3);
         scorParamReset->setObjectName(QString::fromUtf8("scorParamReset"));
@@ -1157,10 +1176,6 @@ public:
         QFont font5;
         font5.setPointSize(15);
         sendRef->setFont(font5);
-        sendRef->setStyleSheet(
-                QString::fromUtf8("background-color: qlineargradient(spread:pad, x1:0.0246305, y1:0.602273, x2:1,\n"
-                                  "                        y2:0, stop:0 rgba(0, 139, 0, 255), stop:0.655172 rgba(255, 255, 255, 255));\n"
-                                  "                    "));
         plot = new QWidget(centralwidget);
         plot->setObjectName(QString::fromUtf8("plot"));
         plot->setGeometry(QRect(620, 210, 301, 231));
@@ -1226,7 +1241,7 @@ public:
         font6.setKerning(true);
         Xattuale->setFont(font6);
         Xattuale->setStyleSheet(QString::fromUtf8(""));
-        Xattuale->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        Xattuale->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_7->addWidget(Xattuale);
 
@@ -1236,7 +1251,7 @@ public:
         Yattuale->setSizePolicy(sizePolicy5);
         Yattuale->setFont(font3);
         Yattuale->setStyleSheet(QString::fromUtf8(""));
-        Yattuale->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        Yattuale->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_7->addWidget(Yattuale);
 
@@ -1246,7 +1261,7 @@ public:
         Zattuale->setSizePolicy(sizePolicy5);
         Zattuale->setFont(font3);
         Zattuale->setStyleSheet(QString::fromUtf8(""));
-        Zattuale->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        Zattuale->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_7->addWidget(Zattuale);
 
@@ -1255,7 +1270,7 @@ public:
         sizePolicy5.setHeightForWidth(en1Label_7->sizePolicy().hasHeightForWidth());
         en1Label_7->setSizePolicy(sizePolicy5);
         en1Label_7->setLayoutDirection(Qt::LeftToRight);
-        en1Label_7->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        en1Label_7->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_7->addWidget(en1Label_7);
 
@@ -1264,7 +1279,7 @@ public:
         sizePolicy5.setHeightForWidth(en2Label_7->sizePolicy().hasHeightForWidth());
         en2Label_7->setSizePolicy(sizePolicy5);
         en2Label_7->setLayoutDirection(Qt::LeftToRight);
-        en2Label_7->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        en2Label_7->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_7->addWidget(en2Label_7);
 
@@ -1327,7 +1342,7 @@ public:
         sizePolicy5.setHeightForWidth(encrease1_3->sizePolicy().hasHeightForWidth());
         encrease1_3->setSizePolicy(sizePolicy5);
         encrease1_3->setFont(font4);
-        encrease1_3->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        encrease1_3->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_18->addWidget(encrease1_3);
 
@@ -1336,7 +1351,7 @@ public:
         sizePolicy5.setHeightForWidth(encrease2_3->sizePolicy().hasHeightForWidth());
         encrease2_3->setSizePolicy(sizePolicy5);
         encrease2_3->setFont(font4);
-        encrease2_3->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        encrease2_3->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_18->addWidget(encrease2_3);
 
@@ -1345,7 +1360,7 @@ public:
         sizePolicy5.setHeightForWidth(encrease3_3->sizePolicy().hasHeightForWidth());
         encrease3_3->setSizePolicy(sizePolicy5);
         encrease3_3->setFont(font4);
-        encrease3_3->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        encrease3_3->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         encrease3_3->setIndent(-1);
 
         verticalLayout_18->addWidget(encrease3_3);
@@ -1355,7 +1370,7 @@ public:
         sizePolicy5.setHeightForWidth(encrease3_5->sizePolicy().hasHeightForWidth());
         encrease3_5->setSizePolicy(sizePolicy5);
         encrease3_5->setFont(font4);
-        encrease3_5->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        encrease3_5->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         encrease3_5->setIndent(-1);
 
         verticalLayout_18->addWidget(encrease3_5);
@@ -1365,7 +1380,7 @@ public:
         sizePolicy5.setHeightForWidth(encrease3_4->sizePolicy().hasHeightForWidth());
         encrease3_4->setSizePolicy(sizePolicy5);
         encrease3_4->setFont(font4);
-        encrease3_4->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        encrease3_4->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         encrease3_4->setIndent(-1);
 
         verticalLayout_18->addWidget(encrease3_4);
@@ -1431,7 +1446,7 @@ public:
         sizePolicy7.setVerticalStretch(0);
         sizePolicy7.setHeightForWidth(label_8->sizePolicy().hasHeightForWidth());
         label_8->setSizePolicy(sizePolicy7);
-        label_8->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        label_8->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         horizontalLayout_6->addWidget(label_8);
 
@@ -1488,7 +1503,7 @@ public:
         sizePolicy4.setHeightForWidth(Step1_direct->sizePolicy().hasHeightForWidth());
         Step1_direct->setSizePolicy(sizePolicy4);
         Step1_direct->setFont(font4);
-        Step1_direct->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        Step1_direct->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_2->addWidget(Step1_direct);
 
@@ -1497,7 +1512,7 @@ public:
         sizePolicy4.setHeightForWidth(Step2_direct->sizePolicy().hasHeightForWidth());
         Step2_direct->setSizePolicy(sizePolicy4);
         Step2_direct->setFont(font4);
-        Step2_direct->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        Step2_direct->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_2->addWidget(Step2_direct);
 
@@ -1506,7 +1521,7 @@ public:
         sizePolicy4.setHeightForWidth(Step3_direct->sizePolicy().hasHeightForWidth());
         Step3_direct->setSizePolicy(sizePolicy4);
         Step3_direct->setFont(font4);
-        Step3_direct->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        Step3_direct->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_2->addWidget(Step3_direct);
 
@@ -1515,7 +1530,7 @@ public:
         sizePolicy4.setHeightForWidth(Step4_direct->sizePolicy().hasHeightForWidth());
         Step4_direct->setSizePolicy(sizePolicy4);
         Step4_direct->setFont(font4);
-        Step4_direct->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        Step4_direct->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_2->addWidget(Step4_direct);
 
@@ -1524,7 +1539,7 @@ public:
         sizePolicy4.setHeightForWidth(Step5_direct->sizePolicy().hasHeightForWidth());
         Step5_direct->setSizePolicy(sizePolicy4);
         Step5_direct->setFont(font4);
-        Step5_direct->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        Step5_direct->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_2->addWidget(Step5_direct);
 
@@ -1533,7 +1548,7 @@ public:
         sizePolicy4.setHeightForWidth(Step6_direct->sizePolicy().hasHeightForWidth());
         Step6_direct->setSizePolicy(sizePolicy4);
         Step6_direct->setFont(font4);
-        Step6_direct->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        Step6_direct->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_2->addWidget(Step6_direct);
 
@@ -1547,7 +1562,7 @@ public:
         sizePolicy3.setHeightForWidth(enR1->sizePolicy().hasHeightForWidth());
         enR1->setSizePolicy(sizePolicy3);
         enR1->setFont(font4);
-        enR1->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        enR1->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_4->addWidget(enR1);
 
@@ -1556,7 +1571,7 @@ public:
         sizePolicy3.setHeightForWidth(enR2->sizePolicy().hasHeightForWidth());
         enR2->setSizePolicy(sizePolicy3);
         enR2->setFont(font4);
-        enR2->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        enR2->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_4->addWidget(enR2);
 
@@ -1565,7 +1580,7 @@ public:
         sizePolicy3.setHeightForWidth(enR3->sizePolicy().hasHeightForWidth());
         enR3->setSizePolicy(sizePolicy3);
         enR3->setFont(font4);
-        enR3->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        enR3->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_4->addWidget(enR3);
 
@@ -1574,7 +1589,7 @@ public:
         sizePolicy3.setHeightForWidth(enR4->sizePolicy().hasHeightForWidth());
         enR4->setSizePolicy(sizePolicy3);
         enR4->setFont(font4);
-        enR4->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        enR4->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_4->addWidget(enR4);
 
@@ -1583,7 +1598,7 @@ public:
         sizePolicy3.setHeightForWidth(enR5->sizePolicy().hasHeightForWidth());
         enR5->setSizePolicy(sizePolicy3);
         enR5->setFont(font4);
-        enR5->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        enR5->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_4->addWidget(enR5);
 
@@ -1592,7 +1607,7 @@ public:
         sizePolicy3.setHeightForWidth(enR6->sizePolicy().hasHeightForWidth());
         enR6->setSizePolicy(sizePolicy3);
         enR6->setFont(font4);
-        enR6->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        enR6->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_4->addWidget(enR6);
 
@@ -1613,7 +1628,7 @@ public:
         sizePolicy4.setHeightForWidth(encrease1->sizePolicy().hasHeightForWidth());
         encrease1->setSizePolicy(sizePolicy4);
         encrease1->setFont(font4);
-        encrease1->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        encrease1->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_5->addWidget(encrease1);
 
@@ -1622,7 +1637,7 @@ public:
         sizePolicy4.setHeightForWidth(encrease2->sizePolicy().hasHeightForWidth());
         encrease2->setSizePolicy(sizePolicy4);
         encrease2->setFont(font4);
-        encrease2->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        encrease2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_5->addWidget(encrease2);
 
@@ -1631,7 +1646,7 @@ public:
         sizePolicy4.setHeightForWidth(encrease3->sizePolicy().hasHeightForWidth());
         encrease3->setSizePolicy(sizePolicy4);
         encrease3->setFont(font4);
-        encrease3->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        encrease3->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         encrease3->setIndent(-1);
 
         verticalLayout_5->addWidget(encrease3);
@@ -1642,7 +1657,7 @@ public:
         encrease4->setSizePolicy(sizePolicy4);
         encrease4->setFont(font4);
         encrease4->setScaledContents(false);
-        encrease4->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        encrease4->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         encrease4->setMargin(0);
 
         verticalLayout_5->addWidget(encrease4);
@@ -1652,7 +1667,7 @@ public:
         sizePolicy4.setHeightForWidth(encrease5->sizePolicy().hasHeightForWidth());
         encrease5->setSizePolicy(sizePolicy4);
         encrease5->setFont(font4);
-        encrease5->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        encrease5->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_5->addWidget(encrease5);
 
@@ -1661,7 +1676,7 @@ public:
         sizePolicy4.setHeightForWidth(encrease6->sizePolicy().hasHeightForWidth());
         encrease6->setSizePolicy(sizePolicy4);
         encrease6->setFont(font4);
-        encrease6->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        encrease6->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_5->addWidget(encrease6);
 
@@ -1675,7 +1690,7 @@ public:
         sizePolicy3.setHeightForWidth(enEr1->sizePolicy().hasHeightForWidth());
         enEr1->setSizePolicy(sizePolicy3);
         enEr1->setFont(font4);
-        enEr1->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        enEr1->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_6->addWidget(enEr1);
 
@@ -1684,7 +1699,7 @@ public:
         sizePolicy3.setHeightForWidth(enEr2->sizePolicy().hasHeightForWidth());
         enEr2->setSizePolicy(sizePolicy3);
         enEr2->setFont(font4);
-        enEr2->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        enEr2->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_6->addWidget(enEr2);
 
@@ -1693,7 +1708,7 @@ public:
         sizePolicy3.setHeightForWidth(enEr3->sizePolicy().hasHeightForWidth());
         enEr3->setSizePolicy(sizePolicy3);
         enEr3->setFont(font4);
-        enEr3->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        enEr3->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_6->addWidget(enEr3);
 
@@ -1702,7 +1717,7 @@ public:
         sizePolicy3.setHeightForWidth(enEr4->sizePolicy().hasHeightForWidth());
         enEr4->setSizePolicy(sizePolicy3);
         enEr4->setFont(font4);
-        enEr4->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        enEr4->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_6->addWidget(enEr4);
 
@@ -1711,7 +1726,7 @@ public:
         sizePolicy3.setHeightForWidth(enEr5->sizePolicy().hasHeightForWidth());
         enEr5->setSizePolicy(sizePolicy3);
         enEr5->setFont(font4);
-        enEr5->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        enEr5->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_6->addWidget(enEr5);
 
@@ -1720,7 +1735,7 @@ public:
         sizePolicy3.setHeightForWidth(enEr6->sizePolicy().hasHeightForWidth());
         enEr6->setSizePolicy(sizePolicy3);
         enEr6->setFont(font4);
-        enEr6->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        enEr6->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_6->addWidget(enEr6);
 
@@ -1763,7 +1778,7 @@ public:
         sizePolicy4.setHeightForWidth(teta1_dir->sizePolicy().hasHeightForWidth());
         teta1_dir->setSizePolicy(sizePolicy4);
         teta1_dir->setFont(font4);
-        teta1_dir->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        teta1_dir->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_8->addWidget(teta1_dir);
 
@@ -1772,7 +1787,7 @@ public:
         sizePolicy4.setHeightForWidth(teta2_dir->sizePolicy().hasHeightForWidth());
         teta2_dir->setSizePolicy(sizePolicy4);
         teta2_dir->setFont(font4);
-        teta2_dir->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        teta2_dir->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_8->addWidget(teta2_dir);
 
@@ -1781,7 +1796,7 @@ public:
         sizePolicy4.setHeightForWidth(teta3_dit->sizePolicy().hasHeightForWidth());
         teta3_dit->setSizePolicy(sizePolicy4);
         teta3_dit->setFont(font4);
-        teta3_dit->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        teta3_dit->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_8->addWidget(teta3_dit);
 
@@ -1790,7 +1805,7 @@ public:
         sizePolicy4.setHeightForWidth(teta4_dit->sizePolicy().hasHeightForWidth());
         teta4_dit->setSizePolicy(sizePolicy4);
         teta4_dit->setFont(font4);
-        teta4_dit->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        teta4_dit->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_8->addWidget(teta4_dit);
 
@@ -1799,7 +1814,7 @@ public:
         sizePolicy4.setHeightForWidth(teta5_dir->sizePolicy().hasHeightForWidth());
         teta5_dir->setSizePolicy(sizePolicy4);
         teta5_dir->setFont(font4);
-        teta5_dir->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        teta5_dir->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_8->addWidget(teta5_dir);
 
@@ -1808,7 +1823,7 @@ public:
         sizePolicy4.setHeightForWidth(teta6_dir->sizePolicy().hasHeightForWidth());
         teta6_dir->setSizePolicy(sizePolicy4);
         teta6_dir->setFont(font4);
-        teta6_dir->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        teta6_dir->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_8->addWidget(teta6_dir);
 
@@ -1822,7 +1837,7 @@ public:
         sizePolicy3.setHeightForWidth(thR1->sizePolicy().hasHeightForWidth());
         thR1->setSizePolicy(sizePolicy3);
         thR1->setFont(font4);
-        thR1->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        thR1->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_11->addWidget(thR1);
 
@@ -1831,7 +1846,7 @@ public:
         sizePolicy3.setHeightForWidth(thR2->sizePolicy().hasHeightForWidth());
         thR2->setSizePolicy(sizePolicy3);
         thR2->setFont(font4);
-        thR2->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        thR2->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_11->addWidget(thR2);
 
@@ -1840,7 +1855,7 @@ public:
         sizePolicy3.setHeightForWidth(thR3->sizePolicy().hasHeightForWidth());
         thR3->setSizePolicy(sizePolicy3);
         thR3->setFont(font4);
-        thR3->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        thR3->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_11->addWidget(thR3);
 
@@ -1849,7 +1864,7 @@ public:
         sizePolicy3.setHeightForWidth(thR4->sizePolicy().hasHeightForWidth());
         thR4->setSizePolicy(sizePolicy3);
         thR4->setFont(font4);
-        thR4->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        thR4->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_11->addWidget(thR4);
 
@@ -1858,18 +1873,18 @@ public:
         sizePolicy3.setHeightForWidth(thR5->sizePolicy().hasHeightForWidth());
         thR5->setSizePolicy(sizePolicy3);
         thR5->setFont(font4);
-        thR5->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        thR5->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_11->addWidget(thR5);
 
-        PinzaOpen = new QLabel(layoutWidget9);
-        PinzaOpen->setObjectName(QString::fromUtf8("PinzaOpen"));
-        sizePolicy3.setHeightForWidth(PinzaOpen->sizePolicy().hasHeightForWidth());
-        PinzaOpen->setSizePolicy(sizePolicy3);
-        PinzaOpen->setFont(font4);
-        PinzaOpen->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        pinzaOpen = new QLabel(layoutWidget9);
+        pinzaOpen->setObjectName(QString::fromUtf8("pinzaOpen"));
+        sizePolicy3.setHeightForWidth(pinzaOpen->sizePolicy().hasHeightForWidth());
+        pinzaOpen->setSizePolicy(sizePolicy3);
+        pinzaOpen->setFont(font4);
+        pinzaOpen->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
-        verticalLayout_11->addWidget(PinzaOpen);
+        verticalLayout_11->addWidget(pinzaOpen);
 
 
         horizontalLayout_7->addLayout(verticalLayout_11);
@@ -1888,7 +1903,7 @@ public:
         sizePolicy4.setHeightForWidth(encrease1_2->sizePolicy().hasHeightForWidth());
         encrease1_2->setSizePolicy(sizePolicy4);
         encrease1_2->setFont(font4);
-        encrease1_2->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        encrease1_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_9->addWidget(encrease1_2);
 
@@ -1897,7 +1912,7 @@ public:
         sizePolicy4.setHeightForWidth(encrease2_2->sizePolicy().hasHeightForWidth());
         encrease2_2->setSizePolicy(sizePolicy4);
         encrease2_2->setFont(font4);
-        encrease2_2->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        encrease2_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_9->addWidget(encrease2_2);
 
@@ -1906,7 +1921,7 @@ public:
         sizePolicy4.setHeightForWidth(encrease3_2->sizePolicy().hasHeightForWidth());
         encrease3_2->setSizePolicy(sizePolicy4);
         encrease3_2->setFont(font4);
-        encrease3_2->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        encrease3_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         encrease3_2->setIndent(-1);
 
         verticalLayout_9->addWidget(encrease3_2);
@@ -1917,7 +1932,7 @@ public:
         encrease4_2->setSizePolicy(sizePolicy4);
         encrease4_2->setFont(font4);
         encrease4_2->setScaledContents(false);
-        encrease4_2->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        encrease4_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         encrease4_2->setMargin(0);
 
         verticalLayout_9->addWidget(encrease4_2);
@@ -1927,7 +1942,7 @@ public:
         sizePolicy4.setHeightForWidth(encrease5_2->sizePolicy().hasHeightForWidth());
         encrease5_2->setSizePolicy(sizePolicy4);
         encrease5_2->setFont(font4);
-        encrease5_2->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        encrease5_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_9->addWidget(encrease5_2);
 
@@ -1936,7 +1951,7 @@ public:
         sizePolicy4.setHeightForWidth(encrease6_2->sizePolicy().hasHeightForWidth());
         encrease6_2->setSizePolicy(sizePolicy4);
         encrease6_2->setFont(font4);
-        encrease6_2->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        encrease6_2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_9->addWidget(encrease6_2);
 
@@ -1950,7 +1965,7 @@ public:
         sizePolicy3.setHeightForWidth(thEr1->sizePolicy().hasHeightForWidth());
         thEr1->setSizePolicy(sizePolicy3);
         thEr1->setFont(font4);
-        thEr1->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        thEr1->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_12->addWidget(thEr1);
 
@@ -1959,7 +1974,7 @@ public:
         sizePolicy3.setHeightForWidth(thEr2->sizePolicy().hasHeightForWidth());
         thEr2->setSizePolicy(sizePolicy3);
         thEr2->setFont(font4);
-        thEr2->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        thEr2->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_12->addWidget(thEr2);
 
@@ -1968,7 +1983,7 @@ public:
         sizePolicy3.setHeightForWidth(thEr3->sizePolicy().hasHeightForWidth());
         thEr3->setSizePolicy(sizePolicy3);
         thEr3->setFont(font4);
-        thEr3->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        thEr3->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_12->addWidget(thEr3);
 
@@ -1977,7 +1992,7 @@ public:
         sizePolicy3.setHeightForWidth(thEr4->sizePolicy().hasHeightForWidth());
         thEr4->setSizePolicy(sizePolicy3);
         thEr4->setFont(font4);
-        thEr4->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        thEr4->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_12->addWidget(thEr4);
 
@@ -1986,18 +2001,18 @@ public:
         sizePolicy3.setHeightForWidth(thEr5->sizePolicy().hasHeightForWidth());
         thEr5->setSizePolicy(sizePolicy3);
         thEr5->setFont(font4);
-        thEr5->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        thEr5->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_12->addWidget(thEr5);
 
-        PinzaOpenErr = new QLabel(layoutWidget10);
-        PinzaOpenErr->setObjectName(QString::fromUtf8("PinzaOpenErr"));
-        sizePolicy3.setHeightForWidth(PinzaOpenErr->sizePolicy().hasHeightForWidth());
-        PinzaOpenErr->setSizePolicy(sizePolicy3);
-        PinzaOpenErr->setFont(font4);
-        PinzaOpenErr->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        pinzaOpenErr = new QLabel(layoutWidget10);
+        pinzaOpenErr->setObjectName(QString::fromUtf8("pinzaOpenErr"));
+        sizePolicy3.setHeightForWidth(pinzaOpenErr->sizePolicy().hasHeightForWidth());
+        pinzaOpenErr->setSizePolicy(sizePolicy3);
+        pinzaOpenErr->setFont(font4);
+        pinzaOpenErr->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
-        verticalLayout_12->addWidget(PinzaOpenErr);
+        verticalLayout_12->addWidget(pinzaOpenErr);
 
 
         horizontalLayout_8->addLayout(verticalLayout_12);
@@ -2037,7 +2052,7 @@ public:
         sizePolicy4.setHeightForWidth(ma1->sizePolicy().hasHeightForWidth());
         ma1->setSizePolicy(sizePolicy4);
         ma1->setFont(font4);
-        ma1->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        ma1->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_10->addWidget(ma1);
 
@@ -2047,7 +2062,7 @@ public:
         sizePolicy4.setHeightForWidth(ma2->sizePolicy().hasHeightForWidth());
         ma2->setSizePolicy(sizePolicy4);
         ma2->setFont(font4);
-        ma2->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        ma2->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_10->addWidget(ma2);
 
@@ -2056,7 +2071,7 @@ public:
         sizePolicy4.setHeightForWidth(ma3->sizePolicy().hasHeightForWidth());
         ma3->setSizePolicy(sizePolicy4);
         ma3->setFont(font4);
-        ma3->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        ma3->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_10->addWidget(ma3);
 
@@ -2065,7 +2080,7 @@ public:
         sizePolicy4.setHeightForWidth(ma4->sizePolicy().hasHeightForWidth());
         ma4->setSizePolicy(sizePolicy4);
         ma4->setFont(font4);
-        ma4->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        ma4->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_10->addWidget(ma4);
 
@@ -2074,7 +2089,7 @@ public:
         sizePolicy4.setHeightForWidth(ma5->sizePolicy().hasHeightForWidth());
         ma5->setSizePolicy(sizePolicy4);
         ma5->setFont(font4);
-        ma5->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        ma5->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_10->addWidget(ma5);
 
@@ -2083,7 +2098,7 @@ public:
         sizePolicy4.setHeightForWidth(ma6->sizePolicy().hasHeightForWidth());
         ma6->setSizePolicy(sizePolicy4);
         ma6->setFont(font4);
-        ma6->setAlignment(Qt::AlignRight | Qt::AlignTrailing | Qt::AlignVCenter);
+        ma6->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         verticalLayout_10->addWidget(ma6);
 
@@ -2098,7 +2113,7 @@ public:
         sizePolicy4.setHeightForWidth(mA1->sizePolicy().hasHeightForWidth());
         mA1->setSizePolicy(sizePolicy4);
         mA1->setFont(font4);
-        mA1->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        mA1->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_13->addWidget(mA1);
 
@@ -2107,7 +2122,7 @@ public:
         sizePolicy4.setHeightForWidth(mA2->sizePolicy().hasHeightForWidth());
         mA2->setSizePolicy(sizePolicy4);
         mA2->setFont(font4);
-        mA2->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        mA2->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_13->addWidget(mA2);
 
@@ -2116,7 +2131,7 @@ public:
         sizePolicy4.setHeightForWidth(mA3->sizePolicy().hasHeightForWidth());
         mA3->setSizePolicy(sizePolicy4);
         mA3->setFont(font4);
-        mA3->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        mA3->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_13->addWidget(mA3);
 
@@ -2125,7 +2140,7 @@ public:
         sizePolicy4.setHeightForWidth(mA4->sizePolicy().hasHeightForWidth());
         mA4->setSizePolicy(sizePolicy4);
         mA4->setFont(font4);
-        mA4->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        mA4->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_13->addWidget(mA4);
 
@@ -2134,7 +2149,7 @@ public:
         sizePolicy4.setHeightForWidth(mA5->sizePolicy().hasHeightForWidth());
         mA5->setSizePolicy(sizePolicy4);
         mA5->setFont(font4);
-        mA5->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        mA5->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_13->addWidget(mA5);
 
@@ -2143,7 +2158,7 @@ public:
         sizePolicy4.setHeightForWidth(mA6->sizePolicy().hasHeightForWidth());
         mA6->setSizePolicy(sizePolicy4);
         mA6->setFont(font4);
-        mA6->setAlignment(Qt::AlignLeading | Qt::AlignLeft | Qt::AlignVCenter);
+        mA6->setAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter);
 
         verticalLayout_13->addWidget(mA6);
 
@@ -2192,14 +2207,14 @@ public:
 
         image = new QLabel(centralwidget);
         image->setObjectName(QString::fromUtf8("image"));
-        image->setGeometry(QRect(430, 390, 91, 101));
+        image->setGeometry(QRect(150, 320, 91, 101));
         image->setStyleSheet(QString::fromUtf8(""));
-        image->setPixmap(QPixmap(QString::fromUtf8(":/scorbotUi/ui_source/Logo-Uni-Tor-Vergata.png_256x256.png")));
+        image->setPixmap(QPixmap(QString::fromUtf8(":/img/Logo-Uni-Tor-Vergata.png_256x256.png")));
         image->setScaledContents(true);
         MainWindow->setCentralWidget(centralwidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 1011, 25));
+        menuBar->setGeometry(QRect(0, 0, 1000, 25));
         menuAbout = new QMenu(menuBar);
         menuAbout->setObjectName(QString::fromUtf8("menuAbout"));
         menuUartSetting = new QMenu(menuBar);
@@ -2259,16 +2274,16 @@ public:
         QWidget::setTabOrder(en3Home, en4Home);
         QWidget::setTabOrder(en4Home, en5Home);
         QWidget::setTabOrder(en5Home, en6Home);
-        QWidget::setTabOrder(en6Home, l1DoubleSpinBox);
-        QWidget::setTabOrder(l1DoubleSpinBox, l2DoubleSpinBox);
-        QWidget::setTabOrder(l2DoubleSpinBox, l3DoubleSpinBox);
-        QWidget::setTabOrder(l3DoubleSpinBox, l4DoubleSpinBox);
-        QWidget::setTabOrder(l4DoubleSpinBox, l5DoubleSpinBox);
-        QWidget::setTabOrder(l5DoubleSpinBox, aDoubleSpinBox);
-        QWidget::setTabOrder(aDoubleSpinBox, bDoubleSpinBox);
-        QWidget::setTabOrder(bDoubleSpinBox, cDoubleSpinBox);
-        QWidget::setTabOrder(cDoubleSpinBox, dDoubleSpinBox);
-        QWidget::setTabOrder(dDoubleSpinBox, sendRef);
+        QWidget::setTabOrder(en6Home, l1Robot);
+        QWidget::setTabOrder(l1Robot, l2Robot);
+        QWidget::setTabOrder(l2Robot, l3Robot);
+        QWidget::setTabOrder(l3Robot, d1Robot);
+        QWidget::setTabOrder(d1Robot, d5Robot);
+        QWidget::setTabOrder(d5Robot, alphaRobot);
+        QWidget::setTabOrder(alphaRobot, betaRobot);
+        QWidget::setTabOrder(betaRobot, gammaRobot);
+        QWidget::setTabOrder(gammaRobot, deltaRobot);
+        QWidget::setTabOrder(deltaRobot, sendRef);
         QWidget::setTabOrder(sendRef, scorBoardSetup);
         QWidget::setTabOrder(scorBoardSetup, controlSet);
         QWidget::setTabOrder(controlSet, freeMove);
@@ -2297,7 +2312,8 @@ public:
         QMetaObject::connectSlotsByName(MainWindow);
     } // setupUi
 
-    void retranslateUi(QMainWindow *MainWindow) {
+    void retranslateUi(QMainWindow *MainWindow)
+    {
         MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "ScorbotConnect", nullptr));
         actionInfo->setText(QCoreApplication::translate("MainWindow", "Info", nullptr));
         serialPort->setText(QCoreApplication::translate("MainWindow", "Serial Port", nullptr));
@@ -2311,12 +2327,6 @@ public:
         actionB230400->setText(QCoreApplication::translate("MainWindow", "B230400", nullptr));
         actionB460800->setText(QCoreApplication::translate("MainWindow", "B460800", nullptr));
         actionB921600->setText(QCoreApplication::translate("MainWindow", "B921600", nullptr));
-#if QT_CONFIG(tooltip)
-        tabReference->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p>Direct</p><p><br/></p></body></html>", nullptr));
-#endif // QT_CONFIG(tooltip)
-#if QT_CONFIG(whatsthis)
-        tabReference->setWhatsThis(QCoreApplication::translate("MainWindow", "<html><head/><body><p>B</p><p><br/></p></body></html>", nullptr));
-#endif // QT_CONFIG(whatsthis)
         valMinScr_3->setText(QCoreApplication::translate("MainWindow", "En Reference", nullptr));
         en1Label_3->setText(QCoreApplication::translate("MainWindow", "En 1", nullptr));
         en2Label_3->setText(QCoreApplication::translate("MainWindow", "En 2", nullptr));
@@ -2324,8 +2334,7 @@ public:
         en4Label_3->setText(QCoreApplication::translate("MainWindow", "En 4", nullptr));
         en5Label_3->setText(QCoreApplication::translate("MainWindow", "En 5", nullptr));
         en6Label_3->setText(QCoreApplication::translate("MainWindow", "En 6", nullptr));
-        tabReference->setTabText(tabReference->indexOf(Direct),
-                                 QCoreApplication::translate("MainWindow", "Dir en", nullptr));
+        tabReference->setTabText(tabReference->indexOf(Direct), QCoreApplication::translate("MainWindow", "Dir en", nullptr));
         valMinScr_4->setText(QCoreApplication::translate("MainWindow", "Angle Reference", nullptr));
         en1Label_4->setText(QCoreApplication::translate("MainWindow", "\316\2701", nullptr));
         en2Label_4->setText(QCoreApplication::translate("MainWindow", "\316\2702", nullptr));
@@ -2333,8 +2342,7 @@ public:
         en4Label_4->setText(QCoreApplication::translate("MainWindow", "\316\2704", nullptr));
         en5Label_4->setText(QCoreApplication::translate("MainWindow", "\316\2705", nullptr));
         en6Label_4->setText(QCoreApplication::translate("MainWindow", "Pinza %", nullptr));
-        tabReference->setTabText(tabReference->indexOf(Direct_Angular),
-                                 QCoreApplication::translate("MainWindow", "Dir deg", nullptr));
+        tabReference->setTabText(tabReference->indexOf(Direct_Angular), QCoreApplication::translate("MainWindow", "Dir deg", nullptr));
         valMinScr_5->setText(QCoreApplication::translate("MainWindow", "Pos desiderata", nullptr));
         en1Label_5->setText(QCoreApplication::translate("MainWindow", "Xdes", nullptr));
         en2Label_5->setText(QCoreApplication::translate("MainWindow", "Ydes", nullptr));
@@ -2346,8 +2354,7 @@ public:
         label_3->setText(QCoreApplication::translate("MainWindow", "Gomito", nullptr));
         gH->setText(QCoreApplication::translate("MainWindow", "Alto", nullptr));
         gL->setText(QCoreApplication::translate("MainWindow", "Basso", nullptr));
-        tabReference->setTabText(tabReference->indexOf(Inverse),
-                                 QCoreApplication::translate("MainWindow", "Inv", nullptr));
+        tabReference->setTabText(tabReference->indexOf(Inverse), QCoreApplication::translate("MainWindow", "Inv", nullptr));
         valMinScr_2->setText(QCoreApplication::translate("MainWindow", "Home offset", nullptr));
         en1Label_2->setText(QCoreApplication::translate("MainWindow", "En 1", nullptr));
         en2Label_2->setText(QCoreApplication::translate("MainWindow", "En 2", nullptr));
@@ -2361,16 +2368,15 @@ public:
         l3Label->setText(QCoreApplication::translate("MainWindow", "L3", nullptr));
         l4Label->setText(QCoreApplication::translate("MainWindow", "d1", nullptr));
         l5Label->setText(QCoreApplication::translate("MainWindow", "d5", nullptr));
-        scorSetHome->setText(QCoreApplication::translate("MainWindow", "Set Home", nullptr));
-        label_2->setText(QCoreApplication::translate("MainWindow", "En --> Deg", nullptr));
+        scorSwHome->setText(QCoreApplication::translate("MainWindow", "SW Home", nullptr));
+        label_2->setText(QCoreApplication::translate("MainWindow", "En \342\206\243 Deg", nullptr));
         aLabel->setText(QCoreApplication::translate("MainWindow", "\316\261", nullptr));
         bLabel->setText(QCoreApplication::translate("MainWindow", "\316\262", nullptr));
         cLabel->setText(QCoreApplication::translate("MainWindow", "\316\263", nullptr));
         dLabel->setText(QCoreApplication::translate("MainWindow", "\316\264", nullptr));
-        scorParamSet->setText(QCoreApplication::translate("MainWindow", "Load Parameter", nullptr));
+        scorParamLoad->setText(QCoreApplication::translate("MainWindow", "Load Parameter", nullptr));
         scorParamReset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
-        tabReference->setTabText(tabReference->indexOf(RoboSetup),
-                                 QCoreApplication::translate("MainWindow", "Robot Setup", nullptr));
+        tabReference->setTabText(tabReference->indexOf(RoboSetup), QCoreApplication::translate("MainWindow", "Robot Setup", nullptr));
         sendRef->setText(QCoreApplication::translate("MainWindow", "Send Reference", nullptr));
         scorBoardSetup->setText(QCoreApplication::translate("MainWindow", "Board Setting", nullptr));
         controlSet->setText(QCoreApplication::translate("MainWindow", "Controll Setting", nullptr));
@@ -2422,7 +2428,7 @@ public:
         enEr4->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         enEr5->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         enEr6->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
-        label_5->setText(QCoreApplication::translate("MainWindow", "Deg Read", nullptr));
+        label_5->setText(QCoreApplication::translate("MainWindow", "Deg Read [\302\260]", nullptr));
         teta1_dir->setText(QCoreApplication::translate("MainWindow", "\316\2701:", nullptr));
         teta2_dir->setText(QCoreApplication::translate("MainWindow", "\316\2702:", nullptr));
         teta3_dit->setText(QCoreApplication::translate("MainWindow", "\316\2703:", nullptr));
@@ -2434,7 +2440,7 @@ public:
         thR3->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         thR4->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         thR5->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
-        PinzaOpen->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
+        pinzaOpen->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         encrease1_2->setText(QCoreApplication::translate("MainWindow", "Error:", nullptr));
         encrease2_2->setText(QCoreApplication::translate("MainWindow", "Error:", nullptr));
         encrease3_2->setText(QCoreApplication::translate("MainWindow", "Error:", nullptr));
@@ -2446,7 +2452,7 @@ public:
         thEr3->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         thEr4->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         thEr5->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
-        PinzaOpenErr->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
+        pinzaOpenErr->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         label_6->setText(QCoreApplication::translate("MainWindow", "Current Read", nullptr));
         ma1->setText(QCoreApplication::translate("MainWindow", "mA:", nullptr));
         ma2->setText(QCoreApplication::translate("MainWindow", "mA:", nullptr));

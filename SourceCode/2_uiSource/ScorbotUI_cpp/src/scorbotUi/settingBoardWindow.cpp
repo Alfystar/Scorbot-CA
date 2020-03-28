@@ -31,6 +31,8 @@ SettingBoardWindow::SettingBoardWindow(QWidget *parent) :
     CurMedMax[Mot5] = ui->curM5;
     CurMedMax[Mot6] = ui->curM6;
     connect(ui->restoreSetting, SIGNAL(clicked()), this, SLOT(scorParamReset_handler()));
+    scorParamReset_handler();
+    settingShow(setting);
 
     for (int i = Mot1; i < nMot; ++i) {
         connect(enMin[i], SIGNAL(valueChanged(int)), this, SLOT(updateSetting()));
@@ -40,8 +42,8 @@ SettingBoardWindow::SettingBoardWindow(QWidget *parent) :
     connect(ui->in1V1, SIGNAL(clicked()), this, SLOT(updateSetting()));
     connect(ui->in2V56, SIGNAL(clicked()), this, SLOT(updateSetting()));
     connect(ui->ext, SIGNAL(clicked()), this, SLOT(updateSetting()));
-    connect(ui->offsetChose, SIGNAL(activated()), this, SLOT(updateSetting()));
-    connect(ui->motFreqChose, SIGNAL(activated()), this, SLOT(updateSetting()));
+    connect(ui->offsetChose, SIGNAL(activated(int)), this, SLOT(updateSetting()));
+    connect(ui->motFreqChose, SIGNAL(activated(int)), this, SLOT(updateSetting()));
 
 
 }

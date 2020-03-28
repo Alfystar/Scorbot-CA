@@ -6,15 +6,3 @@
 
 #IncludeRegexTransform: 
 
-/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/circularBuffer/CircularBuffer.cpp
-CircularBuffer.h
-/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/circularBuffer/CircularBuffer.h
-
-/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/circularBuffer/CircularBuffer.h
-Arduino.h
-/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/Common-src/circularBuffer/Arduino.h
-stdlib.h
--
-iostream
--
-

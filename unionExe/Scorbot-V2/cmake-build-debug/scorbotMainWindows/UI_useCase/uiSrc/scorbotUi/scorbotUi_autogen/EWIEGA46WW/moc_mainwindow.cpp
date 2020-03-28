@@ -10,7 +10,6 @@
 #include "../../../../../../../../../SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/mainwindow.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
-
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'mainwindow.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
@@ -24,7 +23,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
     QByteArrayData data[12];
-    char stringdata0[164];
+    char stringdata0[165];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -39,16 +38,16 @@ QT_MOC_LITERAL(2, 18, 0), // ""
 QT_MOC_LITERAL(3, 19, 11), // "EncoderMot*"
 QT_MOC_LITERAL(4, 31, 2), // "en"
 QT_MOC_LITERAL(5, 34, 15), // "sendRef_handler"
-QT_MOC_LITERAL(6, 50, 20), // "scorParamSet_handler"
-QT_MOC_LITERAL(7, 71, 22), // "scorParamReset_handler"
-QT_MOC_LITERAL(8, 94, 16), // "boardSet_handler"
-QT_MOC_LITERAL(9, 111, 19), // "controllSet_handler"
-QT_MOC_LITERAL(10, 131, 16), // "freeMove_handler"
-QT_MOC_LITERAL(11, 148, 15) // "cinCalc_handler"
+QT_MOC_LITERAL(6, 50, 21), // "scorParamLoad_handler"
+QT_MOC_LITERAL(7, 72, 22), // "scorParamReset_handler"
+QT_MOC_LITERAL(8, 95, 16), // "boardSet_handler"
+QT_MOC_LITERAL(9, 112, 19), // "controllSet_handler"
+QT_MOC_LITERAL(10, 132, 16), // "freeMove_handler"
+QT_MOC_LITERAL(11, 149, 15) // "cinCalc_handler"
 
     },
     "MainWindow\0newRef\0\0EncoderMot*\0en\0"
-    "sendRef_handler\0scorParamSet_handler\0"
+    "sendRef_handler\0scorParamLoad_handler\0"
     "scorParamReset_handler\0boardSet_handler\0"
     "controllSet_handler\0freeMove_handler\0"
     "cinCalc_handler"
@@ -57,18 +56,18 @@ QT_MOC_LITERAL(11, 148, 15) // "cinCalc_handler"
 
 static const uint qt_meta_data_MainWindow[] = {
 
-        // content:
-        8,       // revision
-        0,       // classname
-        0, 0, // classinfo
-        8, 14, // methods
-        0, 0, // properties
-        0, 0, // enums/sets
-        0, 0, // constructors
-        0,       // flags
-        1,       // signalCount
+ // content:
+       8,       // revision
+       0,       // classname
+       0,    0, // classinfo
+       8,   14, // methods
+       0,    0, // properties
+       0,    0, // enums/sets
+       0,    0, // constructors
+       0,       // flags
+       1,       // signalCount
 
-        // signals: name, argc, parameters, tag, flags
+ // signals: name, argc, parameters, tag, flags
        1,    1,   54,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
@@ -103,7 +102,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->newRef((*reinterpret_cast< EncoderMot*(*)>(_a[1]))); break;
         case 1: _t->sendRef_handler(); break;
-        case 2: _t->scorParamSet_handler(); break;
+        case 2: _t->scorParamLoad_handler(); break;
         case 3: _t->scorParamReset_handler(); break;
         case 4: _t->boardSet_handler(); break;
         case 5: _t->controllSet_handler(); break;
@@ -123,22 +122,23 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     }
 }
 
-QT_INIT_METAOBJECT const QMetaObject
-MainWindow::staticMetaObject = {{
-                                        QMetaObject::SuperData::link<QMainWindow::staticMetaObject>(),
-                                        qt_meta_stringdata_MainWindow.data,
-                                        qt_meta_data_MainWindow,
-                                        qt_static_metacall,
-                                        nullptr,
-                                        nullptr
-                                }};
+QT_INIT_METAOBJECT const QMetaObject MainWindow::staticMetaObject = { {
+    QMetaObject::SuperData::link<QMainWindow::staticMetaObject>(),
+    qt_meta_stringdata_MainWindow.data,
+    qt_meta_data_MainWindow,
+    qt_static_metacall,
+    nullptr,
+    nullptr
+} };
 
 
-const QMetaObject *MainWindow::metaObject() const {
+const QMetaObject *MainWindow::metaObject() const
+{
     return QObject::d_ptr->metaObject ? QObject::d_ptr->dynamicMetaObject() : &staticMetaObject;
 }
 
-void *MainWindow::qt_metacast(const char *_clname) {
+void *MainWindow::qt_metacast(const char *_clname)
+{
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_MainWindow.stringdata0))
         return static_cast<void*>(this);
@@ -165,7 +165,7 @@ int MainWindow::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 // SIGNAL 0
 void MainWindow::newRef(EncoderMot * _t1)
 {
-    void *_a[] = {nullptr, const_cast<void *>(reinterpret_cast<const void *>(std::addressof(_t1)))};
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 QT_WARNING_POP

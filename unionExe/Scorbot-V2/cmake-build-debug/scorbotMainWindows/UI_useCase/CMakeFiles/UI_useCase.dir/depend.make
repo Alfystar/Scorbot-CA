@@ -70,6 +70,7 @@ scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/DataShow.cpp.o: /usr/inc
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/DataShow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/DataShow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/DataShow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
+scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/DataShow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmath.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/DataShow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/DataShow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/DataShow.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
@@ -267,6 +268,7 @@ scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/MotorCTRL.cpp.o: /usr/in
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/MotorCTRL.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/MotorCTRL.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/MotorCTRL.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
+scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/MotorCTRL.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmath.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/MotorCTRL.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/MotorCTRL.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/MotorCTRL.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
@@ -463,6 +465,7 @@ scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o: /usr/i
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
+scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmath.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
@@ -544,7 +547,6 @@ scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o: /usr/i
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QRadioButton
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSlider
-scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpacerItem
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpinBox
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSplitter
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout
@@ -663,6 +665,7 @@ scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/UI_useCase_autogen/mocs_
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/UI_useCase_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/UI_useCase_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/UI_useCase_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
+scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/UI_useCase_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmath.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/UI_useCase_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/UI_useCase_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/UI_useCase_autogen/mocs_compilation.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
@@ -832,6 +835,7 @@ scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/UartConnect.cpp.o: /usr/
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/UartConnect.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/UartConnect.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/UartConnect.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
+scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/UartConnect.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmath.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/UartConnect.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/UartConnect.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
 scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/UartConnect.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h

@@ -8,6 +8,7 @@
 #include <QPushButton>
 #include <QRadioButton>
 #include <QLabel>
+#include <qmath.h>
 
 /// SystemLib
 #include <DataTransfert_AllInclude.h>
@@ -26,12 +27,13 @@ using namespace DataManipolation;
 class MainWindow : public QMainWindow {
 Q_OBJECT  //Macro di Qt che importa tutti i metodi virtuali necessari, senza doverli scrvere a mano
 
+public:
     ScoreCalc *calc;
 
     //// #####################################################################
     /// Oggetti nel tabWindget
     /// Variabili funzionali
-    EncoderMot *ref;
+    EncoderMot *ref, *offset;
     AllSensor *feedBack;
 
     /// Riferimenti da inviare Qt
@@ -51,12 +53,10 @@ Q_OBJECT  //Macro di Qt che importa tutti i metodi virtuali necessari, senza dov
     QSlider *pinzaInv;
     QRadioButton *gomito[2];
 
-    /// Data send
-    QPushButton *sendRef;
+//// #####################################################################
+    /// Robot Parameter to conversion
+    QSpinBox *enHome[nMot];
 
-    ///Robot Setup
-    QPushButton *scorParamSet;
-    QPushButton *scorParamReset;
 //// #####################################################################
     /// Oggetti di visualizzazione
     QLabel *enRead[nMot];
@@ -66,41 +66,46 @@ Q_OBJECT  //Macro di Qt che importa tutti i metodi virtuali necessari, senza dov
     QLabel *curRead[nMot];
 
 
-//// #####################################################################
-    ///External button
-    QPushButton *scorBoardSetup;
-    QPushButton *controlSet;
-    QPushButton *freeMove;
-
-
-public:
-
     SettingBoardWindow *setBoardWin;
     FreeMoveWindow *freeMovWin;
 
     explicit MainWindow(QWidget *parent = 0);
+
     ~MainWindow();
 
+    void encoderShow();
+
     void encoderShow(EncoderMot *e);
+
+    void encoderShow(EncoderMot *e, EncoderMot *off);
+
     void currentShow(CurrentMot *c);
+
     void SettingShow(SettingBoard_C *s);
 
 
 signals:
+
     void newRef(EncoderMot *en);
 
 private slots:
+
     // Data send
     void sendRef_handler();
+
     // Robot Setup
-    void scorParamSet_handler(); // Parametri dimensionali Scorbot
+    void scorParamLoad_handler(); // Parametri dimensionali Scorbot
     void scorParamReset_handler(); // Parametri dimensionali Scorbot
     // Other Windows
     void boardSet_handler();
+
     void controllSet_handler();
+
     void freeMove_handler();
+
     // Cin recalc
     void cinCalc_handler();
+
 public:
     Ui::MainWindow *ui;
 

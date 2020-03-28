@@ -286,6 +286,7 @@ namespace Uart {
 #ifdef UartDriverDebug_thread
         std::cout << "uartReader Thread start\n";
 #endif
+        usleep(50 * 1000U);
         tcflush(d.fd, TCIOFLUSH);
         for (;;) {
 #ifdef UartDriverDebug_thread

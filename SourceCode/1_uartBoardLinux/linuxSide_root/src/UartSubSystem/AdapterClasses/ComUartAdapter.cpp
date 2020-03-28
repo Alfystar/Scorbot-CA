@@ -350,7 +350,7 @@ void ComUartAdapter::uartReader(ComUartAdapter *u) {
         } else {
             fprintf(stderr, "ComUartAdapter::uartReader: Nessuna connessione da %lds %ldms\n", timeToAdd.tv_sec,
                     timeToAdd.tv_nsec / (1000UL * 1000UL));
-            u->uartDev->bufClear();
+//            u->uartDev->bufClear();
 
         }
     }//while end

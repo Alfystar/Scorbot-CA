@@ -19,6 +19,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     // Data get and send
     ref = new EncoderMot();
+    offset = new EncoderMot();
     feedBack = new AllSensor();
 
 
@@ -49,22 +50,29 @@ MainWindow::MainWindow(QWidget *parent) :
     pinzaInv = ui->pinzaInv;
     gomito[0] = ui->gH;
     gomito[1] = ui->gL;
-    //Button Inv
-    scorParamSet = ui->scorParamSet;
-    scorParamReset = ui->scorParamReset;
 
-    //External button
-    sendRef = ui->sendRef;
-    scorBoardSetup = ui->scorBoardSetup;
-    controlSet = ui->controlSet;
-    freeMove = ui->freeMove;
+    // Robot Parameter
+    enHome[Mot1] = ui->en1Home;
+    enHome[Mot2] = ui->en2Home;
+    enHome[Mot3] = ui->en3Home;
+    enHome[Mot4] = ui->en4Home;
+    enHome[Mot5] = ui->en5Home;
+    enHome[Mot6] = ui->en6Home;
+
     /// Button Signal
-    connect(scorParamSet, SIGNAL (released()), this, SLOT (scorParamSet_handler()));    // Parametri dimensionali Scorbot
-    connect(scorParamReset, SIGNAL (released()), this, SLOT (scorParamReset_handler()));    // Parametri dimensionali Scorbot
-    connect(sendRef, SIGNAL (released()), this, SLOT (sendRef_handler()));
-    connect(scorBoardSetup, SIGNAL (released()), this, SLOT (boardSet_handler()));
-    connect(controlSet, SIGNAL (released()), this, SLOT (controllSet_handler()));
-    connect(freeMove, SIGNAL (released()), this, SLOT (freeMove_handler()));
+    //Parameter Scorbot
+    connect(ui->scorParamLoad, SIGNAL (released()), this,
+            SLOT (scorParamLoad_handler()));    // Parametri dimensionali Scorbot da File System
+    connect(ui->scorParamReset, SIGNAL (released()), this,
+            SLOT (scorParamReset_handler()));    // Parametri dimensionali Scorbot
+
+    //Encoder send
+    connect(ui->sendRef, SIGNAL (released()), this, SLOT (sendRef_handler()));
+
+    //External windows
+    connect(ui->scorBoardSetup, SIGNAL (released()), this, SLOT (boardSet_handler()));
+    connect(ui->controlSet, SIGNAL (released()), this, SLOT (controllSet_handler()));
+    connect(ui->freeMove, SIGNAL (released()), this, SLOT (freeMove_handler()));
     /// Data change
     //dir en
     for (int i = Mot1; i < nMot; ++i) {
@@ -109,14 +117,14 @@ MainWindow::MainWindow(QWidget *parent) :
     thetaRead[Mot3] = ui->thR3;
     thetaRead[Mot4] = ui->thR4;
     thetaRead[Mot5] = ui->thR5;
-    thetaRead[Mot6] = ui->PinzaOpen;
+    thetaRead[Mot6] = ui->pinzaOpen;
 
     thetaReadErr[Mot1] = ui->thEr1;
     thetaReadErr[Mot2] = ui->thEr2;
     thetaReadErr[Mot3] = ui->thEr3;
     thetaReadErr[Mot4] = ui->thEr4;
     thetaReadErr[Mot5] = ui->thEr5;
-    thetaReadErr[Mot6] = ui->PinzaOpenErr;
+    thetaReadErr[Mot6] = ui->pinzaOpenErr;
 
 
     curRead[Mot1] = ui->mA1;
@@ -136,27 +144,78 @@ MainWindow::~MainWindow() {
     delete feedBack;
 }
 
-void MainWindow::encoderShow(EncoderMot *e) {
-    feedBack->copyEn(*e);
-    for (int i = Mot1; i < nMot; ++i) {
-        enRead[i]->setNum(feedBack->getEn((motCode)i));
-        enReadErr[i]->setNum(feedBack->getEn((motCode)i)-ref->getEn((motCode)i));
-        //todo: tramite scorCalc, convertire gli encoder letti in angoli
-        thetaRead[i]->setNum(e->getEn((motCode)i));
-        thetaReadErr[i]->setNum(feedBack->getEn((motCode)i)-ref->getEn((motCode)i));
 
+void MainWindow::encoderShow() {
+    mEncoder swEn, swEnErr;
+    for (int i = Mot1; i < nMot; ++i) {
+        swEn[i] = feedBack->getEn((motCode) i) - offset->getEn((motCode) i);
+        enRead[i]->setNum(swEn[i]);
+        swEnErr[i] = swEn[i] - ref->getEn((motCode) i);
+        enReadErr[i]->setNum(swEnErr[i]);
     }
 
+    //Conversion En --> Theta
+    conParams par;
+    par.alpha = ui->alphaRobot->value();
+    par.beta = ui->betaRobot->value();
+    par.gamma = ui->gammaRobot->value();
+    par.delta = ui->deltaRobot->value();
+    par.maxClaw = setBoardWin->setting->getSetting().maxEn[Mot6];
+    thetaMot th, thErr;
+    calc->en2th(swEn, th, &par);
+    calc->en2th(swEnErr, thErr, &par);
+    QString s;
+    for (int i = Mot1; i < nMot; ++i) {
+        s = s.setNum(th[i], 'f', 2);
+        thetaRead[i]->setText(s);
+        s = s.setNum(thErr[i], 'f', 2);
+        thetaReadErr[i]->setText(s);
+    }
+
+    //Dir Cinematic
+//    l1 = self.structVal[0].value()
+//    l2 = self.structVal[1].value()
+//    l3 = self.structVal[2].value()
+//    d1 = self.structVal[3].value()
+//    d5 = self.structVal[4].value()
+//    betad = self.structVal[5].value()
+//    omegad = self.structVal[6].value()
+//
+////# conversione degli angoli in radianti
+//    t1r = math.radians(lista[0])
+//    t2r = math.radians(lista[1])
+//    t3r = math.radians(lista[2])
+//    t4r = math.radians(lista[3])
+//    t5r = math.radians(lista[4])
+//# calcolo della posizione del polso
+//    xpolso = math.cos(t1r) * (l1 + l2 * math.cos(t2r) + l3 * math.cos(t2r + t3r))
+//    ypolso = math.sin(t1r) * (l1 + l2 * math.cos(t2r) + l3 * math.cos(t2r + t3r))
+//    zpolso = d1 - l2 * math.sin(t2r) - l3 * math.sin(t2r + t3r)
+//# calcolo della posizione della pinza(inserita direttamente nella lista)
+//    ax.append(xpolso - math.cos(t1r) * d5 * math.sin(t2r + t3r + t4r))
+//    ax.append(ypolso - math.sin(t1r) * d5 * math.sin(t2r + t3r + t4r))
+//    ax.append(zpolso - d5 * math.cos(t2r + t3r + t4r))
+//    return ax
+}
+
+void MainWindow::encoderShow(EncoderMot *e) {
+    feedBack->copyEn(*e);
+    encoderShow();
+
+}
+
+void MainWindow::encoderShow(EncoderMot *e, EncoderMot *off) {
+    feedBack->copyEn(*e);
+    offset->copyEn(*off);
+    encoderShow();
 }
 
 void MainWindow::currentShow(CurrentMot *c) {
     feedBack->copyCur(*c);
     for (int i = Mot1; i < nMot; ++i) {
-        curRead[i]->setNum(feedBack->getCurrent((motCode)i));
+        curRead[i]->setNum(feedBack->getCurrent((motCode) i));
     }
 }
-
-
 
 
 void MainWindow::sendRef_handler() {
@@ -168,12 +227,27 @@ void MainWindow::sendRef_handler() {
     emit newRef(ref);
 }
 
-void MainWindow::scorParamSet_handler() {
+void MainWindow::scorParamLoad_handler() {
+    //Far scegliere dei parametri di default tra quelli salvati nel file config
 
 }
 
 void MainWindow::scorParamReset_handler() {
+    //Ripristinare i valori di avvio, in futuro da un file config di defautl
+    ui->l1Robot->setValue(5.0);
+    ui->l2Robot->setValue(22.0);
+    ui->l3Robot->setValue(22.0);
+    ui->d1Robot->setValue(2.0);
+    ui->d5Robot->setValue(3.0);
 
+    ui->alphaRobot->setValue(0.41);
+    ui->betaRobot->setValue(0.2);
+    ui->gammaRobot->setValue(0.3);
+    ui->deltaRobot->setValue(0.4);
+
+    for (int i = 0; i < nMot; ++i) {
+        enHome[i]->setValue(0);
+    }
 }
 
 void MainWindow::boardSet_handler() {

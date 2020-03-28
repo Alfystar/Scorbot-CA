@@ -34,7 +34,7 @@
                 <rect>
                     <x>10</x>
                     <y>10</y>
-                    <width>128</width>
+                    <width>151</width>
                     <height>250</height>
                 </rect>
             </property>
@@ -135,7 +135,7 @@
                         <item>
                             <widget class="QLabel" name="Step1_direct">
                                 <property name="sizePolicy">
-                                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                                         <horstretch>0</horstretch>
                                         <verstretch>0</verstretch>
                                     </sizepolicy>
@@ -156,7 +156,7 @@
                         <item>
                             <widget class="QLabel" name="Step2_direct">
                                 <property name="sizePolicy">
-                                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                                         <horstretch>0</horstretch>
                                         <verstretch>0</verstretch>
                                     </sizepolicy>
@@ -177,7 +177,7 @@
                         <item>
                             <widget class="QLabel" name="Step3_direct">
                                 <property name="sizePolicy">
-                                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                                         <horstretch>0</horstretch>
                                         <verstretch>0</verstretch>
                                     </sizepolicy>
@@ -198,7 +198,7 @@
                         <item>
                             <widget class="QLabel" name="Step4_direct">
                                 <property name="sizePolicy">
-                                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                                         <horstretch>0</horstretch>
                                         <verstretch>0</verstretch>
                                     </sizepolicy>
@@ -219,7 +219,7 @@
                         <item>
                             <widget class="QLabel" name="Step5_direct">
                                 <property name="sizePolicy">
-                                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                                         <horstretch>0</horstretch>
                                         <verstretch>0</verstretch>
                                     </sizepolicy>
@@ -240,7 +240,7 @@
                         <item>
                             <widget class="QLabel" name="Step6_direct">
                                 <property name="sizePolicy">
-                                    <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                                    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
                                         <horstretch>0</horstretch>
                                         <verstretch>0</verstretch>
                                     </sizepolicy>

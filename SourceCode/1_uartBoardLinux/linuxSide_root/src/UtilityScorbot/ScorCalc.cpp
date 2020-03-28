@@ -2,6 +2,7 @@
 // Created by alfyhack on 23/09/19.
 //
 
+#include <iostream>
 #include "ScorCalc.h"
 
 //initiaize static variables here
@@ -95,4 +96,55 @@ int ScoreCalc::bitAdcGet() {
 
 int ScoreCalc::rangeAdcGet() {
     return pow(2, ScoreCalc::bitAdc);
+}
+
+void ScoreCalc::en2th(mEncoder e, thetaMot t, conParams *par) {
+//    std::cout << "sizeof(thetaMot)=" << sizeof(thetaMot) << "\n";
+//    thetaMot *t = (thetaMot *) malloc(sizeof(thetaMot));
+//    std::cout << "*t=" << t << "\n";
+
+    t[Mot1] = -par->alpha * e[Mot1];
+
+    t[Mot2] = -par->beta * e[Mot2];
+
+    t[Mot3] = par->beta * (e[Mot2] + e[Mot3]);
+    t[Mot3] = 1;
+    t[Mot4] = -par->beta * e[Mot3] + par->gamma * (e[Mot4] - e[Mot5]);
+
+    t[Mot5] = par->delta * (e[Mot4] + e[Mot5]);
+
+    if (par->maxClaw != 0) {
+        t[Mot6] = e[Mot6] / (double) par->maxClaw;
+    }
+
+    for (int i = 0; i < Mot6; ++i) {
+        if (abs(t[i]) < 0.001)
+            t[i] = 0;
+        t[i] = fmod(t[i], 2 * M_PIf64);
+    }
+}
+
+void ScoreCalc::th2en(thetaMot t, mEncoder e, conParams *par) {
+//    mEncoder *e = (mEncoder *) malloc(sizeof(mEncoder));
+    e[Mot1] = -t[Mot1] / par->alpha;
+    e[Mot2] = -e[Mot2] / par->beta;
+
+    e[Mot3] = -(t[Mot2] + t[Mot3]) / par->beta;
+
+    e[Mot4] = 0.5 * ((t[Mot2] + t[Mot3] + t[Mot4]) / par->gamma + t[Mot5] / par->delta);
+
+    e[Mot5] = 0.5 * (-(t[Mot2] + t[Mot3] + t[Mot4]) / par->gamma + t[Mot5] / par->delta);
+
+    if (par->maxClaw != 0) {
+        e[Mot6] = t[Mot6] * (double) par->maxClaw;
+    }
+
+}
+
+void ScoreCalc::dirCin(thetaMot t, positionRobot *p) {
+
+}
+
+void ScoreCalc::invCin(positionRobot *p, thetaMot t) {
+
 }

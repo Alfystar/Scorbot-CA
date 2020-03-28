@@ -31,14 +31,15 @@ public:
     QComboBox *uartFind;
     QLabel *label;
 
-    void setupUi(QWidget *UartChoise) {
+    void setupUi(QWidget *UartChoise)
+    {
         if (UartChoise->objectName().isEmpty())
             UartChoise->setObjectName(QString::fromUtf8("UartChoise"));
         UartChoise->resize(320, 139);
         buttonBox = new QDialogButtonBox(UartChoise);
         buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
         buttonBox->setGeometry(QRect(140, 110, 160, 26));
-        buttonBox->setStandardButtons(QDialogButtonBox::Cancel | QDialogButtonBox::Ok);
+        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
         layoutWidget = new QWidget(UartChoise);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
         layoutWidget->setGeometry(QRect(10, 10, 301, 86));
@@ -85,7 +86,8 @@ public:
         QMetaObject::connectSlotsByName(UartChoise);
     } // setupUi
 
-    void retranslateUi(QWidget *UartChoise) {
+    void retranslateUi(QWidget *UartChoise)
+    {
         UartChoise->setWindowTitle(QCoreApplication::translate("UartChoise", "Form", nullptr));
         speedChose->setItemText(0, QCoreApplication::translate("UartChoise", "B9600", nullptr));
         speedChose->setItemText(1, QCoreApplication::translate("UartChoise", "B57600", nullptr));

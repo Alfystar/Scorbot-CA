@@ -26,6 +26,8 @@
 #include <mutex>
 #include <DataTransfert_AllInclude.h>
 
+//#define UartDriverDebug_thread
+
 #else
 #include "Arduino.h"
 #include <stdlib.h>
@@ -34,7 +36,7 @@
 #endif
 #define sizeofArray(x)  sizeof(x)/sizeof(x[0])
 #ifdef linuxSide
-#define cbSize 32
+#define cbSize 256
 #define dataSize 4096
 #else
 #define cbSize 8

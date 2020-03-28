@@ -38,13 +38,20 @@ public:
     SettingBoard_C *setting;
 
     explicit SettingBoardWindow(QWidget *parent = 0);
+
     ~SettingBoardWindow();
+
     void settingShow(SettingBoard_C *s);
+
     ScoreCalc *getScorCalcSetuped();
+
 private slots:
+
     void updateSetting();
-private:
+
     void scorParamReset_handler();
+
+private:
 
 };
 

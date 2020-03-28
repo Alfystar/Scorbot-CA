@@ -38,11 +38,11 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-    # Include the install script for each subdirectory.
-    include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/timeOp/cmake_install.cmake")
-    include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/cmake_install.cmake")
-    include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/circularBuffer/cmake_install.cmake")
-    include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/cmake_install.cmake")
+  # Include the install script for each subdirectory.
+  include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/timeOp/cmake_install.cmake")
+  include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/cmake_install.cmake")
+  include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/circularBuffer/cmake_install.cmake")
+  include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/cmake_install.cmake")
 
 endif()
 

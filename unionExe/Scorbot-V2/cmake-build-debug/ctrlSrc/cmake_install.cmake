@@ -38,10 +38,10 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-    # Include the install script for each subdirectory.
-    include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/cmake_install.cmake")
-    include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/UartSubSystem/cmake_install.cmake")
-    include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/pidCtrl/cmake_install.cmake")
+  # Include the install script for each subdirectory.
+  include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/cmake_install.cmake")
+  include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/UartSubSystem/cmake_install.cmake")
+  include("/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/pidCtrl/cmake_install.cmake")
 
 endif()
 
