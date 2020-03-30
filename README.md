@@ -54,6 +54,20 @@ La scheda comunica con un computer mediante collegamento UART, qui è stata svil
 
 # QT Gui
 Per controllare il Robot in maniera intuitiva si è pensato di usare un interfaccia grafica scritta in QT5, la quale permette di controllare il robot sia direttamente che per mezzo di un PID
+<p align="center">
+  <i>Main Window</i>
+  <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/Media/ScorInterface%20main.png?raw=true"> 
+  <br>
+    <i>Uart Select</i>
+  <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/Media/ScorInterface%20uartSelect.png?raw=true"> 
+    <br>
+    <i>Setting Board Window</i>
+  <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/Media/ScorInterface%20settings.png?raw=true"> 
+    <br>
+    <i>Free Move Window</i>
+  <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/Media/ScorInterface%20freeMove.png?raw=true"> 
+
+</p>
 
 # Controllability Study
 Lo studio è stato svolto per mezzi teorici, con un modello ottenuto dal professore, con l'intento di trovare i prametri da applicare a un PID.

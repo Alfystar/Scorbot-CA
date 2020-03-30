@@ -25,21 +25,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/1_Doc/Media/ScorInterface freeMove.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1_Doc/Media/ScorInterface main.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/1_Doc/Media/ScorInterface settings.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/freeMoveWindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/freeMoveWindow.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/uartChoise.ui" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/uartChoise.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ScorbotTerminal" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ScorbotTerminal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/include/uiSrc/scorbotUi/ui_source/ui_uartChoise.h" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/include/uiSrc/scorbotUi/ui_source/ui_uartChoise.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/uartChoise.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/uartChoise.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/libscorbotUi.a" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/libscorbotUi.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/include/ui_source/ui_freeMoveWindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/include/ui_source/ui_freeMoveWindow.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/include/ui_source/ui_uartChoise.h" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/include/ui_source/ui_uartChoise.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -317,7 +304,7 @@
       <workItem from="1585247746181" duration="7000" />
       <workItem from="1585400964439" duration="4692000" />
       <workItem from="1585406009702" duration="14010000" />
-      <workItem from="1585559661955" duration="21269000" />
+      <workItem from="1585559661955" duration="21511000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
       <created>1568027375662</created>
@@ -578,7 +565,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585589400826</updated>
     </task>
-    <option name="localTasksCounter" value="38" />
+    <task id="LOCAL-00038" summary="readme update">
+      <created>1585589914290</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1585589914290</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -660,10 +654,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="669" y="243" width="572" height="552" key="#uartDriver/0.0.1920.1040@0.0.1920.1040" timestamp="1585229907540" />
-    <state x="296" y="117" width="1317" height="798" key="CommitChangelistDialog2" timestamp="1585589400747">
+    <state x="296" y="117" width="1317" height="798" key="CommitChangelistDialog2" timestamp="1585589913546">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="296" y="117" width="1317" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585589400747" />
+    <state x="296" y="117" width="1317" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585589913546" />
     <state x="743" y="277" width="424" height="479" key="FileChooserDialogImpl" timestamp="1585431864234">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -713,10 +707,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="457" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585431867378" />
-    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2" timestamp="1585589402733">
+    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2" timestamp="1585589916001">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585589402733" />
+    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585589916001" />
     <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1585559692464">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
