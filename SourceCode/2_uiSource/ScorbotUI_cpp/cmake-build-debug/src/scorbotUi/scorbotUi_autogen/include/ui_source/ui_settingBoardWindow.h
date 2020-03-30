@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'settingBoardWindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.5
+** Created by: Qt User Interface Compiler version 5.14.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,20 +10,16 @@
 #define UI_SETTINGBOARDWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QDialogButtonBox>
 #include <QtWidgets/QDoubleSpinBox>
 #include <QtWidgets/QFormLayout>
 #include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QRadioButton>
-#include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QSplitter>
 #include <QtWidgets/QVBoxLayout>
@@ -103,37 +99,40 @@ public:
     QPushButton *saveSetting;
     QPushButton *loadSetting;
     QPushButton *restoreSetting;
-    QSpacerItem *verticalSpacer;
     QDialogButtonBox *buttonBox;
 
-    void setupUi(QDialog *SettingBoardWindow)
-    {
+    void setupUi(QDialog *SettingBoardWindow) {
         if (SettingBoardWindow->objectName().isEmpty())
-            SettingBoardWindow->setObjectName(QStringLiteral("SettingBoardWindow"));
-        SettingBoardWindow->resize(505, 405);
+            SettingBoardWindow->setObjectName(QString::fromUtf8("SettingBoardWindow"));
+        SettingBoardWindow->resize(505, 447);
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(SettingBoardWindow->sizePolicy().hasHeightForWidth());
+        SettingBoardWindow->setSizePolicy(sizePolicy);
         SettingBoardWindow->setSizeGripEnabled(false);
         SettingBoardWindow->setModal(false);
         layoutWidget = new QWidget(SettingBoardWindow);
-        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 10, 481, 381));
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(10, 10, 481, 431));
         verticalLayout = new QVBoxLayout(layoutWidget);
         verticalLayout->setSpacing(16);
         verticalLayout->setContentsMargins(9, 9, 9, 9);
-        verticalLayout->setObjectName(QStringLiteral("verticalLayout"));
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
         EnSelect = new QSplitter(layoutWidget);
-        EnSelect->setObjectName(QStringLiteral("EnSelect"));
+        EnSelect->setObjectName(QString::fromUtf8("EnSelect"));
         EnSelect->setOrientation(Qt::Horizontal);
         EnSelect->setHandleWidth(12);
         layoutWidget1 = new QWidget(EnSelect);
-        layoutWidget1->setObjectName(QStringLiteral("layoutWidget1"));
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
         EnMin = new QVBoxLayout(layoutWidget1);
         EnMin->setSpacing(6);
         EnMin->setContentsMargins(9, 9, 9, 9);
-        EnMin->setObjectName(QStringLiteral("EnMin"));
+        EnMin->setObjectName(QString::fromUtf8("EnMin"));
         EnMin->setContentsMargins(0, 0, 0, 0);
         valMinScr_2 = new QLabel(layoutWidget1);
-        valMinScr_2->setObjectName(QStringLiteral("valMinScr_2"));
+        valMinScr_2->setObjectName(QString::fromUtf8("valMinScr_2"));
         QFont font;
         font.setPointSize(12);
         font.setStrikeOut(false);
@@ -145,17 +144,17 @@ public:
 
         formLayout_2 = new QFormLayout();
         formLayout_2->setSpacing(6);
-        formLayout_2->setObjectName(QStringLiteral("formLayout_2"));
+        formLayout_2->setObjectName(QString::fromUtf8("formLayout_2"));
         formLayout_2->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
         formLayout_2->setLabelAlignment(Qt::AlignCenter);
         formLayout_2->setFormAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
         en1Label_2 = new QLabel(layoutWidget1);
-        en1Label_2->setObjectName(QStringLiteral("en1Label_2"));
+        en1Label_2->setObjectName(QString::fromUtf8("en1Label_2"));
 
         formLayout_2->setWidget(0, QFormLayout::LabelRole, en1Label_2);
 
         en1Min = new QSpinBox(layoutWidget1);
-        en1Min->setObjectName(QStringLiteral("en1Min"));
+        en1Min->setObjectName(QString::fromUtf8("en1Min"));
         en1Min->setButtonSymbols(QAbstractSpinBox::PlusMinus);
         en1Min->setMinimum(-99999);
         en1Min->setMaximum(99999);
@@ -163,12 +162,12 @@ public:
         formLayout_2->setWidget(0, QFormLayout::FieldRole, en1Min);
 
         en2Label_2 = new QLabel(layoutWidget1);
-        en2Label_2->setObjectName(QStringLiteral("en2Label_2"));
+        en2Label_2->setObjectName(QString::fromUtf8("en2Label_2"));
 
         formLayout_2->setWidget(1, QFormLayout::LabelRole, en2Label_2);
 
         en2Min = new QSpinBox(layoutWidget1);
-        en2Min->setObjectName(QStringLiteral("en2Min"));
+        en2Min->setObjectName(QString::fromUtf8("en2Min"));
         en2Min->setButtonSymbols(QAbstractSpinBox::PlusMinus);
         en2Min->setMinimum(-99999);
         en2Min->setMaximum(99999);
@@ -176,12 +175,12 @@ public:
         formLayout_2->setWidget(1, QFormLayout::FieldRole, en2Min);
 
         en3Label_2 = new QLabel(layoutWidget1);
-        en3Label_2->setObjectName(QStringLiteral("en3Label_2"));
+        en3Label_2->setObjectName(QString::fromUtf8("en3Label_2"));
 
         formLayout_2->setWidget(2, QFormLayout::LabelRole, en3Label_2);
 
         en3Min = new QSpinBox(layoutWidget1);
-        en3Min->setObjectName(QStringLiteral("en3Min"));
+        en3Min->setObjectName(QString::fromUtf8("en3Min"));
         en3Min->setButtonSymbols(QAbstractSpinBox::PlusMinus);
         en3Min->setMinimum(-99999);
         en3Min->setMaximum(99999);
@@ -189,12 +188,12 @@ public:
         formLayout_2->setWidget(2, QFormLayout::FieldRole, en3Min);
 
         en4Label_2 = new QLabel(layoutWidget1);
-        en4Label_2->setObjectName(QStringLiteral("en4Label_2"));
+        en4Label_2->setObjectName(QString::fromUtf8("en4Label_2"));
 
         formLayout_2->setWidget(3, QFormLayout::LabelRole, en4Label_2);
 
         en4Min = new QSpinBox(layoutWidget1);
-        en4Min->setObjectName(QStringLiteral("en4Min"));
+        en4Min->setObjectName(QString::fromUtf8("en4Min"));
         en4Min->setButtonSymbols(QAbstractSpinBox::PlusMinus);
         en4Min->setMinimum(-99999);
         en4Min->setMaximum(99999);
@@ -202,12 +201,12 @@ public:
         formLayout_2->setWidget(3, QFormLayout::FieldRole, en4Min);
 
         en5Label_2 = new QLabel(layoutWidget1);
-        en5Label_2->setObjectName(QStringLiteral("en5Label_2"));
+        en5Label_2->setObjectName(QString::fromUtf8("en5Label_2"));
 
         formLayout_2->setWidget(4, QFormLayout::LabelRole, en5Label_2);
 
         en5Min = new QSpinBox(layoutWidget1);
-        en5Min->setObjectName(QStringLiteral("en5Min"));
+        en5Min->setObjectName(QString::fromUtf8("en5Min"));
         en5Min->setButtonSymbols(QAbstractSpinBox::PlusMinus);
         en5Min->setMinimum(-99999);
         en5Min->setMaximum(99999);
@@ -215,12 +214,12 @@ public:
         formLayout_2->setWidget(4, QFormLayout::FieldRole, en5Min);
 
         en6Label_2 = new QLabel(layoutWidget1);
-        en6Label_2->setObjectName(QStringLiteral("en6Label_2"));
+        en6Label_2->setObjectName(QString::fromUtf8("en6Label_2"));
 
         formLayout_2->setWidget(5, QFormLayout::LabelRole, en6Label_2);
 
         en6Min = new QSpinBox(layoutWidget1);
-        en6Min->setObjectName(QStringLiteral("en6Min"));
+        en6Min->setObjectName(QString::fromUtf8("en6Min"));
         en6Min->setButtonSymbols(QAbstractSpinBox::PlusMinus);
         en6Min->setMinimum(-99999);
         en6Min->setMaximum(99999);
@@ -232,14 +231,14 @@ public:
 
         EnSelect->addWidget(layoutWidget1);
         layoutWidget2 = new QWidget(EnSelect);
-        layoutWidget2->setObjectName(QStringLiteral("layoutWidget2"));
+        layoutWidget2->setObjectName(QString::fromUtf8("layoutWidget2"));
         EnMax = new QVBoxLayout(layoutWidget2);
         EnMax->setSpacing(6);
         EnMax->setContentsMargins(9, 9, 9, 9);
-        EnMax->setObjectName(QStringLiteral("EnMax"));
+        EnMax->setObjectName(QString::fromUtf8("EnMax"));
         EnMax->setContentsMargins(0, 0, 0, 0);
         valMinScr = new QLabel(layoutWidget2);
-        valMinScr->setObjectName(QStringLiteral("valMinScr"));
+        valMinScr->setObjectName(QString::fromUtf8("valMinScr"));
         valMinScr->setFont(font);
         valMinScr->setTextFormat(Qt::AutoText);
         valMinScr->setAlignment(Qt::AlignCenter);
@@ -248,22 +247,22 @@ public:
 
         formLayout = new QFormLayout();
         formLayout->setSpacing(6);
-        formLayout->setObjectName(QStringLiteral("formLayout"));
+        formLayout->setObjectName(QString::fromUtf8("formLayout"));
         formLayout->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
         formLayout->setLabelAlignment(Qt::AlignCenter);
         formLayout->setFormAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
         en1Label = new QLabel(layoutWidget2);
-        en1Label->setObjectName(QStringLiteral("en1Label"));
+        en1Label->setObjectName(QString::fromUtf8("en1Label"));
 
         formLayout->setWidget(0, QFormLayout::LabelRole, en1Label);
 
         en2Label = new QLabel(layoutWidget2);
-        en2Label->setObjectName(QStringLiteral("en2Label"));
+        en2Label->setObjectName(QString::fromUtf8("en2Label"));
 
         formLayout->setWidget(1, QFormLayout::LabelRole, en2Label);
 
         en2Max = new QSpinBox(layoutWidget2);
-        en2Max->setObjectName(QStringLiteral("en2Max"));
+        en2Max->setObjectName(QString::fromUtf8("en2Max"));
         en2Max->setButtonSymbols(QAbstractSpinBox::PlusMinus);
         en2Max->setMinimum(-99999);
         en2Max->setMaximum(99999);
@@ -271,12 +270,12 @@ public:
         formLayout->setWidget(1, QFormLayout::FieldRole, en2Max);
 
         en3Label = new QLabel(layoutWidget2);
-        en3Label->setObjectName(QStringLiteral("en3Label"));
+        en3Label->setObjectName(QString::fromUtf8("en3Label"));
 
         formLayout->setWidget(2, QFormLayout::LabelRole, en3Label);
 
         en3Max = new QSpinBox(layoutWidget2);
-        en3Max->setObjectName(QStringLiteral("en3Max"));
+        en3Max->setObjectName(QString::fromUtf8("en3Max"));
         en3Max->setButtonSymbols(QAbstractSpinBox::PlusMinus);
         en3Max->setMinimum(-99999);
         en3Max->setMaximum(99999);
@@ -284,12 +283,12 @@ public:
         formLayout->setWidget(2, QFormLayout::FieldRole, en3Max);
 
         en4Label = new QLabel(layoutWidget2);
-        en4Label->setObjectName(QStringLiteral("en4Label"));
+        en4Label->setObjectName(QString::fromUtf8("en4Label"));
 
         formLayout->setWidget(3, QFormLayout::LabelRole, en4Label);
 
         en4Max = new QSpinBox(layoutWidget2);
-        en4Max->setObjectName(QStringLiteral("en4Max"));
+        en4Max->setObjectName(QString::fromUtf8("en4Max"));
         en4Max->setButtonSymbols(QAbstractSpinBox::PlusMinus);
         en4Max->setMinimum(-99999);
         en4Max->setMaximum(99999);
@@ -297,12 +296,12 @@ public:
         formLayout->setWidget(3, QFormLayout::FieldRole, en4Max);
 
         en5Label = new QLabel(layoutWidget2);
-        en5Label->setObjectName(QStringLiteral("en5Label"));
+        en5Label->setObjectName(QString::fromUtf8("en5Label"));
 
         formLayout->setWidget(4, QFormLayout::LabelRole, en5Label);
 
         en5Max = new QSpinBox(layoutWidget2);
-        en5Max->setObjectName(QStringLiteral("en5Max"));
+        en5Max->setObjectName(QString::fromUtf8("en5Max"));
         en5Max->setButtonSymbols(QAbstractSpinBox::PlusMinus);
         en5Max->setMinimum(-99999);
         en5Max->setMaximum(99999);
@@ -310,12 +309,12 @@ public:
         formLayout->setWidget(4, QFormLayout::FieldRole, en5Max);
 
         en6Label = new QLabel(layoutWidget2);
-        en6Label->setObjectName(QStringLiteral("en6Label"));
+        en6Label->setObjectName(QString::fromUtf8("en6Label"));
 
         formLayout->setWidget(5, QFormLayout::LabelRole, en6Label);
 
         en6Max = new QSpinBox(layoutWidget2);
-        en6Max->setObjectName(QStringLiteral("en6Max"));
+        en6Max->setObjectName(QString::fromUtf8("en6Max"));
         en6Max->setButtonSymbols(QAbstractSpinBox::PlusMinus);
         en6Max->setMinimum(-99999);
         en6Max->setMaximum(99999);
@@ -323,7 +322,7 @@ public:
         formLayout->setWidget(5, QFormLayout::FieldRole, en6Max);
 
         en1Max = new QSpinBox(layoutWidget2);
-        en1Max->setObjectName(QStringLiteral("en1Max"));
+        en1Max->setObjectName(QString::fromUtf8("en1Max"));
         en1Max->setButtonSymbols(QAbstractSpinBox::PlusMinus);
         en1Max->setMinimum(-99999);
         en1Max->setMaximum(99999);
@@ -335,14 +334,14 @@ public:
 
         EnSelect->addWidget(layoutWidget2);
         layoutWidget3 = new QWidget(EnSelect);
-        layoutWidget3->setObjectName(QStringLiteral("layoutWidget3"));
+        layoutWidget3->setObjectName(QString::fromUtf8("layoutWidget3"));
         CurMax = new QVBoxLayout(layoutWidget3);
         CurMax->setSpacing(6);
         CurMax->setContentsMargins(9, 9, 9, 9);
-        CurMax->setObjectName(QStringLiteral("CurMax"));
+        CurMax->setObjectName(QString::fromUtf8("CurMax"));
         CurMax->setContentsMargins(0, 0, 0, 0);
         valMinScr_3 = new QLabel(layoutWidget3);
-        valMinScr_3->setObjectName(QStringLiteral("valMinScr_3"));
+        valMinScr_3->setObjectName(QString::fromUtf8("valMinScr_3"));
         valMinScr_3->setFont(font);
         valMinScr_3->setTextFormat(Qt::AutoText);
         valMinScr_3->setAlignment(Qt::AlignCenter);
@@ -351,91 +350,91 @@ public:
 
         formLayout_3 = new QFormLayout();
         formLayout_3->setSpacing(6);
-        formLayout_3->setObjectName(QStringLiteral("formLayout_3"));
+        formLayout_3->setObjectName(QString::fromUtf8("formLayout_3"));
         formLayout_3->setFieldGrowthPolicy(QFormLayout::AllNonFixedFieldsGrow);
         formLayout_3->setLabelAlignment(Qt::AlignCenter);
         formLayout_3->setFormAlignment(Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop);
         en1Label_3 = new QLabel(layoutWidget3);
-        en1Label_3->setObjectName(QStringLiteral("en1Label_3"));
+        en1Label_3->setObjectName(QString::fromUtf8("en1Label_3"));
 
         formLayout_3->setWidget(0, QFormLayout::LabelRole, en1Label_3);
 
         en2Label_3 = new QLabel(layoutWidget3);
-        en2Label_3->setObjectName(QStringLiteral("en2Label_3"));
+        en2Label_3->setObjectName(QString::fromUtf8("en2Label_3"));
 
         formLayout_3->setWidget(1, QFormLayout::LabelRole, en2Label_3);
 
         en3Label_3 = new QLabel(layoutWidget3);
-        en3Label_3->setObjectName(QStringLiteral("en3Label_3"));
+        en3Label_3->setObjectName(QString::fromUtf8("en3Label_3"));
 
         formLayout_3->setWidget(2, QFormLayout::LabelRole, en3Label_3);
 
         en4Label_3 = new QLabel(layoutWidget3);
-        en4Label_3->setObjectName(QStringLiteral("en4Label_3"));
+        en4Label_3->setObjectName(QString::fromUtf8("en4Label_3"));
 
         formLayout_3->setWidget(3, QFormLayout::LabelRole, en4Label_3);
 
         en5Label_3 = new QLabel(layoutWidget3);
-        en5Label_3->setObjectName(QStringLiteral("en5Label_3"));
+        en5Label_3->setObjectName(QString::fromUtf8("en5Label_3"));
 
         formLayout_3->setWidget(4, QFormLayout::LabelRole, en5Label_3);
 
         en6Label_3 = new QLabel(layoutWidget3);
-        en6Label_3->setObjectName(QStringLiteral("en6Label_3"));
+        en6Label_3->setObjectName(QString::fromUtf8("en6Label_3"));
 
         formLayout_3->setWidget(5, QFormLayout::LabelRole, en6Label_3);
 
         curM1 = new QDoubleSpinBox(layoutWidget3);
-        curM1->setObjectName(QStringLiteral("curM1"));
+        curM1->setObjectName(QString::fromUtf8("curM1"));
         curM1->setButtonSymbols(QAbstractSpinBox::PlusMinus);
-        curM1->setMinimum(200);
-        curM1->setMaximum(4000);
-        curM1->setValue(2000);
+        curM1->setMinimum(200.000000000000000);
+        curM1->setMaximum(4000.000000000000000);
+        curM1->setValue(2000.000000000000000);
 
         formLayout_3->setWidget(0, QFormLayout::FieldRole, curM1);
 
         curM6 = new QDoubleSpinBox(layoutWidget3);
-        curM6->setObjectName(QStringLiteral("curM6"));
+        curM6->setObjectName(QString::fromUtf8("curM6"));
         curM6->setButtonSymbols(QAbstractSpinBox::PlusMinus);
-        curM6->setMinimum(200);
-        curM6->setMaximum(4000);
-        curM6->setValue(2000);
+        curM6->setMinimum(200.000000000000000);
+        curM6->setMaximum(4000.000000000000000);
+        curM6->setValue(2000.000000000000000);
 
         formLayout_3->setWidget(5, QFormLayout::FieldRole, curM6);
 
         curM5 = new QDoubleSpinBox(layoutWidget3);
-        curM5->setObjectName(QStringLiteral("curM5"));
+        curM5->setObjectName(QString::fromUtf8("curM5"));
         curM5->setButtonSymbols(QAbstractSpinBox::PlusMinus);
-        curM5->setMinimum(200);
-        curM5->setMaximum(4000);
-        curM5->setValue(2000);
+        curM5->setMinimum(200.000000000000000);
+        curM5->setMaximum(4000.000000000000000);
+        curM5->setValue(2000.000000000000000);
 
         formLayout_3->setWidget(4, QFormLayout::FieldRole, curM5);
 
         curM4 = new QDoubleSpinBox(layoutWidget3);
-        curM4->setObjectName(QStringLiteral("curM4"));
+        curM4->setObjectName(QString::fromUtf8("curM4"));
         curM4->setButtonSymbols(QAbstractSpinBox::PlusMinus);
-        curM4->setMinimum(200);
-        curM4->setMaximum(4000);
-        curM4->setValue(2000);
+        curM4->setMinimum(200.000000000000000);
+        curM4->setMaximum(4000.000000000000000);
+        curM4->setValue(2000.000000000000000);
 
         formLayout_3->setWidget(3, QFormLayout::FieldRole, curM4);
 
         curM3 = new QDoubleSpinBox(layoutWidget3);
-        curM3->setObjectName(QStringLiteral("curM3"));
+        curM3->setObjectName(QString::fromUtf8("curM3"));
         curM3->setButtonSymbols(QAbstractSpinBox::PlusMinus);
-        curM3->setMinimum(200);
-        curM3->setMaximum(4000);
-        curM3->setValue(2000);
+        curM3->setMinimum(200.000000000000000);
+        curM3->setMaximum(4000.000000000000000);
+        curM3->setValue(2000.000000000000000);
 
         formLayout_3->setWidget(2, QFormLayout::FieldRole, curM3);
 
         curM2 = new QDoubleSpinBox(layoutWidget3);
-        curM2->setObjectName(QStringLiteral("curM2"));
+        curM2->setObjectName(QString::fromUtf8("curM2"));
         curM2->setButtonSymbols(QAbstractSpinBox::PlusMinus);
-        curM2->setMinimum(200);
-        curM2->setMaximum(4000);
-        curM2->setValue(2000);
+        curM2->setMinimum(200.000000000000000);
+        curM2->setMaximum(4000.000000000000000);
+        curM2->setValue(2000.000000000000000);
 
         formLayout_3->setWidget(1, QFormLayout::FieldRole, curM2);
 
@@ -448,24 +447,24 @@ public:
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setSpacing(100);
-        horizontalLayout_2->setObjectName(QStringLiteral("horizontalLayout_2"));
+        horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setSpacing(16);
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         adcVref = new QVBoxLayout();
         adcVref->setSpacing(6);
-        adcVref->setObjectName(QStringLiteral("adcVref"));
+        adcVref->setObjectName(QString::fromUtf8("adcVref"));
         label = new QLabel(layoutWidget);
-        label->setObjectName(QStringLiteral("label"));
+        label->setObjectName(QString::fromUtf8("label"));
         QFont font1;
         font1.setPointSize(12);
         font1.setItalic(false);
         font1.setStrikeOut(false);
         font1.setKerning(true);
         label->setFont(font1);
-#ifndef QT_NO_STATUSTIP
-        label->setStatusTip(QStringLiteral(""));
-#endif // QT_NO_STATUSTIP
+#if QT_CONFIG(statustip)
+        label->setStatusTip(QString::fromUtf8(""));
+#endif // QT_CONFIG(statustip)
         label->setLineWidth(1);
         label->setMidLineWidth(0);
         label->setScaledContents(false);
@@ -474,17 +473,17 @@ public:
         adcVref->addWidget(label);
 
         in1V1 = new QRadioButton(layoutWidget);
-        in1V1->setObjectName(QStringLiteral("in1V1"));
+        in1V1->setObjectName(QString::fromUtf8("in1V1"));
 
         adcVref->addWidget(in1V1);
 
         in2V56 = new QRadioButton(layoutWidget);
-        in2V56->setObjectName(QStringLiteral("in2V56"));
+        in2V56->setObjectName(QString::fromUtf8("in2V56"));
 
         adcVref->addWidget(in2V56);
 
         ext = new QRadioButton(layoutWidget);
-        ext->setObjectName(QStringLiteral("ext"));
+        ext->setObjectName(QString::fromUtf8("ext"));
 
         adcVref->addWidget(ext);
 
@@ -493,22 +492,24 @@ public:
 
         verticalLayout_5 = new QVBoxLayout();
         verticalLayout_5->setSpacing(6);
-        verticalLayout_5->setObjectName(QStringLiteral("verticalLayout_5"));
+        verticalLayout_5->setObjectName(QString::fromUtf8("verticalLayout_5"));
         adcOffset = new QVBoxLayout();
         adcOffset->setSpacing(6);
-        adcOffset->setObjectName(QStringLiteral("adcOffset"));
+        adcOffset->setObjectName(QString::fromUtf8("adcOffset"));
         label_2 = new QLabel(layoutWidget);
-        label_2->setObjectName(QStringLiteral("label_2"));
+        label_2->setObjectName(QString::fromUtf8("label_2"));
         label_2->setFont(font);
-#ifndef QT_NO_STATUSTIP
-        label_2->setStatusTip(QStringLiteral(""));
-#endif // QT_NO_STATUSTIP
+#if QT_CONFIG(statustip)
+        label_2->setStatusTip(QString::fromUtf8(""));
+#endif // QT_CONFIG(statustip)
         label_2->setAlignment(Qt::AlignCenter);
 
         adcOffset->addWidget(label_2);
 
         offsetChose = new QComboBox(layoutWidget);
-        offsetChose->setObjectName(QStringLiteral("offsetChose"));
+        offsetChose->addItem(QString());
+        offsetChose->addItem(QString());
+        offsetChose->setObjectName(QString::fromUtf8("offsetChose"));
 
         adcOffset->addWidget(offsetChose);
 
@@ -517,19 +518,24 @@ public:
 
         MotorPwm = new QVBoxLayout();
         MotorPwm->setSpacing(6);
-        MotorPwm->setObjectName(QStringLiteral("MotorPwm"));
+        MotorPwm->setObjectName(QString::fromUtf8("MotorPwm"));
         label_3 = new QLabel(layoutWidget);
-        label_3->setObjectName(QStringLiteral("label_3"));
+        label_3->setObjectName(QString::fromUtf8("label_3"));
         label_3->setFont(font);
-#ifndef QT_NO_STATUSTIP
-        label_3->setStatusTip(QStringLiteral(""));
-#endif // QT_NO_STATUSTIP
+#if QT_CONFIG(statustip)
+        label_3->setStatusTip(QString::fromUtf8(""));
+#endif // QT_CONFIG(statustip)
         label_3->setAlignment(Qt::AlignCenter);
 
         MotorPwm->addWidget(label_3);
 
         motFreqChose = new QComboBox(layoutWidget);
-        motFreqChose->setObjectName(QStringLiteral("motFreqChose"));
+        motFreqChose->addItem(QString());
+        motFreqChose->addItem(QString());
+        motFreqChose->addItem(QString());
+        motFreqChose->addItem(QString());
+        motFreqChose->addItem(QString());
+        motFreqChose->setObjectName(QString::fromUtf8("motFreqChose"));
         QFont font2;
         font2.setPointSize(10);
         motFreqChose->setFont(font2);
@@ -548,19 +554,19 @@ public:
 
         verticalLayout_4 = new QVBoxLayout();
         verticalLayout_4->setSpacing(12);
-        verticalLayout_4->setObjectName(QStringLiteral("verticalLayout_4"));
+        verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         saveSetting = new QPushButton(layoutWidget);
-        saveSetting->setObjectName(QStringLiteral("saveSetting"));
+        saveSetting->setObjectName(QString::fromUtf8("saveSetting"));
 
         verticalLayout_4->addWidget(saveSetting);
 
         loadSetting = new QPushButton(layoutWidget);
-        loadSetting->setObjectName(QStringLiteral("loadSetting"));
+        loadSetting->setObjectName(QString::fromUtf8("loadSetting"));
 
         verticalLayout_4->addWidget(loadSetting);
 
         restoreSetting = new QPushButton(layoutWidget);
-        restoreSetting->setObjectName(QStringLiteral("restoreSetting"));
+        restoreSetting->setObjectName(QString::fromUtf8("restoreSetting"));
 
         verticalLayout_4->addWidget(restoreSetting);
 
@@ -570,18 +576,14 @@ public:
 
         verticalLayout->addLayout(horizontalLayout_2);
 
-        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        verticalLayout->addItem(verticalSpacer);
-
         buttonBox = new QDialogButtonBox(layoutWidget);
-        buttonBox->setObjectName(QStringLiteral("buttonBox"));
+        buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
         buttonBox->setOrientation(Qt::Horizontal);
         buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
 
         verticalLayout->addWidget(buttonBox);
 
-#ifndef QT_NO_SHORTCUT
+#if QT_CONFIG(shortcut)
         en1Label_2->setBuddy(en1Min);
         en2Label_2->setBuddy(en2Min);
         en3Label_2->setBuddy(en3Min);
@@ -594,7 +596,7 @@ public:
         en4Label->setBuddy(en4Max);
         en5Label->setBuddy(en5Max);
         en6Label->setBuddy(en6Max);
-#endif // QT_NO_SHORTCUT
+#endif // QT_CONFIG(shortcut)
         QWidget::setTabOrder(en1Min, en1Max);
         QWidget::setTabOrder(en1Max, curM1);
         QWidget::setTabOrder(curM1, en2Min);
@@ -625,55 +627,53 @@ public:
         QObject::connect(buttonBox, SIGNAL(accepted()), SettingBoardWindow, SLOT(accept()));
         QObject::connect(buttonBox, SIGNAL(rejected()), SettingBoardWindow, SLOT(reject()));
 
+        motFreqChose->setCurrentIndex(3);
+
+
         QMetaObject::connectSlotsByName(SettingBoardWindow);
     } // setupUi
 
-    void retranslateUi(QDialog *SettingBoardWindow)
-    {
-        SettingBoardWindow->setWindowTitle(QApplication::translate("SettingBoardWindow", "SettingBoard", Q_NULLPTR));
-        valMinScr_2->setText(QApplication::translate("SettingBoardWindow", "En min [Step]", Q_NULLPTR));
-        en1Label_2->setText(QApplication::translate("SettingBoardWindow", "En 1", Q_NULLPTR));
-        en2Label_2->setText(QApplication::translate("SettingBoardWindow", "En 2", Q_NULLPTR));
-        en3Label_2->setText(QApplication::translate("SettingBoardWindow", "En 3", Q_NULLPTR));
-        en4Label_2->setText(QApplication::translate("SettingBoardWindow", "En 4", Q_NULLPTR));
-        en5Label_2->setText(QApplication::translate("SettingBoardWindow", "En 5", Q_NULLPTR));
-        en6Label_2->setText(QApplication::translate("SettingBoardWindow", "En 6", Q_NULLPTR));
-        valMinScr->setText(QApplication::translate("SettingBoardWindow", "En MAX [Step]", Q_NULLPTR));
-        en1Label->setText(QApplication::translate("SettingBoardWindow", "En 1", Q_NULLPTR));
-        en2Label->setText(QApplication::translate("SettingBoardWindow", "En 2", Q_NULLPTR));
-        en3Label->setText(QApplication::translate("SettingBoardWindow", "En 3", Q_NULLPTR));
-        en4Label->setText(QApplication::translate("SettingBoardWindow", "En 4", Q_NULLPTR));
-        en5Label->setText(QApplication::translate("SettingBoardWindow", "En 5", Q_NULLPTR));
-        en6Label->setText(QApplication::translate("SettingBoardWindow", "En 6", Q_NULLPTR));
-        valMinScr_3->setText(QApplication::translate("SettingBoardWindow", "Cur Max [mA]", Q_NULLPTR));
-        en1Label_3->setText(QApplication::translate("SettingBoardWindow", "Mot1", Q_NULLPTR));
-        en2Label_3->setText(QApplication::translate("SettingBoardWindow", "Mot2", Q_NULLPTR));
-        en3Label_3->setText(QApplication::translate("SettingBoardWindow", "Mot3", Q_NULLPTR));
-        en4Label_3->setText(QApplication::translate("SettingBoardWindow", "Mot4", Q_NULLPTR));
-        en5Label_3->setText(QApplication::translate("SettingBoardWindow", "Mot5", Q_NULLPTR));
-        en6Label_3->setText(QApplication::translate("SettingBoardWindow", "Mot6", Q_NULLPTR));
-        label->setText(QApplication::translate("SettingBoardWindow", "Adc Vref", Q_NULLPTR));
-        in1V1->setText(QApplication::translate("SettingBoardWindow", "1.1V Interna", Q_NULLPTR));
-        in2V56->setText(QApplication::translate("SettingBoardWindow", "2.56V Interna", Q_NULLPTR));
-        ext->setText(QApplication::translate("SettingBoardWindow", "Vref Esterna", Q_NULLPTR));
-        label_2->setText(QApplication::translate("SettingBoardWindow", "Offset Remove", Q_NULLPTR));
-        offsetChose->clear();
-        offsetChose->insertItems(0, QStringList()
-         << QApplication::translate("SettingBoardWindow", "Reading Directly", Q_NULLPTR)
-         << QApplication::translate("SettingBoardWindow", "Remove Offset", Q_NULLPTR)
-        );
-        label_3->setText(QApplication::translate("SettingBoardWindow", "Motor PWM Freq", Q_NULLPTR));
-        motFreqChose->clear();
-        motFreqChose->insertItems(0, QStringList()
-         << QApplication::translate("SettingBoardWindow", "30 hz", Q_NULLPTR)
-         << QApplication::translate("SettingBoardWindow", "120 hz", Q_NULLPTR)
-         << QApplication::translate("SettingBoardWindow", "490 hz", Q_NULLPTR)
-         << QApplication::translate("SettingBoardWindow", "4 Khz", Q_NULLPTR)
-         << QApplication::translate("SettingBoardWindow", "30 Khz", Q_NULLPTR)
-        );
-        saveSetting->setText(QApplication::translate("SettingBoardWindow", "Save", Q_NULLPTR));
-        loadSetting->setText(QApplication::translate("SettingBoardWindow", "Load", Q_NULLPTR));
-        restoreSetting->setText(QApplication::translate("SettingBoardWindow", "Restore", Q_NULLPTR));
+    void retranslateUi(QDialog *SettingBoardWindow) {
+        SettingBoardWindow->setWindowTitle(QCoreApplication::translate("SettingBoardWindow", "SettingBoard", nullptr));
+        valMinScr_2->setText(QCoreApplication::translate("SettingBoardWindow", "En min [Step]", nullptr));
+        en1Label_2->setText(QCoreApplication::translate("SettingBoardWindow", "En 1", nullptr));
+        en2Label_2->setText(QCoreApplication::translate("SettingBoardWindow", "En 2", nullptr));
+        en3Label_2->setText(QCoreApplication::translate("SettingBoardWindow", "En 3", nullptr));
+        en4Label_2->setText(QCoreApplication::translate("SettingBoardWindow", "En 4", nullptr));
+        en5Label_2->setText(QCoreApplication::translate("SettingBoardWindow", "En 5", nullptr));
+        en6Label_2->setText(QCoreApplication::translate("SettingBoardWindow", "En 6", nullptr));
+        valMinScr->setText(QCoreApplication::translate("SettingBoardWindow", "En MAX [Step]", nullptr));
+        en1Label->setText(QCoreApplication::translate("SettingBoardWindow", "En 1", nullptr));
+        en2Label->setText(QCoreApplication::translate("SettingBoardWindow", "En 2", nullptr));
+        en3Label->setText(QCoreApplication::translate("SettingBoardWindow", "En 3", nullptr));
+        en4Label->setText(QCoreApplication::translate("SettingBoardWindow", "En 4", nullptr));
+        en5Label->setText(QCoreApplication::translate("SettingBoardWindow", "En 5", nullptr));
+        en6Label->setText(QCoreApplication::translate("SettingBoardWindow", "En 6", nullptr));
+        valMinScr_3->setText(QCoreApplication::translate("SettingBoardWindow", "Cur Max [mA]", nullptr));
+        en1Label_3->setText(QCoreApplication::translate("SettingBoardWindow", "Mot1", nullptr));
+        en2Label_3->setText(QCoreApplication::translate("SettingBoardWindow", "Mot2", nullptr));
+        en3Label_3->setText(QCoreApplication::translate("SettingBoardWindow", "Mot3", nullptr));
+        en4Label_3->setText(QCoreApplication::translate("SettingBoardWindow", "Mot4", nullptr));
+        en5Label_3->setText(QCoreApplication::translate("SettingBoardWindow", "Mot5", nullptr));
+        en6Label_3->setText(QCoreApplication::translate("SettingBoardWindow", "Mot6", nullptr));
+        label->setText(QCoreApplication::translate("SettingBoardWindow", "Adc Vref", nullptr));
+        in1V1->setText(QCoreApplication::translate("SettingBoardWindow", "1.1V Interna", nullptr));
+        in2V56->setText(QCoreApplication::translate("SettingBoardWindow", "2.56V Interna", nullptr));
+        ext->setText(QCoreApplication::translate("SettingBoardWindow", "Vref Esterna", nullptr));
+        label_2->setText(QCoreApplication::translate("SettingBoardWindow", "Offset Remove", nullptr));
+        offsetChose->setItemText(0, QCoreApplication::translate("SettingBoardWindow", "Reading Directly", nullptr));
+        offsetChose->setItemText(1, QCoreApplication::translate("SettingBoardWindow", "Remove Offset", nullptr));
+
+        label_3->setText(QCoreApplication::translate("SettingBoardWindow", "Motor PWM Freq", nullptr));
+        motFreqChose->setItemText(0, QCoreApplication::translate("SettingBoardWindow", "30 hz", nullptr));
+        motFreqChose->setItemText(1, QCoreApplication::translate("SettingBoardWindow", "120 hz", nullptr));
+        motFreqChose->setItemText(2, QCoreApplication::translate("SettingBoardWindow", "490 hz", nullptr));
+        motFreqChose->setItemText(3, QCoreApplication::translate("SettingBoardWindow", "4 Khz", nullptr));
+        motFreqChose->setItemText(4, QCoreApplication::translate("SettingBoardWindow", "30 Khz", nullptr));
+
+        saveSetting->setText(QCoreApplication::translate("SettingBoardWindow", "Save", nullptr));
+        loadSetting->setText(QCoreApplication::translate("SettingBoardWindow", "Load", nullptr));
+        restoreSetting->setText(QCoreApplication::translate("SettingBoardWindow", "Restore", nullptr));
     } // retranslateUi
 
 };

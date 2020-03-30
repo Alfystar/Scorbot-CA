@@ -5,31 +5,31 @@
 		<Option title="scorbotUi_demo"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\DataTransfertPackge\;CMake Files\src\scorbotUi\;CMake Files\src\scorbotUi\ui_source\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\;CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\src\DataTransfertPackge\;CMake Files\src\UtilityScorbot\;CMake Files\src\scorbotUi\;CMake Files\src\scorbotUi\ui_source\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\;CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug"/>
+				<Option working_dir="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug"/>
+				<Option working_dir="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="scorbotUi_demo">
-				<Option output="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/scorbotUi_demo" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug"/>
+				<Option output="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/scorbotUi_demo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -38,7 +38,8 @@
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
 					<Add option="-DlinuxSide=1"/>
-					<Add directory="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/."/>
+					<Add directory="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/."/>
+					<Add directory="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/UtilityScorbot/."/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
@@ -54,15 +55,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 scorbotUi_demo"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 scorbotUi_demo"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="scorbotUi_demo/fast">
-				<Option output="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/scorbotUi_demo" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug"/>
+				<Option output="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/scorbotUi_demo" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -71,7 +72,8 @@
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
 					<Add option="-DlinuxSide=1"/>
-					<Add directory="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/."/>
+					<Add directory="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/."/>
+					<Add directory="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/UtilityScorbot/."/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
@@ -87,31 +89,31 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 scorbotUi_demo/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 scorbotUi_demo/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug"/>
+				<Option working_dir="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="dataTransfert">
-				<Option output="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/libdataTransfert.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge"/>
+				<Option output="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/libdataTransfert.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DlinuxSide=1"/>
-					<Add directory="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/."/>
+					<Add directory="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/."/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -122,21 +124,21 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/Makefile&quot;  VERBOSE=1 dataTransfert"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/Makefile&quot;  VERBOSE=1 dataTransfert"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="dataTransfert/fast">
-				<Option output="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/libdataTransfert.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge"/>
+				<Option output="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/libdataTransfert.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
 				<Compiler>
 					<Add option="-DlinuxSide=1"/>
-					<Add directory="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/."/>
+					<Add directory="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/."/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -147,15 +149,67 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/Makefile&quot;  VERBOSE=1 dataTransfert/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/Makefile&quot;  VERBOSE=1 dataTransfert/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="scoreUtiliy">
+				<Option output="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/UtilityScorbot/libscoreUtiliy.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/UtilityScorbot"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DlinuxSide=1"/>
+					<Add directory="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/UtilityScorbot/."/>
+					<Add directory="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/."/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/UtilityScorbot/Makefile&quot;  VERBOSE=1 scoreUtiliy"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/UtilityScorbot/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/UtilityScorbot/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/UtilityScorbot/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="scoreUtiliy/fast">
+				<Option output="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/UtilityScorbot/libscoreUtiliy.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/UtilityScorbot"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add option="-DlinuxSide=1"/>
+					<Add directory="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/UtilityScorbot/."/>
+					<Add directory="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/."/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/UtilityScorbot/Makefile&quot;  VERBOSE=1 scoreUtiliy/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/UtilityScorbot/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/UtilityScorbot/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/UtilityScorbot/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="scorbotUi">
-				<Option output="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/libscorbotUi.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi"/>
+				<Option output="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/libscorbotUi.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -164,10 +218,11 @@
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
 					<Add option="-DlinuxSide=1"/>
-					<Add directory="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi"/>
-					<Add directory="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi"/>
-					<Add directory="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/include"/>
-					<Add directory="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/."/>
+					<Add directory="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi"/>
+					<Add directory="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi"/>
+					<Add directory="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/include"/>
+					<Add directory="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/."/>
+					<Add directory="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/UtilityScorbot/."/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
@@ -183,15 +238,15 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 scorbotUi"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 scorbotUi"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="scorbotUi/fast">
-				<Option output="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/libscorbotUi.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi"/>
+				<Option output="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/libscorbotUi.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi"/>
 				<Option object_output="./"/>
 				<Option type="2"/>
 				<Option compiler="gcc"/>
@@ -200,10 +255,11 @@
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
 					<Add option="-DlinuxSide=1"/>
-					<Add directory="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi"/>
-					<Add directory="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi"/>
-					<Add directory="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/include"/>
-					<Add directory="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/."/>
+					<Add directory="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi"/>
+					<Add directory="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi"/>
+					<Add directory="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/include"/>
+					<Add directory="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/."/>
+					<Add directory="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/UtilityScorbot/."/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtWidgets"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
@@ -219,183 +275,261 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 scorbotUi/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 scorbotUi/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="scorbotUi_autogen">
-				<Option working_dir="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi"/>
+				<Option working_dir="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 scorbotUi_autogen"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 scorbotUi_autogen"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp">
 			<Option target="scorbotUi"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.rule">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.rule">
 			<Option target="scorbotUi"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp">
 			<Option target="scorbotUi"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/main.cpp">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/main.cpp">
 			<Option target="scorbotUi_demo"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataFactory.cpp">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataFactory.cpp">
 			<Option target="dataTransfert"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataFactory.h">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataFactory.h">
 			<Option target="dataTransfert"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/AllSensor.cpp">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/AllSensor.cpp">
 			<Option target="dataTransfert"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/AllSensor.h">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/AllSensor.h">
 			<Option target="dataTransfert"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/CurrentMot.cpp">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/CurrentMot.cpp">
 			<Option target="dataTransfert"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/CurrentMot.h">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/CurrentMot.h">
 			<Option target="dataTransfert"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/EncoderMot.cpp">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/EncoderMot.cpp">
 			<Option target="dataTransfert"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/EncoderMot.h">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/EncoderMot.h">
 			<Option target="dataTransfert"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/Pack.cpp">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/Pack.cpp">
 			<Option target="dataTransfert"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/Pack.h">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/Pack.h">
 			<Option target="dataTransfert"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SettingBoard_C.cpp">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SettingBoard_C.cpp">
 			<Option target="dataTransfert"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SettingBoard_C.h">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SettingBoard_C.h">
 			<Option target="dataTransfert"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SpeedMot.cpp">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SpeedMot.cpp">
 			<Option target="dataTransfert"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SpeedMot.h">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataManipolation/SpeedMot.h">
 			<Option target="dataTransfert"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataPrimitive.h">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataPrimitive.h">
 			<Option target="dataTransfert"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataTransfert_AllInclude.h">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/DataTransfert_AllInclude.h">
 			<Option target="dataTransfert"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/commonDefine.h">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/UtilityScorbot/ScorCalc.cpp">
+			<Option target="scoreUtiliy"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/UtilityScorbot/ScorCalc.h">
+			<Option target="scoreUtiliy"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/freeMoveWindow.cpp">
 			<Option target="scorbotUi"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/freeMoveWinsow.cpp">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/freeMoveWindow.h">
 			<Option target="scorbotUi"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/freeMoveWinsow.h">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/mainwindow.cpp">
 			<Option target="scorbotUi"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/mainwindow.cpp">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/mainwindow.h">
 			<Option target="scorbotUi"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/mainwindow.h">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/settingBoardWindow.cpp">
 			<Option target="scorbotUi"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/settingBoardWindow.cpp">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/settingBoardWindow.h">
 			<Option target="scorbotUi"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/settingBoardWindow.h">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/uartChoise.cpp">
 			<Option target="scorbotUi"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/uartChoise.cpp">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/uartChoise.h">
 			<Option target="scorbotUi"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/uartChoise.h">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/freeMoveWindow.ui">
 			<Option target="scorbotUi"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/freeMoveWindow.ui">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/logo.qrc">
 			<Option target="scorbotUi"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/logo.qrc">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/mainwindow.ui">
 			<Option target="scorbotUi"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/mainwindow.ui">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/settingBoardWindow.ui">
 			<Option target="scorbotUi"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/settingBoardWindow.ui">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/uartChoise.ui">
 			<Option target="scorbotUi"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/uartChoise.ui">
-			<Option target="scorbotUi"/>
-		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/CMakeLists.txt">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/CMakeLists.txt">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/CMakeLists.txt">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/DataTransfertPackge/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\DataTransfertPackge\"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/CMakeLists.txt">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/UtilityScorbot/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\UtilityScorbot\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\src\scorbotUi\"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/logo.qrc">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/logo.qrc">
 			<Option virtualFolder="CMake Files\src\scorbotUi\ui_source\"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigExtras.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsMacros.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigExtras.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QComposePlatformInputContextPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSEmulatorIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsEglDeviceIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSKmsGbmIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEglFSX11IntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevKeyboardPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevMousePlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTabletPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QEvdevTouchScreenPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QGifPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QICOPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QIbusPlatformInputContextPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QJpegPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLibInputPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QLinuxFbIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalEglIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QMinimalIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QOffscreenIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QTuioTouchPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QVncIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbEglIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbGlxIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5Gui_QXcbIntegrationPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtras.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigExtrasMkspecDir.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
 		</Unit>
-		<Unit filename="/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake">
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/../../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
 		</Unit>
 	</Project>

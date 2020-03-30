@@ -1,4 +1,4 @@
-# Install script for directory: /home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp
+# Install script for directory: /home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -39,7 +39,7 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/cmake_install.cmake")
+  include("/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/cmake_install.cmake")
 
 endif()
 
@@ -50,6 +50,6 @@ else()
 endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
-       "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
-     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
+        "${CMAKE_INSTALL_MANIFEST_FILES}")
+file(WRITE "/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+        "${CMAKE_INSTALL_MANIFEST_CONTENT}")

@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'freeMoveWindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.5
+** Created by: Qt User Interface Compiler version 5.14.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,33 +10,31 @@
 #define UI_FREEMOVEWINDOW_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
 #include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QDialogButtonBox>
 #include <QtWidgets/QHBoxLayout>
-#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QToolButton>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSlider>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
 QT_BEGIN_NAMESPACE
 
-class Ui_FreeMoveWindow
-{
+class Ui_FreeMoveWindow {
 public:
-    QDialogButtonBox *buttonBox;
     QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QVBoxLayout *minus;
-    QToolButton *mn1;
-    QToolButton *mn2;
-    QToolButton *mn3;
-    QToolButton *mn4;
-    QToolButton *mn5;
-    QToolButton *mn6;
+    QPushButton *mn1;
+    QPushButton *mn2;
+    QPushButton *mn3;
+    QPushButton *mn4;
+    QPushButton *mn5;
+    QPushButton *mn6;
     QVBoxLayout *verticalLayout_2;
     QLabel *Step1_direct;
     QLabel *Step2_direct;
@@ -45,75 +43,95 @@ public:
     QLabel *Step5_direct;
     QLabel *Step6_direct;
     QVBoxLayout *plus;
-    QToolButton *mp1;
-    QToolButton *mp2;
-    QToolButton *mp3;
-    QToolButton *mp4;
-    QToolButton *mp5;
-    QToolButton *mp6;
+    QPushButton *mp1;
+    QPushButton *mp2;
+    QPushButton *mp3;
+    QPushButton *mp4;
+    QPushButton *mp5;
+    QPushButton *mp6;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout;
+    QDialogButtonBox *buttonBox;
+    QSlider *pwmSpeed;
+    QLCDNumber *lcdNumber;
+    QButtonGroup *freeMovePushGroup;
 
-    void setupUi(QDialog *FreeMoveWindow)
-    {
+    void setupUi(QDialog *FreeMoveWindow) {
         if (FreeMoveWindow->objectName().isEmpty())
-            FreeMoveWindow->setObjectName(QStringLiteral("FreeMoveWindow"));
-        FreeMoveWindow->resize(272, 202);
-        buttonBox = new QDialogButtonBox(FreeMoveWindow);
-        buttonBox->setObjectName(QStringLiteral("buttonBox"));
-        buttonBox->setGeometry(QRect(180, 10, 75, 61));
-        buttonBox->setOrientation(Qt::Vertical);
-        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
+            FreeMoveWindow->setObjectName(QString::fromUtf8("FreeMoveWindow"));
+        FreeMoveWindow->resize(267, 268);
         layoutWidget = new QWidget(FreeMoveWindow);
-        layoutWidget->setObjectName(QStringLiteral("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 10, 121, 190));
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(10, 10, 141, 250));
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setSpacing(12);
-        horizontalLayout->setObjectName(QStringLiteral("horizontalLayout"));
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         minus = new QVBoxLayout();
-        minus->setObjectName(QStringLiteral("minus"));
+        minus->setObjectName(QString::fromUtf8("minus"));
         minus->setSizeConstraint(QLayout::SetMinimumSize);
-        mn1 = new QToolButton(layoutWidget);
-        mn1->setObjectName(QStringLiteral("mn1"));
+        mn1 = new QPushButton(layoutWidget);
+        freeMovePushGroup = new QButtonGroup(FreeMoveWindow);
+        freeMovePushGroup->setObjectName(QString::fromUtf8("freeMovePushGroup"));
+        freeMovePushGroup->addButton(mn1);
+        mn1->setObjectName(QString::fromUtf8("mn1"));
         QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(mn1->sizePolicy().hasHeightForWidth());
         mn1->setSizePolicy(sizePolicy);
+        mn1->setCheckable(false);
+        mn1->setAutoExclusive(true);
 
         minus->addWidget(mn1);
 
-        mn2 = new QToolButton(layoutWidget);
-        mn2->setObjectName(QStringLiteral("mn2"));
+        mn2 = new QPushButton(layoutWidget);
+        freeMovePushGroup->addButton(mn2);
+        mn2->setObjectName(QString::fromUtf8("mn2"));
         sizePolicy.setHeightForWidth(mn2->sizePolicy().hasHeightForWidth());
         mn2->setSizePolicy(sizePolicy);
+        mn2->setCheckable(false);
+        mn2->setAutoExclusive(true);
 
         minus->addWidget(mn2);
 
-        mn3 = new QToolButton(layoutWidget);
-        mn3->setObjectName(QStringLiteral("mn3"));
+        mn3 = new QPushButton(layoutWidget);
+        freeMovePushGroup->addButton(mn3);
+        mn3->setObjectName(QString::fromUtf8("mn3"));
         sizePolicy.setHeightForWidth(mn3->sizePolicy().hasHeightForWidth());
         mn3->setSizePolicy(sizePolicy);
+        mn3->setCheckable(false);
+        mn3->setAutoExclusive(true);
 
         minus->addWidget(mn3);
 
-        mn4 = new QToolButton(layoutWidget);
-        mn4->setObjectName(QStringLiteral("mn4"));
+        mn4 = new QPushButton(layoutWidget);
+        freeMovePushGroup->addButton(mn4);
+        mn4->setObjectName(QString::fromUtf8("mn4"));
         sizePolicy.setHeightForWidth(mn4->sizePolicy().hasHeightForWidth());
         mn4->setSizePolicy(sizePolicy);
+        mn4->setCheckable(false);
+        mn4->setAutoExclusive(true);
 
         minus->addWidget(mn4);
 
-        mn5 = new QToolButton(layoutWidget);
-        mn5->setObjectName(QStringLiteral("mn5"));
+        mn5 = new QPushButton(layoutWidget);
+        freeMovePushGroup->addButton(mn5);
+        mn5->setObjectName(QString::fromUtf8("mn5"));
         sizePolicy.setHeightForWidth(mn5->sizePolicy().hasHeightForWidth());
         mn5->setSizePolicy(sizePolicy);
+        mn5->setCheckable(false);
+        mn5->setAutoExclusive(true);
 
         minus->addWidget(mn5);
 
-        mn6 = new QToolButton(layoutWidget);
-        mn6->setObjectName(QStringLiteral("mn6"));
+        mn6 = new QPushButton(layoutWidget);
+        freeMovePushGroup->addButton(mn6);
+        mn6->setObjectName(QString::fromUtf8("mn6"));
         sizePolicy.setHeightForWidth(mn6->sizePolicy().hasHeightForWidth());
         mn6->setSizePolicy(sizePolicy);
+        mn6->setCheckable(false);
+        mn6->setAutoExclusive(true);
 
         minus->addWidget(mn6);
 
@@ -121,11 +139,11 @@ public:
         horizontalLayout->addLayout(minus);
 
         verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setObjectName(QStringLiteral("verticalLayout_2"));
+        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
         verticalLayout_2->setSizeConstraint(QLayout::SetMaximumSize);
         Step1_direct = new QLabel(layoutWidget);
-        Step1_direct->setObjectName(QStringLiteral("Step1_direct"));
-        QSizePolicy sizePolicy1(QSizePolicy::Expanding, QSizePolicy::Fixed);
+        Step1_direct->setObjectName(QString::fromUtf8("Step1_direct"));
+        QSizePolicy sizePolicy1(QSizePolicy::Fixed, QSizePolicy::Fixed);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
         sizePolicy1.setHeightForWidth(Step1_direct->sizePolicy().hasHeightForWidth());
@@ -138,7 +156,7 @@ public:
         verticalLayout_2->addWidget(Step1_direct);
 
         Step2_direct = new QLabel(layoutWidget);
-        Step2_direct->setObjectName(QStringLiteral("Step2_direct"));
+        Step2_direct->setObjectName(QString::fromUtf8("Step2_direct"));
         sizePolicy1.setHeightForWidth(Step2_direct->sizePolicy().hasHeightForWidth());
         Step2_direct->setSizePolicy(sizePolicy1);
         Step2_direct->setFont(font);
@@ -147,7 +165,7 @@ public:
         verticalLayout_2->addWidget(Step2_direct);
 
         Step3_direct = new QLabel(layoutWidget);
-        Step3_direct->setObjectName(QStringLiteral("Step3_direct"));
+        Step3_direct->setObjectName(QString::fromUtf8("Step3_direct"));
         sizePolicy1.setHeightForWidth(Step3_direct->sizePolicy().hasHeightForWidth());
         Step3_direct->setSizePolicy(sizePolicy1);
         Step3_direct->setFont(font);
@@ -156,7 +174,7 @@ public:
         verticalLayout_2->addWidget(Step3_direct);
 
         Step4_direct = new QLabel(layoutWidget);
-        Step4_direct->setObjectName(QStringLiteral("Step4_direct"));
+        Step4_direct->setObjectName(QString::fromUtf8("Step4_direct"));
         sizePolicy1.setHeightForWidth(Step4_direct->sizePolicy().hasHeightForWidth());
         Step4_direct->setSizePolicy(sizePolicy1);
         Step4_direct->setFont(font);
@@ -165,7 +183,7 @@ public:
         verticalLayout_2->addWidget(Step4_direct);
 
         Step5_direct = new QLabel(layoutWidget);
-        Step5_direct->setObjectName(QStringLiteral("Step5_direct"));
+        Step5_direct->setObjectName(QString::fromUtf8("Step5_direct"));
         sizePolicy1.setHeightForWidth(Step5_direct->sizePolicy().hasHeightForWidth());
         Step5_direct->setSizePolicy(sizePolicy1);
         Step5_direct->setFont(font);
@@ -174,7 +192,7 @@ public:
         verticalLayout_2->addWidget(Step5_direct);
 
         Step6_direct = new QLabel(layoutWidget);
-        Step6_direct->setObjectName(QStringLiteral("Step6_direct"));
+        Step6_direct->setObjectName(QString::fromUtf8("Step6_direct"));
         sizePolicy1.setHeightForWidth(Step6_direct->sizePolicy().hasHeightForWidth());
         Step6_direct->setSizePolicy(sizePolicy1);
         Step6_direct->setFont(font);
@@ -186,82 +204,150 @@ public:
         horizontalLayout->addLayout(verticalLayout_2);
 
         plus = new QVBoxLayout();
-        plus->setObjectName(QStringLiteral("plus"));
+        plus->setObjectName(QString::fromUtf8("plus"));
         plus->setSizeConstraint(QLayout::SetMinimumSize);
-        mp1 = new QToolButton(layoutWidget);
-        mp1->setObjectName(QStringLiteral("mp1"));
+        mp1 = new QPushButton(layoutWidget);
+        freeMovePushGroup->addButton(mp1);
+        mp1->setObjectName(QString::fromUtf8("mp1"));
         sizePolicy.setHeightForWidth(mp1->sizePolicy().hasHeightForWidth());
         mp1->setSizePolicy(sizePolicy);
+        mp1->setCheckable(false);
+        mp1->setAutoExclusive(true);
 
         plus->addWidget(mp1);
 
-        mp2 = new QToolButton(layoutWidget);
-        mp2->setObjectName(QStringLiteral("mp2"));
+        mp2 = new QPushButton(layoutWidget);
+        freeMovePushGroup->addButton(mp2);
+        mp2->setObjectName(QString::fromUtf8("mp2"));
         sizePolicy.setHeightForWidth(mp2->sizePolicy().hasHeightForWidth());
         mp2->setSizePolicy(sizePolicy);
+        mp2->setCheckable(false);
+        mp2->setAutoExclusive(true);
 
         plus->addWidget(mp2);
 
-        mp3 = new QToolButton(layoutWidget);
-        mp3->setObjectName(QStringLiteral("mp3"));
+        mp3 = new QPushButton(layoutWidget);
+        freeMovePushGroup->addButton(mp3);
+        mp3->setObjectName(QString::fromUtf8("mp3"));
         sizePolicy.setHeightForWidth(mp3->sizePolicy().hasHeightForWidth());
         mp3->setSizePolicy(sizePolicy);
+        mp3->setCheckable(false);
+        mp3->setAutoRepeat(false);
+        mp3->setAutoExclusive(true);
 
         plus->addWidget(mp3);
 
-        mp4 = new QToolButton(layoutWidget);
-        mp4->setObjectName(QStringLiteral("mp4"));
+        mp4 = new QPushButton(layoutWidget);
+        freeMovePushGroup->addButton(mp4);
+        mp4->setObjectName(QString::fromUtf8("mp4"));
         sizePolicy.setHeightForWidth(mp4->sizePolicy().hasHeightForWidth());
         mp4->setSizePolicy(sizePolicy);
+        mp4->setCheckable(false);
+        mp4->setAutoRepeat(false);
+        mp4->setAutoExclusive(true);
 
         plus->addWidget(mp4);
 
-        mp5 = new QToolButton(layoutWidget);
-        mp5->setObjectName(QStringLiteral("mp5"));
+        mp5 = new QPushButton(layoutWidget);
+        freeMovePushGroup->addButton(mp5);
+        mp5->setObjectName(QString::fromUtf8("mp5"));
         sizePolicy.setHeightForWidth(mp5->sizePolicy().hasHeightForWidth());
         mp5->setSizePolicy(sizePolicy);
+        mp5->setCheckable(false);
+        mp5->setAutoRepeat(false);
+        mp5->setAutoExclusive(true);
 
         plus->addWidget(mp5);
 
-        mp6 = new QToolButton(layoutWidget);
-        mp6->setObjectName(QStringLiteral("mp6"));
+        mp6 = new QPushButton(layoutWidget);
+        freeMovePushGroup->addButton(mp6);
+        mp6->setObjectName(QString::fromUtf8("mp6"));
         sizePolicy.setHeightForWidth(mp6->sizePolicy().hasHeightForWidth());
         mp6->setSizePolicy(sizePolicy);
+        mp6->setCheckable(false);
+        mp6->setAutoRepeat(false);
 
         plus->addWidget(mp6);
 
 
         horizontalLayout->addLayout(plus);
 
+        widget = new QWidget(FreeMoveWindow);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(171, 10, 91, 251));
+        verticalLayout = new QVBoxLayout(widget);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        buttonBox = new QDialogButtonBox(widget);
+        buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
+        QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Fixed);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(buttonBox->sizePolicy().hasHeightForWidth());
+        buttonBox->setSizePolicy(sizePolicy2);
+        buttonBox->setOrientation(Qt::Vertical);
+        buttonBox->setStandardButtons(QDialogButtonBox::Cancel | QDialogButtonBox::Ok);
+
+        verticalLayout->addWidget(buttonBox);
+
+        pwmSpeed = new QSlider(widget);
+        pwmSpeed->setObjectName(QString::fromUtf8("pwmSpeed"));
+        pwmSpeed->setMaximumSize(QSize(500, 171));
+        pwmSpeed->setMouseTracking(true);
+        pwmSpeed->setAutoFillBackground(true);
+        pwmSpeed->setMaximum(255);
+        pwmSpeed->setSingleStep(5);
+        pwmSpeed->setPageStep(50);
+        pwmSpeed->setValue(120);
+        pwmSpeed->setOrientation(Qt::Vertical);
+        pwmSpeed->setTickPosition(QSlider::NoTicks);
+        pwmSpeed->setTickInterval(0);
+
+        verticalLayout->addWidget(pwmSpeed);
+
+        lcdNumber = new QLCDNumber(widget);
+        lcdNumber->setObjectName(QString::fromUtf8("lcdNumber"));
+        sizePolicy.setHeightForWidth(lcdNumber->sizePolicy().hasHeightForWidth());
+        lcdNumber->setSizePolicy(sizePolicy);
+        lcdNumber->setFrameShape(QFrame::Box);
+        lcdNumber->setFrameShadow(QFrame::Raised);
+        lcdNumber->setLineWidth(2);
+        lcdNumber->setSmallDecimalPoint(true);
+        lcdNumber->setDigitCount(3);
+        lcdNumber->setSegmentStyle(QLCDNumber::Flat);
+        lcdNumber->setProperty("intValue", QVariant(120));
+
+        verticalLayout->addWidget(lcdNumber);
+
 
         retranslateUi(FreeMoveWindow);
         QObject::connect(buttonBox, SIGNAL(accepted()), FreeMoveWindow, SLOT(accept()));
         QObject::connect(buttonBox, SIGNAL(rejected()), FreeMoveWindow, SLOT(reject()));
+        QObject::connect(pwmSpeed, SIGNAL(valueChanged(int)), lcdNumber, SLOT(display(int)));
 
         QMetaObject::connectSlotsByName(FreeMoveWindow);
     } // setupUi
 
-    void retranslateUi(QDialog *FreeMoveWindow)
-    {
-        FreeMoveWindow->setWindowTitle(QApplication::translate("FreeMoveWindow", "Dialog", Q_NULLPTR));
-        mn1->setText(QApplication::translate("FreeMoveWindow", "-", Q_NULLPTR));
-        mn2->setText(QApplication::translate("FreeMoveWindow", "-", Q_NULLPTR));
-        mn3->setText(QApplication::translate("FreeMoveWindow", "-", Q_NULLPTR));
-        mn4->setText(QApplication::translate("FreeMoveWindow", "-", Q_NULLPTR));
-        mn5->setText(QApplication::translate("FreeMoveWindow", "-", Q_NULLPTR));
-        mn6->setText(QApplication::translate("FreeMoveWindow", "-", Q_NULLPTR));
-        Step1_direct->setText(QApplication::translate("FreeMoveWindow", "Mot1", Q_NULLPTR));
-        Step2_direct->setText(QApplication::translate("FreeMoveWindow", "Mot2", Q_NULLPTR));
-        Step3_direct->setText(QApplication::translate("FreeMoveWindow", "Mot3", Q_NULLPTR));
-        Step4_direct->setText(QApplication::translate("FreeMoveWindow", "Mot4", Q_NULLPTR));
-        Step5_direct->setText(QApplication::translate("FreeMoveWindow", "Mot5", Q_NULLPTR));
-        Step6_direct->setText(QApplication::translate("FreeMoveWindow", "Mot6", Q_NULLPTR));
-        mp1->setText(QApplication::translate("FreeMoveWindow", "+", Q_NULLPTR));
-        mp2->setText(QApplication::translate("FreeMoveWindow", "+", Q_NULLPTR));
-        mp3->setText(QApplication::translate("FreeMoveWindow", "+", Q_NULLPTR));
-        mp4->setText(QApplication::translate("FreeMoveWindow", "+", Q_NULLPTR));
-        mp5->setText(QApplication::translate("FreeMoveWindow", "+", Q_NULLPTR));
-        mp6->setText(QApplication::translate("FreeMoveWindow", "+", Q_NULLPTR));
+    void retranslateUi(QDialog *FreeMoveWindow) {
+        FreeMoveWindow->setWindowTitle(QCoreApplication::translate("FreeMoveWindow", "Free Moving", nullptr));
+        mn1->setText(QCoreApplication::translate("FreeMoveWindow", "-", nullptr));
+        mn2->setText(QCoreApplication::translate("FreeMoveWindow", "-", nullptr));
+        mn3->setText(QCoreApplication::translate("FreeMoveWindow", "-", nullptr));
+        mn4->setText(QCoreApplication::translate("FreeMoveWindow", "-", nullptr));
+        mn5->setText(QCoreApplication::translate("FreeMoveWindow", "-", nullptr));
+        mn6->setText(QCoreApplication::translate("FreeMoveWindow", "-", nullptr));
+        Step1_direct->setText(QCoreApplication::translate("FreeMoveWindow", "Mot1", nullptr));
+        Step2_direct->setText(QCoreApplication::translate("FreeMoveWindow", "Mot2", nullptr));
+        Step3_direct->setText(QCoreApplication::translate("FreeMoveWindow", "Mot3", nullptr));
+        Step4_direct->setText(QCoreApplication::translate("FreeMoveWindow", "Mot4", nullptr));
+        Step5_direct->setText(QCoreApplication::translate("FreeMoveWindow", "Mot5", nullptr));
+        Step6_direct->setText(QCoreApplication::translate("FreeMoveWindow", "Mot6", nullptr));
+        mp1->setText(QCoreApplication::translate("FreeMoveWindow", "+", nullptr));
+        mp2->setText(QCoreApplication::translate("FreeMoveWindow", "+", nullptr));
+        mp3->setText(QCoreApplication::translate("FreeMoveWindow", "+", nullptr));
+        mp4->setText(QCoreApplication::translate("FreeMoveWindow", "+", nullptr));
+        mp5->setText(QCoreApplication::translate("FreeMoveWindow", "+", nullptr));
+        mp6->setText(QCoreApplication::translate("FreeMoveWindow", "+", nullptr));
     } // retranslateUi
 
 };

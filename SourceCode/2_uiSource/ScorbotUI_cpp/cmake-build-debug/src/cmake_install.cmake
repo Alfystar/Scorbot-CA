@@ -1,4 +1,4 @@
-# Install script for directory: /home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src
+# Install script for directory: /home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -38,9 +38,10 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/cmake_install.cmake")
-  include("/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/cmake_install.cmake")
+    # Include the install script for each subdirectory.
+    include("/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/cmake_install.cmake")
+    include("/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/UtilityScorbot/cmake_install.cmake")
+    include("/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/cmake_install.cmake")
 
 endif()
 

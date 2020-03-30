@@ -4,13 +4,13 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/freeMoveWinsow.cpp" "/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.o"
-  "/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/mainwindow.cpp" "/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o"
-  "/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp" "/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o"
-  "/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp" "/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o"
-  "/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/settingBoardWindow.cpp" "/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o"
-  "/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/uartChoise.cpp" "/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/uartChoise.cpp.o"
-  )
+        "/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/freeMoveWindow.cpp" "/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWindow.cpp.o"
+        "/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/mainwindow.cpp" "/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o"
+        "/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp" "/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o"
+        "/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp" "/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o"
+        "/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/settingBoardWindow.cpp" "/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o"
+        "/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/uartChoise.cpp" "/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/uartChoise.cpp.o"
+        )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
@@ -26,8 +26,9 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "src/scorbotUi"
   "../src/scorbotUi"
   "src/scorbotUi/scorbotUi_autogen/include"
-  "../src/DataTransfertPackge/."
-  "/usr/include/x86_64-linux-gnu/qt5"
+        "../src/DataTransfertPackge/."
+        "../src/UtilityScorbot/."
+        "/usr/include/x86_64-linux-gnu/qt5"
   "/usr/include/x86_64-linux-gnu/qt5/QtWidgets"
   "/usr/include/x86_64-linux-gnu/qt5/QtGui"
   "/usr/include/x86_64-linux-gnu/qt5/QtCore"
@@ -36,8 +37,9 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DependInfo.cmake"
-  )
+        "/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DependInfo.cmake"
+        "/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/DependInfo.cmake"
+        )
 
 # Fortran module output directory.
 set(CMAKE_Fortran_TARGET_MODULE_DIR "")

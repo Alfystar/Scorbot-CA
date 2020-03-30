@@ -21,11 +21,30 @@ if (NOT TARGET scorbotUi)
 
     # Per installare i pacchetti necessari se serve:
     # sudo apt install qt5-d* qtbase5-dev qtdeclarative5-dev qttools5-dev-tools
+    # sudo apt install libqwt-qt5-*
+    # sudo apt install libqwtmathml-qt5-*
     find_package(Qt5 COMPONENTS Widgets REQUIRED)
     target_link_libraries(scorbotUi Qt5::Widgets)
 
-    #    find_package(Qt5 COMPONENTS Widgets REQUIRED)
-    #    target_link_libraries(${PROJECT_NAME} Qt5::Widgets)
+    #    find_package(Qwt)
+    #
+    #    if (QWT_INCLUDE_DIR AND QWT_LIBRARY)
+    #        SET(QWT_FOUND TRUE)
+    #    ENDIF (QWT_INCLUDE_DIR AND QWT_LIBRARY)
+    #
+    #    if (QWT_FOUND)
+    #        if (NOT QWT_FIND_QUIETLY)
+    #            MESSAGE(STATUS "Found QWT: ${QWT_LIBRARY}")
+    #        endif (NOT QWT_FIND_QUIETLY)
+    #    else (QWT_FOUND)
+    #        if (QWT_FIND_REQUIRED)
+    #            MESSAGE(FATAL_ERROR "Could not find QWT")
+    #        endif (QWT_FIND_REQUIRED)
+    #    endif (QWT_FOUND)
+    #    find_package(QwtConfig COMPONENTS REQUIRED)
+    #    target_link_libraries(scorbotUi PUBLIC ${QWT_LIBRARY})
+    #    target_link_directories(scorbotUi PUBLIC ${QWT_INCLUDE_DIR})
+    #    message("qwt: ${QWT_FOUND}")
 
     target_link_libraries(scorbotUi dataTransfert)
     target_link_libraries(scorbotUi scoreUtiliy)

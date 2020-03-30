@@ -11,9 +11,9 @@ CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../src/DataTransfertPackge/DataManipol
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../src/DataTransfertPackge/DataManipolation/typePackWrongExcept.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../src/DataTransfertPackge/DataPrimitive.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../src/DataTransfertPackge/DataTransfert_AllInclude.h
+CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../src/UtilityScorbot/ScorCalc.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../main.cpp
-CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../src/scorbotUi/commonDefine.h
-CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../src/scorbotUi/freeMoveWinsow.h
+CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../src/scorbotUi/freeMoveWindow.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../src/scorbotUi/mainwindow.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../src/scorbotUi/settingBoardWindow.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: ../src/scorbotUi/uartChoise.h
@@ -31,6 +31,7 @@ CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCo
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig-bootstrapped.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qconfig.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainerfwd.h
+CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontainertools_impl.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreapplication.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qcoreevent.h
@@ -53,6 +54,7 @@ CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCo
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
+CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmath.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
@@ -75,9 +77,12 @@ CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCo
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
+CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringalgorithms.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringbuilder.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringlist.h
+CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringliteral.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringmatcher.h
+CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringview.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsysinfo.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsystemdetection.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qtcore-config.h
@@ -121,7 +126,9 @@ CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGu
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtGui/qwindowdefs_win.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QApplication
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QDialog
+CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMainWindow
+CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QMessageBox
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QRadioButton
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSlider
@@ -132,7 +139,10 @@ CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWi
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qapplication.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdesktopwidget.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qdialog.h
+CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h
+CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmainwindow.h
+CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qmessagebox.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qradiobutton.h
 CMakeFiles/scorbotUi_demo.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsizepolicy.h

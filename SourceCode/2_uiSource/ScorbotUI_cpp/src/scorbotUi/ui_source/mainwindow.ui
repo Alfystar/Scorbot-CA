@@ -93,9 +93,9 @@
                  <bool>false</bool>
              </property>
              <widget class="QWidget" name="Direct">
-     <attribute name="title">
-      <string>Dir en</string>
-     </attribute>
+                 <attribute name="title">
+                     <string>Dir en</string>
+                 </attribute>
                  <widget class="QWidget" name="layoutWidget_6">
                      <property name="geometry">
                          <rect>
@@ -152,16 +152,16 @@
                                              <cstring>en1Home</cstring>
                                          </property>
                                      </widget>
-         </item>
-         <item row="0" column="1">
-          <widget class="QSpinBox" name="en1Ref">
-           <property name="buttonSymbols">
-            <enum>QAbstractSpinBox::PlusMinus</enum>
-           </property>
-           <property name="minimum">
-            <number>-99999</number>
-           </property>
-           <property name="maximum">
+                                 </item>
+                                 <item row="0" column="1">
+                                     <widget class="QSpinBox" name="en1Ref">
+                                         <property name="buttonSymbols">
+                                             <enum>QAbstractSpinBox::PlusMinus</enum>
+                                         </property>
+                                         <property name="minimum">
+                                             <number>-99999</number>
+                                         </property>
+                                         <property name="maximum">
             <number>99999</number>
            </property>
           </widget>
@@ -285,16 +285,16 @@
            <property name="minimum">
             <number>-99999</number>
            </property>
-           <property name="maximum">
-            <number>99999</number>
-           </property>
+              <property name="maximum">
+                  <number>99999</number>
+              </property>
           </widget>
          </item>
-        </layout>
-       </item>
-      </layout>
-     </widget>
-    </widget>
+                             </layout>
+                         </item>
+                     </layout>
+                 </widget>
+             </widget>
              <widget class="QWidget" name="Direct_Angular">
                  <attribute name="title">
                      <string>Dir deg</string>
@@ -355,16 +355,16 @@
                                              </sizepolicy>
                                          </property>
                                          <property name="layoutDirection">
-            <enum>Qt::LeftToRight</enum>
-           </property>
-           <property name="text">
-            <string>θ1</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
-           <property name="buddy">
-            <cstring>en1Home</cstring>
+                                             <enum>Qt::LeftToRight</enum>
+                                         </property>
+                                         <property name="text">
+                                             <string>θ1</string>
+                                         </property>
+                                         <property name="alignment">
+                                             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                                         </property>
+                                         <property name="buddy">
+                                             <cstring>en1Home</cstring>
            </property>
           </widget>
          </item>
@@ -797,22 +797,22 @@
              </property>
             </widget>
            </item>
-           <item row="0" column="1">
-               <widget class="QDoubleSpinBox" name="betaDes">
-                   <property name="buttonSymbols">
-                       <enum>QAbstractSpinBox::PlusMinus</enum>
-                   </property>
-                   <property name="showGroupSeparator" stdset="0">
-                       <bool>false</bool>
-                   </property>
-                   <property name="minimum">
-                       <double>-999.000000000000000</double>
-                   </property>
-                   <property name="maximum">
-              <double>999.000000000000000</double>
-             </property>
-            </widget>
-           </item>
+              <item row="0" column="1">
+                  <widget class="QDoubleSpinBox" name="betaDes">
+                      <property name="buttonSymbols">
+                          <enum>QAbstractSpinBox::PlusMinus</enum>
+                      </property>
+                      <property name="showGroupSeparator" stdset="0">
+                          <bool>false</bool>
+                      </property>
+                      <property name="minimum">
+                          <double>-999.000000000000000</double>
+                      </property>
+                      <property name="maximum">
+                          <double>999.000000000000000</double>
+                      </property>
+                  </widget>
+              </item>
            <item row="1" column="0">
             <widget class="QLabel" name="en2Label_6">
              <property name="sizePolicy">
@@ -835,22 +835,22 @@
              </property>
             </widget>
            </item>
-           <item row="1" column="1">
-               <widget class="QDoubleSpinBox" name="omegaDes">
-                   <property name="buttonSymbols">
-                       <enum>QAbstractSpinBox::PlusMinus</enum>
-                   </property>
-                   <property name="showGroupSeparator" stdset="0">
-                       <bool>false</bool>
-                   </property>
-                   <property name="minimum">
-                       <double>-999.000000000000000</double>
-                   </property>
-                   <property name="maximum">
-              <double>999.000000000000000</double>
-             </property>
-            </widget>
-           </item>
+              <item row="1" column="1">
+                  <widget class="QDoubleSpinBox" name="omegaDes">
+                      <property name="buttonSymbols">
+                          <enum>QAbstractSpinBox::PlusMinus</enum>
+                      </property>
+                      <property name="showGroupSeparator" stdset="0">
+                          <bool>false</bool>
+                      </property>
+                      <property name="minimum">
+                          <double>-999.000000000000000</double>
+                      </property>
+                      <property name="maximum">
+                          <double>999.000000000000000</double>
+                      </property>
+                  </widget>
+              </item>
            <item row="3" column="1">
             <spacer name="verticalSpacer_5">
              <property name="orientation">
@@ -906,19 +906,19 @@
           <number>6</number>
          </property>
          <item>
-          <widget class="QLabel" name="label_3">
-           <property name="font">
-            <font>
-             <pointsize>12</pointsize>
-            </font>
-           </property>
-              <property name="text">
-                  <string>Gomito</string>
-              </property>
-              <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-              </property>
-          </widget>
+             <widget class="QLabel" name="label_3">
+                 <property name="font">
+                     <font>
+                         <pointsize>12</pointsize>
+                     </font>
+                 </property>
+                 <property name="text">
+                     <string>Gomito</string>
+                 </property>
+                 <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                 </property>
+             </widget>
          </item>
             <item>
                 <widget class="QRadioButton" name="gH">
@@ -952,16 +952,16 @@
                     </property>
                     <property name="font">
                         <font>
-             <family>.SF NS Text</family>
-             <pointsize>10</pointsize>
-             <weight>50</weight>
-             <italic>false</italic>
-             <bold>false</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true"/>
-           </property>
+                            <family>.SF NS Text</family>
+                            <pointsize>10</pointsize>
+                            <weight>50</weight>
+                            <italic>false</italic>
+                            <bold>false</bold>
+                        </font>
+                    </property>
+                    <property name="styleSheet">
+                        <string notr="true"/>
+                    </property>
            <property name="text">
             <string>Basso</string>
            </property>
@@ -998,15 +998,15 @@
            <height>241</height>
        </rect>
       </property>
-      <property name="orientation">
-       <enum>Qt::Horizontal</enum>
-      </property>
-      <property name="handleWidth">
-       <number>12</number>
-      </property>
-      <property name="childrenCollapsible">
-       <bool>false</bool>
-      </property>
+         <property name="orientation">
+             <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="handleWidth">
+             <number>12</number>
+         </property>
+         <property name="childrenCollapsible">
+             <bool>false</bool>
+         </property>
          <widget class="QWidget" name="layoutWidget">
              <layout class="QVBoxLayout" name="homeOffset">
                  <item>
@@ -1092,16 +1092,16 @@
                                  </property>
                                  <property name="maximum">
                                      <number>99999</number>
-            </property>
-           </widget>
-          </item>
-          <item row="2" column="0">
-           <widget class="QLabel" name="en3Label_2">
-            <property name="enabled">
-             <bool>true</bool>
-            </property>
-            <property name="text">
-             <string>En 3</string>
+                                 </property>
+                             </widget>
+                         </item>
+                         <item row="2" column="0">
+                             <widget class="QLabel" name="en3Label_2">
+                                 <property name="enabled">
+                                     <bool>true</bool>
+                                 </property>
+                                 <property name="text">
+                                     <string>En 3</string>
             </property>
             <property name="buddy">
              <cstring>en3Home</cstring>
@@ -1191,15 +1191,15 @@
             <property name="minimum">
              <number>-99999</number>
             </property>
-            <property name="maximum">
-             <number>99999</number>
-            </property>
+               <property name="maximum">
+                   <number>99999</number>
+               </property>
            </widget>
           </item>
-         </layout>
-        </item>
-       </layout>
-      </widget>
+                     </layout>
+                 </item>
+             </layout>
+         </widget>
          <widget class="QWidget" name="layoutWidget">
              <layout class="QVBoxLayout" name="RoboSize">
                  <item>
@@ -1401,9 +1401,9 @@
                              </widget>
                          </item>
                      </layout>
-        </item>
-       </layout>
-      </widget>
+                 </item>
+             </layout>
+         </widget>
          <widget class="QWidget" name="layoutWidget">
              <layout class="QVBoxLayout" name="en2deg">
                  <item>
@@ -1622,12 +1622,12 @@
                              </widget>
                          </item>
                      </layout>
-        </item>
-       </layout>
-      </widget>
+                 </item>
+             </layout>
+         </widget>
      </widget>
     </widget>
-   </widget>
+         </widget>
          <widget class="QWidget" name="plot" native="true">
              <property name="geometry">
                  <rect>
@@ -1667,16 +1667,16 @@
                          <property name="text">
                              <string>Free move</string>
                          </property>
-      </widget>
-     </item>
-    </layout>
-   </widget>
-   <widget class="QFrame" name="frame">
-    <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>210</y>
-      <width>191</width>
+                     </widget>
+                 </item>
+             </layout>
+         </widget>
+         <widget class="QFrame" name="frame">
+             <property name="geometry">
+                 <rect>
+                     <x>420</x>
+                     <y>210</y>
+                     <width>191</width>
       <height>171</height>
      </rect>
     </property>
@@ -1880,32 +1880,32 @@
              </property>
             </widget>
            </item>
-           <item>
-               <widget class="QLabel" name="betaRead">
-                   <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                           <horstretch>0</horstretch>
-                           <verstretch>0</verstretch>
-                       </sizepolicy>
-                   </property>
-                   <property name="text">
-                       <string>0</string>
-                   </property>
-               </widget>
-           </item>
-           <item>
-               <widget class="QLabel" name="omegaRead">
-                   <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                           <horstretch>0</horstretch>
-                           <verstretch>0</verstretch>
-                       </sizepolicy>
-                   </property>
-                   <property name="text">
-                       <string>0</string>
-                   </property>
-               </widget>
-           </item>
+              <item>
+                  <widget class="QLabel" name="betaRead">
+                      <property name="sizePolicy">
+                          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                          </sizepolicy>
+                      </property>
+                      <property name="text">
+                          <string>0</string>
+                      </property>
+                  </widget>
+              </item>
+              <item>
+                  <widget class="QLabel" name="omegaRead">
+                      <property name="sizePolicy">
+                          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                          </sizepolicy>
+                      </property>
+                      <property name="text">
+                          <string>0</string>
+                      </property>
+                  </widget>
+              </item>
           </layout>
          </item>
         </layout>
@@ -2086,42 +2086,42 @@
              </property>
             </widget>
            </item>
-           <item>
-               <widget class="QLabel" name="betaEr">
-                   <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                           <horstretch>0</horstretch>
-                           <verstretch>0</verstretch>
-                       </sizepolicy>
-                   </property>
-                   <property name="font">
-                       <font>
-                           <pointsize>10</pointsize>
-                       </font>
-             </property>
-             <property name="text">
-              <string>0</string>
-             </property>
-            </widget>
-           </item>
-           <item>
-               <widget class="QLabel" name="omegaEr">
-                   <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                           <horstretch>0</horstretch>
-                           <verstretch>0</verstretch>
-                       </sizepolicy>
-                   </property>
-                   <property name="font">
-                       <font>
-                           <pointsize>10</pointsize>
-                       </font>
-             </property>
-             <property name="text">
-              <string>0</string>
-             </property>
-            </widget>
-           </item>
+              <item>
+                  <widget class="QLabel" name="betaEr">
+                      <property name="sizePolicy">
+                          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                          </sizepolicy>
+                      </property>
+                      <property name="font">
+                          <font>
+                              <pointsize>10</pointsize>
+                          </font>
+                      </property>
+                      <property name="text">
+                          <string>0</string>
+                      </property>
+                  </widget>
+              </item>
+              <item>
+                  <widget class="QLabel" name="omegaEr">
+                      <property name="sizePolicy">
+                          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                          </sizepolicy>
+                      </property>
+                      <property name="font">
+                          <font>
+                              <pointsize>10</pointsize>
+                          </font>
+                      </property>
+                      <property name="text">
+                          <string>0</string>
+                      </property>
+                  </widget>
+              </item>
           </layout>
          </item>
         </layout>
@@ -3023,16 +3023,16 @@
             <item>
              <widget class="QLabel" name="thR5">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
+                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                  </sizepolicy>
               </property>
-              <property name="font">
-               <font>
-                <pointsize>10</pointsize>
-               </font>
-              </property>
+                 <property name="font">
+                     <font>
+                         <pointsize>10</pointsize>
+                     </font>
+                 </property>
                  <property name="text">
                      <string>0</string>
                  </property>
@@ -3299,16 +3299,16 @@
             <item>
              <widget class="QLabel" name="thEr5">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
+                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                  </sizepolicy>
               </property>
-              <property name="font">
-               <font>
-                <pointsize>10</pointsize>
-               </font>
-              </property>
+                 <property name="font">
+                     <font>
+                         <pointsize>10</pointsize>
+                     </font>
+                 </property>
                  <property name="text">
                      <string>0</string>
                  </property>
@@ -3812,16 +3812,16 @@
          <addaction name="menuAbout"/>
      </widget>
      <widget class="QStatusBar" name="statusBar"/>
-  <action name="actionInfo">
-   <property name="text">
-    <string>Info</string>
-   </property>
-  </action>
-  <action name="serialPort">
-   <property name="text">
-    <string>Serial Port</string>
-   </property>
-  </action>
+     <action name="actionInfo">
+         <property name="text">
+             <string>Info</string>
+         </property>
+     </action>
+     <action name="serialPort">
+         <property name="text">
+             <string>Serial Port</string>
+         </property>
+     </action>
   <action name="actionConnection_Start">
    <property name="text">
     <string>Connection Start</string>
@@ -3872,15 +3872,15 @@
    </property>
   </action>
   <action name="actionB460800">
-   <property name="text">
-    <string>B460800</string>
-   </property>
+      <property name="text">
+          <string>B460800</string>
+      </property>
   </action>
-  <action name="actionB921600">
-   <property name="text">
-    <string>B921600</string>
-   </property>
-  </action>
+     <action name="actionB921600">
+         <property name="text">
+             <string>B921600</string>
+         </property>
+     </action>
  </widget>
     <tabstops>
         <tabstop>tabReference</tabstop>
@@ -3929,16 +3929,16 @@
         <tabstop>MotPlot5</tabstop>
         <tabstop>MotPlot6</tabstop>
     </tabstops>
- <resources>
-  <include location="logo.qrc"/>
- </resources>
- <connections/>
- <designerdata>
-  <property name="gridDeltaX">
-   <number>10</number>
-  </property>
-  <property name="gridDeltaY">
-   <number>10</number>
+    <resources>
+        <include location="logo.qrc"/>
+    </resources>
+    <connections/>
+    <designerdata>
+        <property name="gridDeltaX">
+            <number>10</number>
+        </property>
+        <property name="gridDeltaY">
+            <number>10</number>
   </property>
   <property name="gridSnapX">
    <bool>true</bool>

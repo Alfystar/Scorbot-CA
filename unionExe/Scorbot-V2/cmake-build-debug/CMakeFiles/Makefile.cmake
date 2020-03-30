@@ -61,6 +61,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "../scorbotMainWindows/UI_useCase/CMakeLists.txt"
   "../scorbotMainWindows/UI_useCase/uiSrc/CMakeLists.txt"
   "../scorbotMainWindows/UI_useCase/uiSrc/DataTransfertPackge/CMakeLists.txt"
+  "../scorbotMainWindows/UI_useCase/uiSrc/UtilityScorbot/CMakeLists.txt"
   "../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeLists.txt"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake"
   "/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake"
@@ -132,6 +133,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "scorbotMainWindows/UI_useCase/CMakeFiles/CMakeDirectoryInformation.cmake"
   "scorbotMainWindows/UI_useCase/uiSrc/CMakeFiles/CMakeDirectoryInformation.cmake"
   "scorbotMainWindows/UI_useCase/uiSrc/DataTransfertPackge/CMakeFiles/CMakeDirectoryInformation.cmake"
+  "scorbotMainWindows/UI_useCase/uiSrc/UtilityScorbot/CMakeFiles/CMakeDirectoryInformation.cmake"
   "scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 

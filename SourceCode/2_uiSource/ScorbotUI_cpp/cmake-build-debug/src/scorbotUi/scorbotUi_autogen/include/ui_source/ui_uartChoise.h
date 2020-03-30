@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'uartChoise.ui'
 **
-** Created by: Qt User Interface Compiler version 5.9.5
+** Created by: Qt User Interface Compiler version 5.14.1
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -10,13 +10,10 @@
 #define UI_UARTCHOISE_H
 
 #include <QtCore/QVariant>
-#include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QComboBox>
 #include <QtWidgets/QDialogButtonBox>
 #include <QtWidgets/QGridLayout>
-#include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QWidget>
@@ -27,41 +24,44 @@ class Ui_UartChoise
 {
 public:
     QDialogButtonBox *buttonBox;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QGridLayout *gridLayout;
     QComboBox *speedChose;
     QPushButton *serial_find;
     QComboBox *uartFind;
     QLabel *label;
 
-    void setupUi(QWidget *UartChoise)
-    {
+    void setupUi(QWidget *UartChoise) {
         if (UartChoise->objectName().isEmpty())
-            UartChoise->setObjectName(QStringLiteral("UartChoise"));
-        UartChoise->resize(320, 240);
+            UartChoise->setObjectName(QString::fromUtf8("UartChoise"));
+        UartChoise->resize(320, 139);
         buttonBox = new QDialogButtonBox(UartChoise);
-        buttonBox->setObjectName(QStringLiteral("buttonBox"));
-        buttonBox->setGeometry(QRect(140, 200, 160, 26));
-        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
-        widget = new QWidget(UartChoise);
-        widget->setObjectName(QStringLiteral("widget"));
-        widget->setGeometry(QRect(10, 30, 301, 86));
-        gridLayout = new QGridLayout(widget);
-        gridLayout->setObjectName(QStringLiteral("gridLayout"));
+        buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
+        buttonBox->setGeometry(QRect(140, 110, 160, 26));
+        buttonBox->setStandardButtons(QDialogButtonBox::Cancel | QDialogButtonBox::Ok);
+        layoutWidget = new QWidget(UartChoise);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(10, 10, 301, 86));
+        gridLayout = new QGridLayout(layoutWidget);
+        gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         gridLayout->setContentsMargins(0, 0, 0, 0);
-        speedChose = new QComboBox(widget);
-        speedChose->setObjectName(QStringLiteral("speedChose"));
+        speedChose = new QComboBox(layoutWidget);
+        speedChose->addItem(QString());
+        speedChose->addItem(QString());
+        speedChose->addItem(QString());
+        speedChose->addItem(QString());
+        speedChose->setObjectName(QString::fromUtf8("speedChose"));
         speedChose->setEditable(false);
 
         gridLayout->addWidget(speedChose, 2, 1, 1, 1);
 
-        serial_find = new QPushButton(widget);
-        serial_find->setObjectName(QStringLiteral("serial_find"));
+        serial_find = new QPushButton(layoutWidget);
+        serial_find->setObjectName(QString::fromUtf8("serial_find"));
 
         gridLayout->addWidget(serial_find, 0, 0, 1, 1);
 
-        uartFind = new QComboBox(widget);
-        uartFind->setObjectName(QStringLiteral("uartFind"));
+        uartFind = new QComboBox(layoutWidget);
+        uartFind->setObjectName(QString::fromUtf8("uartFind"));
         QSizePolicy sizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
@@ -70,13 +70,14 @@ public:
 
         gridLayout->addWidget(uartFind, 0, 1, 1, 1);
 
-        label = new QLabel(widget);
-        label->setObjectName(QStringLiteral("label"));
+        label = new QLabel(layoutWidget);
+        label->setObjectName(QString::fromUtf8("label"));
 
         gridLayout->addWidget(label, 2, 0, 1, 1);
 
 
         retranslateUi(UartChoise);
+        QObject::connect(buttonBox, SIGNAL(rejected()), UartChoise, SLOT(hide()));
 
         speedChose->setCurrentIndex(2);
 
@@ -84,18 +85,20 @@ public:
         QMetaObject::connectSlotsByName(UartChoise);
     } // setupUi
 
-    void retranslateUi(QWidget *UartChoise)
-    {
-        UartChoise->setWindowTitle(QApplication::translate("UartChoise", "Form", Q_NULLPTR));
-        speedChose->clear();
-        speedChose->insertItems(0, QStringList()
-         << QApplication::translate("UartChoise", "B9600", Q_NULLPTR)
-         << QApplication::translate("UartChoise", "B57600", Q_NULLPTR)
-         << QApplication::translate("UartChoise", "B115200", Q_NULLPTR)
-         << QApplication::translate("UartChoise", "B921600", Q_NULLPTR)
-        );
-        serial_find->setText(QApplication::translate("UartChoise", "Serial find", Q_NULLPTR));
-        label->setText(QApplication::translate("UartChoise", "Uart Speed", Q_NULLPTR));
+    void retranslateUi(QWidget *UartChoise) {
+        UartChoise->setWindowTitle(QCoreApplication::translate("UartChoise", "Select Uart", nullptr));
+        speedChose->setItemText(0, QCoreApplication::translate("UartChoise", "B9600", nullptr));
+        speedChose->setItemText(1, QCoreApplication::translate("UartChoise", "B57600", nullptr));
+        speedChose->setItemText(2, QCoreApplication::translate("UartChoise", "B115200", nullptr));
+        speedChose->setItemText(3, QCoreApplication::translate("UartChoise", "B921600", nullptr));
+
+        serial_find->setText(QCoreApplication::translate("UartChoise", "Serial find", nullptr));
+#if QT_CONFIG(whatsthis)
+        uartFind->setWhatsThis(QCoreApplication::translate("UartChoise",
+                                                           "<html><head/><body><p>Seleziona la Porta Seriale</p></body></html>",
+                                                           nullptr));
+#endif // QT_CONFIG(whatsthis)
+        label->setText(QCoreApplication::translate("UartChoise", "Uart Speed", nullptr));
     } // retranslateUi
 
 };

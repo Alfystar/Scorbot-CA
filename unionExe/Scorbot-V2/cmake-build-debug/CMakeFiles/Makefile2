@@ -798,18 +798,21 @@ scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/clean:
 
 # Recursive "all" directory target.
 scorbotMainWindows/UI_useCase/uiSrc/all: scorbotMainWindows/UI_useCase/uiSrc/DataTransfertPackge/all
+scorbotMainWindows/UI_useCase/uiSrc/all: scorbotMainWindows/UI_useCase/uiSrc/UtilityScorbot/all
 scorbotMainWindows/UI_useCase/uiSrc/all: scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/all
 
 .PHONY : scorbotMainWindows/UI_useCase/uiSrc/all
 
 # Recursive "clean" directory target.
 scorbotMainWindows/UI_useCase/uiSrc/clean: scorbotMainWindows/UI_useCase/uiSrc/DataTransfertPackge/clean
+scorbotMainWindows/UI_useCase/uiSrc/clean: scorbotMainWindows/UI_useCase/uiSrc/UtilityScorbot/clean
 scorbotMainWindows/UI_useCase/uiSrc/clean: scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/clean
 
 .PHONY : scorbotMainWindows/UI_useCase/uiSrc/clean
 
 # Recursive "preinstall" directory target.
 scorbotMainWindows/UI_useCase/uiSrc/preinstall: scorbotMainWindows/UI_useCase/uiSrc/DataTransfertPackge/preinstall
+scorbotMainWindows/UI_useCase/uiSrc/preinstall: scorbotMainWindows/UI_useCase/uiSrc/UtilityScorbot/preinstall
 scorbotMainWindows/UI_useCase/uiSrc/preinstall: scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/preinstall
 
 .PHONY : scorbotMainWindows/UI_useCase/uiSrc/preinstall
@@ -831,6 +834,24 @@ scorbotMainWindows/UI_useCase/uiSrc/DataTransfertPackge/clean:
 scorbotMainWindows/UI_useCase/uiSrc/DataTransfertPackge/preinstall:
 
 .PHONY : scorbotMainWindows/UI_useCase/uiSrc/DataTransfertPackge/preinstall
+
+#=============================================================================
+# Directory level rules for directory scorbotMainWindows/UI_useCase/uiSrc/UtilityScorbot
+
+# Recursive "all" directory target.
+scorbotMainWindows/UI_useCase/uiSrc/UtilityScorbot/all:
+
+.PHONY : scorbotMainWindows/UI_useCase/uiSrc/UtilityScorbot/all
+
+# Recursive "clean" directory target.
+scorbotMainWindows/UI_useCase/uiSrc/UtilityScorbot/clean:
+
+.PHONY : scorbotMainWindows/UI_useCase/uiSrc/UtilityScorbot/clean
+
+# Recursive "preinstall" directory target.
+scorbotMainWindows/UI_useCase/uiSrc/UtilityScorbot/preinstall:
+
+.PHONY : scorbotMainWindows/UI_useCase/uiSrc/UtilityScorbot/preinstall
 
 #=============================================================================
 # Directory level rules for directory scorbotMainWindows/UI_useCase/uiSrc/scorbotUi

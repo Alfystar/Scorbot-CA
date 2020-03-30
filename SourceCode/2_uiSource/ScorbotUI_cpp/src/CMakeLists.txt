@@ -1,2 +1,3 @@
 add_subdirectory(DataTransfertPackge)
+add_subdirectory(UtilityScorbot)
 add_subdirectory(scorbotUi)

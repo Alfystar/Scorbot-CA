@@ -98,6 +98,21 @@ MainWindow::MainWindow(QWidget *parent) :
     curRead[Mot6] = ui->mA6;
 
     tabReference->setCurrentIndex(0);
+    ///##########################################################
+
+//
+////    QwtPlot *myPlot = new QwtPlot(QwtText("Two Curves"),ui->plot);
+//    QwtPlot *myPlot = new QwtPlot(ui->plot);
+//// add curves
+//    QwtPlotCurve *curve1 = new QwtPlotCurve( "Curve 1" );
+//    QwtPlotCurve *curve2 = new QwtPlotCurve( "Curve 2" );
+//// connect or copy the data to the curves
+////    curve1->setData( ... );
+////    curve2->setData( ... );
+//    curve1->attach( myPlot );
+//    curve2->attach( myPlot );
+//// finally, refresh the plot
+//    myPlot->replot();
 
     /// Button Signal
     //Parameter Scorbot

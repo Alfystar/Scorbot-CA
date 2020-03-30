@@ -1,4 +1,4 @@
-# Install script for directory: /home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi
+# Install script for directory: /home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -4,8 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/main.cpp" "/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/main.cpp.o"
-  )
+        "/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/main.cpp" "/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/CMakeFiles/scorbotUi_demo.dir/main.cpp.o"
+        )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
 # Preprocessor definitions for this target.
@@ -18,8 +18,9 @@ set(CMAKE_TARGET_DEFINITIONS_CXX
 
 # The include file search paths:
 set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../src/DataTransfertPackge/."
-  "/usr/include/x86_64-linux-gnu/qt5"
+        "../src/DataTransfertPackge/."
+        "../src/UtilityScorbot/."
+        "/usr/include/x86_64-linux-gnu/qt5"
   "/usr/include/x86_64-linux-gnu/qt5/QtWidgets"
   "/usr/include/x86_64-linux-gnu/qt5/QtGui"
   "/usr/include/x86_64-linux-gnu/qt5/QtCore"
@@ -28,9 +29,10 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/DependInfo.cmake"
-  "/home/alfyhack/Scrivania/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DependInfo.cmake"
-  )
+        "/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/CMakeFiles/scorbotUi.dir/DependInfo.cmake"
+        "/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DependInfo.cmake"
+        "/home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/DependInfo.cmake"
+        )
 
 # Fortran module output directory.
 set(CMAKE_Fortran_TARGET_MODULE_DIR "")
