@@ -87,7 +87,6 @@ namespace Uart {
         size_t Available(); // su ard uartAvailable
         pIn *getData();
 #ifdef linuxSide
-        //todo: aggiungere che prendono il tempo del pacchetto arrivato e lo restituiscono
         pIn *getDataWait() noexcept(false);
         pIn *getDataWait_timePack(struct timespec *t) noexcept(false);
         pIn *getDataWait(struct timespec *timeOut) noexcept(false);

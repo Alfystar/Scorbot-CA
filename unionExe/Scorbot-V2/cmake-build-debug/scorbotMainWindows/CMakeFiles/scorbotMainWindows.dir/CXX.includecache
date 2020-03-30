@@ -189,8 +189,6 @@ cstring
 ../boardComSrc/UartSubSystem/AdapterClasses/ComUartAdapter.h
 ScorInterface.h
 -
-GetCom_int.h
--
 AdapterClasses/ParamSingletonFactory.h
 -
 thread
@@ -232,14 +230,6 @@ string
 cstring
 -
 
-../boardComSrc/UartSubSystem/AdapterFactory.h
-string
--
-termios.h
--
-AdapterClasses/ComUartAdapter.h
-../boardComSrc/UartSubSystem/AdapterClasses/ComUartAdapter.h
-
 ../boardComSrc/UartSubSystem/ConcreteObserver.h
 AdapterClasses/ObserverScorbot.h
 -
@@ -250,23 +240,9 @@ iostream
 semaphore.h
 -
 
-../boardComSrc/UartSubSystem/GetCom_int.h
-DataTransfert_AllInclude.h
--
-
-../boardComSrc/UartSubSystem/InfoExpPack.h
-DataTransfert_AllInclude.h
--
-GetCom_int.h
-../boardComSrc/UartSubSystem/GetCom_int.h
-time.h
--
-
 ../boardComSrc/UartSubSystem/ScorInterface.h
 DataTransfert_AllInclude.h
 -
-InfoExpPack.h
-../boardComSrc/UartSubSystem/InfoExpPack.h
 AdapterClasses/ObservableScorbot.h
 -
 ctime
@@ -277,8 +253,6 @@ ScorInterface.h
 ../boardComSrc/UartSubSystem/ScorInterface.h
 AdapterClasses/ComUartAdapter.h
 ../boardComSrc/UartSubSystem/AdapterClasses/ComUartAdapter.h
-AdapterFactory.h
-../boardComSrc/UartSubSystem/AdapterFactory.h
 termios.h
 -
 
@@ -427,8 +401,6 @@ settingBoardWindow.h
 ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h
 freeMoveWindow.h
 ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWindow.h
-commonDefine.h
-../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
 ScorCalc.h
 -
 
@@ -468,6 +440,20 @@ DataTransfert_AllInclude.h
 iostream
 -
 
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/scorbotMainWindows_autogen/EWIEGA46WW/moc_ScorbotMainWindows.cpp
+memory
+-
+../../../../scorbotMainWindows/ScorbotMainWindows.h
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.h
+QtCore/qbytearray.h
+-
+QtCore/qmetatype.h
+-
+
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/scorbotMainWindows_autogen/mocs_compilation.cpp
+EWIEGA46WW/moc_ScorbotMainWindows.cpp
+/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/scorbotMainWindows_autogen/EWIEGA46WW/moc_ScorbotMainWindows.cpp
+
 /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.cpp
 ScorbotMainWindows.h
 /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.h
@@ -501,8 +487,6 @@ UI_useCase/DataShow.h
 -
 UI_useCase/SetupBoard.h
 -
-
-/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
 
 /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWindow.h
 QDialog
@@ -543,8 +527,6 @@ settingBoardWindow.h
 /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h
 freeMoveWindow.h
 /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWindow.h
-commonDefine.h
-/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
 ScorCalc.h
 -
 

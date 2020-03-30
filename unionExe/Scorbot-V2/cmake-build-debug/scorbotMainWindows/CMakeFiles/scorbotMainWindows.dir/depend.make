@@ -20,10 +20,7 @@ scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o: .
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o: ../boardComSrc/UartSubSystem/AdapterClasses/ObserverScorbot.h
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o: ../boardComSrc/UartSubSystem/AdapterClasses/ParamSingletonFactory.h
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o: ../boardComSrc/UartSubSystem/AdapterClasses/SingletonFactoryException.h
-scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o: ../boardComSrc/UartSubSystem/AdapterFactory.h
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o: ../boardComSrc/UartSubSystem/ConcreteObserver.h
-scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o: ../boardComSrc/UartSubSystem/GetCom_int.h
-scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o: ../boardComSrc/UartSubSystem/InfoExpPack.h
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o: ../boardComSrc/UartSubSystem/ScorInterface.h
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o: ../boardComSrc/UartSubSystem/UartSubSystem.h
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o: ../boardComSrc/UtilityScorbot/ScorCalc.h
@@ -38,7 +35,6 @@ scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o: .
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/uartChoise.h
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o: ../scorbotMainWindows/ScorbotMainWindows.cpp
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o: ../scorbotMainWindows/ScorbotMainWindows.h
-scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWindow.h
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h
@@ -229,10 +225,7 @@ scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/mocs_compilation.cpp.o: ../boardComSrc/UartSubSystem/AdapterClasses/ObserverScorbot.h
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/mocs_compilation.cpp.o: ../boardComSrc/UartSubSystem/AdapterClasses/ParamSingletonFactory.h
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/mocs_compilation.cpp.o: ../boardComSrc/UartSubSystem/AdapterClasses/SingletonFactoryException.h
-scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/mocs_compilation.cpp.o: ../boardComSrc/UartSubSystem/AdapterFactory.h
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/mocs_compilation.cpp.o: ../boardComSrc/UartSubSystem/ConcreteObserver.h
-scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/mocs_compilation.cpp.o: ../boardComSrc/UartSubSystem/GetCom_int.h
-scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/mocs_compilation.cpp.o: ../boardComSrc/UartSubSystem/InfoExpPack.h
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/mocs_compilation.cpp.o: ../boardComSrc/UartSubSystem/ScorInterface.h
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/mocs_compilation.cpp.o: ../boardComSrc/UartSubSystem/UartSubSystem.h
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/mocs_compilation.cpp.o: ../boardComSrc/UtilityScorbot/ScorCalc.h
@@ -248,7 +241,6 @@ scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/mocs_compilation.cpp.o: scorbotMainWindows/scorbotMainWindows_autogen/EWIEGA46WW/moc_ScorbotMainWindows.cpp
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/mocs_compilation.cpp.o: scorbotMainWindows/scorbotMainWindows_autogen/mocs_compilation.cpp
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/mocs_compilation.cpp.o: ../scorbotMainWindows/ScorbotMainWindows.h
-scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/mocs_compilation.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/mocs_compilation.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWindow.h
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/mocs_compilation.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
 scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/mocs_compilation.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h

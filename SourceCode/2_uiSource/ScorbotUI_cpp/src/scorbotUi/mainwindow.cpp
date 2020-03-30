@@ -265,8 +265,7 @@ void MainWindow::currentShow(CurrentMot *c) {
 
 
 void MainWindow::sendRef_handler() {
-    //todo: In base al tab selezionato calcola i valori per gli altri e invia gli encoder alla fine
-    //è già stato chiamato cinCalc_handler() e ho tutti i dati in enRef
+    //è già stato chiamato cinCalc_handler() e ho tutti i dati aggiornati in enRef
     for (char i = Mot1; i < nMot; i++) {
         ref->enSet((motCode) i, (short) enRef[i]->value());
     }
@@ -394,8 +393,8 @@ void MainWindow::cinCalc_handler() {
             ui->gL->setAutoExclusive(true);
             ui->gH->setAutoExclusive(true);
             break;
-        case Inv: //todo: Leggi i valori e calcola DirEn e DirDeg
-        case RobSet: //todo: Leggi i valori e calcola Inv, da lì DirEn e DirDeg
+        case Inv: // Leggi i valori e calcola DirEn e DirDeg
+        case RobSet: // Leggi i valori e calcola Inv, da lì DirEn e DirDeg
             //Creo il vettore dall'interfaccia grafica, delle coordinate desiderate e del gomito
             pos.x = ui->xDes->value();
             pos.y = ui->yDes->value();

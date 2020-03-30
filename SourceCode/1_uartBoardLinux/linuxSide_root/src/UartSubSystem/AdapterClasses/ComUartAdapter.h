@@ -6,7 +6,6 @@
 #define PCLISTENUART_COMUARTADAPTER_H
 
 #include <ScorInterface.h>
-#include <GetCom_int.h>
 #include <AdapterClasses/ParamSingletonFactory.h>
 #include <thread>
 #include <mutex>
@@ -17,43 +16,6 @@
 #ifndef __USE_GNU
 #define __USE_GNU
 #endif
-
-/////###################################################################################################
-/////################################# Macro for Time Operation#########################################
-/////###################################################################################################
-//# define timerissetSpec(tvp)    ((tvp)->tv_sec || (tvp)->tv_nsec)
-//# define timerclearSpec(tvp)    ((tvp)->tv_sec = (tvp)->tv_nsec = 0)
-//# define timercmpSpec(a, b, CMP)        \
-//  (((a)->tv_sec == (b)->tv_sec) ?       \
-//   ((a)->tv_nsec CMP (b)->tv_nsec) :    \
-//   ((a)->tv_sec CMP (b)->tv_sec))
-//# define timeraddSpec(a, b, result)                     \
-//  do {                                                  \
-//    (result)->tv_sec = (a)->tv_sec + (b)->tv_sec;       \
-//    (result)->tv_nsec = (a)->tv_nsec + (b)->tv_nsec;    \
-//    if ((result)->tv_nsec >= 1000000000)                \
-//      {                                                 \
-//    ++(result)->tv_sec;                                 \
-//    (result)->tv_nsec -= 1000000000;                    \
-//      }                                                 \
-//  } while (0)
-//# define timersubSpec(a, b, result)                     \
-//  do {                                                  \
-//    (result)->tv_sec = (a)->tv_sec - (b)->tv_sec;       \
-//    (result)->tv_nsec = (a)->tv_nsec - (b)->tv_nsec;    \
-//    if ((result)->tv_nsec < 0) {                        \
-//      --(result)->tv_sec;                               \
-//      (result)->tv_nsec += 1000000000;                  \
-//    }                                                   \
-//  } while (0)
-//#define timeWriteSpec(ts, sec, nanoSec)                                     \
-//    do {                                                                    \
-//        (ts)->tv_sec=(long) sec + (long)nanoSec/( 1000UL* 1000UL * 1000UL); \
-//        (ts)->tv_nsec=(long) nanoSec%( 1000UL* 1000UL * 1000UL);            \
-//    }while(0)
-//#define timeStampSpec(ts, name) std::cout << name << ".tv_sec=" << (ts)->tv_sec << "\t" \
-//    << name << ".tv_nsec=" <<(ts)->tv_nsec << " (" << ((ts)->tv_nsec + (500UL * 1000UL)) /(1000UL * 1000UL) << "ms)\n"
-/////###################################################################################################
 
 
 class ComUartAdapter : public ScorInterface {//, public GetCom_int {
@@ -68,11 +30,6 @@ public:
     virtual ~ComUartAdapter();
 
     /// #### ObservableScorbot override and Extension####
-//    void add(ObserverScorbot *ob, uartPackType typeWant){
-//        ObservableScorbot::add(ob, typeWant);
-//        ComUartAdapter::numReciver=settingBoardDataNotify->capacity();
-//    }
-
 
     /// #### ScorInterface override ####
     bool isConnect() override;
@@ -95,35 +52,11 @@ public:
     bool isEncoderValid() override;
     bool isCurrentValid() override;
     bool isAllSensorValid() override;
-//    /// Valid Get data
-//    EncoderMot *getValidEncoder() override;
-//    CurrentMot *getValidCurrent() override;
-////    AllSensor *getValidSensor() override;
-//    EncoderMot *getValidEncoder(struct timespec *t) override;
-//    CurrentMot *getValidCurrent(struct timespec *t) override;
-//    AllSensor *getValidSensor(struct timespec *en, struct timespec *cur) override;
-    /// Wait Valid Get data
-//    EncoderMot *getValidEncoderWait() override;
-//    CurrentMot *getValidCurrentWait() override;
-////    AllSensor *getValidSensorWait() override;
-//    EncoderMot *getValidEncoderWait(struct timespec *t) override;
-//    CurrentMot *getValidCurrentWait(struct timespec *t) override;
-//    AllSensor *getValidSensorWait(struct timespec *en, struct timespec *cur) override;
 
-    /// GetCom_int override
-    // Nel caso della uart è inutile attendere attivamente la porta,
-    // basta mettersi in attesa che il dato voluto torni valido, a leggere
-    // la porta è presente un thread apposito che salva i dati
-    // in infoExpPack appena arrivano
-//    EncoderMot &getEncoderConrete() override;
-//    CurrentMot &getCurrentConrete() override;
-////    AllSensor &getSensorConrete() override;
-//    SettingBoard_C &getSettingConrete() override;
 private:
     /// Variabili di funzionamento della classe nel sistema
     static std::mutex instanceMutex;
     static ComUartAdapter *instance;
-//    ParamSingletonFactory &uartFactory;
     static UartDriver *uartDev;
 
     /// Thread di lettura della porta
@@ -131,25 +64,9 @@ private:
 
 
     /// Variabili di salvataggio dei pacchetti letti dal Thread uartReader
-    //static std::mutex setNew, enNew, curNew;
-    // setNew, enNew, curNew specific for pack type
-    //todo: Sto testando il pattern Observer, se funziona non c'è più bisogno dei semafori,
-    //  Sarà il thread ricevente che dopo aver ottenuto un dato lo notifica agli altri,
-    //  e diventa responsabilità del ricevente implementare un sistema di sincronia se serve
-
-    //    static int numReciver;
-//    static sem_t setNew, enNew, curNew;
-
-
-    // L'uartReader unlock il mutex quando arriva un nuvo dato, così se un thread è in attesa del
-    // dato viene risvegliato solo al momento della ricezione.
-    // Un lettore lock il mutex a indicare che l'informazione è stata già letta
     settingsBoard setting;
     SettingBoard_C *set;
 
-    // L'uartReader unlock il mutex quando arriva un nuvo dato, così se un thread è in attesa del
-    // dato viene risvegliato solo al momento della ricezione.
-    // Un lettore lock il mutex a indicare che l'informazione è stata già letta
     mAll sensors;
     AllSensor *allSensor;
     struct timespec enTime, curTime;

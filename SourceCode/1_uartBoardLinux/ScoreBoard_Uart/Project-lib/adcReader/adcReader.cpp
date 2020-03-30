@@ -95,8 +95,6 @@ namespace InternalDevice {
     int g;
 
     void AdcDevice::isrFunxAdc() {
-        //todo: verificare il corretto accesso in memoria di questo doppio array
-        // Must read low first
         g = (int) ADCL;
         g |= (int) ADCH << 8;
         this->ampMot[indexADC][oldReadId] = g; //((int) ADCL | ((int) ADCH << 8));
@@ -166,7 +164,6 @@ namespace InternalDevice {
 
     short AdcDevice::getCurrentSum(motCode mot) {
         this->sumCur = 0;
-        //todo: verificare il corretto accesso in memoria di questo doppio array
         for (byte j = 0; j < history; j++)
             this->sumCur += this->ampMot[j][mot];
         return this->sumCur;

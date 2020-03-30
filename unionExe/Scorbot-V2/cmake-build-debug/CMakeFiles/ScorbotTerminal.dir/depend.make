@@ -20,10 +20,7 @@ CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../boardComSrc/UartSubSystem/AdapterC
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../boardComSrc/UartSubSystem/AdapterClasses/ObserverScorbot.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../boardComSrc/UartSubSystem/AdapterClasses/ParamSingletonFactory.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../boardComSrc/UartSubSystem/AdapterClasses/SingletonFactoryException.h
-CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../boardComSrc/UartSubSystem/AdapterFactory.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../boardComSrc/UartSubSystem/ConcreteObserver.h
-CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../boardComSrc/UartSubSystem/GetCom_int.h
-CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../boardComSrc/UartSubSystem/InfoExpPack.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../boardComSrc/UartSubSystem/ScorInterface.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../boardComSrc/UartSubSystem/UartSubSystem.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../boardComSrc/UtilityScorbot/ScorCalc.h
@@ -34,7 +31,6 @@ CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/Moto
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/SetupBoard.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/UartConnect.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/UartConnectExeption.h
-CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWindow.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h

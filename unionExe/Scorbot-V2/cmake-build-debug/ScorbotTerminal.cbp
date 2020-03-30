@@ -850,25 +850,10 @@
 		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/SingletonFactoryException.h">
 			<Option target="UartSubSystem"/>
 		</Unit>
-		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterFactory.cpp">
-			<Option target="UartSubSystem"/>
-		</Unit>
-		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterFactory.h">
-			<Option target="UartSubSystem"/>
-		</Unit>
 		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/ConcreteObserver.cpp">
 			<Option target="UartSubSystem"/>
 		</Unit>
 		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/ConcreteObserver.h">
-			<Option target="UartSubSystem"/>
-		</Unit>
-		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/GetCom_int.h">
-			<Option target="UartSubSystem"/>
-		</Unit>
-		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/InfoExpPack.cpp">
-			<Option target="UartSubSystem"/>
-		</Unit>
-		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/InfoExpPack.h">
 			<Option target="UartSubSystem"/>
 		</Unit>
 		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/ScorInterface.h">
@@ -939,9 +924,6 @@
 		</Unit>
 		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/UartConnectExeption.h">
 			<Option target="UI_useCase"/>
-		</Unit>
-		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h">
-			<Option target="scorbotUi"/>
 		</Unit>
 		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWindow.cpp">
 			<Option target="scorbotUi"/>

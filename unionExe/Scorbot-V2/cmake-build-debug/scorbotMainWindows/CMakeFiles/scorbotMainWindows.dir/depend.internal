@@ -21,10 +21,7 @@ scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o
  ../boardComSrc/UartSubSystem/AdapterClasses/ObserverScorbot.h
  ../boardComSrc/UartSubSystem/AdapterClasses/ParamSingletonFactory.h
  ../boardComSrc/UartSubSystem/AdapterClasses/SingletonFactoryException.h
- ../boardComSrc/UartSubSystem/AdapterFactory.h
  ../boardComSrc/UartSubSystem/ConcreteObserver.h
- ../boardComSrc/UartSubSystem/GetCom_int.h
- ../boardComSrc/UartSubSystem/InfoExpPack.h
  ../boardComSrc/UartSubSystem/ScorInterface.h
  ../boardComSrc/UartSubSystem/UartSubSystem.h
  ../boardComSrc/UtilityScorbot/ScorCalc.h
@@ -39,7 +36,6 @@ scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o
  ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/uartChoise.h
  /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.cpp
  /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.h
- /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
  /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWindow.h
  /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
  /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h
@@ -230,10 +226,7 @@ scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/
  ../boardComSrc/UartSubSystem/AdapterClasses/ObserverScorbot.h
  ../boardComSrc/UartSubSystem/AdapterClasses/ParamSingletonFactory.h
  ../boardComSrc/UartSubSystem/AdapterClasses/SingletonFactoryException.h
- ../boardComSrc/UartSubSystem/AdapterFactory.h
  ../boardComSrc/UartSubSystem/ConcreteObserver.h
- ../boardComSrc/UartSubSystem/GetCom_int.h
- ../boardComSrc/UartSubSystem/InfoExpPack.h
  ../boardComSrc/UartSubSystem/ScorInterface.h
  ../boardComSrc/UartSubSystem/UartSubSystem.h
  ../boardComSrc/UtilityScorbot/ScorCalc.h
@@ -249,7 +242,6 @@ scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/
  /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/scorbotMainWindows_autogen/EWIEGA46WW/moc_ScorbotMainWindows.cpp
  /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/scorbotMainWindows_autogen/mocs_compilation.cpp
  /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/ScorbotMainWindows.h
- /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
  /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWindow.h
  /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
  /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h

@@ -179,33 +179,6 @@ AdapterClasses/ParamSingletonFactory.cpp.s:
 	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterClasses/ParamSingletonFactory.cpp.s
 .PHONY : AdapterClasses/ParamSingletonFactory.cpp.s
 
-AdapterFactory.o: AdapterFactory.cpp.o
-
-.PHONY : AdapterFactory.o
-
-# target to build an object file
-AdapterFactory.cpp.o:
-	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterFactory.cpp.o
-.PHONY : AdapterFactory.cpp.o
-
-AdapterFactory.i: AdapterFactory.cpp.i
-
-.PHONY : AdapterFactory.i
-
-# target to preprocess a source file
-AdapterFactory.cpp.i:
-	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterFactory.cpp.i
-.PHONY : AdapterFactory.cpp.i
-
-AdapterFactory.s: AdapterFactory.cpp.s
-
-.PHONY : AdapterFactory.s
-
-# target to generate assembly for a file
-AdapterFactory.cpp.s:
-	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterFactory.cpp.s
-.PHONY : AdapterFactory.cpp.s
-
 ConcreteObserver.o: ConcreteObserver.cpp.o
 
 .PHONY : ConcreteObserver.o
@@ -233,33 +206,6 @@ ConcreteObserver.cpp.s:
 	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/ConcreteObserver.cpp.s
 .PHONY : ConcreteObserver.cpp.s
 
-InfoExpPack.o: InfoExpPack.cpp.o
-
-.PHONY : InfoExpPack.o
-
-# target to build an object file
-InfoExpPack.cpp.o:
-	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/InfoExpPack.cpp.o
-.PHONY : InfoExpPack.cpp.o
-
-InfoExpPack.i: InfoExpPack.cpp.i
-
-.PHONY : InfoExpPack.i
-
-# target to preprocess a source file
-InfoExpPack.cpp.i:
-	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/InfoExpPack.cpp.i
-.PHONY : InfoExpPack.cpp.i
-
-InfoExpPack.s: InfoExpPack.cpp.s
-
-.PHONY : InfoExpPack.s
-
-# target to generate assembly for a file
-InfoExpPack.cpp.s:
-	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/InfoExpPack.cpp.s
-.PHONY : InfoExpPack.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -275,15 +221,9 @@ help:
 	@echo "... AdapterClasses/ParamSingletonFactory.o"
 	@echo "... AdapterClasses/ParamSingletonFactory.i"
 	@echo "... AdapterClasses/ParamSingletonFactory.s"
-	@echo "... AdapterFactory.o"
-	@echo "... AdapterFactory.i"
-	@echo "... AdapterFactory.s"
 	@echo "... ConcreteObserver.o"
 	@echo "... ConcreteObserver.i"
 	@echo "... ConcreteObserver.s"
-	@echo "... InfoExpPack.o"
-	@echo "... InfoExpPack.i"
-	@echo "... InfoExpPack.s"
 .PHONY : help
 
 

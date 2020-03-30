@@ -166,7 +166,6 @@ scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindo
  ../boardComSrc/Common-src/DataTransfertPackge/DataPrimitive.h
  ../boardComSrc/Common-src/DataTransfertPackge/DataTransfert_AllInclude.h
  ../boardComSrc/UtilityScorbot/ScorCalc.h
- /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
  /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWindow.h
  /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.cpp
  /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
@@ -346,7 +345,6 @@ scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi
  ../boardComSrc/Common-src/DataTransfertPackge/DataPrimitive.h
  ../boardComSrc/Common-src/DataTransfertPackge/DataTransfert_AllInclude.h
  ../boardComSrc/UtilityScorbot/ScorCalc.h
- /home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/commonDefine.h
  /home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/freeMoveWindow.h
  /home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/mainwindow.h
  /home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/settingBoardWindow.h

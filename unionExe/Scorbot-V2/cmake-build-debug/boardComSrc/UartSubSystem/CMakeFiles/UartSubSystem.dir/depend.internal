@@ -20,8 +20,6 @@ boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterClasses/ComUartAda
  ../boardComSrc/UartSubSystem/AdapterClasses/ObserverScorbot.h
  ../boardComSrc/UartSubSystem/AdapterClasses/ParamSingletonFactory.h
  ../boardComSrc/UartSubSystem/AdapterClasses/SingletonFactoryException.h
- ../boardComSrc/UartSubSystem/GetCom_int.h
- ../boardComSrc/UartSubSystem/InfoExpPack.h
  ../boardComSrc/UartSubSystem/ScorInterface.h
  /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/ComUartAdapter.cpp
  /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/ComUartAdapter.h
@@ -42,31 +40,6 @@ boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterClasses/ParamSingl
  /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/ParamSingletonFactory.cpp
  /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/ParamSingletonFactory.h
  /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/SingletonFactoryException.h
-boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterFactory.cpp.o
- ../boardComSrc/Common-src/DataTransfertPackge/DataFactory.h
- ../boardComSrc/Common-src/DataTransfertPackge/DataManipolation/AllSensor.h
- ../boardComSrc/Common-src/DataTransfertPackge/DataManipolation/CurrentMot.h
- ../boardComSrc/Common-src/DataTransfertPackge/DataManipolation/EncoderMot.h
- ../boardComSrc/Common-src/DataTransfertPackge/DataManipolation/Pack.h
- ../boardComSrc/Common-src/DataTransfertPackge/DataManipolation/SettingBoard_C.h
- ../boardComSrc/Common-src/DataTransfertPackge/DataManipolation/SpeedMot.h
- ../boardComSrc/Common-src/DataTransfertPackge/DataManipolation/typePackWrongExcept.h
- ../boardComSrc/Common-src/DataTransfertPackge/DataPrimitive.h
- ../boardComSrc/Common-src/DataTransfertPackge/DataTransfert_AllInclude.h
- ../boardComSrc/Common-src/circularBuffer/CircularBuffer.h
- ../boardComSrc/Common-src/timeOp/timeSpecOp.h
- ../boardComSrc/Common-src/uartDriver/UartDriver.h
- ../boardComSrc/Common-src/uartDriver/UartException.h
- ../boardComSrc/UartSubSystem/AdapterClasses/ObservableScorbot.h
- ../boardComSrc/UartSubSystem/AdapterClasses/ObserverScorbot.h
- ../boardComSrc/UartSubSystem/AdapterClasses/ParamSingletonFactory.h
- ../boardComSrc/UartSubSystem/AdapterClasses/SingletonFactoryException.h
- ../boardComSrc/UartSubSystem/GetCom_int.h
- ../boardComSrc/UartSubSystem/InfoExpPack.h
- ../boardComSrc/UartSubSystem/ScorInterface.h
- /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/ComUartAdapter.h
- /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterFactory.cpp
- /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterFactory.h
 boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/ConcreteObserver.cpp.o
  ../boardComSrc/Common-src/DataTransfertPackge/DataFactory.h
  ../boardComSrc/Common-src/DataTransfertPackge/DataManipolation/AllSensor.h
@@ -80,22 +53,6 @@ boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/ConcreteObserver.cpp.o
  ../boardComSrc/Common-src/DataTransfertPackge/DataTransfert_AllInclude.h
  ../boardComSrc/UartSubSystem/AdapterClasses/ObservableScorbot.h
  ../boardComSrc/UartSubSystem/AdapterClasses/ObserverScorbot.h
- ../boardComSrc/UartSubSystem/GetCom_int.h
- ../boardComSrc/UartSubSystem/InfoExpPack.h
  ../boardComSrc/UartSubSystem/ScorInterface.h
  /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/ConcreteObserver.cpp
  /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/ConcreteObserver.h
-boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/InfoExpPack.cpp.o
- ../boardComSrc/Common-src/DataTransfertPackge/DataFactory.h
- ../boardComSrc/Common-src/DataTransfertPackge/DataManipolation/AllSensor.h
- ../boardComSrc/Common-src/DataTransfertPackge/DataManipolation/CurrentMot.h
- ../boardComSrc/Common-src/DataTransfertPackge/DataManipolation/EncoderMot.h
- ../boardComSrc/Common-src/DataTransfertPackge/DataManipolation/Pack.h
- ../boardComSrc/Common-src/DataTransfertPackge/DataManipolation/SettingBoard_C.h
- ../boardComSrc/Common-src/DataTransfertPackge/DataManipolation/SpeedMot.h
- ../boardComSrc/Common-src/DataTransfertPackge/DataManipolation/typePackWrongExcept.h
- ../boardComSrc/Common-src/DataTransfertPackge/DataPrimitive.h
- ../boardComSrc/Common-src/DataTransfertPackge/DataTransfert_AllInclude.h
- /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/GetCom_int.h
- /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/InfoExpPack.cpp
- /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/InfoExpPack.h

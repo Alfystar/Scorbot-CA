@@ -10,7 +10,6 @@ if (NOT TARGET scorbotUi)
     endif ()
 
     add_library(scorbotUi #SHARED
-            commonDefine.h
             mainwindow.h mainwindow.cpp ui_source/mainwindow.ui ui_source/logo.qrc
             settingBoardWindow.h settingBoardWindow.cpp ui_source/settingBoardWindow.ui
             freeMoveWindow.h freeMoveWindow.cpp ui_source/freeMoveWindow.ui

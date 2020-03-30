@@ -165,7 +165,6 @@ scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindo
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o: ../boardComSrc/Common-src/DataTransfertPackge/DataPrimitive.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o: ../boardComSrc/Common-src/DataTransfertPackge/DataTransfert_AllInclude.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o: ../boardComSrc/UtilityScorbot/ScorCalc.h
-scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWindow.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.cpp
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
@@ -345,7 +344,6 @@ scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o: ../boardComSrc/Common-src/DataTransfertPackge/DataPrimitive.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o: ../boardComSrc/Common-src/DataTransfertPackge/DataTransfert_AllInclude.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o: ../boardComSrc/UtilityScorbot/ScorCalc.h
-scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o: /home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/commonDefine.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o: /home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/freeMoveWindow.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o: /home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/mainwindow.h
 scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o: /home/alfystar/Documenti/Scorbot-CA/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/settingBoardWindow.h

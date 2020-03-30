@@ -6,7 +6,6 @@
 #define PCLISTENUART_SCORINTERFACE_H
 
 #include <DataTransfert_AllInclude.h>
-#include "InfoExpPack.h"
 #include <AdapterClasses/ObservableScorbot.h>
 #include <ctime>
 
@@ -41,24 +40,6 @@ public:
     virtual bool isEncoderValid() = 0;      //true if Now <= LastPack+enSample
     virtual bool isCurrentValid() = 0;      //true if Now <= LastPack+curSample
     virtual bool isAllSensorValid() = 0;    //true if Encoder and Current in time
-
-    //todo: Rimuovere i valid data, il sistema degli observer con le notify fa già aspettare se necessario
-    /// Valid Get data
-    // If sample time is out wait new data or ask for new data,
-    // depend by comunication protocol implemented
-    // other wise the thread are mooved on wait state
-//    virtual EncoderMot *getValidEncoder() = 0;
-//    virtual CurrentMot *getValidCurrent() = 0;
-//    virtual EncoderMot *getValidEncoder(struct timespec *t) = 0;
-//    virtual CurrentMot *getValidCurrent(struct timespec *t) = 0;
-
-    /// Wait Valid Get data
-//    virtual EncoderMot *getValidEncoderWait() = 0;
-//    virtual CurrentMot *getValidCurrentWait() = 0;
-//    virtual EncoderMot *getValidEncoderWait(struct timespec *t) = 0;
-//    virtual CurrentMot *getValidCurrentWait(struct timespec *t) = 0;
-protected:
-    //InfoExpPack &dataExp;   //Automaticamente l'incato da chiunque realizzi questa interfaccia
 
 };
 

@@ -2,13 +2,12 @@
 if (NOT TARGET UartSubSystem)
     add_library(UartSubSystem
             UartSubSystem.h
-            ScorInterface.h GetCom_int.h #Interface Class
-            InfoExpPack.h InfoExpPack.cpp
+            ScorInterface.h  #Interface Class
 
             AdapterClasses/SingletonFactoryException.h
             AdapterClasses/ParamSingletonFactory.h AdapterClasses/ParamSingletonFactory.cpp   #Factory per generare Le classi di comunicazione uniche per tipo
             AdapterClasses/ComUartAdapter.h AdapterClasses/ComUartAdapter.cpp
-            AdapterFactory.h AdapterFactory.cpp #Factory per generare gli adapter
+            #Factory per generare gli adapter
 
             #Observer pattern class, to notifySettingBoard data
             AdapterClasses/ObserverScorbot.h AdapterClasses/ObservableScorbot.h

@@ -21,10 +21,7 @@ CMakeFiles/ScorbotTerminal.dir/main.cpp.o
  ../boardComSrc/UartSubSystem/AdapterClasses/ObserverScorbot.h
  ../boardComSrc/UartSubSystem/AdapterClasses/ParamSingletonFactory.h
  ../boardComSrc/UartSubSystem/AdapterClasses/SingletonFactoryException.h
- ../boardComSrc/UartSubSystem/AdapterFactory.h
  ../boardComSrc/UartSubSystem/ConcreteObserver.h
- ../boardComSrc/UartSubSystem/GetCom_int.h
- ../boardComSrc/UartSubSystem/InfoExpPack.h
  ../boardComSrc/UartSubSystem/ScorInterface.h
  ../boardComSrc/UartSubSystem/UartSubSystem.h
  ../boardComSrc/UtilityScorbot/ScorCalc.h
@@ -35,7 +32,6 @@ CMakeFiles/ScorbotTerminal.dir/main.cpp.o
  ../scorbotMainWindows/UI_useCase/SetupBoard.h
  ../scorbotMainWindows/UI_useCase/UartConnect.h
  ../scorbotMainWindows/UI_useCase/UartConnectExeption.h
- ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
  ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWindow.h
  ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
  ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h

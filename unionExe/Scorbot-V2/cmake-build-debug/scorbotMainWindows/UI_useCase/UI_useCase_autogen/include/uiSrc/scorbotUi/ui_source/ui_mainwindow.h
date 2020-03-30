@@ -2387,7 +2387,9 @@ public:
         l5Label->setText(QCoreApplication::translate("MainWindow", "d5", nullptr));
         scorSwHome->setText(QCoreApplication::translate("MainWindow", "SW Home", nullptr));
 #if QT_CONFIG(tooltip)
-        label_2->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">Costanti per ottenere Radianti</p></body></html>", nullptr));
+        label_2->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">Costanti per\n"
+"                                 ottenere Radianti</p></body></html>\n"
+"                             ", nullptr));
 #endif // QT_CONFIG(tooltip)
         label_2->setText(QCoreApplication::translate("MainWindow", "En \342\206\243 Rad", nullptr));
         aLabel->setText(QCoreApplication::translate("MainWindow", "\316\261", nullptr));

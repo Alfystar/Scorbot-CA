@@ -1,9 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/UartSubSystem.dir/AdapterClasses/ComUartAdapter.cpp.o"
   "CMakeFiles/UartSubSystem.dir/AdapterClasses/ParamSingletonFactory.cpp.o"
-  "CMakeFiles/UartSubSystem.dir/AdapterFactory.cpp.o"
   "CMakeFiles/UartSubSystem.dir/ConcreteObserver.cpp.o"
-  "CMakeFiles/UartSubSystem.dir/InfoExpPack.cpp.o"
   "libUartSubSystem.a"
   "libUartSubSystem.pdb"
 )

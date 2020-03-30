@@ -15,7 +15,6 @@
 #include <iostream>
 #include "settingBoardWindow.h"
 #include "freeMoveWindow.h"
-#include "commonDefine.h"
 #include <ScorCalc.h>
 
 namespace Ui {
