@@ -23,8 +23,8 @@ Il progetto è attualmente portato avanti da Emanuele Alfano con la licenza [GPL
 </p>
 
 ## ScoreBoard
-La scheda di controllo dello Scorbot è pensata per essere un ponte tra la meccanica del robot, e il controllo progammato dentro il Rapsberry Py.
-[![SubSystem-structure](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/Media/Spi_ScorBoard-idea.png?raw=true "SubSystem-structure")](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ScorBoard_v2-MANUAL.pdf "SubSystem-structure")
+La scheda di controllo dello Scorbot è pensata per essere un ponte tra la meccanica del robot, e il sistema di controllo integrato all'interno di un computer Linux.
+[![SubSystem-structure](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/Media/ScorBoard-idea.png?raw=true "SubSystem-structure")](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ScorBoard_v2-MANUAL.pdf "SubSystem-structure")
 
 Il manuale di questo sotto sistema è trovabile [qui](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ScorBoard_v2-MANUAL.pdf "qui").
 
@@ -56,15 +56,19 @@ La scheda comunica con un computer mediante collegamento UART, qui è stata svil
 Per controllare il Robot in maniera intuitiva si è pensato di usare un interfaccia grafica scritta in QT5, la quale permette di controllare il robot sia direttamente che per mezzo di un PID
 <p align="center">
   <i>Main Window</i>
+    <br>
   <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/Media/ScorInterface%20main.png?raw=true"> 
   <br>
     <i>Uart Select</i>
+	  <br>
   <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/Media/ScorInterface%20uartSelect.png?raw=true"> 
     <br>
     <i>Setting Board Window</i>
+	  <br>
   <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/Media/ScorInterface%20settings.png?raw=true"> 
     <br>
     <i>Free Move Window</i>
+	  <br>
   <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/Media/ScorInterface%20freeMove.png?raw=true"> 
 
 </p>

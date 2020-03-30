@@ -304,7 +304,7 @@
       <workItem from="1585247746181" duration="7000" />
       <workItem from="1585400964439" duration="4692000" />
       <workItem from="1585406009702" duration="14010000" />
-      <workItem from="1585559661955" duration="21511000" />
+      <workItem from="1585559661955" duration="21701000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
       <created>1568027375662</created>
@@ -572,7 +572,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585589914290</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="readme update">
+      <created>1585590088736</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1585590088736</updated>
+    </task>
+    <option name="localTasksCounter" value="40" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -654,10 +661,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="669" y="243" width="572" height="552" key="#uartDriver/0.0.1920.1040@0.0.1920.1040" timestamp="1585229907540" />
-    <state x="296" y="117" width="1317" height="798" key="CommitChangelistDialog2" timestamp="1585589913546">
+    <state x="296" y="117" width="1317" height="798" key="CommitChangelistDialog2" timestamp="1585590088676">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="296" y="117" width="1317" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585589913546" />
+    <state x="296" y="117" width="1317" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585590088676" />
     <state x="743" y="277" width="424" height="479" key="FileChooserDialogImpl" timestamp="1585431864234">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -707,10 +714,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="457" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585431867378" />
-    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2" timestamp="1585589916001">
+    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2" timestamp="1585590103325">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585589916001" />
+    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585590103325" />
     <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1585559692464">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
