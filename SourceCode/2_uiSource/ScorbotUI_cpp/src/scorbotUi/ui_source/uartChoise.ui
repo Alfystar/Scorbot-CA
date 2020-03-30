@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>Select Uart</string>
   </property>
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">

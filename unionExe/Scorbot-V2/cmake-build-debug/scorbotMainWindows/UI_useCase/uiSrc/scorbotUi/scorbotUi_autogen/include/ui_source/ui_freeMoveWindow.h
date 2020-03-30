@@ -332,7 +332,7 @@ public:
 
     void retranslateUi(QDialog *FreeMoveWindow)
     {
-        FreeMoveWindow->setWindowTitle(QCoreApplication::translate("FreeMoveWindow", "Dialog", nullptr));
+        FreeMoveWindow->setWindowTitle(QCoreApplication::translate("FreeMoveWindow", "Free Moving", nullptr));
         mn1->setText(QCoreApplication::translate("FreeMoveWindow", "-", nullptr));
         mn2->setText(QCoreApplication::translate("FreeMoveWindow", "-", nullptr));
         mn3->setText(QCoreApplication::translate("FreeMoveWindow", "-", nullptr));

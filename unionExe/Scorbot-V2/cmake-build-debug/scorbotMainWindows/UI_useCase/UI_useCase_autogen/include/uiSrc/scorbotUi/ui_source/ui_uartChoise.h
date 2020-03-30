@@ -88,7 +88,7 @@ public:
 
     void retranslateUi(QWidget *UartChoise)
     {
-        UartChoise->setWindowTitle(QCoreApplication::translate("UartChoise", "Form", nullptr));
+        UartChoise->setWindowTitle(QCoreApplication::translate("UartChoise", "Select Uart", nullptr));
         speedChose->setItemText(0, QCoreApplication::translate("UartChoise", "B9600", nullptr));
         speedChose->setItemText(1, QCoreApplication::translate("UartChoise", "B57600", nullptr));
         speedChose->setItemText(2, QCoreApplication::translate("UartChoise", "B115200", nullptr));
