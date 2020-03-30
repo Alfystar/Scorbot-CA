@@ -7,6 +7,14 @@ Progetto inizialmente portato avanti nell'ambito del corso di Controlli Automati
 - Sviluppato da studenti del 3° Ing. Informatica
 - Corso tenuto dal Professor: Daniele Carnevale
 
+I componenti del gruppo originario erano:
+- Emanuele Alfano
+- Davide Antonini
+- Del Papa Nicolò
+- Francesco Ferrò
+- Ilaria Angeloni
+- Alberto Menichelli
+
 Il progetto è attualmente portato avanti da Emanuele Alfano con la licenza [GPLv3](https://github.com/Alfystar/Scorbot-CA/blob/master/LICENSE "GPLv3")
 <p align="center">
   <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/license.png?raw=true">
@@ -29,22 +37,6 @@ View this project on [CADLAB.io](https://cadlab.io/project/1649).
 In questa prima versione si sono utilizzati dei ponti H L298, e per leggere gli ACS712.
 La scheda soffriva di vari problemi di connessioni tra i pin in fase di progetto, le quali sono tutte risolvibili a mano.
 La scheda possiede un firmware di controllo che parla al Rapsberry Py per mezzo di una comunicazione SPI. Di questa prima vesione è stata scritta una [presentazione del progetto](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ProjectPresentation-V1.pdf) ai fini dell'esame.
-######  Eagle Draw Developer:
- - Emanuele Alfano
-
-###### Arduino mega Code Developers:
-- Emanuele Alfano
-- Davide Antonini
-- Del Papa Nicolò
-
-###### SPI Serial Comunication Arduino <--> Rapsberry Py Developers:
-- Emanuele Alfano
-- Davide Antonini
-- Del Papa Nicolò
-
-[*Spi_ScorBoard-V1 repository*](https://github.com/Alfystar/Scorbot-CA/tree/master/2_boardSystem/V1 "Spi_ScorBoard-V1 repository")
-
-
 
 #####  Board V2:
 In questa seconda scheda il cambio più evidente è nel driver motori che adesso è diventato un VNH5019, il quale ha integrato dentro una misura di corrente già scalata e non necessita di letture esterne, di questa scheda è presente anche un [**Manuale**](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ScorBoard_v2-MANUAL.pdf "qui")., che descrive nel dettaglio i vari punti del progetto.
@@ -56,36 +48,12 @@ In questa seconda scheda il cambio più evidente è nel driver motori che adesso
   <i>Bottom Face</i>
 </p>
 
-###### Eagle Draw Developer:
- - Emanuele Alfano
 
-###### Arduino mega Firmware Developer:
-- Emanuele Alfano
-La libreria è stata documentata completamente usando UML
+#### UART Comunication Arduino <--> Linux:
+La scheda comunica con un computer mediante collegamento UART, qui è stata sviluppata una libreria per la comunicazione con un processo Linux (testata su Mint e KDE NEON, in generale ubunto based)
 
-###### SPI Serial Comunication Arduino <--> Rapsberry Py Developer:
-- Emanuele Alfano
-La libreria è stata documentata completamente usando UML
-
-[*Spi_ScorBoard-V2 repository*](https://github.com/Alfystar/Scorbot-CA/tree/master/2_boardSystem/V2 "Spi_ScorBoard-V2 repository")
-
-
-# Rapsberry Py Gui controll
-Per controllare il Robot in maniera intuitiva si è pensato di usare un interfaccia grafica scritta in python usando la libreria grafica PyQT5, la quale per mezzo di delle pipe parlava con il processo C++ che si occupava del controllo del robot.
-Una sintesi di questo lavoro è stata scritta nella [presentazione del progetto](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ProjectPresentation-V1.pdf).
-## C++ core Process of Rapsberry Py Developers:
-- Francesco Ferrò
-- Emanuele Alfano
-
-## Python User Interface Developers:
-- Ilaria Angeloni
-- Alberto Menichelli
-- Emanuele Alfano
+# QT Gui
+Per controllare il Robot in maniera intuitiva si è pensato di usare un interfaccia grafica scritta in QT5, la quale permette di controllare il robot sia direttamente che per mezzo di un PID
 
 # Controllability Study
-Lo studio è stato svolto per mezzi teorici, con un modello ottenuto dal professore, con l'intento di applicare un PID.
-Una sintesi di questo lavoro è stata scritta nella [presentazione del progetto](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ProjectPresentation-V1.pdf).
-## Matlab Math Controll Developers
-- Alessandro Cosentini
-- Fabio Di Vincenzo
-- Emanuele Alfano
+Lo studio è stato svolto per mezzi teorici, con un modello ottenuto dal professore, con l'intento di trovare i prametri da applicare a un PID.

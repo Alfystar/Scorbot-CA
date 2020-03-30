@@ -1,2 +1,0 @@
-Arduino register setup pwm:
-https://arduinoinfo.mywikis.net/wiki/Arduino-PWM-Frequency

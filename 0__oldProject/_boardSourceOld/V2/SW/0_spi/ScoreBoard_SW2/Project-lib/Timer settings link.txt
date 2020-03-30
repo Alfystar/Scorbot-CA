@@ -1,4 +1,0 @@
-Arduino register setup pwm:
-https://arduinoinfo.mywikis.net/wiki/Arduino-PWM-Frequency
-Different type of PWM
-http://www.ermicro.com/blog/?p=1971

@@ -76,7 +76,7 @@ void homeMot(byte motN, signed char stDir) {
 
     Serial.print("Searching Mot");
     Serial.print(motN + 1);
-    Serial.println(" HW Home:");
+    Serial.println(" HW_Source Home:");
     //Supera innerzia
     mot[motN]->drive_motor(stDir * searchVel);
     delay(10);
@@ -141,12 +141,12 @@ void homeMot(byte motN, signed char stDir) {
     setEn(motN, 0);
     Serial.print("\t--Mot");
     Serial.print(motN + 1);
-    Serial.println(" HW Home Found\n");
+    Serial.println(" HW_Source Home Found\n");
 }
 
 void pinzaHome() {
     /** Roll Home**/
-    Serial.println("Searching Claw Roll HW Home:");
+    Serial.println("Searching Claw Roll HW_Source Home:");
     while (!(msRead() & (1 << cMot5))) {
         mot[cMot4]->drive_motor(searchVel);
         mot[cMot5]->drive_motor(-searchVel);
@@ -177,14 +177,14 @@ void pinzaHome() {
     mot[cMot4]->soft_stop(100);
     mot[cMot5]->soft_stop(100);
     delay(100);
-    Serial.println("\t--Claw Roll HW Home Found\n");
+    Serial.println("\t--Claw Roll HW_Source Home Found\n");
 
     /*#########################################################################à*/
     /*#########################################################################à*/
 
     /** Pitch Home **/
     signed char stDir = -1;
-    Serial.println("Searching Claw Pitch HW Home:");
+    Serial.println("Searching Claw Pitch HW_Source Home:");
     mot[cMot4]->drive_motor(stDir * searchVel);
     mot[cMot5]->drive_motor(stDir * searchVel);
     delay(10);
@@ -253,7 +253,7 @@ void pinzaHome() {
     mot[cMot4]->soft_stop(100);
     mot[cMot5]->soft_stop(100);
     delay(100);
-    Serial.println("\t--Claw Pitch HW Home Found\n");
+    Serial.println("\t--Claw Pitch HW_Source Home Found\n");
 
     //reset degli encoder
     updateStepEn();
