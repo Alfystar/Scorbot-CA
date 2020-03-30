@@ -24,11 +24,15 @@
 //linux
 #include <iostream>
 #include <unistd.h>
+#include <QtWidgets/QToolButton>
+#include <QtCore/QSignalMapper>
 
 using namespace DataPrimitive;
 using namespace DataManipolation;
 
-class MotorCTRL: public QObject {
+//Responsabilità della classe è il controllo dei motori, siano essi in automatico mediante il controllo
+//O attraverso il controllo diretto tramite l'interfaccia freeMoveCtrl
+class MotorCTRL : public QObject {
 Q_OBJECT  //Macro di Qt che importa tutti i metodi virtuali necessari, senza doverli scrvere a mano
 
     MainWindow *win;
@@ -40,12 +44,36 @@ Q_OBJECT  //Macro di Qt che importa tutti i metodi virtuali necessari, senza dov
     EncoderMot *enObj;      //Todo: gestire possibili conflitti di concorrenza nel cambio dati e lettura
     PIDScorbot *pidM[nMot];
 
+    bool goingToHome = false;
+
+    QPushButton *mn[nMot];
+    QPushButton *mp[nMot];
+    QSignalMapper *signalMapper;
+
+//    enum motPush {
+//        Mot1n, Mot1p,
+//        Mot2n, Mot2p,
+//        Mot3n, Mot3p,
+//        Mot4n, Mot4p,
+//        Mot5n, Mot5p,
+//        Mot6n, Mot6p,
+//        nMotnp
+//    };
+    bool freeMoveCtrl = false;
+
 public:
     MotorCTRL(MainWindow *parent);
 
 private slots:
 
     void changeObj(EncoderMot *newObj);
+
+    void goHome();
+
+    void motorDirectControl(int push);
+
+    void freeMoveWindowsShowing(bool show);
+
 
 private:
     static void ctrlThMain(MotorCTRL *m);

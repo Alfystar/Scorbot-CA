@@ -36,11 +36,12 @@ CMakeFiles/ScorbotTerminal.dir/main.cpp.o
  ../scorbotMainWindows/UI_useCase/UartConnect.h
  ../scorbotMainWindows/UI_useCase/UartConnectExeption.h
  ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
- ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWinsow.h
+ ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWindow.h
  ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
  ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h
  ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/uartChoise.h
  /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/main.cpp
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QSignalMapper
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
@@ -78,6 +79,7 @@ CMakeFiles/ScorbotTerminal.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qmath.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
@@ -98,6 +100,7 @@ CMakeFiles/ScorbotTerminal.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qsignalmapper.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringalgorithms.h
@@ -157,6 +160,7 @@ CMakeFiles/ScorbotTerminal.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QRadioButton
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSlider
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpinBox
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolButton
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h
@@ -175,6 +179,7 @@ CMakeFiles/ScorbotTerminal.dir/main.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qspinbox.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbutton.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h

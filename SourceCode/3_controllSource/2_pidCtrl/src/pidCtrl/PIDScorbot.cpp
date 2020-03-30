@@ -28,7 +28,7 @@ PIDScorbot::PIDScorbot(float kp, float ki, float kd, int MdeadZone, bool posDir,
     clock_gettime(CLOCK_MONOTONIC_RAW, &this->temp);
     memcpy(&this->oldTemp, &this->temp, sizeof(timespec));
     memcpy(&this->result, &this->temp, sizeof(timespec));
-    printf("kp=%e, ki=%e, kd=%e\n", kp, ki, kd);
+//    printf("kp=%e, ki=%e, kd=%e\n", kp, ki, kd);
 
 
 }

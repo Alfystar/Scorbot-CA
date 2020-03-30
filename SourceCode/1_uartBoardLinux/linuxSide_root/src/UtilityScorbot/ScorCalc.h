@@ -16,7 +16,13 @@ typedef struct {
     int maxClaw;
 } conParams;
 
-typedef double thetaMot[nMot];
+typedef double thetaMot[nMot];  // Angoli supposti in radianti
+
+
+typedef struct {
+    double l1, l2, l3;
+    double d1, d5;
+} geometryRobot;
 
 typedef struct {
     double x, y, z;
@@ -58,11 +64,12 @@ public:
 
     int rangeAdcGet();
 
+    // Angoli supposti in radianti
     void en2th(mEncoder e, thetaMot t, conParams *par);  // en-> rad ( eccetto pinza, %)
     void th2en(thetaMot t, mEncoder e, conParams *par);  // rad ( eccetto pinza, %) -> en
-    void dirCin(thetaMot t, positionRobot *p);
+    void dirCin(thetaMot t, positionRobot *p, geometryRobot *g);
 
-    void invCin(positionRobot *p, thetaMot t);
+    int invCin(positionRobot *p, geometryRobot *g, bool gomito, thetaMot t); // return -1 if outside reached space
 
 
 private:

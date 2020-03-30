@@ -377,6 +377,10 @@ iostream
 -
 unistd.h
 -
+QtWidgets/QToolButton
+-
+QtCore/QSignalMapper
+-
 
 ../scorbotMainWindows/UI_useCase/SetupBoard.h
 QApplication
@@ -430,7 +434,7 @@ string
 
 ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
 
-../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWinsow.h
+../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWindow.h
 QDialog
 -
 QSpinBox
@@ -459,14 +463,16 @@ QRadioButton
 -
 QLabel
 -
+qmath.h
+-
 DataTransfert_AllInclude.h
 -
 iostream
 -
 settingBoardWindow.h
 ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h
-freeMoveWinsow.h
-../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWinsow.h
+freeMoveWindow.h
+../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWindow.h
 commonDefine.h
 ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
 ScorCalc.h
@@ -515,6 +521,10 @@ QApplication
 -
 DataTransfert_AllInclude.h
 -
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QSignalMapper
+qsignalmapper.h
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsignalmapper.h
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
 QtCore/qglobal.h
@@ -880,6 +890,14 @@ new
 QtCore/qnamespace.h
 -
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qmath.h
+QtCore/qglobal.h
+-
+QtCore/qalgorithms.h
+-
+cmath
+-
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
 QtCore/qglobal.h
 -
@@ -1044,6 +1062,10 @@ QtCore/qhash.h
 QtCore/qhashfunctions.h
 -
 memory
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qsignalmapper.h
+QtCore/qobject.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
@@ -1646,6 +1668,10 @@ qslider.h
 qspinbox.h
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qspinbox.h
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolButton
+qtoolbutton.h
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbutton.h
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h
 QtWidgets/qtwidgetsglobal.h
 -
@@ -1786,6 +1812,12 @@ QtWidgets/qtwidgetsglobal.h
 QtWidgets/qwidget.h
 -
 QtGui/qicon.h
+-
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbutton.h
+QtWidgets/qtwidgetsglobal.h
+-
+QtWidgets/qabstractbutton.h
 -
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h

@@ -14,7 +14,7 @@
 #include <DataTransfert_AllInclude.h>
 #include <iostream>
 #include "settingBoardWindow.h"
-#include "freeMoveWinsow.h"
+#include "freeMoveWindow.h"
 #include "commonDefine.h"
 #include <ScorCalc.h>
 
@@ -69,12 +69,28 @@ public:
     SettingBoardWindow *setBoardWin;
     FreeMoveWindow *freeMovWin;
 
+    //// #####################################################################
+    //Variabili di calcolo comuni
+    conParams par;
+    geometryRobot g;
+
+
     explicit MainWindow(QWidget *parent = 0);
 
     ~MainWindow();
 
+private slots:
+
     void encoderShow();
 
+    void currentShow();
+
+private:
+    void conParamsUpdate();
+
+    void geometryRobotUpdate();
+
+public:
     void encoderShow(EncoderMot *e);
 
     void encoderShow(EncoderMot *e, EncoderMot *off);
@@ -88,14 +104,20 @@ signals:
 
     void newRef(EncoderMot *en);
 
+    void newEncoderShow();
+
+    void newCurrentShow();
+
 private slots:
 
     // Data send
     void sendRef_handler();
 
-    // Robot Setup
+    // Robot Settings parameter
     void scorParamLoad_handler(); // Parametri dimensionali Scorbot
     void scorParamReset_handler(); // Parametri dimensionali Scorbot
+
+
     // Other Windows
     void boardSet_handler();
 

@@ -1592,10 +1592,10 @@
       </widget>
      </item>
      <item>
-      <widget class="QPushButton" name="freeMove">
-       <property name="text">
-        <string>Free move</string>
-       </property>
+      <widget class="QPushButton" name="freeMoveCtrl">
+          <property name="text">
+              <string>Free move</string>
+          </property>
       </widget>
      </item>
     </layout>

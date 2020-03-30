@@ -11,11 +11,14 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
+#include <QtWidgets/QButtonGroup>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QDialogButtonBox>
 #include <QtWidgets/QHBoxLayout>
+#include <QtWidgets/QLCDNumber>
 #include <QtWidgets/QLabel>
-#include <QtWidgets/QToolButton>
+#include <QtWidgets/QPushButton>
+#include <QtWidgets/QSlider>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
 
@@ -24,16 +27,15 @@ QT_BEGIN_NAMESPACE
 class Ui_FreeMoveWindow
 {
 public:
-    QDialogButtonBox *buttonBox;
     QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QVBoxLayout *minus;
-    QToolButton *mn1;
-    QToolButton *mn2;
-    QToolButton *mn3;
-    QToolButton *mn4;
-    QToolButton *mn5;
-    QToolButton *mn6;
+    QPushButton *mn1;
+    QPushButton *mn2;
+    QPushButton *mn3;
+    QPushButton *mn4;
+    QPushButton *mn5;
+    QPushButton *mn6;
     QVBoxLayout *verticalLayout_2;
     QLabel *Step1_direct;
     QLabel *Step2_direct;
@@ -42,26 +44,27 @@ public:
     QLabel *Step5_direct;
     QLabel *Step6_direct;
     QVBoxLayout *plus;
-    QToolButton *mp1;
-    QToolButton *mp2;
-    QToolButton *mp3;
-    QToolButton *mp4;
-    QToolButton *mp5;
-    QToolButton *mp6;
+    QPushButton *mp1;
+    QPushButton *mp2;
+    QPushButton *mp3;
+    QPushButton *mp4;
+    QPushButton *mp5;
+    QPushButton *mp6;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout;
+    QDialogButtonBox *buttonBox;
+    QSlider *pwmSpeed;
+    QLCDNumber *lcdNumber;
+    QButtonGroup *freeMovePushGroup;
 
     void setupUi(QDialog *FreeMoveWindow)
     {
         if (FreeMoveWindow->objectName().isEmpty())
             FreeMoveWindow->setObjectName(QString::fromUtf8("FreeMoveWindow"));
-        FreeMoveWindow->resize(272, 268);
-        buttonBox = new QDialogButtonBox(FreeMoveWindow);
-        buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
-        buttonBox->setGeometry(QRect(180, 10, 75, 61));
-        buttonBox->setOrientation(Qt::Vertical);
-        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
+        FreeMoveWindow->resize(267, 268);
         layoutWidget = new QWidget(FreeMoveWindow);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(10, 10, 151, 250));
+        layoutWidget->setGeometry(QRect(10, 10, 141, 250));
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setSpacing(12);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
@@ -69,48 +72,68 @@ public:
         minus = new QVBoxLayout();
         minus->setObjectName(QString::fromUtf8("minus"));
         minus->setSizeConstraint(QLayout::SetMinimumSize);
-        mn1 = new QToolButton(layoutWidget);
+        mn1 = new QPushButton(layoutWidget);
+        freeMovePushGroup = new QButtonGroup(FreeMoveWindow);
+        freeMovePushGroup->setObjectName(QString::fromUtf8("freeMovePushGroup"));
+        freeMovePushGroup->addButton(mn1);
         mn1->setObjectName(QString::fromUtf8("mn1"));
         QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(mn1->sizePolicy().hasHeightForWidth());
         mn1->setSizePolicy(sizePolicy);
+        mn1->setCheckable(false);
+        mn1->setAutoExclusive(true);
 
         minus->addWidget(mn1);
 
-        mn2 = new QToolButton(layoutWidget);
+        mn2 = new QPushButton(layoutWidget);
+        freeMovePushGroup->addButton(mn2);
         mn2->setObjectName(QString::fromUtf8("mn2"));
         sizePolicy.setHeightForWidth(mn2->sizePolicy().hasHeightForWidth());
         mn2->setSizePolicy(sizePolicy);
+        mn2->setCheckable(false);
+        mn2->setAutoExclusive(true);
 
         minus->addWidget(mn2);
 
-        mn3 = new QToolButton(layoutWidget);
+        mn3 = new QPushButton(layoutWidget);
+        freeMovePushGroup->addButton(mn3);
         mn3->setObjectName(QString::fromUtf8("mn3"));
         sizePolicy.setHeightForWidth(mn3->sizePolicy().hasHeightForWidth());
         mn3->setSizePolicy(sizePolicy);
+        mn3->setCheckable(false);
+        mn3->setAutoExclusive(true);
 
         minus->addWidget(mn3);
 
-        mn4 = new QToolButton(layoutWidget);
+        mn4 = new QPushButton(layoutWidget);
+        freeMovePushGroup->addButton(mn4);
         mn4->setObjectName(QString::fromUtf8("mn4"));
         sizePolicy.setHeightForWidth(mn4->sizePolicy().hasHeightForWidth());
         mn4->setSizePolicy(sizePolicy);
+        mn4->setCheckable(false);
+        mn4->setAutoExclusive(true);
 
         minus->addWidget(mn4);
 
-        mn5 = new QToolButton(layoutWidget);
+        mn5 = new QPushButton(layoutWidget);
+        freeMovePushGroup->addButton(mn5);
         mn5->setObjectName(QString::fromUtf8("mn5"));
         sizePolicy.setHeightForWidth(mn5->sizePolicy().hasHeightForWidth());
         mn5->setSizePolicy(sizePolicy);
+        mn5->setCheckable(false);
+        mn5->setAutoExclusive(true);
 
         minus->addWidget(mn5);
 
-        mn6 = new QToolButton(layoutWidget);
+        mn6 = new QPushButton(layoutWidget);
+        freeMovePushGroup->addButton(mn6);
         mn6->setObjectName(QString::fromUtf8("mn6"));
         sizePolicy.setHeightForWidth(mn6->sizePolicy().hasHeightForWidth());
         mn6->setSizePolicy(sizePolicy);
+        mn6->setCheckable(false);
+        mn6->setAutoExclusive(true);
 
         minus->addWidget(mn6);
 
@@ -185,55 +208,124 @@ public:
         plus = new QVBoxLayout();
         plus->setObjectName(QString::fromUtf8("plus"));
         plus->setSizeConstraint(QLayout::SetMinimumSize);
-        mp1 = new QToolButton(layoutWidget);
+        mp1 = new QPushButton(layoutWidget);
+        freeMovePushGroup->addButton(mp1);
         mp1->setObjectName(QString::fromUtf8("mp1"));
         sizePolicy.setHeightForWidth(mp1->sizePolicy().hasHeightForWidth());
         mp1->setSizePolicy(sizePolicy);
+        mp1->setCheckable(false);
+        mp1->setAutoExclusive(true);
 
         plus->addWidget(mp1);
 
-        mp2 = new QToolButton(layoutWidget);
+        mp2 = new QPushButton(layoutWidget);
+        freeMovePushGroup->addButton(mp2);
         mp2->setObjectName(QString::fromUtf8("mp2"));
         sizePolicy.setHeightForWidth(mp2->sizePolicy().hasHeightForWidth());
         mp2->setSizePolicy(sizePolicy);
+        mp2->setCheckable(false);
+        mp2->setAutoExclusive(true);
 
         plus->addWidget(mp2);
 
-        mp3 = new QToolButton(layoutWidget);
+        mp3 = new QPushButton(layoutWidget);
+        freeMovePushGroup->addButton(mp3);
         mp3->setObjectName(QString::fromUtf8("mp3"));
         sizePolicy.setHeightForWidth(mp3->sizePolicy().hasHeightForWidth());
         mp3->setSizePolicy(sizePolicy);
+        mp3->setCheckable(false);
+        mp3->setAutoRepeat(false);
+        mp3->setAutoExclusive(true);
 
         plus->addWidget(mp3);
 
-        mp4 = new QToolButton(layoutWidget);
+        mp4 = new QPushButton(layoutWidget);
+        freeMovePushGroup->addButton(mp4);
         mp4->setObjectName(QString::fromUtf8("mp4"));
         sizePolicy.setHeightForWidth(mp4->sizePolicy().hasHeightForWidth());
         mp4->setSizePolicy(sizePolicy);
+        mp4->setCheckable(false);
+        mp4->setAutoRepeat(false);
+        mp4->setAutoExclusive(true);
 
         plus->addWidget(mp4);
 
-        mp5 = new QToolButton(layoutWidget);
+        mp5 = new QPushButton(layoutWidget);
+        freeMovePushGroup->addButton(mp5);
         mp5->setObjectName(QString::fromUtf8("mp5"));
         sizePolicy.setHeightForWidth(mp5->sizePolicy().hasHeightForWidth());
         mp5->setSizePolicy(sizePolicy);
+        mp5->setCheckable(false);
+        mp5->setAutoRepeat(false);
+        mp5->setAutoExclusive(true);
 
         plus->addWidget(mp5);
 
-        mp6 = new QToolButton(layoutWidget);
+        mp6 = new QPushButton(layoutWidget);
+        freeMovePushGroup->addButton(mp6);
         mp6->setObjectName(QString::fromUtf8("mp6"));
         sizePolicy.setHeightForWidth(mp6->sizePolicy().hasHeightForWidth());
         mp6->setSizePolicy(sizePolicy);
+        mp6->setCheckable(false);
+        mp6->setAutoRepeat(false);
 
         plus->addWidget(mp6);
 
 
         horizontalLayout->addLayout(plus);
 
+        widget = new QWidget(FreeMoveWindow);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(171, 10, 91, 251));
+        verticalLayout = new QVBoxLayout(widget);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        buttonBox = new QDialogButtonBox(widget);
+        buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
+        QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Fixed);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(buttonBox->sizePolicy().hasHeightForWidth());
+        buttonBox->setSizePolicy(sizePolicy2);
+        buttonBox->setOrientation(Qt::Vertical);
+        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
+
+        verticalLayout->addWidget(buttonBox);
+
+        pwmSpeed = new QSlider(widget);
+        pwmSpeed->setObjectName(QString::fromUtf8("pwmSpeed"));
+        pwmSpeed->setMaximumSize(QSize(500, 171));
+        pwmSpeed->setMouseTracking(true);
+        pwmSpeed->setAutoFillBackground(true);
+        pwmSpeed->setMaximum(255);
+        pwmSpeed->setSingleStep(5);
+        pwmSpeed->setPageStep(50);
+        pwmSpeed->setValue(120);
+        pwmSpeed->setOrientation(Qt::Vertical);
+        pwmSpeed->setTickPosition(QSlider::NoTicks);
+        pwmSpeed->setTickInterval(0);
+
+        verticalLayout->addWidget(pwmSpeed);
+
+        lcdNumber = new QLCDNumber(widget);
+        lcdNumber->setObjectName(QString::fromUtf8("lcdNumber"));
+        sizePolicy.setHeightForWidth(lcdNumber->sizePolicy().hasHeightForWidth());
+        lcdNumber->setSizePolicy(sizePolicy);
+        lcdNumber->setFrameShape(QFrame::Box);
+        lcdNumber->setFrameShadow(QFrame::Raised);
+        lcdNumber->setLineWidth(2);
+        lcdNumber->setSmallDecimalPoint(true);
+        lcdNumber->setDigitCount(3);
+        lcdNumber->setSegmentStyle(QLCDNumber::Flat);
+        lcdNumber->setProperty("intValue", QVariant(120));
+
+        verticalLayout->addWidget(lcdNumber);
+
 
         retranslateUi(FreeMoveWindow);
         QObject::connect(buttonBox, SIGNAL(accepted()), FreeMoveWindow, SLOT(accept()));
         QObject::connect(buttonBox, SIGNAL(rejected()), FreeMoveWindow, SLOT(reject()));
+        QObject::connect(pwmSpeed, SIGNAL(valueChanged(int)), lcdNumber, SLOT(display(int)));
 
         QMetaObject::connectSlotsByName(FreeMoveWindow);
     } // setupUi

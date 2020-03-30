@@ -45,8 +45,8 @@ MainWindow::MainWindow(QWidget *parent) :
     pDes[0] = ui->xDes;
     pDes[1] = ui->yDes;
     pDes[2] = ui->zDes;
-    pOri[0] = ui->bdDes;
-    pOri[1] = ui->wdDes;
+    pOri[0] = ui->betaDes;
+    pOri[1] = ui->omegaDes;
     pinzaInv = ui->pinzaInv;
     gomito[0] = ui->gH;
     gomito[1] = ui->gL;
@@ -58,43 +58,6 @@ MainWindow::MainWindow(QWidget *parent) :
     enHome[Mot4] = ui->en4Home;
     enHome[Mot5] = ui->en5Home;
     enHome[Mot6] = ui->en6Home;
-
-    /// Button Signal
-    //Parameter Scorbot
-    connect(ui->scorParamLoad, SIGNAL (released()), this,
-            SLOT (scorParamLoad_handler()));    // Parametri dimensionali Scorbot da File System
-    connect(ui->scorParamReset, SIGNAL (released()), this,
-            SLOT (scorParamReset_handler()));    // Parametri dimensionali Scorbot
-
-    //Encoder send
-    connect(ui->sendRef, SIGNAL (released()), this, SLOT (sendRef_handler()));
-
-    //External windows
-    connect(ui->scorBoardSetup, SIGNAL (released()), this, SLOT (boardSet_handler()));
-    connect(ui->controlSet, SIGNAL (released()), this, SLOT (controllSet_handler()));
-    connect(ui->freeMove, SIGNAL (released()), this, SLOT (freeMove_handler()));
-    /// Data change
-    //dir en
-    for (int i = Mot1; i < nMot; ++i) {
-        connect(enRef[i], SIGNAL (valueChanged(int)), this, SLOT (cinCalc_handler()));
-    }
-
-    //dir deg
-    for (int i = Mot1; i < nMot - 1; ++i) {
-        connect(thetaRef[i], SIGNAL (valueChanged(double)), this, SLOT (cinCalc_handler()));
-    }
-    connect(pinzaRef, SIGNAL (valueChanged(int)), this, SLOT (cinCalc_handler()));
-    //inv
-    for (int i = 0; i < 3; ++i) {
-        connect(pDes[i], SIGNAL (valueChanged(double)), this, SLOT (cinCalc_handler()));
-    }
-    for (int i = 0; i < 2; ++i) {
-        connect(pOri[i], SIGNAL (valueChanged(double)), this, SLOT (cinCalc_handler()));
-    }
-    connect(pinzaInv, SIGNAL (valueChanged(int)), this, SLOT (cinCalc_handler()));
-    for (int i = 0; i < 2; ++i) {
-        connect(gomito[i], SIGNAL (toggled(bool)), this, SLOT (cinCalc_handler()));
-    }
 
     ///##########################################################
     enRead[Mot1] = ui->enR1;
@@ -133,6 +96,49 @@ MainWindow::MainWindow(QWidget *parent) :
     curRead[Mot4] = ui->mA4;
     curRead[Mot5] = ui->mA5;
     curRead[Mot6] = ui->mA6;
+
+    tabReference->setCurrentIndex(0);
+
+    /// Button Signal
+    //Parameter Scorbot
+    connect(ui->scorParamLoad, SIGNAL (released()), this,
+            SLOT (scorParamLoad_handler()));    // Parametri dimensionali Scorbot da File System
+    connect(ui->scorParamReset, SIGNAL (released()), this,
+            SLOT (scorParamReset_handler()));    // Parametri dimensionali Scorbot
+
+    //Encoder send
+    connect(ui->sendRef, SIGNAL (released()), this, SLOT (sendRef_handler()));
+
+    //External windows
+    connect(ui->scorBoardSetup, SIGNAL (released()), this, SLOT (boardSet_handler()));
+    connect(ui->controlSet, SIGNAL (released()), this, SLOT (controllSet_handler()));
+    connect(ui->freeMove, SIGNAL (released()), this, SLOT (freeMove_handler()));
+    /// Data change
+    //dir en
+    for (int i = Mot1; i < nMot; ++i) {
+        connect(enRef[i], SIGNAL (valueChanged(int)), this, SLOT (cinCalc_handler()));
+    }
+
+    //dir deg
+    for (int i = Mot1; i < nMot - 1; ++i) {
+        connect(thetaRef[i], SIGNAL (valueChanged(double)), this, SLOT (cinCalc_handler()));
+    }
+    connect(pinzaRef, SIGNAL (valueChanged(int)), this, SLOT (cinCalc_handler()));
+    //inv
+    for (int i = 0; i < 3; ++i) {
+        connect(pDes[i], SIGNAL (valueChanged(double)), this, SLOT (cinCalc_handler()));
+    }
+    for (int i = 0; i < 2; ++i) {
+        connect(pOri[i], SIGNAL (valueChanged(double)), this, SLOT (cinCalc_handler()));
+    }
+    connect(pinzaInv, SIGNAL (valueChanged(int)), this, SLOT (cinCalc_handler()));
+    for (int i = 0; i < 2; ++i) {
+        connect(gomito[i], SIGNAL (toggled(bool)), this, SLOT (cinCalc_handler()));
+    }
+
+    connect(this, SIGNAL (newEncoderShow()), this, SLOT (encoderShow()));
+    connect(this, SIGNAL (newCurrentShow()), this, SLOT (currentShow()));
+
 }
 
 MainWindow::~MainWindow() {
@@ -146,75 +152,115 @@ MainWindow::~MainWindow() {
 
 
 void MainWindow::encoderShow() {
-    mEncoder swEn, swEnErr;
+    QString s;  // variabile utitly per impostare i numeri col giusto numero di cifre decimali
+
+    mEncoder swEn, swObj, swEnErr;
     for (int i = Mot1; i < nMot; ++i) {
         swEn[i] = feedBack->getEn((motCode) i) - offset->getEn((motCode) i);
         enRead[i]->setNum(swEn[i]);
-        swEnErr[i] = swEn[i] - ref->getEn((motCode) i);
+        swObj[i] = ref->getEn((motCode) i);
+        swEnErr[i] = swObj[i] - swEn[i];
         enReadErr[i]->setNum(swEnErr[i]);
     }
 
     //Conversion En --> Theta
-    conParams par;
+    thetaMot th, thObj, thErr;
+    conParamsUpdate();
+    calc->en2th(swEn, th, &par);
+    calc->en2th(swObj, thObj, &par);
+//    calc->en2th(swEnErr, thErr, &par);
+    for (int i = Mot1; i < nMot; ++i) {
+        s = s.setNum(qRadiansToDegrees(th[i]), 'f', 2);
+        thetaRead[i]->setText(s);
+        thErr[i] = th[i] - thObj[i];
+        s = s.setNum(qRadiansToDegrees(thErr[i]), 'f', 2);
+        thetaReadErr[i]->setText(s);
+    }
+
+    positionRobot pos, posObj;
+    geometryRobotUpdate();
+    // Tetha --> claw position now
+    calc->dirCin(th, &pos, &g);
+
+    s = s.setNum(pos.x, 'f', 2);
+    ui->xRead->setText(s);
+
+    s = s.setNum(pos.y, 'f', 2);
+    ui->yRead->setText(s);
+
+    s = s.setNum(pos.z, 'f', 2);
+    ui->zRead->setText(s);
+
+    s = s.setNum(qRadiansToDegrees(pos.beta), 'f', 2);
+    ui->betaRead->setText(s);
+
+    s = s.setNum(qRadiansToDegrees(pos.omega), 'f', 2);
+    ui->omegaRead->setText(s);
+
+    int value = (int) (th[Mot6] * 100.0);
+    if (value < 0)
+        value = 0;
+    if (value > 100)
+        value = 100;
+    ui->pinzaRead->setValue(value);
+
+    // TethaObj && Theta now --> claw position error
+    calc->dirCin(thObj, &posObj, &g);
+
+    s = s.setNum(posObj.x - pos.x, 'f', 2);
+    ui->xEr->setText(s);
+
+    s = s.setNum(posObj.y - pos.y, 'f', 2);
+    ui->yEr->setText(s);
+
+    s = s.setNum(posObj.z - pos.z, 'f', 2);
+    ui->zEr->setText(s);
+
+    s = s.setNum(qRadiansToDegrees(posObj.beta - pos.beta), 'f', 2);
+    ui->betaEr->setText(s);
+
+    s = s.setNum(qRadiansToDegrees(posObj.omega - pos.omega), 'f', 2);
+    ui->omegaEr->setText(s);
+
+}
+
+void MainWindow::currentShow() {
+    for (int i = Mot1; i < nMot; ++i) {
+        curRead[i]->setNum(feedBack->getCurrent((motCode) i));
+    }
+}
+
+void MainWindow::conParamsUpdate() {
     par.alpha = ui->alphaRobot->value();
     par.beta = ui->betaRobot->value();
     par.gamma = ui->gammaRobot->value();
     par.delta = ui->deltaRobot->value();
     par.maxClaw = setBoardWin->setting->getSetting().maxEn[Mot6];
-    thetaMot th, thErr;
-    calc->en2th(swEn, th, &par);
-    calc->en2th(swEnErr, thErr, &par);
-    QString s;
-    for (int i = Mot1; i < nMot; ++i) {
-        s = s.setNum(th[i], 'f', 2);
-        thetaRead[i]->setText(s);
-        s = s.setNum(thErr[i], 'f', 2);
-        thetaReadErr[i]->setText(s);
-    }
+}
 
-    //Dir Cinematic
-//    l1 = self.structVal[0].value()
-//    l2 = self.structVal[1].value()
-//    l3 = self.structVal[2].value()
-//    d1 = self.structVal[3].value()
-//    d5 = self.structVal[4].value()
-//    betad = self.structVal[5].value()
-//    omegad = self.structVal[6].value()
-//
-////# conversione degli angoli in radianti
-//    t1r = math.radians(lista[0])
-//    t2r = math.radians(lista[1])
-//    t3r = math.radians(lista[2])
-//    t4r = math.radians(lista[3])
-//    t5r = math.radians(lista[4])
-//# calcolo della posizione del polso
-//    xpolso = math.cos(t1r) * (l1 + l2 * math.cos(t2r) + l3 * math.cos(t2r + t3r))
-//    ypolso = math.sin(t1r) * (l1 + l2 * math.cos(t2r) + l3 * math.cos(t2r + t3r))
-//    zpolso = d1 - l2 * math.sin(t2r) - l3 * math.sin(t2r + t3r)
-//# calcolo della posizione della pinza(inserita direttamente nella lista)
-//    ax.append(xpolso - math.cos(t1r) * d5 * math.sin(t2r + t3r + t4r))
-//    ax.append(ypolso - math.sin(t1r) * d5 * math.sin(t2r + t3r + t4r))
-//    ax.append(zpolso - d5 * math.cos(t2r + t3r + t4r))
-//    return ax
+void MainWindow::geometryRobotUpdate() {
+    g.l1 = ui->l1Robot->value();
+    g.l2 = ui->l2Robot->value();
+    g.l3 = ui->l3Robot->value();
+    g.d1 = ui->d1Robot->value();
+    g.d5 = ui->d5Robot->value();
 }
 
 void MainWindow::encoderShow(EncoderMot *e) {
     feedBack->copyEn(*e);
-    encoderShow();
+    emit newEncoderShow();
 
 }
 
 void MainWindow::encoderShow(EncoderMot *e, EncoderMot *off) {
     feedBack->copyEn(*e);
     offset->copyEn(*off);
-    encoderShow();
+    emit newEncoderShow();
 }
 
 void MainWindow::currentShow(CurrentMot *c) {
     feedBack->copyCur(*c);
-    for (int i = Mot1; i < nMot; ++i) {
-        curRead[i]->setNum(feedBack->getCurrent((motCode) i));
-    }
+    emit newCurrentShow();
 }
 
 
@@ -240,10 +286,10 @@ void MainWindow::scorParamReset_handler() {
     ui->d1Robot->setValue(2.0);
     ui->d5Robot->setValue(3.0);
 
-    ui->alphaRobot->setValue(0.41);
-    ui->betaRobot->setValue(0.2);
-    ui->gammaRobot->setValue(0.3);
-    ui->deltaRobot->setValue(0.4);
+    ui->alphaRobot->setValue(0.1);
+    ui->betaRobot->setValue(0.1);
+    ui->gammaRobot->setValue(0.1);
+    ui->deltaRobot->setValue(0.1);
 
     for (int i = 0; i < nMot; ++i) {
         enHome[i]->setValue(0);
@@ -279,18 +325,102 @@ void MainWindow::cinCalc_handler() {
     pinzaInv->blockSignals(true);
     for (int i = 0; i < 2; ++i)
         gomito[i]->blockSignals(true);
+
+    // Variabili di appoggio nei vari switch
+    mEncoder en;
+    thetaMot th;
+    positionRobot pos;
+    bool gom;
+
+    conParamsUpdate();
+    geometryRobotUpdate();
     switch (tabReference->currentIndex()) {
-        case DirEn:
-            //todo: Leggi i valori e calcola DirDeg e Inv
+        case DirEn: // Leggi i valori e calcola DirDeg e Inv
+            //Creo il vettore dall'interfaccia grafica, degli encoder desiderati
+            for (char i = Mot1; i < nMot; i++) {
+                en[i] = enRef[i]->value();
+            }
+
+            //Calcolo i theta equivalenti e li scrivo sull'intefaccia grafica
+            calc->en2th(en, th, &par);
+            for (int i = 0; i < Mot6; ++i) {
+                thetaRef[i]->setValue(qRadiansToDegrees(th[i]));
+            }
+            pinzaRef->setValue(th[Mot6] * 100);
+
+            // Calcolo la cinematica Diretta e la scrivo sull'interfaccia grafica
+            calc->dirCin(th, &pos, &g);
+            ui->xDes->setValue(pos.x);
+            ui->yDes->setValue(pos.y);
+            ui->zDes->setValue(pos.z);
+            ui->betaDes->setValue(qRadiansToDegrees(pos.beta));
+            ui->omegaDes->setValue(qRadiansToDegrees(pos.omega));
+            pinzaInv->setValue(pinzaRef->value());
+
+            ui->gL->setAutoExclusive(false);
+            ui->gL->setAutoExclusive(false);
+            ui->gL->setChecked(false);
+            ui->gH->setChecked(false);
+            ui->gL->setAutoExclusive(true);
+            ui->gH->setAutoExclusive(true);
+
             break;
-        case DirDeg:
-            //todo: Leggi i valori e calcola DirEn e Inv
+        case DirDeg: // Leggi i valori e calcola DirEn e Inv
+            //Creo il vettore dall'interfaccia grafica, dei theta desiderati
+            for (int i = 0; i < Mot6; ++i) {
+                th[i] = qDegreesToRadians(thetaRef[i]->value());
+            }
+            th[Mot6] = pinzaRef->value() / 100.0;
+
+            //Calcolo gli encoder equivalenti e li scrivo sull'intefaccia grafica
+            calc->th2en(th, en, &par);
+            for (char i = Mot1; i < nMot; i++) {
+                enRef[i]->setValue(en[i]);
+            }
+
+            // Calcolo la cinematica Diretta e la scrivo sull'interfaccia grafica
+            calc->dirCin(th, &pos, &g);
+            ui->xDes->setValue(pos.x);
+            ui->yDes->setValue(pos.y);
+            ui->zDes->setValue(pos.z);
+            ui->betaDes->setValue(qRadiansToDegrees(pos.beta));
+            ui->omegaDes->setValue(qRadiansToDegrees(pos.omega));
+            pinzaInv->setValue(pinzaRef->value());
+
+            ui->gL->setAutoExclusive(false);
+            ui->gL->setAutoExclusive(false);
+            ui->gL->setChecked(false);
+            ui->gH->setChecked(false);
+            ui->gL->setAutoExclusive(true);
+            ui->gH->setAutoExclusive(true);
             break;
-        case Inv:
-            //todo: Leggi i valori e calcola DirEn e DirDeg
-            break;
-        case RobSet:
-            //todo: Leggi i valori e calcola Inv, da lì DirEn e DirDeg
+        case Inv: //todo: Leggi i valori e calcola DirEn e DirDeg
+        case RobSet: //todo: Leggi i valori e calcola Inv, da lì DirEn e DirDeg
+            //Creo il vettore dall'interfaccia grafica, delle coordinate desiderate e del gomito
+            pos.x = ui->xDes->value();
+            pos.y = ui->yDes->value();
+            pos.z = ui->zDes->value();
+            pos.beta = qDegreesToRadians(ui->betaDes->value());
+            pos.omega = qDegreesToRadians(ui->omegaDes->value());
+            if (!ui->gH->isChecked() && ui->gL->isChecked())
+                ui->gH->setChecked(true);
+            gom = ui->gH->isChecked(); //auto exlusive
+
+            //Calcolo i theta equivalenti e li scrivo sull'intefaccia grafica
+            calc->invCin(&pos, &g, gom, th);
+            for (int i = 0; i < Mot6; ++i) {
+                thetaRef[i]->setValue(qRadiansToDegrees(th[i]));
+            }
+            pinzaRef->setValue(pinzaInv->value());
+            th[Mot6] = pinzaInv->value() / 100.0;
+
+
+            //Calcolo gli encoder equivalenti e li scrivo sull'intefaccia grafica
+            calc->th2en(th, en, &par);
+            for (char i = Mot1; i < nMot; i++) {
+                enRef[i]->setValue(en[i]);
+            }
+
             break;
         default:
             std::cerr << "cinCalc_handler(), tap in Default:" << tabReference->currentIndex() << "\n";

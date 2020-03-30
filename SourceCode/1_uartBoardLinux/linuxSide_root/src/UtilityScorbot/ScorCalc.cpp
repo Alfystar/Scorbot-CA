@@ -108,7 +108,7 @@ void ScoreCalc::en2th(mEncoder e, thetaMot t, conParams *par) {
     t[Mot2] = -par->beta * e[Mot2];
 
     t[Mot3] = par->beta * (e[Mot2] + e[Mot3]);
-    t[Mot3] = 1;
+
     t[Mot4] = -par->beta * e[Mot3] + par->gamma * (e[Mot4] - e[Mot5]);
 
     t[Mot5] = par->delta * (e[Mot4] + e[Mot5]);
@@ -116,6 +116,10 @@ void ScoreCalc::en2th(mEncoder e, thetaMot t, conParams *par) {
     if (par->maxClaw != 0) {
         t[Mot6] = e[Mot6] / (double) par->maxClaw;
     }
+    if (t[Mot6] < 0)
+        t[Mot6] = 0;
+    if (t[Mot6] > 1)
+        t[Mot6] = 1;
 
     for (int i = 0; i < Mot6; ++i) {
         if (abs(t[i]) < 0.001)
@@ -141,10 +145,29 @@ void ScoreCalc::th2en(thetaMot t, mEncoder e, conParams *par) {
 
 }
 
-void ScoreCalc::dirCin(thetaMot t, positionRobot *p) {
-
+void ScoreCalc::dirCin(thetaMot t, positionRobot *p, geometryRobot *g) {
+    //// calcolo della posizione del polso
+    double xpolso = cos(t[Mot1]) * (g->l1 + g->l2 * cos(t[Mot2]) + g->l3 * cos(t[Mot2] + t[Mot3]));
+    double ypolso = sin(t[Mot1]) * (g->l1 + g->l2 * cos(t[Mot2]) + g->l3 * cos(t[Mot2] + t[Mot3]));
+    double zpolso = g->d1 - g->l2 * sin(t[Mot2]) - g->l3 * sin(t[Mot2] + t[Mot3]);
+    //// calcolo della posizione della pinza
+    p->x = (xpolso - cos(t[Mot1]) * g->d5 * sin(t[Mot2] + t[Mot3] + t[Mot4]));
+    p->y = (ypolso - sin(t[Mot1]) * g->d5 * sin(t[Mot2] + t[Mot3] + t[Mot4]));
+    p->z = (zpolso - g->d5 * cos(t[Mot2] + t[Mot3] + t[Mot4]));
+    p->beta = t[Mot2] + t[Mot3] + t[Mot4] + M_PIf64 / 2.0;
+    p->omega = t[Mot5];
 }
 
-void ScoreCalc::invCin(positionRobot *p, thetaMot t) {
-
+int ScoreCalc::invCin(positionRobot *p, geometryRobot *g, bool gomito, thetaMot t) {
+    t[Mot1] = atan2(p->y, p->x);
+    double A1 = p->x * cos(t[Mot1]) + p->y * sin(t[Mot1]) - g->d5 * cos(p->beta) - g->l1;
+    double A2 = g->d1 - p->z - g->d5 * sin(p->beta);
+    t[Mot3] = (2 * gomito - 1) * acos((pow(A1, 2) + pow(A2, 2) - pow(g->l2, 2) - pow(g->l3, 2)) / (2 * g->l2 * g->l3));
+    if (t[Mot3] == NAN)
+        return -1;
+    t[Mot2] = atan2((g->l2 + g->l3 * cos(t[Mot3])) * A2 - g->l3 * sin(t[Mot3]) * A1,
+                    (g->l2 + g->l3 * cos(t[Mot3])) * A2 + g->l3 * sin(t[Mot3]) * A1);
+    t[Mot4] = p->beta - t[Mot2] + t[Mot3] - M_PIf64 / 2.0;
+    t[Mot5] = p->omega;
+    return 0;
 }

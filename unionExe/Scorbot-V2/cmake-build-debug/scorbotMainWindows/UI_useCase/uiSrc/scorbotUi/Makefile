@@ -140,32 +140,32 @@ scorbotUi_autogen/fast:
 	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/build
 .PHONY : scorbotUi_autogen/fast
 
-freeMoveWinsow.o: freeMoveWinsow.cpp.o
+freeMoveWindow.o: freeMoveWindow.cpp.o
 
-.PHONY : freeMoveWinsow.o
+.PHONY : freeMoveWindow.o
 
 # target to build an object file
-freeMoveWinsow.cpp.o:
-	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.o
-.PHONY : freeMoveWinsow.cpp.o
+freeMoveWindow.cpp.o:
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWindow.cpp.o
+.PHONY : freeMoveWindow.cpp.o
 
-freeMoveWinsow.i: freeMoveWinsow.cpp.i
+freeMoveWindow.i: freeMoveWindow.cpp.i
 
-.PHONY : freeMoveWinsow.i
+.PHONY : freeMoveWindow.i
 
 # target to preprocess a source file
-freeMoveWinsow.cpp.i:
-	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.i
-.PHONY : freeMoveWinsow.cpp.i
+freeMoveWindow.cpp.i:
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWindow.cpp.i
+.PHONY : freeMoveWindow.cpp.i
 
-freeMoveWinsow.s: freeMoveWinsow.cpp.s
+freeMoveWindow.s: freeMoveWindow.cpp.s
 
-.PHONY : freeMoveWinsow.s
+.PHONY : freeMoveWindow.s
 
 # target to generate assembly for a file
-freeMoveWinsow.cpp.s:
-	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWinsow.cpp.s
-.PHONY : freeMoveWinsow.cpp.s
+freeMoveWindow.cpp.s:
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/freeMoveWindow.cpp.s
+.PHONY : freeMoveWindow.cpp.s
 
 mainwindow.o: mainwindow.cpp.o
 
@@ -312,9 +312,9 @@ help:
 	@echo "... scorbotUi"
 	@echo "... edit_cache"
 	@echo "... scorbotUi_autogen"
-	@echo "... freeMoveWinsow.o"
-	@echo "... freeMoveWinsow.i"
-	@echo "... freeMoveWinsow.s"
+	@echo "... freeMoveWindow.o"
+	@echo "... freeMoveWindow.i"
+	@echo "... freeMoveWindow.s"
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"

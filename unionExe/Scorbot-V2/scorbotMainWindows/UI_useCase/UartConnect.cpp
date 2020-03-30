@@ -8,7 +8,7 @@
 #include "uiSrc/scorbotUi/ui_source/ui_uartChoise.h" //classe generata dal file di designer in automatico dal cmake
 
 UartConnect::UartConnect(MainWindow *parent) : UartChoise(parent) {
-    std::cout << "UartConnect constructor\n";
+
     this->win = parent;
 
     connect(win->ui->actionConnection_Start, SIGNAL (triggered()), this, SLOT (serialConnect_handler()));

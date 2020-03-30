@@ -104,9 +104,9 @@ public:
     QLabel *valMinScr_6;
     QFormLayout *formLayout_7;
     QLabel *en1Label_6;
-    QDoubleSpinBox *bdDes;
+    QDoubleSpinBox *betaDes;
     QLabel *en2Label_6;
-    QDoubleSpinBox *wdDes;
+    QDoubleSpinBox *omegaDes;
     QSpacerItem *verticalSpacer_5;
     QSlider *pinzaInv;
     QLabel *en6Label_5;
@@ -162,7 +162,6 @@ public:
     QDoubleSpinBox *deltaRobot;
     QPushButton *scorParamLoad;
     QPushButton *scorParamReset;
-    QPushButton *sendRef;
     QWidget *plot;
     QWidget *layoutWidget4;
     QVBoxLayout *verticalLayout_21;
@@ -185,8 +184,8 @@ public:
     QLabel *xRead;
     QLabel *yRead;
     QLabel *zRead;
-    QLabel *bdRead;
-    QLabel *wdRead;
+    QLabel *betaRead;
+    QLabel *omegaRead;
     QWidget *layoutWidget6;
     QHBoxLayout *horizontalLayout_4;
     QVBoxLayout *verticalLayout_18;
@@ -199,8 +198,8 @@ public:
     QLabel *xEr;
     QLabel *yEr;
     QLabel *zEr;
-    QLabel *bdEr;
-    QLabel *wdEr;
+    QLabel *betaEr;
+    QLabel *omegaEr;
     QHBoxLayout *horizontalLayout_6;
     QLabel *label_8;
     QProgressBar *pinzaRead;
@@ -304,6 +303,10 @@ public:
     QCheckBox *MotPlot5;
     QCheckBox *MotPlot6;
     QLabel *image;
+    QWidget *widget;
+    QVBoxLayout *verticalLayout;
+    QPushButton *sendRef;
+    QPushButton *goHome;
     QMenuBar *menuBar;
     QMenu *menuAbout;
     QMenu *menuUartSetting;
@@ -487,7 +490,7 @@ public:
         Direct_Angular->setObjectName(QString::fromUtf8("Direct_Angular"));
         layoutWidget_13 = new QWidget(Direct_Angular);
         layoutWidget_13->setObjectName(QString::fromUtf8("layoutWidget_13"));
-        layoutWidget_13->setGeometry(QRect(10, 10, 143, 218));
+        layoutWidget_13->setGeometry(QRect(10, 10, 156, 218));
         DegRef = new QVBoxLayout(layoutWidget_13);
         DegRef->setSpacing(0);
         DegRef->setObjectName(QString::fromUtf8("DegRef"));
@@ -727,14 +730,14 @@ public:
 
         formLayout_7->setWidget(0, QFormLayout::LabelRole, en1Label_6);
 
-        bdDes = new QDoubleSpinBox(layoutWidget);
-        bdDes->setObjectName(QString::fromUtf8("bdDes"));
-        bdDes->setButtonSymbols(QAbstractSpinBox::PlusMinus);
-        bdDes->setProperty("showGroupSeparator", QVariant(false));
-        bdDes->setMinimum(-999.000000000000000);
-        bdDes->setMaximum(999.000000000000000);
+        betaDes = new QDoubleSpinBox(layoutWidget);
+        betaDes->setObjectName(QString::fromUtf8("betaDes"));
+        betaDes->setButtonSymbols(QAbstractSpinBox::PlusMinus);
+        betaDes->setProperty("showGroupSeparator", QVariant(false));
+        betaDes->setMinimum(-999.000000000000000);
+        betaDes->setMaximum(999.000000000000000);
 
-        formLayout_7->setWidget(0, QFormLayout::FieldRole, bdDes);
+        formLayout_7->setWidget(0, QFormLayout::FieldRole, betaDes);
 
         en2Label_6 = new QLabel(layoutWidget);
         en2Label_6->setObjectName(QString::fromUtf8("en2Label_6"));
@@ -745,14 +748,14 @@ public:
 
         formLayout_7->setWidget(1, QFormLayout::LabelRole, en2Label_6);
 
-        wdDes = new QDoubleSpinBox(layoutWidget);
-        wdDes->setObjectName(QString::fromUtf8("wdDes"));
-        wdDes->setButtonSymbols(QAbstractSpinBox::PlusMinus);
-        wdDes->setProperty("showGroupSeparator", QVariant(false));
-        wdDes->setMinimum(-999.000000000000000);
-        wdDes->setMaximum(999.000000000000000);
+        omegaDes = new QDoubleSpinBox(layoutWidget);
+        omegaDes->setObjectName(QString::fromUtf8("omegaDes"));
+        omegaDes->setButtonSymbols(QAbstractSpinBox::PlusMinus);
+        omegaDes->setProperty("showGroupSeparator", QVariant(false));
+        omegaDes->setMinimum(-999.000000000000000);
+        omegaDes->setMaximum(999.000000000000000);
 
-        formLayout_7->setWidget(1, QFormLayout::FieldRole, wdDes);
+        formLayout_7->setWidget(1, QFormLayout::FieldRole, omegaDes);
 
         verticalSpacer_5 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
@@ -1088,7 +1091,7 @@ public:
         alphaRobot->setMinimum(-99999.000000000000000);
         alphaRobot->setMaximum(99999.000000000000000);
         alphaRobot->setSingleStep(0.010000000000000);
-        alphaRobot->setValue(4.100000000000000);
+        alphaRobot->setValue(0.010000000000000);
 
         formLayout_3->setWidget(0, QFormLayout::FieldRole, alphaRobot);
 
@@ -1106,7 +1109,7 @@ public:
         betaRobot->setMinimum(-99999.000000000000000);
         betaRobot->setMaximum(99999.000000000000000);
         betaRobot->setSingleStep(0.010000000000000);
-        betaRobot->setValue(0.200000000000000);
+        betaRobot->setValue(0.010000000000000);
 
         formLayout_3->setWidget(1, QFormLayout::FieldRole, betaRobot);
 
@@ -1124,7 +1127,7 @@ public:
         gammaRobot->setMinimum(-99999.000000000000000);
         gammaRobot->setMaximum(99999.000000000000000);
         gammaRobot->setSingleStep(0.010000000000000);
-        gammaRobot->setValue(0.300000000000000);
+        gammaRobot->setValue(0.010000000000000);
 
         formLayout_3->setWidget(2, QFormLayout::FieldRole, gammaRobot);
 
@@ -1142,7 +1145,7 @@ public:
         deltaRobot->setMinimum(-99999.000000000000000);
         deltaRobot->setMaximum(99999.000000000000000);
         deltaRobot->setSingleStep(0.010000000000000);
-        deltaRobot->setValue(0.400000000000000);
+        deltaRobot->setValue(0.010000000000000);
 
         formLayout_3->setWidget(3, QFormLayout::FieldRole, deltaRobot);
 
@@ -1170,12 +1173,6 @@ public:
 
         splitter->addWidget(layoutWidget3);
         tabReference->addTab(RoboSetup, QString());
-        sendRef = new QPushButton(centralwidget);
-        sendRef->setObjectName(QString::fromUtf8("sendRef"));
-        sendRef->setGeometry(QRect(250, 320, 161, 41));
-        QFont font5;
-        font5.setPointSize(15);
-        sendRef->setFont(font5);
         plot = new QWidget(centralwidget);
         plot->setObjectName(QString::fromUtf8("plot"));
         plot->setGeometry(QRect(620, 210, 301, 231));
@@ -1232,14 +1229,14 @@ public:
         sizePolicy5.setVerticalStretch(0);
         sizePolicy5.setHeightForWidth(Xattuale->sizePolicy().hasHeightForWidth());
         Xattuale->setSizePolicy(sizePolicy5);
-        QFont font6;
-        font6.setFamily(QString::fromUtf8(".SF NS Text"));
-        font6.setPointSize(10);
-        font6.setBold(false);
-        font6.setItalic(false);
-        font6.setWeight(50);
-        font6.setKerning(true);
-        Xattuale->setFont(font6);
+        QFont font5;
+        font5.setFamily(QString::fromUtf8(".SF NS Text"));
+        font5.setPointSize(10);
+        font5.setBold(false);
+        font5.setItalic(false);
+        font5.setWeight(50);
+        font5.setKerning(true);
+        Xattuale->setFont(font5);
         Xattuale->setStyleSheet(QString::fromUtf8(""));
         Xattuale->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
@@ -1312,19 +1309,19 @@ public:
 
         verticalLayout_17->addWidget(zRead);
 
-        bdRead = new QLabel(layoutWidget5);
-        bdRead->setObjectName(QString::fromUtf8("bdRead"));
-        sizePolicy6.setHeightForWidth(bdRead->sizePolicy().hasHeightForWidth());
-        bdRead->setSizePolicy(sizePolicy6);
+        betaRead = new QLabel(layoutWidget5);
+        betaRead->setObjectName(QString::fromUtf8("betaRead"));
+        sizePolicy6.setHeightForWidth(betaRead->sizePolicy().hasHeightForWidth());
+        betaRead->setSizePolicy(sizePolicy6);
 
-        verticalLayout_17->addWidget(bdRead);
+        verticalLayout_17->addWidget(betaRead);
 
-        wdRead = new QLabel(layoutWidget5);
-        wdRead->setObjectName(QString::fromUtf8("wdRead"));
-        sizePolicy6.setHeightForWidth(wdRead->sizePolicy().hasHeightForWidth());
-        wdRead->setSizePolicy(sizePolicy6);
+        omegaRead = new QLabel(layoutWidget5);
+        omegaRead->setObjectName(QString::fromUtf8("omegaRead"));
+        sizePolicy6.setHeightForWidth(omegaRead->sizePolicy().hasHeightForWidth());
+        omegaRead->setSizePolicy(sizePolicy6);
 
-        verticalLayout_17->addWidget(wdRead);
+        verticalLayout_17->addWidget(omegaRead);
 
 
         horizontalLayout_5->addLayout(verticalLayout_17);
@@ -1414,21 +1411,21 @@ public:
 
         verticalLayout_19->addWidget(zEr);
 
-        bdEr = new QLabel(layoutWidget6);
-        bdEr->setObjectName(QString::fromUtf8("bdEr"));
-        sizePolicy6.setHeightForWidth(bdEr->sizePolicy().hasHeightForWidth());
-        bdEr->setSizePolicy(sizePolicy6);
-        bdEr->setFont(font4);
+        betaEr = new QLabel(layoutWidget6);
+        betaEr->setObjectName(QString::fromUtf8("betaEr"));
+        sizePolicy6.setHeightForWidth(betaEr->sizePolicy().hasHeightForWidth());
+        betaEr->setSizePolicy(sizePolicy6);
+        betaEr->setFont(font4);
 
-        verticalLayout_19->addWidget(bdEr);
+        verticalLayout_19->addWidget(betaEr);
 
-        wdEr = new QLabel(layoutWidget6);
-        wdEr->setObjectName(QString::fromUtf8("wdEr"));
-        sizePolicy6.setHeightForWidth(wdEr->sizePolicy().hasHeightForWidth());
-        wdEr->setSizePolicy(sizePolicy6);
-        wdEr->setFont(font4);
+        omegaEr = new QLabel(layoutWidget6);
+        omegaEr->setObjectName(QString::fromUtf8("omegaEr"));
+        sizePolicy6.setHeightForWidth(omegaEr->sizePolicy().hasHeightForWidth());
+        omegaEr->setSizePolicy(sizePolicy6);
+        omegaEr->setFont(font4);
 
-        verticalLayout_19->addWidget(wdEr);
+        verticalLayout_19->addWidget(omegaEr);
 
 
         horizontalLayout_4->addLayout(verticalLayout_19);
@@ -1491,8 +1488,8 @@ public:
         splitter_3->setChildrenCollapsible(false);
         layoutWidget7 = new QWidget(splitter_3);
         layoutWidget7->setObjectName(QString::fromUtf8("layoutWidget7"));
-        QFont font7;
-        layoutWidget7->setFont(font7);
+        QFont font6;
+        layoutWidget7->setFont(font6);
         horizontalLayout_2 = new QHBoxLayout(layoutWidget7);
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
         horizontalLayout_2->setContentsMargins(0, 0, 0, 0);
@@ -1617,7 +1614,7 @@ public:
         splitter_3->addWidget(layoutWidget7);
         layoutWidget8 = new QWidget(splitter_3);
         layoutWidget8->setObjectName(QString::fromUtf8("layoutWidget8"));
-        layoutWidget8->setFont(font7);
+        layoutWidget8->setFont(font6);
         horizontalLayout_3 = new QHBoxLayout(layoutWidget8);
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         horizontalLayout_3->setContentsMargins(0, 0, 0, 0);
@@ -1767,7 +1764,7 @@ public:
         splitter_2->setChildrenCollapsible(false);
         layoutWidget9 = new QWidget(splitter_2);
         layoutWidget9->setObjectName(QString::fromUtf8("layoutWidget9"));
-        layoutWidget9->setFont(font7);
+        layoutWidget9->setFont(font6);
         horizontalLayout_7 = new QHBoxLayout(layoutWidget9);
         horizontalLayout_7->setObjectName(QString::fromUtf8("horizontalLayout_7"));
         horizontalLayout_7->setContentsMargins(0, 0, 0, 0);
@@ -1892,7 +1889,7 @@ public:
         splitter_2->addWidget(layoutWidget9);
         layoutWidget10 = new QWidget(splitter_2);
         layoutWidget10->setObjectName(QString::fromUtf8("layoutWidget10"));
-        layoutWidget10->setFont(font7);
+        layoutWidget10->setFont(font6);
         horizontalLayout_8 = new QHBoxLayout(layoutWidget10);
         horizontalLayout_8->setObjectName(QString::fromUtf8("horizontalLayout_8"));
         horizontalLayout_8->setContentsMargins(0, 0, 0, 0);
@@ -2211,6 +2208,26 @@ public:
         image->setStyleSheet(QString::fromUtf8(""));
         image->setPixmap(QPixmap(QString::fromUtf8(":/img/Logo-Uni-Tor-Vergata.png_256x256.png")));
         image->setScaledContents(true);
+        widget = new QWidget(centralwidget);
+        widget->setObjectName(QString::fromUtf8("widget"));
+        widget->setGeometry(QRect(250, 320, 164, 84));
+        verticalLayout = new QVBoxLayout(widget);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        verticalLayout->setContentsMargins(0, 0, 0, 0);
+        sendRef = new QPushButton(widget);
+        sendRef->setObjectName(QString::fromUtf8("sendRef"));
+        QFont font7;
+        font7.setPointSize(15);
+        sendRef->setFont(font7);
+
+        verticalLayout->addWidget(sendRef);
+
+        goHome = new QPushButton(widget);
+        goHome->setObjectName(QString::fromUtf8("goHome"));
+        goHome->setFont(font7);
+
+        verticalLayout->addWidget(goHome);
+
         MainWindow->setCentralWidget(centralwidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -2264,9 +2281,9 @@ public:
         QWidget::setTabOrder(pinzaRef, xDes);
         QWidget::setTabOrder(xDes, yDes);
         QWidget::setTabOrder(yDes, zDes);
-        QWidget::setTabOrder(zDes, bdDes);
-        QWidget::setTabOrder(bdDes, wdDes);
-        QWidget::setTabOrder(wdDes, gH);
+        QWidget::setTabOrder(zDes, betaDes);
+        QWidget::setTabOrder(betaDes, omegaDes);
+        QWidget::setTabOrder(omegaDes, gH);
         QWidget::setTabOrder(gH, gL);
         QWidget::setTabOrder(gL, en1Home);
         QWidget::setTabOrder(en1Home, en2Home);
@@ -2306,7 +2323,7 @@ public:
 
         retranslateUi(MainWindow);
 
-        tabReference->setCurrentIndex(3);
+        tabReference->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(MainWindow);
@@ -2335,7 +2352,7 @@ public:
         en5Label_3->setText(QCoreApplication::translate("MainWindow", "En 5", nullptr));
         en6Label_3->setText(QCoreApplication::translate("MainWindow", "En 6", nullptr));
         tabReference->setTabText(tabReference->indexOf(Direct), QCoreApplication::translate("MainWindow", "Dir en", nullptr));
-        valMinScr_4->setText(QCoreApplication::translate("MainWindow", "Angle Reference", nullptr));
+        valMinScr_4->setText(QCoreApplication::translate("MainWindow", "Angle Reference [\302\260]", nullptr));
         en1Label_4->setText(QCoreApplication::translate("MainWindow", "\316\2701", nullptr));
         en2Label_4->setText(QCoreApplication::translate("MainWindow", "\316\2702", nullptr));
         en3Label_4->setText(QCoreApplication::translate("MainWindow", "\316\2703", nullptr));
@@ -2347,7 +2364,7 @@ public:
         en1Label_5->setText(QCoreApplication::translate("MainWindow", "Xdes", nullptr));
         en2Label_5->setText(QCoreApplication::translate("MainWindow", "Ydes", nullptr));
         en3Label_5->setText(QCoreApplication::translate("MainWindow", "Zdes", nullptr));
-        valMinScr_6->setText(QCoreApplication::translate("MainWindow", "Orientamento", nullptr));
+        valMinScr_6->setText(QCoreApplication::translate("MainWindow", "Orientamento [\302\260]", nullptr));
         en1Label_6->setText(QCoreApplication::translate("MainWindow", "\316\262d", nullptr));
         en2Label_6->setText(QCoreApplication::translate("MainWindow", "\317\211d", nullptr));
         en6Label_5->setText(QCoreApplication::translate("MainWindow", "Pinza %", nullptr));
@@ -2369,7 +2386,10 @@ public:
         l4Label->setText(QCoreApplication::translate("MainWindow", "d1", nullptr));
         l5Label->setText(QCoreApplication::translate("MainWindow", "d5", nullptr));
         scorSwHome->setText(QCoreApplication::translate("MainWindow", "SW Home", nullptr));
-        label_2->setText(QCoreApplication::translate("MainWindow", "En \342\206\243 Deg", nullptr));
+#if QT_CONFIG(tooltip)
+        label_2->setToolTip(QCoreApplication::translate("MainWindow", "<html><head/><body><p align=\"center\">Costanti per ottenere Radianti</p></body></html>", nullptr));
+#endif // QT_CONFIG(tooltip)
+        label_2->setText(QCoreApplication::translate("MainWindow", "En \342\206\243 Rad", nullptr));
         aLabel->setText(QCoreApplication::translate("MainWindow", "\316\261", nullptr));
         bLabel->setText(QCoreApplication::translate("MainWindow", "\316\262", nullptr));
         cLabel->setText(QCoreApplication::translate("MainWindow", "\316\263", nullptr));
@@ -2377,21 +2397,20 @@ public:
         scorParamLoad->setText(QCoreApplication::translate("MainWindow", "Load Parameter", nullptr));
         scorParamReset->setText(QCoreApplication::translate("MainWindow", "Reset", nullptr));
         tabReference->setTabText(tabReference->indexOf(RoboSetup), QCoreApplication::translate("MainWindow", "Robot Setup", nullptr));
-        sendRef->setText(QCoreApplication::translate("MainWindow", "Send Reference", nullptr));
         scorBoardSetup->setText(QCoreApplication::translate("MainWindow", "Board Setting", nullptr));
         controlSet->setText(QCoreApplication::translate("MainWindow", "Controll Setting", nullptr));
         freeMove->setText(QCoreApplication::translate("MainWindow", "Free move", nullptr));
         label_7->setText(QCoreApplication::translate("MainWindow", "Pinza Pos", nullptr));
-        Xattuale->setText(QCoreApplication::translate("MainWindow", "Xp:", nullptr));
-        Yattuale->setText(QCoreApplication::translate("MainWindow", "Yp:", nullptr));
-        Zattuale->setText(QCoreApplication::translate("MainWindow", "Zp:", nullptr));
-        en1Label_7->setText(QCoreApplication::translate("MainWindow", "\316\262d", nullptr));
-        en2Label_7->setText(QCoreApplication::translate("MainWindow", "\317\211d", nullptr));
+        Xattuale->setText(QCoreApplication::translate("MainWindow", "X:", nullptr));
+        Yattuale->setText(QCoreApplication::translate("MainWindow", "Y:", nullptr));
+        Zattuale->setText(QCoreApplication::translate("MainWindow", "Z:", nullptr));
+        en1Label_7->setText(QCoreApplication::translate("MainWindow", "\316\262", nullptr));
+        en2Label_7->setText(QCoreApplication::translate("MainWindow", "\317\211", nullptr));
         xRead->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         yRead->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         zRead->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
-        bdRead->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
-        wdRead->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
+        betaRead->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
+        omegaRead->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         encrease1_3->setText(QCoreApplication::translate("MainWindow", "Error:", nullptr));
         encrease2_3->setText(QCoreApplication::translate("MainWindow", "Error:", nullptr));
         encrease3_3->setText(QCoreApplication::translate("MainWindow", "Error:", nullptr));
@@ -2400,8 +2419,8 @@ public:
         xEr->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         yEr->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         zEr->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
-        bdEr->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
-        wdEr->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
+        betaEr->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
+        omegaEr->setText(QCoreApplication::translate("MainWindow", "0", nullptr));
         label_8->setText(QCoreApplication::translate("MainWindow", "Pinza", nullptr));
         label_4->setText(QCoreApplication::translate("MainWindow", "En Read", nullptr));
         Step1_direct->setText(QCoreApplication::translate("MainWindow", "En 1", nullptr));
@@ -2473,6 +2492,8 @@ public:
         MotPlot5->setText(QCoreApplication::translate("MainWindow", "Mot5", nullptr));
         MotPlot6->setText(QCoreApplication::translate("MainWindow", "Mot6", nullptr));
         image->setText(QString());
+        sendRef->setText(QCoreApplication::translate("MainWindow", "Send Reference", nullptr));
+        goHome->setText(QCoreApplication::translate("MainWindow", "Go home", nullptr));
         menuAbout->setTitle(QCoreApplication::translate("MainWindow", "About", nullptr));
         menuUartSetting->setTitle(QCoreApplication::translate("MainWindow", "UartSetting", nullptr));
     } // retranslateUi

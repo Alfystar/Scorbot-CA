@@ -35,11 +35,12 @@ CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/Setu
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/UartConnect.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/UartConnectExeption.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/commonDefine.h
-CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWinsow.h
+CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/freeMoveWindow.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/uartChoise.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: ../main.cpp
+CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/QSignalMapper
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qalgorithms.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qarraydata.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qatomic.h
@@ -77,6 +78,7 @@ CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtC
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qlogging.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmargins.h
+CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmath.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qmutex.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qnamespace.h
@@ -97,6 +99,7 @@ CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtC
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsharedpointer_impl.h
+CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsignalmapper.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qsize.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringalgorithms.h
@@ -156,6 +159,7 @@ CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtW
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QRadioButton
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSlider
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSpinBox
+CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QToolButton
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h
@@ -174,6 +178,7 @@ CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtW
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qspinbox.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h
+CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtoolbutton.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgets-config.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtwidgetsglobal.h
 CMakeFiles/ScorbotTerminal.dir/main.cpp.o: /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h

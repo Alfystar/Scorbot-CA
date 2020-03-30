@@ -13,7 +13,7 @@ if (NOT TARGET scorbotUi)
             commonDefine.h
             mainwindow.h mainwindow.cpp ui_source/mainwindow.ui ui_source/logo.qrc
             settingBoardWindow.h settingBoardWindow.cpp ui_source/settingBoardWindow.ui
-            freeMoveWinsow.h freeMoveWinsow.cpp ui_source/freeMoveWindow.ui
+            freeMoveWindow.h freeMoveWindow.cpp ui_source/freeMoveWindow.ui
             uartChoise.h uartChoise.cpp ui_source/uartChoise.ui
             )
 
