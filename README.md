@@ -73,5 +73,10 @@ Per controllare il Robot in maniera intuitiva si è pensato di usare un interfac
 
 </p>
 
+Per graficare i dati ricevuti è stata usata la libreria [qcustomplot](https://www.qcustomplot.com/index.php/introduction)
+
+
+
+
 # Controllability Study
 Lo studio è stato svolto per mezzi teorici, con un modello ottenuto dal professore, con l'intento di trovare i prametri da applicare a un PID.

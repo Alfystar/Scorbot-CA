@@ -14,6 +14,7 @@ if (NOT TARGET scorbotUi)
             settingBoardWindow.h settingBoardWindow.cpp ui_source/settingBoardWindow.ui
             freeMoveWindow.h freeMoveWindow.cpp ui_source/freeMoveWindow.ui
             uartChoise.h uartChoise.cpp ui_source/uartChoise.ui
+
             )
 
     #su qt creator da errore???
@@ -26,26 +27,8 @@ if (NOT TARGET scorbotUi)
     find_package(Qt5 COMPONENTS Widgets REQUIRED)
     target_link_libraries(scorbotUi Qt5::Widgets)
 
-    #    find_package(Qwt)
-    #
-    #    if (QWT_INCLUDE_DIR AND QWT_LIBRARY)
-    #        SET(QWT_FOUND TRUE)
-    #    ENDIF (QWT_INCLUDE_DIR AND QWT_LIBRARY)
-    #
-    #    if (QWT_FOUND)
-    #        if (NOT QWT_FIND_QUIETLY)
-    #            MESSAGE(STATUS "Found QWT: ${QWT_LIBRARY}")
-    #        endif (NOT QWT_FIND_QUIETLY)
-    #    else (QWT_FOUND)
-    #        if (QWT_FIND_REQUIRED)
-    #            MESSAGE(FATAL_ERROR "Could not find QWT")
-    #        endif (QWT_FIND_REQUIRED)
-    #    endif (QWT_FOUND)
-    #    find_package(QwtConfig COMPONENTS REQUIRED)
-    #    target_link_libraries(scorbotUi PUBLIC ${QWT_LIBRARY})
-    #    target_link_directories(scorbotUi PUBLIC ${QWT_INCLUDE_DIR})
-    #    message("qwt: ${QWT_FOUND}")
-
+    add_subdirectory(qcustomplot)
+    target_link_libraries(scorbotUi qcustomplot)
     target_link_libraries(scorbotUi dataTransfert)
     target_link_libraries(scorbotUi scoreUtiliy)
 

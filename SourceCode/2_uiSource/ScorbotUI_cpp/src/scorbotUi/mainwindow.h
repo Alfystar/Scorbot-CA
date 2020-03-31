@@ -16,9 +16,7 @@
 #include "settingBoardWindow.h"
 #include "freeMoveWindow.h"
 #include <ScorCalc.h>
-
-//#include <qwt/qwt_plot.h>
-//#include <qwt/qwt_plot_curve.h>
+#include "qcustomplot/qcustomplot.h"
 
 namespace Ui {
     class MainWindow; //Nome del windget radice nel file ui
