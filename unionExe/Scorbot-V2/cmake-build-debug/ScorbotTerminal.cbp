@@ -5,7 +5,7 @@
 		<Option title="ScorbotTerminal"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\boardComSrc\;CMake Files\boardComSrc\Common-src\;CMake Files\boardComSrc\Common-src\timeOp\;CMake Files\boardComSrc\Common-src\DataTransfertPackge\;CMake Files\boardComSrc\Common-src\circularBuffer\;CMake Files\boardComSrc\Common-src\uartDriver\;CMake Files\boardComSrc\UtilityScorbot\;CMake Files\boardComSrc\UartSubSystem\;CMake Files\ctrlSrc\;CMake Files\ctrlSrc\Common-src\;CMake Files\ctrlSrc\Common-src\timeOp\;CMake Files\ctrlSrc\Common-src\DataTransfertPackge\;CMake Files\ctrlSrc\Common-src\circularBuffer\;CMake Files\ctrlSrc\Common-src\uartDriver\;CMake Files\ctrlSrc\UartSubSystem\;CMake Files\ctrlSrc\pidCtrl\;CMake Files\scorbotMainWindows\;CMake Files\scorbotMainWindows\UI_useCase\;CMake Files\scorbotMainWindows\UI_useCase\uiSrc\;CMake Files\scorbotMainWindows\UI_useCase\uiSrc\DataTransfertPackge\;CMake Files\scorbotMainWindows\UI_useCase\uiSrc\UtilityScorbot\;CMake Files\scorbotMainWindows\UI_useCase\uiSrc\scorbotUi\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\;CMake Files\..\..\SourceCode\;CMake Files\..\..\SourceCode\2_uiSource\;CMake Files\..\..\SourceCode\2_uiSource\ScorbotUI_cpp\;CMake Files\..\..\SourceCode\2_uiSource\ScorbotUI_cpp\src\;CMake Files\..\..\SourceCode\2_uiSource\ScorbotUI_cpp\src\scorbotUi\;CMake Files\..\..\SourceCode\2_uiSource\ScorbotUI_cpp\src\scorbotUi\ui_source\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\boardComSrc\;CMake Files\boardComSrc\Common-src\;CMake Files\boardComSrc\Common-src\timeOp\;CMake Files\boardComSrc\Common-src\DataTransfertPackge\;CMake Files\boardComSrc\Common-src\circularBuffer\;CMake Files\boardComSrc\Common-src\uartDriver\;CMake Files\boardComSrc\UtilityScorbot\;CMake Files\boardComSrc\UartSubSystem\;CMake Files\ctrlSrc\;CMake Files\ctrlSrc\Common-src\;CMake Files\ctrlSrc\Common-src\timeOp\;CMake Files\ctrlSrc\Common-src\DataTransfertPackge\;CMake Files\ctrlSrc\Common-src\circularBuffer\;CMake Files\ctrlSrc\Common-src\uartDriver\;CMake Files\ctrlSrc\UartSubSystem\;CMake Files\ctrlSrc\pidCtrl\;CMake Files\scorbotMainWindows\;CMake Files\scorbotMainWindows\UI_useCase\;CMake Files\scorbotMainWindows\UI_useCase\uiSrc\;CMake Files\scorbotMainWindows\UI_useCase\uiSrc\DataTransfertPackge\;CMake Files\scorbotMainWindows\UI_useCase\uiSrc\UtilityScorbot\;CMake Files\scorbotMainWindows\UI_useCase\uiSrc\scorbotUi\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\;CMake Files\..\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Widgets\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Gui\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\;CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5PrintSupport\;CMake Files\..\..\SourceCode\;CMake Files\..\..\SourceCode\2_uiSource\;CMake Files\..\..\SourceCode\2_uiSource\ScorbotUI_cpp\;CMake Files\..\..\SourceCode\2_uiSource\ScorbotUI_cpp\src\;CMake Files\..\..\SourceCode\2_uiSource\ScorbotUI_cpp\src\scorbotUi\;CMake Files\..\..\SourceCode\2_uiSource\ScorbotUI_cpp\src\scorbotUi\ui_source\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug"/>
@@ -37,6 +37,7 @@
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_PRINTSUPPORT_LIB"/>
 					<Add option="-DlinuxSide=1"/>
 					<Add directory="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows"/>
 					<Add directory="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase"/>
@@ -52,6 +53,7 @@
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -78,6 +80,7 @@
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_PRINTSUPPORT_LIB"/>
 					<Add option="-DlinuxSide=1"/>
 					<Add directory="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows"/>
 					<Add directory="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase"/>
@@ -93,6 +96,7 @@
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -495,6 +499,7 @@
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_PRINTSUPPORT_LIB"/>
 					<Add option="-DlinuxSide=1"/>
 					<Add directory="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows"/>
 					<Add directory="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows"/>
@@ -512,6 +517,7 @@
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -538,6 +544,7 @@
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_PRINTSUPPORT_LIB"/>
 					<Add option="-DlinuxSide=1"/>
 					<Add directory="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows"/>
 					<Add directory="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows"/>
@@ -555,6 +562,7 @@
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -591,6 +599,7 @@
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_PRINTSUPPORT_LIB"/>
 					<Add option="-DlinuxSide=1"/>
 					<Add directory="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase"/>
 					<Add directory="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase"/>
@@ -607,6 +616,7 @@
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -633,6 +643,7 @@
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_PRINTSUPPORT_LIB"/>
 					<Add option="-DlinuxSide=1"/>
 					<Add directory="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase"/>
 					<Add directory="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase"/>
@@ -649,6 +660,7 @@
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -685,6 +697,7 @@
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_PRINTSUPPORT_LIB"/>
 					<Add option="-DlinuxSide=1"/>
 					<Add directory="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi"/>
 					<Add directory="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi"/>
@@ -696,6 +709,7 @@
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -722,6 +736,7 @@
 					<Add option="-DQT_WIDGETS_LIB"/>
 					<Add option="-DQT_GUI_LIB"/>
 					<Add option="-DQT_CORE_LIB"/>
+					<Add option="-DQT_PRINTSUPPORT_LIB"/>
 					<Add option="-DlinuxSide=1"/>
 					<Add directory="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi"/>
 					<Add directory="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi"/>
@@ -733,6 +748,7 @@
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtGui"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtCore"/>
 					<Add directory="/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport"/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -935,6 +951,12 @@
 			<Option target="scorbotUi"/>
 		</Unit>
 		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/mainwindow.h">
+			<Option target="scorbotUi"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/qcustomplot.cpp">
+			<Option target="scorbotUi"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/qcustomplot.h">
 			<Option target="scorbotUi"/>
 		</Unit>
 		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/settingBoardWindow.cpp">
@@ -1149,6 +1171,15 @@
 		</Unit>
 		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreMacros.cmake">
 			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5Core\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5PrintSupport/Qt5PrintSupportConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5PrintSupport\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5PrintSupport/Qt5PrintSupportConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5PrintSupport\"/>
+		</Unit>
+		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/../../../../../../usr/lib/x86_64-linux-gnu/cmake/Qt5PrintSupport/Qt5PrintSupport_QCupsPrinterSupportPlugin.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\Qt5PrintSupport\"/>
 		</Unit>
 		<Unit filename="/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/../../SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/logo.qrc">
 			<Option virtualFolder="CMake Files\..\..\SourceCode\2_uiSource\ScorbotUI_cpp\src\scorbotUi\ui_source\"/>

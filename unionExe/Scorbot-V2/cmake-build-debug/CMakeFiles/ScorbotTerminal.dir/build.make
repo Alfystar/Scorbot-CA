@@ -88,6 +88,7 @@ ScorbotTerminal: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.14.1
 ScorbotTerminal: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.14.1
 ScorbotTerminal: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.14.1
 ScorbotTerminal: scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/libscorbotUi.a
+ScorbotTerminal: /usr/lib/x86_64-linux-gnu/libQt5PrintSupport.so.5.14.1
 ScorbotTerminal: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.14.1
 ScorbotTerminal: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.14.1
 ScorbotTerminal: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.14.1

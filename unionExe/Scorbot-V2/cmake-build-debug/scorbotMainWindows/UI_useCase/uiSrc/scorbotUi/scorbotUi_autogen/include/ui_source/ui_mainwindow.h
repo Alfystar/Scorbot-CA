@@ -33,6 +33,7 @@
 #include <QtWidgets/QTabWidget>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
+#include <qcustomplot/qcustomplot.h>
 
 QT_BEGIN_NAMESPACE
 
@@ -162,7 +163,7 @@ public:
     QDoubleSpinBox *deltaRobot;
     QPushButton *scorParamLoad;
     QPushButton *scorParamReset;
-    QWidget *plot;
+    QCustomPlot *plot;
     QWidget *layoutWidget4;
     QVBoxLayout *verticalLayout_21;
     QPushButton *scorBoardSetup;
@@ -303,7 +304,7 @@ public:
     QCheckBox *MotPlot5;
     QCheckBox *MotPlot6;
     QLabel *image;
-    QWidget *widget;
+    QWidget *layoutWidget12;
     QVBoxLayout *verticalLayout;
     QPushButton *sendRef;
     QPushButton *goHome;
@@ -1173,7 +1174,7 @@ public:
 
         splitter->addWidget(layoutWidget3);
         tabReference->addTab(RoboSetup, QString());
-        plot = new QWidget(centralwidget);
+        plot = new QCustomPlot(centralwidget);
         plot->setObjectName(QString::fromUtf8("plot"));
         plot->setGeometry(QRect(620, 210, 301, 231));
         layoutWidget4 = new QWidget(centralwidget);
@@ -2174,31 +2175,37 @@ public:
         verticalLayout_22->setContentsMargins(0, 0, 0, 0);
         MotPlot1 = new QCheckBox(layoutWidget11);
         MotPlot1->setObjectName(QString::fromUtf8("MotPlot1"));
+        MotPlot1->setChecked(true);
 
         verticalLayout_22->addWidget(MotPlot1);
 
         MotPlot2 = new QCheckBox(layoutWidget11);
         MotPlot2->setObjectName(QString::fromUtf8("MotPlot2"));
+        MotPlot2->setChecked(true);
 
         verticalLayout_22->addWidget(MotPlot2);
 
         MotPlot3 = new QCheckBox(layoutWidget11);
         MotPlot3->setObjectName(QString::fromUtf8("MotPlot3"));
+        MotPlot3->setChecked(true);
 
         verticalLayout_22->addWidget(MotPlot3);
 
         MotPlot4 = new QCheckBox(layoutWidget11);
         MotPlot4->setObjectName(QString::fromUtf8("MotPlot4"));
+        MotPlot4->setChecked(true);
 
         verticalLayout_22->addWidget(MotPlot4);
 
         MotPlot5 = new QCheckBox(layoutWidget11);
         MotPlot5->setObjectName(QString::fromUtf8("MotPlot5"));
+        MotPlot5->setChecked(true);
 
         verticalLayout_22->addWidget(MotPlot5);
 
         MotPlot6 = new QCheckBox(layoutWidget11);
         MotPlot6->setObjectName(QString::fromUtf8("MotPlot6"));
+        MotPlot6->setChecked(true);
 
         verticalLayout_22->addWidget(MotPlot6);
 
@@ -2208,13 +2215,13 @@ public:
         image->setStyleSheet(QString::fromUtf8(""));
         image->setPixmap(QPixmap(QString::fromUtf8(":/img/Logo-Uni-Tor-Vergata.png_256x256.png")));
         image->setScaledContents(true);
-        widget = new QWidget(centralwidget);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(250, 320, 164, 84));
-        verticalLayout = new QVBoxLayout(widget);
+        layoutWidget12 = new QWidget(centralwidget);
+        layoutWidget12->setObjectName(QString::fromUtf8("layoutWidget12"));
+        layoutWidget12->setGeometry(QRect(250, 320, 164, 84));
+        verticalLayout = new QVBoxLayout(layoutWidget12);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
         verticalLayout->setContentsMargins(0, 0, 0, 0);
-        sendRef = new QPushButton(widget);
+        sendRef = new QPushButton(layoutWidget12);
         sendRef->setObjectName(QString::fromUtf8("sendRef"));
         QFont font7;
         font7.setPointSize(15);
@@ -2222,7 +2229,7 @@ public:
 
         verticalLayout->addWidget(sendRef);
 
-        goHome = new QPushButton(widget);
+        goHome = new QPushButton(layoutWidget12);
         goHome->setObjectName(QString::fromUtf8("goHome"));
         goHome->setFont(font7);
 

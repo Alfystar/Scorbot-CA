@@ -194,6 +194,33 @@ mainwindow.cpp.s:
 	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.s
 .PHONY : mainwindow.cpp.s
 
+qcustomplot/qcustomplot.o: qcustomplot/qcustomplot.cpp.o
+
+.PHONY : qcustomplot/qcustomplot.o
+
+# target to build an object file
+qcustomplot/qcustomplot.cpp.o:
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/qcustomplot/qcustomplot.cpp.o
+.PHONY : qcustomplot/qcustomplot.cpp.o
+
+qcustomplot/qcustomplot.i: qcustomplot/qcustomplot.cpp.i
+
+.PHONY : qcustomplot/qcustomplot.i
+
+# target to preprocess a source file
+qcustomplot/qcustomplot.cpp.i:
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/qcustomplot/qcustomplot.cpp.i
+.PHONY : qcustomplot/qcustomplot.cpp.i
+
+qcustomplot/qcustomplot.s: qcustomplot/qcustomplot.cpp.s
+
+.PHONY : qcustomplot/qcustomplot.s
+
+# target to generate assembly for a file
+qcustomplot/qcustomplot.cpp.s:
+	cd /home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/cmake-build-debug && $(MAKE) -f scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/qcustomplot/qcustomplot.cpp.s
+.PHONY : qcustomplot/qcustomplot.cpp.s
+
 scorbotUi_autogen/PI2NXN7FKG/qrc_logo.o: scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o
 
 .PHONY : scorbotUi_autogen/PI2NXN7FKG/qrc_logo.o
@@ -318,6 +345,9 @@ help:
 	@echo "... mainwindow.o"
 	@echo "... mainwindow.i"
 	@echo "... mainwindow.s"
+	@echo "... qcustomplot/qcustomplot.o"
+	@echo "... qcustomplot/qcustomplot.i"
+	@echo "... qcustomplot/qcustomplot.s"
 	@echo "... scorbotUi_autogen/PI2NXN7FKG/qrc_logo.o"
 	@echo "... scorbotUi_autogen/PI2NXN7FKG/qrc_logo.i"
 	@echo "... scorbotUi_autogen/PI2NXN7FKG/qrc_logo.s"

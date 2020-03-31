@@ -10,7 +10,6 @@
 #include "../../../../../scorbotMainWindows/UI_useCase/UartConnect.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
-
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'UartConnect.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
@@ -62,13 +61,13 @@ static const uint qt_meta_data_UartConnect[] = {
         1,       // signalCount
 
         // signals: name, argc, parameters, tag, flags
-       1,    0,   39,    2, 0x06 /* Public */,
+        1, 0, 39, 2, 0x06 /* Public */,
 
- // slots: name, argc, parameters, tag, flags
-       3,    0,   40,    2, 0x08 /* Private */,
-       4,    0,   41,    2, 0x08 /* Private */,
-       5,    0,   42,    2, 0x08 /* Private */,
-       6,    0,   43,    2, 0x08 /* Private */,
+        // slots: name, argc, parameters, tag, flags
+        3, 0, 40, 2, 0x08 /* Private */,
+        4, 0, 41, 2, 0x08 /* Private */,
+        5, 0, 42, 2, 0x08 /* Private */,
+        6, 0, 43, 2, 0x08 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
@@ -108,15 +107,14 @@ void UartConnect::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id,
     Q_UNUSED(_a);
 }
 
-QT_INIT_METAOBJECT const QMetaObject
-UartConnect::staticMetaObject = {{
-                                         QMetaObject::SuperData::link<UartChoise::staticMetaObject>(),
-                                         qt_meta_stringdata_UartConnect.data,
-                                         qt_meta_data_UartConnect,
-                                         qt_static_metacall,
-                                         nullptr,
-                                         nullptr
-                                 }};
+QT_INIT_METAOBJECT const QMetaObject UartConnect::staticMetaObject = {{
+                                                                              QMetaObject::SuperData::link<UartChoise::staticMetaObject>(),
+                                                                              qt_meta_stringdata_UartConnect.data,
+                                                                              qt_meta_data_UartConnect,
+                                                                              qt_static_metacall,
+                                                                              nullptr,
+                                                                              nullptr
+                                                                      }};
 
 
 const QMetaObject *UartConnect::metaObject() const {
@@ -126,7 +124,7 @@ const QMetaObject *UartConnect::metaObject() const {
 void *UartConnect::qt_metacast(const char *_clname) {
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_UartConnect.stringdata0))
-        return static_cast<void*>(this);
+        return static_cast<void *>(this);
     return UartChoise::qt_metacast(_clname);
 }
 

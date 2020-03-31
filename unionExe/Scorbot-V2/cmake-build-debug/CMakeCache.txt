@@ -223,6 +223,9 @@ Qt5Core_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Core
 //The directory containing a CMake configuration file for Qt5Gui.
 Qt5Gui_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui
 
+//The directory containing a CMake configuration file for Qt5PrintSupport.
+Qt5PrintSupport_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5PrintSupport
+
 //The directory containing a CMake configuration file for Qt5Widgets.
 Qt5Widgets_DIR:PATH=/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets
 
@@ -245,10 +248,13 @@ UartSubSystem_LIB_DEPENDS:STATIC=general;dataTransfert;general;uartDriver;genera
 pidCtrl_LIB_DEPENDS:STATIC=general;dataTransfert;general;timeOp;
 
 //Dependencies for the target
+qcustomplot_LIB_DEPENDS:STATIC=general;Qt5::Widgets;general;Qt5::PrintSupport;
+
+//Dependencies for the target
 scorbotMainWindows_LIB_DEPENDS:STATIC=general;Qt5::Widgets;general;UI_useCase;
 
 //Dependencies for the target
-scorbotUi_LIB_DEPENDS:STATIC=general;Qt5::Widgets;general;dataTransfert;general;scoreUtiliy;
+scorbotUi_LIB_DEPENDS:STATIC=general;Qt5::Widgets;general;Qt5::PrintSupport;general;dataTransfert;general;scoreUtiliy;
 
 //Dependencies for the target
 scoreUtiliy_LIB_DEPENDS:STATIC=general;dataTransfert;

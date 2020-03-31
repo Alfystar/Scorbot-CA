@@ -172,16 +172,16 @@
                                              <string>En 2</string>
                                          </property>
                                          <property name="buddy">
-            <cstring>en2Home</cstring>
-           </property>
-          </widget>
-         </item>
-         <item row="1" column="1">
-          <widget class="QSpinBox" name="en2Ref">
-           <property name="buttonSymbols">
-            <enum>QAbstractSpinBox::PlusMinus</enum>
-           </property>
-           <property name="minimum">
+                                             <cstring>en2Home</cstring>
+                                         </property>
+                                     </widget>
+                                 </item>
+                                 <item row="1" column="1">
+                                     <widget class="QSpinBox" name="en2Ref">
+                                         <property name="buttonSymbols">
+                                             <enum>QAbstractSpinBox::PlusMinus</enum>
+                                         </property>
+                                         <property name="minimum">
             <number>-99999</number>
            </property>
            <property name="maximum">
@@ -272,23 +272,23 @@
           </widget>
          </item>
          <item row="5" column="1">
-          <widget class="QSpinBox" name="en6Ref">
-           <property name="wrapping">
-            <bool>false</bool>
-           </property>
-              <property name="frame">
-                  <bool>true</bool>
-              </property>
-              <property name="buttonSymbols">
-                  <enum>QAbstractSpinBox::PlusMinus</enum>
-              </property>
-              <property name="minimum">
-                  <number>-99999</number>
-              </property>
-              <property name="maximum">
-                  <number>99999</number>
-              </property>
-          </widget>
+             <widget class="QSpinBox" name="en6Ref">
+                 <property name="wrapping">
+                     <bool>false</bool>
+                 </property>
+                 <property name="frame">
+                     <bool>true</bool>
+                 </property>
+                 <property name="buttonSymbols">
+                     <enum>QAbstractSpinBox::PlusMinus</enum>
+                 </property>
+                 <property name="minimum">
+                     <number>-99999</number>
+                 </property>
+                 <property name="maximum">
+                     <number>99999</number>
+                 </property>
+             </widget>
          </item>
                              </layout>
                          </item>
@@ -375,16 +375,16 @@
                                                  <horstretch>0</horstretch>
                                                  <verstretch>0</verstretch>
                                              </sizepolicy>
-           </property>
-           <property name="layoutDirection">
-            <enum>Qt::LeftToRight</enum>
-           </property>
-           <property name="text">
-            <string>θ2</string>
-           </property>
-           <property name="alignment">
-            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-           </property>
+                                         </property>
+                                         <property name="layoutDirection">
+                                             <enum>Qt::LeftToRight</enum>
+                                         </property>
+                                         <property name="text">
+                                             <string>θ2</string>
+                                         </property>
+                                         <property name="alignment">
+                                             <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                                         </property>
            <property name="buddy">
             <cstring>en2Home</cstring>
            </property>
@@ -779,16 +779,16 @@
             <widget class="QLabel" name="en1Label_6">
              <property name="sizePolicy">
               <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
+                  <horstretch>0</horstretch>
+                  <verstretch>0</verstretch>
               </sizepolicy>
              </property>
-             <property name="layoutDirection">
-              <enum>Qt::LeftToRight</enum>
-             </property>
-             <property name="text">
-                 <string>βd</string>
-             </property>
+                <property name="layoutDirection">
+                    <enum>Qt::LeftToRight</enum>
+                </property>
+                <property name="text">
+                    <string>βd</string>
+                </property>
                 <property name="alignment">
                     <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                 </property>
@@ -823,10 +823,10 @@
                       </property>
                       <property name="layoutDirection">
                           <enum>Qt::LeftToRight</enum>
-             </property>
-             <property name="text">
-                 <string>ωd</string>
-             </property>
+                      </property>
+                      <property name="text">
+                          <string>ωd</string>
+                      </property>
                       <property name="alignment">
                           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                       </property>
@@ -861,16 +861,16 @@
                               <width>20</width>
                               <height>40</height>
                           </size>
-             </property>
-            </spacer>
-           </item>
-           <item row="2" column="1">
-            <widget class="QSlider" name="pinzaInv">
-             <property name="maximum">
-              <number>100</number>
-             </property>
-             <property name="orientation">
-              <enum>Qt::Horizontal</enum>
+                      </property>
+                  </spacer>
+              </item>
+              <item row="2" column="1">
+                  <widget class="QSlider" name="pinzaInv">
+                      <property name="maximum">
+                          <number>100</number>
+                      </property>
+                      <property name="orientation">
+                          <enum>Qt::Horizontal</enum>
              </property>
             </widget>
            </item>
@@ -901,227 +901,227 @@
         </layout>
        </item>
        <item>
-        <layout class="QVBoxLayout" name="verticalLayout_3">
-         <property name="spacing">
-          <number>6</number>
-         </property>
-            <item>
-                <widget class="QLabel" name="label_3">
-                    <property name="font">
-                        <font>
-                            <pointsize>12</pointsize>
-                        </font>
-                    </property>
-                    <property name="text">
-                        <string>Gomito</string>
-                    </property>
-                    <property name="alignment">
-                        <set>Qt::AlignCenter</set>
-                    </property>
-                </widget>
-            </item>
-            <item>
-                <widget class="QRadioButton" name="gH">
-                    <property name="font">
-                        <font>
-                            <family>.SF NS Text</family>
-                            <pointsize>10</pointsize>
-                            <weight>50</weight>
-                            <italic>false</italic>
-                            <bold>false</bold>
-                        </font>
-                    </property>
-                    <property name="toolTipDuration">
-                        <number>-1</number>
-                    </property>
-                    <property name="styleSheet">
-                        <string notr="true"/>
-                    </property>
-                    <property name="text">
-                        <string>Alto</string>
-                    </property>
-                </widget>
-            </item>
-            <item>
-                <widget class="QRadioButton" name="gL">
-                    <property name="sizePolicy">
-                        <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                        </sizepolicy>
-                    </property>
-                    <property name="font">
-                        <font>
-                            <family>.SF NS Text</family>
-                            <pointsize>10</pointsize>
-                            <weight>50</weight>
-                            <italic>false</italic>
-                            <bold>false</bold>
-                        </font>
-                    </property>
-                    <property name="styleSheet">
-                        <string notr="true"/>
-                    </property>
-                    <property name="text">
-                        <string>Basso</string>
-                    </property>
-                </widget>
-            </item>
-            <item>
-                <spacer name="verticalSpacer_6">
-                    <property name="orientation">
-                        <enum>Qt::Vertical</enum>
-                    </property>
-           <property name="sizeHint" stdset="0">
-            <size>
-             <width>20</width>
-             <height>40</height>
-            </size>
-           </property>
-          </spacer>
-         </item>
-        </layout>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+               <property name="spacing">
+                   <number>6</number>
+               </property>
+               <item>
+                   <widget class="QLabel" name="label_3">
+                       <property name="font">
+                           <font>
+                               <pointsize>12</pointsize>
+                           </font>
+                       </property>
+                       <property name="text">
+                           <string>Gomito</string>
+                       </property>
+                       <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                       </property>
+                   </widget>
+               </item>
+               <item>
+                   <widget class="QRadioButton" name="gH">
+                       <property name="font">
+                           <font>
+                               <family>.SF NS Text</family>
+                               <pointsize>10</pointsize>
+                               <weight>50</weight>
+                               <italic>false</italic>
+                               <bold>false</bold>
+                           </font>
+                       </property>
+                       <property name="toolTipDuration">
+                           <number>-1</number>
+                       </property>
+                       <property name="styleSheet">
+                           <string notr="true"/>
+                       </property>
+                       <property name="text">
+                           <string>Alto</string>
+                       </property>
+                   </widget>
+               </item>
+               <item>
+                   <widget class="QRadioButton" name="gL">
+                       <property name="sizePolicy">
+                           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                           </sizepolicy>
+                       </property>
+                       <property name="font">
+                           <font>
+                               <family>.SF NS Text</family>
+                               <pointsize>10</pointsize>
+                               <weight>50</weight>
+                               <italic>false</italic>
+                               <bold>false</bold>
+                           </font>
+                       </property>
+                       <property name="styleSheet">
+                           <string notr="true"/>
+                       </property>
+                       <property name="text">
+                           <string>Basso</string>
+                       </property>
+                   </widget>
+               </item>
+               <item>
+                   <spacer name="verticalSpacer_6">
+                       <property name="orientation">
+                           <enum>Qt::Vertical</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                           <size>
+                               <width>20</width>
+                               <height>40</height>
+                           </size>
+                       </property>
+                   </spacer>
+               </item>
+           </layout>
        </item>
       </layout>
      </widget>
     </widget>
-    <widget class="QWidget" name="RoboSetup">
-     <attribute name="title">
-      <string>Robot Setup</string>
-     </attribute>
-        <widget class="QSplitter" name="splitter">
-            <property name="geometry">
-                <rect>
-                    <x>10</x>
-                    <y>10</y>
-                    <width>381</width>
-                    <height>241</height>
-                </rect>
-            </property>
-            <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-            </property>
-            <property name="handleWidth">
-                <number>12</number>
-            </property>
-            <property name="childrenCollapsible">
-                <bool>false</bool>
-            </property>
-            <widget class="QWidget" name="layoutWidget">
-                <layout class="QVBoxLayout" name="homeOffset">
-                    <item>
-                        <widget class="QLabel" name="valMinScr_2">
-                            <property name="sizePolicy">
-                                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                                    <horstretch>0</horstretch>
-                                    <verstretch>0</verstretch>
-                                </sizepolicy>
-                            </property>
-                            <property name="font">
-                                <font>
-                                    <pointsize>12</pointsize>
-                                    <strikeout>false</strikeout>
-                                    <kerning>true</kerning>
-                                </font>
-                            </property>
-                            <property name="text">
-                                <string>Home offset</string>
-                            </property>
-                            <property name="alignment">
-                                <set>Qt::AlignCenter</set>
-                            </property>
-                        </widget>
-                    </item>
-                    <item>
-                        <layout class="QFormLayout" name="formLayout_2">
-                            <property name="fieldGrowthPolicy">
-                                <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
-                            </property>
-                            <property name="labelAlignment">
-                                <set>Qt::AlignCenter</set>
-                            </property>
-                            <property name="formAlignment">
-                                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
-                            </property>
-                            <property name="verticalSpacing">
-                                <number>6</number>
-                            </property>
-                            <item row="0" column="0">
-                                <widget class="QLabel" name="en1Label_2">
-                                    <property name="text">
-                                        <string>En 1</string>
-                                    </property>
-                                    <property name="buddy">
-                                        <cstring>en1Home</cstring>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="0" column="1">
-                                <widget class="QSpinBox" name="en1Home">
-                                    <property name="wrapping">
-                                        <bool>false</bool>
-                                    </property>
-                                    <property name="buttonSymbols">
-                                        <enum>QAbstractSpinBox::PlusMinus</enum>
-                                    </property>
-                                    <property name="minimum">
-                                        <number>-99999</number>
-                                    </property>
-                                    <property name="maximum">
-                                        <number>99999</number>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="1" column="0">
-                                <widget class="QLabel" name="en2Label_2">
-                                    <property name="text">
-                                        <string>En 2</string>
-                                    </property>
-                                    <property name="buddy">
-                                        <cstring>en2Home</cstring>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="1" column="1">
-                                <widget class="QSpinBox" name="en2Home">
-                                    <property name="buttonSymbols">
-                                        <enum>QAbstractSpinBox::PlusMinus</enum>
-                                    </property>
-                                    <property name="minimum">
-                                        <number>-99999</number>
-                                    </property>
-                                    <property name="maximum">
-                                        <number>99999</number>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="2" column="0">
-                                <widget class="QLabel" name="en3Label_2">
-                                    <property name="enabled">
-                                        <bool>true</bool>
-                                    </property>
-                                    <property name="text">
-                                        <string>En 3</string>
-                                    </property>
-                                    <property name="buddy">
-                                        <cstring>en3Home</cstring>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="2" column="1">
-                                <widget class="QSpinBox" name="en3Home">
-                                    <property name="buttonSymbols">
-                                        <enum>QAbstractSpinBox::PlusMinus</enum>
-            </property>
-            <property name="minimum">
-             <number>-99999</number>
-            </property>
-            <property name="maximum">
-             <number>99999</number>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="0">
+             <widget class="QWidget" name="RoboSetup">
+                 <attribute name="title">
+                     <string>Robot Setup</string>
+                 </attribute>
+                 <widget class="QSplitter" name="splitter">
+                     <property name="geometry">
+                         <rect>
+                             <x>10</x>
+                             <y>10</y>
+                             <width>381</width>
+                             <height>241</height>
+                         </rect>
+                     </property>
+                     <property name="orientation">
+                         <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="handleWidth">
+                         <number>12</number>
+                     </property>
+                     <property name="childrenCollapsible">
+                         <bool>false</bool>
+                     </property>
+                     <widget class="QWidget" name="layoutWidget">
+                         <layout class="QVBoxLayout" name="homeOffset">
+                             <item>
+                                 <widget class="QLabel" name="valMinScr_2">
+                                     <property name="sizePolicy">
+                                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                                             <horstretch>0</horstretch>
+                                             <verstretch>0</verstretch>
+                                         </sizepolicy>
+                                     </property>
+                                     <property name="font">
+                                         <font>
+                                             <pointsize>12</pointsize>
+                                             <strikeout>false</strikeout>
+                                             <kerning>true</kerning>
+                                         </font>
+                                     </property>
+                                     <property name="text">
+                                         <string>Home offset</string>
+                                     </property>
+                                     <property name="alignment">
+                                         <set>Qt::AlignCenter</set>
+                                     </property>
+                                 </widget>
+                             </item>
+                             <item>
+                                 <layout class="QFormLayout" name="formLayout_2">
+                                     <property name="fieldGrowthPolicy">
+                                         <enum>QFormLayout::AllNonFixedFieldsGrow</enum>
+                                     </property>
+                                     <property name="labelAlignment">
+                                         <set>Qt::AlignCenter</set>
+                                     </property>
+                                     <property name="formAlignment">
+                                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+                                     </property>
+                                     <property name="verticalSpacing">
+                                         <number>6</number>
+                                     </property>
+                                     <item row="0" column="0">
+                                         <widget class="QLabel" name="en1Label_2">
+                                             <property name="text">
+                                                 <string>En 1</string>
+                                             </property>
+                                             <property name="buddy">
+                                                 <cstring>en1Home</cstring>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="0" column="1">
+                                         <widget class="QSpinBox" name="en1Home">
+                                             <property name="wrapping">
+                                                 <bool>false</bool>
+                                             </property>
+                                             <property name="buttonSymbols">
+                                                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                                             </property>
+                                             <property name="minimum">
+                                                 <number>-99999</number>
+                                             </property>
+                                             <property name="maximum">
+                                                 <number>99999</number>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="1" column="0">
+                                         <widget class="QLabel" name="en2Label_2">
+                                             <property name="text">
+                                                 <string>En 2</string>
+                                             </property>
+                                             <property name="buddy">
+                                                 <cstring>en2Home</cstring>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="1" column="1">
+                                         <widget class="QSpinBox" name="en2Home">
+                                             <property name="buttonSymbols">
+                                                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                                             </property>
+                                             <property name="minimum">
+                                                 <number>-99999</number>
+                                             </property>
+                                             <property name="maximum">
+                                                 <number>99999</number>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="2" column="0">
+                                         <widget class="QLabel" name="en3Label_2">
+                                             <property name="enabled">
+                                                 <bool>true</bool>
+                                             </property>
+                                             <property name="text">
+                                                 <string>En 3</string>
+                                             </property>
+                                             <property name="buddy">
+                                                 <cstring>en3Home</cstring>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="2" column="1">
+                                         <widget class="QSpinBox" name="en3Home">
+                                             <property name="buttonSymbols">
+                                                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                                             </property>
+                                             <property name="minimum">
+                                                 <number>-99999</number>
+                                             </property>
+                                             <property name="maximum">
+                                                 <number>99999</number>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="3" column="0">
            <widget class="QLabel" name="en4Label_2">
             <property name="text">
              <string>En 4</string>
@@ -1178,456 +1178,456 @@
            </widget>
           </item>
           <item row="5" column="1">
-           <widget class="QSpinBox" name="en6Home">
-            <property name="wrapping">
-             <bool>false</bool>
-            </property>
-               <property name="frame">
-                   <bool>true</bool>
-               </property>
-               <property name="buttonSymbols">
-                   <enum>QAbstractSpinBox::PlusMinus</enum>
-               </property>
-               <property name="minimum">
-                   <number>-99999</number>
-               </property>
-               <property name="maximum">
-                   <number>99999</number>
-               </property>
-           </widget>
+              <widget class="QSpinBox" name="en6Home">
+                  <property name="wrapping">
+                      <bool>false</bool>
+                  </property>
+                  <property name="frame">
+                      <bool>true</bool>
+                  </property>
+                  <property name="buttonSymbols">
+                      <enum>QAbstractSpinBox::PlusMinus</enum>
+                  </property>
+                  <property name="minimum">
+                      <number>-99999</number>
+                  </property>
+                  <property name="maximum">
+                      <number>99999</number>
+                  </property>
+              </widget>
           </item>
-                        </layout>
-                    </item>
-                </layout>
-            </widget>
-            <widget class="QWidget" name="layoutWidget">
-                <layout class="QVBoxLayout" name="RoboSize">
-                    <item>
-                        <widget class="QLabel" name="label">
-                            <property name="sizePolicy">
-                                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                                    <horstretch>0</horstretch>
-                                    <verstretch>0</verstretch>
-                                </sizepolicy>
-                            </property>
-                            <property name="font">
-                                <font>
-                                    <pointsize>12</pointsize>
-                                </font>
-                            </property>
-                            <property name="text">
-                                <string>Robot Size</string>
-                            </property>
-                            <property name="alignment">
-                                <set>Qt::AlignCenter</set>
-                            </property>
-                        </widget>
-                    </item>
-                    <item>
-                        <layout class="QFormLayout" name="formLayout">
-                            <item row="0" column="0">
-                                <widget class="QLabel" name="l1Label">
-                                    <property name="text">
-                                        <string>L1</string>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="0" column="1">
-                                <widget class="QDoubleSpinBox" name="l1Robot">
-                                    <property name="sizePolicy">
-                                        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                                            <horstretch>0</horstretch>
-                                            <verstretch>0</verstretch>
-                                        </sizepolicy>
-                                    </property>
-                                    <property name="buttonSymbols">
-                                        <enum>QAbstractSpinBox::PlusMinus</enum>
-                                    </property>
-                                    <property name="minimum">
-                                        <double>-99999.000000000000000</double>
-                                    </property>
-                                    <property name="maximum">
-                                        <double>99999.000000000000000</double>
-                                    </property>
-                                    <property name="singleStep">
-                                        <double>0.500000000000000</double>
-                                    </property>
-                                    <property name="value">
-                                        <double>5.000000000000000</double>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="1" column="0">
-                                <widget class="QLabel" name="l2Label">
-                                    <property name="text">
-                                        <string>L2</string>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="1" column="1">
-                                <widget class="QDoubleSpinBox" name="l2Robot">
-                                    <property name="sizePolicy">
-                                        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                                            <horstretch>0</horstretch>
-                                            <verstretch>0</verstretch>
-                                        </sizepolicy>
-                                    </property>
-                                    <property name="buttonSymbols">
-                                        <enum>QAbstractSpinBox::PlusMinus</enum>
-                                    </property>
-                                    <property name="minimum">
-                                        <double>-99999.000000000000000</double>
-                                    </property>
-                                    <property name="maximum">
-                                        <double>99999.000000000000000</double>
-                                    </property>
-                                    <property name="singleStep">
-                                        <double>0.500000000000000</double>
-                                    </property>
-                                    <property name="value">
-                                        <double>22.000000000000000</double>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="2" column="0">
-                                <widget class="QLabel" name="l3Label">
-                                    <property name="text">
-                                        <string>L3</string>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="2" column="1">
-                                <widget class="QDoubleSpinBox" name="l3Robot">
-                                    <property name="sizePolicy">
-                                        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                                            <horstretch>0</horstretch>
-                                            <verstretch>0</verstretch>
-                                        </sizepolicy>
-                                    </property>
-                                    <property name="buttonSymbols">
-                                        <enum>QAbstractSpinBox::PlusMinus</enum>
-                                    </property>
-                                    <property name="minimum">
-                                        <double>-99999.000000000000000</double>
-                                    </property>
-                                    <property name="maximum">
-                                        <double>99999.000000000000000</double>
-                                    </property>
-                                    <property name="singleStep">
-                                        <double>0.500000000000000</double>
-                                    </property>
-                                    <property name="value">
-                                        <double>22.000000000000000</double>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="3" column="0">
-                                <widget class="QLabel" name="l4Label">
-                                    <property name="text">
-                                        <string>d1</string>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="3" column="1">
-                                <widget class="QDoubleSpinBox" name="d1Robot">
-                                    <property name="sizePolicy">
-                                        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                                            <horstretch>0</horstretch>
-                                            <verstretch>0</verstretch>
-                                        </sizepolicy>
-                                    </property>
-                                    <property name="buttonSymbols">
-                                        <enum>QAbstractSpinBox::PlusMinus</enum>
-                                    </property>
-                                    <property name="minimum">
-                                        <double>-99999.000000000000000</double>
-                                    </property>
-                                    <property name="maximum">
-                                        <double>99999.000000000000000</double>
-                                    </property>
-                                    <property name="singleStep">
-                                        <double>0.500000000000000</double>
-                                    </property>
-                                    <property name="value">
-                                        <double>2.000000000000000</double>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="4" column="0">
-                                <widget class="QLabel" name="l5Label">
-                                    <property name="text">
-                                        <string>d5</string>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="4" column="1">
-                                <widget class="QDoubleSpinBox" name="d5Robot">
-                                    <property name="sizePolicy">
-                                        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                                            <horstretch>0</horstretch>
-                                            <verstretch>0</verstretch>
-                                        </sizepolicy>
-                                    </property>
-                                    <property name="buttonSymbols">
-                                        <enum>QAbstractSpinBox::PlusMinus</enum>
-                                    </property>
-                                    <property name="minimum">
-                                        <double>-99999.000000000000000</double>
-                                    </property>
-                                    <property name="maximum">
-                                        <double>99999.000000000000000</double>
-                                    </property>
-                                    <property name="singleStep">
-                                        <double>0.500000000000000</double>
-                                    </property>
-                                    <property name="value">
-                                        <double>3.000000000000000</double>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="5" column="1">
-                                <widget class="QPushButton" name="scorSwHome">
-                                    <property name="font">
-                                        <font>
-                                            <pointsize>10</pointsize>
-                                        </font>
-                                    </property>
-                                    <property name="styleSheet">
-                                        <string notr="true"/>
-                                    </property>
-                                    <property name="text">
-                                        <string>SW Home</string>
-                                    </property>
-                                </widget>
-                            </item>
-                        </layout>
-                    </item>
-                </layout>
-            </widget>
-            <widget class="QWidget" name="layoutWidget">
-                <layout class="QVBoxLayout" name="en2deg">
-                    <item>
-                        <widget class="QLabel" name="label_2">
-                            <property name="sizePolicy">
-                                <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
-                                    <horstretch>0</horstretch>
-                                    <verstretch>0</verstretch>
-                                </sizepolicy>
-                            </property>
-                            <property name="font">
-                                <font>
-                                    <pointsize>12</pointsize>
-                                </font>
-                            </property>
-                            <property name="toolTip">
-                                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Costanti
-                                    per
-                                    ottenere Radianti&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
-                                </string>
-                            </property>
-                            <property name="text">
-                                <string>En ↣ Rad</string>
-                            </property>
-                            <property name="alignment">
-                                <set>Qt::AlignCenter</set>
-                            </property>
-                        </widget>
-                    </item>
-                    <item>
-                        <layout class="QFormLayout" name="formLayout_3">
-                            <property name="horizontalSpacing">
-                                <number>6</number>
-                            </property>
-                            <item row="0" column="0">
-                                <widget class="QLabel" name="aLabel">
-                                    <property name="font">
-                                        <font>
-                                            <pointsize>10</pointsize>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string>α</string>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="0" column="1">
-                                <widget class="QDoubleSpinBox" name="alphaRobot">
-                                    <property name="sizePolicy">
-                                        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                                            <horstretch>0</horstretch>
-                                            <verstretch>0</verstretch>
-                                        </sizepolicy>
-                                    </property>
-                                    <property name="buttonSymbols">
-                                        <enum>QAbstractSpinBox::PlusMinus</enum>
-                                    </property>
-                                    <property name="minimum">
-                                        <double>-99999.000000000000000</double>
-                                    </property>
-                                    <property name="maximum">
-                                        <double>99999.000000000000000</double>
-                                    </property>
-                                    <property name="singleStep">
-                                        <double>0.010000000000000</double>
-                                    </property>
-                                    <property name="value">
-                                        <double>0.010000000000000</double>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="1" column="0">
-                                <widget class="QLabel" name="bLabel">
-                                    <property name="font">
-                                        <font>
-                                            <pointsize>10</pointsize>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string>β</string>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="1" column="1">
-                                <widget class="QDoubleSpinBox" name="betaRobot">
-                                    <property name="sizePolicy">
-                                        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                                            <horstretch>0</horstretch>
-                                            <verstretch>0</verstretch>
-                                        </sizepolicy>
-                                    </property>
-                                    <property name="buttonSymbols">
-                                        <enum>QAbstractSpinBox::PlusMinus</enum>
-                                    </property>
-                                    <property name="minimum">
-                                        <double>-99999.000000000000000</double>
-                                    </property>
-                                    <property name="maximum">
-                                        <double>99999.000000000000000</double>
-                                    </property>
-                                    <property name="singleStep">
-                                        <double>0.010000000000000</double>
-                                    </property>
-                                    <property name="value">
-                                        <double>0.010000000000000</double>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="2" column="0">
-                                <widget class="QLabel" name="cLabel">
-                                    <property name="font">
-                                        <font>
-                                            <pointsize>10</pointsize>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string>γ</string>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="2" column="1">
-                                <widget class="QDoubleSpinBox" name="gammaRobot">
-                                    <property name="sizePolicy">
-                                        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                                            <horstretch>0</horstretch>
-                                            <verstretch>0</verstretch>
-                                        </sizepolicy>
-                                    </property>
-                                    <property name="buttonSymbols">
-                                        <enum>QAbstractSpinBox::PlusMinus</enum>
-                                    </property>
-                                    <property name="minimum">
-                                        <double>-99999.000000000000000</double>
-                                    </property>
-                                    <property name="maximum">
-                                        <double>99999.000000000000000</double>
-                                    </property>
-                                    <property name="singleStep">
-                                        <double>0.010000000000000</double>
-                                    </property>
-                                    <property name="value">
-                                        <double>0.010000000000000</double>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="3" column="0">
-                                <widget class="QLabel" name="dLabel">
-                                    <property name="font">
-                                        <font>
-                                            <pointsize>10</pointsize>
-                                        </font>
-                                    </property>
-                                    <property name="text">
-                                        <string>δ</string>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="3" column="1">
-                                <widget class="QDoubleSpinBox" name="deltaRobot">
-                                    <property name="sizePolicy">
-                                        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                                            <horstretch>0</horstretch>
-                                            <verstretch>0</verstretch>
-                                        </sizepolicy>
-                                    </property>
-                                    <property name="buttonSymbols">
-                                        <enum>QAbstractSpinBox::PlusMinus</enum>
-                                    </property>
-                                    <property name="minimum">
-                                        <double>-99999.000000000000000</double>
-                                    </property>
-                                    <property name="maximum">
-                                        <double>99999.000000000000000</double>
-                                    </property>
-                                    <property name="singleStep">
-                                        <double>0.010000000000000</double>
-                                    </property>
-                                    <property name="value">
-                                        <double>0.010000000000000</double>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="4" column="1">
-                                <widget class="QPushButton" name="scorParamLoad">
-                                    <property name="font">
-                                        <font>
-                                            <pointsize>10</pointsize>
-                                        </font>
-                                    </property>
-                                    <property name="styleSheet">
-                                        <string notr="true"/>
-                                    </property>
-                                    <property name="text">
-                                        <string>Load Parameter</string>
-                                    </property>
-                                </widget>
-                            </item>
-                            <item row="5" column="1">
-                                <widget class="QPushButton" name="scorParamReset">
-                                    <property name="sizePolicy">
-                                        <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-                                            <horstretch>0</horstretch>
-                                            <verstretch>0</verstretch>
-                                        </sizepolicy>
-                                    </property>
-                                    <property name="font">
-                                        <font>
-                                            <pointsize>10</pointsize>
-                                        </font>
-                                    </property>
-                                    <property name="styleSheet">
-                                        <string notr="true"/>
-                                    </property>
-                                    <property name="text">
-                                        <string>Reset</string>
-                                    </property>
-                                </widget>
-                            </item>
-                        </layout>
-                    </item>
-                </layout>
-            </widget>
-        </widget>
-    </widget>
+                                 </layout>
+                             </item>
+                         </layout>
+                     </widget>
+                     <widget class="QWidget" name="layoutWidget">
+                         <layout class="QVBoxLayout" name="RoboSize">
+                             <item>
+                                 <widget class="QLabel" name="label">
+                                     <property name="sizePolicy">
+                                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                                             <horstretch>0</horstretch>
+                                             <verstretch>0</verstretch>
+                                         </sizepolicy>
+                                     </property>
+                                     <property name="font">
+                                         <font>
+                                             <pointsize>12</pointsize>
+                                         </font>
+                                     </property>
+                                     <property name="text">
+                                         <string>Robot Size</string>
+                                     </property>
+                                     <property name="alignment">
+                                         <set>Qt::AlignCenter</set>
+                                     </property>
+                                 </widget>
+                             </item>
+                             <item>
+                                 <layout class="QFormLayout" name="formLayout">
+                                     <item row="0" column="0">
+                                         <widget class="QLabel" name="l1Label">
+                                             <property name="text">
+                                                 <string>L1</string>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="0" column="1">
+                                         <widget class="QDoubleSpinBox" name="l1Robot">
+                                             <property name="sizePolicy">
+                                                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                                                     <horstretch>0</horstretch>
+                                                     <verstretch>0</verstretch>
+                                                 </sizepolicy>
+                                             </property>
+                                             <property name="buttonSymbols">
+                                                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                                             </property>
+                                             <property name="minimum">
+                                                 <double>-99999.000000000000000</double>
+                                             </property>
+                                             <property name="maximum">
+                                                 <double>99999.000000000000000</double>
+                                             </property>
+                                             <property name="singleStep">
+                                                 <double>0.500000000000000</double>
+                                             </property>
+                                             <property name="value">
+                                                 <double>5.000000000000000</double>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="1" column="0">
+                                         <widget class="QLabel" name="l2Label">
+                                             <property name="text">
+                                                 <string>L2</string>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="1" column="1">
+                                         <widget class="QDoubleSpinBox" name="l2Robot">
+                                             <property name="sizePolicy">
+                                                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                                                     <horstretch>0</horstretch>
+                                                     <verstretch>0</verstretch>
+                                                 </sizepolicy>
+                                             </property>
+                                             <property name="buttonSymbols">
+                                                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                                             </property>
+                                             <property name="minimum">
+                                                 <double>-99999.000000000000000</double>
+                                             </property>
+                                             <property name="maximum">
+                                                 <double>99999.000000000000000</double>
+                                             </property>
+                                             <property name="singleStep">
+                                                 <double>0.500000000000000</double>
+                                             </property>
+                                             <property name="value">
+                                                 <double>22.000000000000000</double>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="2" column="0">
+                                         <widget class="QLabel" name="l3Label">
+                                             <property name="text">
+                                                 <string>L3</string>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="2" column="1">
+                                         <widget class="QDoubleSpinBox" name="l3Robot">
+                                             <property name="sizePolicy">
+                                                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                                                     <horstretch>0</horstretch>
+                                                     <verstretch>0</verstretch>
+                                                 </sizepolicy>
+                                             </property>
+                                             <property name="buttonSymbols">
+                                                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                                             </property>
+                                             <property name="minimum">
+                                                 <double>-99999.000000000000000</double>
+                                             </property>
+                                             <property name="maximum">
+                                                 <double>99999.000000000000000</double>
+                                             </property>
+                                             <property name="singleStep">
+                                                 <double>0.500000000000000</double>
+                                             </property>
+                                             <property name="value">
+                                                 <double>22.000000000000000</double>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="3" column="0">
+                                         <widget class="QLabel" name="l4Label">
+                                             <property name="text">
+                                                 <string>d1</string>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="3" column="1">
+                                         <widget class="QDoubleSpinBox" name="d1Robot">
+                                             <property name="sizePolicy">
+                                                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                                                     <horstretch>0</horstretch>
+                                                     <verstretch>0</verstretch>
+                                                 </sizepolicy>
+                                             </property>
+                                             <property name="buttonSymbols">
+                                                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                                             </property>
+                                             <property name="minimum">
+                                                 <double>-99999.000000000000000</double>
+                                             </property>
+                                             <property name="maximum">
+                                                 <double>99999.000000000000000</double>
+                                             </property>
+                                             <property name="singleStep">
+                                                 <double>0.500000000000000</double>
+                                             </property>
+                                             <property name="value">
+                                                 <double>2.000000000000000</double>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="4" column="0">
+                                         <widget class="QLabel" name="l5Label">
+                                             <property name="text">
+                                                 <string>d5</string>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="4" column="1">
+                                         <widget class="QDoubleSpinBox" name="d5Robot">
+                                             <property name="sizePolicy">
+                                                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                                                     <horstretch>0</horstretch>
+                                                     <verstretch>0</verstretch>
+                                                 </sizepolicy>
+                                             </property>
+                                             <property name="buttonSymbols">
+                                                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                                             </property>
+                                             <property name="minimum">
+                                                 <double>-99999.000000000000000</double>
+                                             </property>
+                                             <property name="maximum">
+                                                 <double>99999.000000000000000</double>
+                                             </property>
+                                             <property name="singleStep">
+                                                 <double>0.500000000000000</double>
+                                             </property>
+                                             <property name="value">
+                                                 <double>3.000000000000000</double>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="5" column="1">
+                                         <widget class="QPushButton" name="scorSwHome">
+                                             <property name="font">
+                                                 <font>
+                                                     <pointsize>10</pointsize>
+                                                 </font>
+                                             </property>
+                                             <property name="styleSheet">
+                                                 <string notr="true"/>
+                                             </property>
+                                             <property name="text">
+                                                 <string>SW Home</string>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                 </layout>
+                             </item>
+                         </layout>
+                     </widget>
+                     <widget class="QWidget" name="layoutWidget">
+                         <layout class="QVBoxLayout" name="en2deg">
+                             <item>
+                                 <widget class="QLabel" name="label_2">
+                                     <property name="sizePolicy">
+                                         <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+                                             <horstretch>0</horstretch>
+                                             <verstretch>0</verstretch>
+                                         </sizepolicy>
+                                     </property>
+                                     <property name="font">
+                                         <font>
+                                             <pointsize>12</pointsize>
+                                         </font>
+                                     </property>
+                                     <property name="toolTip">
+                                         <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;Costanti
+                                             per
+                                             ottenere Radianti&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;
+                                         </string>
+                                     </property>
+                                     <property name="text">
+                                         <string>En ↣ Rad</string>
+                                     </property>
+                                     <property name="alignment">
+                                         <set>Qt::AlignCenter</set>
+                                     </property>
+                                 </widget>
+                             </item>
+                             <item>
+                                 <layout class="QFormLayout" name="formLayout_3">
+                                     <property name="horizontalSpacing">
+                                         <number>6</number>
+                                     </property>
+                                     <item row="0" column="0">
+                                         <widget class="QLabel" name="aLabel">
+                                             <property name="font">
+                                                 <font>
+                                                     <pointsize>10</pointsize>
+                                                 </font>
+                                             </property>
+                                             <property name="text">
+                                                 <string>α</string>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="0" column="1">
+                                         <widget class="QDoubleSpinBox" name="alphaRobot">
+                                             <property name="sizePolicy">
+                                                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                                                     <horstretch>0</horstretch>
+                                                     <verstretch>0</verstretch>
+                                                 </sizepolicy>
+                                             </property>
+                                             <property name="buttonSymbols">
+                                                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                                             </property>
+                                             <property name="minimum">
+                                                 <double>-99999.000000000000000</double>
+                                             </property>
+                                             <property name="maximum">
+                                                 <double>99999.000000000000000</double>
+                                             </property>
+                                             <property name="singleStep">
+                                                 <double>0.010000000000000</double>
+                                             </property>
+                                             <property name="value">
+                                                 <double>0.010000000000000</double>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="1" column="0">
+                                         <widget class="QLabel" name="bLabel">
+                                             <property name="font">
+                                                 <font>
+                                                     <pointsize>10</pointsize>
+                                                 </font>
+                                             </property>
+                                             <property name="text">
+                                                 <string>β</string>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="1" column="1">
+                                         <widget class="QDoubleSpinBox" name="betaRobot">
+                                             <property name="sizePolicy">
+                                                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                                                     <horstretch>0</horstretch>
+                                                     <verstretch>0</verstretch>
+                                                 </sizepolicy>
+                                             </property>
+                                             <property name="buttonSymbols">
+                                                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                                             </property>
+                                             <property name="minimum">
+                                                 <double>-99999.000000000000000</double>
+                                             </property>
+                                             <property name="maximum">
+                                                 <double>99999.000000000000000</double>
+                                             </property>
+                                             <property name="singleStep">
+                                                 <double>0.010000000000000</double>
+                                             </property>
+                                             <property name="value">
+                                                 <double>0.010000000000000</double>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="2" column="0">
+                                         <widget class="QLabel" name="cLabel">
+                                             <property name="font">
+                                                 <font>
+                                                     <pointsize>10</pointsize>
+                                                 </font>
+                                             </property>
+                                             <property name="text">
+                                                 <string>γ</string>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="2" column="1">
+                                         <widget class="QDoubleSpinBox" name="gammaRobot">
+                                             <property name="sizePolicy">
+                                                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                                                     <horstretch>0</horstretch>
+                                                     <verstretch>0</verstretch>
+                                                 </sizepolicy>
+                                             </property>
+                                             <property name="buttonSymbols">
+                                                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                                             </property>
+                                             <property name="minimum">
+                                                 <double>-99999.000000000000000</double>
+                                             </property>
+                                             <property name="maximum">
+                                                 <double>99999.000000000000000</double>
+                                             </property>
+                                             <property name="singleStep">
+                                                 <double>0.010000000000000</double>
+                                             </property>
+                                             <property name="value">
+                                                 <double>0.010000000000000</double>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="3" column="0">
+                                         <widget class="QLabel" name="dLabel">
+                                             <property name="font">
+                                                 <font>
+                                                     <pointsize>10</pointsize>
+                                                 </font>
+                                             </property>
+                                             <property name="text">
+                                                 <string>δ</string>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="3" column="1">
+                                         <widget class="QDoubleSpinBox" name="deltaRobot">
+                                             <property name="sizePolicy">
+                                                 <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                                                     <horstretch>0</horstretch>
+                                                     <verstretch>0</verstretch>
+                                                 </sizepolicy>
+                                             </property>
+                                             <property name="buttonSymbols">
+                                                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                                             </property>
+                                             <property name="minimum">
+                                                 <double>-99999.000000000000000</double>
+                                             </property>
+                                             <property name="maximum">
+                                                 <double>99999.000000000000000</double>
+                                             </property>
+                                             <property name="singleStep">
+                                                 <double>0.010000000000000</double>
+                                             </property>
+                                             <property name="value">
+                                                 <double>0.010000000000000</double>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="4" column="1">
+                                         <widget class="QPushButton" name="scorParamLoad">
+                                             <property name="font">
+                                                 <font>
+                                                     <pointsize>10</pointsize>
+                                                 </font>
+                                             </property>
+                                             <property name="styleSheet">
+                                                 <string notr="true"/>
+                                             </property>
+                                             <property name="text">
+                                                 <string>Load Parameter</string>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="5" column="1">
+                                         <widget class="QPushButton" name="scorParamReset">
+                                             <property name="sizePolicy">
+                                                 <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                                     <horstretch>0</horstretch>
+                                                     <verstretch>0</verstretch>
+                                                 </sizepolicy>
+                                             </property>
+                                             <property name="font">
+                                                 <font>
+                                                     <pointsize>10</pointsize>
+                                                 </font>
+                                             </property>
+                                             <property name="styleSheet">
+                                                 <string notr="true"/>
+                                             </property>
+                                             <property name="text">
+                                                 <string>Reset</string>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                 </layout>
+                             </item>
+                         </layout>
+                     </widget>
+                 </widget>
+             </widget>
          </widget>
          <widget class="QCustomPlot" name="plot" native="true">
              <property name="geometry">
@@ -1688,16 +1688,16 @@
                  <enum>QFrame::Raised</enum>
              </property>
              <property name="lineWidth">
-     <number>2</number>
-    </property>
-    <layout class="QVBoxLayout" name="verticalLayout_20">
-     <item>
-      <widget class="QLabel" name="label_7">
-       <property name="font">
-        <font>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
+                 <number>2</number>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_20">
+                 <item>
+                     <widget class="QLabel" name="label_7">
+                         <property name="font">
+                             <font>
+                                 <pointsize>12</pointsize>
+                             </font>
+                         </property>
        <property name="text">
         <string>Pinza Pos</string>
        </property>
@@ -1869,17 +1869,17 @@
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="zRead">
-             <property name="sizePolicy">
-                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                     <horstretch>0</horstretch>
-                     <verstretch>0</verstretch>
-                 </sizepolicy>
-             </property>
-                <property name="text">
-                    <string>0</string>
-                </property>
-            </widget>
+               <widget class="QLabel" name="zRead">
+                   <property name="sizePolicy">
+                       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                       </sizepolicy>
+                   </property>
+                   <property name="text">
+                       <string>0</string>
+                   </property>
+               </widget>
            </item>
               <item>
                   <widget class="QLabel" name="betaRead">
@@ -2070,22 +2070,22 @@
             </widget>
            </item>
            <item>
-            <widget class="QLabel" name="zEr">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-                <property name="font">
-                    <font>
-                        <pointsize>10</pointsize>
-                    </font>
-                </property>
-                <property name="text">
-                    <string>0</string>
-                </property>
-            </widget>
+               <widget class="QLabel" name="zEr">
+                   <property name="sizePolicy">
+                       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                       </sizepolicy>
+                   </property>
+                   <property name="font">
+                       <font>
+                           <pointsize>10</pointsize>
+                       </font>
+                   </property>
+                   <property name="text">
+                       <string>0</string>
+                   </property>
+               </widget>
            </item>
               <item>
                   <widget class="QLabel" name="betaEr">
@@ -3021,27 +3021,27 @@
               </property>
              </widget>
             </item>
-            <item>
-                <widget class="QLabel" name="thR5">
-                    <property name="sizePolicy">
-                        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                        </sizepolicy>
-                    </property>
-                    <property name="font">
-                        <font>
-                            <pointsize>10</pointsize>
-                        </font>
-                    </property>
-                    <property name="text">
-                        <string>0</string>
-                    </property>
-                    <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                    </property>
-                </widget>
-            </item>
+               <item>
+                   <widget class="QLabel" name="thR5">
+                       <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                           </sizepolicy>
+                       </property>
+                       <property name="font">
+                           <font>
+                               <pointsize>10</pointsize>
+                           </font>
+                       </property>
+                       <property name="text">
+                           <string>0</string>
+                       </property>
+                       <property name="alignment">
+                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                   </widget>
+               </item>
                <item>
                    <widget class="QLabel" name="pinzaOpen">
                        <property name="sizePolicy">
@@ -3297,27 +3297,27 @@
               </property>
              </widget>
             </item>
-            <item>
-                <widget class="QLabel" name="thEr5">
-                    <property name="sizePolicy">
-                        <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                            <horstretch>0</horstretch>
-                            <verstretch>0</verstretch>
-                        </sizepolicy>
-                    </property>
-                    <property name="font">
-                        <font>
-                            <pointsize>10</pointsize>
-                        </font>
-                    </property>
-                    <property name="text">
-                        <string>0</string>
-                    </property>
-                    <property name="alignment">
-                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                    </property>
-                </widget>
-            </item>
+               <item>
+                   <widget class="QLabel" name="thEr5">
+                       <property name="sizePolicy">
+                           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                               <horstretch>0</horstretch>
+                               <verstretch>0</verstretch>
+                           </sizepolicy>
+                       </property>
+                       <property name="font">
+                           <font>
+                               <pointsize>10</pointsize>
+                           </font>
+                       </property>
+                       <property name="text">
+                           <string>0</string>
+                       </property>
+                       <property name="alignment">
+                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                   </widget>
+               </item>
                <item>
                    <widget class="QLabel" name="pinzaOpenErr">
                        <property name="sizePolicy">
@@ -3685,12 +3685,18 @@
                          <property name="text">
                              <string>Mot1</string>
                          </property>
+                         <property name="checked">
+                             <bool>true</bool>
+                         </property>
                      </widget>
                  </item>
                  <item>
                      <widget class="QCheckBox" name="MotPlot2">
                          <property name="text">
                              <string>Mot2</string>
+                         </property>
+                         <property name="checked">
+                             <bool>true</bool>
                          </property>
                      </widget>
                  </item>
@@ -3699,12 +3705,18 @@
                          <property name="text">
                              <string>Mot3</string>
                          </property>
+                         <property name="checked">
+                             <bool>true</bool>
+                         </property>
                      </widget>
                  </item>
                  <item>
                      <widget class="QCheckBox" name="MotPlot4">
                          <property name="text">
                              <string>Mot4</string>
+                         </property>
+                         <property name="checked">
+                             <bool>true</bool>
                          </property>
                      </widget>
                  </item>
@@ -3713,12 +3725,18 @@
                          <property name="text">
                              <string>Mot5</string>
                          </property>
+                         <property name="checked">
+                             <bool>true</bool>
+                         </property>
                      </widget>
                  </item>
                  <item>
                      <widget class="QCheckBox" name="MotPlot6">
                          <property name="text">
                              <string>Mot6</string>
+                         </property>
+                         <property name="checked">
+                             <bool>true</bool>
                          </property>
                      </widget>
                  </item>
@@ -3833,16 +3851,16 @@
              <string>Reset Board</string>
          </property>
      </action>
-  <action name="actionClose_connection">
-   <property name="text">
-    <string>Close connection</string>
-   </property>
-  </action>
-  <action name="actionSerial_Find">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
-   <property name="text">
+     <action name="actionClose_connection">
+         <property name="text">
+             <string>Close connection</string>
+         </property>
+     </action>
+     <action name="actionSerial_Find">
+         <property name="enabled">
+             <bool>true</bool>
+         </property>
+         <property name="text">
     <string>Serial Find</string>
    </property>
    <property name="autoRepeat">
@@ -3857,16 +3875,16 @@
     <string>B9600</string>
    </property>
   </action>
-  <action name="actionB57600">
-   <property name="text">
-    <string>B57600</string>
-   </property>
-  </action>
-  <action name="actionB115200">
-   <property name="text">
-    <string>B115200</string>
-   </property>
-  </action>
+     <action name="actionB57600">
+         <property name="text">
+             <string>B57600</string>
+         </property>
+     </action>
+     <action name="actionB115200">
+         <property name="text">
+             <string>B115200</string>
+         </property>
+     </action>
      <action name="actionB230400">
          <property name="text">
              <string>B230400</string>
@@ -3887,7 +3905,7 @@
         <customwidget>
             <class>QCustomPlot</class>
             <extends>QWidget</extends>
-            <header>qcustomplot.h</header>
+            <header location="global">qcustomplot/qcustomplot.h</header>
             <container>1</container>
         </customwidget>
     </customwidgets>
@@ -3958,5 +3976,5 @@
         <property name="gridVisible">
             <bool>true</bool>
         </property>
- </designerdata>
+    </designerdata>
 </ui>

@@ -1,4 +1,6 @@
 if (NOT TARGET scorbotUi)
+    #    add_subdirectory(qcustomplot)
+
     set(CMAKE_AUTOMOC ON)
     set(CMAKE_AUTORCC ON)
     set(CMAKE_AUTOUIC ON)
@@ -15,6 +17,7 @@ if (NOT TARGET scorbotUi)
             freeMoveWindow.h freeMoveWindow.cpp ui_source/freeMoveWindow.ui
             uartChoise.h uartChoise.cpp ui_source/uartChoise.ui
 
+            qcustomplot/qcustomplot.h qcustomplot/qcustomplot.cpp
             )
 
     #su qt creator da errore???
@@ -27,12 +30,12 @@ if (NOT TARGET scorbotUi)
     find_package(Qt5 COMPONENTS Widgets REQUIRED)
     target_link_libraries(scorbotUi Qt5::Widgets)
 
-    add_subdirectory(qcustomplot)
-    target_link_libraries(scorbotUi qcustomplot)
+    find_package(Qt5PrintSupport REQUIRED)
+    target_link_libraries(scorbotUi Qt5::PrintSupport)
+
     target_link_libraries(scorbotUi dataTransfert)
     target_link_libraries(scorbotUi scoreUtiliy)
 
-    #set_property(TARGET scorbotUi PROPERTY POSITION_INDEPENDENT_CODE ON)
 
     message("La libreria 'scorbotUi' è stata aggiunta")
 endif ()

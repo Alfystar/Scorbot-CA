@@ -10,7 +10,6 @@
 #include "../../../../../../../../../SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/uartChoise.h"
 #include <QtCore/qbytearray.h>
 #include <QtCore/qmetatype.h>
-
 #if !defined(Q_MOC_OUTPUT_REVISION)
 #error "The header file 'uartChoise.h' doesn't include <QObject>."
 #elif Q_MOC_OUTPUT_REVISION != 67
@@ -59,14 +58,14 @@ static const uint qt_meta_data_UartChoise[] = {
         1,       // signalCount
 
         // signals: name, argc, parameters, tag, flags
-       1,    0,   29,    2, 0x06 /* Public */,
+        1, 0, 29, 2, 0x06 /* Public */,
 
- // slots: name, argc, parameters, tag, flags
-       3,    0,   30,    2, 0x08 /* Private */,
-       4,    0,   31,    2, 0x08 /* Private */,
+        // slots: name, argc, parameters, tag, flags
+        3, 0, 30, 2, 0x08 /* Private */,
+        4, 0, 31, 2, 0x08 /* Private */,
 
- // signals: parameters
-    QMetaType::Void,
+        // signals: parameters
+        QMetaType::Void,
 
  // slots: parameters
     QMetaType::Void,
@@ -99,15 +98,14 @@ void UartChoise::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
     Q_UNUSED(_a);
 }
 
-QT_INIT_METAOBJECT const QMetaObject
-UartChoise::staticMetaObject = {{
-                                        QMetaObject::SuperData::link<QDialog::staticMetaObject>(),
-                                        qt_meta_stringdata_UartChoise.data,
-                                        qt_meta_data_UartChoise,
-                                        qt_static_metacall,
-                                        nullptr,
-                                        nullptr
-                                }};
+QT_INIT_METAOBJECT const QMetaObject UartChoise::staticMetaObject = {{
+                                                                             QMetaObject::SuperData::link<QDialog::staticMetaObject>(),
+                                                                             qt_meta_stringdata_UartChoise.data,
+                                                                             qt_meta_data_UartChoise,
+                                                                             qt_static_metacall,
+                                                                             nullptr,
+                                                                             nullptr
+                                                                     }};
 
 
 const QMetaObject *UartChoise::metaObject() const {
@@ -117,7 +115,7 @@ const QMetaObject *UartChoise::metaObject() const {
 void *UartChoise::qt_metacast(const char *_clname) {
     if (!_clname) return nullptr;
     if (!strcmp(_clname, qt_meta_stringdata_UartChoise.stringdata0))
-        return static_cast<void*>(this);
+        return static_cast<void *>(this);
     return QDialog::qt_metacast(_clname);
 }
 
