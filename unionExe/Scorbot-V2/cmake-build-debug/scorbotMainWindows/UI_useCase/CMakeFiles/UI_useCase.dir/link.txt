@@ -1,2 +1,0 @@
-/usr/bin/ar qc libUI_useCase.a  CMakeFiles/UI_useCase.dir/UI_useCase_autogen/mocs_compilation.cpp.o CMakeFiles/UI_useCase.dir/UartConnect.cpp.o CMakeFiles/UI_useCase.dir/MotorCTRL.cpp.o CMakeFiles/UI_useCase.dir/DataShow.cpp.o CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o
-/usr/bin/ranlib libUI_useCase.a

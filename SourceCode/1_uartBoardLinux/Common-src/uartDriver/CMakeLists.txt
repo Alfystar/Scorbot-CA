@@ -17,4 +17,6 @@ if (NOT TARGET uartDriver)
         target_compile_definitions(uartDriver PUBLIC linuxSide=1)
         #    target_compile_definitions(uartDriver PUBLIC RT_THREAD=1)
     endif ()
+    message("La libreria 'uartDriver' è stata aggiunta")
+
 endif ()

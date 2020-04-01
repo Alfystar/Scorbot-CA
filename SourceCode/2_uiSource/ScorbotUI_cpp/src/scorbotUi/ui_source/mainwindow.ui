@@ -182,16 +182,16 @@
                                              <enum>QAbstractSpinBox::PlusMinus</enum>
                                          </property>
                                          <property name="minimum">
-            <number>-99999</number>
-           </property>
-           <property name="maximum">
-            <number>99999</number>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="en3Label_3">
-           <property name="enabled">
+                                             <number>-99999</number>
+                                         </property>
+                                         <property name="maximum">
+                                             <number>99999</number>
+                                         </property>
+                                     </widget>
+                                 </item>
+                                 <item row="2" column="0">
+                                     <widget class="QLabel" name="en3Label_3">
+                                         <property name="enabled">
             <bool>true</bool>
            </property>
            <property name="text">
@@ -271,25 +271,25 @@
            </property>
           </widget>
          </item>
-         <item row="5" column="1">
-             <widget class="QSpinBox" name="en6Ref">
-                 <property name="wrapping">
-                     <bool>false</bool>
-                 </property>
-                 <property name="frame">
-                     <bool>true</bool>
-                 </property>
-                 <property name="buttonSymbols">
-                     <enum>QAbstractSpinBox::PlusMinus</enum>
-                 </property>
-                 <property name="minimum">
-                     <number>-99999</number>
-                 </property>
-                 <property name="maximum">
-                     <number>99999</number>
-                 </property>
-             </widget>
-         </item>
+                                 <item row="5" column="1">
+                                     <widget class="QSpinBox" name="en6Ref">
+                                         <property name="wrapping">
+                                             <bool>false</bool>
+                                         </property>
+                                         <property name="frame">
+                                             <bool>true</bool>
+                                         </property>
+                                         <property name="buttonSymbols">
+                                             <enum>QAbstractSpinBox::PlusMinus</enum>
+                                         </property>
+                                         <property name="minimum">
+                                             <number>-99999</number>
+                                         </property>
+                                         <property name="maximum">
+                                             <number>99999</number>
+                                         </property>
+                                     </widget>
+                                 </item>
                              </layout>
                          </item>
                      </layout>
@@ -385,16 +385,16 @@
                                          <property name="alignment">
                                              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                                          </property>
-           <property name="buddy">
-            <cstring>en2Home</cstring>
-           </property>
-          </widget>
-         </item>
-         <item row="2" column="0">
-          <widget class="QLabel" name="en3Label_4">
-           <property name="enabled">
-            <bool>true</bool>
-           </property>
+                                         <property name="buddy">
+                                             <cstring>en2Home</cstring>
+                                         </property>
+                                     </widget>
+                                 </item>
+                                 <item row="2" column="0">
+                                     <widget class="QLabel" name="en3Label_4">
+                                         <property name="enabled">
+                                             <bool>true</bool>
+                                         </property>
            <property name="sizePolicy">
             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
              <horstretch>0</horstretch>
@@ -776,26 +776,26 @@
             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
            </property>
            <item row="0" column="0">
-            <widget class="QLabel" name="en1Label_6">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                  <horstretch>0</horstretch>
-                  <verstretch>0</verstretch>
-              </sizepolicy>
-             </property>
-                <property name="layoutDirection">
-                    <enum>Qt::LeftToRight</enum>
-                </property>
-                <property name="text">
-                    <string>βd</string>
-                </property>
-                <property name="alignment">
-                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                </property>
-                <property name="buddy">
-                    <cstring>en1Home</cstring>
-                </property>
-            </widget>
+               <widget class="QLabel" name="en1Label_6">
+                   <property name="sizePolicy">
+                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                           <horstretch>0</horstretch>
+                           <verstretch>0</verstretch>
+                       </sizepolicy>
+                   </property>
+                   <property name="layoutDirection">
+                       <enum>Qt::LeftToRight</enum>
+                   </property>
+                   <property name="text">
+                       <string>βd</string>
+                   </property>
+                   <property name="alignment">
+                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                   <property name="buddy">
+                       <cstring>en1Home</cstring>
+                   </property>
+               </widget>
            </item>
               <item row="0" column="1">
                   <widget class="QDoubleSpinBox" name="betaDes">
@@ -871,16 +871,16 @@
                       </property>
                       <property name="orientation">
                           <enum>Qt::Horizontal</enum>
-             </property>
-            </widget>
-           </item>
-           <item row="2" column="0">
-            <widget class="QLabel" name="en6Label_5">
-             <property name="sizePolicy">
-              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
+                      </property>
+                  </widget>
+              </item>
+              <item row="2" column="0">
+                  <widget class="QLabel" name="en6Label_5">
+                      <property name="sizePolicy">
+                          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                          </sizepolicy>
              </property>
              <property name="layoutDirection">
               <enum>Qt::LeftToRight</enum>
@@ -900,88 +900,88 @@
          </item>
         </layout>
        </item>
-       <item>
-           <layout class="QVBoxLayout" name="verticalLayout_3">
-               <property name="spacing">
-                   <number>6</number>
-               </property>
-               <item>
-                   <widget class="QLabel" name="label_3">
-                       <property name="font">
-                           <font>
-                               <pointsize>12</pointsize>
-                           </font>
-                       </property>
-                       <property name="text">
-                           <string>Gomito</string>
-                       </property>
-                       <property name="alignment">
-                           <set>Qt::AlignCenter</set>
-                       </property>
-                   </widget>
-               </item>
-               <item>
-                   <widget class="QRadioButton" name="gH">
-                       <property name="font">
-                           <font>
-                               <family>.SF NS Text</family>
-                               <pointsize>10</pointsize>
-                               <weight>50</weight>
-                               <italic>false</italic>
-                               <bold>false</bold>
-                           </font>
-                       </property>
-                       <property name="toolTipDuration">
-                           <number>-1</number>
-                       </property>
-                       <property name="styleSheet">
-                           <string notr="true"/>
-                       </property>
-                       <property name="text">
-                           <string>Alto</string>
-                       </property>
-                   </widget>
-               </item>
-               <item>
-                   <widget class="QRadioButton" name="gL">
-                       <property name="sizePolicy">
-                           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
-                               <horstretch>0</horstretch>
-                               <verstretch>0</verstretch>
-                           </sizepolicy>
-                       </property>
-                       <property name="font">
-                           <font>
-                               <family>.SF NS Text</family>
-                               <pointsize>10</pointsize>
-                               <weight>50</weight>
-                               <italic>false</italic>
-                               <bold>false</bold>
-                           </font>
-                       </property>
-                       <property name="styleSheet">
-                           <string notr="true"/>
-                       </property>
-                       <property name="text">
-                           <string>Basso</string>
-                       </property>
-                   </widget>
-               </item>
-               <item>
-                   <spacer name="verticalSpacer_6">
-                       <property name="orientation">
-                           <enum>Qt::Vertical</enum>
-                       </property>
-                       <property name="sizeHint" stdset="0">
-                           <size>
-                               <width>20</width>
-                               <height>40</height>
-                           </size>
-                       </property>
-                   </spacer>
-               </item>
-           </layout>
-       </item>
+          <item>
+              <layout class="QVBoxLayout" name="verticalLayout_3">
+                  <property name="spacing">
+                      <number>6</number>
+                  </property>
+                  <item>
+                      <widget class="QLabel" name="label_3">
+                          <property name="font">
+                              <font>
+                                  <pointsize>12</pointsize>
+                              </font>
+                          </property>
+                          <property name="text">
+                              <string>Gomito</string>
+                          </property>
+                          <property name="alignment">
+                              <set>Qt::AlignCenter</set>
+                          </property>
+                      </widget>
+                  </item>
+                  <item>
+                      <widget class="QRadioButton" name="gH">
+                          <property name="font">
+                              <font>
+                                  <family>.SF NS Text</family>
+                                  <pointsize>10</pointsize>
+                                  <weight>50</weight>
+                                  <italic>false</italic>
+                                  <bold>false</bold>
+                              </font>
+                          </property>
+                          <property name="toolTipDuration">
+                              <number>-1</number>
+                          </property>
+                          <property name="styleSheet">
+                              <string notr="true"/>
+                          </property>
+                          <property name="text">
+                              <string>Alto</string>
+                          </property>
+                      </widget>
+                  </item>
+                  <item>
+                      <widget class="QRadioButton" name="gL">
+                          <property name="sizePolicy">
+                              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+                                  <horstretch>0</horstretch>
+                                  <verstretch>0</verstretch>
+                              </sizepolicy>
+                          </property>
+                          <property name="font">
+                              <font>
+                                  <family>.SF NS Text</family>
+                                  <pointsize>10</pointsize>
+                                  <weight>50</weight>
+                                  <italic>false</italic>
+                                  <bold>false</bold>
+                              </font>
+                          </property>
+                          <property name="styleSheet">
+                              <string notr="true"/>
+                          </property>
+                          <property name="text">
+                              <string>Basso</string>
+                          </property>
+                      </widget>
+                  </item>
+                  <item>
+                      <spacer name="verticalSpacer_6">
+                          <property name="orientation">
+                              <enum>Qt::Vertical</enum>
+                          </property>
+                          <property name="sizeHint" stdset="0">
+                              <size>
+                                  <width>20</width>
+                                  <height>40</height>
+                              </size>
+                          </property>
+                      </spacer>
+                  </item>
+              </layout>
+          </item>
       </layout>
      </widget>
     </widget>
@@ -1122,16 +1122,16 @@
                                          </widget>
                                      </item>
                                      <item row="3" column="0">
-           <widget class="QLabel" name="en4Label_2">
-            <property name="text">
-             <string>En 4</string>
-            </property>
-            <property name="buddy">
-             <cstring>en4Home</cstring>
-            </property>
-           </widget>
-          </item>
-          <item row="3" column="1">
+                                         <widget class="QLabel" name="en4Label_2">
+                                             <property name="text">
+                                                 <string>En 4</string>
+                                             </property>
+                                             <property name="buddy">
+                                                 <cstring>en4Home</cstring>
+                                             </property>
+                                         </widget>
+                                     </item>
+                                     <item row="3" column="1">
            <widget class="QSpinBox" name="en4Home">
             <property name="buttonSymbols">
              <enum>QAbstractSpinBox::PlusMinus</enum>
@@ -1177,25 +1177,25 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="1">
-              <widget class="QSpinBox" name="en6Home">
-                  <property name="wrapping">
-                      <bool>false</bool>
-                  </property>
-                  <property name="frame">
-                      <bool>true</bool>
-                  </property>
-                  <property name="buttonSymbols">
-                      <enum>QAbstractSpinBox::PlusMinus</enum>
-                  </property>
-                  <property name="minimum">
-                      <number>-99999</number>
-                  </property>
-                  <property name="maximum">
-                      <number>99999</number>
-                  </property>
-              </widget>
-          </item>
+                                     <item row="5" column="1">
+                                         <widget class="QSpinBox" name="en6Home">
+                                             <property name="wrapping">
+                                                 <bool>false</bool>
+                                             </property>
+                                             <property name="frame">
+                                                 <bool>true</bool>
+                                             </property>
+                                             <property name="buttonSymbols">
+                                                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                                             </property>
+                                             <property name="minimum">
+                                                 <number>-99999</number>
+                                             </property>
+                                             <property name="maximum">
+                                                 <number>99999</number>
+                                             </property>
+                                         </widget>
+                                     </item>
                                  </layout>
                              </item>
                          </layout>
@@ -1698,16 +1698,16 @@
                                  <pointsize>12</pointsize>
                              </font>
                          </property>
-       <property name="text">
-        <string>Pinza Pos</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QSplitter" name="splitter_5">
+                         <property name="text">
+                             <string>Pinza Pos</string>
+                         </property>
+                         <property name="alignment">
+                             <set>Qt::AlignCenter</set>
+                         </property>
+                     </widget>
+                 </item>
+                 <item>
+                     <widget class="QSplitter" name="splitter_5">
        <property name="orientation">
         <enum>Qt::Horizontal</enum>
        </property>
@@ -1868,19 +1868,19 @@
              </property>
             </widget>
            </item>
-           <item>
-               <widget class="QLabel" name="zRead">
-                   <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                           <horstretch>0</horstretch>
-                           <verstretch>0</verstretch>
-                       </sizepolicy>
-                   </property>
-                   <property name="text">
-                       <string>0</string>
-                   </property>
-               </widget>
-           </item>
+              <item>
+                  <widget class="QLabel" name="zRead">
+                      <property name="sizePolicy">
+                          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                          </sizepolicy>
+                      </property>
+                      <property name="text">
+                          <string>0</string>
+                      </property>
+                  </widget>
+              </item>
               <item>
                   <widget class="QLabel" name="betaRead">
                       <property name="sizePolicy">
@@ -2069,24 +2069,24 @@
              </property>
             </widget>
            </item>
-           <item>
-               <widget class="QLabel" name="zEr">
-                   <property name="sizePolicy">
-                       <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                           <horstretch>0</horstretch>
-                           <verstretch>0</verstretch>
-                       </sizepolicy>
-                   </property>
-                   <property name="font">
-                       <font>
-                           <pointsize>10</pointsize>
-                       </font>
-                   </property>
-                   <property name="text">
-                       <string>0</string>
-                   </property>
-               </widget>
-           </item>
+              <item>
+                  <widget class="QLabel" name="zEr">
+                      <property name="sizePolicy">
+                          <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                          </sizepolicy>
+                      </property>
+                      <property name="font">
+                          <font>
+                              <pointsize>10</pointsize>
+                          </font>
+                      </property>
+                      <property name="text">
+                          <string>0</string>
+                      </property>
+                  </widget>
+              </item>
               <item>
                   <widget class="QLabel" name="betaEr">
                       <property name="sizePolicy">
@@ -3013,12 +3013,12 @@
                 <pointsize>10</pointsize>
                </font>
               </property>
-              <property name="text">
-               <string>0</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-              </property>
+                 <property name="text">
+                     <string>0</string>
+                 </property>
+                 <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                 </property>
              </widget>
             </item>
                <item>
@@ -3289,12 +3289,12 @@
                 <pointsize>10</pointsize>
                </font>
               </property>
-              <property name="text">
-               <string>0</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-              </property>
+                 <property name="text">
+                     <string>0</string>
+                 </property>
+                 <property name="alignment">
+                     <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                 </property>
              </widget>
             </item>
                <item>
@@ -3861,20 +3861,20 @@
              <bool>true</bool>
          </property>
          <property name="text">
-    <string>Serial Find</string>
-   </property>
-   <property name="autoRepeat">
-    <bool>true</bool>
-   </property>
-   <property name="menuRole">
-    <enum>QAction::ApplicationSpecificRole</enum>
-   </property>
-  </action>
-  <action name="actionB9600">
-   <property name="text">
-    <string>B9600</string>
-   </property>
-  </action>
+             <string>Serial Find</string>
+         </property>
+         <property name="autoRepeat">
+             <bool>true</bool>
+         </property>
+         <property name="menuRole">
+             <enum>QAction::ApplicationSpecificRole</enum>
+         </property>
+     </action>
+     <action name="actionB9600">
+         <property name="text">
+             <string>B9600</string>
+         </property>
+     </action>
      <action name="actionB57600">
          <property name="text">
              <string>B57600</string>
@@ -3905,7 +3905,7 @@
         <customwidget>
             <class>QCustomPlot</class>
             <extends>QWidget</extends>
-            <header location="global">qcustomplot/qcustomplot.h</header>
+            <header>qcustomplot/qcustomplot.h</header>
             <container>1</container>
         </customwidget>
     </customwidgets>

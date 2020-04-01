@@ -2,12 +2,20 @@
 <project version="4">
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
-      <config projectName="scorbotUi_demo" targetName="scorbotUi" />
-      <config projectName="scorbotUi_demo" targetName="scorbotUi_autogen" />
-      <config projectName="scorbotUi_demo" targetName="scorbotUi_demo" />
-      <config projectName="scorbotUi_demo" targetName="dataTransfert" />
-      <config projectName="scorbotUi_demo" targetName="UartSubSystem" />
-      <config projectName="scorbotUi_demo" targetName="scoreUtiliy" />
+      <config projectName="ScorbotTerminal" targetName="dataTransfert" />
+      <config projectName="ScorbotTerminal" targetName="UartSubSystem" />
+      <config projectName="ScorbotTerminal" targetName="scoreUtiliy" />
+      <config projectName="ScorbotTerminal" targetName="scorbotMainWindows" />
+      <config projectName="ScorbotTerminal" targetName="uartDriver" />
+      <config projectName="ScorbotTerminal" targetName="scorbotMainWindows_autogen" />
+      <config projectName="ScorbotTerminal" targetName="scorbotUi_autogen" />
+      <config projectName="ScorbotTerminal" targetName="pidCtrl" />
+      <config projectName="ScorbotTerminal" targetName="timeOp" />
+      <config projectName="ScorbotTerminal" targetName="UI_useCase_autogen" />
+      <config projectName="ScorbotTerminal" targetName="circularBuffer" />
+      <config projectName="ScorbotTerminal" targetName="ScorbotTerminal" />
+      <config projectName="ScorbotTerminal" targetName="scorbotUi" />
+      <config projectName="ScorbotTerminal" targetName="UI_useCase" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -17,121 +25,371 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/10" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/11" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/12" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/13" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/14" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/15" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/16" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/17" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/18" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/19" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/20" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/21" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/22" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/23" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/24" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/25" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/35" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/36" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/42" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/43" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/44" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/45" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/count.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/progress.marks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/CXX.includecache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/cmake_clean_target.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/qcustomplot.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/qcustomplot_autogen/mocs_compilation.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot_autogen.dir/AutogenInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot_autogen.dir/AutogenOldSettings.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot_autogen.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot_autogen.dir/ParseCache.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot_autogen.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot_autogen.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot_autogen.dir/depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot_autogen.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot_autogen.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/libqcustomplot.a" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/qcustomplot_autogen/EWIEGA46WW/moc_qcustomplot.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/qcustomplot_autogen/moc_predefs.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/qcustomplot/qcustomplot_autogen/mocs_compilation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/qcustomplot_autogen/mocs_compilation.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/cmake-build-debug/src/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/uartDriver/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/uartDriver/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/uartDriver/UartDriver.h" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/uartDriver/UartDriver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/AdapterClasses/ComUartAdapter.h" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/AdapterClasses/ComUartAdapter.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/CMakeLists.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/qcustomplot/CMakeLists.txt" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/mainwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/mainwindow.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/ScorbotTerminal.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/ScorbotTerminal.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/ScorbotTerminal.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/ScorbotTerminal.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/ScorbotTerminal.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/ScorbotTerminal.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/ScorbotTerminal.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/ScorbotTerminal.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ScorbotTerminal.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ScorbotTerminal.cbp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/AutogenInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/AutogenInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/DataShow.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/MotorCTRL.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/SetupBoard.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/UI_useCase_autogen/mocs_compilation.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/UartConnect.cpp.o" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/AutogenInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/AutogenInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/AutogenOldSettings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/AutogenOldSettings.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/ParseCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/ParseCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/EWIEGA46WW/moc_SetupBoard.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/EWIEGA46WW/moc_SetupBoard.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/EWIEGA46WW/moc_UartConnect.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/EWIEGA46WW/moc_UartConnect.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/include/uiSrc/scorbotUi/ui_source/ui_mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/include/uiSrc/scorbotUi/ui_source/ui_mainwindow.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/moc_predefs.h" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/moc_predefs.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/CXX.includecache" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/CXX.includecache" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/depend.internal" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/depend.internal" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/flags.make" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/flags.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/AutogenInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/AutogenInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/AutogenOldSettings.txt" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/AutogenOldSettings.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/ParseCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/ParseCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/libscorbotUi.a" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/libscorbotUi.a" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/EWIEGA46WW/moc_uartChoise.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/EWIEGA46WW/moc_uartChoise.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/include/ui_source/ui_mainwindow.h" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/include/ui_source/ui_mainwindow.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/moc_predefs.h" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/moc_predefs.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/3.15.3/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/3.15.3/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/3.15.3/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/3.15.3/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/3.15.3/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/CMakeError.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/CMakeOutput.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/CMakeRuleHashes.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/10" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/12" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/13" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/14" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/15" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/16" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/17" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/18" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/19" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/20" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/22" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/23" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/24" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/25" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/35" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/36" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/43" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/44" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/45" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/Progress/count.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/ScorbotTerminal.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/ScorbotTerminal.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/ScorbotTerminal.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/ScorbotTerminal.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/ScorbotTerminal.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/ScorbotTerminal.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/ScorbotTerminal.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/ScorbotTerminal.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/ScorbotTerminal.dir/main.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/ScorbotTerminal.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/clion-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ScorbotTerminal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ScorbotTerminal.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataFactory.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/AllSensor.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/CurrentMot.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/EncoderMot.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/Pack.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/SettingBoard_C.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DataManipolation/SpeedMot.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/dataTransfert.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/DataTransfertPackge/libdataTransfert.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/circularBuffer/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/circularBuffer/CMakeFiles/circularBuffer.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/circularBuffer/CMakeFiles/circularBuffer.dir/CircularBuffer.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/circularBuffer/CMakeFiles/circularBuffer.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/circularBuffer/CMakeFiles/circularBuffer.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/circularBuffer/CMakeFiles/circularBuffer.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/circularBuffer/CMakeFiles/circularBuffer.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/circularBuffer/CMakeFiles/circularBuffer.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/circularBuffer/CMakeFiles/circularBuffer.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/circularBuffer/CMakeFiles/circularBuffer.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/circularBuffer/CMakeFiles/circularBuffer.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/circularBuffer/CMakeFiles/circularBuffer.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/circularBuffer/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/circularBuffer/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/circularBuffer/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/circularBuffer/libcircularBuffer.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/timeOp/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/timeOp/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/timeOp/CMakeFiles/timeOp.dir/timerSpecOp.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/timeOp/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/timeOp/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/timeOp/libtimeOp.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/UartDriver.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/CMakeFiles/uartDriver.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Common-src/uartDriver/libuartDriver.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UartSubSystem/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterClasses/ComUartAdapter.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/AdapterClasses/ParamSingletonFactory.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/ConcreteObserver.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UartSubSystem/CMakeFiles/UartSubSystem.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UartSubSystem/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UartSubSystem/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UartSubSystem/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UartSubSystem/libUartSubSystem.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/ScorCalc.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot/CMakeFiles/scoreUtiliy.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/UtilityScorbot/libscoreUtiliy.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/boardComSrc/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/DataTransfertPackge/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/DataTransfertPackge/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/DataTransfertPackge/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/DataTransfertPackge/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/circularBuffer/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/circularBuffer/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/circularBuffer/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/circularBuffer/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/timeOp/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/timeOp/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/timeOp/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/timeOp/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/uartDriver/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/uartDriver/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/uartDriver/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Common-src/uartDriver/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/UartSubSystem/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/UartSubSystem/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/UartSubSystem/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/UartSubSystem/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/pidCtrl/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/PIDScorbot.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/pidCtrl/CMakeFiles/pidCtrl.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/pidCtrl/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/pidCtrl/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/pidCtrl/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/ctrlSrc/pidCtrl/libpidCtrl.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/mocs_compilation.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/AutogenInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/AutogenOldSettings.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/ParseCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/CMakeFiles/scorbotMainWindows_autogen.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/AutogenInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/AutogenOldSettings.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/ParseCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/UI_useCase_autogen.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/EWIEGA46WW/moc_DataShow.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/EWIEGA46WW/moc_MotorCTRL.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/EWIEGA46WW/moc_SetupBoard.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/EWIEGA46WW/moc_UartConnect.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/include/uiSrc/scorbotUi/ui_source/ui_mainwindow.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/include/uiSrc/scorbotUi/ui_source/ui_settingBoardWindow.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/include/uiSrc/scorbotUi/ui_source/ui_uartChoise.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/moc_predefs.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/libUI_useCase.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/DataTransfertPackge/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/DataTransfertPackge/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/DataTransfertPackge/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/DataTransfertPackge/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/mainwindow.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/settingBoardWindow.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi.dir/uartChoise.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/AutogenInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/AutogenOldSettings.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/ParseCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/RCClogo.lock" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/RCClogoInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/RCClogoSettings.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/CMakeFiles/scorbotUi_autogen.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/libscorbotUi.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/CXX.includecache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/qcustomplot.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot.dir/qcustomplot_autogen/mocs_compilation.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot_autogen.dir/AutogenInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot_autogen.dir/AutogenOldSettings.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot_autogen.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot_autogen.dir/ParseCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot_autogen.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot_autogen.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot_autogen.dir/depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot_autogen.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/CMakeFiles/qcustomplot_autogen.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/libqcustomplot.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/qcustomplot_autogen/EWIEGA46WW/moc_qcustomplot.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/qcustomplot_autogen/moc_predefs.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qcustomplot/qcustomplot_autogen/mocs_compilation.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/EWIEGA46WW/moc_freeMoveWinsow.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/EWIEGA46WW/moc_mainwindow.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/EWIEGA46WW/moc_settingBoardWindow.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/EWIEGA46WW/moc_uartChoise.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/include/ui_source/ui_freeMoveWindow.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/include/ui_source/ui_mainwindow.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/include/ui_source/ui_settingBoardWindow.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/include/ui_source/ui_uartChoise.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/moc_predefs.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/libscorbotMainWindows.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/scorbotMainWindows_autogen/EWIEGA46WW/moc_ScorbotMainWindows.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/scorbotMainWindows_autogen/include/UI_useCase/uiSrc/scorbotUi/ui_source/ui_mainwindow.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/scorbotMainWindows_autogen/moc_predefs.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/CMakeLists.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -160,9 +418,6 @@
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="OCFindUsagesOptions" text="true" ivars="false" properties="true" derivedClasses="false" />
-  <component name="OCResolveContextSettings">
-    <option name="configuration" value="0-Debug-scorbotUi" />
-  </component>
   <component name="ProjectId" id="1QEs6LMzclXnGYYUwqGsgySaYhB" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
@@ -206,8 +461,43 @@
       <recent name="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi" />
     </key>
   </component>
-  <component name="RunManager" selected="CMake Application.scorbotUi_demo">
-    <configuration name="dataTransfert" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="scorbotUi_demo" TARGET_NAME="dataTransfert" CONFIG_NAME="Debug">
+  <component name="RunManager" selected="CMake Application.ScorbotTerminal">
+    <configuration name="ScorbotTerminal" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ScorbotTerminal" TARGET_NAME="ScorbotTerminal" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="ScorbotTerminal" RUN_TARGET_NAME="ScorbotTerminal">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UI_useCase" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ScorbotTerminal" TARGET_NAME="UI_useCase" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UI_useCase_autogen" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ScorbotTerminal" TARGET_NAME="UI_useCase_autogen" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="circularBuffer" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ScorbotTerminal" TARGET_NAME="circularBuffer" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dataTransfert" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ScorbotTerminal" TARGET_NAME="dataTransfert" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="pidCtrl" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ScorbotTerminal" TARGET_NAME="pidCtrl" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="scorbotMainWindows" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ScorbotTerminal" TARGET_NAME="scorbotMainWindows" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="scorbotMainWindows_autogen" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ScorbotTerminal" TARGET_NAME="scorbotMainWindows_autogen" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -217,17 +507,22 @@
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="scorbotUi_autogen" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="scorbotUi_demo" TARGET_NAME="scorbotUi_autogen" CONFIG_NAME="Debug">
+    <configuration name="scorbotUi_autogen" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ScorbotTerminal" TARGET_NAME="scorbotUi_autogen" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="scorbotUi_demo" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="scorbotUi_demo" TARGET_NAME="scorbotUi_demo" CONFIG_NAME="Debug" RUN_TARGET_PROJECT_NAME="scorbotUi_demo" RUN_TARGET_NAME="scorbotUi_demo">
+    <configuration name="scoreUtiliy" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ScorbotTerminal" TARGET_NAME="scoreUtiliy" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
     </configuration>
-    <configuration name="scoreUtiliy" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="scorbotUi_demo" TARGET_NAME="scoreUtiliy" CONFIG_NAME="Debug">
+    <configuration name="timeOp" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ScorbotTerminal" TARGET_NAME="timeOp" CONFIG_NAME="Debug">
+      <method v="2">
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="uartDriver" type="CMakeRunConfiguration" factoryName="Application" PASS_PARENT_ENVS_2="true" PROJECT_NAME="ScorbotTerminal" TARGET_NAME="uartDriver" CONFIG_NAME="Debug">
       <method v="2">
         <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
@@ -255,11 +550,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="CMake Application.scorbotUi_demo" />
+      <item itemvalue="CMake Application.ScorbotTerminal" />
+      <item itemvalue="CMake Application.circularBuffer" />
       <item itemvalue="CMake Application.dataTransfert" />
+      <item itemvalue="CMake Application.timeOp" />
+      <item itemvalue="CMake Application.uartDriver" />
       <item itemvalue="CMake Application.scorbotUi" />
       <item itemvalue="CMake Application.scorbotUi_autogen" />
       <item itemvalue="CMake Application.scoreUtiliy" />
+      <item itemvalue="CMake Application.pidCtrl" />
+      <item itemvalue="CMake Application.scorbotMainWindows" />
+      <item itemvalue="CMake Application.scorbotMainWindows_autogen" />
+      <item itemvalue="CMake Application.UI_useCase" />
+      <item itemvalue="CMake Application.UI_useCase_autogen" />
       <item itemvalue="Python.mainUi" />
     </list>
     <recent_temporary>
@@ -366,7 +669,8 @@
       <workItem from="1585406009702" duration="14010000" />
       <workItem from="1585559661955" duration="25259000" />
       <workItem from="1585656452210" duration="1460000" />
-      <workItem from="1585658801428" duration="2719000" />
+      <workItem from="1585658801428" duration="4921000" />
+      <workItem from="1585732832656" duration="2353000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
       <created>1568027375662</created>
@@ -662,7 +966,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585660316529</updated>
     </task>
-    <option name="localTasksCounter" value="43" />
+    <task id="LOCAL-00043" summary="Start plotting Work, now function in source_ui, but not extend the import to unionExe, must find solution">
+      <created>1585661633594</created>
+      <option name="number" value="00043" />
+      <option name="presentableId" value="LOCAL-00043" />
+      <option name="project" value="LOCAL" />
+      <updated>1585661633594</updated>
+    </task>
+    <option name="localTasksCounter" value="44" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -684,7 +995,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="debugging arduino code&#10;Coding Uart class LinuxSide" />
     <MESSAGE value="merge delle classi uart" />
     <MESSAGE value="merge delle classi uart Completato, dati scambiati correttamente" />
     <MESSAGE value="Uart SubSystem started" />
@@ -709,7 +1019,8 @@
     <MESSAGE value="Repository Reformed and Reorder" />
     <MESSAGE value="readme update" />
     <MESSAGE value="Start plotting Work" />
-    <option name="LAST_COMMIT_MESSAGE" value="Start plotting Work" />
+    <MESSAGE value="Start plotting Work, now function in source_ui, but not extend the import to unionExe, must find solution" />
+    <option name="LAST_COMMIT_MESSAGE" value="Start plotting Work, now function in source_ui, but not extend the import to unionExe, must find solution" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -740,10 +1051,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="694" y="269" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585587454362" />
-    <state x="662" y="244" key="#scorbotMainWindows" timestamp="1585401235581">
+    <state x="662" y="244" key="#scorbotMainWindows" timestamp="1585681180545">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="662" y="244" key="#scorbotMainWindows/0.0.1920.1040@0.0.1920.1040" timestamp="1585401235581" />
+    <state x="662" y="244" key="#scorbotMainWindows/0.0.1920.1040@0.0.1920.1040" timestamp="1585681180545" />
     <state x="669" y="243" width="572" height="552" key="#uartDriver" timestamp="1585229907540">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -765,25 +1076,25 @@
     </state>
     <state x="0" y="0" width="1910" height="1035" key="FileDocumentManager.FileCacheConflict/0.0.1920.1040@0.0.1920.1040" timestamp="1584527395931" />
     <state x="0" y="0" width="1910" height="1040" key="FileDocumentManager.FileCacheConflict/0.0.1920.1080@0.0.1920.1080" timestamp="1584732253047" />
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1585661549128">
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1585735185016">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585661549128" />
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585735185016" />
     <state width="1878" height="371" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584736698959" />
-    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1585661549128">
+    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1585735185015">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585661549128" />
+    <state width="1874" height="275" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585735185015" />
     <state width="1878" height="371" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584736698958" />
-    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1585661549128">
+    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1585735185015">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585661549128" />
+    <state width="1874" height="275" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585735185015" />
     <state width="1878" height="371" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584736698958" />
-    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1585661549128">
+    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1585735185016">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585661549128" />
+    <state width="1874" height="275" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585735185016" />
     <state width="1878" height="371" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584736698958" />
     <state width="1874" height="339" key="GridCell.Tab.1.bottom" timestamp="1585595359156">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -805,14 +1116,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="457" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585431867378" />
-    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2" timestamp="1585660318578">
+    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2" timestamp="1585661635076">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585660318578" />
-    <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1585658801979">
+    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585661635076" />
+    <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1585732861130">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="643" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585658801979" />
+    <state x="643" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585732861130" />
     <state x="643" y="360" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584725522543" />
     <state x="272" y="180" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585656798838">
       <screen x="0" y="0" width="1920" height="1040" />

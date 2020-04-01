@@ -6,7 +6,14 @@
 #define PCLISTENUART_COMUARTADAPTER_H
 
 #include <ScorInterface.h>
-#include <AdapterClasses/ParamSingletonFactory.h>
+
+//#include <AdapterClasses/ParamSingletonFactory.h>
+
+#include <UartDriver.h>
+#include <string>
+#include <mutex>
+#include <termios.h>
+
 #include <thread>
 #include <mutex>
 #include <shared_mutex>
@@ -17,7 +24,7 @@
 #define __USE_GNU
 #endif
 
-
+using namespace Uart;
 class ComUartAdapter : public ScorInterface {//, public GetCom_int {
 public:
     //singleton because in all process can be only one uart to board for time

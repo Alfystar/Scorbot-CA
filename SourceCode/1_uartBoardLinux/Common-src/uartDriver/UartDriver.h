@@ -69,32 +69,48 @@ namespace Uart {
     class UartDriver {
     public:
 #ifdef linuxSide
+
         UartDriver(const std::string &device) noexcept(false);
+
         ~UartDriver();  //should be called only by singleton Parametric factory
         void uartSpeed(speed_t vel) noexcept(false);
+
         void bufClear();
+
 #else
         UartDriver(HardwareSerial *serial, long vel);
 #endif
+
         /// Data Send
         // &pack è l'indirizzo da dove il sender si va a copiare i dati
         void packSend(uartPackType type, dOut *pack);
+
 #ifndef linuxSide
         void serialIsr();
         void serialTrySend();
 #endif
+
         /// Data get
         size_t Available(); // su ard uartAvailable
         pIn *getData();
+
 #ifdef linuxSide
+
         pIn *getDataWait() noexcept(false);
+
         pIn *getDataWait_timePack(struct timespec *t) noexcept(false);
+
         pIn *getDataWait(struct timespec *timeOut) noexcept(false);
+
         pIn *getDataWait_timePack(struct timespec *timeOut, struct timespec *t) noexcept(false);
+
 #endif
+
         /// Data print for debug
         static void serialPackDb(uart2Ard &p);
+
         static void serialPackDb(uart2Rasp &p);
+
     private:
         //Variabili della porta Seriale
 #ifdef linuxSide
@@ -120,7 +136,7 @@ namespace Uart {
         //Variabili della coda di pacchetti riconosciuti
 
         pIn cbReciveBuf[cbSize];
-        CircularBuffer <pIn> *cbRecive;
+        CircularBuffer<pIn> *cbRecive;
 #ifdef linuxSide
         //std::mutex readCb_mutex;  // protects gets data from concurrency
         sem_t recivedPackSem;
@@ -138,12 +154,19 @@ namespace Uart {
 
         //Reader Thread
 #ifdef linuxSide
+
         static void uartReader(UartDriver &d);
+
 #endif
+
         //State machine to undestand pack
         void dataDiscover();
+
         bool typeCheck(int p);
+
         size_t sizeMessage(uartPackType t);
     };
 }
+
+#undef dataSize
 #endif //PCLISTENUART_UARTDRIVER_H
