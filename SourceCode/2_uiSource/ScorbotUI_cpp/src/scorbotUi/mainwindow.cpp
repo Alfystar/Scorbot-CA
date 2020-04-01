@@ -101,6 +101,80 @@ MainWindow::MainWindow(QWidget *parent) :
     ///##########################################################
 
 
+    ui->plot->legend->setVisible(true);
+    ui->plot->legend->setFont(QFont("Helvetica", 9));
+    ui->plot->axisRect()->insetLayout()->setInsetAlignment(0, Qt::AlignLeft |
+                                                              Qt::AlignTop); // make legend align in top left corner or axis rect
+    QPen pen;
+    QColor color;
+//    timeAxes = new QVector<double>(100);
+//    for (int k = 0; k < nMot; ++k) {
+//        motAxes[k] = new QVector<double>(100);
+//    }
+    /// Graph line add:
+    color.setHsv(0, 255, 255);        //rosso
+    pen.setColor(color);
+
+    ui->plot->addGraph();   //Aggiungo la linea per il Mot1 Encoder
+    ui->plot->graph()->setPen(pen);
+    ui->plot->graph()->setName("Mot1_en");
+    ui->plot->graph()->setLineStyle(QCPGraph::lsStepLeft);
+//    ui->plot->graph()->setData(*timeAxes, *motAxes[Mot1]);
+//    ui->plot->graph()->setScatterStyle(QCPScatterStyle(QCPScatterStyle::ssNone));
+
+    color.setHsv(35, 255, 255);       //arancione
+    pen.setColor(color);
+    ui->plot->addGraph();   //Aggiungo la linea per il Mot1 Encoder
+    ui->plot->graph()->setPen(pen);
+    ui->plot->graph()->setName("Mot2_en");
+    ui->plot->graph()->setLineStyle(QCPGraph::lsStepLeft);
+//    ui->plot->graph()->setData(*timeAxes, *motAxes[Mot2]);
+
+    color.setHsv(100, 255, 255);      //verde
+    pen.setColor(color);
+    ui->plot->addGraph();   //Aggiungo la linea per il Mot1 Encoder
+    ui->plot->graph()->setPen(pen);
+    ui->plot->graph()->setName("Mot3_en");
+    ui->plot->graph()->setLineStyle(QCPGraph::lsStepLeft);
+//    ui->plot->graph()->setData(*timeAxes, *motAxes[Mot3]);
+
+    color.setHsv(200, 255, 255);      //azzurro
+    pen.setColor(color);
+    ui->plot->addGraph();   //Aggiungo la linea per il Mot1 Encoder
+    ui->plot->graph()->setPen(pen);
+    ui->plot->graph()->setName("Mot4_en");
+    ui->plot->graph()->setLineStyle(QCPGraph::lsStepLeft);
+//    ui->plot->graph()->setData(*timeAxes, *motAxes[Mot4]);
+
+    color.setHsv(250, 255, 255);      //Blu
+    pen.setColor(color);
+    ui->plot->addGraph();   //Aggiungo la linea per il Mot1 Encoder
+    ui->plot->graph()->setPen(pen);
+    ui->plot->graph()->setName("Mot5_en");
+    ui->plot->graph()->setLineStyle(QCPGraph::lsStepLeft);
+//    ui->plot->graph()->setData(*timeAxes, *motAxes[Mot5]);
+
+
+    color.setHsv(280, 255, 255);      //Viola
+    pen.setColor(color);
+    ui->plot->addGraph();   //Aggiungo la linea per il Mot1 Encoder
+    ui->plot->graph()->setPen(pen);
+    ui->plot->graph()->setName("Mot6_en");
+    ui->plot->graph()->setLineStyle(QCPGraph::lsStepLeft);
+//    ui->plot->graph()->setData(*timeAxes, *motAxes[Mot6]);
+
+    ui->plot->yAxis->scaleRange(1.1, ui->plot->yAxis->range().center());
+    ui->plot->xAxis->scaleRange(1.1, ui->plot->xAxis->range().center());
+// set blank axis lines:
+    ui->plot->xAxis->setTicks(true);
+    ui->plot->yAxis->setTicks(true);
+    ui->plot->xAxis->setTickLabels(true);
+    ui->plot->yAxis->setTickLabels(true);
+// make top right axes clones of bottom left axes:
+//    ui->plot->axisRect()->setupFullAxesBox();
+
+
+    ///##########################################################
 
     /// Button Signal
     //Parameter Scorbot
@@ -153,10 +227,13 @@ MainWindow::~MainWindow() {
     delete feedBack;
 }
 
+int j = 0;
+#define graphSize 100
 
 void MainWindow::encoderShow() {
     QString s;  // variabile utitly per impostare i numeri col giusto numero di cifre decimali
 
+    j++;
     mEncoder swEn, swObj, swEnErr;
     for (int i = Mot1; i < nMot; ++i) {
         swEn[i] = feedBack->getEn((motCode) i) - offset->getEn((motCode) i);
@@ -164,7 +241,15 @@ void MainWindow::encoderShow() {
         swObj[i] = ref->getEn((motCode) i);
         swEnErr[i] = swObj[i] - swEn[i];
         enReadErr[i]->setNum(swEnErr[i]);
+//        motAxes[i]->append(swEn[i]);
+//        ui->plot->graph(i)->setData(*timeAxes, *motAxes[i]);
+        ui->plot->graph(i)->addData(j, swEn[i]);
+        ui->plot->graph(i)->data()->removeBefore(j - graphSize);
+        ui->plot->graph(i)->rescaleAxes(true);
     }
+
+    ui->plot->xAxis->setRange(j, graphSize, Qt::AlignRight);
+    ui->plot->replot();
 
     //Conversion En --> Theta
     thetaMot th, thObj, thErr;
@@ -227,6 +312,7 @@ void MainWindow::encoderShow() {
 
 }
 
+#undef graphSize
 void MainWindow::currentShow() {
     for (int i = Mot1; i < nMot; ++i) {
         curRead[i]->setNum(feedBack->getCurrent((motCode) i));
