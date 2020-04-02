@@ -14,6 +14,7 @@ ScorbotMainWindows *w;
 
 int main(int argc, char *argv[]) {
 
+    // se si vogliono prendere dei parametri da linea di comando, devono essere catturati qui
     QApplication a(argc, argv);
     QApplication::setStyle("fusion");
 
