@@ -128,15 +128,18 @@ Le classi non vengono documentate nel dettaglio, ma sono presenti le idee di int
 #### Creazione di un controllo
 In un ottica di controllista, si vorrebbe migliorare/sviluppare dei sistemi di controllo superiori al PID implementato sulle schede, per poterlo attuare ecco dove andare a guardare:
 ##### Demo da terminale
-Il file: 
+Il file:
+
 	SourceCode/3_controllSource/2_pidCtrl/main.cpp
 
 contiene un demo-main per il controllore PID, che fissati i riferimenti, usa una classe PID sviluppata dal lavoro visto in classe di Controlli Automatici, e che leggendo il feedback calcola l'output e lo invia.
 Il sistema a contorno viene già impostato in questo main, e da questo come base, si può benissimo sviluppare un applicativo da terminale per il controllo dello scorbot.
 
 ##### Demo interfaccia grafica
-Il medesimo tipo di controllo è presente nel sistema con interfaccia grafica dentro il file: 
+Il medesimo tipo di controllo è presente nel sistema con interfaccia grafica dentro il file:
+
 	unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/MotorCTRL.cpp (in particolare alla riga 134)
+	
 Come nel caso precedente, tutto il resto del sistema viene già impostato, e anzi qui è anche già presente un sistema di immissione dei parametri che è da interfaccia grafica, oltre che la possibilità di stoppare il controllo e attivare la modalità free-move, per portare il robot in posizioni particolari.
 Il vantaggio nell'usare l'interfaccia grafica, sta che si può interrompere il conrollo quando si va in freeMove, e il poter leggere graficamente i parametri di ritorno.
 Resta in oltre possibile, a patto di studiare come si crea un interfaccia grafica in QT5, la possibilità di generare una nuova Form grafica per il Tuning del controllo usato, il tutto usano il software "qt Designer" e assegnando come si deve segnali, slot e metodi, è così possibile modificare in real-time i parametri del controllore
@@ -145,12 +148,16 @@ Resta in oltre possibile, a patto di studiare come si crea un interfaccia grafic
 
 Per creare Nuove fineste grafiche la procedura è la seguente:
 1. Disegnare con QT Designer la grafica (in quelle sviluppate fino ad ora si è forzato lo stile "fusion" da dentro il codice applicativo)
-2. Salvare il file dentro
-	SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source
+2. Salvare il file dentro:
+
+    SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source
+
 3. Generare una classe di controllo col medesimo nome, che la generalizzi e che includa il nameSpace di questa nuova classe.
 (In QT, i file *.ui*, vengono convertiti in tempo di compilazione in classi, e le classi che le controllano altro non sono che classi figlie generalizzate che quindi possiedono tutti gli attributi grafici del padre, e aggiungono i segnali e gli eventi, e in caso di modifiche o aggiunte nel padre, continuano tranquillamente a funzionare)
 4. Creare dentro
+
 	unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase
+	
 La classe che implementa gli UseCase desiderati se necessitano di conoscenze di altri sotto sistemi, altrimenti implementare lo useCase nella classe generata al punto 3.
 
 Cercando di rispettare questa logica nell'aggiunta delle classi, è possibile mantenere una struttura e far si che ai livelli altri vi sia solo il codice necessario a far interagire sistemi diversi, mentre se un sistema è già in grado di svolgere tutto da solo , non pesa sugli altri che vedono la sua funzionalità in maniera trasparente.

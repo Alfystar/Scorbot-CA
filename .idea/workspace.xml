@@ -24,17 +24,8 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/mocs_compilation.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qrc_imgs.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/scorbotMainWindows_autogen/mocs_compilation.cpp" afterDir="false" />
+    <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="project end&#10;Starting write documentation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/1_Doc/Media/ScorInterface main.png" beforeDir="false" afterPath="$PROJECT_DIR$/1_Doc/Media/ScorInterface main.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/3_controllSource/2_pidCtrl/src/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/3_controllSource/2_pidCtrl/src/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -317,7 +308,7 @@
       <workItem from="1585658801428" duration="4921000" />
       <workItem from="1585732832656" duration="2521000" />
       <workItem from="1585749145592" duration="6621000" />
-      <workItem from="1585814629072" duration="12652000" />
+      <workItem from="1585814629072" duration="12721000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
       <created>1568027375662</created>
@@ -648,7 +639,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585831390022</updated>
     </task>
-    <option name="localTasksCounter" value="48" />
+    <task id="LOCAL-00048" summary="project end&#10;Starting write documentation">
+      <created>1585835965203</created>
+      <option name="number" value="00048" />
+      <option name="presentableId" value="LOCAL-00048" />
+      <option name="project" value="LOCAL" />
+      <updated>1585835965203</updated>
+    </task>
+    <option name="localTasksCounter" value="49" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -670,7 +668,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Code reformat" />
     <MESSAGE value="SubSystem Work!!!!" />
     <MESSAGE value="SubSystem Work!!!!&#10;now start debugging time" />
     <MESSAGE value="SubSystem Work!!!!&#10;now start debugging time&#10;risolto invio richiesta specifiche scheda, setting, sample time, ritorno del tempo trascorso da parte di getCurrentWait&#10;Resta da risolvere la raice condition sui mutex quando i tempi scendono sotto i 5ms" />
@@ -695,7 +692,8 @@
     <MESSAGE value="Start plotting Work, &#10;discover why need to undefine dataSize in UartDriver.h ..." />
     <MESSAGE value="Start plotting Work, &#10;graph update from data by board" />
     <MESSAGE value="project end" />
-    <option name="LAST_COMMIT_MESSAGE" value="project end" />
+    <MESSAGE value="project end&#10;Starting write documentation" />
+    <option name="LAST_COMMIT_MESSAGE" value="project end&#10;Starting write documentation" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -734,10 +732,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="669" y="243" width="572" height="552" key="#uartDriver/0.0.1920.1040@0.0.1920.1040" timestamp="1585229907540" />
-    <state x="449" y="104" width="1317" height="798" key="CommitChangelistDialog2" timestamp="1585831389941">
+    <state x="347" y="118" width="1317" height="798" key="CommitChangelistDialog2" timestamp="1585836002948">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="449" y="104" width="1317" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585831389941" />
+    <state x="347" y="118" width="1317" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585836002948" />
     <state x="96" y="98" width="1728" height="846" key="DiffContextDialog" timestamp="1585660893942">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -791,10 +789,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="457" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585431867378" />
-    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2" timestamp="1585831393654">
+    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2" timestamp="1585835970424">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585831393654" />
+    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585835970424" />
     <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1585814631232">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
