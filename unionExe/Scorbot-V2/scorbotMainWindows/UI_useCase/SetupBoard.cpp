@@ -5,16 +5,16 @@
 #include "SetupBoard.h"
 #include "uiSrc/scorbotUi/ui_source/ui_settingBoardWindow.h"
 
-SetupBoard::SetupBoard(MainWindow *parent) : SettingBoardWindow(parent) {
+SetupBoard::SetupBoard(MainWindow *parent) : QObject(parent) {
     win = parent;
     connect(win->setBoardWin->ui->buttonBox, SIGNAL(accepted()), this, SLOT(settingBoardSend()));
     connect(win->setBoardWin->ui->loadSetting, SIGNAL(clicked()), this, SLOT(settingBoardLoad()));
     connect(win->setBoardWin->ui->restoreSetting, SIGNAL(clicked()), this, SLOT(settingBoardRestored()));
+
     scorInterface = &ComUartAdapter::getInstance();
 }
 
 void SetupBoard::settingBoardSend() {
-    std::cout << "settingBoardSend\n";
     if (!scorInterface->isConnect())
         return;
     scorInterface->setSetting(*win->setBoardWin->setting);
@@ -23,7 +23,6 @@ void SetupBoard::settingBoardSend() {
 }
 
 void SetupBoard::settingBoardLoad() {
-    std::cout << "settingBoardLoad\n";
     if (!scorInterface->isConnect())
         return;
     win->setBoardWin->setting->copyPack(*scorInterface->getSetting_board());
@@ -33,7 +32,6 @@ void SetupBoard::settingBoardLoad() {
 }
 
 void SetupBoard::settingBoardRestored() {
-    std::cout << "settingBoardRestored\n";
     win->setBoardWin->setting->setMotorLimit(Mot1, 2160, 24300, 4168);
     win->setBoardWin->setting->setMotorLimit(Mot2, 2960, 16200, 1040);
     win->setBoardWin->setting->setMotorLimit(Mot3, 2960, 21900, 4168);

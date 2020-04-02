@@ -44,7 +44,16 @@ private:
 
 public:
     explicit ScorbotMainWindows(QWidget *parent = nullptr);
+
     ~ScorbotMainWindows();
+
+private slots:
+
+    // Appena si instaura la connessione, fa da ponte e fa richiedere a setupBoard le impostazioni salvate nella scheda
+    // così da far aggiornare ScorCalc con le variabili giuste
+    void connectionStartEvent();
+
+    void infoShow();
 
 };
 

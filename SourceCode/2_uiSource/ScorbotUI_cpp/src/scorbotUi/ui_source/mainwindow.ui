@@ -13,8 +13,8 @@
          <rect>
              <x>0</x>
              <y>0</y>
-             <width>1000</width>
-             <height>498</height>
+             <width>1100</width>
+             <height>500</height>
          </rect>
      </property>
      <property name="sizePolicy">
@@ -25,33 +25,38 @@
      </property>
      <property name="minimumSize">
          <size>
-             <width>400</width>
-             <height>100</height>
+             <width>1100</width>
+             <height>500</height>
          </size>
      </property>
      <property name="maximumSize">
          <size>
-             <width>16777215</width>
-             <height>16777215</height>
+             <width>1100</width>
+             <height>500</height>
          </size>
      </property>
      <property name="windowTitle">
          <string>ScorbotConnect</string>
      </property>
      <property name="windowIcon">
-         <iconset>
-             <normaloff>../../../../../../../../.designer/backup/img/Logo-Uni-Tor-Vergata.png_256x256.png</normaloff>
-             ../../../../../../../../.designer/backup/img/Logo-Uni-Tor-Vergata.png_256x256.png
+         <iconset resource="imgs.qrc">
+             <normaloff>:/img/Logo-Uni-Tor-Vergata.png_256x256.png</normaloff>:/img/Logo-Uni-Tor-Vergata.png_256x256.png
          </iconset>
      </property>
+     <property name="autoFillBackground">
+         <bool>false</bool>
+     </property>
      <property name="styleSheet">
-         <string notr="true">url:(/newPrefix/Logo-Uni-Tor-Vergata.png_48x48.png)</string>
+         <string notr="true"/>
+     </property>
+     <property name="documentMode">
+         <bool>true</bool>
      </property>
      <property name="tabShape">
          <enum>QTabWidget::Rounded</enum>
      </property>
      <property name="dockNestingEnabled">
-         <bool>true</bool>
+         <bool>false</bool>
      </property>
      <widget class="QWidget" name="centralwidget">
          <widget class="QTabWidget" name="tabReference">
@@ -75,7 +80,7 @@
                  <enum>QTabWidget::Rounded</enum>
              </property>
              <property name="currentIndex">
-                 <number>2</number>
+                 <number>0</number>
              </property>
              <property name="usesScrollButtons">
                  <bool>false</bool>
@@ -192,16 +197,16 @@
                                  <item row="2" column="0">
                                      <widget class="QLabel" name="en3Label_3">
                                          <property name="enabled">
-            <bool>true</bool>
-           </property>
-           <property name="text">
-            <string>En 3</string>
-           </property>
-           <property name="buddy">
-            <cstring>en3Home</cstring>
-           </property>
-          </widget>
-         </item>
+                                             <bool>true</bool>
+                                         </property>
+                                         <property name="text">
+                                             <string>En 3</string>
+                                         </property>
+                                         <property name="buddy">
+                                             <cstring>en3Home</cstring>
+                                         </property>
+                                     </widget>
+                                 </item>
          <item row="2" column="1">
           <widget class="QSpinBox" name="en3Ref">
            <property name="buttonSymbols">
@@ -261,16 +266,16 @@
            </property>
           </widget>
          </item>
-         <item row="5" column="0">
-          <widget class="QLabel" name="en6Label_3">
-           <property name="text">
-            <string>En 6</string>
-           </property>
-           <property name="buddy">
-            <cstring>en6Home</cstring>
-           </property>
-          </widget>
-         </item>
+                                 <item row="5" column="0">
+                                     <widget class="QLabel" name="en6Label_3">
+                                         <property name="text">
+                                             <string>En 6</string>
+                                         </property>
+                                         <property name="buddy">
+                                             <cstring>en6Home</cstring>
+                                         </property>
+                                     </widget>
+                                 </item>
                                  <item row="5" column="1">
                                      <widget class="QSpinBox" name="en6Ref">
                                          <property name="wrapping">
@@ -305,7 +310,7 @@
                              <x>10</x>
                              <y>10</y>
                              <width>156</width>
-                             <height>218</height>
+                             <height>223</height>
                          </rect>
                      </property>
                      <layout class="QVBoxLayout" name="DegRef">
@@ -395,16 +400,16 @@
                                          <property name="enabled">
                                              <bool>true</bool>
                                          </property>
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-             <horstretch>0</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="layoutDirection">
-            <enum>Qt::LeftToRight</enum>
-           </property>
-           <property name="text">
+                                         <property name="sizePolicy">
+                                             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                                                 <horstretch>0</horstretch>
+                                                 <verstretch>0</verstretch>
+                                             </sizepolicy>
+                                         </property>
+                                         <property name="layoutDirection">
+                                             <enum>Qt::LeftToRight</enum>
+                                         </property>
+                                         <property name="text">
             <string>θ3</string>
            </property>
            <property name="alignment">
@@ -775,28 +780,28 @@
            <property name="formAlignment">
             <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
            </property>
-           <item row="0" column="0">
-               <widget class="QLabel" name="en1Label_6">
-                   <property name="sizePolicy">
-                       <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
-                           <horstretch>0</horstretch>
-                           <verstretch>0</verstretch>
-                       </sizepolicy>
-                   </property>
-                   <property name="layoutDirection">
-                       <enum>Qt::LeftToRight</enum>
-                   </property>
-                   <property name="text">
-                       <string>βd</string>
-                   </property>
-                   <property name="alignment">
-                       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                   </property>
-                   <property name="buddy">
-                       <cstring>en1Home</cstring>
-                   </property>
-               </widget>
-           </item>
+              <item row="0" column="0">
+                  <widget class="QLabel" name="en1Label_6">
+                      <property name="sizePolicy">
+                          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+                              <horstretch>0</horstretch>
+                              <verstretch>0</verstretch>
+                          </sizepolicy>
+                      </property>
+                      <property name="layoutDirection">
+                          <enum>Qt::LeftToRight</enum>
+                      </property>
+                      <property name="text">
+                          <string>βd</string>
+                      </property>
+                      <property name="alignment">
+                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      </property>
+                      <property name="buddy">
+                          <cstring>en1Home</cstring>
+                      </property>
+                  </widget>
+              </item>
               <item row="0" column="1">
                   <widget class="QDoubleSpinBox" name="betaDes">
                       <property name="buttonSymbols">
@@ -881,21 +886,21 @@
                               <horstretch>0</horstretch>
                               <verstretch>0</verstretch>
                           </sizepolicy>
-             </property>
-             <property name="layoutDirection">
-              <enum>Qt::LeftToRight</enum>
-             </property>
-             <property name="text">
-              <string>Pinza %</string>
-             </property>
-             <property name="alignment">
-              <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-             </property>
-             <property name="buddy">
-              <cstring>en6Home</cstring>
-             </property>
-            </widget>
-           </item>
+                      </property>
+                      <property name="layoutDirection">
+                          <enum>Qt::LeftToRight</enum>
+                      </property>
+                      <property name="text">
+                          <string>Pinza %</string>
+                      </property>
+                      <property name="alignment">
+                          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                      </property>
+                      <property name="buddy">
+                          <cstring>en6Home</cstring>
+                      </property>
+                  </widget>
+              </item>
           </layout>
          </item>
         </layout>
@@ -1132,16 +1137,16 @@
                                          </widget>
                                      </item>
                                      <item row="3" column="1">
-           <widget class="QSpinBox" name="en4Home">
-            <property name="buttonSymbols">
-             <enum>QAbstractSpinBox::PlusMinus</enum>
-            </property>
-            <property name="minimum">
-             <number>-99999</number>
-            </property>
-            <property name="maximum">
-             <number>99999</number>
-            </property>
+                                         <widget class="QSpinBox" name="en4Home">
+                                             <property name="buttonSymbols">
+                                                 <enum>QAbstractSpinBox::PlusMinus</enum>
+                                             </property>
+                                             <property name="minimum">
+                                                 <number>-99999</number>
+                                             </property>
+                                             <property name="maximum">
+                                                 <number>99999</number>
+                                             </property>
            </widget>
           </item>
           <item row="4" column="0">
@@ -1167,16 +1172,16 @@
             </property>
            </widget>
           </item>
-          <item row="5" column="0">
-           <widget class="QLabel" name="en6Label_2">
-            <property name="text">
-             <string>En 6</string>
-            </property>
-            <property name="buddy">
-             <cstring>en6Home</cstring>
-            </property>
-           </widget>
-          </item>
+                                     <item row="5" column="0">
+                                         <widget class="QLabel" name="en6Label_2">
+                                             <property name="text">
+                                                 <string>En 6</string>
+                                             </property>
+                                             <property name="buddy">
+                                                 <cstring>en6Home</cstring>
+                                             </property>
+                                         </widget>
+                                     </item>
                                      <item row="5" column="1">
                                          <widget class="QSpinBox" name="en6Home">
                                              <property name="wrapping">
@@ -1633,9 +1638,9 @@
              <property name="geometry">
                  <rect>
                      <x>620</x>
-                     <y>210</y>
-                     <width>301</width>
-                     <height>231</height>
+                     <y>180</y>
+                     <width>401</width>
+                     <height>261</height>
                  </rect>
              </property>
          </widget>
@@ -1676,7 +1681,7 @@
              <property name="geometry">
                  <rect>
                      <x>420</x>
-                     <y>210</y>
+                     <y>180</y>
                      <width>191</width>
                      <height>171</height>
                  </rect>
@@ -1708,16 +1713,16 @@
                  </item>
                  <item>
                      <widget class="QSplitter" name="splitter_5">
-       <property name="orientation">
-        <enum>Qt::Horizontal</enum>
-       </property>
-       <widget class="QWidget" name="layoutWidget">
-        <layout class="QHBoxLayout" name="horizontalLayout_5">
-         <item>
-          <layout class="QVBoxLayout" name="verticalLayout_7">
-           <item>
-            <widget class="QLabel" name="Xattuale">
-             <property name="sizePolicy">
+                         <property name="orientation">
+                             <enum>Qt::Horizontal</enum>
+                         </property>
+                         <widget class="QWidget" name="layoutWidget">
+                             <layout class="QHBoxLayout" name="horizontalLayout_5">
+                                 <item>
+                                     <layout class="QVBoxLayout" name="verticalLayout_7">
+                                         <item>
+                                             <widget class="QLabel" name="Xattuale">
+                                                 <property name="sizePolicy">
               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
                <horstretch>0</horstretch>
                <verstretch>0</verstretch>
@@ -1858,14 +1863,14 @@
            <item>
             <widget class="QLabel" name="yRead">
              <property name="sizePolicy">
-              <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-               <horstretch>0</horstretch>
-               <verstretch>0</verstretch>
-              </sizepolicy>
+                 <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                     <horstretch>0</horstretch>
+                     <verstretch>0</verstretch>
+                 </sizepolicy>
              </property>
-             <property name="text">
-              <string>0</string>
-             </property>
+                <property name="text">
+                    <string>0</string>
+                </property>
             </widget>
            </item>
               <item>
@@ -2059,14 +2064,14 @@
                <verstretch>0</verstretch>
               </sizepolicy>
              </property>
-             <property name="font">
-              <font>
-               <pointsize>10</pointsize>
-              </font>
-             </property>
-             <property name="text">
-              <string>0</string>
-             </property>
+                <property name="font">
+                    <font>
+                        <pointsize>10</pointsize>
+                    </font>
+                </property>
+                <property name="text">
+                    <string>0</string>
+                </property>
             </widget>
            </item>
               <item>
@@ -2160,12 +2165,12 @@
    </widget>
    <widget class="QSplitter" name="splitter_4">
     <property name="geometry">
-     <rect>
-      <x>420</x>
-      <y>40</y>
-      <width>571</width>
-      <height>160</height>
-     </rect>
+        <rect>
+            <x>420</x>
+            <y>10</y>
+            <width>671</width>
+            <height>160</height>
+        </rect>
     </property>
     <property name="sizePolicy">
      <sizepolicy hsizetype="MinimumExpanding" vsizetype="Preferred">
@@ -3003,16 +3008,16 @@
             <item>
              <widget class="QLabel" name="thR4">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
+                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                  </sizepolicy>
               </property>
-              <property name="font">
-               <font>
-                <pointsize>10</pointsize>
-               </font>
-              </property>
+                 <property name="font">
+                     <font>
+                         <pointsize>10</pointsize>
+                     </font>
+                 </property>
                  <property name="text">
                      <string>0</string>
                  </property>
@@ -3279,16 +3284,16 @@
             <item>
              <widget class="QLabel" name="thEr4">
               <property name="sizePolicy">
-               <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
+                  <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+                      <horstretch>0</horstretch>
+                      <verstretch>0</verstretch>
+                  </sizepolicy>
               </property>
-              <property name="font">
-               <font>
-                <pointsize>10</pointsize>
-               </font>
-              </property>
+                 <property name="font">
+                     <font>
+                         <pointsize>10</pointsize>
+                     </font>
+                 </property>
                  <property name="text">
                      <string>0</string>
                  </property>
@@ -3392,22 +3397,28 @@
        </widget>
       </item>
       <item>
-       <layout class="QHBoxLayout" name="horizontalLayout_9">
-        <property name="spacing">
-            <number>6</number>
-        </property>
-        <item>
-         <layout class="QVBoxLayout" name="verticalLayout_10">
-          <item>
-           <widget class="QLabel" name="ma1">
-            <property name="enabled">
-             <bool>true</bool>
-            </property>
-            <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+              <property name="spacing">
+                  <number>6</number>
+              </property>
+              <property name="sizeConstraint">
+                  <enum>QLayout::SetDefaultConstraint</enum>
+              </property>
+              <item>
+                  <layout class="QVBoxLayout" name="verticalLayout_10">
+                      <property name="sizeConstraint">
+                          <enum>QLayout::SetFixedSize</enum>
+                      </property>
+                      <item>
+                          <widget class="QLabel" name="ma1">
+                              <property name="enabled">
+                                  <bool>true</bool>
+                              </property>
+                              <property name="sizePolicy">
+                                  <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+                                      <horstretch>0</horstretch>
+                                      <verstretch>0</verstretch>
+                                  </sizepolicy>
             </property>
             <property name="font">
              <font>
@@ -3540,10 +3551,10 @@
           <item>
            <widget class="QLabel" name="mA1">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
             </property>
             <property name="font">
              <font>
@@ -3561,10 +3572,10 @@
           <item>
            <widget class="QLabel" name="mA2">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
             </property>
             <property name="font">
              <font>
@@ -3582,10 +3593,10 @@
           <item>
            <widget class="QLabel" name="mA3">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
             </property>
             <property name="font">
              <font>
@@ -3603,10 +3614,10 @@
           <item>
            <widget class="QLabel" name="mA4">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
             </property>
             <property name="font">
              <font>
@@ -3624,10 +3635,10 @@
           <item>
            <widget class="QLabel" name="mA5">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
             </property>
             <property name="font">
              <font>
@@ -3645,10 +3656,10 @@
           <item>
            <widget class="QLabel" name="mA6">
             <property name="sizePolicy">
-             <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
-              <horstretch>0</horstretch>
-              <verstretch>0</verstretch>
-             </sizepolicy>
+                <sizepolicy hsizetype="MinimumExpanding" vsizetype="Fixed">
+                    <horstretch>0</horstretch>
+                    <verstretch>0</verstretch>
+                </sizepolicy>
             </property>
             <property name="font">
              <font>
@@ -3665,7 +3676,7 @@
           </item>
          </layout>
         </item>
-       </layout>
+          </layout>
       </item>
      </layout>
     </widget>
@@ -3673,15 +3684,15 @@
          <widget class="QWidget" name="layoutWidget">
              <property name="geometry">
                  <rect>
-                     <x>930</x>
-                     <y>210</y>
+                     <x>1030</x>
+                     <y>180</y>
                      <width>65</width>
-                     <height>188</height>
+                     <height>261</height>
                  </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_22">
                  <item>
-                     <widget class="QCheckBox" name="MotPlot1">
+                     <widget class="QCheckBox" name="motPlot1">
                          <property name="text">
                              <string>Mot1</string>
                          </property>
@@ -3691,7 +3702,7 @@
                      </widget>
                  </item>
                  <item>
-                     <widget class="QCheckBox" name="MotPlot2">
+                     <widget class="QCheckBox" name="motPlot2">
                          <property name="text">
                              <string>Mot2</string>
                          </property>
@@ -3701,7 +3712,7 @@
                      </widget>
                  </item>
                  <item>
-                     <widget class="QCheckBox" name="MotPlot3">
+                     <widget class="QCheckBox" name="motPlot3">
                          <property name="text">
                              <string>Mot3</string>
                          </property>
@@ -3711,7 +3722,7 @@
                      </widget>
                  </item>
                  <item>
-                     <widget class="QCheckBox" name="MotPlot4">
+                     <widget class="QCheckBox" name="motPlot4">
                          <property name="text">
                              <string>Mot4</string>
                          </property>
@@ -3721,7 +3732,7 @@
                      </widget>
                  </item>
                  <item>
-                     <widget class="QCheckBox" name="MotPlot5">
+                     <widget class="QCheckBox" name="motPlot5">
                          <property name="text">
                              <string>Mot5</string>
                          </property>
@@ -3731,7 +3742,7 @@
                      </widget>
                  </item>
                  <item>
-                     <widget class="QCheckBox" name="MotPlot6">
+                     <widget class="QCheckBox" name="motPlot6">
                          <property name="text">
                              <string>Mot6</string>
                          </property>
@@ -3751,6 +3762,9 @@
                      <height>101</height>
                  </rect>
              </property>
+             <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Developed by: Emanuele Alfano&lt;/p&gt;&lt;p&gt;alfystar1701@gmail.com&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
              <property name="styleSheet">
                  <string notr="true"/>
              </property>
@@ -3758,7 +3772,7 @@
                  <string/>
              </property>
              <property name="pixmap">
-                 <pixmap resource="logo.qrc">:/img/Logo-Uni-Tor-Vergata.png_256x256.png</pixmap>
+                 <pixmap resource="imgs.qrc">:/img/Logo2 small.png</pixmap>
              </property>
              <property name="scaledContents">
                  <bool>true</bool>
@@ -3806,7 +3820,7 @@
              <rect>
                  <x>0</x>
                  <y>0</y>
-                 <width>1000</width>
+                 <width>1100</width>
                  <height>25</height>
              </rect>
          </property>
@@ -3949,15 +3963,15 @@
         <tabstop>scorBoardSetup</tabstop>
         <tabstop>controlSet</tabstop>
         <tabstop>freeMove</tabstop>
-        <tabstop>MotPlot1</tabstop>
-        <tabstop>MotPlot2</tabstop>
-        <tabstop>MotPlot3</tabstop>
-        <tabstop>MotPlot4</tabstop>
-        <tabstop>MotPlot5</tabstop>
-        <tabstop>MotPlot6</tabstop>
+        <tabstop>motPlot1</tabstop>
+        <tabstop>motPlot2</tabstop>
+        <tabstop>motPlot3</tabstop>
+        <tabstop>motPlot4</tabstop>
+        <tabstop>motPlot5</tabstop>
+        <tabstop>motPlot6</tabstop>
     </tabstops>
     <resources>
-        <include location="logo.qrc"/>
+        <include location="imgs.qrc"/>
     </resources>
     <connections/>
     <designerdata>

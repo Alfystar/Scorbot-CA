@@ -44,6 +44,10 @@ void setup() {
     //spi = new SpiDevice();
     uart = new UartDriver(&Cmd, CmdVel);
     initDataSend();
+    Cmd.println("Programma sviluppato da:\n\t\tEmanuele Alfano\n\t\talfystar1701@gmail.com");
+    Cmd.println("Project repository:\n\thttps://github.com/Alfystar/Scorbot-CA");
+    Cmd.println("Firmware version scorBoard:\n\t\t\tV1.0");
+    Cmd.println("Protocollo di Comunicazione:\n\t\t\tV1.0");
     Db.flush();
     Db.println("\tSetUp CMD Serial");
     sei();

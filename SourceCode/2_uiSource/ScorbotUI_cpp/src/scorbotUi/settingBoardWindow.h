@@ -12,6 +12,7 @@
 #include <QSlider>
 #include <QPushButton>
 #include <QRadioButton>
+#include <QtWidgets/QInputDialog>
 
 /// SystemLib
 #include <DataTransfert_AllInclude.h>

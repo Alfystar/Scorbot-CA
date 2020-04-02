@@ -7,8 +7,8 @@
          <rect>
              <x>0</x>
              <y>0</y>
-             <width>505</width>
-             <height>447</height>
+             <width>500</width>
+             <height>450</height>
          </rect>
      </property>
      <property name="sizePolicy">
@@ -16,6 +16,18 @@
              <horstretch>0</horstretch>
              <verstretch>0</verstretch>
          </sizepolicy>
+     </property>
+     <property name="minimumSize">
+         <size>
+             <width>500</width>
+             <height>450</height>
+         </size>
+     </property>
+     <property name="maximumSize">
+         <size>
+             <width>500</width>
+             <height>450</height>
+         </size>
      </property>
      <property name="windowTitle">
          <string>SettingBoard</string>
@@ -26,16 +38,16 @@
      <property name="modal">
          <bool>false</bool>
      </property>
-  <widget class="QWidget" name="layoutWidget">
-   <property name="geometry">
-    <rect>
-     <x>10</x>
-     <y>10</y>
-     <width>481</width>
-     <height>431</height>
-    </rect>
-   </property>
-   <layout class="QVBoxLayout" name="verticalLayout">
+     <widget class="QWidget" name="layoutWidget">
+         <property name="geometry">
+             <rect>
+                 <x>10</x>
+                 <y>10</y>
+                 <width>481</width>
+                 <height>432</height>
+             </rect>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout">
     <property name="spacing">
      <number>16</number>
     </property>

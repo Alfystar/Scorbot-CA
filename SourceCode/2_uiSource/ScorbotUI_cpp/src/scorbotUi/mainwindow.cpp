@@ -4,13 +4,21 @@
 MainWindow::MainWindow(QWidget *parent) :
         QMainWindow(parent),
         ui(new Ui::MainWindow) {
+    Q_INIT_RESOURCE(imgs);
 
 
     // My Ui
     ui->setupUi(this);
     //todo: imparare a usare il file .qrc
-    ui->image->setPixmap(
-            QPixmap("/home/alfyhack/Documenti/Scorbot-CA/2_uiSource/ScorbotUI_cpp/scorbotUi/ui_source/img/Logo-Uni-Tor-Vergata.png_256x256.png"));
+
+//    QPixmap *pixmap = new QPixmap(
+//            "/home/alfystar/Documenti/Scorbot-CA/unionExe/Scorbot-V2/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/ui_source/img/Logo2 small.png");
+//    std::cout << "pixmap=" << pixmap << "\n";
+//    ui->image->setStyleSheet("background-image: url(ui_source/img/Logo-Uni-Tor-Vergata.png_256x256.png)");
+
+//    ui->image->setPixmap(*pixmap);
+//    ui->image->setMask(pixmap->mask());
+//    ui->image->show();
 
     // Other Windows
     setBoardWin = new SettingBoardWindow(this);    //creo la finestra e la faccio mia figlia
@@ -97,6 +105,13 @@ MainWindow::MainWindow(QWidget *parent) :
     curRead[Mot5] = ui->mA5;
     curRead[Mot6] = ui->mA6;
 
+    motPlot[Mot1] = ui->motPlot1;
+    motPlot[Mot2] = ui->motPlot2;
+    motPlot[Mot3] = ui->motPlot3;
+    motPlot[Mot4] = ui->motPlot4;
+    motPlot[Mot5] = ui->motPlot5;
+    motPlot[Mot6] = ui->motPlot6;
+
     tabReference->setCurrentIndex(0);
     ///##########################################################
 
@@ -107,61 +122,52 @@ MainWindow::MainWindow(QWidget *parent) :
                                                               Qt::AlignTop); // make legend align in top left corner or axis rect
     QPen pen;
     QColor color;
-//    timeAxes = new QVector<double>(100);
-//    for (int k = 0; k < nMot; ++k) {
-//        motAxes[k] = new QVector<double>(100);
-//    }
+
     /// Graph line add:
     color.setHsv(0, 255, 255);        //rosso
     pen.setColor(color);
+    pen.setWidth(3);
 
     ui->plot->addGraph();   //Aggiungo la linea per il Mot1 Encoder
     ui->plot->graph()->setPen(pen);
-    ui->plot->graph()->setName("Mot1_en");
+    ui->plot->graph()->setName("Mot1_mA");
     ui->plot->graph()->setLineStyle(QCPGraph::lsStepLeft);
-//    ui->plot->graph()->setData(*timeAxes, *motAxes[Mot1]);
-//    ui->plot->graph()->setScatterStyle(QCPScatterStyle(QCPScatterStyle::ssNone));
 
     color.setHsv(35, 255, 255);       //arancione
     pen.setColor(color);
     ui->plot->addGraph();   //Aggiungo la linea per il Mot1 Encoder
     ui->plot->graph()->setPen(pen);
-    ui->plot->graph()->setName("Mot2_en");
+    ui->plot->graph()->setName("Mot2_mA");
     ui->plot->graph()->setLineStyle(QCPGraph::lsStepLeft);
-//    ui->plot->graph()->setData(*timeAxes, *motAxes[Mot2]);
 
     color.setHsv(100, 255, 255);      //verde
     pen.setColor(color);
     ui->plot->addGraph();   //Aggiungo la linea per il Mot1 Encoder
     ui->plot->graph()->setPen(pen);
-    ui->plot->graph()->setName("Mot3_en");
+    ui->plot->graph()->setName("Mot3_mA");
     ui->plot->graph()->setLineStyle(QCPGraph::lsStepLeft);
-//    ui->plot->graph()->setData(*timeAxes, *motAxes[Mot3]);
 
     color.setHsv(200, 255, 255);      //azzurro
     pen.setColor(color);
     ui->plot->addGraph();   //Aggiungo la linea per il Mot1 Encoder
     ui->plot->graph()->setPen(pen);
-    ui->plot->graph()->setName("Mot4_en");
+    ui->plot->graph()->setName("Mot4_mA");
     ui->plot->graph()->setLineStyle(QCPGraph::lsStepLeft);
-//    ui->plot->graph()->setData(*timeAxes, *motAxes[Mot4]);
 
     color.setHsv(250, 255, 255);      //Blu
     pen.setColor(color);
     ui->plot->addGraph();   //Aggiungo la linea per il Mot1 Encoder
     ui->plot->graph()->setPen(pen);
-    ui->plot->graph()->setName("Mot5_en");
+    ui->plot->graph()->setName("Mot5_mA");
     ui->plot->graph()->setLineStyle(QCPGraph::lsStepLeft);
-//    ui->plot->graph()->setData(*timeAxes, *motAxes[Mot5]);
 
 
     color.setHsv(280, 255, 255);      //Viola
     pen.setColor(color);
     ui->plot->addGraph();   //Aggiungo la linea per il Mot1 Encoder
     ui->plot->graph()->setPen(pen);
-    ui->plot->graph()->setName("Mot6_en");
+    ui->plot->graph()->setName("Mot6_mA");
     ui->plot->graph()->setLineStyle(QCPGraph::lsStepLeft);
-//    ui->plot->graph()->setData(*timeAxes, *motAxes[Mot6]);
 
     ui->plot->yAxis->scaleRange(1.1, ui->plot->yAxis->range().center());
     ui->plot->xAxis->scaleRange(1.1, ui->plot->xAxis->range().center());
@@ -170,9 +176,6 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->plot->yAxis->setTicks(true);
     ui->plot->xAxis->setTickLabels(true);
     ui->plot->yAxis->setTickLabels(true);
-// make top right axes clones of bottom left axes:
-//    ui->plot->axisRect()->setupFullAxesBox();
-
 
     ///##########################################################
 
@@ -202,19 +205,20 @@ MainWindow::MainWindow(QWidget *parent) :
     }
     connect(pinzaRef, SIGNAL (valueChanged(int)), this, SLOT (cinCalc_handler()));
     //inv
-    for (int i = 0; i < 3; ++i) {
-        connect(pDes[i], SIGNAL (valueChanged(double)), this, SLOT (cinCalc_handler()));
+    for (auto &pDe : pDes) {
+        connect(pDe, SIGNAL (valueChanged(double)), this, SLOT (cinCalc_handler()));
     }
-    for (int i = 0; i < 2; ++i) {
-        connect(pOri[i], SIGNAL (valueChanged(double)), this, SLOT (cinCalc_handler()));
+    for (auto &i : pOri) {
+        connect(i, SIGNAL (valueChanged(double)), this, SLOT (cinCalc_handler()));
     }
     connect(pinzaInv, SIGNAL (valueChanged(int)), this, SLOT (cinCalc_handler()));
-    for (int i = 0; i < 2; ++i) {
-        connect(gomito[i], SIGNAL (toggled(bool)), this, SLOT (cinCalc_handler()));
+    for (auto &i : gomito) {
+        connect(i, SIGNAL (toggled(bool)), this, SLOT (cinCalc_handler()));
     }
 
     connect(this, SIGNAL (newEncoderShow()), this, SLOT (encoderShow()));
     connect(this, SIGNAL (newCurrentShow()), this, SLOT (currentShow()));
+
 
 }
 
@@ -225,15 +229,14 @@ MainWindow::~MainWindow() {
     /// Variabili fuznionali
     delete ref;
     delete feedBack;
+    Q_CLEANUP_RESOURCE(imgs);
+
 }
 
-int j = 0;
-#define graphSize 100
 
 void MainWindow::encoderShow() {
     QString s;  // variabile utitly per impostare i numeri col giusto numero di cifre decimali
 
-    j++;
     mEncoder swEn, swObj, swEnErr;
     for (int i = Mot1; i < nMot; ++i) {
         swEn[i] = feedBack->getEn((motCode) i) - offset->getEn((motCode) i);
@@ -241,15 +244,8 @@ void MainWindow::encoderShow() {
         swObj[i] = ref->getEn((motCode) i);
         swEnErr[i] = swObj[i] - swEn[i];
         enReadErr[i]->setNum(swEnErr[i]);
-//        motAxes[i]->append(swEn[i]);
-//        ui->plot->graph(i)->setData(*timeAxes, *motAxes[i]);
-        ui->plot->graph(i)->addData(j, swEn[i]);
-        ui->plot->graph(i)->data()->removeBefore(j - graphSize);
-        ui->plot->graph(i)->rescaleAxes(true);
     }
 
-    ui->plot->xAxis->setRange(j, graphSize, Qt::AlignRight);
-    ui->plot->replot();
 
     //Conversion En --> Theta
     thetaMot th, thObj, thErr;
@@ -312,12 +308,30 @@ void MainWindow::encoderShow() {
 
 }
 
-#undef graphSize
+int j = 0;
+#define graphSize 200
+
 void MainWindow::currentShow() {
+    float cur;
+    j++;
     for (int i = Mot1; i < nMot; ++i) {
-        curRead[i]->setNum(feedBack->getCurrent((motCode) i));
+        cur = calc->adc2curr(feedBack->getCurrent((motCode) i));
+        curRead[i]->setNum(cur);
+
+
+        ui->plot->graph(i)->addData(j, cur);
+        ui->plot->graph(i)->data()->removeBefore(j - graphSize);
+        ui->plot->graph(i)->rescaleAxes(true);
+        ui->plot->graph(i)->setVisible(motPlot[i]->isChecked());
     }
+    ui->plot->yAxis->rescale(true);
+    ui->plot->yAxis->scaleRange(1.1, ui->plot->yAxis->range().center());
+    ui->plot->xAxis->setRange(j, graphSize, Qt::AlignRight);
+    ui->plot->replot();
 }
+
+#undef graphSize
+
 
 void MainWindow::conParamsUpdate() {
     par.alpha = ui->alphaRobot->value();

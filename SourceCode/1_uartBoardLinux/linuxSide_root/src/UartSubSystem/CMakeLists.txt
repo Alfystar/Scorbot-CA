@@ -4,10 +4,7 @@ if (NOT TARGET UartSubSystem)
             UartSubSystem.h
             ScorInterface.h  #Interface Class
 
-            AdapterClasses/SingletonFactoryException.h
-#            AdapterClasses/ParamSingletonFactory.h AdapterClasses/ParamSingletonFactory.cpp   #Factory per generare Le classi di comunicazione uniche per tipo
             AdapterClasses/ComUartAdapter.h AdapterClasses/ComUartAdapter.cpp
-            #Factory per generare gli adapter
 
             #Observer pattern class, to notifySettingBoard data
             AdapterClasses/ObserverScorbot.h AdapterClasses/ObservableScorbot.h

@@ -3,7 +3,6 @@
 //
 
 #include "settingBoardWindow.h"
-#include <QtWidgets/QInputDialog>
 #include "ui_source/ui_settingBoardWindow.h"
 
 SettingBoardWindow::SettingBoardWindow(QWidget *parent) :

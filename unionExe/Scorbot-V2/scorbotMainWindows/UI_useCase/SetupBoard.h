@@ -23,16 +23,20 @@
 using namespace DataPrimitive;
 using namespace DataManipolation;
 
-class SetupBoard : public SettingBoardWindow {
+class SetupBoard : public QObject {
 Q_OBJECT  //Macro di Qt che importa tutti i metodi virtuali necessari, senza doverli scrvere a mano
 
     MainWindow *win;
     ScorInterface *scorInterface = nullptr;
 public:
     SetupBoard(MainWindow *parent);
-private slots:
+
+public slots:
+
     void settingBoardSend();
+
     void settingBoardLoad();
+
     void settingBoardRestored();
 };
 

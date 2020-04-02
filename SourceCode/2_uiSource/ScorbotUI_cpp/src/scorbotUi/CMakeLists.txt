@@ -11,8 +11,14 @@ if (NOT TARGET scorbotUi)
         set(CMAKE_INCLUDE_CURRENT_DIR ON)
     endif ()
 
+    find_package(Qt5 COMPONENTS Widgets REQUIRED)
+    find_package(Qt5PrintSupport REQUIRED)
+
+    list(APPEND RESOURCES ui_source/imgs.qrc)
+    qt5_add_resources(RCC_SOURCES ${RESOURCES})
+
     add_library(scorbotUi #SHARED
-            mainwindow.h mainwindow.cpp ui_source/mainwindow.ui ui_source/logo.qrc
+            mainwindow.h mainwindow.cpp ui_source/mainwindow.ui ${RCC_SOURCES}
             settingBoardWindow.h settingBoardWindow.cpp ui_source/settingBoardWindow.ui
             freeMoveWindow.h freeMoveWindow.cpp ui_source/freeMoveWindow.ui
             uartChoise.h uartChoise.cpp ui_source/uartChoise.ui
@@ -30,10 +36,7 @@ if (NOT TARGET scorbotUi)
     # sudo apt install qt5-d* qtbase5-dev qtdeclarative5-dev qttools5-dev-tools
     # sudo apt install libqwt-qt5-*
     # sudo apt install libqwtmathml-qt5-*
-    find_package(Qt5 COMPONENTS Widgets REQUIRED)
     target_link_libraries(scorbotUi PUBLIC Qt5::Widgets)
-
-    find_package(Qt5PrintSupport REQUIRED)
     target_link_libraries(scorbotUi PUBLIC Qt5PrintSupport)
 
     target_link_libraries(scorbotUi PUBLIC dataTransfert)

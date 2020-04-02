@@ -8,8 +8,8 @@ add_subdirectory(scorbotMainWindows)
 
 add_executable(${PROJECT_NAME} main.cpp)
 target_link_libraries(${PROJECT_NAME} PUBLIC scorbotMainWindows)
-
-
+message("Il programma ${PROJECT_NAME}, verrà installato al path: ${CMAKE_INSTALL_PREFIX}")
+install(TARGETS ${PROJECT_NAME} EXPORT ${PROJECT_NAME} DESTINATION "${CMAKE_INSTALL_PREFIX}")
 
 
 #target_link_libraries(${PROJECT_NAME} PUBLIC )

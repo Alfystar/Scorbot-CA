@@ -64,7 +64,7 @@ public:
     QLabel *thetaRead[nMot];
     QLabel *thetaReadErr[nMot];
     QLabel *curRead[nMot];
-
+    QCheckBox *motPlot[nMot];
 
     SettingBoardWindow *setBoardWin;
     FreeMoveWindow *freeMovWin;
