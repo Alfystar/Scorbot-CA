@@ -25,10 +25,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SourceCode/3_controllSource/2_pidCtrl/src/pidCtrl/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/ObserverScorbot.h" beforeDir="false" afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/boardComSrc/UartSubSystem/AdapterClasses/ObserverScorbot.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -93,11 +91,11 @@
       <recent name="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/qcustomplot" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/SourceCode/3_controllSource/2_pidCtrl/src/pidCtrl" />
+      <recent name="$PROJECT_DIR$/SourceCode/3_controllSource/2_pidCtrl" />
       <recent name="$PROJECT_DIR$/unionExe/Scorbot-V2/boardComSrc/Common-src" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/_oldProject" />
-      <recent name="$PROJECT_DIR$/_oldProject/3_controllSource" />
-      <recent name="$PROJECT_DIR$/_oldProject/2_uiSource" />
     </key>
   </component>
   <component name="RunManager" selected="CMake Application.ScorbotTerminal">
@@ -312,14 +310,7 @@
       <workItem from="1585732832656" duration="2521000" />
       <workItem from="1585749145592" duration="6621000" />
       <workItem from="1585814629072" duration="14120000" />
-      <workItem from="1585922291415" duration="10069000" />
-    </task>
-    <task id="LOCAL-00002" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
-      <created>1568027526977</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1568027526977</updated>
+      <workItem from="1585922291415" duration="10846000" />
     </task>
     <task id="LOCAL-00003" summary="Add son class to DCmotor to improve Working set limits">
       <created>1568042401850</created>
@@ -657,7 +648,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585937758730</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="Readme update">
+      <created>1585939792892</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1585939792892</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -679,7 +677,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="SubSystem Work!!!!&#10;now start debugging time" />
     <MESSAGE value="SubSystem Work!!!!&#10;now start debugging time&#10;risolto invio richiesta specifiche scheda, setting, sample time, ritorno del tempo trascorso da parte di getCurrentWait&#10;Resta da risolvere la raice condition sui mutex quando i tempi scendono sotto i 5ms" />
     <MESSAGE value="risolta la critc_race sui mutex, mettendo i semafori.&#10;Il problema è che alle alte velocità si perde l'owner&#10;&#10;Trovare come lockare insieme più semafori (forse si deve passare a sistem5)" />
     <MESSAGE value="Iniziato rioridono dell'interfaccia grafica verso una forma più formale" />
@@ -704,7 +701,8 @@
     <MESSAGE value="project end" />
     <MESSAGE value="project end&#10;Starting write documentation" />
     <MESSAGE value="project end&#10;Documentation update&#10;Code clean" />
-    <option name="LAST_COMMIT_MESSAGE" value="project end&#10;Documentation update&#10;Code clean" />
+    <MESSAGE value="Readme update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Readme update" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REFORMAT_BEFORE_PROJECT_COMMIT" value="true" />
     <option name="REARRANGE_BEFORE_PROJECT_COMMIT" value="true" />
@@ -743,10 +741,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="669" y="243" width="572" height="552" key="#uartDriver/0.0.1920.1040@0.0.1920.1040" timestamp="1585229907540" />
-    <state x="347" y="118" width="1317" height="798" key="CommitChangelistDialog2" timestamp="1585939709993">
+    <state x="347" y="118" width="1317" height="798" key="CommitChangelistDialog2" timestamp="1585939792816">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="347" y="118" width="1317" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585939709993" />
+    <state x="347" y="118" width="1317" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585939792816" />
     <state x="96" y="98" width="1728" height="846" key="DiffContextDialog" timestamp="1585660893942">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -800,10 +798,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="457" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585431867378" />
-    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2" timestamp="1585937765388">
+    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2" timestamp="1585939795684">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585937765388" />
+    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585939795684" />
     <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1585922291118">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
