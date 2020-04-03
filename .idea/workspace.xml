@@ -25,8 +25,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore_global" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore_global" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/ScoreBoard_Uart/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/ScoreBoard_Uart/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -310,14 +311,7 @@
       <workItem from="1585732832656" duration="2521000" />
       <workItem from="1585749145592" duration="6621000" />
       <workItem from="1585814629072" duration="14120000" />
-      <workItem from="1585922291415" duration="10911000" />
-    </task>
-    <task id="LOCAL-00004" summary="Add son class to DCmotor to improve Working set limits&#10;code reformat">
-      <created>1568042629543</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1568042629543</updated>
+      <workItem from="1585922291415" duration="11358000" />
     </task>
     <task id="LOCAL-00005" summary="reorder Rasp lib structure, and update uml diagrams to actualy version">
       <created>1569248590425</created>
@@ -655,7 +649,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585940697891</updated>
     </task>
-    <option name="localTasksCounter" value="53" />
+    <task id="LOCAL-00053" summary="Readme update">
+      <created>1585940828748</created>
+      <option name="number" value="00053" />
+      <option name="presentableId" value="LOCAL-00053" />
+      <option name="project" value="LOCAL" />
+      <updated>1585940828749</updated>
+    </task>
+    <option name="localTasksCounter" value="54" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -741,10 +742,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="669" y="243" width="572" height="552" key="#uartDriver/0.0.1920.1040@0.0.1920.1040" timestamp="1585229907540" />
-    <state x="347" y="118" width="1317" height="798" key="CommitChangelistDialog2" timestamp="1585940697829">
+    <state x="347" y="118" width="1317" height="798" key="CommitChangelistDialog2" timestamp="1585940828675">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="347" y="118" width="1317" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585940697829" />
+    <state x="347" y="118" width="1317" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585940828675" />
     <state x="96" y="98" width="1728" height="846" key="DiffContextDialog" timestamp="1585660893942">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -798,10 +799,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="457" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585431867378" />
-    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2" timestamp="1585940699328">
+    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2" timestamp="1585940830282">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585940699328" />
+    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585940830282" />
     <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1585922291118">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

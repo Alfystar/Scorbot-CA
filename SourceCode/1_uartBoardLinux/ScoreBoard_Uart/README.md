@@ -51,12 +51,30 @@ Attualmente il codice gestisce molto bene:
 - Encoder
 - Correnti
 - Controllo motori (Tramite la classe)
-- SPI
+- UART
+
+I diagrammi che descrivono i sotto sistemi sono:
+<p align="center">
+  <i>ADC Current reading</i>
+  <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ScorBoard%20UML%20Diagrams/diagrams/AdcLib.png?raw=true"> 
+  <br>
+  <i>ADC Free running timing</i>
+  <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ScorBoard%20UML%20Diagrams/diagrams/ADC%20free-runnig.png?raw=true"> 
+  <br>
+  <i>Motor Driver</i>
+  <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ScorBoard%20UML%20Diagrams/diagrams/Motor%20Driver.png?raw=true"> 
+  <br>
+  <i>Motor Driver State Machine</i>
+  <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ScorBoard%20UML%20Diagrams/diagrams/Motor%20State%20Machine.png?raw=true"> 
+  <br>
+  <i>Encoder Reading</i>
+  <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ScorBoard%20UML%20Diagrams/diagrams/ScoreBot%20Feedback%20Sensor.png?raw=true"> 
+  <br>
+  <i>System Entity</i>
+  <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ScorBoard%20UML%20Diagrams/diagrams/ScorBoard%20Object.png?raw=true"> 
+</p>
+
 
 Risulta tuttavia necessario miglorare:
 - Raggiungimento della home:
     Il codice per ora riesce ad ottenere una buona home per i giunti del braccio e della pinsa, ma a causa di dei falsi contatti o altro sulla base il raggiungimento della home non avviene sempre, è necessario mettersi a osservare per bene cosa succede e rendere più robusto il codice che cerca la home
-- Limitazione dei motori:
-    Ad ora l'unico controllo che viene fatto dalla scheda è se la corrente media supera quello di limite, si vorrebbe limitare anche gli encoder minimi e gli encoder massimi facendo ignorare all'arduino i pwm che portano a superare queste posizioni di sicurezza. Per farlo è necessario modificare la classe che gestisce i motori aggiungendo un parametro che dice se il motore per pwm POSITIVI fa anche crescere gli encoder o meno. Saputo ciò si puo far si che la classe ignori i sensi di marcia che portano a far crescere il numero degli encoder una volta che si è superato la soglia massima.
-    La sogli è possibile vederla dalle impostazioni della boar, e la segnalazione che è stato superato il limite può avvenire dalla funzione "sanityCheck", che ad ora controlla ogno x millisecondi la sola corrente, con questa aggiunta si potrà superare questo limite.
-
