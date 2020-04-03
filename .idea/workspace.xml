@@ -25,7 +25,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/SourceCode/3_controllSource/2_pidCtrl/src/pidCtrl/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore_global" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore_global" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -310,14 +310,7 @@
       <workItem from="1585732832656" duration="2521000" />
       <workItem from="1585749145592" duration="6621000" />
       <workItem from="1585814629072" duration="14120000" />
-      <workItem from="1585922291415" duration="10846000" />
-    </task>
-    <task id="LOCAL-00003" summary="Add son class to DCmotor to improve Working set limits">
-      <created>1568042401850</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1568042401850</updated>
+      <workItem from="1585922291415" duration="10911000" />
     </task>
     <task id="LOCAL-00004" summary="Add son class to DCmotor to improve Working set limits&#10;code reformat">
       <created>1568042629543</created>
@@ -655,7 +648,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585939792892</updated>
     </task>
-    <option name="localTasksCounter" value="52" />
+    <task id="LOCAL-00052" summary="Readme update">
+      <created>1585940697891</created>
+      <option name="number" value="00052" />
+      <option name="presentableId" value="LOCAL-00052" />
+      <option name="project" value="LOCAL" />
+      <updated>1585940697891</updated>
+    </task>
+    <option name="localTasksCounter" value="53" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -741,10 +741,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="669" y="243" width="572" height="552" key="#uartDriver/0.0.1920.1040@0.0.1920.1040" timestamp="1585229907540" />
-    <state x="347" y="118" width="1317" height="798" key="CommitChangelistDialog2" timestamp="1585939792816">
+    <state x="347" y="118" width="1317" height="798" key="CommitChangelistDialog2" timestamp="1585940697829">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="347" y="118" width="1317" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585939792816" />
+    <state x="347" y="118" width="1317" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585940697829" />
     <state x="96" y="98" width="1728" height="846" key="DiffContextDialog" timestamp="1585660893942">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -798,10 +798,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="457" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585431867378" />
-    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2" timestamp="1585939795684">
+    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2" timestamp="1585940699328">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585939795684" />
+    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585940699328" />
     <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1585922291118">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -831,6 +831,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="228" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1585751445405" />
+    <state x="686" y="433" key="vcs.readOnlyHandler.ReadOnlyStatusDialog" timestamp="1585940783610">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="686" y="433" key="vcs.readOnlyHandler.ReadOnlyStatusDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585940783610" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
