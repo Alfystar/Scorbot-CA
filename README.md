@@ -46,7 +46,8 @@ e si avvierà l'interfaccia grafica di controllo della scheda dello scorbot (svi
 ### Develope setup
 
 #### File System Structure
-Se invece si volesse continuare lo sviluppo del progetto è necessario sapere qualche dettaglio:
+Premettendo che dentro le cartelle dei sotto sistemi sono presenti dei Readme.mb che aiutano a capire come funziona il sotto sistema,
+descriviamo come continuare lo sviluppo:
 Tenendo presente la struttura del progetto:
 
     .
