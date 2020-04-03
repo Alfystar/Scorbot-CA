@@ -46,7 +46,7 @@ void excutePack(uart2Ard &p) {
             home();
             break;
         case settingAsk:
-            uart->packSend(settingBoardData, (data2Rasp *) &globSets);
+            uart->packSend(settingBoardData, (data2Linux *) &globSets);
             break;
         case RESEND:
             //todo inviare lastPack
@@ -84,7 +84,7 @@ void dataSend() {
         //sAllSend->copyCur(adc->getLastCycle());
         sAllSend->copyEn(enTest);
         sAllSend->copyCur(curTest);
-        uart->packSend(mAllData, (data2Rasp *) &sAllSend->getSens());
+        uart->packSend(mAllData, (data2Linux *) &sAllSend->getSens());
         nextEnSend += enP;
         nextCurSend += curP;
         return;
@@ -93,7 +93,7 @@ void dataSend() {
         //digitalWrite(31,!digitalRead(31));
         //sAllSend->copyEn(sFeed->captureEn());
         sAllSend->copyEn(enTest);
-        uart->packSend(mEncoderData, (data2Rasp *) &sAllSend->getEn());
+        uart->packSend(mEncoderData, (data2Linux *) &sAllSend->getEn());
         nextEnSend += enP;
         return;
     }
@@ -101,7 +101,7 @@ void dataSend() {
         //digitalWrite(30,!digitalRead(30));
         //sAllSend->copyCur(adc->getLastCycle());
         sAllSend->copyCur(curTest);
-        uart->packSend(mCurrentData, (data2Rasp *) &sAllSend->getCurrent());
+        uart->packSend(mCurrentData, (data2Linux *) &sAllSend->getCurrent());
         nextCurSend += curP;
         return;
     }

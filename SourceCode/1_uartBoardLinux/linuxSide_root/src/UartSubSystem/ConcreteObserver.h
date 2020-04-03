@@ -32,7 +32,9 @@ public:
 
     /// ##### ObserverScorbot OVERRIDE #####
     void updateSettingBoard() override;
-    void updateCurrendData() override;
+
+    void updateCurrentData() override;
+
     void updateEncoderData() override;
 private:
     //Semaphore utility

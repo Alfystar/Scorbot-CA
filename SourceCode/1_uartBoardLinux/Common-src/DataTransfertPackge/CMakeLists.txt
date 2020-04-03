@@ -9,7 +9,6 @@ if (NOT TARGET dataTransfert)
             DataManipolation/EncoderMot.h DataManipolation/EncoderMot.cpp
             DataManipolation/SpeedMot.h DataManipolation/SpeedMot.cpp
             DataManipolation/SettingBoard_C.h DataManipolation/SettingBoard_C.cpp
-            DataManipolation/Pack.h DataManipolation/Pack.cpp
             )
 
     #aggiunge la libreria/eseguibile in modalità INTERFACE|PUBLIC|PRIVATE alla INCLUDE_DIRECTORIES property

@@ -12,6 +12,5 @@
 #include "DataManipolation/EncoderMot.h"
 #include "DataManipolation/SpeedMot.h"
 #include "DataManipolation/SettingBoard_C.h"
-#include "DataManipolation/Pack.h"
 
 #endif //PCLISTENUART_DATATRANSFERT_ALLINCLUDE_H

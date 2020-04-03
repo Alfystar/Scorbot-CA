@@ -64,10 +64,10 @@ void ConcreteObserver::updateSettingBoard() {
 
 }
 
-void ConcreteObserver::updateCurrendData() {
+void ConcreteObserver::updateCurrentData() {
     if (!enCur)
         return;
-//    std::cout << "ConcreteObserver:updateCurrendData\t";
+//    std::cout << "ConcreteObserver:updateCurrentData\t";
     sem_postOnce(&curSem);
 
 }

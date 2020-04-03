@@ -6,15 +6,6 @@
 #include "DataFactory.h"
 
 namespace dataFactory {
-    SPIPACK &makeSPIPACK() {
-        SPIPACK *p = (SPIPACK *) malloc(sizeof(SPIPACK));
-        memset(p, 0, sizeof(SPIPACK));
-        return *p;
-    }
-
-    void freeSPIPACK(SPIPACK *p) {
-        free(p);
-    }
 
     mSpeed &makeMSpeed() {
         mSpeed *p = (mSpeed *) malloc(sizeof(mSpeed));
@@ -76,13 +67,13 @@ namespace dataFactory {
         free(p);
     }
 
-    uart2Rasp &makeData2Rasp() {
-        uart2Rasp *p = (uart2Rasp *) malloc(sizeof(uart2Rasp));
-        memset(p, 0, sizeof(uart2Rasp));
+    uart2Linux &makeData2Rasp() {
+        uart2Linux *p = (uart2Linux *) malloc(sizeof(uart2Linux));
+        memset(p, 0, sizeof(uart2Linux));
         return *p;
     }
 
-    void freeData2Rasp(uart2Rasp *p) {
+    void freeData2Rasp(uart2Linux *p) {
         free(p);
     }
 
@@ -96,13 +87,13 @@ namespace dataFactory {
         free(p);
     }
 
-    uart2Rasp &makeUart2Rasp() {
-        uart2Rasp *p = (uart2Rasp *) malloc(sizeof(uart2Rasp));
-        memset(p, 0, sizeof(uart2Rasp));
+    uart2Linux &makeUart2Rasp() {
+        uart2Linux *p = (uart2Linux *) malloc(sizeof(uart2Linux));
+        memset(p, 0, sizeof(uart2Linux));
         return *p;
     }
 
-    void freeUart2Rasp(uart2Rasp *p) {
+    void freeUart2Rasp(uart2Linux *p) {
         free(p);
     }
 };

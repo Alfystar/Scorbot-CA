@@ -8,7 +8,9 @@
 class ObserverScorbot {
 public:
     virtual void updateSettingBoard() = 0;
-    virtual void updateCurrendData() = 0;
+
+    virtual void updateCurrentData() = 0;
+
     virtual void updateEncoderData() = 0;
 
 };

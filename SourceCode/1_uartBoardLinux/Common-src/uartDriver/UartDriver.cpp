@@ -505,7 +505,7 @@ namespace Uart {
         }
     }
 
-    void UartDriver::serialPackDb(uart2Rasp &p) {
+    void UartDriver::serialPackDb(uart2Linux &p) {
 #ifdef linuxSide
         std::cout << "serialPackDb(uartSendPack):" << &p << "\n";
 #else

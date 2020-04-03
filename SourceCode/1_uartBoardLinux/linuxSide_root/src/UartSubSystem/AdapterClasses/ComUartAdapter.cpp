@@ -184,7 +184,7 @@ void ComUartAdapter::uartReader(ComUartAdapter *u) {
         // (1000UL * 1000UL)  //time in millisecond
         timeWriteSpec(&timeToAdd, 0, 500 * (1000UL * 1000UL));
         timeraddSpec(&now, &timeToAdd, &timeOut);
-        uart2Rasp *dato = nullptr;
+        uart2Linux *dato = nullptr;
         try {
             dato = u->uartDev->getDataWait_timePack(&timeOut, &timePack);
         } catch (std::exception &e) {

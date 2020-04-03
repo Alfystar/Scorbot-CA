@@ -43,7 +43,6 @@ public:
 
     static float vRefNeed(float Imax, float Vcs);
 
-    void adc2curr(Pack &currPack);
     float adc2curr(int adc);
     static float adc2curr(int adc, float vRef, float vCs, int bitADC);
 

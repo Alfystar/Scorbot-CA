@@ -51,13 +51,13 @@ namespace Uart {
 #ifdef linuxSide
     typedef data2Ard dOut;
     typedef uart2Ard pOut;
-    typedef data2Rasp dIn;
-    typedef uart2Rasp pIn;
+    typedef data2Linux dIn;
+    typedef uart2Linux pIn;
 #else
     typedef data2Ard dIn;
     typedef uart2Ard pIn;
-    typedef data2Rasp dOut;
-    typedef uart2Rasp pOut;
+    typedef data2Linux dOut;
+    typedef uart2Linux pOut;
 
 #endif
     enum uartState
@@ -109,7 +109,7 @@ namespace Uart {
         /// Data print for debug
         static void serialPackDb(uart2Ard &p);
 
-        static void serialPackDb(uart2Rasp &p);
+        static void serialPackDb(uart2Linux &p);
 
     private:
         //Variabili della porta Seriale

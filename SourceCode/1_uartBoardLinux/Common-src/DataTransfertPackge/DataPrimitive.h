@@ -24,7 +24,7 @@ namespace DataPrimitive {
     };
     enum packType : char {
         //invalid = 0, prima presente ma forse inutile
-                PWMsend_EnRet = 1, PWMsend_CurRet, PWMsend_AllRet, SettingGet, SettingSet, goHome
+        PWMsend_EnRet = 1, PWMsend_CurRet, PWMsend_AllRet, SettingGet, SettingSet, goHome
     };
 
     //sampleTimeEn && sampleTimeCur tempi in micro secondi (unsigned short), se devono essere inviati sia En che Cur, si invia un mAll
@@ -103,30 +103,21 @@ namespace DataPrimitive {
             settingsBoard prop;
         } up;
         unsigned char buf[sizeof(ricType)];
-    } __attribute__((packed)) data2Rasp;
+    } __attribute__((packed)) data2Linux;
 
-
-///#################################################################
-///Send/Recive spi pack
-    typedef struct SPIPACK_ {
-        packType type;
-        data2Ard forArd;
-        data2Rasp forRasp;
-    } __attribute__((packed)) SPIPACK;
-
-///#################################################################
+    ///#################################################################
 ///Sendable uart pack
-    typedef struct uart2Ard_ {
+    typedef struct {
         uartPackType type;
         //short checkSum; Prima vedere se serve
         data2Ard pack;
     } __attribute__((packed)) uart2Ard;
 
-    typedef struct uart2Rasp_ {
+    typedef struct {
         uartPackType type;
         //short checkSum; Prima vedere se serve
-        data2Rasp pack;
-    } __attribute__((packed)) uart2Rasp;
+        data2Linux pack;
+    } __attribute__((packed)) uart2Linux;
 
 }
 #endif //DATAPRIMITIVE_H

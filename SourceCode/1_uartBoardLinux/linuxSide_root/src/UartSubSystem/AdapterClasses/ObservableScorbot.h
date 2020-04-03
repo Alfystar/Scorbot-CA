@@ -57,7 +57,7 @@ public:
     void notifyCurrentData() {
         // Itera e stampa i valori del vector
         for (ObserverScorbot *ob : *mCurrentDataNotify) {
-            ob->updateCurrendData();
+            ob->updateCurrentData();
         }
     }
 

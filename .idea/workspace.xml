@@ -24,8 +24,82 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="project end&#10;Starting write documentation">
+    <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/.ScorBoard_Diagrams.vpp.lck" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_206d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_208d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_209d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_210d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_211d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_212d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_213d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_214d" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.vbak" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/diagrams/ADC free-runnig.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/diagrams/AdcLib.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/diagrams/Data-structures Class Diagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/diagrams/Linux-Comunication Class Diagram.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/diagrams/Motor Driver.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/diagrams/Motor State Machine.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/diagrams/QT_windows-Structure.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/diagrams/ScorBoard Object.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/diagrams/ScoreBot Feedback Sensor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/diagrams/SerialDrives Class Diagram.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp" beforeDir="false" afterPath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_176d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_177d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_178d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_179d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_180d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_181d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_182d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_183d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/ScorBoard_Diagrams.vpp.bak_184d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/newDesign/ADC free-runnig.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/newDesign/AdcLib.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/newDesign/Data-structures Class Diagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/newDesign/Motor Driver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/newDesign/Motor State Machine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/newDesign/Rapsberry-Comunication Class Diagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/newDesign/SPI Protocol.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/newDesign/ScorBoard Object.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/newDesign/ScoreBot Feedback Sensor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/newDesign/SpiLib.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/newDesign/SpiLib_Rasp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/newDesign/UartLib_Rasp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/src/ADC free-runnig.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/src/AdcLib.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/src/Motor Driver.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/src/Motor State Machine.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/src/SPI Protocol.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/src/SPI-structures Class Diagram.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/src/ScorBoard Object.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/src/ScoreBot Feedback Sensor.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/src/SpiLib.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/1_Doc/ScorBoard UML Diagrams/src/SpiLib_Rasp.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/DataTransfertPackge/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/DataTransfertPackge/CMakeLists.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/DataTransfertPackge/DataFactory.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/DataTransfertPackge/DataFactory.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/DataTransfertPackge/DataFactory.h" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/DataTransfertPackge/DataFactory.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/DataTransfertPackge/DataManipolation/Pack.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/DataTransfertPackge/DataManipolation/Pack.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/DataTransfertPackge/DataPrimitive.h" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/DataTransfertPackge/DataPrimitive.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/DataTransfertPackge/DataTransfert_AllInclude.h" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/DataTransfertPackge/DataTransfert_AllInclude.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/uartDriver/UartDriver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/uartDriver/UartDriver.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/uartDriver/UartDriver.h" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/Common-src/uartDriver/UartDriver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/ScoreBoard_Uart/.settings/language.settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/ScoreBoard_Uart/.settings/language.settings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/ScoreBoard_Uart/Project-lib/globalDef.h" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/ScoreBoard_Uart/Project-lib/globalDef.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/ScoreBoard_Uart/Project-lib/spiScorebot/spiScorebot.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/ScoreBoard_Uart/Project-lib/spiScorebot/spiScorebot.h" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/ScoreBoard_Uart/excutePack.ino" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/ScoreBoard_Uart/excutePack.ino" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/AdapterClasses/ComUartAdapter.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/AdapterClasses/ComUartAdapter.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/AdapterClasses/ObservableScorbot.h" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/AdapterClasses/ObservableScorbot.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/AdapterClasses/ObserverScorbot.h" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/AdapterClasses/ObserverScorbot.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/ConcreteObserver.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/ConcreteObserver.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/ConcreteObserver.h" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UartSubSystem/ConcreteObserver.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UtilityScorbot/ScorCalc.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UtilityScorbot/ScorCalc.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UtilityScorbot/ScorCalc.h" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/linuxSide_root/src/UtilityScorbot/ScorCalc.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/mainwindow.ui" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/2_uiSource/ScorbotUI_cpp/src/scorbotUi/ui_source/mainwindow.ui" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -308,7 +382,8 @@
       <workItem from="1585658801428" duration="4921000" />
       <workItem from="1585732832656" duration="2521000" />
       <workItem from="1585749145592" duration="6621000" />
-      <workItem from="1585814629072" duration="12721000" />
+      <workItem from="1585814629072" duration="14120000" />
+      <workItem from="1585922291415" duration="8098000" />
     </task>
     <task id="LOCAL-00001" summary="Rewrite all Code as Class.&#10;Draw UML documentation&#10;make SpiPack as common library between Rapsberry and Arduino">
       <created>1568027375662</created>
@@ -646,7 +721,14 @@
       <option name="project" value="LOCAL" />
       <updated>1585835965203</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="project end&#10;Starting write documentation">
+      <created>1585836201246</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1585836201246</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -666,7 +748,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="CHECK_CODE_CLEANUP_BEFORE_PROJECT_COMMIT" value="true" />
+    <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="SubSystem Work!!!!" />
     <MESSAGE value="SubSystem Work!!!!&#10;now start debugging time" />
@@ -732,10 +814,10 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="669" y="243" width="572" height="552" key="#uartDriver/0.0.1920.1040@0.0.1920.1040" timestamp="1585229907540" />
-    <state x="347" y="118" width="1317" height="798" key="CommitChangelistDialog2" timestamp="1585836002948">
+    <state x="347" y="118" width="1317" height="798" key="CommitChangelistDialog2" timestamp="1585836201168">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="347" y="118" width="1317" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585836002948" />
+    <state x="347" y="118" width="1317" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585836201168" />
     <state x="96" y="98" width="1728" height="846" key="DiffContextDialog" timestamp="1585660893942">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -749,54 +831,54 @@
     </state>
     <state x="0" y="0" width="1910" height="1035" key="FileDocumentManager.FileCacheConflict/0.0.1920.1040@0.0.1920.1040" timestamp="1584527395931" />
     <state x="0" y="0" width="1910" height="1040" key="FileDocumentManager.FileCacheConflict/0.0.1920.1080@0.0.1920.1080" timestamp="1584732253047" />
-    <state width="1874" height="273" key="GridCell.Tab.0.bottom" timestamp="1585832019817">
+    <state width="906" height="271" key="GridCell.Tab.0.bottom" timestamp="1585937414231">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="273" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585832019817" />
+    <state width="906" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585937414231" />
     <state width="1878" height="371" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584736698959" />
-    <state width="1874" height="273" key="GridCell.Tab.0.center" timestamp="1585832019816">
+    <state width="906" height="271" key="GridCell.Tab.0.center" timestamp="1585937414231">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="273" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585832019816" />
+    <state width="906" height="271" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585937414231" />
     <state width="1878" height="371" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584736698958" />
-    <state width="1874" height="273" key="GridCell.Tab.0.left" timestamp="1585832019816">
+    <state width="906" height="271" key="GridCell.Tab.0.left" timestamp="1585937414231">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="273" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585832019816" />
+    <state width="906" height="271" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585937414231" />
     <state width="1878" height="371" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584736698958" />
-    <state width="1874" height="273" key="GridCell.Tab.0.right" timestamp="1585832019816">
+    <state width="906" height="271" key="GridCell.Tab.0.right" timestamp="1585937414231">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="273" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585832019816" />
+    <state width="906" height="271" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585937414231" />
     <state width="1878" height="371" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584736698958" />
-    <state width="1874" height="339" key="GridCell.Tab.1.bottom" timestamp="1585815845629">
+    <state width="1874" height="339" key="GridCell.Tab.1.bottom" timestamp="1585856351880">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="339" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585815845629" />
-    <state width="1874" height="339" key="GridCell.Tab.1.center" timestamp="1585815845629">
+    <state width="1874" height="339" key="GridCell.Tab.1.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585856351880" />
+    <state width="1874" height="339" key="GridCell.Tab.1.center" timestamp="1585856351880">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="339" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585815845629" />
-    <state width="1874" height="339" key="GridCell.Tab.1.left" timestamp="1585815845629">
+    <state width="1874" height="339" key="GridCell.Tab.1.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585856351880" />
+    <state width="1874" height="339" key="GridCell.Tab.1.left" timestamp="1585856351879">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="339" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585815845629" />
-    <state width="1874" height="339" key="GridCell.Tab.1.right" timestamp="1585815845629">
+    <state width="1874" height="339" key="GridCell.Tab.1.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585856351879" />
+    <state width="1874" height="339" key="GridCell.Tab.1.right" timestamp="1585856351880">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="339" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585815845629" />
+    <state width="1874" height="339" key="GridCell.Tab.1.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585856351880" />
     <state x="457" y="155" key="SettingsEditor" timestamp="1585431867378">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="457" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585431867378" />
-    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2" timestamp="1585835970424">
+    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2" timestamp="1585836202506">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585835970424" />
-    <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1585814631232">
+    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585836202506" />
+    <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1585922291118">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="643" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585814631232" />
+    <state x="643" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585922291118" />
     <state x="643" y="360" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584725522543" />
     <state x="272" y="180" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585656798838">
       <screen x="0" y="0" width="1920" height="1040" />

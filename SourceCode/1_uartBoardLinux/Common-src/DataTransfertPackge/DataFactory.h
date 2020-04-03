@@ -22,24 +22,28 @@ namespace dataFactory {
     void freeMCurrent(mCurrent *p);
 
     mEncoder &makeMEncoder();
+
     void freeMEncoder(mEncoder *p);
 
     mAll &makeMAll();
+
     void freeMAll(mAll *p);
 
-    SPIPACK &makeSPIPACK();
-    void freeSPIPACK(SPIPACK *p);
 
     uart2Ard &makeData2Ard();
+
     void freeData2Ard(uart2Ard *p);
 
-    uart2Rasp &makeData2Rasp();
-    void freeData2Rasp(uart2Rasp *p);
+    uart2Linux &makeData2Rasp();
+
+    void freeData2Rasp(uart2Linux *p);
 
     uart2Ard &makeUart2Ard();
+
     void freeUart2Ard(uart2Ard *p);
 
-    uart2Rasp &makeUart2Rasp();
-    void freeUart2Rasp(uart2Rasp *p);
+    uart2Linux &makeUart2Rasp();
+
+    void freeUart2Rasp(uart2Linux *p);
 };
 #endif //DATAFACTORY_H

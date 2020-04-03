@@ -10,7 +10,6 @@
 
 #include "../HW_rename.h"
 #include "../DataTransfertPackge/DataTransfert_AllInclude.h"
-#include "spiScorebot/spiScorebot.h"
 #include "../uartDriver/UartDriver.h"
 #include "adcReader/adcReader.h"
 #include "msEnlib/msEnlib.h"
