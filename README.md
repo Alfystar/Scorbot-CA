@@ -33,12 +33,15 @@ Per prima cosa sarà necessario installare i seguenti paccheti (qui con sintassi
 
 Per poter sia avere le librerie grafiche qt, che gli strumenti di sviluppo se si desiderasse potenziare il progetto.
 A questo punto, compiliamo i sorgenti e installiamoli dentro /usr/local/bin
-    
 
-    git clone https://github.com/Alfystar/Scorbot-CA.git
-    cd Scorbot-CA/unionExe/Scorbot-V2/
-    sudo make install -j4 #for 4 thread, more if your system have more core
-    
+	cd ~/Documents # o dove più si preferisce scaricare i sorgenti
+	git clone https://github.com/Alfystar/Scorbot-CA.git
+	mkdir buildScorbot
+	cmake -s Scorbot-CA/unionExe/Scorbot-V2/ -B buildScorbot/
+	cd buildScorbot/
+	sudo make install -j4 #for 4 thread, more if your system have more core
+	ScorbotTerminal		#a questo punto dovrebbe essere dentro /usr/local/bin e quindi accessibile tramite la ricerca del path
+
 Arrivati a questo punto, dal terminale sarà possibile digitare 
     
     ScorbotTerminal
