@@ -28,14 +28,16 @@ Il progetto è attualmente portato avanti da Emanuele Alfano con la licenza [GPL
 Per poter scaricare e installare con successo il programma, bisogna prima di tutto possedere un sistema linux, lo sviluppo fatto fino ad ora è debian/ubunto base, ma le system call usate dovrebbero essere comuni a qualsiasi distribuzione linux.
 Per prima cosa sarà necessario installare i seguenti paccheti (qui con sintassi apt, da derivare in caso in base alla distribuzione in uso):
     
+    sudo apt install git cmake build-essential
     sudo apt install qt5-d* qtbase5-dev qtdeclarative5-dev qttools5-dev-tools
 
 Per poter sia avere le librerie grafiche qt, che gli strumenti di sviluppo se si desiderasse potenziare il progetto.
 A questo punto, compiliamo i sorgenti e installiamoli dentro /usr/local/bin
     
-    cd unionExe
-    cmake
-    sudo make install
+
+    git clone https://github.com/Alfystar/Scorbot-CA.git
+    cd Scorbot-CA/unionExe/Scorbot-V2/
+    sudo make install -j4 #for 4 thread, more if your system have more core
     
 Arrivati a questo punto, dal terminale sarà possibile digitare 
     
