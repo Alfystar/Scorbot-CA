@@ -1,2 +1,0 @@
-/usr/bin/ar qc libscoreUtiliy.a  CMakeFiles/scoreUtiliy.dir/ScorCalc.o
-/usr/bin/ranlib libscoreUtiliy.a
