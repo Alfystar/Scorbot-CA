@@ -3,19 +3,19 @@
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true">
     <generated>
       <config projectName="ScorbotTerminal" targetName="scoreUtiliy" />
-      <config projectName="ScorbotTerminal" targetName="dataTransfert" />
-      <config projectName="ScorbotTerminal" targetName="UartSubSystem" />
-      <config projectName="ScorbotTerminal" targetName="scorbotMainWindows" />
-      <config projectName="ScorbotTerminal" targetName="uartDriver" />
-      <config projectName="ScorbotTerminal" targetName="scorbotMainWindows_autogen" />
-      <config projectName="ScorbotTerminal" targetName="pidCtrl" />
-      <config projectName="ScorbotTerminal" targetName="scorbotUi_autogen" />
-      <config projectName="ScorbotTerminal" targetName="timeOp" />
       <config projectName="ScorbotTerminal" targetName="UI_useCase_autogen" />
+      <config projectName="ScorbotTerminal" targetName="timeOp" />
+      <config projectName="ScorbotTerminal" targetName="pidCtrl" />
+      <config projectName="ScorbotTerminal" targetName="uartDriver" />
       <config projectName="ScorbotTerminal" targetName="circularBuffer" />
-      <config projectName="ScorbotTerminal" targetName="ScorbotTerminal" />
-      <config projectName="ScorbotTerminal" targetName="scorbotUi" />
       <config projectName="ScorbotTerminal" targetName="UI_useCase" />
+      <config projectName="ScorbotTerminal" targetName="dataTransfert" />
+      <config projectName="ScorbotTerminal" targetName="scorbotUi_autogen" />
+      <config projectName="ScorbotTerminal" targetName="scorbotUi" />
+      <config projectName="ScorbotTerminal" targetName="UartSubSystem" />
+      <config projectName="ScorbotTerminal" targetName="scorbotMainWindows_autogen" />
+      <config projectName="ScorbotTerminal" targetName="scorbotMainWindows" />
+      <config projectName="ScorbotTerminal" targetName="ScorbotTerminal" />
     </generated>
   </component>
   <component name="CMakeSettings" AUTO_RELOAD="true">
@@ -25,9 +25,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a5a225dc-e17d-4d90-9e06-b624ebc265b6" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/UI_useCase_autogen/mocs_compilation.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/qrc_imgs.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/UI_useCase/uiSrc/scorbotUi/scorbotUi_autogen/mocs_compilation.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/unionExe/Scorbot-V2/cmake-build-debug/scorbotMainWindows/scorbotMainWindows_autogen/mocs_compilation.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/ScoreBoard_Uart/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/SourceCode/1_uartBoardLinux/ScoreBoard_Uart/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SourceCode/2_uiSource/README.md" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,7 +74,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/unionExe/Scorbot-V2/scorbotMainWindows" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../UDPrepository" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -189,18 +191,18 @@
     </configuration>
     <list>
       <item itemvalue="CMake Application.ScorbotTerminal" />
+      <item itemvalue="CMake Application.UI_useCase" />
+      <item itemvalue="CMake Application.UI_useCase_autogen" />
       <item itemvalue="CMake Application.circularBuffer" />
       <item itemvalue="CMake Application.dataTransfert" />
-      <item itemvalue="CMake Application.timeOp" />
-      <item itemvalue="CMake Application.uartDriver" />
-      <item itemvalue="CMake Application.scorbotUi" />
-      <item itemvalue="CMake Application.scorbotUi_autogen" />
-      <item itemvalue="CMake Application.scoreUtiliy" />
       <item itemvalue="CMake Application.pidCtrl" />
       <item itemvalue="CMake Application.scorbotMainWindows" />
       <item itemvalue="CMake Application.scorbotMainWindows_autogen" />
-      <item itemvalue="CMake Application.UI_useCase" />
-      <item itemvalue="CMake Application.UI_useCase_autogen" />
+      <item itemvalue="CMake Application.scorbotUi" />
+      <item itemvalue="CMake Application.scorbotUi_autogen" />
+      <item itemvalue="CMake Application.scoreUtiliy" />
+      <item itemvalue="CMake Application.timeOp" />
+      <item itemvalue="CMake Application.uartDriver" />
       <item itemvalue="Python.mainUi" />
     </list>
     <recent_temporary>
@@ -312,6 +314,7 @@
       <workItem from="1585749145592" duration="6621000" />
       <workItem from="1585814629072" duration="14120000" />
       <workItem from="1585922291415" duration="11358000" />
+      <workItem from="1586006409955" duration="27000" />
     </task>
     <task id="LOCAL-00005" summary="reorder Rasp lib structure, and update uml diagrams to actualy version">
       <created>1569248590425</created>
@@ -742,42 +745,42 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="669" y="243" width="572" height="552" key="#uartDriver/0.0.1920.1040@0.0.1920.1040" timestamp="1585229907540" />
-    <state x="347" y="118" width="1317" height="798" key="CommitChangelistDialog2" timestamp="1585941309900">
+    <state x="347" y="118" width="1317" height="798" key="CommitChangelistDialog2" timestamp="1585941386179">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="347" y="118" width="1317" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585941309900" />
+    <state x="347" y="118" width="1317" height="798" key="CommitChangelistDialog2/0.0.1920.1040@0.0.1920.1040" timestamp="1585941386179" />
     <state x="96" y="98" width="1728" height="846" key="DiffContextDialog" timestamp="1585660893942">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="96" y="98" width="1728" height="846" key="DiffContextDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585660893942" />
-    <state x="743" y="277" width="424" height="479" key="FileChooserDialogImpl" timestamp="1585431864234">
+    <state x="743" y="277" width="424" height="479" key="FileChooserDialogImpl" timestamp="1586006434645">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="743" y="277" width="424" height="479" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1585431864234" />
+    <state x="743" y="277" width="424" height="479" key="FileChooserDialogImpl/0.0.1920.1040@0.0.1920.1040" timestamp="1586006434645" />
     <state x="0" y="0" width="1910" height="1040" key="FileDocumentManager.FileCacheConflict" timestamp="1584732253047">
       <screen x="0" y="0" width="1920" height="1080" />
     </state>
     <state x="0" y="0" width="1910" height="1035" key="FileDocumentManager.FileCacheConflict/0.0.1920.1040@0.0.1920.1040" timestamp="1584527395931" />
     <state x="0" y="0" width="1910" height="1040" key="FileDocumentManager.FileCacheConflict/0.0.1920.1080@0.0.1920.1080" timestamp="1584732253047" />
-    <state width="1874" height="271" key="GridCell.Tab.0.bottom" timestamp="1585938125017">
+    <state width="1874" height="271" key="GridCell.Tab.0.bottom" timestamp="1585941437109">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585938125017" />
+    <state width="1874" height="271" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1585941437109" />
     <state width="1878" height="371" key="GridCell.Tab.0.bottom/0.0.1920.1080@0.0.1920.1080" timestamp="1584736698959" />
-    <state width="1874" height="271" key="GridCell.Tab.0.center" timestamp="1585938125016">
+    <state width="1874" height="271" key="GridCell.Tab.0.center" timestamp="1585941437108">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="271" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585938125016" />
+    <state width="1874" height="271" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1585941437108" />
     <state width="1878" height="371" key="GridCell.Tab.0.center/0.0.1920.1080@0.0.1920.1080" timestamp="1584736698958" />
-    <state width="1874" height="271" key="GridCell.Tab.0.left" timestamp="1585938125016">
+    <state width="1874" height="271" key="GridCell.Tab.0.left" timestamp="1585941437108">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="271" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585938125016" />
+    <state width="1874" height="271" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1585941437108" />
     <state width="1878" height="371" key="GridCell.Tab.0.left/0.0.1920.1080@0.0.1920.1080" timestamp="1584736698958" />
-    <state width="1874" height="271" key="GridCell.Tab.0.right" timestamp="1585938125016">
+    <state width="1874" height="271" key="GridCell.Tab.0.right" timestamp="1585941437109">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1874" height="271" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585938125016" />
+    <state width="1874" height="271" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1585941437109" />
     <state width="1878" height="371" key="GridCell.Tab.0.right/0.0.1920.1080@0.0.1920.1080" timestamp="1584736698958" />
     <state width="1874" height="339" key="GridCell.Tab.1.bottom" timestamp="1585856351880">
       <screen x="0" y="0" width="1920" height="1040" />
@@ -799,14 +802,14 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="457" y="155" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1585431867378" />
-    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2" timestamp="1585941311219">
+    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2" timestamp="1585941387465">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585941311219" />
-    <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1585922291118">
+    <state x="555" y="255" width="1037" height="523" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1585941387465" />
+    <state x="643" y="347" key="com.intellij.ide.util.TipDialog" timestamp="1586006411000">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="643" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1585922291118" />
+    <state x="643" y="347" key="com.intellij.ide.util.TipDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1586006411000" />
     <state x="643" y="360" key="com.intellij.ide.util.TipDialog/0.0.1920.1080@0.0.1920.1080" timestamp="1584725522543" />
     <state x="272" y="180" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1585656798838">
       <screen x="0" y="0" width="1920" height="1040" />

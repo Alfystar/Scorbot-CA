@@ -1,0 +1,2 @@
+/usr/bin/ar qc libscorbotUi.a  CMakeFiles/scorbotUi.dir/scorbotUi_autogen/mocs_compilation.o CMakeFiles/scorbotUi.dir/mainwindow.o CMakeFiles/scorbotUi.dir/settingBoardWindow.o CMakeFiles/scorbotUi.dir/freeMoveWindow.o CMakeFiles/scorbotUi.dir/uartChoise.o CMakeFiles/scorbotUi.dir/qcustomplot/qcustomplot.o CMakeFiles/scorbotUi.dir/scorbotUi_autogen/PI2NXN7FKG/qrc_logo.o
+/usr/bin/ranlib libscorbotUi.a

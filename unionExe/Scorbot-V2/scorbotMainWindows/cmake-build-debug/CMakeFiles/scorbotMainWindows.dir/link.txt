@@ -1,0 +1,2 @@
+/usr/bin/ar qc libscorbotMainWindows.a  CMakeFiles/scorbotMainWindows.dir/scorbotMainWindows_autogen/mocs_compilation.o CMakeFiles/scorbotMainWindows.dir/ScorbotMainWindows.o
+/usr/bin/ranlib libscorbotMainWindows.a
