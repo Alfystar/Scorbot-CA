@@ -1,2 +1,0 @@
-/usr/bin/ar qc libuartDriver.a  CMakeFiles/uartDriver.dir/UartDriver.cpp.o
-/usr/bin/ranlib libuartDriver.a

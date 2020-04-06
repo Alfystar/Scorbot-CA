@@ -1,2 +1,0 @@
-/usr/bin/ar qc libUartSubSystem.a  CMakeFiles/UartSubSystem.dir/AdapterClasses/ComUartAdapter.cpp.o CMakeFiles/UartSubSystem.dir/ConcreteObserver.cpp.o
-/usr/bin/ranlib libUartSubSystem.a
