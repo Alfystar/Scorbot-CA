@@ -29,7 +29,11 @@ Per poter scaricare e installare con successo il programma, bisogna prima di tut
 Per prima cosa sarà necessario installare i seguenti paccheti (qui con sintassi apt, da derivare in caso in base alla distribuzione in uso):
     
     sudo apt install git cmake build-essential
-    sudo apt install qt5-d* qtbase5-dev qtdeclarative5-dev qttools5-dev-tools
+    sudo apt install qt5-default qt5-doc qt5-doc-html qtbase5-dev qtdeclarative5-dev qttools5-dev-tools   #qt
+    sudo apt install default-jdk default-jdk-doc                #java for sloebel
+    sudo apt install gcc-avr binutils-avr avr-libc gdb-avr avrdude      #avr compiler for arduino
+
+In caso di problemi, modificare nell'enviroment i path affiche puntino a /usr/bin invece che /bin
 
 Per poter sia avere le librerie grafiche qt, che gli strumenti di sviluppo se si desiderasse potenziare il progetto.
 A questo punto, compiliamo i sorgenti e installiamoli dentro /usr/local/bin

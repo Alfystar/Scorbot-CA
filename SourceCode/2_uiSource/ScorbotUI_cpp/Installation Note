@@ -1,5 +1,0 @@
-Per scaricare la libreria del plotting Qwt:
-https://sourceforge.net/projects/qwt/files/qwt/6.1.4/
-
-Installare Qt5 invece:
-sudo apt install build-essential qtcreator qt5-default qt5-doc qt5-doc-html qtbase5-doc-html qtbase5-examples

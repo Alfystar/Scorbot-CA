@@ -1,0 +1,2 @@
+todo:
+Modificare il README affinchè vi sia una piccola guida per installare Sloeber (ricordare di installare le librerie arduino normali, altrimenti non compila)
