@@ -2,7 +2,7 @@
 //This is a automatic generated file
 //Please do not modify this file
 //If you touch this file your change will be overwritten during the next build
-//This file has been generated on 2020-10-14 19:20:04
+//This file has been generated on 2020-10-14 21:53:58
 
 #include "Arduino.h"
 #include "Arduino.h"
@@ -18,9 +18,6 @@
 
 void setup ();
 void loop ();
-ISR(ADC_vect) ;
-ISR(TIMER5_OVF_vect) ;
-ISR(PCINT0_vect) ;
 void excutePack (uart2Ard &p);
 void initDataSend ();
 void dataSend ();

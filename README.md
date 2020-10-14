@@ -16,11 +16,11 @@ I componenti del gruppo originario erano:
 - Alberto Menichelli
 
 
-Il progetto è attualmente portato avanti da Emanuele Alfano con la licenza [GPLv3](https://github.com/Alfystar/Scorbot-CA/blob/master/LICENSE "GPLv3")
+Il progetto è attualmente portato avanti da Emanuele Alfano con la licenza [GPLv3](LICENSE "GPLv3")
 <p align="center">
-  <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/license.png?raw=true">
+  <img src="license.png?raw=true">
   <br>  
-  <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/Slide%20show%20develop/Presentazione%20Scorbot%20low%20level/Hardware/Frontale%20sistema.png?raw=true">
+  <img src="1_Doc/Slide%20show%20develop/Presentazione%20Scorbot%20low%20level/Hardware/Frontale%20sistema.png?raw=true">
 </p>
 
 ## Download/Cloning Repository
@@ -42,9 +42,9 @@ er i dettagli implementativi il codice
 
 ## ScoreBoard
 La scheda di controllo dello Scorbot è pensata per essere un ponte tra la meccanica del robot, e il sistema di controllo integrato all'interno di un computer Linux.
-[![SubSystem-structure](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/Media/ScorBoard-idea.png?raw=true "SubSystem-structure")](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ScorBoard_v2-MANUAL.pdf "SubSystem-structure")
+[![SubSystem-structure](1_Doc/Media/ScorBoard-idea.png?raw=true "SubSystem-structure")](1_Doc/ScorBoard_v2-MANUAL.pdf "SubSystem-structure")
 
-Il manuale di questo sotto sistema è trovabile [qui](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ScorBoard_v2-MANUAL.pdf "qui").
+Il manuale di questo sotto sistema è trovabile [qui](1_Doc/ScorBoard_v2-MANUAL.pdf "qui").
 
 ### Eagle Board
 There are 2 version of the board.
@@ -55,15 +55,15 @@ View this project on [CADLAB.io](https://cadlab.io/project/1649).
 #####  Board V1:
 In questa prima versione si sono utilizzati dei ponti H L298, e per leggere gli ACS712.
 La scheda soffriva di vari problemi di connessioni tra i pin in fase di progetto, le quali sono tutte risolvibili a mano.
-La scheda possiede un firmware di controllo che parla al Rapsberry Py per mezzo di una comunicazione SPI. Di questa prima vesione è stata scritta una [presentazione del progetto](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ProjectPresentation-V1.pdf) ai fini dell'esame.
+La scheda possiede un firmware di controllo che parla al Rapsberry Py per mezzo di una comunicazione SPI. Di questa prima vesione è stata scritta una [presentazione del progetto](1_Doc/ProjectPresentation-V1.pdf) ai fini dell'esame.
 
 #####  Board V2:
-In questa seconda scheda il cambio più evidente è nel driver motori che adesso è diventato un VNH5019, il quale ha integrato dentro una misura di corrente già scalata e non necessita di letture esterne, di questa scheda è presente anche un [**Manuale**](https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/ScorBoard_v2-MANUAL.pdf "qui")., che descrive nel dettaglio i vari punti del progetto.
+In questa seconda scheda il cambio più evidente è nel driver motori che adesso è diventato un VNH5019, il quale ha integrato dentro una misura di corrente già scalata e non necessita di letture esterne, di questa scheda è presente anche un [**Manuale**](1_Doc/ScorBoard_v2-MANUAL.pdf "qui")., che descrive nel dettaglio i vari punti del progetto.
 <p align="center">
   <i>Top Face</i>
-  <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/HW_Source/ScoreBoard-V2/GerberFile/ScoreBoard-V2_top.png?raw=true"> 
+  <img src="HW_Source/ScoreBoard-V2/GerberFile/ScoreBoard-V2_top.png?raw=true"> 
   <br>
-  <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/HW_Source/ScoreBoard-V2/GerberFile/ScoreBoard-V2_bot.png?raw=true"> 
+  <img src="HW_Source/ScoreBoard-V2/GerberFile/ScoreBoard-V2_bot.png?raw=true"> 
   <i>Bottom Face</i>
 </p>
 
@@ -76,19 +76,19 @@ Per controllare il Robot in maniera intuitiva si è pensato di usare un interfac
 <p align="center">
   <i>Main Window</i>
     <br>
-  <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/Media/ScorInterface%20main.png?raw=true"> 
+  <img src="1_Doc/Media/ScorInterface%20main.png?raw=true"> 
   <br>
     <i>Uart Select</i>
 	  <br>
-  <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/Media/ScorInterface%20uartSelect.png?raw=true"> 
+  <img src="1_/Doc/Media/ScorInterface%20uartSelect.png?raw=true"> 
     <br>
     <i>Setting Board Window</i>
 	  <br>
-  <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/Media/ScorInterface%20settings.png?raw=true"> 
+  <img src="1_Doc/Media/ScorInterface%20settings.png?raw=true"> 
     <br>
     <i>Free Move Window</i>
 	  <br>
-  <img src="https://github.com/Alfystar/Scorbot-CA/blob/master/1_Doc/Media/ScorInterface%20freeMove.png?raw=true"> 
+  <img src="1_Doc/Media/ScorInterface%20freeMove.png?raw=true"> 
 
 </p>
 

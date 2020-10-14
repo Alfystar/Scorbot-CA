@@ -8,6 +8,8 @@ In questa direcotry è sono contenuti i sorgenti:
 Scritta usando la liberia QT in c++.
 La guida alla sua compilazione ed esecuzione (e possibile aggiunta di una nuova finestra) è reperibile [qui](0_Guide/UI_Compiling_Guide.md)
 
+Per creare nuove finestre la guida è [questa](0_Guide/Make_newUi_Guide.md)
+
 Dentro [uartSubSystem](Scorbot-V2_UI/uartSubSystem/uartSubSystem_demo) è presente una piccola demo che mette in esercizio tutto il sotto sistema di smistamento dei pacchetti.
 
 ## Firmware Scorboard_V2
