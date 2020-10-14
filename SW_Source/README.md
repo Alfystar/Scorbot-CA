@@ -18,7 +18,7 @@ La guida è reperibile [qui](0_Guide/SloeberInstall.md)
 Librerie comuni alle 2 (in particolare la libreria SERIALE e i Tipi comuni)
 Si è optato per questa struttura per garantire la binary coherency dei 2 compilati
 
-Dentro [uartDriver] (Common-src/uartDriver/pcListen_demo) è presente una piccola demo che ascolta la seriale e printa i pacchetti ricevuti.
+Dentro [uartDriver](Common-src/uartDriver/pcListen_demo) è presente una piccola demo che ascolta la seriale e printa i pacchetti ricevuti.
 
 ## Controll Scritp
 Per scrivere lo script di controllo del robot, visionare [questa guida](0_Guide/WriteControllScript.md)
