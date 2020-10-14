@@ -30,7 +30,7 @@ IL LOOP DEVE ESSERE IL PIÙ RAPIDO POSSIBILE E NON AVERE AL SUO INTERNO ALCUN RA
 ### I riferimenti
 Per permettere la presenza di SW-Home, al controllo sono passati direttamente gli encoder Obiettivo, che sono il risultato della formula:
 ```
-enObj = enRef + Offset`
+enObj = enRef + Offset
 ```
 Dove `Offset` è ottenuto nel 4° tab della interfaccia grafica e permette di impostare la posizione corrente o una posizione a piacere, la modifica ha effetto al SUCCESSIVO invio di riferimento (gli enRef non vengono riportati a 0).
     
