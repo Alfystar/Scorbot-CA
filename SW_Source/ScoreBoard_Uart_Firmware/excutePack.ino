@@ -80,10 +80,22 @@ void initDataSend (){
 
 }
 
+//To avow the overflow problem this is simple solution
+//https://www.norwegiancreations.com/2018/10/arduino-tutorial-avoiding-the-overflow-issue-when-using-millis-and-micros/
+// Si gioca sul fatto che una variabile UNSIGNED, ES a 4bit:
+// a = 0(16) e b = 14
+// a-b = -14 che letto come UNSIGNED è uguale a 2 !!!
+// (Algebra modulare di base 2^bit)
+// Nel nostro caso, l'eq di base è
+// When {time >= nextRelase} then {...}
+#define relaseTime(now,Relase)	\
+		((long) (now - Relase) >= 0)
+
 // Update che elimina il problema dell'overFlow (e normalmente 1 max 2 cicli)
-#define whileUpdate(deadTime, time, step)    \
-        while (deadTime < time)            \
-            deadTime += step
+#define whileUpdate(oldRelease, time, step) 	\
+        while ((long)(time - oldRelease) < 0 )  \
+			oldRelease += step
+//		oldRelease += step;						\	// To prevent Overflow
 
 void dataSend (){
     //todo: Rubare un timer e far chiamare ogni millisecondo la funzione
@@ -91,15 +103,8 @@ void dataSend (){
     #ifdef DATA_SEND_DB
     //Db.println("[dataSend] Inside");
     #endif
-    //To avow the overflow problem this is simple solution
-    //https://www.norwegiancreations.com/2018/10/arduino-tutorial-avoiding-the-overflow-issue-when-using-millis-and-micros/
-    // Si gioca sul fatto che una variabile UNSIGNED, ES a 4bit:
-    // a = 0(16) e b = 14
-    // a-b = -14 che letto come UNSIGNED è uguale a 2 !!!
-    // (Algebra modulare di base 2^bit)
-    // Nel nostro caso, l'eq di base è
-    // nextRelase < time then ... end set new Release
-    if (((long) (time - nextEnSend) > 0) && ((long) (time - nextCurSend) > 0)){
+
+    if (relaseTime(time, nextEnSend) && relaseTime(time, nextCurSend)){
         sAllSend->copyEn(sFeed->captureEn());
         sAllSend->copyCur(adc->getLastCycle());
         uart->packSend(mAllData, (data2Linux *) &sAllSend->getSens());
@@ -120,7 +125,7 @@ void dataSend (){
         #endif
         return;
     }
-    if ((long) (time - nextEnSend) > 0){
+    if (relaseTime(time, nextEnSend)){
         sAllSend->copyEn(sFeed->captureEn());
         uart->packSend(mEncoderData, (data2Linux *) &sAllSend->getEn());
 
@@ -136,7 +141,7 @@ void dataSend (){
         #endif
         return;
     }
-    if ((long) (time - nextCurSend) > 0){
+    if (relaseTime(time, nextCurSend)){
         sAllSend->copyCur(adc->getLastCycle());
         uart->packSend(mCurrentData, (data2Linux *) &sAllSend->getCurrent());
         //nextCurSend += ((time-nextCurSend)/curP + 1) * curP;	// In case miss 1 or more deadline

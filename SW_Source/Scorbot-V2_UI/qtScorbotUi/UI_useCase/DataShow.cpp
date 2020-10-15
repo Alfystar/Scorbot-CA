@@ -38,7 +38,7 @@ void DataShow::updateThCurMain (DataShow *d){
         sleep(1);
     d->obs->enableCurrentData(true);
     struct timespec curSample;
-    timeWriteSpec(&curSample, 2, 20 * 1000UL * 1000UL);    //20ms per il tempo di campionamento
+    timeWriteSpec(&curSample, 0, 20 * 1000UL);    //20ms per il tempo di campionamento
     d->scorInterface->setSampleTimeCur(curSample.tv_nsec / 1000UL + curSample.tv_sec * 1000UL * 1000UL);
     CurrentMot *curRecive;
     while (true){

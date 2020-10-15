@@ -299,7 +299,9 @@ void MainWindow::currentShow (){
     for (int i = Mot1; i < nMot; ++i){
         cur = calc->adc2curr(feedBack->getCurrent((motCode) i));
         curRead[i]->setNum(cur);
-
+    }
+    #ifdef PLOT_ON
+    for (int i = Mot1; i < nMot; ++i){
         ui->plot->graph(i)->addData(j, cur);
         ui->plot->graph(i)->data()->removeBefore(j - graphSize);
         ui->plot->graph(i)->rescaleAxes(true);
@@ -309,6 +311,7 @@ void MainWindow::currentShow (){
     //    ui->plot->yAxis->scaleRange(1.1, ui->plot->yAxis->range().center());
     ui->plot->xAxis->setRange(j, graphSize, Qt::AlignRight);
     ui->plot->replot();
+    #endif
 }
 
 #undef graphSize
@@ -350,7 +353,6 @@ void MainWindow::sendRef_handler (){
     for (unsigned char i = Mot1; i < nMot; i++){
         ref->enSet((motCode) i, (short) enRef[i]->value());
     }
-    // todo: Riferimenti con offset
     ref->enAdd(*offset);
     emit newRef(ref);
 }
