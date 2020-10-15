@@ -7,7 +7,7 @@ L'interfaccia grafica del progetto è stata realizzata in QT5.
 Per compilare il sistema è necessari installare le seguenti pacchetti dal repository Linux della propria distro:
 
 ```
-sudo apt install cmake, make, g++, build-essential, git     # Base Programs
+sudo apt install cmake make g++ build-essential git     # Base Programs
 sudo apt install qt5-default qt5-doc qt5-doc-html qtbase5-dev qtdeclarative5-dev qttools5-dev-tools   #qt
 ```
 
