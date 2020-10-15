@@ -7,7 +7,7 @@ L'interfaccia grafica del progetto è stata realizzata in QT5.
 Per compilare il sistema è necessari installare le seguenti pacchetti dal repository Linux della propria distro:
 
 ```
-sudo apt install cmake, make, g++, build-essential, git     # Base Programs
+sudo apt install cmake make g++ build-essential git     # Base Programs
 sudo apt install qt5-default qt5-doc qt5-doc-html qtbase5-dev qtdeclarative5-dev qttools5-dev-tools   #qt
 ```
 
@@ -15,7 +15,7 @@ sudo apt install qt5-default qt5-doc qt5-doc-html qtbase5-dev qtdeclarative5-dev
 A questo punto, da dentro `SW_Source` per compilare i sorgenti ci basterà digitare:
 ```
 mkdir build
-cmake -s CMakeLists.txt -DPLOT_ENABLE=True -B build/ -DCMAKE_BUILD_TYPE=Release
+cmake -s CMakeLists.txt -B build/ -DCMAKE_BUILD_TYPE=Release
 cd build/
 sudo make install -j 8   #for 8 thread, more if your system have more core
 Scorbot-V2_UI		     # Ora presente dentro /usr/local/bin =>accessibile tramite path
