@@ -299,19 +299,20 @@ void MainWindow::currentShow (){
     for (int i = Mot1; i < nMot; ++i){
         cur = calc->adc2curr(feedBack->getCurrent((motCode) i));
         curRead[i]->setNum(cur);
+            ui->plot->setEnabled(true);
+            ui->plot->graph(i)->addData(j, cur);
+            ui->plot->graph(i)->data()->removeBefore(j - graphSize);
+            ui->plot->graph(i)->rescaleAxes(true);
+            ui->plot->graph(i)->setVisible(motPlot[i]->isChecked());
     }
-    #ifdef PLOT_ON
-    for (int i = Mot1; i < nMot; ++i){
-        ui->plot->graph(i)->addData(j, cur);
-        ui->plot->graph(i)->data()->removeBefore(j - graphSize);
-        ui->plot->graph(i)->rescaleAxes(true);
-        ui->plot->graph(i)->setVisible(motPlot[i]->isChecked());
+
+    if (ui->PlotOn->isChecked()){
+        ui->plot->yAxis->rescale(true);
+        ui->plot->xAxis->setRange(j, graphSize, Qt::AlignRight);
+        ui->plot->replot();
+    }else{
+    ui->plot->setDisabled(true);
     }
-    ui->plot->yAxis->rescale(true);
-    //    ui->plot->yAxis->scaleRange(1.1, ui->plot->yAxis->range().center());
-    ui->plot->xAxis->setRange(j, graphSize, Qt::AlignRight);
-    ui->plot->replot();
-    #endif
 }
 
 #undef graphSize

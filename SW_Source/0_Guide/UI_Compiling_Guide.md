@@ -15,7 +15,7 @@ sudo apt install qt5-default qt5-doc qt5-doc-html qtbase5-dev qtdeclarative5-dev
 A questo punto, da dentro `SW_Source` per compilare i sorgenti ci basterà digitare:
 ```
 mkdir build
-cmake -s CMakeLists.txt -B build/ -DCMAKE_BUILD_TYPE=Release
+cmake -s CMakeLists.txt -B build/
 cd build/
 sudo make install -j 8   #for 8 thread, more if your system have more core
 Scorbot-V2_UI		     # Ora presente dentro /usr/local/bin =>accessibile tramite path
@@ -28,9 +28,4 @@ E avviare così l'interfaccia grafica di controllo della scheda dello scorbot
 ## UI Lenta
 Sul rapsberry pi o altri computer particolarmente modesti, il graficare il grafico può
 avere l'effetto di freezzare il sistema. In tal caso la soluzione è non graficare le correnti...
-Triste ma giusto, per realizzare ciò da dentro la cartella `build`:
-```
-cmake .. -DPLOT_ENABLE=False
-sudo make install -j 8   #for 8 thread, more if your system have more core
-Scorbot-V2_UI		     # Ora presente dentro /usr/local/bin =>accessibile tramite path
-```
+Triste ma giusto, per realizzare ciò basterà despuntare sulla UI l'opzione `PlotOn` 

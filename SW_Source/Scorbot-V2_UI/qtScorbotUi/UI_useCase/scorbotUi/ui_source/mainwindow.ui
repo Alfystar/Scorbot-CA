@@ -3930,12 +3930,12 @@
      </item>
     </layout>
    </widget>
-   <widget class="QWidget" name="">
+   <widget class="QWidget" name="layoutWidget">
     <property name="geometry">
      <rect>
-      <x>20</x>
-      <y>340</y>
-      <width>381</width>
+      <x>10</x>
+      <y>330</y>
+      <width>401</width>
       <height>141</height>
      </rect>
     </property>
@@ -3975,8 +3975,8 @@
        </property>
        <property name="maximumSize">
         <size>
-         <width>250</width>
-         <height>250</height>
+         <width>100</width>
+         <height>100</height>
         </size>
        </property>
        <property name="toolTip">
@@ -4037,6 +4037,22 @@
       </layout>
      </item>
     </layout>
+   </widget>
+   <widget class="QCheckBox" name="PlotOn">
+    <property name="geometry">
+     <rect>
+      <x>940</x>
+      <y>440</y>
+      <width>81</width>
+      <height>24</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>PlotOn</string>
+    </property>
+    <property name="checked">
+     <bool>true</bool>
+    </property>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
